@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>  
+      <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+      <PackageIcon>icon.png</PackageIcon>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Include="..\LICENSE.txt" Pack="true" PackagePath=""/>
+      <None Include="..\THIRD_PARTY_LICENSES.txt" Pack="true" PackagePath=""/>
+      <None Include="..\icon.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+</Project>

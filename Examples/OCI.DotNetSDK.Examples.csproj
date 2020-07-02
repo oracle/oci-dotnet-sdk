@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Audit\OCI.DotNetSDK.Audit.csproj" />
+    <ProjectReference Include="..\Objectstorage\OCI.DotNetSDK.Objectstorage.csproj" />
+    <ProjectReference Include="..\Core\OCI.DotNetSDK.Core.csproj" />
+    <ProjectReference Include="..\Identity\OCI.DotNetSDK.Identity.csproj" />
+    <ProjectReference Include="..\Database\OCI.DotNetSDK.Database.csproj" />
+    <ProjectReference Include="..\Filestorage\OCI.DotNetSDK.Filestorage.csproj" />
+    <ProjectReference Include="..\Resourcesearch\OCI.DotNetSDK.Resourcesearch.csproj" />
+    <ProjectReference Include="..\Streaming\OCI.DotNetSDK.Streaming.csproj" />
+    <ProjectReference Include="..\Loadbalancer\OCI.DotNetSDK.Loadbalancer.csproj" />
+    <ProjectReference Include="..\Functions\OCI.DotNetSDK.Functions.csproj" />
+    <ProjectReference Include="..\Keymanagement\OCI.DotNetSDK.Keymanagement.csproj" />
+    <ProjectReference Include="..\Monitoring\OCI.DotNetSDK.Monitoring.csproj" />
+    <ProjectReference Include="..\Containerengine\OCI.DotNetSDK.Containerengine.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PackageId>OCI.DotNetSDK.Examples</PackageId>
+    <RootNamespace>OCI.DotNetSDK.Examples</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

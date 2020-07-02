@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PackageId>OCI.DotNetSDK.Commontests</PackageId>
+    <RootNamespace>OCI.DotNetSDK.Commontests</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.13.1"/>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1"/>
+    <PackageReference Include="xunit" Version="2.4.1"/>
+    <PackageReference Include="coverlet.collector" Version="1.2.1"/>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
