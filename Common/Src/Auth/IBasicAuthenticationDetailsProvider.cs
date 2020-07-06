@@ -8,6 +8,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An interface of authentication details provider that is based on private key.</summary>
     public interface IBasicAuthenticationDetailsProvider : IAbstractAuthenticationDetailsProvider
     {
         public string KeyId { get; }

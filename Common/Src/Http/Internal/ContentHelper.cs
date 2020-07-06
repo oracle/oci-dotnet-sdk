@@ -11,10 +11,14 @@ using Newtonsoft.Json;
 
 namespace Oci.Common.Http.Internal
 {
+    /// <summary>A utility class to handle HTTP request content creation.</summary>
     public class ContentHelper
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
+        /// <summary>Creates HttpContent.</summary>
+        /// <param name="content">The content to create HttpContent from.</param>
+        /// <returns>The HttpContent created.</returns>
         public static HttpContent CreateHttpContent(object content)
         {
             HttpContent httpContent = null;
@@ -39,6 +43,9 @@ namespace Oci.Common.Http.Internal
             return httpContent;
         }
 
+        /// <summary>Converts a json string to stream.</summary>
+        /// <param name="value">The json string value.</param>
+        /// <param name="stream">The stream that will contain the converted value.</param>
         public static void SerializeJsonIntoStream(object value, Stream stream)
         {
             using var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true);

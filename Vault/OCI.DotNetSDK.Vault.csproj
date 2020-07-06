@@ -4,7 +4,7 @@
     <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
-    <RootNamespace>OCI.DotNetSDK.Vault</RootNamespace>
+    <RootNamespace>Oci.VaultService</RootNamespace>
     <PackageId>OCI.DotNetSDK.Vault</PackageId>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>

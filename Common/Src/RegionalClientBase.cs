@@ -13,6 +13,7 @@ using Oci.Common.Http.Signing;
 
 namespace Oci.Common
 {
+    /// <summary>An abstract class for a regional service client.</summary>
     public abstract class RegionalClientBase : ClientBase
     {
         protected new static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
@@ -29,12 +30,16 @@ namespace Oci.Common
         public RegionalClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner) : base(authProvider, clientConfiguration, requestSigner)
         { }
 
+        /// <summary>Set endpoint through region.</summary>
+        /// <param name="region">The region used to set endpoint.</param>
         public void SetRegion(Region region)
         {
             string endpoint = region.GetEndpoint(this.service);
             SetEndpoint(endpoint);
         }
 
+        /// <summary>Set endpoint through regionId.</summary>
+        /// <param name="region">The region id used to set endpoint.</param>
         public void SetRegion(string regionId)
         {
             regionId = regionId.ToLower(new CultureInfo("en"));

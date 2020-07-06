@@ -8,8 +8,10 @@ using Oci.Common.Auth;
 
 namespace Oci.Common.Http.Signing
 {
-    // This class provides HttpClientHandler based on various inputs. HttpClientHandler
-    // adds authorization header for the outgoing requests.
+    /// <summary>
+    /// This class provides HttpClientHandler based on various inputs. HttpClientHandler
+    /// adds authorization header for the outgoing requests.
+    /// </summary>
     public class OciHttpClientHandler
     {
         public static HttpClientHandler FromConfigFile(string configPath, string profile)

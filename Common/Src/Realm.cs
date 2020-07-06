@@ -9,6 +9,11 @@ using System.Runtime.CompilerServices;
 
 namespace Oci.Common
 {
+    /// <summary>
+    /// Class containing all Identity realms.
+    /// <br/>
+    /// Accounts (tenancies) are per Realm.
+    /// </summary>
     public class Realm
     {
         private static readonly Dictionary<string, Realm> KNOWN_REALMS = new Dictionary<string, Realm>();
@@ -16,9 +21,10 @@ namespace Oci.Common
         public static readonly Realm OC2 = new Realm("oc2", "oraclegovcloud.com");
         public static readonly Realm OC3 = new Realm("oc3", "oraclegovcloud.com");
         public static readonly Realm OC4 = new Realm("oc4", "oraclegovcloud.uk");
-        public static readonly Realm OC8 = new Realm("oc8", "oraclecloud8.com");
 
+        /// <summary>The id of a realm.</summary>
         public string RealmId { get; }
+        /// <summary>The second level domain of a realm.</summary>
         public string SecondLevelDomain { get; }
 
         private Realm(string realmId, string secondlevelDomain)
@@ -39,6 +45,7 @@ namespace Oci.Common
             KNOWN_REALMS.Add(realm.RealmId, realm);
         }
 
+        /// <summary>All known Realms in this versino of SDK.</summary>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Realm[] Values()
         {
@@ -47,6 +54,13 @@ namespace Oci.Common
             return realms;
         }
 
+        /// <summary>
+        /// Returns the Realm object matching the specified id. The id must
+        /// match exactly. (Extraneous whitespace characters are not permitted.)
+        /// </summary>
+        /// <param name="realmId">The id of the realm to retrieve.</param>
+        /// <returns>The Realm object matching the specified name, if available.</returns>
+        /// <exception>Thrown when realmId is invalid or not found.</exception>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Realm ValueOf(string realmId)
         {
@@ -61,6 +75,10 @@ namespace Oci.Common
             return realm;
         }
 
+        /// <summary>Register a new Realm. Allow the SDK to be forward compatible with unreleased realms.</summary>
+        /// <param name="realmId">The realm id.</param>
+        /// <param name="secondlevelDomain">The second level domain of the realm.</param>
+        /// <returns>The registered Realm (or existing one if found).</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Realm Register(string realmId, string secondlevelDomain)
         {

@@ -8,12 +8,16 @@ using System.Net;
 
 namespace Oci.Common.Model
 {
+    /// <summary>Exceptions from the SDK.</summary>
     public class OciException : Exception
     {
+        /// <summary>The HTTP status code.</summary>
         public HttpStatusCode StatusCode { get; }
 
+        /// <summary>Service specific code returned.  Null if the client timed out or failed to get a response from the service.</summary>
         public string ServiceCode { get; }
 
+        /// <summary>The opc-request-id header returned by the service that should be provided for support requests.</summary>
         public string OpcRequestId { get; }
 
         public OciException(string message, Exception innerException) : base(message, innerException) { }

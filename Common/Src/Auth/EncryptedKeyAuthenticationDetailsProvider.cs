@@ -12,6 +12,11 @@ using Org.BouncyCastle.OpenSsl;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>
+    /// An authentication details provider based on ConfigFileAuthenticationDetailsProvder.
+    /// This provider requires the key file to be encrypted (protected by pass phrase),
+    /// with minimum key length of 2048, and encryption mode of CBC.
+    /// </summary>
     public class EncryptedKeyAuthenticationDetailsProvider : ConfigFileAuthenticationDetailsProvider
     {
         public EncryptedKeyAuthenticationDetailsProvider(string profile) : this(ConfigFileReader.ParseDefault(profile)) { }

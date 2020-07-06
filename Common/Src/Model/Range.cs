@@ -48,8 +48,10 @@ namespace Oci.Common.Model
             return "";
         }
 
-        // Parse the "content-range" header per https://tools.ietf.org/html/rfc7233#section-4.2.
-        // sample content-range header value: bytes 1-5/6
+        /// <summary>
+        /// Parse the "content-range" header per https://tools.ietf.org/html/rfc7233#section-4.2.
+        /// sample content-range header value: bytes 1-5/6
+        /// </summary>
         public static Range ParseRange(string rangeStr)
         {
             //remove bytes string

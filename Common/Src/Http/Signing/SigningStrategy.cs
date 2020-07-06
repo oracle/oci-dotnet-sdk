@@ -9,17 +9,22 @@ using Oci.Common.Http.Signing.Internal;
 
 namespace Oci.Common.Http.Signing
 {
-    // Various signing strategies used by Oracle Cloud Infrastructure. ref: https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/signingrequests.htm
+    /// <summary>Various signing strategies used by Oracle Cloud Infrastructure. ref: https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/signingrequests.htm</summary>
     public class SigningStrategy
     {
+        /// <summary>Standard signing strategy.</summary>
         public static readonly SigningStrategy STANDARD = new SigningStrategy(Constants.REQUIRED_SIGNING_HEADERS, Constants.OPTIONAL_SIGNING_HEADERS);
+        /// <summary>A signing strategy that does not sign the body.</summary>
         public static readonly SigningStrategy EXCLUDE_BODY = new SigningStrategy(Constants.REQUIRED_EXCLUDE_BODY_SIGNING_HEADERS, Constants.OPTIONAL_SIGNING_HEADERS);
 
+        /// <summary>A Dictionary containing all the required headers to sign.</summary>
         public Dictionary<string, ReadOnlyCollection<string>> RequiredHeaders { get; set; }
+        /// <summary>A Dictionary containing the headers to sign if they are set.</summary>
         public Dictionary<string, ReadOnlyCollection<string>> OptionalHeaders { get; set; }
 
         public static readonly string SIGNING_STRATEGY_PROPERTY_NAME_KEY = "oci-internal-signing-strategy-name";
 
+        /// <summary>All pre-defined signing strategies.</summary>
         public static IEnumerable<SigningStrategy> Values
         {
             get

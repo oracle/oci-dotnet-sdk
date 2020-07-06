@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <PackageId>OCI.DotNetSDK.Keymanagement</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Keymanagement</RootNamespace>
+    <RootNamespace>Oci.KeymanagementService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Keymanagement</PackageTags>

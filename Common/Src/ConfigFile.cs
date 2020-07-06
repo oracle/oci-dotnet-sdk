@@ -8,6 +8,7 @@ using System.IO;
 
 namespace Oci.Common
 {
+    /// <summary>ConfigFile represents a simple lookup mechanism for an OCI config file.</summary>
     public class ConfigFile
     {
         private readonly ConfigAccumulator accumulator;
@@ -20,6 +21,7 @@ namespace Oci.Common
             this.profile = profile;
         }
 
+        /// <summary>GetValue retrieves config information by key.</summary>
         public string GetValue(string key)
         {
             if (profile != null && (accumulator.configurationByProfile.ContainsKey(profile)) && accumulator.configurationByProfile[profile].ContainsKey(key))
@@ -34,13 +36,17 @@ namespace Oci.Common
             return value;
         }
 
+        /// <summary>ConfigAccumulator stores information from ConfigFile into Dictionary that can be used to retrieve config information.</summary>
         public class ConfigAccumulator
         {
+            /// <summary>A Dictionary that stores all information in config file.</summary>
             public Dictionary<string, Dictionary<string, string>> configurationByProfile = new Dictionary<string, Dictionary<string, string>>();
 
-            public string currentProfile = null;
+            private string currentProfile = null;
+            /// <summary>If the config file contains a default profile.</summary>
             public bool foundDefaultProfile = false;
 
+            /// <summary>Parses a string in a config file.</summary>
             public void Accept(string line)
             {
                 string trimmedLine = line.Trim();

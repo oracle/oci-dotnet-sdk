@@ -8,6 +8,7 @@ using System.IO;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An authentication details provider implementation that reads all authentication information from config file.</summary>
     public class ConfigFileAuthenticationDetailsProvider : SimpleAuthenticationDetailsProvider
     {
         public ConfigFileAuthenticationDetailsProvider(string profile) : this(ConfigFileReader.ParseDefault(profile)) { }
