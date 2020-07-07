@@ -8,7 +8,7 @@ The project is open source and maintained by Oracle Corp.
 
 ## Dependencies
 
-- .NETStandard 2.0
+- [.NETStandard 2.0](https://dotnet.microsoft.com/platform/dotnet-standard)
 
 ## SDK Organization
 
@@ -25,20 +25,29 @@ The oci-dotnet-sdk contain the following 3 groups of packages:
   These packages include the service client(s) with methods to interact with the service, classes for the requests,
   responses, and input and output parameters.
 
-## Nuget Packages
+## Install Packages
 
 The SDK is published as Nuget packages.
 
-Use either dotnet CLI or Visual Studio to install and consume a package from nuget.org.
+Use either dotnet CLI or Visual Studio to install and consume a package from [nuget.org](https://www.nuget.org/packages?q=oci).
 
 - **dotnet CLI**:
 
 ```
-dotnet add package <PACKAGE_ID> --version <VERSION>
+dotnet add package <PACKAGE_ID> --version <VERSION> (If version not specified then it pulls the latest version)
+
+Example:
+dotnet add package OCI.DotNetSDK.Core
+dotnet add package OCI.DotNetSDK.Identity
+dotnet add package OCI.DotNetSDK.Identity -v 1.0.0
 ```
 
 - **Visual Studio**:
   Right-click a project and select "Manage Nuget Packages" and then search for the package name and version number to install.
+
+## Documentation
+
+Public documentation and API Reference for the sdk can be found [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/SDKDocs/dotnetsdk.htm).
 
 ## Working with the .NET SDK
 
@@ -48,11 +57,12 @@ To start working with oci-dotnet-sdk, you need to create a .NET project, install
 
 Before using the SDK, set up a config file with the required credentials. See [SDK and Tool Configuration](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/sdkconfig.htm) for instructions.
 
-Note that currently the .NET SDK only support the default configuration file option.
-
 ### Creating Client
 
-With the default confguration file, create a client:
+To create a service client, you need to set up the client to use the credentials.
+Check [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/SDKDocs/dotnetsdkgettingstarted.htm#configuring) on how to configure it.
+
+Example that shows creating the Audit Service client using ConfigFileAuthenticationDetailsProvider Class for configuring credentials:
 
 ```
 var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
@@ -72,10 +82,9 @@ var listEventsRequest = new ListEventsRequest
     EndTime = DateTime.Now
 };
 
-//...
 try
 {
-    var response = await client.ListEvents(request);
+    var response = await client.ListEvents(listEventsRequest);
 }
 catch (Exception e)
 {
@@ -85,7 +94,7 @@ catch (Exception e)
 
 ## Examples
 
-Some examples can be found [here](/Examples).
+Examples can be found [here](/Examples).
 
 ## Building and Testing
 
@@ -129,6 +138,19 @@ To run tests using Makefile:
 make unit-test
 ```
 
+## Help
+
+* The [Issues](https://github.com/oracle/oci-dotnet-sdk/issues) page of this GitHub repository.
+* [Stack Overflow](https://stackoverflow.com/), use the [oracle-cloud-infrastructure](https://stackoverflow.com/questions/tagged/oracle-cloud-infrastructure) and [oci-dotnet-sdk](https://stackoverflow.com/questions/tagged/oci-dotnet-sdk) tags in your post.
+* [Developer Tools](https://community.oracle.com/community/groundbreakers/oracle-cloud/cloud-infrastructure/content) section of the Oracle Cloud forums.
+* [My Oracle Support](https://support.oracle.com/portal/).
+
+## Contributing
+
+`oci-dotnet-sdk` is an open source project. See [CONTRIBUTING](/CONTRIBUTING.md) for details.
+
+Oracle gratefully acknowledges the contributions to oci-dotnet-sdk that have been made by the community.
+
 ## License
 
 Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
@@ -136,3 +158,11 @@ Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
 This SDK is dual licensed under the Universal Permissive License 1.0 and the Apache License 2.0.
 
 See [LICENSE](/LICENSE.txt) for more details.
+
+## Changes
+
+See [CHANGELOG](/CHANGELOG.md)
+
+## Known Issues
+
+You can find information on any known issues with the SDK at [Oracle Cloud Infrastructure Known Issues](https://docs.cloud.oracle.com/en-us/iaas/Content/knownissues.htm) and under the [Issues](https://github.com/oracle/oci-dotnet-sdk/issues) tab of this project's GitHub repository.

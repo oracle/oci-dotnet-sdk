@@ -20,7 +20,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <PackageId>OCI.DotNetSDK.Examples</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Examples</RootNamespace>
+    <RootNamespace>Oci.Examples</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure</PackageTags>

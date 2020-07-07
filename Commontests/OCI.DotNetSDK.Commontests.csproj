@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <PackageId>OCI.DotNetSDK.Commontests</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Commontests</RootNamespace>
+    <RootNamespace>Oci.Common</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure</PackageTags>

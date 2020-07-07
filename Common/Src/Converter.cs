@@ -14,10 +14,19 @@ using Oci.Common.Utils;
 
 namespace Oci.Common
 {
+    /// <summary>
+    /// The class that converts SDK request object into HttpRequestMessage, and converts HttpResponseMessage
+    /// into SDK response object.
+    /// </summary>
     public class Converter
     {
         protected static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
+        /// <summary> Converts SDK request object into HttpRequestMessage.</summary>
+        /// <param name="uri">The uri of this http request.</param>
+        /// <param name="method">The method of this http request.</param>
+        /// <param name="request">The SDK object for this request.</param>
+        /// <returns>An HttpRequestMessage that can be sent by HttpClient.</returns>
         public static HttpRequestMessage ToHttpRequestMessage<T>(Uri uri, HttpMethod method, T request) where T : IOciRequest
         {
             // Update properties of requests if needed
@@ -84,6 +93,9 @@ namespace Oci.Common
             return requestMessage;
         }
 
+        /// <summary>Converts HttpResponseMessage into SDK response object.</summary>
+        /// <param name="responseMessage">An HttpResponseMessage object</param>
+        /// <returns>A SDK response object.</returns>
         public static T FromHttpResponseMessage<T>(HttpResponseMessage responseMessage) where T : IOciResponse, new()
         {
             var response = new T();

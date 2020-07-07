@@ -10,17 +10,17 @@ using System.Collections.Generic;
 namespace Oci.Common.Utils
 {
     /// <summary>
-    /// Enumerable used to iterate over the responses returned by list operation. sSince
+    /// Enumerable used to iterate over the responses returned by list operation. Since
     /// this deals in responses, the returned response objects will contain a collection
     /// of results. This enumerable will handle calling the service to retrieve more results when required.
     /// </summary>
     /// <typeparam name="Request">List operation request</typeparam>
-    /// <typeparam name="Response">Liest operation response</typeparam>
+    /// <typeparam name="Response">List operation response</typeparam>
     public class ResponseEnumerable<Request, Response> : IEnumerable<Response>
     {
         // Function which returns nextpage from the response object.
         private readonly Func<Response, string> getNextPageTokenFunction;
-        // Function which takes opcNextPageId as input and returns list request. 
+        // Function which takes opcNextPageId as input and returns list request.
         private readonly Func<string, Request> getListRequestFunction;
         // Function which invokes list request and returns response.
         private readonly Func<Request, Response> listRequestFunction;

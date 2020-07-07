@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <PackageId>OCI.DotNetSDK.Filestorage</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Filestorage</RootNamespace>
+    <RootNamespace>Oci.FilestorageService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Filestorage</PackageTags>

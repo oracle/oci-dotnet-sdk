@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Oci.Common
 {
+    /// <summary>Class representing a service definition.</summary>
     public class Service
     {
         [Required(ErrorMessage = "ServiceName is required.")]
@@ -15,11 +16,16 @@ namespace Oci.Common
         public string ServiceEndpointPrefix { get; set; }
         public string ServiceEndpointTemplate { get; set; }
 
+        /// <summary>Returns a string showing service information.</summary>
+        /// <returns>A string containing service name, endpoint prfix, and endpoint template.</returns>
         public override string ToString()
         {
             return $"ServiceName: {ServiceName}; ServiceEndpointPrefix: {ServiceEndpointPrefix}; ServiceEndpointTemplate: {ServiceEndpointTemplate}";
         }
 
+        /// <summary>Checks if the given service is the same.</summary>
+        /// <param name="service">The service to check</param>
+        /// <returns>True is the given service contains the same information; false if not.</returns>
         public bool Equals(Service service)
         {
             if (ServiceName.Equals(service.ServiceName) && ServiceEndpointPrefix.Equals(service.ServiceEndpointPrefix) && ServiceEndpointTemplate.Equals(service.ServiceEndpointTemplate))

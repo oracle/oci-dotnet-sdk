@@ -11,6 +11,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace Oci.Common.Utils
 {
+    /// <summary>A custom resolver that handles Json serialization and deserialization for Stream and DateTime values.</summary>
     public class CustomResolver : DefaultContractResolver
     {
         protected override JsonProperty CreateProperty(System.Reflection.MemberInfo member, MemberSerialization memberSerialization)
@@ -29,6 +30,7 @@ namespace Oci.Common.Utils
         }
     }
 
+    /// <summary>A customer Json converter for DateTime values.</summary>
     public class DateTimeJsonConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
@@ -48,6 +50,7 @@ namespace Oci.Common.Utils
         }
     }
 
+    /// <summary>A customer Json converter for Stream values.</summary>
     public class StreamJsonConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)

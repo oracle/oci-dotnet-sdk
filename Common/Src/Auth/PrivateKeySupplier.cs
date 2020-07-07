@@ -13,6 +13,7 @@ using Org.BouncyCastle.Security;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An implementation of ISupplier that reads private key.</summary>
     public class PrivateKeySupplier : ISupplier<RsaKeyParameters>
     {
         private string privateKeyContent;
@@ -22,6 +23,7 @@ namespace Oci.Common.Auth
             this.privateKeyContent = keyContent;
         }
 
+        /// <summary>Retrieves the private key from a key string.</summary>
         public RsaKeyParameters GetKey()
         {
             AsymmetricCipherKeyPair keyPair;

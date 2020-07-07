@@ -9,9 +9,18 @@ using System.Runtime.CompilerServices;
 
 namespace Oci.Common
 {
+    /// <summary>
+    /// Class to create new serivce instances.
+    /// <br/>
+    /// This serves to ensure conflicting definitions of services don't get created.
+    /// </summary>
     public class Services
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+        /// <summary>Get Service instance based on service name.</summary>
+        /// <param name="serviceName">service name.</param>
+        /// <returns>A service instance.</returns>
         public static Service GetServiceByName(string serviceName)
         {
             Service service = null;
@@ -22,6 +31,16 @@ namespace Oci.Common
             return service;
         }
 
+        /// <summary>
+        /// Create a new service definition.  If the service has already been registered
+        /// with different values, an ArgumentException will be raised.  If the
+        /// service has already been registered, the existing definition will be returned.
+        /// </summary>
+        /// <param name="serviceName">A unique service name.</param>
+        /// <param name="serviceEndpointPrefix">The endpoint prefix of the service.</param>
+        /// <param name="serviceEndpointTemplate">The endpoint template of the service.</param>
+        /// <returns>The service instance created, or existing service instance if found.</returns>
+        /// <exception>Throws ArgumentException if service name is already used by a different service instance.</exception>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Service Create(string serviceName, string serviceEndpointPrefix, string serviceEndpointTemplate)
         {

@@ -34,6 +34,7 @@ namespace Oci.Common.Http.Signing.Internal
         public static readonly ReadOnlyCollection<string> BODY_HEADERS = new ReadOnlyCollection<string>(new string[] { CONTENT_LENGTH, CONTENT_TYPE, X_CONTENT_SHA256 });
         public static readonly ReadOnlyCollection<string> ALL_HEADERS = new ReadOnlyCollection<string>(GENERIC_HEADERS.Concat(BODY_HEADERS).ToList());
 
+        /// <summary>A Dictionary of headers that must be signed, for each HTTP method.</summary>
         public static readonly Dictionary<string, ReadOnlyCollection<string>> REQUIRED_SIGNING_HEADERS =
                 CreateHeadersToSignDictionary(
                         GENERIC_HEADERS,
@@ -43,9 +44,7 @@ namespace Oci.Common.Http.Signing.Internal
                         ALL_HEADERS,
                         ALL_HEADERS);
 
-        /**
-         * A signing strategy that signs headers only.
-         */
+        /// <summary>A Dictionary of headers that does not include body headers.</summary>
         public static readonly Dictionary<string, ReadOnlyCollection<string>> REQUIRED_EXCLUDE_BODY_SIGNING_HEADERS =
                 CreateHeadersToSignDictionary(
                         GENERIC_HEADERS,
@@ -55,9 +54,7 @@ namespace Oci.Common.Http.Signing.Internal
                         GENERIC_HEADERS,
                         GENERIC_HEADERS);
 
-        /**
-         * Headers included in the signature if they are set.
-         */
+        /// <summary>A Dictionary of headers to be included in the signature if they are set, for each HTTP method.</summary>
         public static readonly ReadOnlyCollection<string> OPTIONAL_HEADERS_NAMES = new ReadOnlyCollection<string>(new string[] { OPC_OBO_TOKEN, CROSS_TENANCY_REQUEST_HEADER_NAME, X_SUBSCRIPTION });
 
         public static readonly Dictionary<string, ReadOnlyCollection<string>> OPTIONAL_SIGNING_HEADERS =
@@ -69,16 +66,14 @@ namespace Oci.Common.Http.Signing.Internal
                         OPTIONAL_HEADERS_NAMES,
                         OPTIONAL_HEADERS_NAMES);
 
-        /**
-         * Creates a map of headers to sign for each HTTP method.
-         * @param getHeaders headers for GET requests
-         * @param headHeaders headers for HEAD requests
-         * @param deleteHeaders headers for DELETE requests
-         * @param putHeaders headers for PUT requests
-         * @param postHeaders headers for POST requests
-         * @param patchHeaders headers for PATCH requests
-         * @return A new immutable dictionary of headers
-         */
+        /// <summary>Creates a map of headers to sign for each HTTP method.</summary>
+        /// <param name="getHeaders">headers for GET requests</param>
+        /// <param name="headHeaders">headers for HEAD requests</param>
+        /// <param name="deleteHeaders">headers for DELETE requests</param>
+        /// <param name="putHeaders">headers for PUT requests</param>
+        /// <param name="postHeaders">headers for POST requests</param>
+        /// <param name="patchHeaders">headers for PATCH requests</param>
+        /// <returns>A new immutable dictionary of headers</returns>
         private static Dictionary<string, ReadOnlyCollection<string>> CreateHeadersToSignDictionary(
                 ReadOnlyCollection<string> getHeaders,
                 ReadOnlyCollection<string> headHeaders,

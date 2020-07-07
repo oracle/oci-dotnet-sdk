@@ -5,6 +5,7 @@
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An interface of user-based authentication details provider.</summary>
     public interface IAuthenticationDetailsProvider : IBasicAuthenticationDetailsProvider
     {
         public string Fingerprint { get; }

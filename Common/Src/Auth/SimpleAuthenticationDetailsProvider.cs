@@ -7,6 +7,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>A base authentication details provider that contains user authentication information and region information.</summary>
     public class SimpleAuthenticationDetailsProvider : CustomerAuthenticationDetailsProvider, IRegionProvider
     {
         public Region Region { get; set; }

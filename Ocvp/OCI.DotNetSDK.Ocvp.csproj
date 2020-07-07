@@ -7,7 +7,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <PackageId>OCI.DotNetSDK.Ocvp</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Ocvp</RootNamespace>
+    <RootNamespace>Oci.OcvpService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Ocvp</PackageTags>

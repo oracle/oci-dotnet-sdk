@@ -8,6 +8,7 @@ using Org.BouncyCastle.OpenSsl;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An implementation to save and retrieves passphrase.</summary>
     public class PasswordFinder : IPasswordFinder
     {
         private readonly string passPhrase;
