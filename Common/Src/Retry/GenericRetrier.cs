@@ -15,6 +15,7 @@ using Polly.Timeout;
 
 namespace Oci.Common.Retry
 {
+    /// <summary>A generic retrier class.</summary>
     public class GenericRetrier
     {
         private readonly RetryConfiguration retryConfiguration;

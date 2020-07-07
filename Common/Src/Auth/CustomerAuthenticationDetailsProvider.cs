@@ -7,6 +7,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>An abstract class for user-based authentication details provider.</summary>
     public abstract class CustomerAuthenticationDetailsProvider : IAuthenticationDetailsProvider
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();

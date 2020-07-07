@@ -5,5 +5,6 @@
 
 namespace Oci.Common.Auth
 {
+    /// <summary>This is the base interface of all authentication details providers.</summary>
     public interface IAbstractAuthenticationDetailsProvider { }
 }

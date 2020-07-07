@@ -14,12 +14,17 @@ using Oci.Common.Utils;
 
 namespace Oci.Common.Http.Internal
 {
+    /// <summary>A utility class to read response content.</summary>
     public class ResponseHelper
     {
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public static string DEFAULT_OCI_EXCEPTION_MESSAGE = "Unknown Message";
         public static string DEFAULT_OCI_EXCEPTION_SERVICE_CODE = "Unknown Service Code";
 
+        /// <summary>Reads content from HttpResponseMessage and converts it into SDK response object.</summary>
+        /// <param name="response">An HttpResponseMessage.</param>
+        /// <returns>An SDK response object.</returns>
+        /// <exception>Throws any exception from ReadEntityInternal.</exception>
         public static T ReadEntity<T>(HttpResponseMessage response)
         {
             var opcRequestId = HeaderUtils.GetFirstorDefaultHeaderValue(response.Headers, "opc-request-id");
@@ -41,8 +46,12 @@ namespace Oci.Common.Http.Internal
             }
         }
 
-        // HandleNonSuccessfulResponse will only be called to process responses return from service that are not 2xx.
-        // If this happens, throw OciException.
+        /// <summary>
+        /// HandleNonSuccessfulResponse will only be called to process responses return from service that are not 2xx.
+        /// If this happens, throw OciException.
+        /// </summary>
+        /// <param name="responseMessage">An HttpResponseMessage.</param>
+        /// <exception>Throws OciException if error code and message are retrieved, or throws any exception from ReadEntityInternal.</exception>
         public static void HandleNonSuccessfulResponse(HttpResponseMessage responseMessage)
         {
             var responseOpcRequestId = HeaderUtils.GetFirstorDefaultHeaderValue(responseMessage.Headers, "opc-request-id");

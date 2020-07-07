@@ -8,6 +8,7 @@ using Oci.Common.Auth;
 
 namespace Oci.Common.Http.Signing
 {
+    /// <summary>An abstract class for signing a request.</summary>
     public abstract class RequestSigner
     {
         public RequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider)

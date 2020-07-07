@@ -5,11 +5,16 @@
 
 namespace Oci.Common.Http
 {
+    /// <summary>Defines where a property in Request class should be place in HttpRequestMessage.</summary>
     public enum TargetEnum
     {
+        /// <summary>A path parameter.</summary>
         Path,
+        /// <summary>A header parameter.</summary>
         Header,
+        /// <summary>A query parameter.</summary>
         Query,
+        /// <summary>Body of a request.</summary>
         Body
     }
 }

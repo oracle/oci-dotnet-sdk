@@ -5,6 +5,7 @@
 
 ﻿namespace Oci.Common.Retry
 {
+    /// <summary>A retry strategy that uses exponetial backoff to calculate delays.</summary>
     public class BackOffRetryStrategy
     {
         public int BaseSleepTimeSeconds { get; set; }
@@ -12,6 +13,11 @@
         public int MaxWaitBetweenCallsSeconds { get; set; }
         public RetryBackOffType BackOffType { get; set; }
 
+        /// <summary>Constructor.</summary>
+        /// <param name="backOffType">The retry backoff type.</param>
+        /// <param name="baseSleepTimeSeconds">The sleep time to start with.</param>
+        /// <param name="exponentialGrowthFactor">The exponential growth factor used to calculate subsequent delays.</param>
+        /// <param name="maxWaitBetweenCallsSeconds">The maximum delay duration in seconds.</param>
         public BackOffRetryStrategy(RetryBackOffType backOffType, int baseSleepTimeSeconds, int exponentialGrowthFactor, int maxWaitBetweenCallsSeconds)
         {
             this.BackOffType = backOffType;

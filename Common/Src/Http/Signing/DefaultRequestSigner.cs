@@ -21,6 +21,9 @@ using Org.BouncyCastle.Security;
 
 namespace Oci.Common.Http.Signing
 {
+    /// <summary>
+    /// This class contains the implementation of the default signing logic.
+    /// </summary>
     public class DefaultRequestSigner : RequestSigner
     {
         private readonly SigningStrategy signingStrategy;
@@ -52,6 +55,8 @@ namespace Oci.Common.Http.Signing
             this.signingStrategy = signingStrategy;
         }
 
+        /// <summary>This is the main code to sign a request.</summary>
+        /// <param name="requestMessage">An HttpRequestMessage to be signed.</param>
         public override void SignRequest(HttpRequestMessage requestMessage)
         {
             HttpMethod httpMethod = requestMessage.Method;

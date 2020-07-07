@@ -13,6 +13,7 @@ using Oci.Common.Http.Signing;
 
 namespace Oci.Common
 {
+    /// <summary>An abstract class for a generic service client.</summary>
     public abstract class ClientBase
     {
         private readonly Dictionary<SigningStrategy, RequestSigner> availableRequestSigners;
@@ -24,18 +25,30 @@ namespace Oci.Common
         protected Service service;
         protected string userAgent = null;
 
+        /// <summary> Constructor of a service client.</summary>
+        /// <param name="authProvider">The authentication details provider.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider) : this(authProvider,
             new ClientConfiguration(), new DefaultRequestSigner(authProvider))
         { }
 
+        /// <summary> Constructor of a service client.</summary>
+        /// <param name="authProvider">The authentication details provider.</param>
+        /// <param name="requestSigner">A request signer that will be used to sign requests.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, RequestSigner requestSigner) :
             this(authProvider, new ClientConfiguration(), requestSigner)
         { }
 
+        /// <summary> Constructor of a service client.</summary>
+        /// <param name="authProvider">The authentication details provider.</param>
+        /// <param name="clientConfiguration">A client configuration to customize client.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration) :
             this(authProvider, new ClientConfiguration(), new DefaultRequestSigner(authProvider))
         { }
 
+        /// <summary> Constructor of a service client.</summary>
+        /// <param name="authProvider">The authentication details provider.</param>
+        /// <param name="clientConfiguration">A client configuration to customize client.</param>
+        /// <param name="requestSigner">A request signer that will be used to sign requests.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner)
         {
             this.clientHandler = new RestClientHandler(RequestReceptor);
@@ -45,17 +58,20 @@ namespace Oci.Common
             this.restClient.SetDefaultUserAgent(GetUserAgent(clientConfiguration.ClientUserAgent));
         }
 
+        /// <summary>Disposes the rest client.</summary>
         public void Dispose()
         {
             this.restClient.Dispose();
         }
 
+        /// <summary>Sets the endpoint in the rest client.</summary>
         public void SetEndpoint(string endpoint)
         {
             logger.Info($"Setting endpoint to {endpoint}");
             this.restClient.SetEndpoint(endpoint);
         }
 
+        /// <summary>Retrieves the endpoint Uri.</summary>
         public Uri GetEndpoint()
         {
             return this.restClient.GetEndpoint();

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Oci.Common.Http
 {
+    /// <summary>A handler for RestClient.</summary>
     public class RestClientHandler : HttpClientHandler
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();

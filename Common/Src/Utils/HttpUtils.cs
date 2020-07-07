@@ -12,8 +12,16 @@ using System.Text;
 
 namespace Oci.Common.Utils
 {
+    /// <summary>A utility class that contains functions related to HTTP calls.</summary>
     public class HttpUtils
     {
+
+        /// <summary>
+        /// Attempts to encode a query param. If it is a list of values, each item in teh list will be
+        /// encoded and then added to a single string, separated by commas.
+        /// </summary>
+        /// <param name="queryParam">The query parameter to encode.</param>
+        /// <returns>The encoded query parameter in string.</returns>
         public static string EncodeQueryParam(object queryParam)
         {
             // List will be converted to comma separated string
@@ -32,6 +40,10 @@ namespace Oci.Common.Utils
             }
         }
 
+        /// <summary>
+        /// Attempts to encode a query param.
+        /// <param name="queryParam">The query parameter to encode.</param>
+        /// <returns>The encoded query parameter in string.</returns>
         public static string EncodeQueryParamSingleValue(object queryParam)
         {
             if (queryParam is DateTime)
@@ -50,6 +62,9 @@ namespace Oci.Common.Utils
             return Uri.EscapeUriString(queryParam.ToString());
         }
 
+        /// <summary>Gets the actual Enum string representation that will be passed in HTTP request and recognized by service backend.</summary>
+        /// <param name="enumObject">A query parameter that is an Enum value.</param>
+        /// <returns>The matching string representation that can be accepted by service endpoint.</returns>
         public static string GetEnumString(object enumObject)
         {
             var memInfo = enumObject.GetType().GetMember(enumObject.ToString());
@@ -61,6 +76,9 @@ namespace Oci.Common.Utils
             return Uri.EscapeUriString(enumObject.ToString());
         }
 
+        /// <summary>Builds the string containing the query in request URL.</summary>
+        /// <param name="queries">A Dictionary containing all queries to be send.</param>
+        /// <returns>The string representation of the queries in the request URL.</returns>
         public static string BuildQueryString(Dictionary<string, string> queries)
         {
             if (queries == null || queries.Count == 0)

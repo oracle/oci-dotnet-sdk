@@ -7,13 +7,22 @@ using System;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>A class that builds key id.</summary>
     public class CustomerKeyIdFormatter
     {
+        /// <summary>Builds key id.</summary>
+        /// <param name="tenantId">The tenantId.</param>
+        /// <param name="userId">The userId.</param>
+        /// <param name="fingerprint">The fignerprint of the user.</param>
+        /// <returns>The key id.</returns>
         public static string CreateKeyId(string tenantId, string userId, string fingerprint)
         {
             return $"{tenantId}/{userId}/{fingerprint}";
         }
 
+        /// <summary>Builds key id.</summary>
+        /// <param name="provider">The authentication details provider.</param>
+        /// <returns>The key id.</returns>
         public static string CreateKeyId(IAuthenticationDetailsProvider provider)
         {
             return CreateKeyId(provider.TenantId, provider.UserId, provider.Fingerprint);

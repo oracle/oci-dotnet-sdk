@@ -13,8 +13,13 @@ using Oci.Common.Utils;
 
 namespace Oci.Common.Http.Internal
 {
+    /// <summary>A utility class that processes values for HTTP headers.</summary>
     public class HeaderUtils
     {
+        /// <summary>Retrieves the first header value that matches the give header name.</summary>
+        /// <param name="headers">The HttpResponseHeaders to search from.</param>
+        /// <param name="headerName">The header name to search for.</param>
+        /// <returns>The first matching header's value if found; or empty string if not found.</returns>
         public static string GetFirstorDefaultHeaderValue(HttpResponseHeaders headers, string headerName)
         {
             if (headers == null || string.IsNullOrEmpty(headerName))
@@ -32,6 +37,9 @@ namespace Oci.Common.Http.Internal
             return string.Empty;
         }
 
+        /// <summary>Returns string representation of a header value from various types.</summary>
+        /// <param name="value">The header value.</param>
+        /// <returns>The string representation of the header value.</returns>
         public static string FromValue(dynamic value)
         {
             if (value.GetType().Equals(typeof(Oci.Common.Model.Range)))
@@ -54,6 +62,10 @@ namespace Oci.Common.Http.Internal
             return Convert.ToString(value);
         }
 
+        /// <summary>Converts a string into header value based on the type provided.</summary>
+        /// <param name="strValue">The string representation of the header value.</param>
+        /// <param name="type">The expected type of the header value.</param>
+        /// <returns>The converted header value.</returns>
         public static dynamic ToValue(string strValue, Type type)
         {
             if (type.Equals(typeof(Oci.Common.Model.Range)))

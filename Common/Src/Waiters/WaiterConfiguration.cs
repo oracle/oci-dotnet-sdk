@@ -7,10 +7,10 @@
 
 namespace Oci.Common.Waiters
 {
-    // Provides configuration for Waiters
+    /// <summary>Provides configuration for Waiters.</summary>
     public class WaiterConfiguration
     {
-        // Maximum number of attempts to be made until the resource reaches a desired state.
+        /// <summary>Maximum number of attempts to be made until the resource reaches a desired state.</summary>
         public int MaxAttempts { get; set; } = 5;
 
         /// <summary>

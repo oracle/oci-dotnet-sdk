@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <PackageId>OCI.DotNetSDK.Applicationmigration</PackageId>
-    <RootNamespace>OCI.DotNetSDK.Applicationmigration</RootNamespace>
+    <RootNamespace>Oci.ApplicationmigrationService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Applicationmigration</PackageTags>

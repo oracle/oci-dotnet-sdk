@@ -7,14 +7,18 @@
 
 namespace Oci.Common.Retry
 {
+    /// <summary>The retry configuration for HTTP client to send HTTP requests.</summary>
     public class RetryConfiguration : Oci.Common.Waiters.WaiterConfiguration
     {
         private static readonly int MAX_DURATION = 60 * 10; // 10 Mins
 
+        /// <summary>The total elapsed time allowed for reties.</summary>
         public int TotalElapsedTimeInSecs { get; set; } = MAX_DURATION;
 
+        /// <summary>The group of status codes (first digit) that can be retried.</summary>
         public List<int> RetryableStatusCodeFamilies { get; set; } = new List<int> { 5 };
 
+        /// <summary>The set of status codes that can be retried.</summary>
         public List<int> RetryableStatusCodes { get; set; } = new List<int> { 408, 429 };
     }
 }

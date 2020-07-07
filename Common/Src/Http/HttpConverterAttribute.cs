@@ -7,13 +7,14 @@ using System;
 
 namespace Oci.Common.Http
 {
+    /// <summary>A custom Attribute implementation for properties in Request classes.</summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class HttpConverterAttribute : Attribute
     {
 
-        // The target to add this value in HttpRequestMesasage.
+        /// <summary>The target to add this value in HttpRequestMesasage.</summary>
         public TargetEnum Target { get; set; }
-        // The name of the target.
+        /// <summary>The name of the target.</summary>
         public string Name { get; set; }
 
         public HttpConverterAttribute(TargetEnum target, string name)

@@ -13,6 +13,7 @@ using Org.BouncyCastle.Security;
 
 namespace Oci.Common.Auth
 {
+    /// <summary>A file-based key provider. This class reads private key from a pem key file.</summary>
     public class FilePrivateKeySupplier : ISupplier<RsaKeyParameters>
     {
         private readonly string pemFilePath;
@@ -24,6 +25,8 @@ namespace Oci.Common.Auth
             this.passPhrase = passPhrase ?? null;
         }
 
+        /// <summary>Reads the private key.</summary>
+        /// <returns>The private key from key pair.</returns>
         public RsaKeyParameters GetKey()
         {
             AsymmetricCipherKeyPair keyPair;

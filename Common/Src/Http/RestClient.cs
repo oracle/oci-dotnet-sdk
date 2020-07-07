@@ -15,6 +15,7 @@ using Oci.Common.Model;
 
 namespace Oci.Common.Http
 {
+    /// <summary>A REST client implementation.</summary>
     public class RestClient
     {
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
@@ -33,6 +34,7 @@ namespace Oci.Common.Http
 
         public RestClient() : this(null as RestClientHandler) { }
 
+        /// <summary>Disposes the HTTP client</summary>
         public void Dispose()
         {
             if (this.httpClient != null)
@@ -41,22 +43,33 @@ namespace Oci.Common.Http
             }
         }
 
+        /// <summary>Sets the base address for the HTTP client.</summary>
+        /// <param name="endpoint">The service endpoint.</param>
         public void SetEndpoint(string endpoint)
         {
             logger.Debug($"Setting endpoint to: {endpoint}");
             this.httpClient.BaseAddress = new Uri(endpoint);
         }
 
+        /// <summary>Retrieves the endpoint Uri.</summary>
+        /// <returns>The base address of the HTTP client.</returns>
         public Uri GetEndpoint()
         {
             return this.httpClient.BaseAddress;
         }
 
+        /// <summary>Sets the default user agent in HTTP client.</summary>
+        /// <param name="userAgent">A user agent string.</param>
         public void SetDefaultUserAgent(string userAgent)
         {
             this.httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd(userAgent);
         }
 
+        /// <summary>Sends HTTP request.</summary>
+        /// <param name="httpRequest">The HttpRequestMessage to be sent.</param>
+        /// <param name="cancellationToken">The CancellationToken to be used.</param>
+        /// <returns>A Task of HttpResponseMessage returned.</returns>
+        /// <exception>Throws HttpRequestException, InvalidOperationException, or OperationCanceledException depending on the type of error.</exception>
         public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, CancellationToken cancellationToken = default)
         {
             var opcRequestId = httpRequest.Headers.Contains("opc-request-id") ?
