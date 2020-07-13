@@ -67,7 +67,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Aborts an in-progress multipart upload and deletes all parts that have been uploaded.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -105,7 +105,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Cancels a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -143,7 +143,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Commits a multipart upload, which involves checking part numbers and entity tags (ETags) of the parts, to create an aggregate object.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -181,7 +181,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Creates a request to copy an object within a region or to another region.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -221,7 +221,7 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// Creates a bucket in the given namespace with a bucket name and optional user-defined metadata. Avoid entering
         /// confidential information in bucket names.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -259,7 +259,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Starts a new multipart upload to a specific object in the given bucket in the given namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -298,7 +298,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Creates a pre-authenticated request specific to the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -336,7 +336,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Creates a replication policy for the specified bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -375,7 +375,7 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// Creates a new retention rule in the specified bucket. The new rule will take effect typically within 30 seconds.
         /// Note that a maximum of 100 rules are supported on a bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -416,7 +416,7 @@ namespace Oci.ObjectstorageService
         /// {@link #deleteObject(DeleteObjectRequest) deleteObject} first. In addition,
         /// you cannot delete a bucket that has a multipart upload in progress or a pre-authenticated
         /// request associated with that bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -454,7 +454,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Deletes an object.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -492,7 +492,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Deletes the object lifecycle policy for the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -567,7 +567,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Deletes the replication policy associated with the source bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -642,7 +642,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Gets the current representation of the given bucket in the given Object Storage namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -686,7 +686,7 @@ namespace Oci.ObjectstorageService
         /// GetNamespace returns the name of the Object Storage namespace for the user making the request.
         /// If an optional compartmentId query parameter is provided, GetNamespace returns the namespace name of the corresponding
         /// tenancy, provided the user has access to it.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -730,7 +730,7 @@ namespace Oci.ObjectstorageService
         /// not authorized, talk to an administrator. If you are an administrator who needs to write policies
         /// to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -768,7 +768,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Gets the metadata and body of an object.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -806,7 +806,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Gets the object lifecycle policy for the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -881,7 +881,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Get the replication policy.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -993,7 +993,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Efficiently checks to see if a bucket exists and gets the current entity tag (ETag) for the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1031,7 +1031,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Gets the user-defined metadata and entity tag (ETag) for an object.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1074,7 +1074,7 @@ namespace Oci.ObjectstorageService
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1112,7 +1112,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Lists the parts of an in-progress multipart upload.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1150,7 +1150,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Lists all of the in-progress multipart uploads for the given bucket in the given Object Storage namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1192,7 +1192,7 @@ namespace Oci.ObjectstorageService
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1234,7 +1234,7 @@ namespace Oci.ObjectstorageService
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1272,7 +1272,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Lists pre-authenticated requests for the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1310,7 +1310,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// List the replication policies associated with a bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1348,7 +1348,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// List the replication sources of a destination bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1387,7 +1387,7 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// List the retention rules for a bucket. The retention rules are sorted based on creation time,
         /// with the most recently created retention rule returned first.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1499,7 +1499,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Lists the work requests in a compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1540,7 +1540,7 @@ namespace Oci.ObjectstorageService
         /// policy was created, this destination bucket became read-only except for new and changed objects replicated
         /// automatically from the source bucket. MakeBucketWritable removes the replication policy. This bucket is no
         /// longer the target for replication and is now writable, allowing users to make changes to bucket contents.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1582,7 +1582,7 @@ namespace Oci.ObjectstorageService
         /// &lt;br/&gt;
         /// See [Special Instructions for Object Storage PUT](https://docs.cloud.oracle.com/Content/API/Concepts/signingrequests.htm#ObjectStoragePut)
         /// for request signature requirements.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1622,7 +1622,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Creates or replaces the object lifecycle policy for the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1659,22 +1659,22 @@ namespace Oci.ObjectstorageService
         }
 
         /// <summary>
-        /// Re-encrypts the unique data encryption key that encrypts each object written to the bucket by using the most recent
-        /// version of the master encryption key assigned to the bucket. (All data encryption keys are encrypted by a master
-        /// encryption key. Master encryption keys are assigned to buckets and managed by Oracle by default, but you can assign
-        /// a key that you created and control through the Oracle Cloud Infrastructure Key Management service.) The kmsKeyId property
-        /// of the bucket determines which master encryption key is assigned to the bucket. If you assigned a different Key Management
-        /// master encryption key to the bucket, you can call this API to re-encrypt all data encryption keys with the newly
-        /// assigned key. Similarly, you might want to re-encrypt all data encryption keys if the assigned key has been rotated to
-        /// a new key version since objects were last added to the bucket. If you call this API and there is no kmsKeyId associated
+        /// Re-encrypts the unique data encryption key that encrypts each object written to the bucket by using the most recent 
+        /// version of the master encryption key assigned to the bucket. (All data encryption keys are encrypted by a master 
+        /// encryption key. Master encryption keys are assigned to buckets and managed by Oracle by default, but you can assign 
+        /// a key that you created and control through the Oracle Cloud Infrastructure Key Management service.) The kmsKeyId property 
+        /// of the bucket determines which master encryption key is assigned to the bucket. If you assigned a different Key Management 
+        /// master encryption key to the bucket, you can call this API to re-encrypt all data encryption keys with the newly 
+        /// assigned key. Similarly, you might want to re-encrypt all data encryption keys if the assigned key has been rotated to 
+        /// a new key version since objects were last added to the bucket. If you call this API and there is no kmsKeyId associated 
         /// with the bucket, the call will fail.
         /// &lt;br/&gt;
-        /// Calling this API starts a work request task to re-encrypt the data encryption key of all objects in the bucket. Only
-        /// objects created before the time of the API call will be re-encrypted. The call can take a long time, depending on how many
-        /// objects are in the bucket and how big they are. This API returns a work request ID that you can use to retrieve the status
+        /// Calling this API starts a work request task to re-encrypt the data encryption key of all objects in the bucket. Only 
+        /// objects created before the time of the API call will be re-encrypted. The call can take a long time, depending on how many 
+        /// objects are in the bucket and how big they are. This API returns a work request ID that you can use to retrieve the status 
         /// of the work request task.
         /// All the versions of objects will be re-encrypted whether versioning is enabled or suspended at the bucket.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1711,8 +1711,8 @@ namespace Oci.ObjectstorageService
         }
 
         /// <summary>
-        /// Re-encrypts the data encryption keys that encrypt the object and its chunks. By default, when you create a bucket, the Object Storage
-        /// service manages the master encryption key used to encrypt each object&#39;s data encryption keys. The encryption mechanism that you specify for
+        /// Re-encrypts the data encryption keys that encrypt the object and its chunks. By default, when you create a bucket, the Object Storage 
+        /// service manages the master encryption key used to encrypt each object&#39;s data encryption keys. The encryption mechanism that you specify for 
         /// the bucket applies to the objects it contains.
         /// &lt;br/&gt;
         /// You can alternatively employ one of these encryption strategies for an object:
@@ -1720,7 +1720,7 @@ namespace Oci.ObjectstorageService
         /// - You can assign a key that you created and control through the Oracle Cloud Infrastructure Vault service.
         /// &lt;br/&gt;
         /// - You can encrypt an object using your own encryption key. The key you supply is known as a customer-provided encryption key (SSE-C).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1758,7 +1758,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Rename an object in the given Object Storage namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1797,7 +1797,7 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// Restores one or more objects specified by the objectName parameter.
         /// By default objects will be restored for 24 hours. Duration can be configured using the hours parameter.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1839,7 +1839,7 @@ namespace Oci.ObjectstorageService
         /// Use UpdateBucket to move a bucket from one compartment to another within the same tenancy. Supply the compartmentID
         /// of the compartment that you want to move the bucket to. For more information about moving resources between compartments,
         /// see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1883,7 +1883,7 @@ namespace Oci.ObjectstorageService
         /// subsequent bucket creations will use the new default compartment, but no previously created
         /// buckets will be modified. A user must have OBJECTSTORAGE_NAMESPACE_UPDATE permission to make changes to the default
         /// compartments for Amazon S3 and Swift.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1921,7 +1921,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Updates the specified retention rule. Rule changes take effect typically within 30 seconds.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1959,7 +1959,7 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Uploads a single part of a multipart upload.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

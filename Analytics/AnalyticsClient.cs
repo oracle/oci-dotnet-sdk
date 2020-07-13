@@ -68,7 +68,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Change the compartment of an Analytics instance. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -107,7 +107,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Change an Analytics instance network endpoint. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -146,7 +146,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Create a new AnalyticsInstance in the specified compartment. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -185,7 +185,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Terminates the specified Analytics instance. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -223,7 +223,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// Cancel a work request that has not started yet.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -261,7 +261,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// Info for a specific Analytics instance.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -299,7 +299,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// Get the details of a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -337,7 +337,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// List Analytics instances.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -375,7 +375,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// Get the errors of a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -413,7 +413,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// Get the logs of a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -451,7 +451,7 @@ namespace Oci.AnalyticsService
 
         /// <summary>
         /// List all work requests in a compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -490,7 +490,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Scale an Analytics instance up or down. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -529,7 +529,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Starts the specified Analytics instance. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -568,7 +568,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Stop the specified Analytics instance. The operation is long-running
         /// and creates a new WorkRequest.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -607,7 +607,7 @@ namespace Oci.AnalyticsService
         /// <summary>
         /// Updates certain fields of an Analytics instance. Fields that are not provided in the
         /// request will not be updated.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

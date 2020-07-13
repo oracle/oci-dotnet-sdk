@@ -67,6 +67,9 @@ namespace Oci.ResourcemanagerService.Models
                 case "ZIP_UPLOAD":
                     obj = new CreateZipUploadConfigSourceDetails();
                     break;
+                case "GIT_CONFIG_SOURCE":
+                    obj = new CreateGitConfigSourceDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

@@ -9,7 +9,7 @@
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Nosql</PackageTags>
-    <Description>A NoSQL database service offering on-demand throughput and storage based provisioning that supports JSON, Table and Key-Value datatypes, all with flexible transaction guarantees.</Description>
+    <Description>Oracle NoSQL Database Cloud is a high performance data store which is distributed, sharded for horizontal scalability, and highly available. It is optimized for applications requiring predictable low latency (such as fraud detection, gaming, and personalized user experience), very high throughput, or extreme ingestion rates (such as event processing, IoT, and sensor data).</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>

@@ -64,7 +64,9 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<LevelEnum> Level { get; set; }
 
         /// <value>
-        /// Date and time of the log entry.
+        /// The date and time of the log entry.
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }

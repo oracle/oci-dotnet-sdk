@@ -21,7 +21,6 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The CIDR IP address block of the VCN.
-        /// <br/>
         /// Example: 10.0.0.0/16
         /// </value>
         /// <remarks>

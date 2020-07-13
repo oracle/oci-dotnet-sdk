@@ -85,7 +85,7 @@ namespace Oci.Common.Utils
             {
                 return string.Empty;
             }
-            var sb = new StringBuilder("?");
+            var sb = new StringBuilder("");
             foreach (KeyValuePair<string, string> keyValue in queries)
             {
                 sb.AppendFormat("{0}{1}={2}", sb.Length > 1 ? "&" : "", keyValue.Key, keyValue.Value);

@@ -68,20 +68,24 @@ namespace Oci.ResourcemanagerService.Models
 
         /// <value>
         /// The date and time the job was created.
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
 
         /// <value>
         /// The date and time the job succeeded or failed.
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
 
         /// <value>
         /// Current state of the specified job.
-        /// For more information about resource states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts).
+        /// For more information about job lifecycle states in Resource Manager, see
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#JobStates).
         /// <br/>
         /// Allowable values:
         /// - ACCEPTED

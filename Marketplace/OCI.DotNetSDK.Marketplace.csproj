@@ -9,7 +9,7 @@
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Marketplace</PackageTags>
-    <Description>Manage applications in Oracle Cloud Infrastructure Marketplace.</Description>
+    <Description>Marketplace provides you with images from trusted Oracle partners that you can deploy to an instance in your environment.</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>

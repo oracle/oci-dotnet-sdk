@@ -30,7 +30,9 @@ namespace Oci.ResourcemanagerService.Models
         ///
         public enum ConfigSourceTypeEnum {
             [EnumMember(Value = "ZIP_UPLOAD")]
-            ZipUpload
+            ZipUpload,
+            [EnumMember(Value = "GIT_CONFIG_SOURCE")]
+            GitConfigSource
         };
 
         /// <value>
@@ -74,6 +76,9 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["configSourceType"].Value<string>();
             switch (discriminator)
             {
+                case "GIT_CONFIG_SOURCE":
+                    obj = new GitConfigSource();
+                    break;
                 case "ZIP_UPLOAD":
                     obj = new ZipUploadConfigSource();
                     break;

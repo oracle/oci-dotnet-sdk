@@ -191,6 +191,10 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
 
+        /// <value>
+        /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any default values.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
         ///

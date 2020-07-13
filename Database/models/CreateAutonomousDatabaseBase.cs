@@ -174,6 +174,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
 
         /// <value>
+        /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataGuardEnabled")]
+        public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the resource is associated with.
         /// <br/>
         /// **Subnet Restrictions:**

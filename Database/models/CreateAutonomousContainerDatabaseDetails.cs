@@ -39,7 +39,7 @@ namespace Oci.DatabaseService.Models
         public string DbUniqueName { get; set; }
         ///
         /// <value>
-        /// The service level agreement type of the Autonomous Container Database. The default is STANDARD. For a mission critical Autonomous Container Database, the specified Autonomous Exadata Infrastructure must be associated with a remote Autonomous Exadata Infrastructure.
+        /// The service level agreement type of the Autonomous Container Database. The default is STANDARD. For an autonomous dataguard Autonomous Container Database, the specified Autonomous Exadata Infrastructure must be associated with a remote Autonomous Exadata Infrastructure.
         /// </value>
         ///
         public enum ServiceLevelAgreementTypeEnum {
@@ -48,7 +48,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The service level agreement type of the Autonomous Container Database. The default is STANDARD. For a mission critical Autonomous Container Database, the specified Autonomous Exadata Infrastructure must be associated with a remote Autonomous Exadata Infrastructure.
+        /// The service level agreement type of the Autonomous Container Database. The default is STANDARD. For an autonomous dataguard Autonomous Container Database, the specified Autonomous Exadata Infrastructure must be associated with a remote Autonomous Exadata Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "serviceLevelAgreementType")]
         [JsonConverter(typeof(StringEnumConverter))]

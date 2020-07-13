@@ -38,7 +38,10 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
 
         /// <value>
-        /// The CIDR IP address range of the subnet.
+        /// The CIDR IP address range of the subnet. The CIDR must maintain the following rules -
+        /// <br/>
+        /// a. The CIDR block is valid and correctly formatted.
+        /// b. The new range is within one of the parent VCN ranges.
         /// <br/>
         /// Example: 10.0.1.0/24
         /// </value>

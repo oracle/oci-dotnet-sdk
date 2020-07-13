@@ -38,7 +38,7 @@ namespace Oci.Common.Utils
         {
             var queries = new Dictionary<string, string>();
             queries.Add("foo", "bar");
-            Assert.Equal("?foo=bar", HttpUtils.BuildQueryString(queries));
+            Assert.Equal("foo=bar", HttpUtils.BuildQueryString(queries));
         }
 
         [Fact]
@@ -50,7 +50,7 @@ namespace Oci.Common.Utils
             queries.Add("foo1", "bar1");
             queries.Add("foo2", "bar2");
             var actualQueryString = HttpUtils.BuildQueryString(queries);
-            Assert.True("?foo1=bar1&foo2=bar2".Equals(actualQueryString), $"Actual query string: {actualQueryString}");
+            Assert.True("foo1=bar1&foo2=bar2".Equals(actualQueryString), $"Actual query string: {actualQueryString}");
         }
 
         [Fact]
