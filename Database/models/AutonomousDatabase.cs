@@ -79,6 +79,10 @@ namespace Oci.DatabaseService.Models
             MaintenanceInProgress,
             [EnumMember(Value = "RESTARTING")]
             Restarting,
+            [EnumMember(Value = "RECREATING")]
+            Recreating,
+            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
+            RoleChangeInProgress,
             [EnumMember(Value = "UPGRADING")]
             Upgrading
         };
@@ -395,6 +399,33 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeMaintenanceEnd")]
         public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
+
+        /// <value>
+        /// The timestamp of the last switchover operation for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastSwitchover")]
+        public System.Nullable<System.DateTime> TimeOfLastSwitchover { get; set; }
+
+        /// <value>
+        /// The timestamp of the last failover operation.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastFailover")]
+        public System.Nullable<System.DateTime> TimeOfLastFailover { get; set; }
+
+        /// <value>
+        /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataGuardEnabled")]
+        public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+
+        /// <value>
+        /// Indicates the number of seconds of data loss for a Data Guard failover.
+        /// </value>
+        [JsonProperty(PropertyName = "failedDataRecoveryInSeconds")]
+        public System.Nullable<int> FailedDataRecoveryInSeconds { get; set; }
+
+        [JsonProperty(PropertyName = "standbyDb")]
+        public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
 
         /// <value>
         /// List of Oracle Database versions available for a database upgrade. If there are no version upgrades available, this list is empty.

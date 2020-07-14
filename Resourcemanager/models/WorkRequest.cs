@@ -110,7 +110,9 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<float> PercentComplete { get; set; }
 
         /// <value>
-        /// When the work request was created.
+        /// The date and time when the work request was created.
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -120,13 +122,17 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
 
         /// <value>
-        /// When the work request transitioned from ACCEPTED to IN_PROGRESS.
+        /// The date and time when the work request transitioned from ACCEPTED to IN_PROGRESS.
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
 
         /// <value>
-        /// When the work request reached a terminal state (FAILED or SUCCEEDED).
+        /// The date and time when the work request reached a terminal state (FAILED or SUCCEEDED).
+        /// Format is defined by RFC3339.
+        /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }

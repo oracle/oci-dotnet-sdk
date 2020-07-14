@@ -54,7 +54,7 @@ namespace Oci.CoreService.Models
         public CreateVnicDetails CreateVnicDetails { get; set; }
 
         /// <value>
-        /// The OCID of dedicated VM host.
+        /// The OCID of the dedicated VM host.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dedicatedVmHostId")]
@@ -162,6 +162,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "ipxeScript")]
         public string IpxeScript { get; set; }
 
+        /// <value>
+        /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any
+        /// default values.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
 

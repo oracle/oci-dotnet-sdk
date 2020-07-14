@@ -11,7 +11,7 @@
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Dataintegration</PackageTags>
-    <Description>Oracle Cloud Infrastructure Cloud Data Integration Service</Description>
+    <Description>Data Integration is a fully managed service that helps data engineers and ETL developers with common extract, load, and transform (ETL) tasks such as ingesting data from a variety of data assets, cleansing, transforming, and reshaping that data, and then efficiently loading it to target data assets.</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>

@@ -123,6 +123,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
 
         /// <value>
+        /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataGuardEnabled")]
+        public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+
+        /// <value>
         /// A valid Oracle Database version for Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]

@@ -35,7 +35,11 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "JOB_TIMEOUT")]
             JobTimeout,
             [EnumMember(Value = "TERRAFORM_CONFIG_VIRUS_FOUND")]
-            TerraformConfigVirusFound
+            TerraformConfigVirusFound,
+            [EnumMember(Value = "TERRAFORM_GIT_CLONE_FAILURE")]
+            TerraformGitCloneFailure,
+            [EnumMember(Value = "TERRAFORM_GIT_CHECKOUT_FAILURE")]
+            TerraformGitCheckoutFailure
         };
 
         /// <value>

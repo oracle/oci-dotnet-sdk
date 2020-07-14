@@ -11,7 +11,7 @@
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Usageapi</PackageTags>
-    <Description>Oracle Cloud Infrastructure Cloud Usage Api Service</Description>
+    <Description>Usage API Service enables to see the current consumption as well as the limit set for a given service.</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>

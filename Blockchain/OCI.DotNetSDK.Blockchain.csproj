@@ -1,0 +1,19 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{DCE782C9-61DE-490D-AEBD-A82603E659C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>OCI.DotNetSDK.Blockchain</PackageId>
+    <RootNamespace>Oci.BlockchainService</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Blockchain</PackageTags>
+    <Description>Oracle Cloud Infrastructure Cloud Blockchain Service</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+</Project>

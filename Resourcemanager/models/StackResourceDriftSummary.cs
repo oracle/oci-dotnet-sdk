@@ -101,7 +101,8 @@ namespace Oci.ResourcemanagerService.Models
         public System.Collections.Generic.Dictionary<string, string> ExpectedProperties { get; set; }
 
         /// <value>
-        /// Date and time when the drift detection was executed. Format defined by RFC3339.
+        /// The date and time when the drift detection was executed.
+        /// Format is defined by RFC3339.
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeDriftChecked")]

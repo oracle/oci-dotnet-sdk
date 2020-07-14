@@ -66,7 +66,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Activates the specified MFA TOTP device for the user. Activation requires manual interaction with the Console.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -107,7 +107,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -145,10 +145,10 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Assembles tag defaults in the specified compartment and any parent compartments to determine
-        /// the tags to apply. Tag defaults from parent compartments do not override tag defaults
-        /// referencing the same tag in a compartment lower down the hierarchy. This set of tag defaults
+        /// the tags to apply. Tag defaults from parent compartments do not override tag defaults 
+        /// referencing the same tag in a compartment lower down the hierarchy. This set of tag defaults 
         /// includes all tag defaults from the current compartment back to the root compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -190,7 +190,7 @@ namespace Oci.IdentityService
         /// [home region](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingregions.htm#Home). This operation creates a
         /// {@link WorkRequest}. Use the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}
         /// API to monitor the status of the bulk action.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -228,18 +228,18 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified tag key definitions. This operation triggers a process that removes the
-        /// tags from all resources in your tenancy.
+        /// tags from all resources in your tenancy. 
         /// &lt;br/&gt;
         /// The following actions happen immediately:
         /// \u00A0
-        ///   * If the tag is a cost-tracking tag, the tag no longer counts against your
+        ///   * If the tag is a cost-tracking tag, the tag no longer counts against your   
         ///   10 cost-tracking tags limit, even if you do not disable the tag before running this operation.
-        ///   * If the tag is used with dynamic groups, the rules that contain the tag are no longer
-        ///   evaluated against the tag.
+        ///   * If the tag is used with dynamic groups, the rules that contain the tag are no longer 
+        ///   evaluated against the tag. 
         /// &lt;br/&gt;
         /// After you start this operation, the state of the tag changes to DELETING, and tag removal
         /// from resources begins. This process can take up to 48 hours depending on the number of resources that
-        /// are tagged and the regions in which those resources reside.
+        /// are tagged and the regions in which those resources reside. 
         /// &lt;br/&gt;
         /// When all tags have been removed, the state changes to DELETED. You cannot restore a deleted tag. After the tag state
         /// changes to DELETED, you can use the same tag name again.
@@ -247,8 +247,8 @@ namespace Oci.IdentityService
         /// After you start this operation, you cannot start either the {@link #deleteTag(DeleteTagRequest) deleteTag} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes.
         /// &lt;br/&gt;
         /// In order to delete tags, you must first retire the tags. Use {@link #updateTag(UpdateTagRequest) updateTag}
-        /// to retire a tag.
-        ///
+        /// to retire a tag. 
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -288,9 +288,9 @@ namespace Oci.IdentityService
         /// Moves multiple resources from one compartment to another. All resources must be in the same compartment.
         /// This API can only be invoked from the tenancy&#39;s [home region](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingregions.htm#Home).
         /// To move resources, you must have the appropriate permissions to move the resource in both the source and target
-        /// compartments. This operation creates a {@link WorkRequest}.
+        /// compartments. This operation creates a {@link WorkRequest}. 
         /// Use the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} API to monitor the status of the bulk action.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -327,26 +327,26 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Deletes the specified tag namespace. This operation triggers a process that removes all of the tags
+        /// Deletes the specified tag namespace. This operation triggers a process that removes all of the tags 
         /// defined in the specified tag namespace from all resources in your tenancy and then deletes the tag namespace.
         /// &lt;br/&gt;
-        /// After you start the delete operation:
+        /// After you start the delete operation: 
         /// &lt;br/&gt;
-        ///   * New tag key definitions cannot be created under the namespace.
+        ///   * New tag key definitions cannot be created under the namespace. 
         ///   * The state of the tag namespace changes to DELETING.
-        ///   * Tag removal from the resources begins.
+        ///   * Tag removal from the resources begins. 
         /// &lt;br/&gt;
-        /// This process can take up to 48 hours depending on the number of tag definitions in the namespace, the number of resources
+        /// This process can take up to 48 hours depending on the number of tag definitions in the namespace, the number of resources 
         /// that are tagged, and the locations of the regions in which those resources reside.
         /// &lt;br/&gt;
-        /// After all tags are removed, the state changes to DELETED. You cannot restore a deleted tag namespace. After the deleted tag namespace
+        /// After all tags are removed, the state changes to DELETED. You cannot restore a deleted tag namespace. After the deleted tag namespace 
         /// changes its state to DELETED, you can use the name of the deleted tag namespace again.
         /// &lt;br/&gt;
         /// After you start this operation, you cannot start either the {@link #deleteTag(DeleteTagRequest) deleteTag} or the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} operation until this process completes.
         /// &lt;br/&gt;
         /// To delete a tag namespace, you must first retire it. Use {@link #updateTagNamespace(UpdateTagNamespaceRequest) updateTagNamespace}
         /// to retire a tag namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -389,7 +389,7 @@ namespace Oci.IdentityService
         /// For more information about IAM policies, see [Details for IAM](https://docs.cloud.oracle.com/Content/Identity/Reference/iampolicyreference.htm).
         /// &lt;br/&gt;
         /// Moving a tag namespace moves all the tag key definitions contained in the tag namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -436,7 +436,7 @@ namespace Oci.IdentityService
         /// Every user has permission to create an auth token for *their own user ID*. An administrator in your organization
         /// does not need to write a policy to give users this ability. To compare, administrators who have permission to the
         /// tenancy can use this operation to create an auth token for any user, including themselves.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -492,7 +492,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -540,7 +540,7 @@ namespace Oci.IdentityService
         /// Every user has permission to create a secret key for *their own user ID*. An administrator in your organization
         /// does not need to write a policy to give users this ability. To compare, administrators who have permission to the
         /// tenancy can use this operation to create a secret key for any user, including themselves.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -595,7 +595,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -653,7 +653,7 @@ namespace Oci.IdentityService
         /// After creating the group, you need to put users in it and write policies for it.
         /// See {@link #addUserToGroup(AddUserToGroupRequest) addUserToGroup} and
         /// {@link #createPolicy(CreatePolicyRequest) createPolicy}.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -708,7 +708,7 @@ namespace Oci.IdentityService
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily
         /// be CREATING. Before using the object, first make sure its &#x60;lifecycleState&#x60; has
         /// changed to ACTIVE.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -747,7 +747,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a single mapping between an IdP group and an IAM Service
         /// {@link Group}.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -785,7 +785,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new MFA TOTP device for the user. A user can have one MFA TOTP device.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -841,9 +841,9 @@ namespace Oci.IdentityService
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
         /// &lt;br/&gt;
-        /// After your network resource is created, you can use it in policy to restrict access to only requests made from an allowed
+        /// After your network resource is created, you can use it in policy to restrict access to only requests made from an allowed 
         /// IP address specified in your network source. For more information, see [Managing Network Sources](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingnetworksources.htm).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -881,7 +881,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates Oauth token for the user
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -929,7 +929,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// **Note:** The user&#39;s Console login is the unique name you specified when you created the user
         /// (see {@link #createUser(CreateUserRequest) createUser}).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -983,7 +983,7 @@ namespace Oci.IdentityService
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
         /// &lt;br/&gt;
         /// New policies take effect typically within 10 seconds.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1021,7 +1021,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a subscription to a region for a tenancy.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1062,7 +1062,7 @@ namespace Oci.IdentityService
         /// You must specify a *description* for the SMTP credential (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with
         /// {@link #updateSmtpCredential(UpdateSmtpCredentialRequest) updateSmtpCredential}.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1111,7 +1111,7 @@ namespace Oci.IdentityService
         /// Every user has permission to create a Swift password for *their own user ID*. An administrator in your organization
         /// does not need to write a policy to give users this ability. To compare, administrators who have permission to the
         /// tenancy can use this operation to create a Swift password for any user, including themselves.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1150,7 +1150,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new tag in the specified tag namespace.
         /// &lt;br/&gt;
-        /// The tag requires either the OCID or the name of the tag namespace that will contain this
+        /// The tag requires either the OCID or the name of the tag namespace that will contain this 
         /// tag definition.
         /// &lt;br/&gt;
         /// You must specify a *name* for the tag, which must be unique across all tags in the tag namespace
@@ -1161,16 +1161,16 @@ namespace Oci.IdentityService
         /// The tag must have a *description*. It does not have to be unique, and you can change it with
         /// {@link #updateTag(UpdateTagRequest) updateTag}.
         /// &lt;br/&gt;
-        /// The tag must have a value type, which is specified with a validator. Tags can use either a
+        /// The tag must have a value type, which is specified with a validator. Tags can use either a 
         /// static value or a list of possible values. Static values are entered by a user applying the tag
-        /// to a resource. Lists are created by you and the user must apply a value from the list. Lists
-        /// are validiated.
+        /// to a resource. Lists are created by you and the user must apply a value from the list. Lists 
+        /// are validiated. 
         /// &lt;br/&gt;
-        /// * If no &#x60;validator&#x60; is set, the user applying the tag to a resource can type in a static
-        /// value or leave the tag value empty.
+        /// * If no &#x60;validator&#x60; is set, the user applying the tag to a resource can type in a static 
+        /// value or leave the tag value empty. 
         /// * If a &#x60;validator&#x60; is set, the user applying the tag to a resource must select from a list
         /// of values that you supply with {@link #enumTagDefinitionValidator(EnumTagDefinitionValidatorRequest) enumTagDefinitionValidator}.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1209,13 +1209,13 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new tag default in the specified compartment for the specified tag definition.
         /// &lt;br/&gt;
-        /// If you specify that a value is required, a value is set during resource creation (either by
-        /// the user creating the resource or another tag defualt). If no value is set, resource creation
+        /// If you specify that a value is required, a value is set during resource creation (either by 
+        /// the user creating the resource or another tag defualt). If no value is set, resource creation 
         /// is blocked.
         /// &lt;br/&gt;
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;true\&quot;, the value is set during resource creation.
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;false\&quot;, the value you enter is set during resource creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1266,7 +1266,7 @@ namespace Oci.IdentityService
         /// You must also specify a *description* for the namespace.
         /// It does not have to be unique, and you can change it with
         /// {@link #updateTagNamespace(UpdateTagNamespaceRequest) updateTagNamespace}.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1338,7 +1338,7 @@ namespace Oci.IdentityService
         /// {@link #uploadApiKey(UploadApiKeyRequest) uploadApiKey}).
         /// &lt;br/&gt;
         /// **Important:** Make sure to inform the new user which compartment(s) they have access to.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1381,7 +1381,7 @@ namespace Oci.IdentityService
         /// administrator in your organization does not need to write a policy to give users this ability.
         /// To compare, administrators who have permission to the tenancy can use this operation to delete
         /// a key for any user, including themselves.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1419,7 +1419,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified auth token for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1457,7 +1457,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified compartment. The compartment must be empty.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1495,7 +1495,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified secret key for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1533,7 +1533,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified dynamic group.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1571,7 +1571,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified group. The group must be empty.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1610,7 +1610,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Deletes the specified identity provider. The identity provider must not have
         /// any group mappings (see {@link IdpGroupMapping}).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1685,7 +1685,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified MFA TOTP device for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1723,7 +1723,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified network source
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1761,7 +1761,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Delete Oauth token for the user
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1836,7 +1836,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified SMTP credential for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1876,7 +1876,7 @@ namespace Oci.IdentityService
         /// **Deprecated. Use {@link #deleteAuthToken(DeleteAuthTokenRequest) deleteAuthToken} instead.**
         /// &lt;br/&gt;
         /// Deletes the specified Swift password for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1914,14 +1914,14 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified tag definition. This operation triggers a process that removes the
-        /// tag from all resources in your tenancy.
+        /// tag from all resources in your tenancy. 
         /// &lt;br/&gt;
         /// These things happen immediately:
         /// \u00A0
-        ///   * If the tag was a cost-tracking tag, it no longer counts against your 10 cost-tracking
+        ///   * If the tag was a cost-tracking tag, it no longer counts against your 10 cost-tracking 
         ///   tags limit, whether you first disabled it or not.
-        ///   * If the tag was used with dynamic groups, none of the rules that contain the tag will
-        ///   be evaluated against the tag.
+        ///   * If the tag was used with dynamic groups, none of the rules that contain the tag will 
+        ///   be evaluated against the tag. 
         /// &lt;br/&gt;
         /// When you start the delete operation, the state of the tag changes to DELETING and tag removal
         /// from resources begins. This can take up to 48 hours depending on the number of resources that
@@ -1930,11 +1930,11 @@ namespace Oci.IdentityService
         /// When all tags have been removed, the state changes to DELETED. You cannot restore a deleted tag. Once the deleted tag
         /// changes its state to DELETED, you can use the same tag name again.
         /// &lt;br/&gt;
-        /// After you start this operation, you cannot start either the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes.
+        /// After you start this operation, you cannot start either the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes. 
         /// &lt;br/&gt;
         /// To delete a tag, you must first retire it. Use {@link #updateTag(UpdateTagRequest) updateTag}
-        /// to retire a tag.
-        ///
+        /// to retire a tag. 
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1972,7 +1972,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the the specified tag default.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2009,14 +2009,14 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Deletes the specified tag namespace. Only an empty tag namespace can be deleted with this operation. To use this operation
-        /// to delete a tag namespace that contains tag definitions, first delete all of its tag definitions.
+        /// Deletes the specified tag namespace. Only an empty tag namespace can be deleted with this operation. To use this operation 
+        /// to delete a tag namespace that contains tag definitions, first delete all of its tag definitions. 
         /// &lt;br/&gt;
         /// Use {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} to delete a tag namespace along with all of
-        /// the tag definitions contained within that namespace.
+        /// the tag definitions contained within that namespace. 
         /// &lt;br/&gt;
         /// Use {@link #deleteTag(DeleteTagRequest) deleteTag} to delete a tag definition.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2091,7 +2091,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Generate seed for the MFA TOTP device.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2130,7 +2130,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Gets the authentication policy for the given tenancy. You must specify your tenant\u2019s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2175,7 +2175,7 @@ namespace Oci.IdentityService
         /// each resource type and specify the compartment&#39;s OCID as a query parameter in the request. For example,
         /// call the {@link #listInstances(ListInstancesRequest) listInstances} operation in the Cloud Compute
         /// Service or the {@link #listVolumes(ListVolumesRequest) listVolumes} operation in Cloud Block Storage.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2213,7 +2213,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets the specified dynamic group&#39;s information.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2255,7 +2255,7 @@ namespace Oci.IdentityService
         /// This operation does not return a list of all the users in the group. To do that, use
         /// {@link #listUserGroupMemberships(ListUserGroupMembershipsRequest) listUserGroupMemberships} and
         /// provide the group&#39;s OCID as a query parameter in the request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2367,7 +2367,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Get the specified MFA TOTP device for the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2405,7 +2405,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets the specified network source&#39;s information.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2517,7 +2517,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Retrieves the specified tag default.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2555,7 +2555,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets the specified tag namespace&#39;s information.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2594,7 +2594,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Gets details on a specified work request. The workRequestID is returned in the opc-workrequest-id header
         /// for any asynchronous operation in the Identity and Access Management service.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2744,7 +2744,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Gets the specified user&#39;s console password information. The returned object contains the user&#39;s OCID,
         /// but not the password itself. The actual password is returned only when created or reset.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2783,7 +2783,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Gets details on a specified work request. The workRequestID is returned in the opc-workrequest-id header
         /// for any asynchronous operation in the Identity and Access Management service.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2824,7 +2824,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// Every user has permission to use this API call for *their own user ID*.  An administrator in your
         /// organization does not need to write a policy to give users this ability.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2863,7 +2863,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Lists the auth tokens for the specified user. The returned object contains the token&#39;s OCID, but not
         /// the token itself. The actual token is returned only upon creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2905,7 +2905,7 @@ namespace Oci.IdentityService
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
         /// Note that the order of the results returned can change if availability domains are added or removed; therefore, do not
         /// create a dependency on the list order.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2949,7 +2949,7 @@ namespace Oci.IdentityService
         /// the type of identifying information you&#39;ll need to provide for each resource-type. Most resource-types just
         /// require an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) to identify a specific resource, but some resource-types,
         /// such as buckets, require you to provide other identifying information.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3004,7 +3004,7 @@ namespace Oci.IdentityService
         /// set the parameter &#x60;compartmentIdInSubtree&#x60; to true and &#x60;accessLevel&#x60; to ANY.
         /// &lt;br/&gt;
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3043,7 +3043,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Lists all the tags enabled for cost-tracking in the specified tenancy. For information about
         /// cost-tracking tags, see [Using Cost-tracking Tags](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#costs).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3082,7 +3082,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Lists the secret keys for the specified user. The returned object contains the secret key&#39;s OCID, but not
         /// the secret key itself. The actual secret key is returned only upon creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3122,7 +3122,7 @@ namespace Oci.IdentityService
         /// Lists the dynamic groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3162,7 +3162,7 @@ namespace Oci.IdentityService
         /// Lists the Fault Domains in your tenancy. Specify the OCID of either the tenancy or another
         /// of your compartments as the value for the compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3202,7 +3202,7 @@ namespace Oci.IdentityService
         /// Lists the groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3280,7 +3280,7 @@ namespace Oci.IdentityService
         /// identity providers using the SAML2.0 protocol). You must specify your tenancy&#39;s OCID as the value for the
         /// compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3318,7 +3318,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the group mappings for the specified identity provider.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3357,7 +3357,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Lists the MFA TOTP devices for the specified user. The returned object contains the device&#39;s OCID, but not
         /// the seed. The seed is returned only upon creation or when the IAM service regenerates the MFA seed for the device.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3397,7 +3397,7 @@ namespace Oci.IdentityService
         /// Lists the network sources in your tenancy. You must specify your tenancy&#39;s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3435,7 +3435,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// List of Oauth tokens for the user
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3477,7 +3477,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// To determine which policies apply to a particular group or compartment, you must view the individual
         /// statements inside all your policies. There isn&#39;t a way to automatically obtain that information via the API.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3590,7 +3590,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Lists the SMTP credentials for the specified user. The returned object contains the credential&#39;s OCID,
         /// the SMTP user name but not the SMTP password. The SMTP password is returned only upon creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3631,7 +3631,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// Lists the Swift passwords for the specified user. The returned object contains the password&#39;s OCID, but not
         /// the password itself. The actual password is returned only upon creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3669,7 +3669,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the tag defaults for tag definitions in the specified compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3707,7 +3707,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the tag namespaces in the specified compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3745,7 +3745,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets the errors for a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3783,7 +3783,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets the logs for a work request.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3821,7 +3821,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the tagging work requests in compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3859,7 +3859,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the tag definitions in the specified tag namespace.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3906,7 +3906,7 @@ namespace Oci.IdentityService
         /// - You can set both the &#x60;userId&#x60; and &#x60;groupId&#x60; to determine if the specified user is in the specified group.
         /// If the answer is no, the response is an empty list.
         /// - Although&#x60;userId&#x60; and &#x60;groupId&#x60; are not individually required, you must set one of them.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3946,7 +3946,7 @@ namespace Oci.IdentityService
         /// Lists the users in your tenancy. You must specify your tenancy&#39;s OCID as the value for the
         /// compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3984,7 +3984,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists the work requests in compartment.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4023,13 +4023,13 @@ namespace Oci.IdentityService
         /// <summary>
         /// Move the compartment to a different parent compartment in the same tenancy. When you move a
         /// compartment, all its contents (subcompartments and resources) are moved with it. Note that
-        /// the &#x60;CompartmentId&#x60; that you specify in the path is the compartment that you want to move.
+        /// the &#x60;CompartmentId&#x60; that you specify in the path is the compartment that you want to move. 
         /// &lt;br/&gt;
         /// **IMPORTANT**: After you move a compartment to a new parent compartment, the access policies of
         /// the new parent take effect and the policies of the previous parent no longer apply. Ensure that you
         /// are aware of the implications for the compartment contents before you move it. For more
-        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcompartments.htm#MoveCompartment).
-        ///
+        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcompartments.htm#MoveCompartment).         
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4067,7 +4067,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Recover the compartment from DELETED state to ACTIVE state.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4142,7 +4142,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Resets the OAuth2 client credentials for the SCIM client associated with this identity provider.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4180,7 +4180,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the specified auth token&#39;s description.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4218,7 +4218,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates authentication policy for the specified tenancy
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4293,7 +4293,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the specified secret key&#39;s description.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4516,7 +4516,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates Oauth token for the user
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4556,7 +4556,7 @@ namespace Oci.IdentityService
         /// Updates the specified policy. You can update the description or the policy statements themselves.
         /// &lt;br/&gt;
         /// Policy changes take effect typically within 10 seconds.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4594,7 +4594,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the specified SMTP credential&#39;s description.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4634,7 +4634,7 @@ namespace Oci.IdentityService
         /// **Deprecated. Use {@link #updateAuthToken(UpdateAuthTokenRequest) updateAuthToken} instead.**
         /// &lt;br/&gt;
         /// Updates the specified Swift password&#39;s description.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4673,15 +4673,15 @@ namespace Oci.IdentityService
         /// <summary>
         /// Updates the specified tag definition.
         /// &lt;br/&gt;
-        /// Setting &#x60;validator&#x60; determines the value type. Tags can use either a static value or a
-        /// list of possible values. Static values are entered by a user applying the tag to a resource.
+        /// Setting &#x60;validator&#x60; determines the value type. Tags can use either a static value or a 
+        /// list of possible values. Static values are entered by a user applying the tag to a resource. 
         /// Lists are created by you and the user must apply a value from the list. On update, any values
-        /// in a list that were previously set do not change, but new values must pass validation. Values
-        /// already applied to a resource do not change.
+        /// in a list that were previously set do not change, but new values must pass validation. Values 
+        /// already applied to a resource do not change. 
         /// &lt;br/&gt;
-        /// You cannot remove list values that appear in a TagDefault. To remove a list value that
+        /// You cannot remove list values that appear in a TagDefault. To remove a list value that 
         /// appears in a TagDefault, first update the TagDefault to use a different value.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4718,13 +4718,13 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Updates the specified tag default. If you specify that a value is required, a value is set
-        /// during resource creation (either by the user creating the resource or another tag defualt).
+        /// Updates the specified tag default. If you specify that a value is required, a value is set 
+        /// during resource creation (either by the user creating the resource or another tag defualt). 
         /// If no value is set, resource creation is blocked.
         /// &lt;br/&gt;
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;true\&quot;, the value is set during resource creation.
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;false\&quot;, the value you enter is set during resource creation.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4770,7 +4770,7 @@ namespace Oci.IdentityService
         /// [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
         /// &lt;br/&gt;
         /// You can&#39;t add a namespace with the same name as a retired namespace in the same tenancy.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4845,7 +4845,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the capabilities of the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4883,7 +4883,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the state of the specified user.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4935,7 +4935,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using
         /// the object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
-        ///
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

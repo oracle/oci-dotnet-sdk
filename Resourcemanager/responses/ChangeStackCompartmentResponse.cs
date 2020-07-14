@@ -23,7 +23,7 @@ namespace Oci.ResourcemanagerService.Responses
 
 
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the work request.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
         public string OpcWorkRequestId { get; set; }

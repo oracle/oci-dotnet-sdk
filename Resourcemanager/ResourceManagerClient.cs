@@ -106,6 +106,46 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
+        /// Moves a configuration source provider into a different compartment within the same tenancy.
+        /// For information about moving resources between compartments, see
+        /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ChangeConfigurationSourceProviderCompartmentResponse> ChangeConfigurationSourceProviderCompartment(ChangeConfigurationSourceProviderCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeConfigurationSourceProviderCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders/{configurationSourceProviderId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<ChangeConfigurationSourceProviderCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeConfigurationSourceProviderCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves a Stack and it&#39;s associated Jobs into a different compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -138,6 +178,46 @@ namespace Oci.ResourcemanagerService
             catch (Exception e)
             {
                 logger.Error($"ChangeStackCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a configuration source provider in the specified compartment.
+        /// For more information, see
+        /// [To create a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#CreateConfigurationSourceProvider).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateConfigurationSourceProviderResponse> CreateConfigurationSourceProvider(CreateConfigurationSourceProviderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createConfigurationSourceProvider");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<CreateConfigurationSourceProviderResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateConfigurationSourceProvider failed with error: {e.Message}");
                 throw;
             }
         }
@@ -182,7 +262,8 @@ namespace Oci.ResourcemanagerService
         /// <summary>
         /// Creates a stack in the specified compartment.
         /// Specify the compartment using the compartment ID.
-        /// For more information, see [Create a Stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/usingconsole.htm#CreateStack).
+        /// For more information, see
+        /// [To create a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#CreateStack).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -215,6 +296,43 @@ namespace Oci.ResourcemanagerService
             catch (Exception e)
             {
                 logger.Error($"CreateStack failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified configuration source provider.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteConfigurationSourceProviderResponse> DeleteConfigurationSourceProvider(DeleteConfigurationSourceProviderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteConfigurationSourceProvider");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders/{configurationSourceProviderId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<DeleteConfigurationSourceProviderResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteConfigurationSourceProvider failed with error: {e.Message}");
                 throw;
             }
         }
@@ -289,6 +407,43 @@ namespace Oci.ResourcemanagerService
             catch (Exception e)
             {
                 logger.Error($"DetectStackDrift failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the properties of the specified configuration source provider.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetConfigurationSourceProviderResponse> GetConfigurationSourceProvider(GetConfigurationSourceProviderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getConfigurationSourceProvider");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders/{configurationSourceProviderId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<GetConfigurationSourceProviderResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetConfigurationSourceProvider failed with error: {e.Message}");
                 throw;
             }
         }
@@ -634,6 +789,46 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
+        /// Lists configuration source providers according to the specified filter.
+        /// - For &#x60;compartmentId&#x60;, lists all configuration source providers in the matching compartment.
+        /// - For &#x60;configurationSourceProviderId&#x60;, lists the matching configuration source provider.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListConfigurationSourceProvidersResponse> ListConfigurationSourceProviders(ListConfigurationSourceProvidersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listConfigurationSourceProviders");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<ListConfigurationSourceProvidersResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListConfigurationSourceProviders failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns a list of jobs in a stack or compartment, ordered by time created.
         /// &lt;br/&gt;
         /// - To list all jobs in a stack, provide the stack [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
@@ -908,6 +1103,46 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
+        /// Updates the properties of the specified configuration source provider.
+        /// For more information, see
+        /// [To update a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#UpdateConfigurationSourceProvider).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateConfigurationSourceProviderResponse> UpdateConfigurationSourceProvider(UpdateConfigurationSourceProviderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateConfigurationSourceProvider");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configurationSourceProviders/{configurationSourceProviderId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<UpdateConfigurationSourceProviderResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateConfigurationSourceProvider failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the specified job.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -948,8 +1183,9 @@ namespace Oci.ResourcemanagerService
         /// Updates the specified stack object.
         /// Use &#x60;UpdateStack&#x60; when you update your Terraform configuration
         /// and want your changes to be reflected in the execution plan.
-        /// For more information, see [Update a Stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/usingconsole.htm#UpdateStack) and
-        /// [Edit or Delete a Stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/usingconsole.htm#EditStack).
+        /// For more information, see
+        /// [To update a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#UpdateStack) and
+        /// [To edit a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#EditStack).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

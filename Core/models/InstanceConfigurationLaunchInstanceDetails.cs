@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// See Instance launch details - {@link LaunchInstanceDetails}
+    /// Instance launch details for creating an instance from an instance configuration. Use the `sourceDetails`
+    /// parameter to specify whether a boot volume or an image should be used to launch a new instance.
+    /// <br/>
+    /// See {@link LaunchInstanceDetails} for more information.
     /// 
     /// </summary>
     public class InstanceConfigurationLaunchInstanceDetails 
@@ -244,6 +247,10 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
 
+        /// <value>
+        /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any default values.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public InstanceConfigurationLaunchOptions LaunchOptions { get; set; }
 

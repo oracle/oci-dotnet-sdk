@@ -1007,6 +1007,14 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Terminate the specified instance pool.
+        /// &lt;br/&gt;
+        /// **Warning:** When you delete an instance pool, the resources that were created by the pool are permanently
+        /// deleted, including associated instances, attached boot volumes, and block volumes.
+        /// &lt;br/&gt;
+        /// If an autoscaling configuration applies to the instance pool, the autoscaling configuration will be deleted
+        /// asynchronously after the pool is deleted. You can also manually delete the autoscaling configuration using
+        /// the &#x60;DeleteAutoScalingConfiguration&#x60; operation in the Autoscaling API.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

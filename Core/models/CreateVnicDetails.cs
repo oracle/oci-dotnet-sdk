@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         /// about the public IP limits, see
         /// [Public IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingpublicIPs.htm).
         /// <br/>
-        /// Example: false
+        /// Example: falseIf you specify a vlanId, the assignPublicIp is required to be set to false. See{@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "assignPublicIp")]
         public System.Nullable<bool> AssignPublicIp { get; set; }
@@ -96,7 +96,7 @@ namespace Oci.CoreService.Models
         /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// If you provide both, the values must match.
         /// <br/>
-        /// Example: bminstance-1
+        /// Example: bminstance-1If you specify a vlanId, the hostnameLabel cannot be specified. vnics on a Vlancan not be assigned a hostname  See {@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
@@ -106,7 +106,7 @@ namespace Oci.CoreService.Models
         /// information about NSGs, see
         /// {@link NetworkSecurityGroup}.
         /// <br/>
-        /// If a `vlanId` is specified, the `nsgIds` is ignored. The `vlanId`
+        /// If a `vlanId` is specified, the `nsgIds` cannot be specified. The `vlanId`
         /// indicates that the VNIC will belong to a VLAN instead of a subnet. With VLANs,
         /// all VNICs in the VLAN belong to the NSGs that are associated with the VLAN.
         /// See {@link Vlan}.
@@ -126,7 +126,7 @@ namespace Oci.CoreService.Models
         /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// 
-        /// If you specify a `vlanId`, the `privateIp` is ignored.
+        /// If you specify a `vlanId`, the `privateIp` cannot be specified.
         /// See {@link Vlan}.
         /// <br/>
         /// Example: 10.0.3.3
@@ -141,7 +141,7 @@ namespace Oci.CoreService.Models
         /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/Content/Network/Tasks/managingroutetables.htm#privateip).
         /// <br/>
         /// 
-        /// If you specify a `vlanId`, the `skipSourceDestCheck` is ignored because the
+        /// If you specify a `vlanId`, the `skipSourceDestCheck` cannot be specified because the
         /// source/destination check is always disabled for VNICs in a VLAN. See
         /// {@link Vlan}.
         /// <br/>

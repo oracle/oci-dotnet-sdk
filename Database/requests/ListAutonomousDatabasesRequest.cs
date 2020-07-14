@@ -130,5 +130,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that have Data Guard enabled.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDataGuardEnabled")]
+        public System.Nullable<bool> IsDataGuardEnabled { get; set; }
     }
 }

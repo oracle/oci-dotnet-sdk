@@ -11,7 +11,7 @@
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
     <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Ocvp</PackageTags>
-    <Description>Oracle Cloud Infrastructure Cloud Ocvp Service</Description>
+    <Description>Oracle Cloud VMware Solution allows you to create and manage VMware enabled software-defined data centers (SDDCs) in Oracle Cloud Infrastructure.</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>

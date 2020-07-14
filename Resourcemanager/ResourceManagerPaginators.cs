@@ -99,6 +99,55 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListConfigurationSourceProviders operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListConfigurationSourceProvidersResponse> ListConfigurationSourceProvidersResponseEnumerator(ListConfigurationSourceProvidersRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListConfigurationSourceProvidersRequest, ListConfigurationSourceProvidersResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListConfigurationSourceProviders(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ConfigurationSourceProviderSummary objects
+        /// contained in responses from the ListConfigurationSourceProviders operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ConfigurationSourceProviderSummary> ListConfigurationSourceProvidersRecordEnumerator(ListConfigurationSourceProvidersRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListConfigurationSourceProvidersRequest, ListConfigurationSourceProvidersResponse, ConfigurationSourceProviderSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListConfigurationSourceProviders(request, retryConfiguration, cancellationToken).Result,
+                response => response.ConfigurationSourceProviderCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListJobs operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
