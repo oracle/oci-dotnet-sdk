@@ -33,7 +33,9 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// The range of IPv4 addresses that will be used for layer 3 communication with
-        /// hosts outside the VLAN.
+        /// hosts outside the VLAN. The CIDR must maintain the following rules -
+        /// <br/>
+        /// a. The CIDR block is valid and correctly formatted.
         /// <br/>
         /// Example: 192.0.2.0/24
         /// </value>

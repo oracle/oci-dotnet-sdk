@@ -36,12 +36,5 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// Name of the pool in which to launch an instance.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "opc-pool-name")]
-        public string OpcPoolName { get; set; }
     }
 }

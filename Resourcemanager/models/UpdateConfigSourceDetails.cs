@@ -62,6 +62,9 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["configSourceType"].Value<string>();
             switch (discriminator)
             {
+                case "GIT_CONFIG_SOURCE":
+                    obj = new UpdateGitConfigSourceDetails();
+                    break;
                 case "ZIP_UPLOAD":
                     obj = new UpdateZipUploadConfigSourceDetails();
                     break;

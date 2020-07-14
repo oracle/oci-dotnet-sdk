@@ -5053,6 +5053,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Lists the sets of DHCP options in the specified VCN and specified compartment.
+        /// If the VCN ID is not provided, then the list includes the sets of DHCP options from all VCNs in the specified compartment.
         /// The response includes the default set of options that automatically comes with each VCN,
         /// plus any other sets you&#39;ve created.
         /// 
@@ -5332,6 +5333,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Lists the internet gateways in the specified VCN and the specified compartment.
+        /// If the VCN ID is not provided, then the list includes the internet gateways from all VCNs in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5414,8 +5416,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the local peering gateways (LPGs) for the specified VCN and compartment
-        /// (the LPG&#39;s compartment).
+        /// Lists the local peering gateways (LPGs) for the specified VCN and specified compartment.
+        /// If the VCN ID is not provided, then the list includes the LPGs from all VCNs in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5755,9 +5757,10 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the route tables in the specified VCN and specified compartment. The response
-        /// includes the default route table that automatically comes with each VCN, plus any route tables
-        /// you&#39;ve created.
+        /// Lists the route tables in the specified VCN and specified compartment.
+        /// If the VCN ID is not provided, then the list includes the route tables from all VCNs in the specified compartment.
+        /// The response includes the default route table that automatically comes with
+        /// each VCN in the specified compartment, plus any route tables you&#39;ve created.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5796,6 +5799,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Lists the security lists in the specified VCN and compartment.
+        /// If the VCN ID is not provided, then the list includes the security lists from all VCNs in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5912,6 +5916,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Lists the subnets in the specified VCN and the specified compartment.
+        /// If the VCN ID is not provided, then the list includes the subnets from all VCNs in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

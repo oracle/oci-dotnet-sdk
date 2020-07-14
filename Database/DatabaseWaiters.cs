@@ -1058,6 +1058,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailOverAutonomousDatabaseRequest, FailOverAutonomousDatabaseResponse> ForFailOverAutonomousDatabase(FailOverAutonomousDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForFailOverAutonomousDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailOverAutonomousDatabaseRequest, FailOverAutonomousDatabaseResponse> ForFailOverAutonomousDatabase(FailOverAutonomousDatabaseRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<FailOverAutonomousDatabaseRequest, FailOverAutonomousDatabaseResponse>(() =>
+            {
+                var response = client.FailOverAutonomousDatabase(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<FailoverDataGuardAssociationRequest, FailoverDataGuardAssociationResponse> ForFailoverDataGuardAssociation(FailoverDataGuardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForFailoverDataGuardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1981,6 +2013,38 @@ namespace Oci.DatabaseService
             return new Waiter<StopAutonomousDatabaseRequest, StopAutonomousDatabaseResponse>(() =>
             {
                 var response = client.StopAutonomousDatabase(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchoverAutonomousDatabaseRequest, SwitchoverAutonomousDatabaseResponse> ForSwitchoverAutonomousDatabase(SwitchoverAutonomousDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForSwitchoverAutonomousDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchoverAutonomousDatabaseRequest, SwitchoverAutonomousDatabaseResponse> ForSwitchoverAutonomousDatabase(SwitchoverAutonomousDatabaseRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<SwitchoverAutonomousDatabaseRequest, SwitchoverAutonomousDatabaseResponse>(() =>
+            {
+                var response = client.SwitchoverAutonomousDatabase(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
