@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OceService.Models
 {
     /// <summary>
-    /// Identity Stripe
+    /// Details of the identity stripe used for OceInstance
     /// </summary>
     public class IdentityStripeDetails 
     {
