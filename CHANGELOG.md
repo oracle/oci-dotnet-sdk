@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 1.2.0 - 2020-07-21
+### Added
+
+- Support for license types on instances in the Content and Experience service.
+
 ## 1.1.0 - 2020-07-14
 
 ### Added

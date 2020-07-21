@@ -185,6 +185,13 @@ namespace Oci.OceService.Models
         public System.Nullable<InstanceAccessTypeEnum> InstanceAccessType { get; set; }
 
         /// <value>
+        /// Flag indicating whether the instance license is new cloud or bring your own license
+        /// </value>
+        [JsonProperty(PropertyName = "instanceLicenseType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
+
+        /// <value>
         /// The time the the OceInstance was created. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
