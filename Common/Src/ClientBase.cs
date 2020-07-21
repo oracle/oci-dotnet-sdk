@@ -42,7 +42,7 @@ namespace Oci.Common
         /// <param name="authProvider">The authentication details provider.</param>
         /// <param name="clientConfiguration">A client configuration to customize client.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration) :
-            this(authProvider, new ClientConfiguration(), new DefaultRequestSigner(authProvider))
+            this(authProvider, clientConfiguration, new DefaultRequestSigner(authProvider))
         { }
 
         /// <summary> Constructor of a service client.</summary>
@@ -51,11 +51,12 @@ namespace Oci.Common
         /// <param name="requestSigner">A request signer that will be used to sign requests.</param>
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner)
         {
+            ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
             this.clientHandler = new RestClientHandler(RequestReceptor);
-            this.restClient = new RestClient(clientHandler, clientConfiguration);
+            this.restClient = new RestClient(clientHandler, clientConfigurationToUse);
             this.requestSigner = requestSigner;
             this.availableRequestSigners = GetAvailableRequestSigners(authProvider);
-            this.restClient.SetDefaultUserAgent(GetUserAgent(clientConfiguration.ClientUserAgent));
+            this.restClient.SetDefaultUserAgent(GetUserAgent(clientConfigurationToUse.ClientUserAgent));
         }
 
         /// <summary>Disposes the rest client.</summary>

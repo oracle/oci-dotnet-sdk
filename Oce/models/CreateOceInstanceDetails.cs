@@ -152,6 +152,13 @@ namespace Oci.OceService.Models
         public System.Nullable<InstanceAccessTypeEnum> InstanceAccessType { get; set; }
 
         /// <value>
+        /// Flag indicating whether the instance license is new cloud or bring your own license
+        /// </value>
+        [JsonProperty(PropertyName = "instanceLicenseType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
+
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
