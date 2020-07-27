@@ -33,5 +33,11 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
+
+        /// <value>
+        /// If set to `TRUE`, starts patching immediately.
+        /// </value>
+        [JsonProperty(PropertyName = "isPatchNowEnabled")]
+        public System.Nullable<bool> IsPatchNowEnabled { get; set; }
     }
 }

@@ -115,5 +115,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SourceDetails is required.")]
         [JsonProperty(PropertyName = "sourceDetails")]
         public BootVolumeSourceDetails SourceDetails { get; set; }
+
+        /// <value>
+        /// Specifies whether the auto-tune performance is enabled for this boot volume.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoTuneEnabled")]
+        public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
     }
 }

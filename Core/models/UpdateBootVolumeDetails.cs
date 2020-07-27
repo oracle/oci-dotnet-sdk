@@ -65,5 +65,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
+
+        /// <value>
+        /// Specifies whether the auto-tune performance is enabled for this boot volume.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoTuneEnabled")]
+        public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
     }
 }

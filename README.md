@@ -29,7 +29,7 @@ The oci-dotnet-sdk contain the following 3 groups of packages:
 
 The SDK is published as Nuget packages.
 
-Use either dotnet CLI or Visual Studio to install and consume a package from [nuget.org](https://www.nuget.org/packages?q=oci).
+Use either dotnet CLI or Visual Studio to install and consume a package from [nuget.org](https://www.nuget.org/profiles/oci-dotnet-sdk).
 
 - **dotnet CLI**:
 
