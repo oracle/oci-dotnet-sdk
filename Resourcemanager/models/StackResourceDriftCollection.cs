@@ -25,6 +25,10 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// Collection of drift status details for all resources defined in the stack.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<StackResourceDriftSummary> Items { get; set; }
     }

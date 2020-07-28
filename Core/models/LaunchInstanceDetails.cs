@@ -79,9 +79,14 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
 
         /// <value>
-        /// Additional metadata key/value pairs that you provide. They serve the same purpose and functionality as fields in the 'metadata' object.
+        /// Additional metadata key/value pairs that you provide. They serve the same purpose and
+        /// functionality as fields in the `metadata` object.
         /// <br/>
-        /// They are distinguished from 'metadata' fields in that these can be nested JSON objects (whereas 'metadata' fields are string/string maps only).
+        /// They are distinguished from `metadata` fields in that these can be nested JSON objects
+        /// (whereas `metadata` fields are string/string maps only).
+        /// <br/>
+        /// The combined size of the `metadata` and `extendedMetadata` objects can be a maximum of
+        /// 32,000 bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
@@ -94,9 +99,9 @@ namespace Oci.CoreService.Models
         /// A hardware failure or Compute hardware maintenance that affects one fault domain does not affect
         /// instances in other fault domains.
         /// <br/>
-        /// If you do not specify the fault domain, the system selects one for you. To change the fault
-        /// domain for an instance, terminate it and launch a new instance in the preferred fault domain.
+        /// If you do not specify the fault domain, the system selects one for you.
         /// <br/>
+        /// 
         /// To get a list of fault domains, use the
         /// {@link #listFaultDomains(ListFaultDomainsRequest) listFaultDomains} operation in the
         /// Identity and Access Management Service API.
@@ -217,6 +222,8 @@ namespace Oci.CoreService.Models
         /// <br/>
         ///  You'll get back a response that includes all the instance information; only the metadata information; or
         ///  the metadata information for the specified key name, respectively.
+        /// <br/>
+        ///  The combined size of the `metadata` and `extendedMetadata` objects can be a maximum of 32,000 bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metadata")]

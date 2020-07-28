@@ -11,6 +11,8 @@ namespace Oci.Common.Auth
     /// <summary>An authentication details provider implementation that reads all authentication information from config file.</summary>
     public class ConfigFileAuthenticationDetailsProvider : SimpleAuthenticationDetailsProvider
     {
+        private static readonly string REGION_ENV_VAR_NAME = "OCI_REGION";
+
         public ConfigFileAuthenticationDetailsProvider(string profile) : this(ConfigFileReader.ParseDefault(profile)) { }
 
         public ConfigFileAuthenticationDetailsProvider(string configurationFilePath, string profile) : this(ConfigFileReader.Parse(configurationFilePath, profile)) { }
@@ -22,10 +24,16 @@ namespace Oci.Common.Auth
             string userId = configFile.GetValue("user") ?? throw new InvalidDataException("missing user in config");
             string pemFilePath = configFile.GetValue("key_file") ?? throw new InvalidDataException("missing key_file in config");
             string passPhrase = configFile.GetValue("pass_phrase");
-
-            Region region = null;
             string regionId = configFile.GetValue("region");
-            if (regionId != null)
+            Region region = null;
+
+            if (String.IsNullOrEmpty(regionId))
+            {
+                logger.Info($"Config file does not contain valid regionId. Checking environment variable {REGION_ENV_VAR_NAME}");
+                regionId = Environment.GetEnvironmentVariable(REGION_ENV_VAR_NAME);
+            }
+
+            if (!String.IsNullOrEmpty(regionId))
             {
                 try
                 {
@@ -33,13 +41,13 @@ namespace Oci.Common.Auth
                 }
                 catch (Exception e)
                 {
-                    logger.Info($"Found regionId '{regionId}' in config file, but not supported by this version of the SDK: {e}");
+                    logger.Info($"Found regionId '{regionId}', but not supported by this version of the SDK: {e}");
                     region = Region.Register(regionId, Realm.OC1);
                 }
             }
             else
             {
-                logger.Info("Region not specified in Config file. Proceeding without setting a region.");
+                logger.Info("Region not specified in Config file or environment vairable. Proceeding without setting a region.");
             }
 
             Fingerprint = fingerprint;

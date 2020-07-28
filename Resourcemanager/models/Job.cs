@@ -142,14 +142,16 @@ namespace Oci.ResourcemanagerService.Models
         public FailureDetails FailureDetails { get; set; }
 
         /// <value>
-        /// The file path to the directory within the configuration from which the job runs.
+        /// File path to the directory from which Terraform runs.
+        /// If not specified, the root directory is used.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
         public string WorkingDirectory { get; set; }
 
         /// <value>
         /// Terraform variables associated with this resource.
-        /// Maximum number of variables supported is 100.
+        /// Maximum number of variables supported is 250.
         /// The maximum size of each variable, including both name and value, is 4096 bytes.
         /// Example: {&quot;CompartmentId&quot;: &quot;compartment-id-value&quot;}
         /// </value>

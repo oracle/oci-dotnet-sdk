@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Properties provided for creating a stack.
+    /// The configuration details for creating a stack.
+    /// 
     /// </summary>
     public class CreateStackDetails 
     {
@@ -52,7 +53,7 @@ namespace Oci.ResourcemanagerService.Models
 
         /// <value>
         /// Terraform variables associated with this resource.
-        /// Maximum number of variables supported is 100.
+        /// Maximum number of variables supported is 250.
         /// The maximum size of each variable, including both name and value, is 4096 bytes.
         /// Example: {&quot;CompartmentId&quot;: &quot;compartment-id-value&quot;}
         /// </value>

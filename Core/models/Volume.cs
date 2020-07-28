@@ -198,5 +198,19 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "volumeGroupId")]
         public string VolumeGroupId { get; set; }
+
+        /// <value>
+        /// Specifies whether the auto-tune performance is enabled for this volume.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoTuneEnabled")]
+        public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
+
+        /// <value>
+        /// The number of Volume Performance Units per GB that this volume is effectively tuned to when it's idle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autoTunedVpusPerGB")]
+        public System.Nullable<long> AutoTunedVpusPerGB { get; set; }
     }
 }
