@@ -28,78 +28,74 @@ namespace Oci.Examples
 
             try
             {
-                // Create AuditClient
-                var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
-                client = new AuditClient(provider, new ClientConfiguration());
-                logger.Info("AuditClient created.");
-
+                // Assumption: the compartment id has been set in environment variable.
                 var compartmentId = Environment.GetEnvironmentVariable("OCI_COMPARTMENT_ID");
                 logger.Info(compartmentId);
 
                 // ListEvents
                 var listEventsRequest = new ListEventsRequest
                 {
-                    // Assumption: the compartment id has been set in environment variable.
                     CompartmentId = compartmentId,
                     StartTime = DateTime.Now.AddDays(-1),
                     EndTime = DateTime.Now
                 };
 
-                ListEventsResponse listEventsResp = await NoRetryExample(client, listEventsRequest);
-                logger.Info($"Received {listEventsResp?.Items.Count} items");
+                // Create AuditClient
+                var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
 
-                ListEventsResponse listEventsRespFromRetry = await RetryExample(client, listEventsRequest);
-                logger.Info($"Received {listEventsRespFromRetry?.Items.Count} items");
-
-                await CancellationTokenExample(client, listEventsRequest);
-
-                // GetConfiguration
-                var getConfigurationRequest = new GetConfigurationRequest
+                using (client = new AuditClient(provider, new ClientConfiguration()))
                 {
-                    CompartmentId = compartmentId
-                };
+                    logger.Info("AuditClient created.");
 
-                logger.Info("GetConfigurationRequest created.");
+                    ListEventsResponse listEventsResp = await NoRetryExample(client, listEventsRequest);
+                    logger.Info($"Received {listEventsResp?.Items.Count} items");
 
-                GetConfigurationResponse getConfigurationResp = await client.GetConfiguration(getConfigurationRequest);
-                logger.Info($"Retention period days: {getConfigurationResp?.Configuration.RetentionPeriodDays}");
+                    ListEventsResponse listEventsRespFromRetry = await RetryExample(client, listEventsRequest);
+                    logger.Info($"Received {listEventsRespFromRetry?.Items.Count} items");
 
-                // UpdateConfiguration
-                var updateConfigurationRequest = new UpdateConfigurationRequest
-                {
-                    CompartmentId = compartmentId,
-                    UpdateConfigurationDetails = new UpdateConfigurationDetails
+                    await CancellationTokenExample(client, listEventsRequest);
+
+                    // GetConfiguration
+                    var getConfigurationRequest = new GetConfigurationRequest
                     {
-                        RetentionPeriodDays = 90
-                    }
-                };
+                        CompartmentId = compartmentId
+                    };
 
-                logger.Info("UpdateConfigurationRequest created.");
+                    logger.Info("GetConfigurationRequest created.");
 
-                UpdateConfigurationResponse updateConfigurationResp = await client.UpdateConfiguration(updateConfigurationRequest);
-                logger.Info($"opc work request id: {updateConfigurationResp.OpcRequestId}");
+                    GetConfigurationResponse getConfigurationResp = await client.GetConfiguration(getConfigurationRequest);
+                    logger.Info($"Retention period days: {getConfigurationResp?.Configuration.RetentionPeriodDays}");
+
+                    // UpdateConfiguration
+                    var updateConfigurationRequest = new UpdateConfigurationRequest
+                    {
+                        CompartmentId = compartmentId,
+                        UpdateConfigurationDetails = new UpdateConfigurationDetails
+                        {
+                            RetentionPeriodDays = 90
+                        }
+                    };
+
+                    logger.Info("UpdateConfigurationRequest created.");
+
+                    UpdateConfigurationResponse updateConfigurationResp = await client.UpdateConfiguration(updateConfigurationRequest);
+                    logger.Info($"opc work request id: {updateConfigurationResp.OpcRequestId}");
+                }
 
                 // Change the region to US_ASHBURN_1 using SetRegion Call
                 // We cannot use the same client to change the region. See:
                 // https://stackoverflow.com/questions/51478525/httpclient-this-instance-has-already-started-one-or-more-requests-properties-ca
-                client.Dispose();
-                client = new AuditClient(provider, new ClientConfiguration());
-                client.SetRegion(Region.US_ASHBURN_1);
-                logger.Info("Changing region to US_ASHBURN_1");
-                ListEventsResponse listEventsRespDiffRegion = await NoRetryExample(client, listEventsRequest);
-                logger.Info($"Received {listEventsRespDiffRegion?.Items.Count} items");
+                using(client = new AuditClient(provider, new ClientConfiguration()))
+                {
+                    client.SetRegion(Region.US_ASHBURN_1);
+                    logger.Info("Changing region to US_ASHBURN_1");
+                    ListEventsResponse listEventsRespDiffRegion = await NoRetryExample(client, listEventsRequest);
+                    logger.Info($"Received {listEventsRespDiffRegion?.Items.Count} items");
+                }
             }
             catch (Exception e)
             {
                 logger.Error($"Failed Audit example: {e.Message}");
-            }
-            finally
-            {
-                logger.Info("Ending example.");
-                if (client != null)
-                {
-                    client.Dispose();
-                }
             }
         }
 

@@ -14,8 +14,9 @@ using Oci.Common.Http.Signing;
 namespace Oci.Common
 {
     /// <summary>An abstract class for a generic service client.</summary>
-    public abstract class ClientBase
+    public abstract class ClientBase : IDisposable
     {
+        bool disposed = false;
         private readonly Dictionary<SigningStrategy, RequestSigner> availableRequestSigners;
         private readonly RequestSigner requestSigner;
 
@@ -62,7 +63,22 @@ namespace Oci.Common
         /// <summary>Disposes the rest client.</summary>
         public void Dispose()
         {
-            this.restClient.Dispose();
+            Dispose(true);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed == true)
+            {
+                return;
+            }
+            if (disposing)
+            {
+                logger.Info("Disposing rest client.");
+                this.restClient.Dispose();
+                GC.SuppressFinalize(this);
+            }
+            disposed = true;
         }
 
         /// <summary>Sets the endpoint in the rest client.</summary>

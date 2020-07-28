@@ -246,6 +246,153 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeGlobalImageCapabilitySchemaVersions operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeGlobalImageCapabilitySchemaVersionsResponse> ListComputeGlobalImageCapabilitySchemaVersionsResponseEnumerator(ListComputeGlobalImageCapabilitySchemaVersionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeGlobalImageCapabilitySchemaVersionsRequest, ListComputeGlobalImageCapabilitySchemaVersionsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeGlobalImageCapabilitySchemaVersionSummary objects
+        /// contained in responses from the ListComputeGlobalImageCapabilitySchemaVersions operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeGlobalImageCapabilitySchemaVersionSummary> ListComputeGlobalImageCapabilitySchemaVersionsRecordEnumerator(ListComputeGlobalImageCapabilitySchemaVersionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeGlobalImageCapabilitySchemaVersionsRequest, ListComputeGlobalImageCapabilitySchemaVersionsResponse, ComputeGlobalImageCapabilitySchemaVersionSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken).Result,
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeGlobalImageCapabilitySchemas operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeGlobalImageCapabilitySchemasResponse> ListComputeGlobalImageCapabilitySchemasResponseEnumerator(ListComputeGlobalImageCapabilitySchemasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeGlobalImageCapabilitySchemasRequest, ListComputeGlobalImageCapabilitySchemasResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeGlobalImageCapabilitySchemaSummary objects
+        /// contained in responses from the ListComputeGlobalImageCapabilitySchemas operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeGlobalImageCapabilitySchemaSummary> ListComputeGlobalImageCapabilitySchemasRecordEnumerator(ListComputeGlobalImageCapabilitySchemasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeGlobalImageCapabilitySchemasRequest, ListComputeGlobalImageCapabilitySchemasResponse, ComputeGlobalImageCapabilitySchemaSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result,
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeImageCapabilitySchemas operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeImageCapabilitySchemasResponse> ListComputeImageCapabilitySchemasResponseEnumerator(ListComputeImageCapabilitySchemasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeImageCapabilitySchemasRequest, ListComputeImageCapabilitySchemasResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeImageCapabilitySchemaSummary objects
+        /// contained in responses from the ListComputeImageCapabilitySchemas operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeImageCapabilitySchemaSummary> ListComputeImageCapabilitySchemasRecordEnumerator(ListComputeImageCapabilitySchemasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeImageCapabilitySchemasRequest, ListComputeImageCapabilitySchemasResponse, ComputeImageCapabilitySchemaSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result,
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListConsoleHistories operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

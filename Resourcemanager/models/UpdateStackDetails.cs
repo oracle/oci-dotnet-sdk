@@ -39,7 +39,7 @@ namespace Oci.ResourcemanagerService.Models
 
         /// <value>
         /// Terraform variables associated with this resource.
-        /// The maximum number of variables supported is 100.
+        /// The maximum number of variables supported is 250.
         /// The maximum size of each variable, including both name and value, is 4096 bytes.
         /// Example: {&quot;CompartmentId&quot;: &quot;compartment-id-value&quot;}
         /// </value>

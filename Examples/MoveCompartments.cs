@@ -58,7 +58,7 @@ namespace Oci.Examples
             CreateCompartmentResponse createCompartmentResponse = await client.CreateCompartment(createCompartmentRequest);
 
             // wait for compartment to be accessible
-            System.Threading.Thread.Sleep(10000);
+            await Task.Delay(10000);
             logger.Info($"{name} compartment created, ID: {createCompartmentResponse.Compartment.Id} and state is {createCompartmentResponse.Compartment.LifecycleState}");
 
             return createCompartmentResponse.Compartment.Id;

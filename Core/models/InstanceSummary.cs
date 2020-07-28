@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
 
         /// <value>
-        /// The name of the Fault Domain the instance is running in.
+        /// The fault domain the instance is running in.
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }

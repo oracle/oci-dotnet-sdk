@@ -67,5 +67,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
+
+        /// <value>
+        /// Specifies whether the auto-tune performance is enabled for this volume.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoTuneEnabled")]
+        public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
     }
 }

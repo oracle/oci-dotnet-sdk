@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
 
         /// <value>
-        /// The paired destination region for copying scheduled backups to. Example: us-ashburn-1.Specify none to reset the destinationRegion parameter.          See [Region Pairs](https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolumebackups.htm#RegionPairs) for details about paired regions.
+        /// The paired destination region for copying scheduled backups to. Example: us-ashburn-1.Specify none to reset the destinationRegion parameter.See [Region Pairs](https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolumebackups.htm#RegionPairs) for details about paired regions.
         /// </value>
         [JsonProperty(PropertyName = "destinationRegion")]
         public string DestinationRegion { get; set; }

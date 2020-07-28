@@ -55,13 +55,16 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Custom metadata key/value string pairs that you provide. Any set of key/value pairs
-        /// provided here will completely replace the current set of key/value pairs in the 'metadata'
+        /// provided here will completely replace the current set of key/value pairs in the `metadata`
         /// field on the instance.
         /// <br/>
-        /// Both the 'user_data' and 'ssh_authorized_keys' fields cannot be changed after an instance
-        /// has launched. Any request which updates, removes, or adds either of these fields will be
-        /// rejected. You must provide the same values for 'user_data' and 'ssh_authorized_keys' that
+        /// The \"user_data\" field and the \"ssh_authorized_keys\" field cannot be changed after an instance
+        /// has launched. Any request that updates, removes, or adds either of these fields will be
+        /// rejected. You must provide the same values for \"user_data\" and \"ssh_authorized_keys\" that
         /// already exist on the instance.
+        /// <br/>
+        /// The combined size of the `metadata` and `extendedMetadata` objects can be a maximum of
+        /// 32,000 bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
@@ -69,15 +72,18 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Additional metadata key/value pairs that you provide. They serve the same purpose and
-        /// functionality as fields in the 'metadata' object.
+        /// functionality as fields in the `metadata` object.
         /// <br/>
-        /// They are distinguished from 'metadata' fields in that these can be nested JSON objects
-        /// (whereas 'metadata' fields are string/string maps only).
+        /// They are distinguished from `metadata` fields in that these can be nested JSON objects
+        /// (whereas `metadata` fields are string/string maps only).
         /// <br/>
-        /// Both the 'user_data' and 'ssh_authorized_keys' fields cannot be changed after an instance
-        /// has launched. Any request which updates, removes, or adds either of these fields will be
-        /// rejected. You must provide the same values for 'user_data' and 'ssh_authorized_keys' that
+        /// The \"user_data\" field and the \"ssh_authorized_keys\" field cannot be changed after an instance
+        /// has launched. Any request that updates, removes, or adds either of these fields will be
+        /// rejected. You must provide the same values for \"user_data\" and \"ssh_authorized_keys\" that
         /// already exist on the instance.
+        /// <br/>
+        /// The combined size of the `metadata` and `extendedMetadata` objects can be a maximum of
+        /// 32,000 bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
@@ -87,7 +93,7 @@ namespace Oci.CoreService.Models
         /// The shape of the instance. The shape determines the number of CPUs and the amount of memory
         /// allocated to the instance. For more information about how to change shapes, and a list of
         /// shapes that are supported, see
-        /// [Changing the Shape of an Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/resizinginstances.htm).
+        /// [Editing an Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/resizinginstances.htm).
         /// <br/>
         /// For details about the CPUs, memory, and other properties of each shape, see
         /// [Compute Shapes](https://docs.cloud.oracle.com/iaas/Content/Compute/References/computeshapes.htm).
@@ -105,5 +111,28 @@ namespace Oci.CoreService.Models
 
         [JsonProperty(PropertyName = "shapeConfig")]
         public UpdateInstanceShapeConfigDetails ShapeConfig { get; set; }
+
+        /// <value>
+        /// A fault domain is a grouping of hardware and infrastructure within an availability domain.
+        /// Each availability domain contains three fault domains. Fault domains let you distribute your
+        /// instances so that they are not on the same physical hardware within a single availability domain.
+        /// A hardware failure or Compute hardware maintenance that affects one fault domain does not affect
+        /// instances in other fault domains.
+        /// <br/>
+        /// To get a list of fault domains, use the
+        /// {@link #listFaultDomains(ListFaultDomainsRequest) listFaultDomains} operation in the
+        /// Identity and Access Management Service API.
+        /// <br/>
+        /// Example: FAULT-DOMAIN-1
+        /// </value>
+        [JsonProperty(PropertyName = "faultDomain")]
+        public string FaultDomain { get; set; }
+
+        /// <value>
+        /// Options for tuning the compatibility and performance of VM shapes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "launchOptions")]
+        public UpdateLaunchOptions LaunchOptions { get; set; }
     }
 }

@@ -57,7 +57,7 @@ namespace Oci.Examples
                 await PublishExampleMessages(streamClient, streamId);
 
                 // give the streaming service a second to propagate messages
-                System.Threading.Thread.Sleep(1000);
+                await Task.Delay(1000);
 
                 // Use a cursor for getting messages; each getMessages call will return a next-cursor for iteration.
                 // There are a couple kinds of cursors.
@@ -134,7 +134,7 @@ namespace Oci.Examples
             Stream activeStream = client.Waiters.ForStream(streamRequest, waiterConfiguration, Stream.LifecycleStateEnum.Active).Execute().Stream;
 
             // Give a little time for the stream to be ready.
-            System.Threading.Thread.Sleep(1000);
+            await Task.Delay(1000);
             return activeStream;
         }
 
@@ -271,7 +271,7 @@ namespace Oci.Examples
 
                 // getMessages is a throttled method; clients should retrieve sufficiently large message
                 // batches, as to avoid too many http requests.
-                System.Threading.Thread.Sleep(1000);
+                await Task.Delay(1000);
 
                 // use the next-cursor for iteration
                 cursor = getResponse.OpcNextCursor;
