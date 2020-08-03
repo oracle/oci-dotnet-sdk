@@ -54,6 +54,7 @@ namespace Oci.Common
 
         // OC4
         public static readonly Region UK_GOV_LONDON_1 = Register("uk-gov-london-1", Realm.OC4, "ltn");
+        public static readonly Region UK_GOV_CARDIFF_1 = Register("uk-gov-cardiff-1", Realm.OC4, "brs");
 
         /// <summary>The region identifier as defined in https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm</summary>
         public string RegionId { get; }

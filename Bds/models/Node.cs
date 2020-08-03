@@ -59,7 +59,11 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "STOPPING")]
+            Stopping,
+            [EnumMember(Value = "STARTING")]
+            Starting
         };
 
         /// <value>

@@ -72,7 +72,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// The Spark configuration passed to the running process.
-        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties
+        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
         /// Example: { &quot;spark.app.name&quot; : &quot;My App Name&quot;, &quot;spark.shuffle.io.maxRetries&quot; : &quot;4&quot; }Note: Not all Spark properties are permitted to be set.  Attempting to set a property that isnot allowed to be overwritten will cause a 400 status to be returned.
         /// </value>
         [JsonProperty(PropertyName = "configuration")]
@@ -120,7 +120,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket where the Spark job logs are to be uploaded.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
@@ -145,7 +145,7 @@ namespace Oci.DataflowService.Models
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "warehouseBucketUri")]

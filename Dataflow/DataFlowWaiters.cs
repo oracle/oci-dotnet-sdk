@@ -60,6 +60,34 @@ namespace Oci.DataflowService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPrivateEndpointRequest, GetPrivateEndpointResponse> ForPrivateEndpoint(GetPrivateEndpointRequest request, params PrivateEndpointLifecycleState[] targetStates)
+        {
+            return this.ForPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPrivateEndpointRequest, GetPrivateEndpointResponse> ForPrivateEndpoint(GetPrivateEndpointRequest request, WaiterConfiguration config, params PrivateEndpointLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPrivateEndpointRequest, GetPrivateEndpointResponse>(
+                request,
+                request => client.GetPrivateEndpoint(request),
+                response => targetStates.Contains(response.PrivateEndpoint.LifecycleState.Value),
+                targetStates.Contains(PrivateEndpointLifecycleState.Deleted)
+            );
+            return new Waiter<GetPrivateEndpointRequest, GetPrivateEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetRunRequest, GetRunResponse> ForRun(GetRunRequest request, params RunLifecycleState[] targetStates)
         {
             return this.ForRun(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -80,6 +108,33 @@ namespace Oci.DataflowService
                 response => targetStates.Contains(response.Run.LifecycleState.Value)
             );
             return new Waiter<GetRunRequest, GetRunResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, params WorkRequestStatus[] targetStates)
+        {
+            return this.ForWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, WaiterConfiguration config, params WorkRequestStatus[] targetStates)
+        {
+            var agent = new WaiterAgent<GetWorkRequestRequest, GetWorkRequestResponse>(
+                request,
+                request => client.GetWorkRequest(request),
+                response => targetStates.Contains(response.WorkRequest.Status.Value)
+            );
+            return new Waiter<GetWorkRequestRequest, GetWorkRequestResponse>(config, agent);
         }
     }
 }

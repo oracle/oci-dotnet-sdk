@@ -28,10 +28,40 @@ namespace Oci.BdsService.Models
         public string BdaVersion { get; set; }
 
         /// <value>
-        /// BDM version installed in the cluster
+        /// Big Data Manager version installed in the cluster
         /// </value>
         [JsonProperty(PropertyName = "bdmVersion")]
         public string BdmVersion { get; set; }
+
+        /// <value>
+        /// Big Data Service version installed in the cluster
+        /// </value>
+        [JsonProperty(PropertyName = "bdsVersion")]
+        public string BdsVersion { get; set; }
+
+        /// <value>
+        /// Oracle Linux version installed in the cluster
+        /// </value>
+        [JsonProperty(PropertyName = "osVersion")]
+        public string OsVersion { get; set; }
+
+        /// <value>
+        /// Query Server Database version
+        /// </value>
+        [JsonProperty(PropertyName = "dbVersion")]
+        public string DbVersion { get; set; }
+
+        /// <value>
+        /// Cloud SQL cell version
+        /// </value>
+        [JsonProperty(PropertyName = "bdCellVersion")]
+        public string BdCellVersion { get; set; }
+
+        /// <value>
+        /// Big Data SQL version
+        /// </value>
+        [JsonProperty(PropertyName = "csqlCellVersion")]
+        public string CsqlCellVersion { get; set; }
 
         /// <value>
         /// The time the cluster was created. An RFC3339 formatted datetime string
