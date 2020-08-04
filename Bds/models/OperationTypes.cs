@@ -31,6 +31,12 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "REMOVE_CLOUD_SQL")]
       RemoveCloudSql,
       [EnumMember(Value = "CHANGE_COMPARTMENT_FOR_BDS")]
-      ChangeCompartmentForBds
+      ChangeCompartmentForBds,
+      [EnumMember(Value = "CHANGE_SHAPE")]
+      ChangeShape,
+      [EnumMember(Value = "UPDATE_INFRA")]
+      UpdateInfra,
+      [EnumMember(Value = "RESTART_NODE")]
+      RestartNode
   }
 }

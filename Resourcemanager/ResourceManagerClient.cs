@@ -263,6 +263,7 @@ namespace Oci.ResourcemanagerService
         /// Creates a stack in the specified compartment.
         /// You can create a stack from a Terraform configuration file.
         /// The Terraform configuration file can be directly uploaded or referenced from a source code control system.
+        /// You can also create a stack from an existing compartment.
         /// For more information, see
         /// [To create a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#CreateStack).
         /// 
@@ -867,6 +868,44 @@ namespace Oci.ResourcemanagerService
             catch (Exception e)
             {
                 logger.Error($"ListJobs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of supported services for Resource Discovery. For reference on service names, see the [Terraform provider documentation](https://www.terraform.io/docs/providers/oci/guides/resource_discovery.html#services).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListResourceDiscoveryServicesResponse> ListResourceDiscoveryServices(ListResourceDiscoveryServicesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listResourceDiscoveryServices");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resourceDiscoveryServices".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+
+                return Converter.FromHttpResponseMessage<ListResourceDiscoveryServicesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListResourceDiscoveryServices failed with error: {e.Message}");
                 throw;
             }
         }

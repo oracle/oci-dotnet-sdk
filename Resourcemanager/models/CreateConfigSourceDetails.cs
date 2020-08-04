@@ -38,6 +38,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// File path to the directory from which Terraform runs.
         /// If not specified, the root directory is used.
+        /// This parameter is ignored for the `configSourceType` value of `COMPARTMENT_CONFIG_SOURCE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
@@ -69,6 +70,9 @@ namespace Oci.ResourcemanagerService.Models
                     break;
                 case "GIT_CONFIG_SOURCE":
                     obj = new CreateGitConfigSourceDetails();
+                    break;
+                case "COMPARTMENT_CONFIG_SOURCE":
+                    obj = new CreateCompartmentConfigSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

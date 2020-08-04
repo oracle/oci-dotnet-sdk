@@ -23,8 +23,8 @@ namespace Oci.DataflowService.Models
     {
         
         /// <value>
-        /// An Oracle Cloud Infrastructure URI of an archive (zip) file that may used to support the execution of the application.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// An Oracle Cloud Infrastructure URI of an archive.zip file containing custom dependencies that may be used to support the execution a Python, Java, or Scala application.
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "archiveUri")]
@@ -72,7 +72,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// The Spark configuration passed to the running process.
-        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties
+        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
         /// Example: { &quot;spark.app.name&quot; : &quot;My App Name&quot;, &quot;spark.shuffle.io.maxRetries&quot; : &quot;4&quot; }Note: Not all Spark properties are permitted to be set.  Attempting to set a property that isnot allowed to be overwritten will cause a 400 status to be returned.
         /// </value>
         [JsonProperty(PropertyName = "configuration")]
@@ -130,7 +130,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the file containing the application to execute.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         /// <remarks>
@@ -192,7 +192,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket where the Spark job logs are to be uploaded.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
@@ -210,7 +210,7 @@ namespace Oci.DataflowService.Models
         public System.Nullable<int> NumExecutors { get; set; }
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request.
+        /// Unique Oracle assigned identifier for the request.
         /// If you need to contact Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
@@ -240,6 +240,44 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
+
+        /// <value>
+        /// An array of DNS zone names.
+        /// Example: [ &quot;app.examplecorp.com&quot;, &quot;app.examplecorp2.com&quot; ]
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointDnsZones")]
+        public System.Collections.Generic.List<string> PrivateEndpointDnsZones { get; set; }
+
+        /// <value>
+        /// The maximum number of hosts to be accessed through the private endpoint. This value is used
+        /// to calculate the relevant CIDR block and should be a multiple of 256.  If the value is not a
+        /// multiple of 256, it is rounded up to the next multiple of 256. For example, 300 is rounded up
+        /// to 512.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointMaxHostCount")]
+        public System.Nullable<int> PrivateEndpointMaxHostCount { get; set; }
+
+        /// <value>
+        /// An array of network security group OCIDs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointNsgIds")]
+        public System.Collections.Generic.List<string> PrivateEndpointNsgIds { get; set; }
+
+        /// <value>
+        /// The OCID of a private endpoint.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
+
+        /// <value>
+        /// The OCID of a subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointSubnetId")]
+        public string PrivateEndpointSubnetId { get; set; }
 
         /// <value>
         /// The duration of the run in milliseconds.
@@ -291,7 +329,7 @@ namespace Oci.DataflowService.Models
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "warehouseBucketUri")]

@@ -62,6 +62,8 @@ namespace Oci.BdsService.Models
             Active,
             [EnumMember(Value = "UPDATING")]
             Updating,
+            [EnumMember(Value = "UPDATING_INFRA")]
+            UpdatingInfra,
             [EnumMember(Value = "SUSPENDING")]
             Suspending,
             [EnumMember(Value = "SUSPENDED")]

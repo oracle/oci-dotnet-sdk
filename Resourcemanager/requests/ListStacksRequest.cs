@@ -49,6 +49,7 @@ namespace Oci.ResourcemanagerService.Requests
         /// - ACTIVE
         /// - DELETING
         /// - DELETED
+        /// - FAILED
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

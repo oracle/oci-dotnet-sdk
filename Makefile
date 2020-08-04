@@ -1,16 +1,10 @@
 CODEGEN_PATH = $(shell pwd)
 PROJECT_PATH = $(shell pwd)
-INTEG_TEST_DIR = Integtests
 UNIT_TEST_DIR = Commontests
 UNIT_TEST_FILTER = Category=Unit
 BUILD_OPTION = Debug
 
 define HELP_MESSAGE
-make generate: 
-    Generate .NET SDK source code, with optional CODEGEN_PATH argument.
-    Example: 
-        CODEGEN_PATH=codegen/audit will generate code for audit service only.
-    Default will generate source code for all services.
 make build: 
     Build source code, with optional PROJECT_PATH and/or BUILD_OPTION argument.
     Example: 

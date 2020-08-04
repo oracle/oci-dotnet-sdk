@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// A data flow application object used in bulk listings.
+    /// A Data Flow application object used in bulk listings.
     /// 
     /// </summary>
     public class ApplicationSummary 
