@@ -28,6 +28,8 @@ namespace Oci.ResourcemanagerService.Models
         public enum OperationTypeEnum {
             [EnumMember(Value = "CHANGE_STACK_COMPARTMENT")]
             ChangeStackCompartment,
+            [EnumMember(Value = "CREATE_STACK_FROM_COMPARTMENT")]
+            CreateStackFromCompartment,
             [EnumMember(Value = "DRIFT_DETECTION")]
             DriftDetection
         };

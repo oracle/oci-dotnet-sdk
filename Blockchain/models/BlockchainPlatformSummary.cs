@@ -103,8 +103,8 @@ namespace Oci.BlockchainService.Models
         /// <value>
         /// An message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
-        [JsonProperty(PropertyName = "lifeCycleDetails")]
-        public string LifeCycleDetails { get; set; }
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
 
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

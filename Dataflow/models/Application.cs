@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// A data flow application object.
+    /// A Data Flow application object.
     /// 
     /// </summary>
     public class Application 
     {
         
         /// <value>
-        /// An Oracle Cloud Infrastructure URI of an archive (zip) file that may used to support the execution of the application.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// An Oracle Cloud Infrastructure URI of an archive.zip file containing custom dependencies that may be used to support the execution a Python, Java, or Scala application.
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "archiveUri")]
@@ -50,7 +50,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// The Spark configuration passed to the running process.
-        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties
+        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
         /// Example: { &quot;spark.app.name&quot; : &quot;My App Name&quot;, &quot;spark.shuffle.io.maxRetries&quot; : &quot;4&quot; }Note: Not all Spark properties are permitted to be set.  Attempting to set a property that isnot allowed to be overwritten will cause a 400 status to be returned.
         /// </value>
         [JsonProperty(PropertyName = "configuration")]
@@ -116,7 +116,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the file containing the application to execute.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         /// <remarks>
@@ -171,7 +171,7 @@ namespace Oci.DataflowService.Models
 
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket where the Spark job logs are to be uploaded.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
@@ -217,6 +217,13 @@ namespace Oci.DataflowService.Models
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
 
         /// <value>
+        /// The OCID of a private endpoint.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
+
+        /// <value>
         /// The Spark version utilized to run the application.
         /// 
         /// </value>
@@ -252,7 +259,7 @@ namespace Oci.DataflowService.Models
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
-        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "warehouseBucketUri")]

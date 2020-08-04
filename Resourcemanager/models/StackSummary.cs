@@ -64,6 +64,7 @@ namespace Oci.ResourcemanagerService.Models
         /// - ACTIVE
         /// - DELETING
         /// - DELETED
+        /// - FAILED
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
