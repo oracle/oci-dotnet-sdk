@@ -94,5 +94,50 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "externalDataType")]
         public string ExternalDataType { get; set; }
+
+        /// <value>
+        /// The minimum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "minCollectionCount")]
+        public System.Nullable<int> MinCollectionCount { get; set; }
+
+        /// <value>
+        /// The maximum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
+        /// For type specifications in systems that specify only \"capacity\" without upper or lower bound , this property can also be used to just mean \"capacity\".
+        /// Some examples are Varray size in Oracle , Occurs Clause in Cobol , capacity in XmlSchemaObjectCollection , maxOccurs in  Xml , maxItems in Json
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCollectionCount")]
+        public System.Nullable<int> MaxCollectionCount { get; set; }
+
+        /// <value>
+        /// Entity key that represents the datatype of this attribute , applicable if this attribute is a complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "datatypeEntityKey")]
+        public string DatatypeEntityKey { get; set; }
+
+        /// <value>
+        /// External entity key that represents the datatype of this attribute , applicable if this attribute is a complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "externalDatatypeEntityKey")]
+        public string ExternalDatatypeEntityKey { get; set; }
+
+        /// <value>
+        /// Attribute key that represents the parent attribute of this attribute , applicable if the parent attribute is of complex datatype.
+        /// </value>
+        [JsonProperty(PropertyName = "parentAttributeKey")]
+        public string ParentAttributeKey { get; set; }
+
+        /// <value>
+        /// External attribute key that represents the parent attribute  of this attribute , applicable if the parent attribute is of complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "externalParentAttributeKey")]
+        public string ExternalParentAttributeKey { get; set; }
+
+        /// <value>
+        /// Full path of the attribute.
+        /// </value>
+        [JsonProperty(PropertyName = "path")]
+        public string Path { get; set; }
     }
 }

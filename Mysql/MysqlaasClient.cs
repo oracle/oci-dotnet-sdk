@@ -92,6 +92,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConfigurationResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConfigurationResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConfigurationResponse>(responseMessage);
             }
@@ -214,6 +217,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConfigurationsResponse>(responseMessage);
             }
@@ -255,6 +259,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListShapesResponse>(responseMessage);
             }
@@ -295,6 +300,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVersionsResponse>(responseMessage);
             }
@@ -332,6 +338,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConfigurationResponse>(responseMessage);
             }

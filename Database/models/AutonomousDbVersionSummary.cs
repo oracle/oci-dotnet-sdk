@@ -37,6 +37,7 @@ namespace Oci.DatabaseService.Models
         /// <br/>
         /// - OLTP - indicates an Autonomous Transaction Processing database
         /// - DW - indicates an Autonomous Data Warehouse database
+        /// - AJD - indicates an Autonomous JSON Database
         /// 
         /// </value>
         ///
@@ -44,7 +45,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "OLTP")]
             Oltp,
             [EnumMember(Value = "DW")]
-            Dw
+            Dw,
+            [EnumMember(Value = "AJD")]
+            Ajd
         };
 
         /// <value>
@@ -52,6 +55,7 @@ namespace Oci.DatabaseService.Models
         /// <br/>
         /// - OLTP - indicates an Autonomous Transaction Processing database
         /// - DW - indicates an Autonomous Data Warehouse database
+        /// - AJD - indicates an Autonomous JSON Database
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]

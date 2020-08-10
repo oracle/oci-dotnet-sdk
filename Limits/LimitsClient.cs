@@ -93,6 +93,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetResourceAvailabilityResponse>(responseMessage);
             }
@@ -133,6 +134,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListLimitDefinitionsResponse>(responseMessage);
             }
@@ -171,6 +173,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListLimitValuesResponse>(responseMessage);
             }
@@ -210,6 +213,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListServicesResponse>(responseMessage);
             }

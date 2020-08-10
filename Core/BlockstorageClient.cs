@@ -95,6 +95,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeBootVolumeBackupCompartmentResponse>(responseMessage);
             }
@@ -135,6 +136,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeBootVolumeCompartmentResponse>(responseMessage);
             }
@@ -175,6 +177,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVolumeBackupCompartmentResponse>(responseMessage);
             }
@@ -215,6 +218,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVolumeCompartmentResponse>(responseMessage);
             }
@@ -255,6 +259,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVolumeGroupBackupCompartmentResponse>(responseMessage);
             }
@@ -295,6 +300,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVolumeGroupCompartmentResponse>(responseMessage);
             }
@@ -334,6 +340,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CopyBootVolumeBackupResponse>(responseMessage);
             }
@@ -373,6 +380,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CopyVolumeBackupResponse>(responseMessage);
             }
@@ -414,6 +422,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBootVolumeResponse>(responseMessage);
             }
@@ -457,6 +466,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBootVolumeBackupResponse>(responseMessage);
             }
@@ -508,6 +518,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeResponse>(responseMessage);
             }
@@ -551,6 +562,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeBackupResponse>(responseMessage);
             }
@@ -592,6 +604,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeBackupPolicyResponse>(responseMessage);
             }
@@ -632,6 +645,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeBackupPolicyAssignmentResponse>(responseMessage);
             }
@@ -676,6 +690,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeGroupResponse>(responseMessage);
             }
@@ -715,6 +730,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVolumeGroupBackupResponse>(responseMessage);
             }
@@ -756,6 +772,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBootVolumeResponse>(responseMessage);
             }
@@ -793,6 +810,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBootVolumeBackupResponse>(responseMessage);
             }
@@ -831,6 +849,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBootVolumeKmsKeyResponse>(responseMessage);
             }
@@ -872,6 +891,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeResponse>(responseMessage);
             }
@@ -909,6 +929,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeBackupResponse>(responseMessage);
             }
@@ -951,6 +972,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeBackupPolicyResponse>(responseMessage);
             }
@@ -988,6 +1010,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeBackupPolicyAssignmentResponse>(responseMessage);
             }
@@ -1027,6 +1050,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeGroupResponse>(responseMessage);
             }
@@ -1064,6 +1088,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeGroupBackupResponse>(responseMessage);
             }
@@ -1102,6 +1127,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVolumeKmsKeyResponse>(responseMessage);
             }
@@ -1139,6 +1165,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBootVolumeResponse>(responseMessage);
             }
@@ -1176,6 +1203,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBootVolumeBackupResponse>(responseMessage);
             }
@@ -1214,6 +1242,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBootVolumeKmsKeyResponse>(responseMessage);
             }
@@ -1251,6 +1280,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeResponse>(responseMessage);
             }
@@ -1288,6 +1318,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeBackupResponse>(responseMessage);
             }
@@ -1325,6 +1356,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeBackupPolicyResponse>(responseMessage);
             }
@@ -1365,6 +1397,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeBackupPolicyAssetAssignmentResponse>(responseMessage);
             }
@@ -1402,6 +1435,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeBackupPolicyAssignmentResponse>(responseMessage);
             }
@@ -1439,6 +1473,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeGroupResponse>(responseMessage);
             }
@@ -1476,6 +1511,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeGroupBackupResponse>(responseMessage);
             }
@@ -1514,6 +1550,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeKmsKeyResponse>(responseMessage);
             }
@@ -1552,6 +1589,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBootVolumeBackupsResponse>(responseMessage);
             }
@@ -1590,6 +1628,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBootVolumesResponse>(responseMessage);
             }
@@ -1631,6 +1670,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumeBackupPoliciesResponse>(responseMessage);
             }
@@ -1669,6 +1709,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumeBackupsResponse>(responseMessage);
             }
@@ -1708,6 +1749,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumeGroupBackupsResponse>(responseMessage);
             }
@@ -1747,6 +1789,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumeGroupsResponse>(responseMessage);
             }
@@ -1785,6 +1828,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumesResponse>(responseMessage);
             }
@@ -1822,6 +1866,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBootVolumeResponse>(responseMessage);
             }
@@ -1861,6 +1906,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBootVolumeBackupResponse>(responseMessage);
             }
@@ -1899,6 +1945,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBootVolumeKmsKeyResponse>(responseMessage);
             }
@@ -1938,6 +1985,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeResponse>(responseMessage);
             }
@@ -1977,6 +2025,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeBackupResponse>(responseMessage);
             }
@@ -2019,6 +2068,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeBackupPolicyResponse>(responseMessage);
             }
@@ -2062,6 +2112,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeGroupResponse>(responseMessage);
             }
@@ -2099,6 +2150,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeGroupBackupResponse>(responseMessage);
             }
@@ -2137,6 +2189,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVolumeKmsKeyResponse>(responseMessage);
             }

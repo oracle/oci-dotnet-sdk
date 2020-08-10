@@ -92,6 +92,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeBlockchainPlatformCompartmentResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBlockchainPlatformResponse>(responseMessage);
             }
@@ -167,6 +169,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOsnResponse>(responseMessage);
             }
@@ -204,6 +207,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePeerResponse>(responseMessage);
             }
@@ -241,6 +245,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBlockchainPlatformResponse>(responseMessage);
             }
@@ -278,6 +283,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteOsnResponse>(responseMessage);
             }
@@ -315,6 +321,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePeerResponse>(responseMessage);
             }
@@ -352,6 +359,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteWorkRequestResponse>(responseMessage);
             }
@@ -389,6 +397,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBlockchainPlatformResponse>(responseMessage);
             }
@@ -426,6 +435,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetOsnResponse>(responseMessage);
             }
@@ -463,6 +473,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPeerResponse>(responseMessage);
             }
@@ -500,6 +511,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -537,6 +549,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBlockchainPlatformsResponse>(responseMessage);
             }
@@ -574,6 +587,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListOsnsResponse>(responseMessage);
             }
@@ -611,6 +625,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPeersResponse>(responseMessage);
             }
@@ -649,6 +664,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -687,6 +703,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -725,6 +742,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -762,6 +780,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PreviewScaleBlockchainPlatformResponse>(responseMessage);
             }
@@ -799,6 +818,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScaleBlockchainPlatformResponse>(responseMessage);
             }
@@ -836,6 +856,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartBlockchainPlatformResponse>(responseMessage);
             }
@@ -873,6 +894,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopBlockchainPlatformResponse>(responseMessage);
             }
@@ -910,6 +932,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBlockchainPlatformResponse>(responseMessage);
             }
@@ -947,6 +970,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateOsnResponse>(responseMessage);
             }
@@ -984,6 +1008,7 @@ namespace Oci.BlockchainService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePeerResponse>(responseMessage);
             }

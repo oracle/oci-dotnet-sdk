@@ -94,6 +94,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeOdaInstanceCompartmentResponse>(responseMessage);
             }
@@ -135,6 +136,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOdaInstanceResponse>(responseMessage);
             }
@@ -173,6 +175,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteOdaInstanceResponse>(responseMessage);
             }
@@ -210,6 +213,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetOdaInstanceResponse>(responseMessage);
             }
@@ -251,6 +255,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -294,6 +299,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListOdaInstancesResponse>(responseMessage);
             }
@@ -336,6 +342,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -378,6 +385,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -420,6 +428,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -459,6 +468,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartOdaInstanceResponse>(responseMessage);
             }
@@ -499,6 +509,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopOdaInstanceResponse>(responseMessage);
             }
@@ -536,6 +547,7 @@ namespace Oci.OdaService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateOdaInstanceResponse>(responseMessage);
             }

@@ -92,6 +92,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeTableCompartmentResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIndexResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTableResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteIndexResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRowResponse>(responseMessage);
             }
@@ -277,6 +282,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTableResponse>(responseMessage);
             }
@@ -314,6 +320,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteWorkRequestResponse>(responseMessage);
             }
@@ -351,6 +358,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIndexResponse>(responseMessage);
             }
@@ -388,6 +396,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRowResponse>(responseMessage);
             }
@@ -425,6 +434,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTableResponse>(responseMessage);
             }
@@ -462,6 +472,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -499,6 +510,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIndexesResponse>(responseMessage);
             }
@@ -536,6 +548,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTableUsageResponse>(responseMessage);
             }
@@ -573,6 +586,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTablesResponse>(responseMessage);
             }
@@ -611,6 +625,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -649,6 +664,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -686,6 +702,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -724,6 +741,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PrepareStatementResponse>(responseMessage);
             }
@@ -761,6 +779,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<QueryResponse>(responseMessage);
             }
@@ -799,6 +818,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SummarizeStatementResponse>(responseMessage);
             }
@@ -836,6 +856,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRowResponse>(responseMessage);
             }
@@ -875,6 +896,7 @@ namespace Oci.NosqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTableResponse>(responseMessage);
             }

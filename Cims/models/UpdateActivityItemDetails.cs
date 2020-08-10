@@ -16,19 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Activity Item
+    /// Details for udpating the support ticket activity.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     public class UpdateActivityItemDetails : UpdateItemDetails
     {
         
         /// <value>
-        /// Comments to update as part of Activity
+        /// Comments updated at the time that the activity occurs.
         /// </value>
         [JsonProperty(PropertyName = "comments")]
         public string Comments { get; set; }
         ///
         /// <value>
-        /// Type of activity. eg: NOTES, UPDATE
+        /// The type of activity occurring.
         /// </value>
         ///
         public enum ActivityTypeEnum {
@@ -43,7 +46,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Type of activity. eg: NOTES, UPDATE
+        /// The type of activity occurring.
         /// </value>
         [JsonProperty(PropertyName = "activityType")]
         [JsonConverter(typeof(StringEnumConverter))]

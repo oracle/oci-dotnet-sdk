@@ -84,6 +84,33 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
 
         /// <value>
+        /// The minimum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "minCollectionCount")]
+        public System.Nullable<int> MinCollectionCount { get; set; }
+
+        /// <value>
+        /// The maximum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
+        /// For type specifications in systems that specify only \"capacity\" without upper or lower bound , this property can also be used to just mean \"capacity\".
+        /// Some examples are Varray size in Oracle , Occurs Clause in Cobol , capacity in XmlSchemaObjectCollection , maxOccurs in  Xml , maxItems in Json
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCollectionCount")]
+        public System.Nullable<int> MaxCollectionCount { get; set; }
+
+        /// <value>
+        /// External entity key that represents the datatype of this attribute , applicable if this attribute is a complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "externalDatatypeEntityKey")]
+        public string ExternalDatatypeEntityKey { get; set; }
+
+        /// <value>
+        /// External attribute key that represents the parent attribute  of this attribute , applicable if the parent attribute is of complex type.
+        /// </value>
+        [JsonProperty(PropertyName = "externalParentAttributeKey")]
+        public string ExternalParentAttributeKey { get; set; }
+
+        /// <value>
         /// A map of maps that contains the properties which are specific to the attribute type. Each attribute type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
         /// values are maps of property name to property value. Every property is contained inside of a category. Most

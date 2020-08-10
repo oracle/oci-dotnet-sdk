@@ -94,6 +94,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeApplicationCompartmentResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangePrivateEndpointCompartmentResponse>(responseMessage);
             }
@@ -173,6 +175,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeRunCompartmentResponse>(responseMessage);
             }
@@ -211,6 +214,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateApplicationResponse>(responseMessage);
             }
@@ -249,6 +253,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePrivateEndpointResponse>(responseMessage);
             }
@@ -287,6 +292,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRunResponse>(responseMessage);
             }
@@ -325,6 +331,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteApplicationResponse>(responseMessage);
             }
@@ -363,6 +370,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePrivateEndpointResponse>(responseMessage);
             }
@@ -402,6 +410,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRunResponse>(responseMessage);
             }
@@ -440,6 +449,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetApplicationResponse>(responseMessage);
             }
@@ -478,6 +488,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPrivateEndpointResponse>(responseMessage);
             }
@@ -516,6 +527,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRunResponse>(responseMessage);
             }
@@ -554,6 +566,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRunLogResponse>(responseMessage);
             }
@@ -592,6 +605,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -630,6 +644,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListApplicationsResponse>(responseMessage);
             }
@@ -668,6 +683,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPrivateEndpointsResponse>(responseMessage);
             }
@@ -706,6 +722,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRunLogsResponse>(responseMessage);
             }
@@ -744,6 +761,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRunsResponse>(responseMessage);
             }
@@ -782,6 +800,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -820,6 +839,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -858,6 +878,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -896,6 +917,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateApplicationResponse>(responseMessage);
             }
@@ -936,6 +958,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePrivateEndpointResponse>(responseMessage);
             }
@@ -974,6 +997,7 @@ namespace Oci.DataflowService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRunResponse>(responseMessage);
             }

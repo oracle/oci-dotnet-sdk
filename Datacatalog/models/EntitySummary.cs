@@ -61,6 +61,12 @@ namespace Oci.DatacatalogService.Models
         public string FolderKey { get; set; }
 
         /// <value>
+        /// Name of the associated folder. This name is harvested from the source data asset when the parent folder for the entiy is harvested.
+        /// </value>
+        [JsonProperty(PropertyName = "folderName")]
+        public string FolderName { get; set; }
+
+        /// <value>
         /// Unique external key of this object in the source system.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]

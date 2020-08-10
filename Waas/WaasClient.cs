@@ -94,6 +94,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AcceptRecommendationsResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelWorkRequestResponse>(responseMessage);
             }
@@ -171,6 +173,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAddressListCompartmentResponse>(responseMessage);
             }
@@ -210,6 +213,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCertificateCompartmentResponse>(responseMessage);
             }
@@ -247,6 +251,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCustomProtectionRuleCompartmentResponse>(responseMessage);
             }
@@ -286,6 +291,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeWaasPolicyCompartmentResponse>(responseMessage);
             }
@@ -323,6 +329,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAddressListResponse>(responseMessage);
             }
@@ -362,6 +369,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCertificateResponse>(responseMessage);
             }
@@ -401,6 +409,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCustomProtectionRuleResponse>(responseMessage);
             }
@@ -450,6 +459,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateWaasPolicyResponse>(responseMessage);
             }
@@ -487,6 +497,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAddressListResponse>(responseMessage);
             }
@@ -524,6 +535,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCertificateResponse>(responseMessage);
             }
@@ -561,6 +573,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCustomProtectionRuleResponse>(responseMessage);
             }
@@ -598,6 +611,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteWaasPolicyResponse>(responseMessage);
             }
@@ -635,6 +649,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAddressListResponse>(responseMessage);
             }
@@ -672,6 +687,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCertificateResponse>(responseMessage);
             }
@@ -709,6 +725,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCustomProtectionRuleResponse>(responseMessage);
             }
@@ -746,6 +763,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDeviceFingerprintChallengeResponse>(responseMessage);
             }
@@ -783,6 +801,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetHumanInteractionChallengeResponse>(responseMessage);
             }
@@ -820,6 +839,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJsChallengeResponse>(responseMessage);
             }
@@ -857,6 +877,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPolicyConfigResponse>(responseMessage);
             }
@@ -894,6 +915,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetProtectionRuleResponse>(responseMessage);
             }
@@ -931,6 +953,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetProtectionSettingsResponse>(responseMessage);
             }
@@ -968,6 +991,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWaasPolicyResponse>(responseMessage);
             }
@@ -1005,6 +1029,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWafAddressRateLimitingResponse>(responseMessage);
             }
@@ -1042,6 +1067,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWafConfigResponse>(responseMessage);
             }
@@ -1079,6 +1105,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -1117,6 +1144,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAccessRulesResponse>(responseMessage);
             }
@@ -1154,6 +1182,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAddressListsResponse>(responseMessage);
             }
@@ -1192,6 +1221,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCachingRulesResponse>(responseMessage);
             }
@@ -1234,6 +1264,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCaptchasResponse>(responseMessage);
             }
@@ -1271,6 +1302,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCertificatesResponse>(responseMessage);
             }
@@ -1308,6 +1340,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCustomProtectionRulesResponse>(responseMessage);
             }
@@ -1345,6 +1378,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListEdgeSubnetsResponse>(responseMessage);
             }
@@ -1385,6 +1419,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListGoodBotsResponse>(responseMessage);
             }
@@ -1423,6 +1458,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListProtectionRulesResponse>(responseMessage);
             }
@@ -1463,6 +1499,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRecommendationsResponse>(responseMessage);
             }
@@ -1503,6 +1540,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListThreatFeedsResponse>(responseMessage);
             }
@@ -1540,6 +1578,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWaasPoliciesResponse>(responseMessage);
             }
@@ -1577,6 +1616,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWaasPolicyCustomProtectionRulesResponse>(responseMessage);
             }
@@ -1614,6 +1654,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWafBlockedRequestsResponse>(responseMessage);
             }
@@ -1654,6 +1695,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWafLogsResponse>(responseMessage);
             }
@@ -1694,6 +1736,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWafRequestsResponse>(responseMessage);
             }
@@ -1733,6 +1776,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWafTrafficResponse>(responseMessage);
             }
@@ -1770,6 +1814,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWhitelistsResponse>(responseMessage);
             }
@@ -1807,6 +1852,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1845,6 +1891,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PurgeCacheResponse>(responseMessage);
             }
@@ -1890,6 +1937,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAccessRulesResponse>(responseMessage);
             }
@@ -1927,6 +1975,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAddressListResponse>(responseMessage);
             }
@@ -1970,6 +2019,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCachingRulesResponse>(responseMessage);
             }
@@ -2015,6 +2065,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCaptchasResponse>(responseMessage);
             }
@@ -2052,6 +2103,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCertificateResponse>(responseMessage);
             }
@@ -2089,6 +2141,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCustomProtectionRuleResponse>(responseMessage);
             }
@@ -2130,6 +2183,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDeviceFingerprintChallengeResponse>(responseMessage);
             }
@@ -2169,6 +2223,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateGoodBotsResponse>(responseMessage);
             }
@@ -2206,6 +2261,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateHumanInteractionChallengeResponse>(responseMessage);
             }
@@ -2243,6 +2299,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateJsChallengeResponse>(responseMessage);
             }
@@ -2280,6 +2337,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePolicyConfigResponse>(responseMessage);
             }
@@ -2319,6 +2377,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateProtectionRulesResponse>(responseMessage);
             }
@@ -2356,6 +2415,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateProtectionSettingsResponse>(responseMessage);
             }
@@ -2393,6 +2453,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateThreatFeedsResponse>(responseMessage);
             }
@@ -2432,6 +2493,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWaasPolicyResponse>(responseMessage);
             }
@@ -2469,6 +2531,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWaasPolicyCustomProtectionRulesResponse>(responseMessage);
             }
@@ -2506,6 +2569,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWafAddressRateLimitingResponse>(responseMessage);
             }
@@ -2551,6 +2615,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWafConfigResponse>(responseMessage);
             }
@@ -2596,6 +2661,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWhitelistsResponse>(responseMessage);
             }

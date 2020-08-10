@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// List of contacts
+    /// The list of contacts for the ticket.
     /// </summary>
     public class ContactList 
     {
         
         /// <value>
-        /// List of contacts
+        /// The list of contacts.
         /// </value>
         /// <remarks>
         /// Required

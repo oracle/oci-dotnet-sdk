@@ -16,14 +16,17 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Item
+    /// Details gathered during item creation.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     [JsonConverter(typeof(CreateItemDetailsModelConverter))]
     public class CreateItemDetails 
     {
         
         /// <value>
-        /// Type of item. eg: CreateTechSupportItemDetails, CreateLimitItemDetails
+        /// The type of the item.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
@@ -38,7 +41,7 @@ namespace Oci.CimsService.Models
         public CreateIssueTypeDetails IssueType { get; set; }
 
         /// <value>
-        /// Name of the item
+        /// The display name of the item.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

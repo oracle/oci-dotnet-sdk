@@ -83,6 +83,8 @@ namespace Oci.DatacatalogService.Requests
             IsPartition,
             [EnumMember(Value = "folderKey")]
             FolderKey,
+            [EnumMember(Value = "folderName")]
+            FolderName,
             [EnumMember(Value = "typeKey")]
             TypeKey,
             [EnumMember(Value = "path")]

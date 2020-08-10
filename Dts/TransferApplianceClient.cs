@@ -89,6 +89,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTransferApplianceResponse>(responseMessage);
             }
@@ -126,6 +127,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTransferApplianceAdminCredentialsResponse>(responseMessage);
             }
@@ -163,6 +165,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTransferApplianceResponse>(responseMessage);
             }
@@ -200,6 +203,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferApplianceResponse>(responseMessage);
             }
@@ -237,6 +241,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferApplianceCertificateAuthorityCertificateResponse>(responseMessage);
             }
@@ -274,6 +279,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferApplianceEncryptionPassphraseResponse>(responseMessage);
             }
@@ -311,6 +317,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTransferAppliancesResponse>(responseMessage);
             }
@@ -348,6 +355,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTransferApplianceResponse>(responseMessage);
             }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Validation Response
+    /// The validation response returned when checking whether the requested user is valid.
     /// </summary>
     public class ValidationResponse 
     {
         
         /// <value>
-        /// Boolean value to check whether requested user is valid or not
+        /// Boolean value that indicates whether the requested user is valid.
         /// </value>
         [JsonProperty(PropertyName = "isValidUser")]
         public System.Nullable<bool> IsValidUser { get; set; }

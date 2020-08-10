@@ -95,6 +95,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BackupVaultResponse>(responseMessage);
             }
@@ -141,6 +142,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelVaultDeletionResponse>(responseMessage);
             }
@@ -187,6 +189,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVaultCompartmentResponse>(responseMessage);
             }
@@ -233,6 +236,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVaultResponse>(responseMessage);
             }
@@ -276,6 +280,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVaultResponse>(responseMessage);
             }
@@ -314,6 +319,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVaultUsageResponse>(responseMessage);
             }
@@ -357,6 +363,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVaultsResponse>(responseMessage);
             }
@@ -397,6 +404,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreVaultFromFileResponse>(responseMessage);
             }
@@ -437,6 +445,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreVaultFromObjectStoreResponse>(responseMessage);
             }
@@ -484,6 +493,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScheduleVaultDeletionResponse>(responseMessage);
             }
@@ -529,6 +539,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVaultResponse>(responseMessage);
             }

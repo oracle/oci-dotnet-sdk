@@ -92,6 +92,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeTransferJobCompartmentResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTransferJobResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTransferJobResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferJobResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTransferJobsResponse>(responseMessage);
             }
@@ -277,6 +282,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTransferJobResponse>(responseMessage);
             }

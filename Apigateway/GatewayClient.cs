@@ -92,6 +92,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeGatewayCompartmentResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateGatewayResponse>(responseMessage);
             }
@@ -167,6 +169,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteGatewayResponse>(responseMessage);
             }
@@ -204,6 +207,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetGatewayResponse>(responseMessage);
             }
@@ -242,6 +246,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListGatewaysResponse>(responseMessage);
             }
@@ -279,6 +284,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateGatewayResponse>(responseMessage);
             }

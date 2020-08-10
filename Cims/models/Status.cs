@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Ticket Status
+    /// Details about the status of the support ticket.
     /// </summary>
     public class Status 
     {
         
         /// <value>
-        /// Unique code
+        /// The code unique to this ticket status.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CimsService.Models
         public string Code { get; set; }
 
         /// <value>
-        /// Status message
+        /// The status message for this ticket.
         /// </value>
         /// <remarks>
         /// Required

@@ -20,6 +20,8 @@ namespace Oci.DatacatalogService.Models
     /// PREVIEW  - Preview jobs are metadata crawlers but allow users to filter and view metadata entities in data assets.
     /// IMPORT - Import jobs import metadata in data catalog repository from a data catalog exported file.
     /// EXPORT - Export jobs export data catalog metadata for imports into other data catalog repositories.
+    /// IMPORT_GLOSSARY - Job type to import glossary metadata from a file.
+    /// EXPORT_GLOSSARY - Job type to export glossary metadata to a file.
     /// 
   /// </summary>
   public enum JobType {
@@ -35,6 +37,10 @@ namespace Oci.DatacatalogService.Models
       Import,
       [EnumMember(Value = "EXPORT")]
       Export,
+      [EnumMember(Value = "IMPORT_GLOSSARY")]
+      ImportGlossary,
+      [EnumMember(Value = "EXPORT_GLOSSARY")]
+      ExportGlossary,
       [EnumMember(Value = "INTERNAL")]
       Internal,
       [EnumMember(Value = "PURGE")]

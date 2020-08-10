@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// SortOrder query for Incident Lists
+  /// The sort order to use to query support ticket lists, either ascending (`ASC`) or descending (`DESC`).
   /// </summary>
   public enum SortOrder {
       [EnumMember(Value = "ASC")]

@@ -93,6 +93,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AddPackagesToSoftwareSourceResponse>(responseMessage);
             }
@@ -133,6 +134,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachChildSoftwareSourceToManagedInstanceResponse>(responseMessage);
             }
@@ -174,6 +176,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachManagedInstanceToManagedInstanceGroupResponse>(responseMessage);
             }
@@ -215,6 +218,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachParentSoftwareSourceToManagedInstanceResponse>(responseMessage);
             }
@@ -254,6 +258,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeManagedInstanceGroupCompartmentResponse>(responseMessage);
             }
@@ -293,6 +298,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeScheduledJobCompartmentResponse>(responseMessage);
             }
@@ -332,6 +338,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSoftwareSourceCompartmentResponse>(responseMessage);
             }
@@ -372,6 +379,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateManagedInstanceGroupResponse>(responseMessage);
             }
@@ -413,6 +421,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateScheduledJobResponse>(responseMessage);
             }
@@ -453,6 +462,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSoftwareSourceResponse>(responseMessage);
             }
@@ -491,6 +501,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteManagedInstanceGroupResponse>(responseMessage);
             }
@@ -529,6 +540,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteScheduledJobResponse>(responseMessage);
             }
@@ -567,6 +579,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSoftwareSourceResponse>(responseMessage);
             }
@@ -606,6 +619,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachChildSoftwareSourceFromManagedInstanceResponse>(responseMessage);
             }
@@ -644,6 +658,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachManagedInstanceFromManagedInstanceGroupResponse>(responseMessage);
             }
@@ -683,6 +698,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachParentSoftwareSourceFromManagedInstanceResponse>(responseMessage);
             }
@@ -721,6 +737,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetErratumResponse>(responseMessage);
             }
@@ -759,6 +776,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetManagedInstanceResponse>(responseMessage);
             }
@@ -797,6 +815,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetManagedInstanceGroupResponse>(responseMessage);
             }
@@ -835,6 +854,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetScheduledJobResponse>(responseMessage);
             }
@@ -873,6 +893,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSoftwarePackageResponse>(responseMessage);
             }
@@ -911,6 +932,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSoftwareSourceResponse>(responseMessage);
             }
@@ -949,6 +971,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWindowsUpdateResponse>(responseMessage);
             }
@@ -986,6 +1009,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -1024,6 +1048,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstallAllPackageUpdatesOnManagedInstanceResponse>(responseMessage);
             }
@@ -1062,6 +1087,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstallAllWindowsUpdatesOnManagedInstanceResponse>(responseMessage);
             }
@@ -1100,6 +1126,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstallPackageOnManagedInstanceResponse>(responseMessage);
             }
@@ -1138,6 +1165,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstallPackageUpdateOnManagedInstanceResponse>(responseMessage);
             }
@@ -1176,6 +1204,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstallWindowsUpdateOnManagedInstanceResponse>(responseMessage);
             }
@@ -1214,6 +1243,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAvailablePackagesForManagedInstanceResponse>(responseMessage);
             }
@@ -1252,6 +1282,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAvailableSoftwareSourcesForManagedInstanceResponse>(responseMessage);
             }
@@ -1290,6 +1321,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAvailableUpdatesForManagedInstanceResponse>(responseMessage);
             }
@@ -1328,6 +1360,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAvailableWindowsUpdatesForManagedInstanceResponse>(responseMessage);
             }
@@ -1366,6 +1399,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListManagedInstanceGroupsResponse>(responseMessage);
             }
@@ -1404,6 +1438,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListManagedInstancesResponse>(responseMessage);
             }
@@ -1442,6 +1477,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPackagesInstalledOnManagedInstanceResponse>(responseMessage);
             }
@@ -1480,6 +1516,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListScheduledJobsResponse>(responseMessage);
             }
@@ -1518,6 +1555,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSoftwareSourcePackagesResponse>(responseMessage);
             }
@@ -1556,6 +1594,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSoftwareSourcesResponse>(responseMessage);
             }
@@ -1594,6 +1633,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListUpcomingScheduledJobsResponse>(responseMessage);
             }
@@ -1632,6 +1672,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWindowsUpdatesResponse>(responseMessage);
             }
@@ -1670,6 +1711,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWindowsUpdatesInstalledOnManagedInstanceResponse>(responseMessage);
             }
@@ -1707,6 +1749,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -1744,6 +1787,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -1782,6 +1826,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1820,6 +1865,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemovePackageFromManagedInstanceResponse>(responseMessage);
             }
@@ -1858,6 +1904,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemovePackagesFromSoftwareSourceResponse>(responseMessage);
             }
@@ -1897,6 +1944,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RunScheduledJobNowResponse>(responseMessage);
             }
@@ -1936,6 +1984,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SearchSoftwarePackagesResponse>(responseMessage);
             }
@@ -1975,6 +2024,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SkipNextScheduledJobExecutionResponse>(responseMessage);
             }
@@ -2013,6 +2063,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateManagedInstanceGroupResponse>(responseMessage);
             }
@@ -2051,6 +2102,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateScheduledJobResponse>(responseMessage);
             }
@@ -2089,6 +2141,7 @@ namespace Oci.OsmanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSoftwareSourceResponse>(responseMessage);
             }

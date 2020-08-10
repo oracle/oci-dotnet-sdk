@@ -3,13 +3,15 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
-﻿using System;
-using System.Collections.Generic;
+using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Moq;
+using Newtonsoft.Json;
+using Oci.Common.Http.Internal;
 using Oci.Common.Model;
 using Xunit;
 
@@ -39,17 +41,22 @@ namespace Oci.Common.Retry
             mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
         }
 
-        [Fact]
+        [Theory]
+        [InlineData(500, "InternalServerError")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
-        public async void TestRetryForDefaultRetryConfig()
+        public async void TestRetryForDefaultRetryConfig(int statusCode, string message)
         {
             var retrier = new GenericRetrier(new RetryConfiguration { GetNextDelayInSeconds = _ => 0 });  // disabling sleep time
             var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
             mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.InternalServerError });
+                .ReturnsAsync(new HttpResponseMessage()
+                {
+                    StatusCode = (System.Net.HttpStatusCode)statusCode,
+                    Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage(message, "Some Error"))
+                });
 
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
@@ -61,15 +68,16 @@ namespace Oci.Common.Retry
             mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
         }
 
-        [Fact]
+        [Theory]
+        [InlineData(406, "CustomError")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
-        public async void TestRetryForCustomConfig()
+        public async void TestRetryForCustomConfig(int statusCode, string message)
         {
-            var customConfig = new RetryConfiguration()
+            var customConfig = new RetryConfiguration
             {
                 MaxAttempts = 10,
-                RetryableStatusCodes = new List<int> { 404 },
+                RetryableErrors = new Collection<Tuple<int, string>> { new Tuple<int, string>(statusCode, message) },
                 GetNextDelayInSeconds = _ => 0
             };
 
@@ -78,7 +86,11 @@ namespace Oci.Common.Retry
             var requestMessage = new HttpRequestMessage();
 
             mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.NotFound });
+                .ReturnsAsync(new HttpResponseMessage()
+                {
+                    StatusCode = (System.Net.HttpStatusCode)statusCode,
+                    Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage(message, "Some Error"))
+                });
 
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
@@ -88,16 +100,16 @@ namespace Oci.Common.Retry
             mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(customConfig.MaxAttempts + 1));
         }
 
-        [Fact]
+        [Theory]
+        [InlineData(404, "NotAuthorizedOrNotFound")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
-        public async void TestRetryThrowsTimeoutException()
+        public async void TestRetryThrowsTimeoutException(int statusCode, string message)
         {
             var customConfig = new RetryConfiguration()
             {
                 MaxAttempts = 10,
                 TotalElapsedTimeInSecs = 1, // This makes sure the request timesout before returning error response.
-                RetryableStatusCodes = new List<int> { 404 },
                 GetNextDelayInSeconds = (retryAttempt) => Math.Pow(2, retryAttempt)
             };
 
@@ -106,12 +118,31 @@ namespace Oci.Common.Retry
             var requestMessage = new HttpRequestMessage();
 
             mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.NotFound });
+                .ReturnsAsync(new HttpResponseMessage()
+                {
+                    StatusCode = (System.Net.HttpStatusCode)statusCode,
+                    Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage(message, "Some Error"))
+                });
 
             await Assert.ThrowsAsync<OciException>(() => retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
                 default));
+        }
+
+        private class ErrorCodeAndMessage
+        {
+            [JsonProperty("code")]
+            public readonly string Code;
+
+            [JsonProperty("message")]
+            public readonly string Message;
+
+            public ErrorCodeAndMessage(string code, string message)
+            {
+                this.Code = code;
+                this.Message = message;
+            }
         }
     }
 }

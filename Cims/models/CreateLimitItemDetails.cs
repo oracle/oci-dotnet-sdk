@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Limit Item
+    /// Reserved for future use.
     /// </summary>
     public class CreateLimitItemDetails : CreateItemDetails
     {
         
         /// <value>
-        /// Current available limit of the resource
+        /// The limit of the resource currently available.
         /// </value>
         [JsonProperty(PropertyName = "currentLimit")]
         public System.Nullable<int> CurrentLimit { get; set; }
 
         /// <value>
-        /// Current used limit of the resource
+        /// The current usage of the resource.
         /// </value>
         [JsonProperty(PropertyName = "currentUsage")]
         public System.Nullable<int> CurrentUsage { get; set; }
 
         /// <value>
-        /// Requested limit for the resource
+        /// Reserved for future use.
         /// </value>
         [JsonProperty(PropertyName = "requestedLimit")]
         public System.Nullable<int> RequestedLimit { get; set; }
         ///
         /// <value>
-        /// Status of the Limit
+        /// The current status of the request.
         /// </value>
         ///
         public enum LimitStatusEnum {
@@ -53,7 +53,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Status of the Limit
+        /// The current status of the request.
         /// </value>
         [JsonProperty(PropertyName = "limitStatus")]
         [JsonConverter(typeof(StringEnumConverter))]

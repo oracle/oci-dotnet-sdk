@@ -92,6 +92,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCatalogCompartmentResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCatalogPrivateEndpointCompartmentResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAttributeResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAttributeTagResponse>(responseMessage);
             }
@@ -279,6 +284,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCatalogResponse>(responseMessage);
             }
@@ -316,6 +322,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -353,6 +360,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConnectionResponse>(responseMessage);
             }
@@ -390,6 +398,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataAssetResponse>(responseMessage);
             }
@@ -427,6 +436,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataAssetTagResponse>(responseMessage);
             }
@@ -464,6 +474,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateEntityResponse>(responseMessage);
             }
@@ -501,6 +512,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateEntityTagResponse>(responseMessage);
             }
@@ -538,6 +550,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateFolderResponse>(responseMessage);
             }
@@ -575,6 +588,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateFolderTagResponse>(responseMessage);
             }
@@ -612,6 +626,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateGlossaryResponse>(responseMessage);
             }
@@ -649,6 +664,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateJobResponse>(responseMessage);
             }
@@ -686,6 +702,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateJobDefinitionResponse>(responseMessage);
             }
@@ -723,6 +740,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateJobExecutionResponse>(responseMessage);
             }
@@ -760,6 +778,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTermResponse>(responseMessage);
             }
@@ -797,6 +816,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTermRelationshipResponse>(responseMessage);
             }
@@ -834,6 +854,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAttributeResponse>(responseMessage);
             }
@@ -871,6 +892,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAttributeTagResponse>(responseMessage);
             }
@@ -908,6 +930,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCatalogResponse>(responseMessage);
             }
@@ -945,6 +968,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -982,6 +1006,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConnectionResponse>(responseMessage);
             }
@@ -1019,6 +1044,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDataAssetResponse>(responseMessage);
             }
@@ -1056,6 +1082,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDataAssetTagResponse>(responseMessage);
             }
@@ -1093,6 +1120,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteEntityResponse>(responseMessage);
             }
@@ -1130,6 +1158,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteEntityTagResponse>(responseMessage);
             }
@@ -1167,6 +1196,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteFolderResponse>(responseMessage);
             }
@@ -1204,6 +1234,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteFolderTagResponse>(responseMessage);
             }
@@ -1241,6 +1272,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteGlossaryResponse>(responseMessage);
             }
@@ -1278,6 +1310,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteJobResponse>(responseMessage);
             }
@@ -1315,6 +1348,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteJobDefinitionResponse>(responseMessage);
             }
@@ -1352,6 +1386,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTermResponse>(responseMessage);
             }
@@ -1389,6 +1424,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTermRelationshipResponse>(responseMessage);
             }
@@ -1426,6 +1462,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -1463,6 +1500,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ExpandTreeForGlossaryResponse>(responseMessage);
             }
@@ -1500,6 +1538,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ExportGlossaryResponse>(responseMessage);
             }
@@ -1537,6 +1576,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAttributeResponse>(responseMessage);
             }
@@ -1574,6 +1614,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAttributeTagResponse>(responseMessage);
             }
@@ -1611,6 +1652,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCatalogResponse>(responseMessage);
             }
@@ -1648,6 +1690,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -1685,6 +1728,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConnectionResponse>(responseMessage);
             }
@@ -1722,6 +1766,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataAssetResponse>(responseMessage);
             }
@@ -1759,6 +1804,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataAssetTagResponse>(responseMessage);
             }
@@ -1796,6 +1842,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetEntityResponse>(responseMessage);
             }
@@ -1833,6 +1880,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetEntityTagResponse>(responseMessage);
             }
@@ -1870,6 +1918,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFolderResponse>(responseMessage);
             }
@@ -1907,6 +1956,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFolderTagResponse>(responseMessage);
             }
@@ -1944,6 +1994,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetGlossaryResponse>(responseMessage);
             }
@@ -1981,6 +2032,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobResponse>(responseMessage);
             }
@@ -2018,6 +2070,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobDefinitionResponse>(responseMessage);
             }
@@ -2055,6 +2108,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobExecutionResponse>(responseMessage);
             }
@@ -2092,6 +2146,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobLogResponse>(responseMessage);
             }
@@ -2129,6 +2184,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobMetricsResponse>(responseMessage);
             }
@@ -2166,6 +2222,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTermResponse>(responseMessage);
             }
@@ -2203,6 +2260,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTermRelationshipResponse>(responseMessage);
             }
@@ -2240,6 +2298,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTypeResponse>(responseMessage);
             }
@@ -2277,6 +2336,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -2314,6 +2374,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ImportConnectionResponse>(responseMessage);
             }
@@ -2351,6 +2412,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ImportGlossaryResponse>(responseMessage);
             }
@@ -2388,6 +2450,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAttributeTagsResponse>(responseMessage);
             }
@@ -2425,6 +2488,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAttributesResponse>(responseMessage);
             }
@@ -2463,6 +2527,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCatalogPrivateEndpointsResponse>(responseMessage);
             }
@@ -2501,6 +2566,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCatalogsResponse>(responseMessage);
             }
@@ -2538,6 +2604,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConnectionsResponse>(responseMessage);
             }
@@ -2575,6 +2642,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataAssetTagsResponse>(responseMessage);
             }
@@ -2612,6 +2680,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataAssetsResponse>(responseMessage);
             }
@@ -2649,6 +2718,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListEntitiesResponse>(responseMessage);
             }
@@ -2686,6 +2756,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListEntityTagsResponse>(responseMessage);
             }
@@ -2723,6 +2794,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFolderTagsResponse>(responseMessage);
             }
@@ -2760,6 +2832,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFoldersResponse>(responseMessage);
             }
@@ -2797,6 +2870,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListGlossariesResponse>(responseMessage);
             }
@@ -2834,6 +2908,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobDefinitionsResponse>(responseMessage);
             }
@@ -2871,6 +2946,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobExecutionsResponse>(responseMessage);
             }
@@ -2908,6 +2984,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobLogsResponse>(responseMessage);
             }
@@ -2945,6 +3022,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobMetricsResponse>(responseMessage);
             }
@@ -2982,6 +3060,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobsResponse>(responseMessage);
             }
@@ -3019,6 +3098,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTagsResponse>(responseMessage);
             }
@@ -3056,6 +3136,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTermRelationshipsResponse>(responseMessage);
             }
@@ -3093,6 +3174,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTermsResponse>(responseMessage);
             }
@@ -3130,6 +3212,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTypesResponse>(responseMessage);
             }
@@ -3168,6 +3251,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -3206,6 +3290,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -3244,6 +3329,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -3281,6 +3367,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ObjectStatsResponse>(responseMessage);
             }
@@ -3318,6 +3405,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ParseConnectionResponse>(responseMessage);
             }
@@ -3355,6 +3443,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SearchCriteriaResponse>(responseMessage);
             }
@@ -3392,6 +3481,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TestConnectionResponse>(responseMessage);
             }
@@ -3429,6 +3519,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAttributeResponse>(responseMessage);
             }
@@ -3466,6 +3557,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCatalogResponse>(responseMessage);
             }
@@ -3503,6 +3595,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCatalogPrivateEndpointResponse>(responseMessage);
             }
@@ -3540,6 +3633,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConnectionResponse>(responseMessage);
             }
@@ -3577,6 +3671,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDataAssetResponse>(responseMessage);
             }
@@ -3614,6 +3709,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateEntityResponse>(responseMessage);
             }
@@ -3651,6 +3747,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateFolderResponse>(responseMessage);
             }
@@ -3688,6 +3785,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateGlossaryResponse>(responseMessage);
             }
@@ -3725,6 +3823,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateJobResponse>(responseMessage);
             }
@@ -3762,6 +3861,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateJobDefinitionResponse>(responseMessage);
             }
@@ -3799,6 +3899,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTermResponse>(responseMessage);
             }
@@ -3836,6 +3937,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTermRelationshipResponse>(responseMessage);
             }
@@ -3873,6 +3975,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UploadCredentialsResponse>(responseMessage);
             }
@@ -3910,6 +4013,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UsersResponse>(responseMessage);
             }
@@ -3947,6 +4051,7 @@ namespace Oci.DatacatalogService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ValidateConnectionResponse>(responseMessage);
             }

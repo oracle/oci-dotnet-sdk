@@ -92,6 +92,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeConnectHarnessCompartmentResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeStreamCompartmentResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeStreamPoolCompartmentResponse>(responseMessage);
             }
@@ -208,6 +211,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConnectHarnessResponse>(responseMessage);
             }
@@ -250,6 +254,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateStreamResponse>(responseMessage);
             }
@@ -290,6 +295,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateStreamPoolResponse>(responseMessage);
             }
@@ -332,6 +338,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConnectHarnessResponse>(responseMessage);
             }
@@ -374,6 +381,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteStreamResponse>(responseMessage);
             }
@@ -413,6 +421,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteStreamPoolResponse>(responseMessage);
             }
@@ -450,6 +459,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConnectHarnessResponse>(responseMessage);
             }
@@ -487,6 +497,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStreamResponse>(responseMessage);
             }
@@ -524,6 +535,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStreamPoolResponse>(responseMessage);
             }
@@ -561,6 +573,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConnectHarnessesResponse>(responseMessage);
             }
@@ -598,6 +611,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListStreamPoolsResponse>(responseMessage);
             }
@@ -639,6 +653,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListStreamsResponse>(responseMessage);
             }
@@ -677,6 +692,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConnectHarnessResponse>(responseMessage);
             }
@@ -715,6 +731,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateStreamResponse>(responseMessage);
             }
@@ -753,6 +770,7 @@ namespace Oci.StreamingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateStreamPoolResponse>(responseMessage);
             }

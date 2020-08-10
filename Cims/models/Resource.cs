@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Ticket Item
+    /// Details about the ticket item object.
     /// </summary>
     public class Resource 
     {
@@ -25,14 +25,14 @@ namespace Oci.CimsService.Models
         public Item Item { get; set; }
 
         /// <value>
-        /// List of OCI regions
+        /// The list of available Oracle Cloud Infrastructure regions.
         /// </value>
         [JsonProperty(PropertyName = "region")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Region> Region { get; set; }
 
         /// <value>
-        /// List of OCI ADs
+        /// The list of available Oracle Cloud Infrastructure availability domains.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         [JsonConverter(typeof(StringEnumConverter))]

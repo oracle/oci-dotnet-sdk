@@ -89,6 +89,7 @@ namespace Oci.AuditService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConfigurationResponse>(responseMessage);
             }
@@ -128,6 +129,7 @@ namespace Oci.AuditService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListEventsResponse>(responseMessage);
             }
@@ -165,6 +167,7 @@ namespace Oci.AuditService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConfigurationResponse>(responseMessage);
             }

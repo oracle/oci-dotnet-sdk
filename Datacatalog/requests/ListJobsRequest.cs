@@ -33,6 +33,15 @@ namespace Oci.DatacatalogService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match display name pattern given. The match is not case sensitive.
+        /// For Example : /folders?displayNameContains=Cu.*
+        /// The above would match all folders with display name that starts with \"Cu\".
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
+        public string DisplayNameContains { get; set; }
+        
+        /// <value>
         /// Job lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
@@ -149,7 +158,13 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "executions")]
             Executions,
             [EnumMember(Value = "uri")]
-            Uri
+            Uri,
+            [EnumMember(Value = "jobDefinitionName")]
+            JobDefinitionName,
+            [EnumMember(Value = "errorCode")]
+            ErrorCode,
+            [EnumMember(Value = "errorMessage")]
+            ErrorMessage
         };
 
         /// <value>

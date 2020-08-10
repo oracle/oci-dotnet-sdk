@@ -63,7 +63,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// This API enables the customer to Create an Incident
+        /// Enables the customer to create an support ticket.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -89,6 +89,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIncidentResponse>(responseMessage);
             }
@@ -100,7 +101,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// This API fetches the details of a requested Incident
+        /// Gets the details of the support ticket.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -126,6 +127,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIncidentResponse>(responseMessage);
             }
@@ -137,7 +139,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// GetStatus of the Service
+        /// Gets the status of the service.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -163,6 +165,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStatusResponse>(responseMessage);
             }
@@ -174,7 +177,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// This API returns the list of all possible product that OCI supports, while creating an incident
+        /// During support ticket creation, returns the list of all possible products that Oracle Cloud Infrastructure supports.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -200,6 +203,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIncidentResourceTypesResponse>(responseMessage);
             }
@@ -211,7 +215,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// This API returns the list of incidents raised by the tenant
+        /// Returns the list of support tickets raised by the tenancy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -237,6 +241,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIncidentsResponse>(responseMessage);
             }
@@ -248,7 +253,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// This API updates an existing incident
+        /// Updates the specified support ticket&#39;s information.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -274,6 +279,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIncidentResponse>(responseMessage);
             }
@@ -285,7 +291,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// ValidateUser
+        /// Checks whether the requested user is valid.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -311,6 +317,7 @@ namespace Oci.CimsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ValidateUserResponse>(responseMessage);
             }

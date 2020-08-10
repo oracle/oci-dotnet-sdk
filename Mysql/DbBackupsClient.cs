@@ -93,6 +93,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBackupResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBackupResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackupResponse>(responseMessage);
             }
@@ -206,6 +209,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBackupsResponse>(responseMessage);
             }
@@ -243,6 +247,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBackupResponse>(responseMessage);
             }

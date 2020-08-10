@@ -91,6 +91,7 @@ namespace Oci.SecretsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSecretBundleResponse>(responseMessage);
             }
@@ -128,6 +129,7 @@ namespace Oci.SecretsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSecretBundleVersionsResponse>(responseMessage);
             }

@@ -93,6 +93,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AbortMultipartUploadResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelWorkRequestResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CommitMultipartUploadResponse>(responseMessage);
             }
@@ -208,6 +211,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CopyObjectResponse>(responseMessage);
             }
@@ -247,6 +251,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBucketResponse>(responseMessage);
             }
@@ -286,6 +291,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateMultipartUploadResponse>(responseMessage);
             }
@@ -324,6 +330,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePreauthenticatedRequestResponse>(responseMessage);
             }
@@ -362,6 +369,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateReplicationPolicyResponse>(responseMessage);
             }
@@ -401,6 +409,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRetentionRuleResponse>(responseMessage);
             }
@@ -442,6 +451,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBucketResponse>(responseMessage);
             }
@@ -480,6 +490,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteObjectResponse>(responseMessage);
             }
@@ -518,6 +529,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteObjectLifecyclePolicyResponse>(responseMessage);
             }
@@ -555,6 +567,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePreauthenticatedRequestResponse>(responseMessage);
             }
@@ -593,6 +606,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteReplicationPolicyResponse>(responseMessage);
             }
@@ -630,6 +644,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRetentionRuleResponse>(responseMessage);
             }
@@ -668,6 +683,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBucketResponse>(responseMessage);
             }
@@ -712,6 +728,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNamespaceResponse>(responseMessage);
             }
@@ -756,6 +773,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNamespaceMetadataResponse>(responseMessage);
             }
@@ -794,6 +812,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetObjectResponse>(responseMessage);
             }
@@ -832,6 +851,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetObjectLifecyclePolicyResponse>(responseMessage);
             }
@@ -869,6 +889,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPreauthenticatedRequestResponse>(responseMessage);
             }
@@ -907,6 +928,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetReplicationPolicyResponse>(responseMessage);
             }
@@ -944,6 +966,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRetentionRuleResponse>(responseMessage);
             }
@@ -981,6 +1004,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -1019,6 +1043,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<HeadBucketResponse>(responseMessage);
             }
@@ -1057,6 +1082,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<HeadObjectResponse>(responseMessage);
             }
@@ -1100,6 +1126,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBucketsResponse>(responseMessage);
             }
@@ -1138,6 +1165,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMultipartUploadPartsResponse>(responseMessage);
             }
@@ -1176,6 +1204,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMultipartUploadsResponse>(responseMessage);
             }
@@ -1218,6 +1247,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListObjectVersionsResponse>(responseMessage);
             }
@@ -1260,6 +1290,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListObjectsResponse>(responseMessage);
             }
@@ -1298,6 +1329,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPreauthenticatedRequestsResponse>(responseMessage);
             }
@@ -1336,6 +1368,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListReplicationPoliciesResponse>(responseMessage);
             }
@@ -1374,6 +1407,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListReplicationSourcesResponse>(responseMessage);
             }
@@ -1413,6 +1447,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRetentionRulesResponse>(responseMessage);
             }
@@ -1450,6 +1485,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -1487,6 +1523,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -1525,6 +1562,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1566,6 +1604,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<MakeBucketWritableResponse>(responseMessage);
             }
@@ -1579,6 +1618,9 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// Creates a new object or overwrites an existing object with the same name. The maximum object size allowed by
         /// PutObject is 50 GiB.
+        /// &lt;br/&gt;
+        /// See [Object Names](https://docs.cloud.oracle.com/Content/Object/Tasks/managingobjects.htm#namerequirements)
+        /// for object naming requirements. 
         /// &lt;br/&gt;
         /// See [Special Instructions for Object Storage PUT](https://docs.cloud.oracle.com/Content/API/Concepts/signingrequests.htm#ObjectStoragePut)
         /// for request signature requirements.
@@ -1610,6 +1652,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PutObjectResponse>(responseMessage);
             }
@@ -1648,6 +1691,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PutObjectLifecyclePolicyResponse>(responseMessage);
             }
@@ -1700,6 +1744,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ReencryptBucketResponse>(responseMessage);
             }
@@ -1746,6 +1791,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ReencryptObjectResponse>(responseMessage);
             }
@@ -1758,6 +1804,9 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Rename an object in the given Object Storage namespace.
+        /// &lt;br/&gt;
+        /// See [Object Names](https://docs.cloud.oracle.com/Content/Object/Tasks/managingobjects.htm#namerequirements)
+        /// for object naming requirements. 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1784,6 +1833,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RenameObjectResponse>(responseMessage);
             }
@@ -1823,6 +1873,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreObjectsResponse>(responseMessage);
             }
@@ -1865,6 +1916,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBucketResponse>(responseMessage);
             }
@@ -1909,6 +1961,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNamespaceMetadataResponse>(responseMessage);
             }
@@ -1947,6 +2000,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRetentionRuleResponse>(responseMessage);
             }
@@ -1986,6 +2040,7 @@ namespace Oci.ObjectstorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UploadPartResponse>(responseMessage);
             }

@@ -139,6 +139,26 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeOfLatestExecution { get; set; }
 
         /// <value>
+        /// The display name of the job definition resource that defined the scope of this job.
+        /// </value>
+        [JsonProperty(PropertyName = "jobDefinitionName")]
+        public string JobDefinitionName { get; set; }
+
+        /// <value>
+        /// Error code returned from the latest job execution for this job. Useful when the latest Job execution is in FAILED state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "errorCode")]
+        public string ErrorCode { get; set; }
+
+        /// <value>
+        /// Error message returned from the latest job execution for this job. Useful when the latest Job Execution is in a FAILED state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "errorMessage")]
+        public string ErrorMessage { get; set; }
+
+        /// <value>
         /// Array of the executions summary associated with this job.
         /// </value>
         [JsonProperty(PropertyName = "executions")]
