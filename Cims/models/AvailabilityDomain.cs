@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Availability Domain supported by CIMS. eg: PHX_AD_1, PHX_AD_1
+  /// The list of availability domains supported by the Support Management API.
   /// </summary>
   public enum AvailabilityDomain {
       [EnumMember(Value = "DEV_1")]
@@ -68,10 +68,6 @@ namespace Oci.CimsService.Models
       ApMumbai1Ad1,
       [EnumMember(Value = "SA_SAOPAULO_1_AD_1")]
       SaSaopaulo1Ad1,
-      [EnumMember(Value = "US_LUKE_1_AD_1")]
-      UsLuke1Ad1,
-      [EnumMember(Value = "US_LANGLEY_1_AD_1")]
-      UsLangley1Ad1,
       [EnumMember(Value = "ME_JEDDAH_1_AD_1")]
       MeJeddah1Ad1,
       [EnumMember(Value = "AP_OSAKA_1_AD_1")]
@@ -90,8 +86,6 @@ namespace Oci.CimsService.Models
       ApHyderabad1Ad1,
       [EnumMember(Value = "AP_CHUNCHEON_1_AD_1")]
       ApChuncheon1Ad1,
-      [EnumMember(Value = "US_TACOMA_1_AD_1")]
-      UsTacoma1Ad1,
       [EnumMember(Value = "NO_AD")]
       NoAd
   }

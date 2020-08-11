@@ -92,6 +92,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelWorkRequestResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeMigrationCompartmentResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSourceCompartmentResponse>(responseMessage);
             }
@@ -205,6 +208,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateMigrationResponse>(responseMessage);
             }
@@ -244,6 +248,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSourceResponse>(responseMessage);
             }
@@ -281,6 +286,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteMigrationResponse>(responseMessage);
             }
@@ -318,6 +324,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSourceResponse>(responseMessage);
             }
@@ -355,6 +362,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetMigrationResponse>(responseMessage);
             }
@@ -392,6 +400,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSourceResponse>(responseMessage);
             }
@@ -429,6 +438,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -467,6 +477,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMigrationsResponse>(responseMessage);
             }
@@ -505,6 +516,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSourceApplicationsResponse>(responseMessage);
             }
@@ -543,6 +555,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSourcesResponse>(responseMessage);
             }
@@ -581,6 +594,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -619,6 +633,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -657,6 +672,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -695,6 +711,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<MigrateApplicationResponse>(responseMessage);
             }
@@ -732,6 +749,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateMigrationResponse>(responseMessage);
             }
@@ -769,6 +787,7 @@ namespace Oci.ApplicationmigrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSourceResponse>(responseMessage);
             }

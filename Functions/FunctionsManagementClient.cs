@@ -94,6 +94,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeApplicationCompartmentResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateApplicationResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateFunctionResponse>(responseMessage);
             }
@@ -205,6 +208,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteApplicationResponse>(responseMessage);
             }
@@ -242,6 +246,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteFunctionResponse>(responseMessage);
             }
@@ -279,6 +284,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetApplicationResponse>(responseMessage);
             }
@@ -316,6 +322,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFunctionResponse>(responseMessage);
             }
@@ -353,6 +360,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListApplicationsResponse>(responseMessage);
             }
@@ -390,6 +398,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFunctionsResponse>(responseMessage);
             }
@@ -427,6 +436,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateApplicationResponse>(responseMessage);
             }
@@ -464,6 +474,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateFunctionResponse>(responseMessage);
             }

@@ -86,6 +86,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListShippingVendorsResponse>(responseMessage);
             }

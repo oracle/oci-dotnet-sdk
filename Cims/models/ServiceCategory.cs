@@ -16,57 +16,57 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Incident Classifier details
+    /// Information about the incident classifier.
     /// </summary>
     public class ServiceCategory 
     {
         
         /// <value>
-        /// Unique ID that identifies a classifier
+        /// The unique ID that identifies a classifier.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// Name of classifier. eg: LIMIT Increase
+        /// The name of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Label of classifier
+        /// The label for the classifier.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
 
         /// <value>
-        /// Description of classifier
+        /// The text describing the classifier.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <value>
-        /// List of Issues
+        /// The list of issues.
         /// </value>
         [JsonProperty(PropertyName = "issueTypeList")]
         public System.Collections.Generic.List<IssueType> IssueTypeList { get; set; }
 
         /// <value>
-        /// List of Scope
+        /// The scope of the incident.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Scope> Scope { get; set; }
 
         /// <value>
-        /// List of Units
+        /// The unit to use to measure the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Unit> Unit { get; set; }
 
         /// <value>
-        /// Limit's unique id
+        /// The unique ID for the limit.
         /// </value>
         [JsonProperty(PropertyName = "limitId")]
         public string LimitId { get; set; }

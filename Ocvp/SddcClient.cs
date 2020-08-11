@@ -95,6 +95,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSddcCompartmentResponse>(responseMessage);
             }
@@ -136,6 +137,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSddcResponse>(responseMessage);
             }
@@ -179,6 +181,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSddcResponse>(responseMessage);
             }
@@ -216,6 +219,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSddcResponse>(responseMessage);
             }
@@ -255,6 +259,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSddcsResponse>(responseMessage);
             }
@@ -294,6 +299,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSupportedVmwareSoftwareVersionsResponse>(responseMessage);
             }
@@ -337,6 +343,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSddcResponse>(responseMessage);
             }

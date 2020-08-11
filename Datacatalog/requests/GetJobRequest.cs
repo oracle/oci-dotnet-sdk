@@ -84,7 +84,13 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "updatedById")]
             UpdatedById,
             [EnumMember(Value = "uri")]
-            Uri
+            Uri,
+            [EnumMember(Value = "jobDefinitionName")]
+            JobDefinitionName,
+            [EnumMember(Value = "errorCode")]
+            ErrorCode,
+            [EnumMember(Value = "errorMessage")]
+            ErrorMessage
         };
 
         /// <value>

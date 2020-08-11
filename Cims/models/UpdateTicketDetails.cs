@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Ticket updated
+    /// Details about the ticket updated.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     public class UpdateTicketDetails 
     {
         
         /// <value>
-        /// List of resources
+        /// The list of resources.
         /// </value>
         /// <remarks>
         /// Required

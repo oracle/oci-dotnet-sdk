@@ -94,6 +94,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAnalyticsInstanceCompartmentResponse>(responseMessage);
             }
@@ -133,6 +134,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAnalyticsInstanceNetworkEndpointResponse>(responseMessage);
             }
@@ -172,6 +174,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAnalyticsInstanceResponse>(responseMessage);
             }
@@ -211,6 +214,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAnalyticsInstanceResponse>(responseMessage);
             }
@@ -249,6 +253,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteWorkRequestResponse>(responseMessage);
             }
@@ -287,6 +292,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAnalyticsInstanceResponse>(responseMessage);
             }
@@ -325,6 +331,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -363,6 +370,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAnalyticsInstancesResponse>(responseMessage);
             }
@@ -401,6 +409,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -439,6 +448,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -477,6 +487,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -516,6 +527,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScaleAnalyticsInstanceResponse>(responseMessage);
             }
@@ -555,6 +567,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartAnalyticsInstanceResponse>(responseMessage);
             }
@@ -594,6 +607,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopAnalyticsInstanceResponse>(responseMessage);
             }
@@ -633,6 +647,7 @@ namespace Oci.AnalyticsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAnalyticsInstanceResponse>(responseMessage);
             }

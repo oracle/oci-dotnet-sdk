@@ -43,6 +43,15 @@ namespace Oci.DatacatalogService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match display name pattern given. The match is not case sensitive.
+        /// For Example : /folders?displayNameContains=Cu.*
+        /// The above would match all folders with display name that starts with \"Cu\".
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
+        public string DisplayNameContains { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
@@ -152,6 +161,8 @@ namespace Oci.DatacatalogService.Requests
             LifecycleState,
             [EnumMember(Value = "folderKey")]
             FolderKey,
+            [EnumMember(Value = "folderName")]
+            FolderName,
             [EnumMember(Value = "externalKey")]
             ExternalKey,
             [EnumMember(Value = "path")]

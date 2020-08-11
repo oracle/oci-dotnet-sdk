@@ -16,14 +16,17 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Item
+    /// Details for udpating an item.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     [JsonConverter(typeof(UpdateItemDetailsModelConverter))]
     public class UpdateItemDetails 
     {
         
         /// <value>
-        /// Type of item. eg: UpdateActivityItemDetails
+        /// The type of the item.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }

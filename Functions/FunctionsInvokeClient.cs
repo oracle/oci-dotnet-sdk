@@ -80,6 +80,7 @@ namespace Oci.FunctionsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InvokeFunctionResponse>(responseMessage);
             }

@@ -102,7 +102,21 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "uri")]
             Uri,
             [EnumMember(Value = "properties")]
-            Properties
+            Properties,
+            [EnumMember(Value = "path")]
+            Path,
+            [EnumMember(Value = "minCollectionCount")]
+            MinCollectionCount,
+            [EnumMember(Value = "maxCollectionCount")]
+            MaxCollectionCount,
+            [EnumMember(Value = "datatypeEntityKey")]
+            DatatypeEntityKey,
+            [EnumMember(Value = "externalDatatypeEntityKey")]
+            ExternalDatatypeEntityKey,
+            [EnumMember(Value = "parentAttributeKey")]
+            ParentAttributeKey,
+            [EnumMember(Value = "externalParentAttributeKey")]
+            ExternalParentAttributeKey
         };
 
         /// <value>

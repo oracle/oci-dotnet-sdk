@@ -92,6 +92,7 @@ namespace Oci.AnnouncementsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAnnouncementResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.AnnouncementsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAnnouncementUserStatusResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.AnnouncementsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAnnouncementsResponse>(responseMessage);
             }
@@ -206,6 +209,7 @@ namespace Oci.AnnouncementsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAnnouncementUserStatusResponse>(responseMessage);
             }

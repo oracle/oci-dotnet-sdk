@@ -77,6 +77,14 @@ namespace Oci.DatacatalogService.Requests
             IsSampleDataExtracted,
             [EnumMember(Value = "sampleDataSizeInMBs")]
             SampleDataSizeInMBs,
+            [EnumMember(Value = "timeLatestExecutionStarted")]
+            TimeLatestExecutionStarted,
+            [EnumMember(Value = "timeLatestExecutionEnded")]
+            TimeLatestExecutionEnded,
+            [EnumMember(Value = "jobExecutionState")]
+            JobExecutionState,
+            [EnumMember(Value = "scheduleType")]
+            ScheduleType,
             [EnumMember(Value = "properties")]
             Properties
         };

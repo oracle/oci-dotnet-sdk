@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Incident
+    /// Details about the support ticket.
     /// </summary>
     public class IncidentSummary 
     {
         
         /// <value>
-        /// Unique ID that identifies an Incident
+        /// Unique identifier of the incident.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CimsService.Models
         public string Key { get; set; }
 
         /// <value>
-        /// Tenancy Ocid
+        /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -50,7 +50,7 @@ namespace Oci.CimsService.Models
         public IncidentResourceType IncidentType { get; set; }
 
         /// <value>
-        /// States type of incident. eg: LIMIT, TECH
+        /// The kind of support ticket, such as a technical support request.
         /// </value>
         /// <remarks>
         /// Required

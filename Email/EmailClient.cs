@@ -92,6 +92,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSenderCompartmentResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSenderResponse>(responseMessage);
             }
@@ -170,6 +172,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSuppressionResponse>(responseMessage);
             }
@@ -209,6 +212,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSenderResponse>(responseMessage);
             }
@@ -248,6 +252,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSuppressionResponse>(responseMessage);
             }
@@ -285,6 +290,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSenderResponse>(responseMessage);
             }
@@ -324,6 +330,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSuppressionResponse>(responseMessage);
             }
@@ -362,6 +369,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSendersResponse>(responseMessage);
             }
@@ -402,6 +410,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSuppressionsResponse>(responseMessage);
             }
@@ -443,6 +452,7 @@ namespace Oci.EmailService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSenderResponse>(responseMessage);
             }

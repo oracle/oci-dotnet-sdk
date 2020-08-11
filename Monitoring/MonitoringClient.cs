@@ -95,6 +95,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAlarmCompartmentResponse>(responseMessage);
             }
@@ -138,6 +139,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAlarmResponse>(responseMessage);
             }
@@ -181,6 +183,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAlarmResponse>(responseMessage);
             }
@@ -224,6 +227,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAlarmResponse>(responseMessage);
             }
@@ -267,6 +271,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAlarmHistoryResponse>(responseMessage);
             }
@@ -310,6 +315,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAlarmsResponse>(responseMessage);
             }
@@ -353,6 +359,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAlarmsStatusResponse>(responseMessage);
             }
@@ -395,6 +402,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMetricsResponse>(responseMessage);
             }
@@ -450,6 +458,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PostMetricDataResponse>(responseMessage);
             }
@@ -493,6 +502,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemoveAlarmSuppressionResponse>(responseMessage);
             }
@@ -535,6 +545,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SummarizeMetricsDataResponse>(responseMessage);
             }
@@ -578,6 +589,7 @@ namespace Oci.MonitoringService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAlarmResponse>(responseMessage);
             }

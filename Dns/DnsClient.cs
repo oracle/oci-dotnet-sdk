@@ -92,6 +92,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSteeringPolicyCompartmentResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeTsigKeyCompartmentResponse>(responseMessage);
             }
@@ -167,6 +169,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeZoneCompartmentResponse>(responseMessage);
             }
@@ -206,6 +209,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSteeringPolicyResponse>(responseMessage);
             }
@@ -249,6 +253,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSteeringPolicyAttachmentResponse>(responseMessage);
             }
@@ -288,6 +293,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTsigKeyResponse>(responseMessage);
             }
@@ -328,6 +334,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateZoneResponse>(responseMessage);
             }
@@ -365,6 +372,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDomainRecordsResponse>(responseMessage);
             }
@@ -403,6 +411,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRRSetResponse>(responseMessage);
             }
@@ -444,6 +453,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSteeringPolicyResponse>(responseMessage);
             }
@@ -483,6 +493,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSteeringPolicyAttachmentResponse>(responseMessage);
             }
@@ -521,6 +532,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTsigKeyResponse>(responseMessage);
             }
@@ -560,6 +572,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteZoneResponse>(responseMessage);
             }
@@ -600,6 +613,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDomainRecordsResponse>(responseMessage);
             }
@@ -639,6 +653,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRRSetResponse>(responseMessage);
             }
@@ -677,6 +692,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSteeringPolicyResponse>(responseMessage);
             }
@@ -715,6 +731,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSteeringPolicyAttachmentResponse>(responseMessage);
             }
@@ -753,6 +770,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTsigKeyResponse>(responseMessage);
             }
@@ -792,6 +810,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetZoneResponse>(responseMessage);
             }
@@ -832,6 +851,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetZoneRecordsResponse>(responseMessage);
             }
@@ -870,6 +890,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSteeringPoliciesResponse>(responseMessage);
             }
@@ -908,6 +929,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSteeringPolicyAttachmentsResponse>(responseMessage);
             }
@@ -946,6 +968,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTsigKeysResponse>(responseMessage);
             }
@@ -985,6 +1008,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListZonesResponse>(responseMessage);
             }
@@ -1026,6 +1050,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PatchDomainRecordsResponse>(responseMessage);
             }
@@ -1063,6 +1088,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PatchRRSetResponse>(responseMessage);
             }
@@ -1104,6 +1130,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PatchZoneRecordsResponse>(responseMessage);
             }
@@ -1147,6 +1174,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDomainRecordsResponse>(responseMessage);
             }
@@ -1184,6 +1212,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRRSetResponse>(responseMessage);
             }
@@ -1222,6 +1251,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSteeringPolicyResponse>(responseMessage);
             }
@@ -1260,6 +1290,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSteeringPolicyAttachmentResponse>(responseMessage);
             }
@@ -1298,6 +1329,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTsigKeyResponse>(responseMessage);
             }
@@ -1338,6 +1370,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateZoneResponse>(responseMessage);
             }
@@ -1380,6 +1413,7 @@ namespace Oci.DnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateZoneRecordsResponse>(responseMessage);
             }

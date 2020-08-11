@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Customer Tenant
+    /// Details about the customer's tenancy.
     /// </summary>
     public class TenancyInformation 
     {
         
         /// <value>
-        /// Tenant customer support identifier
+        /// The Customer Support Identifier number associated with the tenancy.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CimsService.Models
         public string CustomerSupportKey { get; set; }
 
         /// <value>
-        /// Tenant OCID
+        /// The OCID of the tenancy.
         /// </value>
         /// <remarks>
         /// Required

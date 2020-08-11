@@ -92,6 +92,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ActivateMfaTotpDeviceResponse>(responseMessage);
             }
@@ -133,6 +134,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AddUserToGroupResponse>(responseMessage);
             }
@@ -174,6 +176,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AssembleEffectiveTagSetResponse>(responseMessage);
             }
@@ -216,6 +219,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BulkDeleteResourcesResponse>(responseMessage);
             }
@@ -274,6 +278,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BulkDeleteTagsResponse>(responseMessage);
             }
@@ -316,6 +321,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BulkMoveResourcesResponse>(responseMessage);
             }
@@ -372,6 +378,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CascadeDeleteTagNamespaceResponse>(responseMessage);
             }
@@ -415,6 +422,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeTagNamespaceCompartmentResponse>(responseMessage);
             }
@@ -462,6 +470,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAuthTokenResponse>(responseMessage);
             }
@@ -518,6 +527,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCompartmentResponse>(responseMessage);
             }
@@ -566,6 +576,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCustomerSecretKeyResponse>(responseMessage);
             }
@@ -621,6 +632,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDynamicGroupResponse>(responseMessage);
             }
@@ -679,6 +691,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateGroupResponse>(responseMessage);
             }
@@ -734,6 +747,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIdentityProviderResponse>(responseMessage);
             }
@@ -773,6 +787,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIdpGroupMappingResponse>(responseMessage);
             }
@@ -811,6 +826,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateMfaTotpDeviceResponse>(responseMessage);
             }
@@ -869,6 +885,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateNetworkSourceResponse>(responseMessage);
             }
@@ -907,6 +924,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOAuthClientCredentialResponse>(responseMessage);
             }
@@ -955,6 +973,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOrResetUIPasswordResponse>(responseMessage);
             }
@@ -1009,6 +1028,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePolicyResponse>(responseMessage);
             }
@@ -1047,6 +1067,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRegionSubscriptionResponse>(responseMessage);
             }
@@ -1088,6 +1109,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSmtpCredentialResponse>(responseMessage);
             }
@@ -1137,6 +1159,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSwiftPasswordResponse>(responseMessage);
             }
@@ -1196,6 +1219,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTagResponse>(responseMessage);
             }
@@ -1241,6 +1265,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTagDefaultResponse>(responseMessage);
             }
@@ -1292,6 +1317,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTagNamespaceResponse>(responseMessage);
             }
@@ -1364,6 +1390,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateUserResponse>(responseMessage);
             }
@@ -1407,6 +1434,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteApiKeyResponse>(responseMessage);
             }
@@ -1445,6 +1473,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAuthTokenResponse>(responseMessage);
             }
@@ -1483,6 +1512,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCompartmentResponse>(responseMessage);
             }
@@ -1521,6 +1551,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCustomerSecretKeyResponse>(responseMessage);
             }
@@ -1559,6 +1590,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDynamicGroupResponse>(responseMessage);
             }
@@ -1597,6 +1629,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteGroupResponse>(responseMessage);
             }
@@ -1636,6 +1669,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteIdentityProviderResponse>(responseMessage);
             }
@@ -1673,6 +1707,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteIdpGroupMappingResponse>(responseMessage);
             }
@@ -1711,6 +1746,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteMfaTotpDeviceResponse>(responseMessage);
             }
@@ -1749,6 +1785,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteNetworkSourceResponse>(responseMessage);
             }
@@ -1787,6 +1824,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteOAuthClientCredentialResponse>(responseMessage);
             }
@@ -1824,6 +1862,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePolicyResponse>(responseMessage);
             }
@@ -1862,6 +1901,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSmtpCredentialResponse>(responseMessage);
             }
@@ -1902,6 +1942,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSwiftPasswordResponse>(responseMessage);
             }
@@ -1960,6 +2001,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTagResponse>(responseMessage);
             }
@@ -1998,6 +2040,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTagDefaultResponse>(responseMessage);
             }
@@ -2042,6 +2085,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTagNamespaceResponse>(responseMessage);
             }
@@ -2079,6 +2123,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteUserResponse>(responseMessage);
             }
@@ -2117,6 +2162,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GenerateTotpSeedResponse>(responseMessage);
             }
@@ -2156,6 +2202,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAuthenticationPolicyResponse>(responseMessage);
             }
@@ -2201,6 +2248,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCompartmentResponse>(responseMessage);
             }
@@ -2239,6 +2287,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDynamicGroupResponse>(responseMessage);
             }
@@ -2281,6 +2330,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetGroupResponse>(responseMessage);
             }
@@ -2318,6 +2368,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIdentityProviderResponse>(responseMessage);
             }
@@ -2355,6 +2406,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIdpGroupMappingResponse>(responseMessage);
             }
@@ -2393,6 +2445,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetMfaTotpDeviceResponse>(responseMessage);
             }
@@ -2431,6 +2484,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNetworkSourceResponse>(responseMessage);
             }
@@ -2468,6 +2522,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPolicyResponse>(responseMessage);
             }
@@ -2505,6 +2560,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTagResponse>(responseMessage);
             }
@@ -2543,6 +2599,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTagDefaultResponse>(responseMessage);
             }
@@ -2581,6 +2638,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTagNamespaceResponse>(responseMessage);
             }
@@ -2620,6 +2678,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTaggingWorkRequestResponse>(responseMessage);
             }
@@ -2657,6 +2716,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTenancyResponse>(responseMessage);
             }
@@ -2694,6 +2754,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetUserResponse>(responseMessage);
             }
@@ -2731,6 +2792,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetUserGroupMembershipResponse>(responseMessage);
             }
@@ -2770,6 +2832,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetUserUIPasswordInformationResponse>(responseMessage);
             }
@@ -2809,6 +2872,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -2850,6 +2914,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListApiKeysResponse>(responseMessage);
             }
@@ -2889,6 +2954,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAuthTokensResponse>(responseMessage);
             }
@@ -2931,6 +2997,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAvailabilityDomainsResponse>(responseMessage);
             }
@@ -2975,6 +3042,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBulkActionResourceTypesResponse>(responseMessage);
             }
@@ -3030,6 +3098,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCompartmentsResponse>(responseMessage);
             }
@@ -3069,6 +3138,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCostTrackingTagsResponse>(responseMessage);
             }
@@ -3108,6 +3178,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCustomerSecretKeysResponse>(responseMessage);
             }
@@ -3148,6 +3219,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDynamicGroupsResponse>(responseMessage);
             }
@@ -3188,6 +3260,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFaultDomainsResponse>(responseMessage);
             }
@@ -3228,6 +3301,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListGroupsResponse>(responseMessage);
             }
@@ -3265,6 +3339,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIdentityProviderGroupsResponse>(responseMessage);
             }
@@ -3306,6 +3381,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIdentityProvidersResponse>(responseMessage);
             }
@@ -3344,6 +3420,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIdpGroupMappingsResponse>(responseMessage);
             }
@@ -3383,6 +3460,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMfaTotpDevicesResponse>(responseMessage);
             }
@@ -3423,6 +3501,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNetworkSourcesResponse>(responseMessage);
             }
@@ -3461,6 +3540,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListOAuthClientCredentialsResponse>(responseMessage);
             }
@@ -3503,6 +3583,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPoliciesResponse>(responseMessage);
             }
@@ -3540,6 +3621,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRegionSubscriptionsResponse>(responseMessage);
             }
@@ -3577,6 +3659,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRegionsResponse>(responseMessage);
             }
@@ -3616,6 +3699,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSmtpCredentialsResponse>(responseMessage);
             }
@@ -3657,6 +3741,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSwiftPasswordsResponse>(responseMessage);
             }
@@ -3695,6 +3780,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTagDefaultsResponse>(responseMessage);
             }
@@ -3733,6 +3819,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTagNamespacesResponse>(responseMessage);
             }
@@ -3771,6 +3858,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaggingWorkRequestErrorsResponse>(responseMessage);
             }
@@ -3809,6 +3897,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaggingWorkRequestLogsResponse>(responseMessage);
             }
@@ -3847,6 +3936,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaggingWorkRequestsResponse>(responseMessage);
             }
@@ -3885,6 +3975,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTagsResponse>(responseMessage);
             }
@@ -3932,6 +4023,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListUserGroupMembershipsResponse>(responseMessage);
             }
@@ -3972,6 +4064,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListUsersResponse>(responseMessage);
             }
@@ -4010,6 +4103,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -4055,6 +4149,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<MoveCompartmentResponse>(responseMessage);
             }
@@ -4093,6 +4188,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RecoverCompartmentResponse>(responseMessage);
             }
@@ -4130,6 +4226,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemoveUserFromGroupResponse>(responseMessage);
             }
@@ -4168,6 +4265,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ResetIdpScimClientResponse>(responseMessage);
             }
@@ -4206,6 +4304,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAuthTokenResponse>(responseMessage);
             }
@@ -4244,6 +4343,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAuthenticationPolicyResponse>(responseMessage);
             }
@@ -4281,6 +4381,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCompartmentResponse>(responseMessage);
             }
@@ -4319,6 +4420,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCustomerSecretKeyResponse>(responseMessage);
             }
@@ -4356,6 +4458,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDynamicGroupResponse>(responseMessage);
             }
@@ -4393,6 +4496,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateGroupResponse>(responseMessage);
             }
@@ -4430,6 +4534,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIdentityProviderResponse>(responseMessage);
             }
@@ -4467,6 +4572,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIdpGroupMappingResponse>(responseMessage);
             }
@@ -4504,6 +4610,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNetworkSourceResponse>(responseMessage);
             }
@@ -4542,6 +4649,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateOAuthClientCredentialResponse>(responseMessage);
             }
@@ -4582,6 +4690,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePolicyResponse>(responseMessage);
             }
@@ -4620,6 +4729,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSmtpCredentialResponse>(responseMessage);
             }
@@ -4660,6 +4770,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSwiftPasswordResponse>(responseMessage);
             }
@@ -4707,6 +4818,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTagResponse>(responseMessage);
             }
@@ -4750,6 +4862,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTagDefaultResponse>(responseMessage);
             }
@@ -4796,6 +4909,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTagNamespaceResponse>(responseMessage);
             }
@@ -4833,6 +4947,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateUserResponse>(responseMessage);
             }
@@ -4871,6 +4986,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateUserCapabilitiesResponse>(responseMessage);
             }
@@ -4909,6 +5025,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateUserStateResponse>(responseMessage);
             }
@@ -4961,6 +5078,7 @@ namespace Oci.IdentityService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UploadApiKeyResponse>(responseMessage);
             }

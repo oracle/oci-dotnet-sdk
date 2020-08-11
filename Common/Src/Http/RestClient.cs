@@ -69,22 +69,28 @@ namespace Oci.Common.Http
         /// <param name="httpRequest">The HttpRequestMessage to be sent.</param>
         /// <param name="cancellationToken">The CancellationToken to be used.</param>
         /// <returns>A Task of HttpResponseMessage returned.</returns>
-        /// <exception>Throws HttpRequestException, InvalidOperationException, or OperationCanceledException depending on the type of error.</exception>
         public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, CancellationToken cancellationToken = default)
+        {
+            return await this.httpClient.SendAsync(httpRequest, cancellationToken);
+        }
+
+        /// <summary>Check if the HttpResponseMessage is a successful response.</summary>
+        /// <param name="httpRequest">The HttpRequestMessage sent.</param>
+        /// <param name="HttpResponseMessage">The HttpResponseMessage to be checked.</param>
+        /// <exception>Throws OciException, HttpRequestException, InvalidOperationException, or OperationCanceledException depending on the type of error.</exception>
+        public void CheckHttpResponseMessage(HttpRequestMessage httpRequest, HttpResponseMessage httpResponse)
         {
             var opcRequestId = httpRequest.Headers.Contains("opc-request-id") ?
                 httpRequest.Headers.GetValues("opc-request-id").FirstOrDefault() : string.Empty;
 
             try
             {
-                HttpResponseMessage response = await this.httpClient.SendAsync(httpRequest, cancellationToken);
-                logger.Debug("Dumping HttpResponse:\n{0}", response.ToString());
+                logger.Debug("Dumping HttpResponse:\n{0}", httpResponse.ToString());
                 // Check for success immediately to avoid unnecessary processing of failure responses.
-                if (!response.IsSuccessStatusCode)
+                if (!httpResponse.IsSuccessStatusCode)
                 {
-                    ResponseHelper.HandleNonSuccessfulResponse(response);
+                    ResponseHelper.HandleNonSuccessfulResponse(httpResponse);
                 }
-                return response;
             }
             catch (HttpRequestException ex)
             {
@@ -98,7 +104,7 @@ namespace Oci.Common.Http
             }
             catch (OperationCanceledException e)
             {
-                logger.Warn($"Request has been cancelled using CancellationToken, IsCancellationRequested: {cancellationToken.IsCancellationRequested}, errorMessage: {e.Message}");
+                logger.Warn($"Request has been cancelled using CancellationToken, errorMessage: {e.Message}");
                 throw;
             }
         }

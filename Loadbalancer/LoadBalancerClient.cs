@@ -94,6 +94,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeLoadBalancerCompartmentResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBackendResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBackendSetResponse>(responseMessage);
             }
@@ -205,6 +208,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCertificateResponse>(responseMessage);
             }
@@ -244,6 +248,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateHostnameResponse>(responseMessage);
             }
@@ -281,6 +286,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateListenerResponse>(responseMessage);
             }
@@ -345,6 +351,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateLoadBalancerResponse>(responseMessage);
             }
@@ -384,6 +391,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePathRouteSetResponse>(responseMessage);
             }
@@ -423,6 +431,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRuleSetResponse>(responseMessage);
             }
@@ -460,6 +469,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBackendResponse>(responseMessage);
             }
@@ -500,6 +510,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBackendSetResponse>(responseMessage);
             }
@@ -537,6 +548,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCertificateResponse>(responseMessage);
             }
@@ -575,6 +587,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteHostnameResponse>(responseMessage);
             }
@@ -612,6 +625,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteListenerResponse>(responseMessage);
             }
@@ -649,6 +663,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteLoadBalancerResponse>(responseMessage);
             }
@@ -690,6 +705,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePathRouteSetResponse>(responseMessage);
             }
@@ -731,6 +747,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRuleSetResponse>(responseMessage);
             }
@@ -768,6 +785,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackendResponse>(responseMessage);
             }
@@ -805,6 +823,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackendHealthResponse>(responseMessage);
             }
@@ -842,6 +861,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackendSetResponse>(responseMessage);
             }
@@ -879,6 +899,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackendSetHealthResponse>(responseMessage);
             }
@@ -916,6 +937,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetHealthCheckerResponse>(responseMessage);
             }
@@ -953,6 +975,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetHostnameResponse>(responseMessage);
             }
@@ -990,6 +1013,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetLoadBalancerResponse>(responseMessage);
             }
@@ -1027,6 +1051,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetLoadBalancerHealthResponse>(responseMessage);
             }
@@ -1064,6 +1089,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPathRouteSetResponse>(responseMessage);
             }
@@ -1101,6 +1127,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRuleSetResponse>(responseMessage);
             }
@@ -1138,6 +1165,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -1175,6 +1203,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBackendSetsResponse>(responseMessage);
             }
@@ -1212,6 +1241,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBackendsResponse>(responseMessage);
             }
@@ -1249,6 +1279,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCertificatesResponse>(responseMessage);
             }
@@ -1286,6 +1317,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListHostnamesResponse>(responseMessage);
             }
@@ -1330,6 +1362,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListListenerRulesResponse>(responseMessage);
             }
@@ -1367,6 +1400,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListLoadBalancerHealthsResponse>(responseMessage);
             }
@@ -1404,6 +1438,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListLoadBalancersResponse>(responseMessage);
             }
@@ -1441,6 +1476,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPathRouteSetsResponse>(responseMessage);
             }
@@ -1478,6 +1514,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPoliciesResponse>(responseMessage);
             }
@@ -1515,6 +1552,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListProtocolsResponse>(responseMessage);
             }
@@ -1552,6 +1590,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRuleSetsResponse>(responseMessage);
             }
@@ -1589,6 +1628,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListShapesResponse>(responseMessage);
             }
@@ -1626,6 +1666,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1663,6 +1704,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBackendResponse>(responseMessage);
             }
@@ -1700,6 +1742,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBackendSetResponse>(responseMessage);
             }
@@ -1737,6 +1780,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateHealthCheckerResponse>(responseMessage);
             }
@@ -1776,6 +1820,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateHostnameResponse>(responseMessage);
             }
@@ -1813,6 +1858,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateListenerResponse>(responseMessage);
             }
@@ -1850,6 +1896,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateLoadBalancerResponse>(responseMessage);
             }
@@ -1887,6 +1934,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNetworkSecurityGroupsResponse>(responseMessage);
             }
@@ -1930,6 +1978,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePathRouteSetResponse>(responseMessage);
             }
@@ -1971,6 +2020,7 @@ namespace Oci.LoadbalancerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRuleSetResponse>(responseMessage);
             }

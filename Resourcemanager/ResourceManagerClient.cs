@@ -95,6 +95,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelJobResponse>(responseMessage);
             }
@@ -135,6 +136,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeConfigurationSourceProviderCompartmentResponse>(responseMessage);
             }
@@ -172,6 +174,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeStackCompartmentResponse>(responseMessage);
             }
@@ -212,6 +215,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConfigurationSourceProviderResponse>(responseMessage);
             }
@@ -249,6 +253,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateJobResponse>(responseMessage);
             }
@@ -292,6 +297,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateStackResponse>(responseMessage);
             }
@@ -329,6 +335,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConfigurationSourceProviderResponse>(responseMessage);
             }
@@ -366,6 +373,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteStackResponse>(responseMessage);
             }
@@ -403,6 +411,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetectStackDriftResponse>(responseMessage);
             }
@@ -440,6 +449,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConfigurationSourceProviderResponse>(responseMessage);
             }
@@ -477,6 +487,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobResponse>(responseMessage);
             }
@@ -515,6 +526,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobLogsResponse>(responseMessage);
             }
@@ -554,6 +566,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobLogsContentResponse>(responseMessage);
             }
@@ -593,6 +606,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobTfConfigResponse>(responseMessage);
             }
@@ -630,6 +644,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetJobTfStateResponse>(responseMessage);
             }
@@ -667,6 +682,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStackResponse>(responseMessage);
             }
@@ -706,6 +722,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStackTfConfigResponse>(responseMessage);
             }
@@ -743,6 +760,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetStackTfStateResponse>(responseMessage);
             }
@@ -780,6 +798,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -820,6 +839,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConfigurationSourceProvidersResponse>(responseMessage);
             }
@@ -862,6 +882,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListJobsResponse>(responseMessage);
             }
@@ -900,6 +921,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListResourceDiscoveryServicesResponse>(responseMessage);
             }
@@ -940,6 +962,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListStackResourceDriftDetailsResponse>(responseMessage);
             }
@@ -980,6 +1003,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListStacksResponse>(responseMessage);
             }
@@ -1018,6 +1042,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTerraformVersionsResponse>(responseMessage);
             }
@@ -1056,6 +1081,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -1094,6 +1120,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -1132,6 +1159,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1172,6 +1200,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConfigurationSourceProviderResponse>(responseMessage);
             }
@@ -1209,6 +1238,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateJobResponse>(responseMessage);
             }
@@ -1252,6 +1282,7 @@ namespace Oci.ResourcemanagerService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateStackResponse>(responseMessage);
             }

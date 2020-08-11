@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Scope of Service category/resource
+  /// The scope of the service category or resource.
   /// </summary>
   public enum Scope {
       [EnumMember(Value = "AD")]

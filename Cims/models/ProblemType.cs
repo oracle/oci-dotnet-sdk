@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Problem Type of an Incident
+  /// The kind of support ticket, such as a technical support request.
   /// </summary>
   public enum ProblemType {
       [EnumMember(Value = "LIMIT")]

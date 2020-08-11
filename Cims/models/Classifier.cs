@@ -16,43 +16,43 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Incident Classifier details
+    /// Details about the incident classifier object.
     /// </summary>
     public class Classifier 
     {
         
         /// <value>
-        /// Unique ID that identifies a classifier
+        /// Unique identifier of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <value>
-        /// Name of classifier. eg: LIMIT Increase
+        /// The display name of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Label of classifier
+        /// The label associated with the classifier.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
 
         /// <value>
-        /// Description of classifier
+        /// The description of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <value>
-        /// List of Issues
+        /// The list of issues.
         /// </value>
         [JsonProperty(PropertyName = "issueTypeList")]
         public System.Collections.Generic.List<IssueType> IssueTypeList { get; set; }
         ///
         /// <value>
-        /// Scope of Service category/resource
+        /// The scope of the service category or resource.
         /// </value>
         ///
         public enum ScopeEnum {
@@ -67,14 +67,14 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Scope of Service category/resource
+        /// The scope of the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScopeEnum> Scope { get; set; }
         ///
         /// <value>
-        /// Unit to measure Service category/ resource
+        /// The unit to use to measure the service category or resource.
         /// </value>
         ///
         public enum UnitEnum {
@@ -87,7 +87,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Unit to measure Service category/ resource
+        /// The unit to use to measure the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
         [JsonConverter(typeof(StringEnumConverter))]

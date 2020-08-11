@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of incident type
+    /// Details about the resource associated with the support request.
     /// </summary>
     public class IncidentResourceType 
     {
         
         /// <value>
-        /// Unique ID that identifies an Incident Type
+        /// Unique identifier of the resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceTypeKey")]
         public string ResourceTypeKey { get; set; }
 
         /// <value>
-        /// Name of Incident type
+        /// The display name of the resource.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Label associated with Incident Type
+        /// The label associated with the resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,13 +44,13 @@ namespace Oci.CimsService.Models
         public string Label { get; set; }
 
         /// <value>
-        /// Details of Incident Type
+        /// The description of the resource.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <value>
-        /// Service Category List
+        /// The service category list.
         /// </value>
         [JsonProperty(PropertyName = "serviceCategoryList")]
         public System.Collections.Generic.List<ServiceCategory> ServiceCategoryList { get; set; }

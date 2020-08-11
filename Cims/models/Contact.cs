@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Contact Details of the Customer
+    /// Contact details for the customer.
     /// </summary>
     public class Contact 
     {
         
         /// <value>
-        /// Contact person name
+        /// The name of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactName")]
         public string ContactName { get; set; }
 
         /// <value>
-        /// Contact person email
+        /// The email of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactEmail")]
         public string ContactEmail { get; set; }
 
         /// <value>
-        /// Contact person phone number
+        /// The phone number of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactPhone")]
         public string ContactPhone { get; set; }
         ///
         /// <value>
-        /// ContactType enum. eg: MANAGER, PRIMARY
+        /// The type of contact, such as primary or alternate.
         /// </value>
         ///
         public enum ContactTypeEnum {
@@ -57,7 +57,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// ContactType enum. eg: MANAGER, PRIMARY
+        /// The type of contact, such as primary or alternate.
         /// </value>
         [JsonProperty(PropertyName = "contactType")]
         [JsonConverter(typeof(StringEnumConverter))]

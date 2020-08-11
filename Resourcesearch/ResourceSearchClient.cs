@@ -90,6 +90,7 @@ namespace Oci.ResourcesearchService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetResourceTypeResponse>(responseMessage);
             }
@@ -128,6 +129,7 @@ namespace Oci.ResourcesearchService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListResourceTypesResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.ResourcesearchService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SearchResourcesResponse>(responseMessage);
             }

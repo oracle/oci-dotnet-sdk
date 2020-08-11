@@ -16,37 +16,37 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of incident type
+    /// Details about the incident type object.
     /// </summary>
     public class IncidentType 
     {
         
         /// <value>
-        /// Unique ID that identifies an Incident Type
+        /// Unique identifier for the incident type.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <value>
-        /// Name of Incident type
+        /// The name of the incident type.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Label associated with Incident Type
+        /// The label associated with the incident type.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
 
         /// <value>
-        /// Details of Incident Type
+        /// The description of the incident type.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <value>
-        /// List of classifiers
+        /// The list of classifiers.
         /// </value>
         [JsonProperty(PropertyName = "classifierList")]
         public System.Collections.Generic.List<Classifier> ClassifierList { get; set; }

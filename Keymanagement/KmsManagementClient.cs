@@ -88,6 +88,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BackupKeyResponse>(responseMessage);
             }
@@ -133,6 +134,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelKeyDeletionResponse>(responseMessage);
             }
@@ -178,6 +180,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelKeyVersionDeletionResponse>(responseMessage);
             }
@@ -224,6 +227,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeKeyCompartmentResponse>(responseMessage);
             }
@@ -267,6 +271,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateKeyResponse>(responseMessage);
             }
@@ -311,6 +316,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateKeyVersionResponse>(responseMessage);
             }
@@ -355,6 +361,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DisableKeyResponse>(responseMessage);
             }
@@ -399,6 +406,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<EnableKeyResponse>(responseMessage);
             }
@@ -442,6 +450,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetKeyResponse>(responseMessage);
             }
@@ -485,6 +494,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetKeyVersionResponse>(responseMessage);
             }
@@ -524,6 +534,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWrappingKeyResponse>(responseMessage);
             }
@@ -564,6 +575,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ImportKeyResponse>(responseMessage);
             }
@@ -606,6 +618,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ImportKeyVersionResponse>(responseMessage);
             }
@@ -650,6 +663,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListKeyVersionsResponse>(responseMessage);
             }
@@ -693,6 +707,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListKeysResponse>(responseMessage);
             }
@@ -733,6 +748,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreKeyFromFileResponse>(responseMessage);
             }
@@ -773,6 +789,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreKeyFromObjectStoreResponse>(responseMessage);
             }
@@ -817,6 +834,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScheduleKeyDeletionResponse>(responseMessage);
             }
@@ -861,6 +879,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScheduleKeyVersionDeletionResponse>(responseMessage);
             }
@@ -906,6 +925,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateKeyResponse>(responseMessage);
             }

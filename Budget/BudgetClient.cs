@@ -93,6 +93,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAlertRuleResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBudgetResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAlertRuleResponse>(responseMessage);
             }
@@ -205,6 +208,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBudgetResponse>(responseMessage);
             }
@@ -242,6 +246,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAlertRuleResponse>(responseMessage);
             }
@@ -279,6 +284,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBudgetResponse>(responseMessage);
             }
@@ -317,6 +323,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAlertRulesResponse>(responseMessage);
             }
@@ -364,6 +371,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBudgetsResponse>(responseMessage);
             }
@@ -401,6 +409,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAlertRuleResponse>(responseMessage);
             }
@@ -438,6 +447,7 @@ namespace Oci.BudgetService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBudgetResponse>(responseMessage);
             }

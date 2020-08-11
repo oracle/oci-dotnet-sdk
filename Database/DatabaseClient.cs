@@ -92,6 +92,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ActivateExadataInfrastructureResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAutonomousContainerDatabaseCompartmentResponse>(responseMessage);
             }
@@ -172,6 +174,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAutonomousDatabaseCompartmentResponse>(responseMessage);
             }
@@ -212,6 +215,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAutonomousExadataInfrastructureCompartmentResponse>(responseMessage);
             }
@@ -251,6 +255,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAutonomousVmClusterCompartmentResponse>(responseMessage);
             }
@@ -291,6 +296,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeBackupDestinationCompartmentResponse>(responseMessage);
             }
@@ -331,6 +337,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeDbSystemCompartmentResponse>(responseMessage);
             }
@@ -370,6 +377,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeExadataInfrastructureCompartmentResponse>(responseMessage);
             }
@@ -409,6 +417,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVmClusterCompartmentResponse>(responseMessage);
             }
@@ -449,6 +458,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CompleteExternalBackupJobResponse>(responseMessage);
             }
@@ -487,6 +497,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousContainerDatabaseResponse>(responseMessage);
             }
@@ -525,6 +536,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -563,6 +575,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousDataWarehouseBackupResponse>(responseMessage);
             }
@@ -601,6 +614,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousDatabaseResponse>(responseMessage);
             }
@@ -639,6 +653,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousDatabaseBackupResponse>(responseMessage);
             }
@@ -677,6 +692,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutonomousVmClusterResponse>(responseMessage);
             }
@@ -715,6 +731,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBackupResponse>(responseMessage);
             }
@@ -753,6 +770,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateBackupDestinationResponse>(responseMessage);
             }
@@ -793,6 +811,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConsoleConnectionResponse>(responseMessage);
             }
@@ -838,6 +857,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataGuardAssociationResponse>(responseMessage);
             }
@@ -876,6 +896,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDatabaseResponse>(responseMessage);
             }
@@ -914,6 +935,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDbHomeResponse>(responseMessage);
             }
@@ -951,6 +973,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateExadataInfrastructureResponse>(responseMessage);
             }
@@ -991,6 +1014,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateExternalBackupJobResponse>(responseMessage);
             }
@@ -1029,6 +1053,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVmClusterResponse>(responseMessage);
             }
@@ -1067,6 +1092,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVmClusterNetworkResponse>(responseMessage);
             }
@@ -1117,6 +1143,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DbNodeActionResponse>(responseMessage);
             }
@@ -1155,6 +1182,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -1193,6 +1221,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAutonomousDatabaseResponse>(responseMessage);
             }
@@ -1231,6 +1260,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAutonomousVmClusterResponse>(responseMessage);
             }
@@ -1268,6 +1298,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBackupResponse>(responseMessage);
             }
@@ -1306,6 +1337,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteBackupDestinationResponse>(responseMessage);
             }
@@ -1343,6 +1375,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConsoleConnectionResponse>(responseMessage);
             }
@@ -1383,6 +1416,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDatabaseResponse>(responseMessage);
             }
@@ -1423,6 +1457,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDbHomeResponse>(responseMessage);
             }
@@ -1461,6 +1496,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteExadataInfrastructureResponse>(responseMessage);
             }
@@ -1499,6 +1535,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVmClusterResponse>(responseMessage);
             }
@@ -1537,6 +1574,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVmClusterNetworkResponse>(responseMessage);
             }
@@ -1575,6 +1613,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeregisterAutonomousDatabaseDataSafeResponse>(responseMessage);
             }
@@ -1613,6 +1652,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DownloadExadataInfrastructureConfigFileResponse>(responseMessage);
             }
@@ -1651,6 +1691,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DownloadVmClusterNetworkConfigFileResponse>(responseMessage);
             }
@@ -1689,6 +1730,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<FailOverAutonomousDatabaseResponse>(responseMessage);
             }
@@ -1731,6 +1773,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<FailoverDataGuardAssociationResponse>(responseMessage);
             }
@@ -1769,6 +1812,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GenerateAutonomousDataWarehouseWalletResponse>(responseMessage);
             }
@@ -1807,6 +1851,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GenerateAutonomousDatabaseWalletResponse>(responseMessage);
             }
@@ -1845,6 +1890,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GenerateRecommendedVmClusterNetworkResponse>(responseMessage);
             }
@@ -1882,6 +1928,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousContainerDatabaseResponse>(responseMessage);
             }
@@ -1920,6 +1967,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -1958,6 +2006,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDataWarehouseBackupResponse>(responseMessage);
             }
@@ -1996,6 +2045,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDatabaseResponse>(responseMessage);
             }
@@ -2033,6 +2083,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDatabaseBackupResponse>(responseMessage);
             }
@@ -2071,6 +2122,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDatabaseRegionalWalletResponse>(responseMessage);
             }
@@ -2109,6 +2161,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousDatabaseWalletResponse>(responseMessage);
             }
@@ -2146,6 +2199,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousExadataInfrastructureResponse>(responseMessage);
             }
@@ -2183,6 +2237,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutonomousVmClusterResponse>(responseMessage);
             }
@@ -2220,6 +2275,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackupResponse>(responseMessage);
             }
@@ -2258,6 +2314,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBackupDestinationResponse>(responseMessage);
             }
@@ -2295,6 +2352,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConsoleConnectionResponse>(responseMessage);
             }
@@ -2333,6 +2391,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataGuardAssociationResponse>(responseMessage);
             }
@@ -2370,6 +2429,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDatabaseResponse>(responseMessage);
             }
@@ -2407,6 +2467,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbHomeResponse>(responseMessage);
             }
@@ -2445,6 +2506,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbHomePatchResponse>(responseMessage);
             }
@@ -2483,6 +2545,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbHomePatchHistoryEntryResponse>(responseMessage);
             }
@@ -2520,6 +2583,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbNodeResponse>(responseMessage);
             }
@@ -2557,6 +2621,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbSystemResponse>(responseMessage);
             }
@@ -2595,6 +2660,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbSystemPatchResponse>(responseMessage);
             }
@@ -2633,6 +2699,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbSystemPatchHistoryEntryResponse>(responseMessage);
             }
@@ -2670,6 +2737,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExadataInfrastructureResponse>(responseMessage);
             }
@@ -2708,6 +2776,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExadataInfrastructureOcpusResponse>(responseMessage);
             }
@@ -2747,6 +2816,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExadataIormConfigResponse>(responseMessage);
             }
@@ -2787,6 +2857,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExternalBackupJobResponse>(responseMessage);
             }
@@ -2824,6 +2895,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetMaintenanceRunResponse>(responseMessage);
             }
@@ -2861,6 +2933,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVmClusterResponse>(responseMessage);
             }
@@ -2898,6 +2971,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVmClusterNetworkResponse>(responseMessage);
             }
@@ -2936,6 +3010,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVmClusterPatchResponse>(responseMessage);
             }
@@ -2974,6 +3049,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVmClusterPatchHistoryEntryResponse>(responseMessage);
             }
@@ -3012,6 +3088,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<LaunchAutonomousExadataInfrastructureResponse>(responseMessage);
             }
@@ -3057,6 +3134,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<LaunchDbSystemResponse>(responseMessage);
             }
@@ -3095,6 +3173,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousContainerDatabasesResponse>(responseMessage);
             }
@@ -3133,6 +3212,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDataWarehouseBackupsResponse>(responseMessage);
             }
@@ -3171,6 +3251,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDataWarehousesResponse>(responseMessage);
             }
@@ -3209,6 +3290,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDatabaseBackupsResponse>(responseMessage);
             }
@@ -3247,6 +3329,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDatabasesResponse>(responseMessage);
             }
@@ -3286,6 +3369,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDbPreviewVersionsResponse>(responseMessage);
             }
@@ -3323,6 +3407,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousDbVersionsResponse>(responseMessage);
             }
@@ -3360,6 +3445,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousExadataInfrastructureShapesResponse>(responseMessage);
             }
@@ -3398,6 +3484,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousExadataInfrastructuresResponse>(responseMessage);
             }
@@ -3436,6 +3523,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutonomousVmClustersResponse>(responseMessage);
             }
@@ -3474,6 +3562,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBackupDestinationResponse>(responseMessage);
             }
@@ -3512,6 +3601,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBackupsResponse>(responseMessage);
             }
@@ -3550,6 +3640,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConsoleConnectionsResponse>(responseMessage);
             }
@@ -3588,6 +3679,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataGuardAssociationsResponse>(responseMessage);
             }
@@ -3626,6 +3718,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDatabasesResponse>(responseMessage);
             }
@@ -3664,6 +3757,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbHomePatchHistoryEntriesResponse>(responseMessage);
             }
@@ -3702,6 +3796,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbHomePatchesResponse>(responseMessage);
             }
@@ -3740,6 +3835,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbHomesResponse>(responseMessage);
             }
@@ -3778,6 +3874,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbNodesResponse>(responseMessage);
             }
@@ -3816,6 +3913,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbSystemPatchHistoryEntriesResponse>(responseMessage);
             }
@@ -3854,6 +3952,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbSystemPatchesResponse>(responseMessage);
             }
@@ -3891,6 +3990,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbSystemShapesResponse>(responseMessage);
             }
@@ -3929,6 +4029,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbSystemsResponse>(responseMessage);
             }
@@ -3966,6 +4067,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbVersionsResponse>(responseMessage);
             }
@@ -4004,6 +4106,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListExadataInfrastructuresResponse>(responseMessage);
             }
@@ -4041,6 +4144,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListGiVersionsResponse>(responseMessage);
             }
@@ -4079,6 +4183,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMaintenanceRunsResponse>(responseMessage);
             }
@@ -4117,6 +4222,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVmClusterNetworksResponse>(responseMessage);
             }
@@ -4155,6 +4261,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVmClusterPatchHistoryEntriesResponse>(responseMessage);
             }
@@ -4193,6 +4300,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVmClusterPatchesResponse>(responseMessage);
             }
@@ -4231,6 +4339,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVmClustersResponse>(responseMessage);
             }
@@ -4269,6 +4378,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RegisterAutonomousDatabaseDataSafeResponse>(responseMessage);
             }
@@ -4307,6 +4417,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ReinstateDataGuardAssociationResponse>(responseMessage);
             }
@@ -4345,6 +4456,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestartAutonomousContainerDatabaseResponse>(responseMessage);
             }
@@ -4383,6 +4495,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestartAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4421,6 +4534,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -4459,6 +4573,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4497,6 +4612,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestoreDatabaseResponse>(responseMessage);
             }
@@ -4535,6 +4651,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -4573,6 +4690,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4611,6 +4729,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -4649,6 +4768,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4687,6 +4807,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SwitchoverAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4728,6 +4849,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SwitchoverDataGuardAssociationResponse>(responseMessage);
             }
@@ -4765,6 +4887,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateAutonomousContainerDatabaseResponse>(responseMessage);
             }
@@ -4802,6 +4925,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateAutonomousExadataInfrastructureResponse>(responseMessage);
             }
@@ -4839,6 +4963,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateDbSystemResponse>(responseMessage);
             }
@@ -4876,6 +5001,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousContainerDatabaseResponse>(responseMessage);
             }
@@ -4914,6 +5040,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousDataWarehouseResponse>(responseMessage);
             }
@@ -4952,6 +5079,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousDatabaseResponse>(responseMessage);
             }
@@ -4990,6 +5118,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousDatabaseRegionalWalletResponse>(responseMessage);
             }
@@ -5028,6 +5157,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousDatabaseWalletResponse>(responseMessage);
             }
@@ -5065,6 +5195,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousExadataInfrastructureResponse>(responseMessage);
             }
@@ -5103,6 +5234,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutonomousVmClusterResponse>(responseMessage);
             }
@@ -5143,6 +5275,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateBackupDestinationResponse>(responseMessage);
             }
@@ -5181,6 +5314,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDatabaseResponse>(responseMessage);
             }
@@ -5218,6 +5352,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDbHomeResponse>(responseMessage);
             }
@@ -5255,6 +5390,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDbSystemResponse>(responseMessage);
             }
@@ -5293,6 +5429,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateExadataInfrastructureResponse>(responseMessage);
             }
@@ -5331,6 +5468,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateExadataIormConfigResponse>(responseMessage);
             }
@@ -5368,6 +5506,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateMaintenanceRunResponse>(responseMessage);
             }
@@ -5406,6 +5545,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVmClusterResponse>(responseMessage);
             }
@@ -5444,6 +5584,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVmClusterNetworkResponse>(responseMessage);
             }
@@ -5482,6 +5623,7 @@ namespace Oci.DatabaseService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ValidateVmClusterNetworkResponse>(responseMessage);
             }

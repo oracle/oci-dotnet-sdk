@@ -17,7 +17,7 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// Customer Support Identifier of the support account
+        /// The Customer Support Identifier associated with the support account.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.CimsService.Requests
         public string Csi { get; set; }
         
         /// <value>
-        /// Tenancy Ocid
+        /// The OCID of the tenancy.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.CimsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User OCID for IDCS users that have a shadow in OCI
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,39 +47,53 @@ namespace Oci.CimsService.Requests
         public string Ocid { get; set; }
         
         /// <value>
-        /// Limit query for number of returned results
+        /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call. For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The key to sort the returned items by
+        /// The key to use to sort the returned items.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortBy> SortBy { get; set; }
         
         /// <value>
-        /// The order in which to sort the results
+        /// The order to sort the results in.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The order in which to sort the results
+        /// The current state of the ticket.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// Pagination for Incident list
+        /// For list pagination. The value of the `opc-next-page` response header from the previous \"List\" call. For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
         
         /// <value>
-        /// Unique Header for request id
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The region of the tenancy.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
+        public string Homeregion { get; set; }
+        
+        /// <value>
+        /// The kind of support request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "problemType")]
+        public string ProblemType { get; set; }
     }
 }

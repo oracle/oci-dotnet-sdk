@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Activity Item
+    /// Details about the ActivityItem object.
     /// </summary>
     public class ActivityItem : Item
     {
         
         /// <value>
-        /// Comments to update as part of Activity
+        /// Comments added with the activity on the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "comments")]
         public string Comments { get; set; }
 
         /// <value>
-        /// Epoch time when activity was created
+        /// The time when the activity was created, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<int> TimeCreated { get; set; }
 
         /// <value>
-        /// Epoch time when activity was updated
+        /// The time when the activity was updated, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<int> TimeUpdated { get; set; }
         ///
         /// <value>
-        /// Type of activity. eg: NOTES, UPDATE
+        /// The type of activity occuring on the support ticket.
         /// </value>
         ///
         public enum ActivityTypeEnum {
@@ -55,14 +55,14 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Type of activity. eg: NOTES, UPDATE
+        /// The type of activity occuring on the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "activityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActivityTypeEnum> ActivityType { get; set; }
         ///
         /// <value>
-        /// Person who updates the activity
+        /// The person who updates the activity on the support ticket.
         /// </value>
         ///
         public enum ActivityAuthorEnum {
@@ -73,7 +73,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Person who updates the activity
+        /// The person who updates the activity on the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "activityAuthor")]
         [JsonConverter(typeof(StringEnumConverter))]

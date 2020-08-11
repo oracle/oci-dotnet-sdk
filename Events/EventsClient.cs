@@ -94,6 +94,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeRuleCompartmentResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRuleResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRuleResponse>(responseMessage);
             }
@@ -206,6 +209,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRuleResponse>(responseMessage);
             }
@@ -244,6 +248,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRulesResponse>(responseMessage);
             }
@@ -282,6 +287,7 @@ namespace Oci.EventsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRuleResponse>(responseMessage);
             }

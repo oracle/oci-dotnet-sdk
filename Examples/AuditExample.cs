@@ -85,7 +85,7 @@ namespace Oci.Examples
                 // Change the region to US_ASHBURN_1 using SetRegion Call
                 // We cannot use the same client to change the region. See:
                 // https://stackoverflow.com/questions/51478525/httpclient-this-instance-has-already-started-one-or-more-requests-properties-ca
-                using(client = new AuditClient(provider, new ClientConfiguration()))
+                using (client = new AuditClient(provider, new ClientConfiguration()))
                 {
                     client.SetRegion(Region.US_ASHBURN_1);
                     logger.Info("Changing region to US_ASHBURN_1");
@@ -142,7 +142,7 @@ namespace Oci.Examples
             logger.Info("Starting RetryExample");
             try
             {
-                return await client.ListEvents(request, new RetryConfiguration { MaxAttempts = 5, RetryableStatusCodeFamilies = new List<int> { 4, 5 } });
+                return await client.ListEvents(request, new RetryConfiguration { MaxAttempts = 5 });
             }
             catch (Exception e)
             {

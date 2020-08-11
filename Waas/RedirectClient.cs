@@ -92,6 +92,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeHttpRedirectCompartmentResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateHttpRedirectResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteHttpRedirectResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetHttpRedirectResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListHttpRedirectsResponse>(responseMessage);
             }
@@ -277,6 +282,7 @@ namespace Oci.WaasService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateHttpRedirectResponse>(responseMessage);
             }
