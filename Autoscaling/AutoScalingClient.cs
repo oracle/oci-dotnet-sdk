@@ -95,6 +95,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeAutoScalingConfigurationCompartmentResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutoScalingConfigurationResponse>(responseMessage);
             }
@@ -170,6 +172,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAutoScalingPolicyResponse>(responseMessage);
             }
@@ -207,6 +210,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAutoScalingConfigurationResponse>(responseMessage);
             }
@@ -244,6 +248,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAutoScalingPolicyResponse>(responseMessage);
             }
@@ -281,6 +286,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutoScalingConfigurationResponse>(responseMessage);
             }
@@ -318,6 +324,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAutoScalingPolicyResponse>(responseMessage);
             }
@@ -356,6 +363,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutoScalingConfigurationsResponse>(responseMessage);
             }
@@ -394,6 +402,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAutoScalingPoliciesResponse>(responseMessage);
             }
@@ -433,6 +442,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutoScalingConfigurationResponse>(responseMessage);
             }
@@ -470,6 +480,7 @@ namespace Oci.AutoscalingService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAutoScalingPolicyResponse>(responseMessage);
             }

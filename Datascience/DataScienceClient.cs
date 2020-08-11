@@ -92,6 +92,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ActivateModelResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ActivateNotebookSessionResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelWorkRequestResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeModelCompartmentResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeNotebookSessionCompartmentResponse>(responseMessage);
             }
@@ -277,6 +282,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeProjectCompartmentResponse>(responseMessage);
             }
@@ -314,6 +320,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateModelResponse>(responseMessage);
             }
@@ -352,6 +359,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateModelArtifactResponse>(responseMessage);
             }
@@ -389,6 +397,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateModelProvenanceResponse>(responseMessage);
             }
@@ -426,6 +435,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateNotebookSessionResponse>(responseMessage);
             }
@@ -463,6 +473,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateProjectResponse>(responseMessage);
             }
@@ -500,6 +511,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeactivateModelResponse>(responseMessage);
             }
@@ -537,6 +549,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeactivateNotebookSessionResponse>(responseMessage);
             }
@@ -574,6 +587,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteModelResponse>(responseMessage);
             }
@@ -611,6 +625,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteNotebookSessionResponse>(responseMessage);
             }
@@ -648,6 +663,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteProjectResponse>(responseMessage);
             }
@@ -685,6 +701,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetModelResponse>(responseMessage);
             }
@@ -722,6 +739,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetModelArtifactContentResponse>(responseMessage);
             }
@@ -759,6 +777,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetModelProvenanceResponse>(responseMessage);
             }
@@ -796,6 +815,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNotebookSessionResponse>(responseMessage);
             }
@@ -833,6 +853,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetProjectResponse>(responseMessage);
             }
@@ -870,6 +891,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -907,6 +929,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<HeadModelArtifactResponse>(responseMessage);
             }
@@ -944,6 +967,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListModelsResponse>(responseMessage);
             }
@@ -981,6 +1005,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNotebookSessionShapesResponse>(responseMessage);
             }
@@ -1018,6 +1043,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNotebookSessionsResponse>(responseMessage);
             }
@@ -1055,6 +1081,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListProjectsResponse>(responseMessage);
             }
@@ -1092,6 +1119,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -1129,6 +1157,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -1166,6 +1195,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -1203,6 +1233,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateModelResponse>(responseMessage);
             }
@@ -1240,6 +1271,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateModelProvenanceResponse>(responseMessage);
             }
@@ -1280,6 +1312,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNotebookSessionResponse>(responseMessage);
             }
@@ -1317,6 +1350,7 @@ namespace Oci.DatascienceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateProjectResponse>(responseMessage);
             }

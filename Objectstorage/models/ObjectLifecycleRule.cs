@@ -35,9 +35,16 @@ namespace Oci.ObjectstorageService.Models
         public string Name { get; set; }
 
         /// <value>
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "target")]
+        public string Target { get; set; }
+
+        /// <value>
         /// The action of the object lifecycle policy rule. Rules using the action 'ARCHIVE' move objects into the
         /// [Archive Storage tier](https://docs.cloud.oracle.com/Content/Archive/Concepts/archivestorageoverview.htm). Rules using the action
-        /// 'DELETE' permanently delete objects from buckets. 'ARCHIVE' and 'DELETE' are the only two supported
+        /// 'DELETE' permanently delete objects from buckets. Rules using 'ABORT' abort the uncommitted multipart-uploads
+        /// and permanently delete their parts from buckets. 'ARCHIVE', 'DELETE' and 'ABORT' are the only three supported
         /// actions at this time.
         /// 
         /// </value>

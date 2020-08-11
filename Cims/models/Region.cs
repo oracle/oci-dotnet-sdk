@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Available OCI Regions supported by CIMS. eg: PHX, IAD
+  /// The available Oracle Cloud Infrastructure regions supported by the Support Management API.
   /// </summary>
   public enum Region {
       [EnumMember(Value = "DEV")]
@@ -38,22 +38,12 @@ namespace Oci.CimsService.Models
       Yyz,
       [EnumMember(Value = "NRT")]
       Nrt,
-      [EnumMember(Value = "US_LANGLEY_1")]
-      UsLangley1,
-      [EnumMember(Value = "US_LUKE_1")]
-      UsLuke1,
       [EnumMember(Value = "ICN")]
       Icn,
       [EnumMember(Value = "BOM")]
       Bom,
       [EnumMember(Value = "GRU")]
       Gru,
-      [EnumMember(Value = "US_GOV_ASHBURN_1")]
-      UsGovAshburn1,
-      [EnumMember(Value = "US_GOV_PHOENIX_1")]
-      UsGovPhoenix1,
-      [EnumMember(Value = "US_GOV_CHICAGO_1")]
-      UsGovChicago1,
       [EnumMember(Value = "SYD")]
       Syd,
       [EnumMember(Value = "ZRH")]
@@ -71,8 +61,6 @@ namespace Oci.CimsService.Models
       [EnumMember(Value = "HYD")]
       Hyd,
       [EnumMember(Value = "YNY")]
-      Yny,
-      [EnumMember(Value = "TIW")]
-      Tiw
+      Yny
   }
 }

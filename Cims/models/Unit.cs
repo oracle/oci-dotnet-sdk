@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Unit to measure Service category/resource
+  /// The unit to use to measure the service category or resource.
   /// </summary>
   public enum Unit {
       [EnumMember(Value = "COUNT")]

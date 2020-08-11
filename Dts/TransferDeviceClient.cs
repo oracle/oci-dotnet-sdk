@@ -89,6 +89,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTransferDeviceResponse>(responseMessage);
             }
@@ -126,6 +127,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTransferDeviceResponse>(responseMessage);
             }
@@ -163,6 +165,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferDeviceResponse>(responseMessage);
             }
@@ -200,6 +203,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTransferDevicesResponse>(responseMessage);
             }
@@ -237,6 +241,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTransferDeviceResponse>(responseMessage);
             }

@@ -180,8 +180,7 @@ namespace Oci.Examples
             };
             CreateFileSystemResponse createResponse = await fsClient.CreateFileSystem(createRequest, new RetryConfiguration
             {
-                MaxAttempts = 5,
-                RetryableStatusCodeFamilies = new List<int> { 5 }
+                MaxAttempts = 5
             });
             logger.Info($"Created file system: {createResponse.FileSystem.DisplayName}");
 
@@ -230,8 +229,7 @@ namespace Oci.Examples
             };
             var retryConfiguration = new RetryConfiguration
             {
-                MaxAttempts = 5,
-                RetryableStatusCodeFamilies = new List<int> { 5 }
+                MaxAttempts = 5
             };
             CreateMountTargetResponse createResponse = await fsClient.CreateMountTarget(createRequest, retryConfiguration);
             logger.Info($"Created Mount target: {createResponse.MountTarget.DisplayName}");
@@ -304,8 +302,7 @@ namespace Oci.Examples
             CreateExportResponse createResponse = await fsClient.CreateExport(createExportRequest,
                 new RetryConfiguration
                 {
-                    MaxAttempts = 5,
-                    RetryableStatusCodeFamilies = new List<int> { 5 }
+                    MaxAttempts = 5
                 });
             logger.Info($"Created Export");
 
@@ -601,9 +598,7 @@ namespace Oci.Examples
             };
             RetryConfiguration retryConfiguration = new RetryConfiguration
             {
-                MaxAttempts = 5,
-                RetryableStatusCodeFamilies = new List<int> { 5 },
-                RetryableStatusCodes = new List<int> { 409 }
+                MaxAttempts = 5
             };
             await virtualNetworkClient.DeleteSubnet(deleteSubnetRequest, retryConfiguration);
 

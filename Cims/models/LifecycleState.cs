@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// Provides the current status of the ticket
+  /// The current state of the ticket.
   /// </summary>
   public enum LifecycleState {
       [EnumMember(Value = "ACTIVE")]

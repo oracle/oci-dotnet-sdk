@@ -93,6 +93,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDbSystemResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDbSystemResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDbSystemResponse>(responseMessage);
             }
@@ -208,6 +211,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDbSystemsResponse>(responseMessage);
             }
@@ -245,6 +249,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RestartDbSystemResponse>(responseMessage);
             }
@@ -282,6 +287,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartDbSystemResponse>(responseMessage);
             }
@@ -322,6 +328,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopDbSystemResponse>(responseMessage);
             }
@@ -367,6 +374,7 @@ namespace Oci.MysqlService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDbSystemResponse>(responseMessage);
             }

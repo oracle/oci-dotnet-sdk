@@ -16,24 +16,17 @@ namespace Oci.CimsService.Responses
     {
 
         /// <value>
-        /// OPC Request Id
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
 
         /// <value>
-        /// OPC next page
+        /// For list pagination. When this header appears in the response, additional pages of results remain. For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
-
-
-        /// <value>
-        /// e-Tag
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
 
         /// <value>
         /// A list of IncidentResourceType instances.

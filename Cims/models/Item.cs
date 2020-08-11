@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Item
+    /// Details about the item object.
     /// </summary>
     [JsonConverter(typeof(ItemModelConverter))]
     public class Item 
     {
         
         /// <value>
-        /// Unique ID that identifies an Item
+        /// Unique identifier for the item.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.CimsService.Models
         public string ItemKey { get; set; }
 
         /// <value>
-        /// Name of item
+        /// The display name of the item.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Type of item. eg: ActivityItem, LimitItem
+        /// The type of the support request.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }

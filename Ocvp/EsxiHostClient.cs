@@ -98,6 +98,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateEsxiHostResponse>(responseMessage);
             }
@@ -149,6 +150,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteEsxiHostResponse>(responseMessage);
             }
@@ -186,6 +188,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetEsxiHostResponse>(responseMessage);
             }
@@ -232,6 +235,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListEsxiHostsResponse>(responseMessage);
             }
@@ -269,6 +273,7 @@ namespace Oci.OcvpService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateEsxiHostResponse>(responseMessage);
             }

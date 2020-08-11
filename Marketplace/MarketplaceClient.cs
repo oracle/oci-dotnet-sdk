@@ -91,6 +91,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAcceptedAgreementResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAcceptedAgreementResponse>(responseMessage);
             }
@@ -169,6 +171,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAcceptedAgreementResponse>(responseMessage);
             }
@@ -208,6 +211,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAgreementResponse>(responseMessage);
             }
@@ -260,6 +264,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetListingResponse>(responseMessage);
             }
@@ -311,6 +316,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPackageResponse>(responseMessage);
             }
@@ -350,6 +356,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAcceptedAgreementsResponse>(responseMessage);
             }
@@ -388,6 +395,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAgreementsResponse>(responseMessage);
             }
@@ -427,6 +435,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCategoriesResponse>(responseMessage);
             }
@@ -479,6 +488,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListListingsResponse>(responseMessage);
             }
@@ -530,6 +540,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPackagesResponse>(responseMessage);
             }
@@ -568,6 +579,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPublishersResponse>(responseMessage);
             }
@@ -605,6 +617,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListReportTypesResponse>(responseMessage);
             }
@@ -642,6 +655,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListReportsResponse>(responseMessage);
             }
@@ -680,6 +694,7 @@ namespace Oci.MarketplaceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateAcceptedAgreementResponse>(responseMessage);
             }

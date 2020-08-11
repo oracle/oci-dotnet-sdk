@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Ticket created
+    /// Details relevant to the support ticket.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     public class CreateTicketDetails 
     {
                 ///
         /// <value>
-        /// Severity of the ticket. eg: HIGH, MEDIUM
+        /// The severity of the support ticket.
         /// </value>
         ///
         public enum SeverityEnum {
@@ -35,7 +38,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Severity of the ticket. eg: HIGH, MEDIUM
+        /// The severity of the support ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,13 +49,13 @@ namespace Oci.CimsService.Models
         public System.Nullable<SeverityEnum> Severity { get; set; }
 
         /// <value>
-        /// List of resources
+        /// The list of resources.
         /// </value>
         [JsonProperty(PropertyName = "resourceList")]
         public System.Collections.Generic.List<CreateResourceDetails> ResourceList { get; set; }
 
         /// <value>
-        /// Title of ticket
+        /// The title of the support ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +65,7 @@ namespace Oci.CimsService.Models
         public string Title { get; set; }
 
         /// <value>
-        /// Details of ticket
+        /// The description of the support ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,5 +73,11 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+
+        /// <value>
+        /// The context from where the ticket is getting created.
+        /// </value>
+        [JsonProperty(PropertyName = "contextualData")]
+        public ContextualData ContextualData { get; set; }
     }
 }

@@ -95,6 +95,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelSecretDeletionResponse>(responseMessage);
             }
@@ -132,6 +133,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CancelSecretVersionDeletionResponse>(responseMessage);
             }
@@ -173,6 +175,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSecretCompartmentResponse>(responseMessage);
             }
@@ -213,6 +216,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSecretResponse>(responseMessage);
             }
@@ -250,6 +254,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSecretResponse>(responseMessage);
             }
@@ -288,6 +293,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSecretVersionResponse>(responseMessage);
             }
@@ -325,6 +331,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSecretVersionsResponse>(responseMessage);
             }
@@ -362,6 +369,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSecretsResponse>(responseMessage);
             }
@@ -401,6 +409,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScheduleSecretDeletionResponse>(responseMessage);
             }
@@ -440,6 +449,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ScheduleSecretVersionDeletionResponse>(responseMessage);
             }
@@ -483,6 +493,7 @@ namespace Oci.VaultService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSecretResponse>(responseMessage);
             }

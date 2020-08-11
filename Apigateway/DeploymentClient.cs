@@ -92,6 +92,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeDeploymentCompartmentResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDeploymentResponse>(responseMessage);
             }
@@ -167,6 +169,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDeploymentResponse>(responseMessage);
             }
@@ -204,6 +207,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDeploymentResponse>(responseMessage);
             }
@@ -242,6 +246,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDeploymentsResponse>(responseMessage);
             }
@@ -279,6 +284,7 @@ namespace Oci.ApigatewayService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDeploymentResponse>(responseMessage);
             }

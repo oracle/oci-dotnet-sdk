@@ -49,6 +49,16 @@ namespace Oci.CimsService.Models
       [EnumMember(Value = "EXTERNAL_SERVICE_PROVIDER_TIMEOUT")]
       ExternalServiceProviderTimeout,
       [EnumMember(Value = "TOO_MANY_REQUESTS")]
-      TooManyRequests
+      TooManyRequests,
+      [EnumMember(Value = "IDP_SCIM_NOT_SETUP")]
+      IdpScimNotSetup,
+      [EnumMember(Value = "INCIDENT_NOT_FOUND")]
+      IncidentNotFound,
+      [EnumMember(Value = "INVALID_USER_CSI")]
+      InvalidUserCsi,
+      [EnumMember(Value = "DATA_ALREADY_EXISTS")]
+      DataAlreadyExists,
+      [EnumMember(Value = "AUTH_USER_NOT_MATCHING")]
+      AuthUserNotMatching
   }
 }

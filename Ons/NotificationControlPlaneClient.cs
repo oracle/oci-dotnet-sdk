@@ -94,6 +94,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeTopicCompartmentResponse>(responseMessage);
             }
@@ -145,6 +146,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTopicResponse>(responseMessage);
             }
@@ -185,6 +187,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTopicResponse>(responseMessage);
             }
@@ -223,6 +226,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTopicResponse>(responseMessage);
             }
@@ -263,6 +267,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTopicsResponse>(responseMessage);
             }
@@ -303,6 +308,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTopicResponse>(responseMessage);
             }

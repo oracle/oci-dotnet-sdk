@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of TechSupport Item
+    /// Details about the TechSupportItem object.
     /// </summary>
     public class TechSupportItem : Item
     {

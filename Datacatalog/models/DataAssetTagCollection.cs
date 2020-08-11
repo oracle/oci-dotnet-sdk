@@ -23,6 +23,12 @@ namespace Oci.DatacatalogService.Models
     {
         
         /// <value>
+        /// Total number of items returned.
+        /// </value>
+        [JsonProperty(PropertyName = "count")]
+        public System.Nullable<int> Count { get; set; }
+
+        /// <value>
         /// Collection of data asset tags.
         /// </value>
         /// <remarks>

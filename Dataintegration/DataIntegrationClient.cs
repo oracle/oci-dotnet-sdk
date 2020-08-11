@@ -93,6 +93,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCompartmentResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateApplicationResponse>(responseMessage);
             }
@@ -168,6 +170,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConnectionResponse>(responseMessage);
             }
@@ -205,6 +208,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateConnectionValidationResponse>(responseMessage);
             }
@@ -242,6 +246,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataAssetResponse>(responseMessage);
             }
@@ -280,6 +285,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataFlowResponse>(responseMessage);
             }
@@ -318,6 +324,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDataFlowValidationResponse>(responseMessage);
             }
@@ -355,6 +362,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateEntityShapeResponse>(responseMessage);
             }
@@ -394,6 +402,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateFolderResponse>(responseMessage);
             }
@@ -431,6 +440,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePatchResponse>(responseMessage);
             }
@@ -469,6 +479,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateProjectResponse>(responseMessage);
             }
@@ -507,6 +518,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTaskResponse>(responseMessage);
             }
@@ -544,6 +556,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTaskRunResponse>(responseMessage);
             }
@@ -581,6 +594,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTaskValidationResponse>(responseMessage);
             }
@@ -619,6 +633,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateWorkspaceResponse>(responseMessage);
             }
@@ -656,6 +671,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteApplicationResponse>(responseMessage);
             }
@@ -693,6 +709,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConnectionResponse>(responseMessage);
             }
@@ -730,6 +747,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConnectionValidationResponse>(responseMessage);
             }
@@ -767,6 +785,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDataAssetResponse>(responseMessage);
             }
@@ -804,6 +823,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDataFlowResponse>(responseMessage);
             }
@@ -841,6 +861,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDataFlowValidationResponse>(responseMessage);
             }
@@ -878,6 +899,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteFolderResponse>(responseMessage);
             }
@@ -915,6 +937,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePatchResponse>(responseMessage);
             }
@@ -952,6 +975,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteProjectResponse>(responseMessage);
             }
@@ -989,6 +1013,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTaskResponse>(responseMessage);
             }
@@ -1026,6 +1051,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTaskRunResponse>(responseMessage);
             }
@@ -1064,6 +1090,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteTaskValidationResponse>(responseMessage);
             }
@@ -1101,6 +1128,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteWorkspaceResponse>(responseMessage);
             }
@@ -1138,6 +1166,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetApplicationResponse>(responseMessage);
             }
@@ -1175,6 +1204,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConnectionResponse>(responseMessage);
             }
@@ -1212,6 +1242,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConnectionValidationResponse>(responseMessage);
             }
@@ -1251,6 +1282,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCountStatisticResponse>(responseMessage);
             }
@@ -1288,6 +1320,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataAssetResponse>(responseMessage);
             }
@@ -1325,6 +1358,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataEntityResponse>(responseMessage);
             }
@@ -1362,6 +1396,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataFlowResponse>(responseMessage);
             }
@@ -1399,6 +1434,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDataFlowValidationResponse>(responseMessage);
             }
@@ -1436,6 +1472,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDependentObjectResponse>(responseMessage);
             }
@@ -1473,6 +1510,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFolderResponse>(responseMessage);
             }
@@ -1510,6 +1548,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPatchResponse>(responseMessage);
             }
@@ -1547,6 +1586,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetProjectResponse>(responseMessage);
             }
@@ -1584,6 +1624,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPublishedObjectResponse>(responseMessage);
             }
@@ -1621,6 +1662,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSchemaResponse>(responseMessage);
             }
@@ -1658,6 +1700,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTaskResponse>(responseMessage);
             }
@@ -1695,6 +1738,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTaskRunResponse>(responseMessage);
             }
@@ -1733,6 +1777,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTaskValidationResponse>(responseMessage);
             }
@@ -1770,6 +1815,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
             }
@@ -1807,6 +1853,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWorkspaceResponse>(responseMessage);
             }
@@ -1844,6 +1891,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListApplicationsResponse>(responseMessage);
             }
@@ -1881,6 +1929,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConnectionValidationsResponse>(responseMessage);
             }
@@ -1918,6 +1967,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConnectionsResponse>(responseMessage);
             }
@@ -1956,6 +2006,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataAssetsResponse>(responseMessage);
             }
@@ -1995,6 +2046,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataEntitiesResponse>(responseMessage);
             }
@@ -2032,6 +2084,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataFlowValidationsResponse>(responseMessage);
             }
@@ -2070,6 +2123,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDataFlowsResponse>(responseMessage);
             }
@@ -2107,6 +2161,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDependentObjectsResponse>(responseMessage);
             }
@@ -2145,6 +2200,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFoldersResponse>(responseMessage);
             }
@@ -2182,6 +2238,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPatchesResponse>(responseMessage);
             }
@@ -2220,6 +2277,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListProjectsResponse>(responseMessage);
             }
@@ -2257,6 +2315,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPublishedObjectsResponse>(responseMessage);
             }
@@ -2294,6 +2353,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSchemasResponse>(responseMessage);
             }
@@ -2331,6 +2391,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaskRunLogsResponse>(responseMessage);
             }
@@ -2368,6 +2429,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaskRunsResponse>(responseMessage);
             }
@@ -2406,6 +2468,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTaskValidationsResponse>(responseMessage);
             }
@@ -2444,6 +2507,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTasksResponse>(responseMessage);
             }
@@ -2482,6 +2546,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
             }
@@ -2520,6 +2585,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
             }
@@ -2558,6 +2624,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
             }
@@ -2596,6 +2663,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListWorkspacesResponse>(responseMessage);
             }
@@ -2634,6 +2702,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartWorkspaceResponse>(responseMessage);
             }
@@ -2672,6 +2741,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopWorkspaceResponse>(responseMessage);
             }
@@ -2709,6 +2779,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateApplicationResponse>(responseMessage);
             }
@@ -2746,6 +2817,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConnectionResponse>(responseMessage);
             }
@@ -2783,6 +2855,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDataAssetResponse>(responseMessage);
             }
@@ -2820,6 +2893,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDataFlowResponse>(responseMessage);
             }
@@ -2857,6 +2931,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateFolderResponse>(responseMessage);
             }
@@ -2894,6 +2969,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateProjectResponse>(responseMessage);
             }
@@ -2931,6 +3007,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTaskResponse>(responseMessage);
             }
@@ -2968,6 +3045,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTaskRunResponse>(responseMessage);
             }
@@ -3005,6 +3083,7 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateWorkspaceResponse>(responseMessage);
             }

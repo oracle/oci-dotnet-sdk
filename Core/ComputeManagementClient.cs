@@ -93,6 +93,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachLoadBalancerResponse>(responseMessage);
             }
@@ -136,6 +137,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeClusterNetworkCompartmentResponse>(responseMessage);
             }
@@ -186,6 +188,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeInstanceConfigurationCompartmentResponse>(responseMessage);
             }
@@ -229,6 +232,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeInstancePoolCompartmentResponse>(responseMessage);
             }
@@ -268,6 +272,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateClusterNetworkResponse>(responseMessage);
             }
@@ -307,6 +312,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateInstanceConfigurationResponse>(responseMessage);
             }
@@ -344,6 +350,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateInstancePoolResponse>(responseMessage);
             }
@@ -381,6 +388,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteInstanceConfigurationResponse>(responseMessage);
             }
@@ -419,6 +427,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachLoadBalancerResponse>(responseMessage);
             }
@@ -456,6 +465,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetClusterNetworkResponse>(responseMessage);
             }
@@ -493,6 +503,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInstanceConfigurationResponse>(responseMessage);
             }
@@ -530,6 +541,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInstancePoolResponse>(responseMessage);
             }
@@ -568,6 +580,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInstancePoolLoadBalancerAttachmentResponse>(responseMessage);
             }
@@ -612,6 +625,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<LaunchInstanceConfigurationResponse>(responseMessage);
             }
@@ -649,6 +663,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListClusterNetworkInstancesResponse>(responseMessage);
             }
@@ -686,6 +701,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListClusterNetworksResponse>(responseMessage);
             }
@@ -724,6 +740,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstanceConfigurationsResponse>(responseMessage);
             }
@@ -761,6 +778,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstancePoolInstancesResponse>(responseMessage);
             }
@@ -798,6 +816,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstancePoolsResponse>(responseMessage);
             }
@@ -837,6 +856,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ResetInstancePoolResponse>(responseMessage);
             }
@@ -876,6 +896,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<SoftresetInstancePoolResponse>(responseMessage);
             }
@@ -915,6 +936,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StartInstancePoolResponse>(responseMessage);
             }
@@ -954,6 +976,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<StopInstancePoolResponse>(responseMessage);
             }
@@ -995,6 +1018,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateClusterNetworkResponse>(responseMessage);
             }
@@ -1040,6 +1064,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateInstancePoolResponse>(responseMessage);
             }
@@ -1078,6 +1103,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateClusterNetworkResponse>(responseMessage);
             }
@@ -1115,6 +1141,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateInstanceConfigurationResponse>(responseMessage);
             }
@@ -1155,6 +1182,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateInstancePoolResponse>(responseMessage);
             }

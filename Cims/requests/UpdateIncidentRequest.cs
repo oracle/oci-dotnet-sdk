@@ -17,7 +17,7 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// Unique ID that identifies an incident
+        /// Unique identifier for the support ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.CimsService.Requests
         public string IncidentKey { get; set; }
         
         /// <value>
-        /// Customer Support Identifier of the support account
+        /// The Customer Support Identifier associated with the support account.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.CimsService.Requests
         public string Csi { get; set; }
         
         /// <value>
-        /// Details of Resource to be updated
+        /// Details about the support ticket being updated.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,7 +47,7 @@ namespace Oci.CimsService.Requests
         public UpdateIncident UpdateIncidentDetails { get; set; }
         
         /// <value>
-        /// User OCID for IDCS users that have a shadow in OCI
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,21 +57,21 @@ namespace Oci.CimsService.Requests
         public string Ocid { get; set; }
         
         /// <value>
-        /// Retry token
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
-        public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// Unique Header for request id
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// if-match check
+        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the etag from a previous GET or POST response for that resource. The resource will be updated or deleted only if the etag you provide matches the resource's current etag value.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// The region of the tenancy.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
+        public string Homeregion { get; set; }
     }
 }

@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Sub Category of the incident
+    /// Details for creating the subcategory of the support ticket.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     public class CreateSubCategoryDetails 
     {
         
         /// <value>
-        /// Unique ID that identifies a Sub Category
+        /// Unique identifier for the subcategory.
         /// </value>
         [JsonProperty(PropertyName = "subCategoryKey")]
         public string SubCategoryKey { get; set; }

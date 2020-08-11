@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Resource Item to be updated
+    /// Details about the support ticket being updated.
     /// </summary>
     public class UpdateIncident 
     {

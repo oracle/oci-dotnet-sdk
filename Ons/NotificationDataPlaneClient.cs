@@ -97,6 +97,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSubscriptionCompartmentResponse>(responseMessage);
             }
@@ -139,6 +140,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSubscriptionResponse>(responseMessage);
             }
@@ -179,6 +181,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSubscriptionResponse>(responseMessage);
             }
@@ -219,6 +222,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConfirmSubscriptionResponse>(responseMessage);
             }
@@ -259,6 +263,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSubscriptionResponse>(responseMessage);
             }
@@ -299,6 +304,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetUnsubscriptionResponse>(responseMessage);
             }
@@ -339,6 +345,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSubscriptionsResponse>(responseMessage);
             }
@@ -393,6 +400,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<PublishMessageResponse>(responseMessage);
             }
@@ -433,6 +441,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ResendSubscriptionConfirmationResponse>(responseMessage);
             }
@@ -473,6 +482,7 @@ namespace Oci.OnsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSubscriptionResponse>(responseMessage);
             }

@@ -81,6 +81,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DecryptResponse>(responseMessage);
             }
@@ -120,6 +121,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<EncryptResponse>(responseMessage);
             }
@@ -158,6 +160,7 @@ namespace Oci.KeymanagementService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GenerateDataEncryptionKeyResponse>(responseMessage);
             }

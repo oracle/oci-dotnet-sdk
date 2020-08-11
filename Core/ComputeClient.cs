@@ -92,6 +92,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AddImageShapeCompatibilityEntryResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachBootVolumeResponse>(responseMessage);
             }
@@ -170,6 +172,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachVnicResponse>(responseMessage);
             }
@@ -208,6 +211,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachVolumeResponse>(responseMessage);
             }
@@ -262,6 +266,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CaptureConsoleHistoryResponse>(responseMessage);
             }
@@ -302,6 +307,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeComputeImageCapabilitySchemaCompartmentResponse>(responseMessage);
             }
@@ -339,6 +345,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeDedicatedVmHostCompartmentResponse>(responseMessage);
             }
@@ -379,6 +386,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeImageCompartmentResponse>(responseMessage);
             }
@@ -422,6 +430,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeInstanceCompartmentResponse>(responseMessage);
             }
@@ -460,6 +469,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateAppCatalogSubscriptionResponse>(responseMessage);
             }
@@ -498,6 +508,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateComputeImageCapabilitySchemaResponse>(responseMessage);
             }
@@ -539,6 +550,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDedicatedVmHostResponse>(responseMessage);
             }
@@ -599,6 +611,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateImageResponse>(responseMessage);
             }
@@ -641,6 +654,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateInstanceConsoleConnectionResponse>(responseMessage);
             }
@@ -678,6 +692,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteAppCatalogSubscriptionResponse>(responseMessage);
             }
@@ -716,6 +731,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteComputeImageCapabilitySchemaResponse>(responseMessage);
             }
@@ -753,6 +769,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteConsoleHistoryResponse>(responseMessage);
             }
@@ -794,6 +811,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDedicatedVmHostResponse>(responseMessage);
             }
@@ -831,6 +849,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteImageResponse>(responseMessage);
             }
@@ -868,6 +887,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteInstanceConsoleConnectionResponse>(responseMessage);
             }
@@ -909,6 +929,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachBootVolumeResponse>(responseMessage);
             }
@@ -956,6 +977,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachVnicResponse>(responseMessage);
             }
@@ -997,6 +1019,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachVolumeResponse>(responseMessage);
             }
@@ -1044,6 +1067,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ExportImageResponse>(responseMessage);
             }
@@ -1081,6 +1105,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAppCatalogListingResponse>(responseMessage);
             }
@@ -1118,6 +1143,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAppCatalogListingAgreementsResponse>(responseMessage);
             }
@@ -1155,6 +1181,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetAppCatalogListingResourceVersionResponse>(responseMessage);
             }
@@ -1192,6 +1219,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetBootVolumeAttachmentResponse>(responseMessage);
             }
@@ -1229,6 +1257,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetComputeGlobalImageCapabilitySchemaResponse>(responseMessage);
             }
@@ -1266,6 +1295,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetComputeGlobalImageCapabilitySchemaVersionResponse>(responseMessage);
             }
@@ -1304,6 +1334,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetComputeImageCapabilitySchemaResponse>(responseMessage);
             }
@@ -1344,6 +1375,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConsoleHistoryResponse>(responseMessage);
             }
@@ -1384,6 +1416,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetConsoleHistoryContentResponse>(responseMessage);
             }
@@ -1421,6 +1454,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDedicatedVmHostResponse>(responseMessage);
             }
@@ -1458,6 +1492,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetImageResponse>(responseMessage);
             }
@@ -1495,6 +1530,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetImageShapeCompatibilityEntryResponse>(responseMessage);
             }
@@ -1532,6 +1568,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInstanceResponse>(responseMessage);
             }
@@ -1569,6 +1606,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInstanceConsoleConnectionResponse>(responseMessage);
             }
@@ -1607,6 +1645,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVnicAttachmentResponse>(responseMessage);
             }
@@ -1644,6 +1683,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVolumeAttachmentResponse>(responseMessage);
             }
@@ -1683,6 +1723,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetWindowsInstanceInitialCredentialsResponse>(responseMessage);
             }
@@ -1737,6 +1778,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<InstanceActionResponse>(responseMessage);
             }
@@ -1813,6 +1855,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<LaunchInstanceResponse>(responseMessage);
             }
@@ -1850,6 +1893,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAppCatalogListingResourceVersionsResponse>(responseMessage);
             }
@@ -1887,6 +1931,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAppCatalogListingsResponse>(responseMessage);
             }
@@ -1924,6 +1969,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAppCatalogSubscriptionsResponse>(responseMessage);
             }
@@ -1963,6 +2009,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListBootVolumeAttachmentsResponse>(responseMessage);
             }
@@ -2001,6 +2048,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListComputeGlobalImageCapabilitySchemaVersionsResponse>(responseMessage);
             }
@@ -2039,6 +2087,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListComputeGlobalImageCapabilitySchemasResponse>(responseMessage);
             }
@@ -2077,6 +2126,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListComputeImageCapabilitySchemasResponse>(responseMessage);
             }
@@ -2115,6 +2165,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListConsoleHistoriesResponse>(responseMessage);
             }
@@ -2154,6 +2205,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDedicatedVmHostInstanceShapesResponse>(responseMessage);
             }
@@ -2192,6 +2244,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDedicatedVmHostInstancesResponse>(responseMessage);
             }
@@ -2230,6 +2283,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDedicatedVmHostShapesResponse>(responseMessage);
             }
@@ -2271,6 +2325,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDedicatedVmHostsResponse>(responseMessage);
             }
@@ -2308,6 +2363,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListImageShapeCompatibilityEntriesResponse>(responseMessage);
             }
@@ -2352,6 +2408,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListImagesResponse>(responseMessage);
             }
@@ -2392,6 +2449,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstanceConsoleConnectionsResponse>(responseMessage);
             }
@@ -2429,6 +2487,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstanceDevicesResponse>(responseMessage);
             }
@@ -2469,6 +2528,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInstancesResponse>(responseMessage);
             }
@@ -2508,6 +2568,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListShapesResponse>(responseMessage);
             }
@@ -2548,6 +2609,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVnicAttachmentsResponse>(responseMessage);
             }
@@ -2590,6 +2652,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVolumeAttachmentsResponse>(responseMessage);
             }
@@ -2627,6 +2690,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemoveImageShapeCompatibilityEntryResponse>(responseMessage);
             }
@@ -2672,6 +2736,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<TerminateInstanceResponse>(responseMessage);
             }
@@ -2710,6 +2775,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateComputeImageCapabilitySchemaResponse>(responseMessage);
             }
@@ -2747,6 +2813,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateConsoleHistoryResponse>(responseMessage);
             }
@@ -2786,6 +2853,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDedicatedVmHostResponse>(responseMessage);
             }
@@ -2823,6 +2891,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateImageResponse>(responseMessage);
             }
@@ -2867,6 +2936,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateInstanceResponse>(responseMessage);
             }

@@ -87,6 +87,7 @@ namespace Oci.UsageapiService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RequestSummarizedConfigurationsResponse>(responseMessage);
             }
@@ -125,6 +126,7 @@ namespace Oci.UsageapiService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RequestSummarizedUsagesResponse>(responseMessage);
             }

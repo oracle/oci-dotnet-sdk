@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details Issue Type of the incident
+    /// Details for creating the issue type of the support ticket.
+    /// <br/>
+    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
     public class CreateIssueTypeDetails 
     {
         
         /// <value>
-        /// Unique ID that identifies an Issue Type
+        /// Unique identifier for the issue type.
         /// </value>
         [JsonProperty(PropertyName = "issueTypeKey")]
         public string IssueTypeKey { get; set; }

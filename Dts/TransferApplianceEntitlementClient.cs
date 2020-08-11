@@ -89,6 +89,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateTransferApplianceEntitlementResponse>(responseMessage);
             }
@@ -126,6 +127,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTransferApplianceEntitlementResponse>(responseMessage);
             }
@@ -163,6 +165,7 @@ namespace Oci.DtsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListTransferApplianceEntitlementResponse>(responseMessage);
             }

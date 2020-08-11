@@ -93,6 +93,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AddNetworkSecurityGroupSecurityRulesResponse>(responseMessage);
             }
@@ -140,6 +141,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<AttachServiceIdResponse>(responseMessage);
             }
@@ -181,6 +183,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BulkAddVirtualCircuitPublicPrefixesResponse>(responseMessage);
             }
@@ -222,6 +225,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<BulkDeleteVirtualCircuitPublicPrefixesResponse>(responseMessage);
             }
@@ -262,6 +266,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCpeCompartmentResponse>(responseMessage);
             }
@@ -302,6 +307,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCrossConnectCompartmentResponse>(responseMessage);
             }
@@ -342,6 +348,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeCrossConnectGroupCompartmentResponse>(responseMessage);
             }
@@ -382,6 +389,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeDhcpOptionsCompartmentResponse>(responseMessage);
             }
@@ -422,6 +430,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeDrgCompartmentResponse>(responseMessage);
             }
@@ -462,6 +471,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeIPSecConnectionCompartmentResponse>(responseMessage);
             }
@@ -502,6 +512,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeInternetGatewayCompartmentResponse>(responseMessage);
             }
@@ -542,6 +553,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeLocalPeeringGatewayCompartmentResponse>(responseMessage);
             }
@@ -582,6 +594,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeNatGatewayCompartmentResponse>(responseMessage);
             }
@@ -621,6 +634,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeNetworkSecurityGroupCompartmentResponse>(responseMessage);
             }
@@ -664,6 +678,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangePublicIpCompartmentResponse>(responseMessage);
             }
@@ -704,6 +719,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeRemotePeeringConnectionCompartmentResponse>(responseMessage);
             }
@@ -744,6 +760,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeRouteTableCompartmentResponse>(responseMessage);
             }
@@ -784,6 +801,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSecurityListCompartmentResponse>(responseMessage);
             }
@@ -824,6 +842,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeServiceGatewayCompartmentResponse>(responseMessage);
             }
@@ -864,6 +883,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeSubnetCompartmentResponse>(responseMessage);
             }
@@ -904,6 +924,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVcnCompartmentResponse>(responseMessage);
             }
@@ -944,6 +965,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVirtualCircuitCompartmentResponse>(responseMessage);
             }
@@ -984,6 +1006,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeVlanCompartmentResponse>(responseMessage);
             }
@@ -1029,6 +1052,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ConnectLocalPeeringGatewaysResponse>(responseMessage);
             }
@@ -1074,6 +1098,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ConnectRemotePeeringConnectionsResponse>(responseMessage);
             }
@@ -1126,6 +1151,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCpeResponse>(responseMessage);
             }
@@ -1182,6 +1208,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCrossConnectResponse>(responseMessage);
             }
@@ -1234,6 +1261,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateCrossConnectGroupResponse>(responseMessage);
             }
@@ -1283,6 +1311,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDhcpOptionsResponse>(responseMessage);
             }
@@ -1332,6 +1361,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDrgResponse>(responseMessage);
             }
@@ -1380,6 +1410,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateDrgAttachmentResponse>(responseMessage);
             }
@@ -1446,6 +1477,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIPSecConnectionResponse>(responseMessage);
             }
@@ -1504,6 +1536,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateInternetGatewayResponse>(responseMessage);
             }
@@ -1542,6 +1575,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateIpv6Response>(responseMessage);
             }
@@ -1580,6 +1614,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateLocalPeeringGatewayResponse>(responseMessage);
             }
@@ -1619,6 +1654,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateNatGatewayResponse>(responseMessage);
             }
@@ -1657,6 +1693,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateNetworkSecurityGroupResponse>(responseMessage);
             }
@@ -1697,6 +1734,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePrivateIpResponse>(responseMessage);
             }
@@ -1755,6 +1793,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePublicIpResponse>(responseMessage);
             }
@@ -1793,6 +1832,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRemotePeeringConnectionResponse>(responseMessage);
             }
@@ -1845,6 +1885,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateRouteTableResponse>(responseMessage);
             }
@@ -1896,6 +1937,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSecurityListResponse>(responseMessage);
             }
@@ -1942,6 +1984,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateServiceGatewayResponse>(responseMessage);
             }
@@ -2010,6 +2053,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSubnetResponse>(responseMessage);
             }
@@ -2076,6 +2120,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVcnResponse>(responseMessage);
             }
@@ -2134,6 +2179,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVirtualCircuitResponse>(responseMessage);
             }
@@ -2172,6 +2218,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateVlanResponse>(responseMessage);
             }
@@ -2212,6 +2259,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCpeResponse>(responseMessage);
             }
@@ -2251,6 +2299,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCrossConnectResponse>(responseMessage);
             }
@@ -2291,6 +2340,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteCrossConnectGroupResponse>(responseMessage);
             }
@@ -2333,6 +2383,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDhcpOptionsResponse>(responseMessage);
             }
@@ -2374,6 +2425,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDrgResponse>(responseMessage);
             }
@@ -2414,6 +2466,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteDrgAttachmentResponse>(responseMessage);
             }
@@ -2459,6 +2512,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteIPSecConnectionResponse>(responseMessage);
             }
@@ -2501,6 +2555,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteInternetGatewayResponse>(responseMessage);
             }
@@ -2540,6 +2595,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteIpv6Response>(responseMessage);
             }
@@ -2581,6 +2637,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteLocalPeeringGatewayResponse>(responseMessage);
             }
@@ -2623,6 +2680,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteNatGatewayResponse>(responseMessage);
             }
@@ -2667,6 +2725,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteNetworkSecurityGroupResponse>(responseMessage);
             }
@@ -2715,6 +2774,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePrivateIpResponse>(responseMessage);
             }
@@ -2767,6 +2827,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePublicIpResponse>(responseMessage);
             }
@@ -2808,6 +2869,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRemotePeeringConnectionResponse>(responseMessage);
             }
@@ -2850,6 +2912,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteRouteTableResponse>(responseMessage);
             }
@@ -2892,6 +2955,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSecurityListResponse>(responseMessage);
             }
@@ -2931,6 +2995,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteServiceGatewayResponse>(responseMessage);
             }
@@ -2971,6 +3036,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSubnetResponse>(responseMessage);
             }
@@ -3011,6 +3077,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVcnResponse>(responseMessage);
             }
@@ -3053,6 +3120,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVirtualCircuitResponse>(responseMessage);
             }
@@ -3091,6 +3159,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteVlanResponse>(responseMessage);
             }
@@ -3140,6 +3209,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DetachServiceIdResponse>(responseMessage);
             }
@@ -3177,6 +3247,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCpeResponse>(responseMessage);
             }
@@ -3232,6 +3303,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCpeDeviceConfigContentResponse>(responseMessage);
             }
@@ -3278,6 +3350,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCpeDeviceShapeResponse>(responseMessage);
             }
@@ -3315,6 +3388,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCrossConnectResponse>(responseMessage);
             }
@@ -3352,6 +3426,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCrossConnectGroupResponse>(responseMessage);
             }
@@ -3389,6 +3464,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCrossConnectLetterOfAuthorityResponse>(responseMessage);
             }
@@ -3427,6 +3503,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetCrossConnectStatusResponse>(responseMessage);
             }
@@ -3464,6 +3541,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDhcpOptionsResponse>(responseMessage);
             }
@@ -3501,6 +3579,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDrgResponse>(responseMessage);
             }
@@ -3538,6 +3617,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDrgAttachmentResponse>(responseMessage);
             }
@@ -3577,6 +3657,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetDrgRedundancyStatusResponse>(responseMessage);
             }
@@ -3616,6 +3697,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFastConnectProviderServiceResponse>(responseMessage);
             }
@@ -3655,6 +3737,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFastConnectProviderServiceKeyResponse>(responseMessage);
             }
@@ -3695,6 +3778,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIPSecConnectionResponse>(responseMessage);
             }
@@ -3736,6 +3820,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIPSecConnectionDeviceConfigResponse>(responseMessage);
             }
@@ -3775,6 +3860,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIPSecConnectionDeviceStatusResponse>(responseMessage);
             }
@@ -3815,6 +3901,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIPSecConnectionTunnelResponse>(responseMessage);
             }
@@ -3854,6 +3941,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIPSecConnectionTunnelSharedSecretResponse>(responseMessage);
             }
@@ -3891,6 +3979,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetInternetGatewayResponse>(responseMessage);
             }
@@ -3947,6 +4036,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIpsecCpeDeviceConfigContentResponse>(responseMessage);
             }
@@ -3988,6 +4078,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetIpv6Response>(responseMessage);
             }
@@ -4025,6 +4116,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetLocalPeeringGatewayResponse>(responseMessage);
             }
@@ -4062,6 +4154,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNatGatewayResponse>(responseMessage);
             }
@@ -4106,6 +4199,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetNetworkSecurityGroupResponse>(responseMessage);
             }
@@ -4147,6 +4241,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPrivateIpResponse>(responseMessage);
             }
@@ -4195,6 +4290,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPublicIpResponse>(responseMessage);
             }
@@ -4237,6 +4333,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPublicIpByIpAddressResponse>(responseMessage);
             }
@@ -4285,6 +4382,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPublicIpByPrivateIpIdResponse>(responseMessage);
             }
@@ -4323,6 +4421,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRemotePeeringConnectionResponse>(responseMessage);
             }
@@ -4360,6 +4459,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetRouteTableResponse>(responseMessage);
             }
@@ -4397,6 +4497,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSecurityListResponse>(responseMessage);
             }
@@ -4435,6 +4536,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetServiceResponse>(responseMessage);
             }
@@ -4472,6 +4574,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetServiceGatewayResponse>(responseMessage);
             }
@@ -4509,6 +4612,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSubnetResponse>(responseMessage);
             }
@@ -4551,6 +4655,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTunnelCpeDeviceConfigResponse>(responseMessage);
             }
@@ -4606,6 +4711,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetTunnelCpeDeviceConfigContentResponse>(responseMessage);
             }
@@ -4643,6 +4749,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVcnResponse>(responseMessage);
             }
@@ -4680,6 +4787,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVirtualCircuitResponse>(responseMessage);
             }
@@ -4717,6 +4825,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVlanResponse>(responseMessage);
             }
@@ -4758,6 +4867,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetVnicResponse>(responseMessage);
             }
@@ -4797,6 +4907,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListAllowedPeerRegionsForRemotePeeringResponse>(responseMessage);
             }
@@ -4847,6 +4958,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCpeDeviceShapesResponse>(responseMessage);
             }
@@ -4885,6 +4997,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCpesResponse>(responseMessage);
             }
@@ -4923,6 +5036,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCrossConnectGroupsResponse>(responseMessage);
             }
@@ -4962,6 +5076,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCrossConnectLocationsResponse>(responseMessage);
             }
@@ -5001,6 +5116,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCrossConnectsResponse>(responseMessage);
             }
@@ -5041,6 +5157,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListCrossconnectPortSpeedShapesResponse>(responseMessage);
             }
@@ -5082,6 +5199,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDhcpOptionsResponse>(responseMessage);
             }
@@ -5121,6 +5239,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDrgAttachmentsResponse>(responseMessage);
             }
@@ -5159,6 +5278,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListDrgsResponse>(responseMessage);
             }
@@ -5203,6 +5323,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFastConnectProviderServicesResponse>(responseMessage);
             }
@@ -5244,6 +5365,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFastConnectProviderVirtualCircuitBandwidthShapesResponse>(responseMessage);
             }
@@ -5282,6 +5404,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIPSecConnectionTunnelsResponse>(responseMessage);
             }
@@ -5321,6 +5444,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIPSecConnectionsResponse>(responseMessage);
             }
@@ -5360,6 +5484,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListInternetGatewaysResponse>(responseMessage);
             }
@@ -5405,6 +5530,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListIpv6sResponse>(responseMessage);
             }
@@ -5444,6 +5570,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListLocalPeeringGatewaysResponse>(responseMessage);
             }
@@ -5483,6 +5610,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNatGatewaysResponse>(responseMessage);
             }
@@ -5521,6 +5649,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNetworkSecurityGroupSecurityRulesResponse>(responseMessage);
             }
@@ -5559,6 +5688,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNetworkSecurityGroupVnicsResponse>(responseMessage);
             }
@@ -5597,6 +5727,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListNetworkSecurityGroupsResponse>(responseMessage);
             }
@@ -5650,6 +5781,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPrivateIpsResponse>(responseMessage);
             }
@@ -5707,6 +5839,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPublicIpsResponse>(responseMessage);
             }
@@ -5746,6 +5879,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRemotePeeringConnectionsResponse>(responseMessage);
             }
@@ -5787,6 +5921,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListRouteTablesResponse>(responseMessage);
             }
@@ -5826,6 +5961,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSecurityListsResponse>(responseMessage);
             }
@@ -5865,6 +6001,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListServiceGatewaysResponse>(responseMessage);
             }
@@ -5904,6 +6041,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListServicesResponse>(responseMessage);
             }
@@ -5943,6 +6081,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSubnetsResponse>(responseMessage);
             }
@@ -5981,6 +6120,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVcnsResponse>(responseMessage);
             }
@@ -6019,6 +6159,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVirtualCircuitBandwidthShapesResponse>(responseMessage);
             }
@@ -6058,6 +6199,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVirtualCircuitPublicPrefixesResponse>(responseMessage);
             }
@@ -6096,6 +6238,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVirtualCircuitsResponse>(responseMessage);
             }
@@ -6134,6 +6277,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListVlansResponse>(responseMessage);
             }
@@ -6172,6 +6316,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<RemoveNetworkSecurityGroupSecurityRulesResponse>(responseMessage);
             }
@@ -6211,6 +6356,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCpeResponse>(responseMessage);
             }
@@ -6248,6 +6394,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCrossConnectResponse>(responseMessage);
             }
@@ -6287,6 +6434,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateCrossConnectGroupResponse>(responseMessage);
             }
@@ -6328,6 +6476,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDhcpOptionsResponse>(responseMessage);
             }
@@ -6366,6 +6515,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDrgResponse>(responseMessage);
             }
@@ -6405,6 +6555,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateDrgAttachmentResponse>(responseMessage);
             }
@@ -6446,6 +6597,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIPSecConnectionResponse>(responseMessage);
             }
@@ -6495,6 +6647,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIPSecConnectionTunnelResponse>(responseMessage);
             }
@@ -6535,6 +6688,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIPSecConnectionTunnelSharedSecretResponse>(responseMessage);
             }
@@ -6577,6 +6731,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateInternetGatewayResponse>(responseMessage);
             }
@@ -6621,6 +6776,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateIpv6Response>(responseMessage);
             }
@@ -6659,6 +6815,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateLocalPeeringGatewayResponse>(responseMessage);
             }
@@ -6697,6 +6854,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNatGatewayResponse>(responseMessage);
             }
@@ -6749,6 +6907,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNetworkSecurityGroupResponse>(responseMessage);
             }
@@ -6787,6 +6946,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateNetworkSecurityGroupSecurityRulesResponse>(responseMessage);
             }
@@ -6834,6 +6994,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePrivateIpResponse>(responseMessage);
             }
@@ -6910,6 +7071,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePublicIpResponse>(responseMessage);
             }
@@ -6948,6 +7110,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRemotePeeringConnectionResponse>(responseMessage);
             }
@@ -6989,6 +7152,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateRouteTableResponse>(responseMessage);
             }
@@ -7031,6 +7195,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSecurityListResponse>(responseMessage);
             }
@@ -7070,6 +7235,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateServiceGatewayResponse>(responseMessage);
             }
@@ -7108,6 +7274,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSubnetResponse>(responseMessage);
             }
@@ -7148,6 +7315,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateTunnelCpeDeviceConfigResponse>(responseMessage);
             }
@@ -7186,6 +7354,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVcnResponse>(responseMessage);
             }
@@ -7247,6 +7416,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVirtualCircuitResponse>(responseMessage);
             }
@@ -7287,6 +7457,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVlanResponse>(responseMessage);
             }
@@ -7325,6 +7496,7 @@ namespace Oci.CoreService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateVnicResponse>(responseMessage);
             }

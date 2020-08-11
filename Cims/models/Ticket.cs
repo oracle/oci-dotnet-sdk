@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Ticket created
+    /// Details about the ticket created.
     /// </summary>
     public class Ticket 
     {
         
         /// <value>
-        /// Unique ID that identifies a Ticket
+        /// Unique identifier for the ticket.
         /// </value>
         [JsonProperty(PropertyName = "ticketNumber")]
         public string TicketNumber { get; set; }
         ///
         /// <value>
-        /// Severity of the ticket. eg: HIGH, MEDIUM
+        /// The severity assigned to the ticket.
         /// </value>
         ///
         public enum SeverityEnum {
@@ -41,7 +41,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// Severity of the ticket. eg: HIGH, MEDIUM
+        /// The severity assigned to the ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,13 +52,13 @@ namespace Oci.CimsService.Models
         public System.Nullable<SeverityEnum> Severity { get; set; }
 
         /// <value>
-        /// List of resources
+        /// The list of resources associated with the ticket.
         /// </value>
         [JsonProperty(PropertyName = "resourceList")]
         public System.Collections.Generic.List<Resource> ResourceList { get; set; }
 
         /// <value>
-        /// Title of ticket
+        /// The title of the ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CimsService.Models
         public string Title { get; set; }
 
         /// <value>
-        /// Details of ticket
+        /// The description of the issue addressed in the ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -78,26 +78,26 @@ namespace Oci.CimsService.Models
         public string Description { get; set; }
 
         /// <value>
-        /// Epoch time of ticket creation
+        /// The time when the ticket was created, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<int> TimeCreated { get; set; }
 
         /// <value>
-        /// Epoch time of ticket updated
+        /// The time when the ticket was updated, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<int> TimeUpdated { get; set; }
 
         /// <value>
-        /// Describes the lifecycles of a ticket
+        /// The current state of the ticket.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
 
         /// <value>
-        /// Describes the lifecycle details of a ticket
+        /// Additional information about the current `lifecycleState`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(StringEnumConverter))]

@@ -93,6 +93,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeFileSystemCompartmentResponse>(responseMessage);
             }
@@ -131,6 +132,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeMountTargetCompartmentResponse>(responseMessage);
             }
@@ -170,6 +172,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateExportResponse>(responseMessage);
             }
@@ -236,6 +239,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateFileSystemResponse>(responseMessage);
             }
@@ -305,6 +309,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateMountTargetResponse>(responseMessage);
             }
@@ -344,6 +349,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateSnapshotResponse>(responseMessage);
             }
@@ -382,6 +388,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteExportResponse>(responseMessage);
             }
@@ -422,6 +429,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteFileSystemResponse>(responseMessage);
             }
@@ -461,6 +469,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteMountTargetResponse>(responseMessage);
             }
@@ -499,6 +508,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteSnapshotResponse>(responseMessage);
             }
@@ -536,6 +546,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExportResponse>(responseMessage);
             }
@@ -573,6 +584,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetExportSetResponse>(responseMessage);
             }
@@ -610,6 +622,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetFileSystemResponse>(responseMessage);
             }
@@ -647,6 +660,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetMountTargetResponse>(responseMessage);
             }
@@ -684,6 +698,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetSnapshotResponse>(responseMessage);
             }
@@ -722,6 +737,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListExportSetsResponse>(responseMessage);
             }
@@ -762,6 +778,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListExportsResponse>(responseMessage);
             }
@@ -800,6 +817,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListFileSystemsResponse>(responseMessage);
             }
@@ -838,6 +856,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListMountTargetsResponse>(responseMessage);
             }
@@ -876,6 +895,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListSnapshotsResponse>(responseMessage);
             }
@@ -913,6 +933,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateExportResponse>(responseMessage);
             }
@@ -950,6 +971,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateExportSetResponse>(responseMessage);
             }
@@ -989,6 +1011,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateFileSystemResponse>(responseMessage);
             }
@@ -1026,6 +1049,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateMountTargetResponse>(responseMessage);
             }
@@ -1063,6 +1087,7 @@ namespace Oci.FilestorageService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateSnapshotResponse>(responseMessage);
             }

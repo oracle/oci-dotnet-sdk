@@ -92,6 +92,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateQuotaResponse>(responseMessage);
             }
@@ -129,6 +130,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteQuotaResponse>(responseMessage);
             }
@@ -166,6 +168,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetQuotaResponse>(responseMessage);
             }
@@ -203,6 +206,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListQuotasResponse>(responseMessage);
             }
@@ -240,6 +244,7 @@ namespace Oci.LimitsService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateQuotaResponse>(responseMessage);
             }

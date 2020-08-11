@@ -17,7 +17,7 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// Customer support identifier of the support account
+        /// The Customer Support Identifier number for the support account.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.CimsService.Requests
         public string Csi { get; set; }
         
         /// <value>
-        /// User OCID for IDCS users that have a shadow in OCI
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,21 +37,21 @@ namespace Oci.CimsService.Requests
         public string Ocid { get; set; }
         
         /// <value>
-        /// Retry-token header
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
-        public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// Unique request id
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Problem Type of Taxonomy - tech/limit
+        /// The kind of support request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "problemType")]
         public string ProblemType { get; set; }
+        
+        /// <value>
+        /// The region of the tenancy.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
+        public string Homeregion { get; set; }
     }
 }

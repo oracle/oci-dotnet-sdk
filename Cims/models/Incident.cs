@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of Incident
+    /// Details of about the incident object.
     /// </summary>
     public class Incident 
     {
         
         /// <value>
-        /// Unique ID that identifies an Incident
+        /// Unique identifier for the support ticket.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CimsService.Models
         public string Key { get; set; }
 
         /// <value>
-        /// Tenancy Ocid
+        /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -50,14 +50,14 @@ namespace Oci.CimsService.Models
         public IncidentType IncidentType { get; set; }
 
         /// <value>
-        /// States type of incident. eg: LIMIT, TECH
+        /// The kind of support ticket, such as a technical support request.
         /// </value>
         [JsonProperty(PropertyName = "problemType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
 
         /// <value>
-        /// Referrer of the incident., its usually the URL for where the customer logged the incident
+        /// The incident referrer. This value is often the URL that the customer used when creating the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "referrer")]
         public string Referrer { get; set; }

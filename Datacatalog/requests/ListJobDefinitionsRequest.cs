@@ -33,6 +33,21 @@ namespace Oci.DatacatalogService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match display name pattern given. The match is not case sensitive.
+        /// For Example : /folders?displayNameContains=Cu.*
+        /// The above would match all folders with display name that starts with \"Cu\".
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
+        public string DisplayNameContains { get; set; }
+        
+        /// <value>
+        /// Job execution state.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jobExecutionState")]
+        public System.Nullable<JobExecutionState> JobExecutionState { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
@@ -109,6 +124,8 @@ namespace Oci.DatacatalogService.Requests
             CatalogId,
             [EnumMember(Value = "jobType")]
             JobType,
+            [EnumMember(Value = "connectionKey")]
+            ConnectionKey,
             [EnumMember(Value = "lifecycleState")]
             LifecycleState,
             [EnumMember(Value = "timeCreated")]
@@ -116,7 +133,15 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "isSampleDataExtracted")]
             IsSampleDataExtracted,
             [EnumMember(Value = "uri")]
-            Uri
+            Uri,
+            [EnumMember(Value = "timeLatestExecutionStarted")]
+            TimeLatestExecutionStarted,
+            [EnumMember(Value = "timeLatestExecutionEnded")]
+            TimeLatestExecutionEnded,
+            [EnumMember(Value = "jobExecutionState")]
+            JobExecutionState,
+            [EnumMember(Value = "scheduleType")]
+            ScheduleType
         };
 
         /// <value>
@@ -128,7 +153,7 @@ namespace Oci.DatacatalogService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. Default order for TIMELATESTEXECUTIONSTARTED is descending. If no value is specified TIMECREATED is default.
         /// 
         /// </value>
         ///
@@ -136,11 +161,13 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "TIMECREATED")]
             Timecreated,
             [EnumMember(Value = "DISPLAYNAME")]
-            Displayname
+            Displayname,
+            [EnumMember(Value = "TIMELATESTEXECUTIONSTARTED")]
+            Timelatestexecutionstarted
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. Default order for TIMELATESTEXECUTIONSTARTED is descending. If no value is specified TIMECREATED is default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

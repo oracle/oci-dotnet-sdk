@@ -91,6 +91,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangeHttpMonitorCompartmentResponse>(responseMessage);
             }
@@ -130,6 +131,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ChangePingMonitorCompartmentResponse>(responseMessage);
             }
@@ -170,6 +172,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateHttpMonitorResponse>(responseMessage);
             }
@@ -211,6 +214,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOnDemandHttpProbeResponse>(responseMessage);
             }
@@ -252,6 +256,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreateOnDemandPingProbeResponse>(responseMessage);
             }
@@ -292,6 +297,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<CreatePingMonitorResponse>(responseMessage);
             }
@@ -331,6 +337,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeleteHttpMonitorResponse>(responseMessage);
             }
@@ -370,6 +377,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<DeletePingMonitorResponse>(responseMessage);
             }
@@ -408,6 +416,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetHttpMonitorResponse>(responseMessage);
             }
@@ -446,6 +455,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<GetPingMonitorResponse>(responseMessage);
             }
@@ -484,6 +494,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListHealthChecksVantagePointsResponse>(responseMessage);
             }
@@ -522,6 +533,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListHttpMonitorsResponse>(responseMessage);
             }
@@ -562,6 +574,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListHttpProbeResultsResponse>(responseMessage);
             }
@@ -603,6 +616,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPingMonitorsResponse>(responseMessage);
             }
@@ -647,6 +661,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<ListPingProbeResultsResponse>(responseMessage);
             }
@@ -687,6 +702,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdateHttpMonitorResponse>(responseMessage);
             }
@@ -727,6 +743,7 @@ namespace Oci.HealthchecksService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage);
                 }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
                 return Converter.FromHttpResponseMessage<UpdatePingMonitorResponse>(responseMessage);
             }
