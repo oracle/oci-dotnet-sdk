@@ -193,7 +193,7 @@ namespace Oci.Common.Http.Signing
         private static async Task<byte[]> ReadRequestBody(HttpRequestMessage requestMessage)
         {
             using var ms = new MemoryStream();
-            await requestMessage.Content.CopyToAsync(ms);
+            await requestMessage.Content.CopyToAsync(ms).ConfigureAwait(false);
             ms.Position = 0;
             var streamReader = new StreamReader(ms);
             var contentString = streamReader.ReadToEnd();

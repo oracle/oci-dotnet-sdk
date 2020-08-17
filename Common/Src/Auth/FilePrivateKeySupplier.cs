@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using System.Security;
 using Oci.Common.Utils;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -16,18 +17,26 @@ namespace Oci.Common.Auth
     /// <summary>A file-based key provider. This class reads private key from a pem key file.</summary>
     public class FilePrivateKeySupplier : ISupplier<RsaKeyParameters>
     {
-        private readonly string pemFilePath;
-        private readonly string passPhrase;
+        protected readonly string pemFilePath;
+        protected readonly SecureString passPhrase;
+        protected RsaKeyParameters key = null;
 
-        public FilePrivateKeySupplier(string pemFilePath, string passPhrase)
+        public FilePrivateKeySupplier(string pemFilePath, SecureString passPhrase)
         {
             this.pemFilePath = pemFilePath;
             this.passPhrase = passPhrase ?? null;
         }
 
-        /// <summary>Reads the private key.</summary>
+        /// <summary>Returns the private key.</summary>
         /// <returns>The private key from key pair.</returns>
         public RsaKeyParameters GetKey()
+        {
+            return key ?? ReadKey();
+        }
+
+        /// <summary>Reads the private key.</summary>
+        /// <returns>The private key from key pair.</returns>
+        private RsaKeyParameters ReadKey()
         {
             AsymmetricCipherKeyPair keyPair;
             using (StreamReader reader = File.OpenText(FileUtils.ExpandUserHome(pemFilePath)))
@@ -52,7 +61,7 @@ namespace Oci.Common.Auth
                 }
 
             }
-            return (RsaKeyParameters)keyPair.Private;
+            return key = (RsaKeyParameters)keyPair.Private;
         }
     }
 }

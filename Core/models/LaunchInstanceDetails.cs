@@ -175,6 +175,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
 
+        [JsonProperty(PropertyName = "availabilityConfig")]
+        public LaunchInstanceAvailabilityConfigDetails AvailabilityConfig { get; set; }
+
         /// <value>
         /// Custom metadata key/value pairs that you provide, such as the SSH public key
         /// required to connect to the instance.

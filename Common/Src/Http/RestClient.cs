@@ -71,7 +71,7 @@ namespace Oci.Common.Http
         /// <returns>A Task of HttpResponseMessage returned.</returns>
         public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, CancellationToken cancellationToken = default)
         {
-            return await this.httpClient.SendAsync(httpRequest, cancellationToken);
+            return await this.httpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>Check if the HttpResponseMessage is a successful response.</summary>

@@ -62,7 +62,7 @@ namespace Oci.ContainerengineService.Models
         public string KubernetesVersion { get; set; }
 
         /// <value>
-        /// A list of key/value pairs to add to each underlying OCI instance in the node pool.
+        /// A list of key/value pairs to add to each underlying OCI instance in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "nodeMetadata")]
         public System.Collections.Generic.Dictionary<string, string> NodeMetadata { get; set; }
@@ -100,7 +100,7 @@ namespace Oci.ContainerengineService.Models
         public System.Collections.Generic.List<KeyValue> InitialNodeLabels { get; set; }
 
         /// <value>
-        /// The SSH public key to add to each node in the node pool.
+        /// The SSH public key on each node in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKey")]
         public string SshPublicKey { get; set; }
