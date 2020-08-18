@@ -66,10 +66,16 @@ namespace Oci.ContainerengineService.Models
         public string NodeImageName { get; set; }
 
         /// <value>
-        /// Source running on the nodes in the node pool.
+        /// Deprecated. see `nodeSourceDetails`. Source running on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeSource")]
         public NodeSourceOption NodeSource { get; set; }
+
+        /// <value>
+        /// Source running on the nodes in the node pool.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeSourceDetails")]
+        public NodeSourceDetails NodeSourceDetails { get; set; }
 
         /// <value>
         /// The name of the node shape of the nodes in the node pool.
@@ -84,7 +90,7 @@ namespace Oci.ContainerengineService.Models
         public System.Collections.Generic.List<KeyValue> InitialNodeLabels { get; set; }
 
         /// <value>
-        /// The SSH public key on each node in the node pool.
+        /// The SSH public key on each node in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKey")]
         public string SshPublicKey { get; set; }

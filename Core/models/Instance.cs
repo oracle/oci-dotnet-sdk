@@ -198,6 +198,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
+
+        [JsonProperty(PropertyName = "availabilityConfig")]
+        public InstanceAvailabilityConfig AvailabilityConfig { get; set; }
         ///
         /// <value>
         /// The current state of the instance.

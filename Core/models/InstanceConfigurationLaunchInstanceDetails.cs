@@ -293,5 +293,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "preferredMaintenanceAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PreferredMaintenanceActionEnum> PreferredMaintenanceAction { get; set; }
+
+        [JsonProperty(PropertyName = "availabilityConfig")]
+        public InstanceConfigurationAvailabilityConfig AvailabilityConfig { get; set; }
     }
 }

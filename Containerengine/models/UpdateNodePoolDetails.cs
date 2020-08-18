@@ -68,5 +68,30 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "nodeConfigDetails")]
         public UpdateNodePoolNodeConfigDetails NodeConfigDetails { get; set; }
+
+        /// <value>
+        /// A list of key/value pairs to add to each underlying OCI instance in the node pool on launch.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeMetadata")]
+        public System.Collections.Generic.Dictionary<string, string> NodeMetadata { get; set; }
+
+        /// <value>
+        /// Specify the source to use to launch nodes in the node pool. Currently, image is the only supported source.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeSourceDetails")]
+        public NodeSourceDetails NodeSourceDetails { get; set; }
+
+        /// <value>
+        /// The SSH public key to add to each node in the node pool on launch.
+        /// </value>
+        [JsonProperty(PropertyName = "sshPublicKey")]
+        public string SshPublicKey { get; set; }
+
+        /// <value>
+        /// The name of the node shape of the nodes in the node pool used on launch.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShape")]
+        public string NodeShape { get; set; }
     }
 }

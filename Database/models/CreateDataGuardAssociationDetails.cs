@@ -163,6 +163,9 @@ namespace Oci.DatabaseService.Models
                 case "NewDbSystem":
                     obj = new CreateDataGuardAssociationWithNewDbSystemDetails();
                     break;
+                case "ExistingVmCluster":
+                    obj = new CreateDataGuardAssociationToExistingVmClusterDetails();
+                    break;
                 case "ExistingDbSystem":
                     obj = new CreateDataGuardAssociationToExistingDbSystemDetails();
                     break;

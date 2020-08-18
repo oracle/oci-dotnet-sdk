@@ -4,6 +4,8 @@
  */
 
 using System;
+using System.Security;
+using System.Runtime.InteropServices;
 using Org.BouncyCastle.OpenSsl;
 
 namespace Oci.Common.Auth
@@ -11,16 +13,31 @@ namespace Oci.Common.Auth
     /// <summary>An implementation to save and retrieves passphrase.</summary>
     public class PasswordFinder : IPasswordFinder
     {
-        private readonly string passPhrase;
+        private readonly SecureString passPhrase;
 
-        public PasswordFinder(string passPhrase)
+        public PasswordFinder(SecureString passPhrase)
         {
             this.passPhrase = passPhrase;
         }
 
         public char[] GetPassword()
         {
-            return passPhrase.ToCharArray();
+            var length = passPhrase.Length;
+            char[] passPhraseChars = new char[length];
+            var valuePtr = IntPtr.Zero;
+            try
+            {
+                valuePtr = Marshal.SecureStringToGlobalAllocUnicode(passPhrase);
+                Marshal.Copy(valuePtr, passPhraseChars, 0, length);
+                return passPhraseChars;
+            }
+            finally
+            {
+                if (valuePtr != IntPtr.Zero)
+                {
+                    Marshal.ZeroFreeGlobalAllocUnicode(valuePtr);
+                }
+            }
         }
     }
 }
