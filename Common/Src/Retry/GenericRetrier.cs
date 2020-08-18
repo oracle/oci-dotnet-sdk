@@ -52,7 +52,7 @@ namespace Oci.Common.Retry
                 onRetryAsync: async (response, timespan, retryAttempt, context) =>
                 {
                     logger.Info($"Retry Attempt: {retryAttempt}");
-                    await Task.CompletedTask;
+                    await Task.CompletedTask.ConfigureAwait(false);
                 }
             );
 
@@ -63,8 +63,8 @@ namespace Oci.Common.Retry
                     // A new copy of the request message needs to be created because it is disposed each time it is sent, and
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
-                    var newRequestMessage = await CloneHttpRequestMessage(requestMessage);
-                    return await asyncHttpCall.Invoke(newRequestMessage, cancellationToken);
+                    var newRequestMessage = await CloneHttpRequestMessage(requestMessage).ConfigureAwait(false);
+                    return await asyncHttpCall.Invoke(newRequestMessage, cancellationToken).ConfigureAwait(false);
                 });
         }
 

@@ -30,5 +30,11 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "ImageId is required.")]
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
+
+        /// <value>
+        /// The size of the boot volume in GBs. Minimum value is 50 GB. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumes.htm) for max custom boot volume sizing and OS-specific requirements.
+        /// </value>
+        [JsonProperty(PropertyName = "bootVolumeSizeInGBs")]
+        public System.Nullable<long> BootVolumeSizeInGBs { get; set; }
     }
 }

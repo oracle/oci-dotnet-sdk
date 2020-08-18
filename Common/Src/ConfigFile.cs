@@ -36,6 +36,12 @@ namespace Oci.Common
             return value;
         }
 
+        // <summary>GetConfiguration returns the whole configuration dictionary. Configuration may contain 1 or more profiles.</summary>
+        public Dictionary<string, Dictionary<string, string>> GetConfiguration()
+        {
+            return accumulator.configurationByProfile;
+        }
+
         /// <summary>ConfigAccumulator stores information from ConfigFile into Dictionary that can be used to retrieve config information.</summary>
         public class ConfigAccumulator
         {

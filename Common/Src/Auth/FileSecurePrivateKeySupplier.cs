@@ -3,9 +3,9 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
-using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security;
 using Oci.Common.Utils;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.OpenSsl;
@@ -13,21 +13,16 @@ using Org.BouncyCastle.OpenSsl;
 namespace Oci.Common.Auth
 {
     /// <summary>
-    /// An authentication details provider based on ConfigFileAuthenticationDetailsProvder.
-    /// This provider requires the key file to be encrypted (protected by pass phrase),
-    /// with minimum key length of 2048, and encryption mode of CBC.
+    /// A file-based key provider with additional security checks. Before reading private key from a pem key file,
+    /// this class checks the following:
+    /// the key file to be encrypted (protected by pass phrase),
+    /// the key file has minimum key length of 2048, and
+    /// the encryption mode is CBC.
     /// </summary>
-    public class EncryptedKeyAuthenticationDetailsProvider : ConfigFileAuthenticationDetailsProvider
+    public class FileSecurePrivateKeySupplier : FilePrivateKeySupplier
     {
-        public EncryptedKeyAuthenticationDetailsProvider(string profile) : this(ConfigFileReader.ParseDefault(profile)) { }
-
-        public EncryptedKeyAuthenticationDetailsProvider(string configurationFilePath, string profile) : this(ConfigFileReader.Parse(configurationFilePath, profile)) { }
-
-        public EncryptedKeyAuthenticationDetailsProvider(ConfigFile configFile) : base(configFile)
+        public FileSecurePrivateKeySupplier(string pemFilePath, SecureString passPhrase) : base(pemFilePath, passPhrase)
         {
-            string pemFilePath = configFile.GetValue("key_file");
-            string passPhrase = configFile.GetValue("pass_phrase") ?? throw new InvalidDataException("missing pass_phrase in config");
-
             try
             {
                 // private key should be encrypted
@@ -59,9 +54,7 @@ namespace Oci.Common.Auth
                 }
 
                 // private key bit length should be at least 2048
-                var filePrivateKeySupplier = new FilePrivateKeySupplier(pemFilePath, passPhrase);
-                var privateKey = filePrivateKeySupplier.GetKey();
-                if (privateKey.Modulus.BitLength < 2048)
+                if (GetKey().Modulus.BitLength < 2048)
                 {
                     throw new InvalidDataException("private key bit length should be at least 2048");
                 }
