@@ -101,7 +101,7 @@ namespace Oci.Common
             {
                 var additionalUserAgent = String.IsNullOrEmpty(clientUserAgent) ? "" : $" {clientUserAgent}";
                 OperatingSystem os = Environment.OSVersion;
-                userAgent = $"Oracle-DotNetSDK/{Version.GetVersion()} ({os.Platform}/{os.Version}; {RuntimeInformation.FrameworkDescription}{additionalUserAgent})";
+                userAgent = $"Oracle-DotNetSDK/{Version.GetVersion()} ({os.Platform}/{os.Version}; {RuntimeInformation.FrameworkDescription}) {additionalUserAgent}";
             }
             return userAgent;
         }

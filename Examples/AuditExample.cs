@@ -4,7 +4,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.AuditService;
@@ -80,17 +79,6 @@ namespace Oci.Examples
 
                     UpdateConfigurationResponse updateConfigurationResp = await client.UpdateConfiguration(updateConfigurationRequest);
                     logger.Info($"opc work request id: {updateConfigurationResp.OpcRequestId}");
-                }
-
-                // Change the region to US_ASHBURN_1 using SetRegion Call
-                // We cannot use the same client to change the region. See:
-                // https://stackoverflow.com/questions/51478525/httpclient-this-instance-has-already-started-one-or-more-requests-properties-ca
-                using (client = new AuditClient(provider, new ClientConfiguration()))
-                {
-                    client.SetRegion(Region.US_ASHBURN_1);
-                    logger.Info("Changing region to US_ASHBURN_1");
-                    ListEventsResponse listEventsRespDiffRegion = await NoRetryExample(client, listEventsRequest);
-                    logger.Info($"Received {listEventsRespDiffRegion?.Items.Count} items");
                 }
             }
             catch (Exception e)

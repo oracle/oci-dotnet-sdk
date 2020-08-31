@@ -58,19 +58,6 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "isCostTracking")]
         public System.Nullable<bool> IsCostTracking { get; set; }
 
-        /// <value>
-        /// The tag must have a value type, which is specified with a validator. Tags can use either a 
-        /// static value or a list of possible values. Static values are entered by a user applying the tag
-        /// to a resource. Lists are created by you and the user must apply a value from the list. Lists 
-        /// are validiated. 
-        /// <br/>
-        /// If you use the default validiator (or don't define a validator), the user applying the tag 
-        /// enters a value. No additional validation is performed.
-        /// <br/>
-        /// To clear the validator, call UpdateTag with 
-        /// [DefaultTagDefinitionValidator](https://docs.cloud.oracle.com/api/#/en/identity/latest/datatypes/DefaultTagDefinitionValidator).
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "validator")]
         public BaseTagDefinitionValidator Validator { get; set; }
     }

@@ -153,6 +153,30 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
 
         /// <value>
+        /// Indicates whether the Autonomous Database is a refreshable clone.
+        /// </value>
+        [JsonProperty(PropertyName = "isRefreshableClone")]
+        public System.Nullable<bool> IsRefreshableClone { get; set; }
+        ///
+        /// <value>
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// </value>
+        ///
+        public enum RefreshableModeEnum {
+            [EnumMember(Value = "AUTOMATIC")]
+            Automatic,
+            [EnumMember(Value = "MANUAL")]
+            Manual
+        };
+
+        /// <value>
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "refreshableMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
+
+        /// <value>
         /// Indicates whether the Autonomous Database has Data Guard enabled.
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]

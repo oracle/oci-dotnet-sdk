@@ -34,6 +34,12 @@ namespace Oci.ContainerengineService.Models
         public string Name { get; set; }
 
         /// <value>
+        /// The version of Kubernetes this node is running.
+        /// </value>
+        [JsonProperty(PropertyName = "kubernetesVersion")]
+        public string KubernetesVersion { get; set; }
+
+        /// <value>
         /// The name of the availability domain in which this node is placed.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]

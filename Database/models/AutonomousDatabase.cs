@@ -405,6 +405,90 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
 
         /// <value>
+        /// Indicates whether the Autonomous Database is a refreshable clone.
+        /// </value>
+        [JsonProperty(PropertyName = "isRefreshableClone")]
+        public System.Nullable<bool> IsRefreshableClone { get; set; }
+
+        /// <value>
+        /// The date and time when last refresh happened.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastRefresh")]
+        public System.Nullable<System.DateTime> TimeOfLastRefresh { get; set; }
+
+        /// <value>
+        /// The refresh point timestamp (UTC). The refresh point is the time to which the database was most recently refreshed. Data created after the refresh point is not included in the refresh.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastRefreshPoint")]
+        public System.Nullable<System.DateTime> TimeOfLastRefreshPoint { get; set; }
+
+        /// <value>
+        /// The date and time of next refresh.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfNextRefresh")]
+        public System.Nullable<System.DateTime> TimeOfNextRefresh { get; set; }
+        ///
+        /// <value>
+        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// </value>
+        ///
+        public enum OpenModeEnum {
+            [EnumMember(Value = "READ_ONLY")]
+            ReadOnly,
+            [EnumMember(Value = "READ_WRITE")]
+            ReadWrite
+        };
+
+        /// <value>
+        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// </value>
+        [JsonProperty(PropertyName = "openMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OpenModeEnum> OpenMode { get; set; }
+        ///
+        /// <value>
+        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
+        /// </value>
+        ///
+        public enum RefreshableStatusEnum {
+            [EnumMember(Value = "REFRESHING")]
+            Refreshing,
+            [EnumMember(Value = "NOT_REFRESHING")]
+            NotRefreshing
+        };
+
+        /// <value>
+        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "refreshableStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RefreshableStatusEnum> RefreshableStatus { get; set; }
+        ///
+        /// <value>
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// </value>
+        ///
+        public enum RefreshableModeEnum {
+            [EnumMember(Value = "AUTOMATIC")]
+            Automatic,
+            [EnumMember(Value = "MANUAL")]
+            Manual
+        };
+
+        /// <value>
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "refreshableMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that was cloned to create the current Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceId")]
+        public string SourceId { get; set; }
+
+        /// <value>
         /// The timestamp of the last switchover operation for the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastSwitchover")]

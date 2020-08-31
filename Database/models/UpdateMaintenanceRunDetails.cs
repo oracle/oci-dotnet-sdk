@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Describes the modification parameters for the Maintenance Run.
+    /// Describes the modification parameters for the maintenance run.
     /// 
     /// </summary>
     public class UpdateMaintenanceRunDetails 
     {
         
         /// <value>
-        /// If set to false, skips the Maintenance Run.
+        /// If `FALSE`, skips the maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
 
         /// <value>
-        /// The scheduled date and time of the Maintenance Run to update.
+        /// The scheduled date and time of the maintenance run to update.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
