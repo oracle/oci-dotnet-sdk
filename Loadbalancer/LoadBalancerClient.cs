@@ -443,6 +443,44 @@ namespace Oci.LoadbalancerService
         }
 
         /// <summary>
+        /// Creates a custom SSL cipher suite.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateSSLCipherSuiteResponse> CreateSSLCipherSuite(CreateSSLCipherSuiteRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createSSLCipherSuite");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/sslCipherSuites".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateSSLCipherSuiteResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateSSLCipherSuite failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Removes a backend server from a given load balancer and backend set.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -754,6 +792,44 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"DeleteRuleSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes an SSL cipher suite from a load balancer.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteSSLCipherSuiteResponse> DeleteSSLCipherSuite(DeleteSSLCipherSuiteRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteSSLCipherSuite");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/sslCipherSuites/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteSSLCipherSuiteResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteSSLCipherSuite failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1134,6 +1210,44 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"GetRuleSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the specified SSL cipher suite&#39;s configuration information.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetSSLCipherSuiteResponse> GetSSLCipherSuite(GetSSLCipherSuiteRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getSSLCipherSuite");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/sslCipherSuites/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetSSLCipherSuiteResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSSLCipherSuite failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1602,6 +1716,44 @@ namespace Oci.LoadbalancerService
         }
 
         /// <summary>
+        /// Lists all SSL cipher suites associated with the specified load balancer.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListSSLCipherSuitesResponse> ListSSLCipherSuites(ListSSLCipherSuitesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listSSLCipherSuites");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/sslCipherSuites".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListSSLCipherSuitesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSSLCipherSuites failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists the valid load balancer shapes.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2027,6 +2179,44 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"UpdateRuleSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates an existing SSL cipher suite for the specified load balancer.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateSSLCipherSuiteResponse> UpdateSSLCipherSuite(UpdateSSLCipherSuiteRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateSSLCipherSuite");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/sslCipherSuites/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateSSLCipherSuiteResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateSSLCipherSuite failed with error: {e.Message}");
                 throw;
             }
         }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of a Maintenance Run.
+    /// Details of a maintenance run.
     /// 
     /// </summary>
     public class MaintenanceRunSummary 
     {
         
         /// <value>
-        /// The OCID of the Maintenance Run.
+        /// The OCID of the maintenance run.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The user-friendly name for the Maintenance Run.
+        /// The user-friendly name for the maintenance run.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,13 +53,13 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
 
         /// <value>
-        /// The text describing this Maintenance Run.
+        /// Description of the maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         ///
         /// <value>
-        /// The current state of the Maintenance Run.
+        /// The current state of the maintenance run.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Maintenance Run.
+        /// The current state of the maintenance run.
         /// </value>
         /// <remarks>
         /// Required
@@ -99,7 +99,7 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
 
         /// <value>
-        /// The date and time the Maintenance Run is scheduled for.
+        /// The date and time the maintenance run is scheduled to occur.
         /// </value>
         /// <remarks>
         /// Required
@@ -109,19 +109,19 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
 
         /// <value>
-        /// The date and time the Maintenance Run starts.
+        /// The date and time the maintenance run starts.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
 
         /// <value>
-        /// The date and time the Maintenance Run was completed.
+        /// The date and time the maintenance run was completed.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         ///
         /// <value>
-        /// The type of the target resource on which the Maintenance Run occurs.
+        /// The type of the target resource on which the maintenance run occurs.
         /// </value>
         ///
         public enum TargetResourceTypeEnum {
@@ -134,14 +134,14 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The type of the target resource on which the Maintenance Run occurs.
+        /// The type of the target resource on which the maintenance run occurs.
         /// </value>
         [JsonProperty(PropertyName = "targetResourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TargetResourceTypeEnum> TargetResourceType { get; set; }
 
         /// <value>
-        /// The ID of the target resource on which the Maintenance Run occurs.
+        /// The ID of the target resource on which the maintenance run occurs.
         /// </value>
         [JsonProperty(PropertyName = "targetResourceId")]
         public string TargetResourceId { get; set; }

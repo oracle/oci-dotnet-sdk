@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// The Maintenance Run OCID.
+        /// The maintenance run OCID.
         /// </value>
         /// <remarks>
         /// Required

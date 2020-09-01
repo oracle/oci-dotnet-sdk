@@ -132,6 +132,14 @@ namespace Oci.DatabaseService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// Filter on the value of the resource's 'isRefreshableClone' property. A value of `true` returns only refreshable clones.
+        /// A value of `false` excludes refreshable clones from the returned results. Omitting this parameter returns both refreshable clones and databases that are not refreshable clones.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isRefreshableClone")]
+        public System.Nullable<bool> IsRefreshableClone { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that have Data Guard enabled.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDataGuardEnabled")]

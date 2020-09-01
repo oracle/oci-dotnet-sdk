@@ -104,6 +104,45 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Initiates a data refresh for an Autonomous Database refreshable clone. Data is refreshed from the source database to the point of a specified timestamp.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<AutonomousDatabaseManualRefreshResponse> AutonomousDatabaseManualRefresh(AutonomousDatabaseManualRefreshRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called autonomousDatabaseManualRefresh");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousDatabases/{autonomousDatabaseId}/actions/refresh".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AutonomousDatabaseManualRefreshResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AutonomousDatabaseManualRefresh failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Move the Autonomous Container Database and its dependent resources to the specified compartment.
         /// For more information about moving Autonomous Container Databases, see
         /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
@@ -2869,7 +2908,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Maintenance Run.
+        /// Gets information about the specified maintenance run.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3297,6 +3336,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ListAutonomousDatabaseBackups failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the Autonomous Database clones for the specified Autonomous Database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListAutonomousDatabaseClonesResponse> ListAutonomousDatabaseClones(ListAutonomousDatabaseClonesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listAutonomousDatabaseClones");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousDatabases/{autonomousDatabaseId}/clones".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListAutonomousDatabaseClonesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAutonomousDatabaseClones failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4156,7 +4234,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Maintenance Runs in the specified compartment.
+        /// Gets a list of the maintenance runs in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5480,7 +5558,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the properties of a Maintenance Run, such as the state of a Maintenance Run.
+        /// Updates the properties of a maintenance run, such as the state of a maintenance run.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

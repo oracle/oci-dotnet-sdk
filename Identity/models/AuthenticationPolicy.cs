@@ -22,9 +22,6 @@ namespace Oci.IdentityService.Models
     public class AuthenticationPolicy 
     {
         
-        /// <value>
-        /// Password policy.
-        /// </value>
         [JsonProperty(PropertyName = "passwordPolicy")]
         public PasswordPolicy PasswordPolicy { get; set; }
 
@@ -33,5 +30,8 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+
+        [JsonProperty(PropertyName = "networkPolicy")]
+        public NetworkPolicy NetworkPolicy { get; set; }
     }
 }
