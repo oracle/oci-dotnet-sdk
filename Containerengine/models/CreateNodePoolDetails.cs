@@ -94,6 +94,13 @@ namespace Oci.ContainerengineService.Models
         public string NodeShape { get; set; }
 
         /// <value>
+        /// Specify the configuration of the shape to launch nodes in the node pool.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShapeConfig")]
+        public CreateNodeShapeConfigDetails NodeShapeConfig { get; set; }
+
+        /// <value>
         /// A list of key/value pairs to add to nodes after they join the Kubernetes cluster.
         /// </value>
         [JsonProperty(PropertyName = "initialNodeLabels")]

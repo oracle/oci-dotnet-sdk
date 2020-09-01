@@ -22,10 +22,10 @@ namespace Oci.IdentityService.Models
     public class UpdateAuthenticationPolicyDetails 
     {
         
-        /// <value>
-        /// Password policy.
-        /// </value>
         [JsonProperty(PropertyName = "passwordPolicy")]
         public PasswordPolicy PasswordPolicy { get; set; }
+
+        [JsonProperty(PropertyName = "networkPolicy")]
+        public NetworkPolicy NetworkPolicy { get; set; }
     }
 }

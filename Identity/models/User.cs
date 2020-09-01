@@ -182,9 +182,6 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
 
-        /// <value>
-        /// Properties indicating how the user is allowed to authenticate.
-        /// </value>
         [JsonProperty(PropertyName = "capabilities")]
         public UserCapabilities Capabilities { get; set; }
 

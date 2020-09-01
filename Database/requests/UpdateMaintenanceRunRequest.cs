@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// The Maintenance Run OCID.
+        /// The maintenance run OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Requests
         public string MaintenanceRunId { get; set; }
         
         /// <value>
-        /// Request to update the properties of a Maintenance Run.
+        /// Request to update the properties of a maintenance run.
         /// </value>
         /// <remarks>
         /// Required

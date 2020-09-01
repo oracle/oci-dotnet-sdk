@@ -172,6 +172,9 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "hostnames")]
         public System.Collections.Generic.Dictionary<string, Hostname> Hostnames { get; set; }
 
+        [JsonProperty(PropertyName = "sslCipherSuites")]
+        public System.Collections.Generic.Dictionary<string, SSLCipherSuite> SslCipherSuites { get; set; }
+
         [JsonProperty(PropertyName = "certificates")]
         public System.Collections.Generic.Dictionary<string, Certificate> Certificates { get; set; }
 

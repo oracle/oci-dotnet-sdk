@@ -267,7 +267,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress
         };
 
         /// <value>
@@ -425,5 +427,17 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDbSystemId")]
+        public string SourceDbSystemId { get; set; }
+
+        /// <value>
+        /// The point in time for a cloned database system when the data disks were cloned from the source database system, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "pointInTimeDataDiskCloneTimestamp")]
+        public System.Nullable<System.DateTime> PointInTimeDataDiskCloneTimestamp { get; set; }
     }
 }

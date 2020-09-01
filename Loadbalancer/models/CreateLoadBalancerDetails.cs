@@ -146,6 +146,9 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "certificates")]
         public System.Collections.Generic.Dictionary<string, CertificateDetails> Certificates { get; set; }
 
+        [JsonProperty(PropertyName = "sslCipherSuites")]
+        public System.Collections.Generic.Dictionary<string, SSLCipherSuiteDetails> SslCipherSuites { get; set; }
+
         [JsonProperty(PropertyName = "pathRouteSets")]
         public System.Collections.Generic.Dictionary<string, PathRouteSetDetails> PathRouteSets { get; set; }
 

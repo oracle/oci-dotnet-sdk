@@ -93,5 +93,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "nodeShape")]
         public string NodeShape { get; set; }
+
+        /// <value>
+        /// Specify the configuration of the shape to launch nodes in the node pool.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShapeConfig")]
+        public UpdateNodeShapeConfigDetails NodeShapeConfig { get; set; }
     }
 }

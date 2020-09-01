@@ -106,10 +106,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
 
@@ -252,7 +248,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "BACKUP_FROM_ID")]
             BackupFromId,
             [EnumMember(Value = "BACKUP_FROM_TIMESTAMP")]
-            BackupFromTimestamp
+            BackupFromTimestamp,
+            [EnumMember(Value = "CLONE_TO_REFRESHABLE")]
+            CloneToRefreshable
         };
 
         /// <value>
@@ -288,6 +286,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "DATABASE":
                     obj = new CreateAutonomousDatabaseCloneDetails();
+                    break;
+                case "CLONE_TO_REFRESHABLE":
+                    obj = new CreateRefreshableAutonomousDatabaseCloneDetails();
                     break;
                 case "BACKUP_FROM_ID":
                     obj = new CreateAutonomousDatabaseFromBackupDetails();

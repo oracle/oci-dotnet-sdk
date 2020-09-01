@@ -72,6 +72,12 @@ namespace Oci.ContainerengineService.Models
         public string NodeImageName { get; set; }
 
         /// <value>
+        /// The shape configuration of the nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShapeConfig")]
+        public NodeShapeConfig NodeShapeConfig { get; set; }
+
+        /// <value>
         /// Deprecated. see `nodeSourceDetails`. Source running on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeSource")]

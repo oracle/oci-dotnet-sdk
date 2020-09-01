@@ -268,7 +268,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DB_BACKUP")]
             DbBackup,
             [EnumMember(Value = "DATABASE")]
-            Database
+            Database,
+            [EnumMember(Value = "DB_SYSTEM")]
+            DbSystem
         };
 
         /// <value>
@@ -280,6 +282,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "source")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceEnum> Source { get; set; }
+
+        /// <value>
+        /// A private IP address of your choice. Must be an available IP address within the subnet's CIDR.
+        /// If you don't specify a value, Oracle automatically assigns a private IP address from the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIp")]
+        public string PrivateIp { get; set; }
     }
 
     public class LaunchDbSystemBaseModelConverter : JsonConverter
@@ -304,6 +314,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "NONE":
                     obj = new LaunchDbSystemDetails();
+                    break;
+                case "DB_SYSTEM":
+                    obj = new LaunchDbSystemFromDbSystemDetails();
                     break;
                 case "DATABASE":
                     obj = new LaunchDbSystemFromDatabaseDetails();

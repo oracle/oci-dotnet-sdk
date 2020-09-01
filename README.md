@@ -37,9 +37,10 @@ Use either dotnet CLI or Visual Studio to install and consume a package from [nu
 dotnet add package <PACKAGE_ID> --version <VERSION> (If version not specified then it pulls the latest version)
 
 Example:
-dotnet add package OCI.DotNetSDK.Core
-dotnet add package OCI.DotNetSDK.Identity
-dotnet add package OCI.DotNetSDK.Identity -v 1.0.0
+dotnet add package OCI.DotNetSDK.Core (Installs the latest version of the Core Service package)
+dotnet add package OCI.DotNetSDK.Identity -v 1.0.0 (Installs version 1.0.0 of the Identity Service package)
+
+NOTE: To avoid dependency conflicts, you should use the same versions of all OCI .NET SDK Nuget packages within an application.
 ```
 
 - **Visual Studio**:
@@ -91,6 +92,31 @@ catch (Exception e)
     // Handle the exception.
 }
 ```
+
+### Enable Logging
+
+NLog package is used for logging in .NET projects. This package gets auto-installed as a dependency when you install OCI .NET SDK package. In order to view .NET SDK logs, you will need to:
+
+* Add NLog.config file at the project root directory. A sample NLog.config file can be found [here](https://github.com/NLog/NLog/wiki/Configuration-file#nlog-config-xml).
+* Add ItemGroup section in the project file:
+```
+<ItemGroup>
+     <Content Include="PATH TO NLog.config File" >
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </Content>
+</ItemGroup>
+```
+* To enable logging in user application, create a logger:
+```
+var logger = NLog.LogManager.GetCurrentClassLogger();
+logger.Info("Hello World");
+```
+---
+**NOTE**
+
+Only SDK logging will be captured if logger is not created in user application.
+
+---
 
 ## Examples
 
