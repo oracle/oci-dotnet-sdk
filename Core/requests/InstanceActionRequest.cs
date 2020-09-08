@@ -41,7 +41,9 @@ namespace Oci.CoreService.Requests
             [EnumMember(Value = "RESET")]
             Reset,
             [EnumMember(Value = "SOFTSTOP")]
-            Softstop
+            Softstop,
+            [EnumMember(Value = "SENDDIAGNOSTICINTERRUPT")]
+            Senddiagnosticinterrupt
         };
 
         /// <value>

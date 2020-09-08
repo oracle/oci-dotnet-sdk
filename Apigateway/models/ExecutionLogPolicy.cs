@@ -16,21 +16,30 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Configures the pushing of execution logs to OCI Public Logging.
+    /// Configures the logging policies for the execution logs of an API Deployment.
     /// 
     /// </summary>
     public class ExecutionLogPolicy 
     {
         
         /// <value>
-        /// Enables pushing of execution logs to OCI Public Logging.
+        /// Enables pushing of execution logs to the legacy OCI Object Storage log archival bucket.
+        /// <br/>
+        /// Oracle recommends using the OCI Logging service to enable, retrieve, and query execution logs
+        /// for an API Deployment. If there is an active log object for the API Deployment and its
+        /// category is set to 'execution' in OCI Logging service, the logs will not be uploaded to the legacy
+        /// OCI Object Storage log archival bucket.
+        /// <br/>
+        /// Please note that the functionality to push to the legacy OCI Object Storage log
+        /// archival bucket has been deprecated and will be removed in the future.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         ///
         /// <value>
-        /// Specifies the logging level, which affects the log entries pushed to
-        /// OCI Public Logging if `isEnabled` is set to True.
+        /// Specifies the log level used to control logging output of execution logs.
+        /// Enabling logging at a given level also enables logging at all higher levels.
         /// 
         /// </value>
         ///
@@ -44,8 +53,8 @@ namespace Oci.ApigatewayService.Models
         };
 
         /// <value>
-        /// Specifies the logging level, which affects the log entries pushed to
-        /// OCI Public Logging if `isEnabled` is set to True.
+        /// Specifies the log level used to control logging output of execution logs.
+        /// Enabling logging at a given level also enables logging at all higher levels.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logLevel")]

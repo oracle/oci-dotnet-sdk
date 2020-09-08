@@ -182,6 +182,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PatchModelEnum> PatchModel { get; set; }
 
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last patch applied on the system.
+        /// </value>
+        [JsonProperty(PropertyName = "patchId")]
+        public string PatchId { get; set; }
+
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "lastMaintenanceRunId")]

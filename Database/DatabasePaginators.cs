@@ -687,6 +687,55 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListContainerDatabasePatches operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListContainerDatabasePatchesResponse> ListContainerDatabasePatchesResponseEnumerator(ListContainerDatabasePatchesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListContainerDatabasePatchesRequest, ListContainerDatabasePatchesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListContainerDatabasePatches(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousPatchSummary objects
+        /// contained in responses from the ListContainerDatabasePatches operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousPatchSummary> ListContainerDatabasePatchesRecordEnumerator(ListContainerDatabasePatchesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListContainerDatabasePatchesRequest, ListContainerDatabasePatchesResponse, AutonomousPatchSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListContainerDatabasePatches(request, retryConfiguration, cancellationToken).Result,
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListDataGuardAssociations operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -731,6 +780,55 @@ namespace Oci.DatabaseService
                     return request;
                 },
                 request => client.ListDataGuardAssociations(request, retryConfiguration, cancellationToken).Result,
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListDatabaseSoftwareImages operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListDatabaseSoftwareImagesResponse> ListDatabaseSoftwareImagesResponseEnumerator(ListDatabaseSoftwareImagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListDatabaseSoftwareImagesRequest, ListDatabaseSoftwareImagesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDatabaseSoftwareImages(request, retryConfiguration, cancellationToken).Result
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the DatabaseSoftwareImageSummary objects
+        /// contained in responses from the ListDatabaseSoftwareImages operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<DatabaseSoftwareImageSummary> ListDatabaseSoftwareImagesRecordEnumerator(ListDatabaseSoftwareImagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListDatabaseSoftwareImagesRequest, ListDatabaseSoftwareImagesResponse, DatabaseSoftwareImageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDatabaseSoftwareImages(request, retryConfiguration, cancellationToken).Result,
                 response => response.Items
             );
         }
