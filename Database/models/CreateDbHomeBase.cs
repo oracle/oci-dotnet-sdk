@@ -32,6 +32,12 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
 
         /// <value>
+        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
+
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

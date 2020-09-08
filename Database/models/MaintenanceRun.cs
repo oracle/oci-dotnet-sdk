@@ -163,6 +163,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MaintenanceTypeEnum> MaintenanceType { get; set; }
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the patch to be applied in the maintenance run.
+        /// </value>
+        [JsonProperty(PropertyName = "patchId")]
+        public string PatchId { get; set; }
         ///
         /// <value>
         /// Maintenance sub-type.

@@ -47,7 +47,7 @@ namespace Oci.ApigatewayService.Models
         public string GatewayId { get; set; }
 
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// <br/>
         /// Example: My new resource
@@ -70,7 +70,7 @@ namespace Oci.ApigatewayService.Models
         /// <value>
         /// A path on which to deploy all routes contained in the API
         /// deployment specification. For more information, see
-        /// [Deploying an API on an API Gateway by Creating an API 
+        /// [Deploying an API on an API Gateway by Creating an API
         /// Deployment](https://docs.cloud.oracle.com/iaas/Content/APIGateway/Tasks/apigatewaycreatingdeployment.htm).
         /// 
         /// </value>

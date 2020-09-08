@@ -26,7 +26,7 @@ namespace Oci.ApigatewayService.Models
                 ///
         /// <value>
         /// Indicates how authorization should be applied. For a type of ANY_OF, an \"allowedScope\"
-        /// property must also be specfied. Otherwise, only a type is required. For a type of ANONYMOUS, an
+        /// property must also be specified. Otherwise, only a type is required. For a type of ANONYMOUS, an
         /// authenticated API must have the \"isAnonymousAccessAllowed\" property set to \"true\" in the authentication
         /// policy.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.ApigatewayService.Models
 
         /// <value>
         /// Indicates how authorization should be applied. For a type of ANY_OF, an \"allowedScope\"
-        /// property must also be specfied. Otherwise, only a type is required. For a type of ANONYMOUS, an
+        /// property must also be specified. Otherwise, only a type is required. For a type of ANONYMOUS, an
         /// authenticated API must have the \"isAnonymousAccessAllowed\" property set to \"true\" in the authentication
         /// policy.
         /// 

@@ -64,6 +64,9 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "requestPolicies")]
         public ApiSpecificationRouteRequestPolicies RequestPolicies { get; set; }
 
+        [JsonProperty(PropertyName = "responsePolicies")]
+        public ApiSpecificationRouteResponsePolicies ResponsePolicies { get; set; }
+
         [JsonProperty(PropertyName = "loggingPolicies")]
         public ApiSpecificationLoggingPolicies LoggingPolicies { get; set; }
 

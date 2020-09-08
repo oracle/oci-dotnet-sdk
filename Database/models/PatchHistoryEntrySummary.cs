@@ -102,7 +102,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
 
         /// <value>
-        /// The date and time when the patch action completed.
+        /// The date and time when the patch action completed
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }

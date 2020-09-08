@@ -39,6 +39,13 @@ namespace Oci.ResourcesearchService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// The tenancy ID, which can be used to specify a different tenancy (for cross-tenancy authorization) when searching for resources in a different tenancy.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "tenantId")]
+        public string TenantId { get; set; }
+        
+        /// <value>
         /// The unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular
         /// request, please provide the complete request ID.
         /// 
