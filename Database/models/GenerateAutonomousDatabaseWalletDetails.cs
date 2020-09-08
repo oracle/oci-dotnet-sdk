@@ -23,7 +23,13 @@ namespace Oci.DatabaseService.Models
     {
                 ///
         /// <value>
-        /// The type of wallet to generate. `SINGLE` is used to generate a wallet for a single database. `ALL` is used to generate wallet for all databases in the region.
+        /// The type of wallet to generate. 
+        /// <br/>
+        /// **Shared Exadata infrastructure usage:**
+        /// * `SINGLE` - used to generate a wallet for a single database
+        /// * `ALL` - used to generate wallet for all databases in the region
+        /// <br/>
+        /// **Dedicated Exadata infrastructure usage:** Value must be `NULL` if attribute is used.
         /// 
         /// </value>
         ///
@@ -35,7 +41,13 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The type of wallet to generate. `SINGLE` is used to generate a wallet for a single database. `ALL` is used to generate wallet for all databases in the region.
+        /// The type of wallet to generate. 
+        /// <br/>
+        /// **Shared Exadata infrastructure usage:**
+        /// * `SINGLE` - used to generate a wallet for a single database
+        /// * `ALL` - used to generate wallet for all databases in the region
+        /// <br/>
+        /// **Dedicated Exadata infrastructure usage:** Value must be `NULL` if attribute is used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "generateType")]

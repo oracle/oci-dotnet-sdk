@@ -185,5 +185,11 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceDatabasePointInTimeRecoveryTimestamp")]
         public System.Nullable<System.DateTime> SourceDatabasePointInTimeRecoveryTimestamp { get; set; }
+
+        /// <value>
+        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
     }
 }
