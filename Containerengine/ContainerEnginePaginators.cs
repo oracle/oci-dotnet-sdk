@@ -69,7 +69,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListClusters(request, retryConfiguration, cancellationToken).Result
+                request => client.ListClusters(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListClusters(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListClusters(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListNodePools(request, retryConfiguration, cancellationToken).Result
+                request => client.ListNodePools(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListNodePools(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListNodePools(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.ContainerengineService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

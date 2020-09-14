@@ -8,7 +8,7 @@
     <RootNamespace>Oci.MonitoringService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Monitoring</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Monitoring</PackageTags>
     <Description>Monitoring lets you manage metric queries and alarms for assessing the health, capacity, and performance of your cloud resources.</Description>
   </PropertyGroup>
   <ItemGroup>

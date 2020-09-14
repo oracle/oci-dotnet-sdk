@@ -69,7 +69,7 @@ namespace Oci.ManagementdashboardService
                     }
                     return request;
                 },
-                request => client.ListManagementDashboards(request, retryConfiguration, cancellationToken).Result
+                request => client.ListManagementDashboards(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ManagementdashboardService
                     }
                     return request;
                 },
-                request => client.ListManagementDashboards(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListManagementDashboards(request, retryConfiguration, cancellationToken),
                 response => response.ManagementDashboardCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.ManagementdashboardService
                     }
                     return request;
                 },
-                request => client.ListManagementSavedSearches(request, retryConfiguration, cancellationToken).Result
+                request => client.ListManagementSavedSearches(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.ManagementdashboardService
                     }
                     return request;
                 },
-                request => client.ListManagementSavedSearches(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListManagementSavedSearches(request, retryConfiguration, cancellationToken),
                 response => response.ManagementSavedSearchCollection.Items
             );
         }

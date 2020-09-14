@@ -8,7 +8,7 @@
     <RootNamespace>Oci.MysqlService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Mysql</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Mysql</PackageTags>
     <Description>MySQL Database is a fully managed database service that enables organizations to deploy cloud-native applications using the world’s most popular open source database. It is 100% compatible with On-Premises MySQL for a seamless transition to public or hybrid cloud. Leverage your existing Oracle investments and easily integrate MySQL Database Service with Oracle technologies.</Description>
   </PropertyGroup>
   <ItemGroup>

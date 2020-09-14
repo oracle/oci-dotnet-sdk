@@ -145,6 +145,22 @@ namespace Oci.Common
             throw new ArgumentException($"Unable to find region from regionId {regionId}.");
         }
 
+        /// <summary>Returns the Region object from the canonical public region id or region code.</summary>
+        /// <param name="regionCodeOrId">The region id or region code.</param>
+        /// <returns>The region object.</returns>
+        /// <exception>Throws ArgumentException when region id is not found.</exception>
+        public static Region FromRegionCodeOrId(string regionCodeOrId)
+        {
+            foreach (Region region in Values())
+            {
+                if (region.RegionCode.Equals(regionCodeOrId) || region.RegionId.Equals(regionCodeOrId))
+                {
+                    return region;
+                }
+            }
+            throw new ArgumentException($"Unable to find region from regionId or regionCode {regionCodeOrId}.");
+        }
+
         /// <summary>
         /// Return all known Regions in this version of the SDK.
         /// </summary>

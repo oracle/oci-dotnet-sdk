@@ -170,5 +170,25 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
+        ///
+        /// <value>
+        /// The entitlement used for billing purposes.
+        /// </value>
+        ///
+        public enum ConsumptionModelEnum {
+            [EnumMember(Value = "UCM")]
+            Ucm,
+            [EnumMember(Value = "GOV")]
+            Gov,
+            [EnumMember(Value = "OIC4SAAS")]
+            Oic4Saas
+        };
+
+        /// <value>
+        /// The entitlement used for billing purposes.
+        /// </value>
+        [JsonProperty(PropertyName = "consumptionModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
     }
 }

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ManagementdashboardService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Managementdashboard</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Managementdashboard</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Management Dashboard Service</Description>
   </PropertyGroup>
   <ItemGroup>

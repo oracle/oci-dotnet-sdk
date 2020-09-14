@@ -69,7 +69,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListAccessRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAccessRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListAccessRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAccessRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListAddressLists(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAddressLists(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListAddressLists(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAddressLists(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCachingRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCachingRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCachingRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCachingRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCaptchas(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCaptchas(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCaptchas(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCaptchas(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCertificates(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCertificates(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCertificates(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCertificates(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCustomProtectionRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCustomProtectionRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListCustomProtectionRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCustomProtectionRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListEdgeSubnets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEdgeSubnets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListEdgeSubnets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEdgeSubnets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListGoodBots(request, retryConfiguration, cancellationToken).Result
+                request => client.ListGoodBots(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListGoodBots(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListGoodBots(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListProtectionRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListProtectionRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListProtectionRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListProtectionRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListRecommendations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListRecommendations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListRecommendations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListRecommendations(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListThreatFeeds(request, retryConfiguration, cancellationToken).Result
+                request => client.ListThreatFeeds(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListThreatFeeds(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListThreatFeeds(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWaasPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWaasPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWaasPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWaasPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWaasPolicyCustomProtectionRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWaasPolicyCustomProtectionRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWaasPolicyCustomProtectionRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWaasPolicyCustomProtectionRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafBlockedRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWafBlockedRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafBlockedRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWafBlockedRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWafLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWafLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWafRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWafRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafTraffic(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWafTraffic(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWafTraffic(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWafTraffic(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWhitelists(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWhitelists(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWhitelists(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWhitelists(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

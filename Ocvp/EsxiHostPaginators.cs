@@ -69,7 +69,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListEsxiHosts(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEsxiHosts(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListEsxiHosts(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEsxiHosts(request, retryConfiguration, cancellationToken),
                 response => response.EsxiHostCollection.Items
             );
         }

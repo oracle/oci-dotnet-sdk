@@ -69,7 +69,7 @@ namespace Oci.BudgetService
                     }
                     return request;
                 },
-                request => client.ListAlertRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAlertRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.BudgetService
                     }
                     return request;
                 },
-                request => client.ListAlertRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAlertRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.BudgetService
                     }
                     return request;
                 },
-                request => client.ListBudgets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBudgets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.BudgetService
                     }
                     return request;
                 },
-                request => client.ListBudgets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBudgets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

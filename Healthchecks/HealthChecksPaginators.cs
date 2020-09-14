@@ -69,7 +69,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHealthChecksVantagePoints(request, retryConfiguration, cancellationToken).Result
+                request => client.ListHealthChecksVantagePoints(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHealthChecksVantagePoints(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListHealthChecksVantagePoints(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHttpMonitors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListHttpMonitors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHttpMonitors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListHttpMonitors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHttpProbeResults(request, retryConfiguration, cancellationToken).Result
+                request => client.ListHttpProbeResults(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListHttpProbeResults(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListHttpProbeResults(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListPingMonitors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPingMonitors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListPingMonitors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPingMonitors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListPingProbeResults(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPingProbeResults(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.HealthchecksService
                     }
                     return request;
                 },
-                request => client.ListPingProbeResults(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPingProbeResults(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

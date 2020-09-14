@@ -104,6 +104,26 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "MessagePacks is required.")]
         [JsonProperty(PropertyName = "messagePacks")]
         public System.Nullable<int> MessagePacks { get; set; }
+        ///
+        /// <value>
+        /// Optional parameter specifying which entitlement to use for billing purposes. Only required if the account possesses more than one entitlement.
+        /// </value>
+        ///
+        public enum ConsumptionModelEnum {
+            [EnumMember(Value = "UCM")]
+            Ucm,
+            [EnumMember(Value = "GOV")]
+            Gov,
+            [EnumMember(Value = "OIC4SAAS")]
+            Oic4Saas
+        };
+
+        /// <value>
+        /// Optional parameter specifying which entitlement to use for billing purposes. Only required if the account possesses more than one entitlement.
+        /// </value>
+        [JsonProperty(PropertyName = "consumptionModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
 
         /// <value>
         /// The file server is enabled or not.

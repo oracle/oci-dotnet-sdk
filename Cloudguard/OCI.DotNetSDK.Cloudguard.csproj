@@ -1,0 +1,19 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{07500F04-31D4-4308-8C76-E3CE732059BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>OCI.DotNetSDK.Cloudguard</PackageId>
+    <RootNamespace>Oci.CloudguardService</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Cloudguard</PackageTags>
+    <Description>Oracle Cloud Infrastructure Cloud Cloud Guard Service</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+</Project>

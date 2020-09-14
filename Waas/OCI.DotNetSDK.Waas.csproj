@@ -8,7 +8,7 @@
     <RootNamespace>Oci.WaasService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Waas</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Waas</PackageTags>
     <Description>The Oracle Cloud Infrastructure (OCI) Website Application Firewall (WAF) is to inspect all traffic destined to your web application origin and identify and block any malicious traffic. The WAF service is powered by the Oracle Cloud Infrastructure Web Application Acceleration and Security (WAAS) API. All WAF related calls must be made using the WAAS API.</Description>
   </PropertyGroup>
   <ItemGroup>

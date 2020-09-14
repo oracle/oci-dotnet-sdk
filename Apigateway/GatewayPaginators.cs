@@ -69,7 +69,7 @@ namespace Oci.ApigatewayService
                     }
                     return request;
                 },
-                request => client.ListGateways(request, retryConfiguration, cancellationToken).Result
+                request => client.ListGateways(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ApigatewayService
                     }
                     return request;
                 },
-                request => client.ListGateways(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListGateways(request, retryConfiguration, cancellationToken),
                 response => response.GatewayCollection.Items
             );
         }

@@ -8,7 +8,7 @@
     <RootNamespace>Oci.KeymanagementService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Keymanagement</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Keymanagement</PackageTags>
     <Description>Oracle Cloud Infrastructure's Key Management Service (KMS) makes it easy for customers to control the encryption keys that protect their data and audit key usage.</Description>
   </PropertyGroup>
   <ItemGroup>

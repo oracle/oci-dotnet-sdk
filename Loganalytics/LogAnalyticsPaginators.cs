@@ -69,7 +69,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListAssociatedEntities(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAssociatedEntities(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListAssociatedEntities(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAssociatedEntities(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsAssociatedEntityCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListConfigWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConfigWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListConfigWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConfigWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsConfigWorkRequestCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListEntityAssociations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEntityAssociations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListEntityAssociations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEntityAssociations(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsEntityCollection.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListEntitySourceAssociations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEntitySourceAssociations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListEntitySourceAssociations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEntitySourceAssociations(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsAssociationCollection.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListFields(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFields(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListFields(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFields(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsFieldCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabelPriorities(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLabelPriorities(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabelPriorities(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLabelPriorities(request, retryConfiguration, cancellationToken),
                 response => response.LabelPriorityCollection.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabelSourceDetails(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLabelSourceDetails(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabelSourceDetails(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLabelSourceDetails(request, retryConfiguration, cancellationToken),
                 response => response.LabelSourceCollection.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabels(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLabels(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLabels(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLabels(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsLabelCollection.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsEntities(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogAnalyticsEntities(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsEntities(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogAnalyticsEntities(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsEntityCollection.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsEntityTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogAnalyticsEntityTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsEntityTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogAnalyticsEntityTypes(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsEntityTypeCollection.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsLogGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogAnalyticsLogGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsLogGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogAnalyticsLogGroups(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsLogGroupSummaryCollection.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsObjectCollectionRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogAnalyticsObjectCollectionRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListLogAnalyticsObjectCollectionRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogAnalyticsObjectCollectionRules(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsObjectCollectionRuleCollection.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListMetaSourceTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMetaSourceTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListMetaSourceTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMetaSourceTypes(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsMetaSourceTypeCollection.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParserFunctions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListParserFunctions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParserFunctions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListParserFunctions(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsParserFunctionCollection.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParserMetaPlugins(request, retryConfiguration, cancellationToken).Result
+                request => client.ListParserMetaPlugins(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParserMetaPlugins(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListParserMetaPlugins(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsParserMetaPluginCollection.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParsers(request, retryConfiguration, cancellationToken).Result
+                request => client.ListParsers(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListParsers(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListParsers(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsParserCollection.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListQueryWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListQueryWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListQueryWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListQueryWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.QueryWorkRequestCollection.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListScheduledTasks(request, retryConfiguration, cancellationToken).Result
+                request => client.ListScheduledTasks(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListScheduledTasks(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListScheduledTasks(request, retryConfiguration, cancellationToken),
                 response => response.ScheduledTaskCollection.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceAssociations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSourceAssociations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceAssociations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSourceAssociations(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsAssociationCollection.Items
             );
         }
@@ -1000,7 +1000,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceExtendedFieldDefinitions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSourceExtendedFieldDefinitions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1024,7 +1024,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceExtendedFieldDefinitions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSourceExtendedFieldDefinitions(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsSourceExtendedFieldDefinitionCollection.Items
             );
         }
@@ -1049,7 +1049,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceLabelOperators(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSourceLabelOperators(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1073,7 +1073,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceLabelOperators(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSourceLabelOperators(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsLabelOperatorCollection.Items
             );
         }
@@ -1098,7 +1098,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceMetaFunctions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSourceMetaFunctions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1122,7 +1122,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourceMetaFunctions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSourceMetaFunctions(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsMetaFunctionCollection.Items
             );
         }
@@ -1147,7 +1147,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourcePatterns(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSourcePatterns(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1171,7 +1171,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSourcePatterns(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSourcePatterns(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsSourcePatternCollection.Items
             );
         }
@@ -1196,7 +1196,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSources(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSources(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1220,7 +1220,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListSources(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSources(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsSourceCollection.Items
             );
         }
@@ -1245,7 +1245,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListStorageWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListStorageWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1269,7 +1269,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListStorageWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListStorageWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestErrorCollection.Items
             );
         }
@@ -1294,7 +1294,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListStorageWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListStorageWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1318,7 +1318,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListStorageWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListStorageWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.StorageWorkRequestCollection.Items
             );
         }
@@ -1343,7 +1343,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploadFiles(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUploadFiles(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1367,7 +1367,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploadFiles(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUploadFiles(request, retryConfiguration, cancellationToken),
                 response => response.UploadFileCollection.Items
             );
         }
@@ -1392,7 +1392,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploadWarnings(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUploadWarnings(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1416,7 +1416,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploadWarnings(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUploadWarnings(request, retryConfiguration, cancellationToken),
                 response => response.UploadWarningCollection.Items
             );
         }
@@ -1441,7 +1441,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploads(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUploads(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1465,7 +1465,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListUploads(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUploads(request, retryConfiguration, cancellationToken),
                 response => response.UploadCollection.Items
             );
         }
@@ -1490,7 +1490,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1514,7 +1514,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestErrorCollection.Items
             );
         }
@@ -1539,7 +1539,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1563,7 +1563,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestLogCollection.Items
             );
         }
@@ -1588,7 +1588,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1612,7 +1612,7 @@ namespace Oci.LoganalyticsService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestCollection.Items
             );
         }

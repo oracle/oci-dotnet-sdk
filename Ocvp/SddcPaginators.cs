@@ -69,7 +69,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListSddcs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSddcs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListSddcs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSddcs(request, retryConfiguration, cancellationToken),
                 response => response.SddcCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListSupportedVmwareSoftwareVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSupportedVmwareSoftwareVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.OcvpService
                     }
                     return request;
                 },
-                request => client.ListSupportedVmwareSoftwareVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSupportedVmwareSoftwareVersions(request, retryConfiguration, cancellationToken),
                 response => response.SupportedVmwareSoftwareVersionCollection.Items
             );
         }

@@ -8,7 +8,7 @@
     <RootNamespace>Oci.IntegrationService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Integration</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Integration</PackageTags>
     <Description>Oracle Integration is a fully managed, preconfigured environment where you can integrate your applications, automate processes, gain Insight into your business processes, analyze business process performance using dashboards, create visual applications, and support B2B integrations.</Description>
   </PropertyGroup>
   <ItemGroup>

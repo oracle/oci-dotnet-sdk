@@ -8,7 +8,7 @@
     <RootNamespace>Oci.FilestorageService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Filestorage</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Filestorage</PackageTags>
     <Description>The File Storage service helps you manage shared file systems, mount targets, and snapshots.</Description>
   </PropertyGroup>
   <ItemGroup>

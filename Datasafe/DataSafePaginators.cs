@@ -69,7 +69,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListDataSafePrivateEndpoints(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataSafePrivateEndpoints(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListDataSafePrivateEndpoints(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataSafePrivateEndpoints(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DatasafeService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

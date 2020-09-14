@@ -8,7 +8,7 @@
     <RootNamespace>Oci.DatacatalogService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Datacatalog</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Datacatalog</PackageTags>
     <Description>Data Catalog is a collaborative metadata management solution that lets you be more insightful about the data you have in Oracle Cloud and beyond. With Data Catalog, data consumers can easily find, understand, govern, and track Oracle Cloud data assets.</Description>
   </PropertyGroup>
   <ItemGroup>

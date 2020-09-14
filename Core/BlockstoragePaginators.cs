@@ -69,7 +69,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.GetVolumeBackupPolicyAssetAssignment(request, retryConfiguration, cancellationToken).Result
+                request => client.GetVolumeBackupPolicyAssetAssignment(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.GetVolumeBackupPolicyAssetAssignment(request, retryConfiguration, cancellationToken).Result,
+                request => client.GetVolumeBackupPolicyAssetAssignment(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumeBackups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBootVolumeBackups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumeBackups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBootVolumeBackups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBootVolumes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBootVolumes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeBackupPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumeBackupPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeBackupPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumeBackupPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeBackups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumeBackups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeBackups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumeBackups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeGroupBackups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumeGroupBackups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeGroupBackups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumeGroupBackups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumeGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumeGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

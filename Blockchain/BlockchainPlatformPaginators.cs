@@ -69,7 +69,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListBlockchainPlatforms(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBlockchainPlatforms(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListBlockchainPlatforms(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBlockchainPlatforms(request, retryConfiguration, cancellationToken),
                 response => response.BlockchainPlatformCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListOsns(request, retryConfiguration, cancellationToken).Result
+                request => client.ListOsns(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListOsns(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListOsns(request, retryConfiguration, cancellationToken),
                 response => response.OsnCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListPeers(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPeers(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListPeers(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPeers(request, retryConfiguration, cancellationToken),
                 response => response.PeerCollection.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestErrorCollection.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestLogEntryCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.BlockchainService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestCollection.Items
             );
         }

@@ -8,7 +8,7 @@
     <RootNamespace>Oci.DatabaseService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Database</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Database</PackageTags>
     <Description>The Database service helps you provision and manage Oracle databases.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.BlockchainService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Blockchain</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Blockchain</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Blockchain Service</Description>
   </PropertyGroup>
   <ItemGroup>

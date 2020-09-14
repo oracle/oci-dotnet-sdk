@@ -8,7 +8,7 @@
     <RootNamespace>Oci.DnsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Dns</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Dns</PackageTags>
     <Description>The DNS service helps you create and manage your DNS zones.</Description>
   </PropertyGroup>
   <ItemGroup>

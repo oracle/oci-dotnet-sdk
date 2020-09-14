@@ -69,7 +69,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListVaults(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVaults(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListVaults(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVaults(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

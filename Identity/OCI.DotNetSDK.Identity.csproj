@@ -8,7 +8,7 @@
     <RootNamespace>Oci.IdentityService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Identity</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Identity</PackageTags>
     <Description>The Identity service helps you set up administrators, users, and groups and specify their permissions.</Description>
   </PropertyGroup>
   <ItemGroup>

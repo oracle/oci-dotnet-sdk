@@ -69,7 +69,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListLimitDefinitions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLimitDefinitions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListLimitDefinitions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLimitDefinitions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListLimitValues(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLimitValues(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListLimitValues(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLimitValues(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListServices(request, retryConfiguration, cancellationToken).Result
+                request => client.ListServices(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListServices(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListServices(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

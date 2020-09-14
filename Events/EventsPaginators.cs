@@ -69,7 +69,7 @@ namespace Oci.EventsService
                     }
                     return request;
                 },
-                request => client.ListRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.EventsService
                     }
                     return request;
                 },
-                request => client.ListRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListRules(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

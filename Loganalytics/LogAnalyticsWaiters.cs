@@ -116,6 +116,33 @@ namespace Oci.LoganalyticsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetQueryWorkRequestRequest, GetQueryWorkRequestResponse> ForQueryWorkRequest(GetQueryWorkRequestRequest request, params WorkRequestStatus[] targetStates)
+        {
+            return this.ForQueryWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetQueryWorkRequestRequest, GetQueryWorkRequestResponse> ForQueryWorkRequest(GetQueryWorkRequestRequest request, WaiterConfiguration config, params WorkRequestStatus[] targetStates)
+        {
+            var agent = new WaiterAgent<GetQueryWorkRequestRequest, GetQueryWorkRequestResponse>(
+                request,
+                request => client.GetQueryWorkRequest(request),
+                response => targetStates.Contains(response.QueryWorkRequest.Status.Value)
+            );
+            return new Waiter<GetQueryWorkRequestRequest, GetQueryWorkRequestResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetScheduledTaskRequest, GetScheduledTaskResponse> ForScheduledTask(GetScheduledTaskRequest request, params ScheduledTask.LifecycleStateEnum[] targetStates)
         {
             return this.ForScheduledTask(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -137,6 +164,33 @@ namespace Oci.LoganalyticsService
                 targetStates.Contains(ScheduledTask.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetScheduledTaskRequest, GetScheduledTaskResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetStorageWorkRequestRequest, GetStorageWorkRequestResponse> ForStorageWorkRequest(GetStorageWorkRequestRequest request, params WorkRequestStatus[] targetStates)
+        {
+            return this.ForStorageWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetStorageWorkRequestRequest, GetStorageWorkRequestResponse> ForStorageWorkRequest(GetStorageWorkRequestRequest request, WaiterConfiguration config, params WorkRequestStatus[] targetStates)
+        {
+            var agent = new WaiterAgent<GetStorageWorkRequestRequest, GetStorageWorkRequestResponse>(
+                request,
+                request => client.GetStorageWorkRequest(request),
+                response => targetStates.Contains(response.StorageWorkRequest.Status.Value)
+            );
+            return new Waiter<GetStorageWorkRequestRequest, GetStorageWorkRequestResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

@@ -69,7 +69,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogIncludedSearches(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogIncludedSearches(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogIncludedSearches(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogIncludedSearches(request, retryConfiguration, cancellationToken),
                 response => response.LogIncludedSearchSummaryCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogSavedSearches(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogSavedSearches(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogSavedSearches(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogSavedSearches(request, retryConfiguration, cancellationToken),
                 response => response.LogSavedSearchSummaryCollection.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListUnifiedAgentConfigurations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUnifiedAgentConfigurations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListUnifiedAgentConfigurations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUnifiedAgentConfigurations(request, retryConfiguration, cancellationToken),
                 response => response.UnifiedAgentConfigurationCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.LoggingService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

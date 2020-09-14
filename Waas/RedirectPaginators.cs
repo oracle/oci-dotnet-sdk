@@ -69,7 +69,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListHttpRedirects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListHttpRedirects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.WaasService
                     }
                     return request;
                 },
-                request => client.ListHttpRedirects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListHttpRedirects(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

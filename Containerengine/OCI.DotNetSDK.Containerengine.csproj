@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ContainerengineService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Containerengine</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Containerengine</PackageTags>
     <Description>Container Engine for Kubernetes helps you define and create Kubernetes clusters to enable the deployment, scaling, and management of containerized applications.</Description>
   </PropertyGroup>
   <ItemGroup>

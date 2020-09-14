@@ -8,7 +8,7 @@
     <RootNamespace>Oci.OsmanagementService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Osmanagement</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osmanagement</PackageTags>
     <Description>OS Management helps you keep operating platforms in your Compute instances secure and up to date with the latest patches and updates from the respective vendor.</Description>
   </PropertyGroup>
   <ItemGroup>

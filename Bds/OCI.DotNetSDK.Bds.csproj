@@ -8,7 +8,7 @@
     <RootNamespace>Oci.BdsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;BigDataService;Bds</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;BigDataService;Bds</PackageTags>
     <Description>The Oracle Big Data service provides enterprise-grade Hadoop as a service, with end-to-end security, high performance, and ease of management and upgradeability.</Description>
   </PropertyGroup>
   <ItemGroup>

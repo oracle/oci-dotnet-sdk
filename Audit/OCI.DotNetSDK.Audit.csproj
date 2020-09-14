@@ -8,7 +8,7 @@
     <RootNamespace>Oci.AuditService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Audit</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Audit</PackageTags>
     <Description>The Audit service helps you track activity in your environment.</Description>
   </PropertyGroup>
   <ItemGroup>
