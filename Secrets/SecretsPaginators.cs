@@ -69,7 +69,7 @@ namespace Oci.SecretsService
                     }
                     return request;
                 },
-                request => client.ListSecretBundleVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSecretBundleVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.SecretsService
                     }
                     return request;
                 },
-                request => client.ListSecretBundleVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSecretBundleVersions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

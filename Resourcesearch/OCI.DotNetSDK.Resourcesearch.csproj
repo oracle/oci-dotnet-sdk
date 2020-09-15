@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ResourcesearchService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Resourcesearch</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Resourcesearch</PackageTags>
     <Description>Search helps you find resources in your tenancy without requiring you to navigate through different services and compartments.</Description>
   </PropertyGroup>
   <ItemGroup>

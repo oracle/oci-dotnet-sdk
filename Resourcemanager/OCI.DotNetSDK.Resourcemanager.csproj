@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ResourcemanagerService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Resourcemanager</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Resourcemanager</PackageTags>
     <Description>Resource Manager helps you install, configure, and manage resources using the "infrastructure-as-code" model.</Description>
   </PropertyGroup>
   <ItemGroup>

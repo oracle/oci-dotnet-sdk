@@ -69,7 +69,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListBulkActionResourceTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBulkActionResourceTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListBulkActionResourceTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBulkActionResourceTypes(request, retryConfiguration, cancellationToken),
                 response => response.BulkActionResourceTypeCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListCompartments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCompartments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListCompartments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCompartments(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListCostTrackingTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCostTrackingTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListCostTrackingTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCostTrackingTags(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListDynamicGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDynamicGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListDynamicGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDynamicGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdentityProviderGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListIdentityProviderGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdentityProviderGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListIdentityProviderGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdentityProviders(request, retryConfiguration, cancellationToken).Result
+                request => client.ListIdentityProviders(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdentityProviders(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListIdentityProviders(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdpGroupMappings(request, retryConfiguration, cancellationToken).Result
+                request => client.ListIdpGroupMappings(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListIdpGroupMappings(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListIdpGroupMappings(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListMfaTotpDevices(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMfaTotpDevices(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListMfaTotpDevices(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMfaTotpDevices(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListNetworkSources(request, retryConfiguration, cancellationToken).Result
+                request => client.ListNetworkSources(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListNetworkSources(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListNetworkSources(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListOAuthClientCredentials(request, retryConfiguration, cancellationToken).Result
+                request => client.ListOAuthClientCredentials(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListOAuthClientCredentials(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListOAuthClientCredentials(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTagDefaults(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTagDefaults(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTagDefaults(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTagDefaults(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTagNamespaces(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTagNamespaces(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTagNamespaces(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTagNamespaces(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaggingWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaggingWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaggingWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaggingWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaggingWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTaggingWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaggingWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTags(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListUserGroupMemberships(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUserGroupMemberships(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListUserGroupMemberships(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUserGroupMemberships(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1000,7 +1000,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListUsers(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUsers(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1024,7 +1024,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListUsers(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUsers(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1049,7 +1049,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1073,7 +1073,7 @@ namespace Oci.IdentityService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

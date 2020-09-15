@@ -8,7 +8,7 @@
     <RootNamespace>Oci.FunctionsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Functions</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Functions</PackageTags>
     <Description>The Functions service helps you build and deploy applications and functions.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@
     <RootNamespace>Oci.MarketplaceService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Marketplace</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplace</PackageTags>
     <Description>Marketplace provides you with images from trusted Oracle partners that you can deploy to an instance in your environment.</Description>
   </PropertyGroup>
   <ItemGroup>

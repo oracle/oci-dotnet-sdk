@@ -8,7 +8,7 @@
     <RootNamespace>Oci.HealthchecksService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Healthchecks</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Healthchecks</PackageTags>
     <Description>The Healthchecks service helps you monitor the health of your endpoints.</Description>
   </PropertyGroup>
   <ItemGroup>

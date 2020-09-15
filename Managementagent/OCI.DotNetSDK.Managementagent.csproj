@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ManagementagentService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Managementagent</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Managementagent</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Management Agent Service</Description>
   </PropertyGroup>
   <ItemGroup>

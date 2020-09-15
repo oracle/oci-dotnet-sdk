@@ -69,7 +69,7 @@ namespace Oci.VaultService
                     }
                     return request;
                 },
-                request => client.ListSecretVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSecretVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.VaultService
                     }
                     return request;
                 },
-                request => client.ListSecretVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSecretVersions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.VaultService
                     }
                     return request;
                 },
-                request => client.ListSecrets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSecrets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.VaultService
                     }
                     return request;
                 },
-                request => client.ListSecrets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSecrets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

@@ -69,7 +69,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListAlarms(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAlarms(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListAlarms(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAlarms(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListAlarmsStatus(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAlarmsStatus(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListAlarmsStatus(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAlarmsStatus(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListMetrics(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMetrics(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.MonitoringService
                     }
                     return request;
                 },
-                request => client.ListMetrics(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMetrics(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

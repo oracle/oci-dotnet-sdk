@@ -69,7 +69,7 @@ namespace Oci.ApigatewayService
                     }
                     return request;
                 },
-                request => client.ListDeployments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDeployments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ApigatewayService
                     }
                     return request;
                 },
-                request => client.ListDeployments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDeployments(request, retryConfiguration, cancellationToken),
                 response => response.DeploymentCollection.Items
             );
         }

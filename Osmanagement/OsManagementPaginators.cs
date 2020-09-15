@@ -69,7 +69,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailablePackagesForManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAvailablePackagesForManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailablePackagesForManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAvailablePackagesForManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableSoftwareSourcesForManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAvailableSoftwareSourcesForManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableSoftwareSourcesForManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAvailableSoftwareSourcesForManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableUpdatesForManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAvailableUpdatesForManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableUpdatesForManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAvailableUpdatesForManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableWindowsUpdatesForManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAvailableWindowsUpdatesForManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListAvailableWindowsUpdatesForManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAvailableWindowsUpdatesForManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListManagedInstanceGroups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListManagedInstanceGroups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListManagedInstanceGroups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListManagedInstanceGroups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListManagedInstances(request, retryConfiguration, cancellationToken).Result
+                request => client.ListManagedInstances(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListManagedInstances(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListManagedInstances(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListPackagesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPackagesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListPackagesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPackagesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListScheduledJobs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListScheduledJobs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListScheduledJobs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListScheduledJobs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListSoftwareSourcePackages(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSoftwareSourcePackages(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListSoftwareSourcePackages(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSoftwareSourcePackages(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListSoftwareSources(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSoftwareSources(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListSoftwareSources(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSoftwareSources(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListUpcomingScheduledJobs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListUpcomingScheduledJobs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListUpcomingScheduledJobs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListUpcomingScheduledJobs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWindowsUpdatesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWindowsUpdatesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWindowsUpdatesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWindowsUpdatesInstalledOnManagedInstance(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.SearchSoftwarePackages(request, retryConfiguration, cancellationToken).Result
+                request => client.SearchSoftwarePackages(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.OsmanagementService
                     }
                     return request;
                 },
-                request => client.SearchSoftwarePackages(request, retryConfiguration, cancellationToken).Result,
+                request => client.SearchSoftwarePackages(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.SchService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Sch</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Sch</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Sch Service</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -69,7 +69,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListConnectHarnesses(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConnectHarnesses(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListConnectHarnesses(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConnectHarnesses(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListStreamPools(request, retryConfiguration, cancellationToken).Result
+                request => client.ListStreamPools(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListStreamPools(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListStreamPools(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListStreams(request, retryConfiguration, cancellationToken).Result
+                request => client.ListStreams(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.StreamingService
                     }
                     return request;
                 },
-                request => client.ListStreams(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListStreams(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

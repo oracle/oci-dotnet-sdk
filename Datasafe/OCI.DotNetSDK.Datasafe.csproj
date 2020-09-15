@@ -8,7 +8,7 @@
     <PackageId>OCI.DotNetSDK.Datasafe</PackageId>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Datasafe</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Datasafe</PackageTags>
     <Description>Oracle Data Safe is a fully-integrated Cloud service focused on the security of your data. It provides a complete and integrated set of features for protecting sensitive and regulated data in Oracle Cloud databases. Features include Security Assessment, User Assessment, Data Discovery, Data Masking, and Activity Auditing.</Description>
   </PropertyGroup>
   <ItemGroup>

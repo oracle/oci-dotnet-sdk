@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ApplicationmigrationService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Applicationmigration</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Applicationmigration</PackageTags>
     <Description>Application Migration simplifies the migration of applications from Oracle Cloud Infrastructure Classic to Oracle Cloud Infrastructure.</Description>
   </PropertyGroup>
   <ItemGroup>

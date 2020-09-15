@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ApigatewayService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Apigateway</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Apigateway</PackageTags>
     <Description>The API Gateway service helps you publish APIs with private and public endpoints.</Description>
   </PropertyGroup>
   <ItemGroup>

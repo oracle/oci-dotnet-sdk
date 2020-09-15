@@ -8,7 +8,7 @@
     <RootNamespace>Oci.StreamingService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Streaming</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Streaming</PackageTags>
     <Description>Streaming helps you consume and process high-volume streams of data in real time.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -69,7 +69,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetDomainRecords(request, retryConfiguration, cancellationToken).Result
+                request => client.GetDomainRecords(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetDomainRecords(request, retryConfiguration, cancellationToken).Result,
+                request => client.GetDomainRecords(request, retryConfiguration, cancellationToken),
                 response => response.RecordCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetRRSet(request, retryConfiguration, cancellationToken).Result
+                request => client.GetRRSet(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetRRSet(request, retryConfiguration, cancellationToken).Result,
+                request => client.GetRRSet(request, retryConfiguration, cancellationToken),
                 response => response.RRSet.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetZoneRecords(request, retryConfiguration, cancellationToken).Result
+                request => client.GetZoneRecords(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.GetZoneRecords(request, retryConfiguration, cancellationToken).Result,
+                request => client.GetZoneRecords(request, retryConfiguration, cancellationToken),
                 response => response.RecordCollection.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListSteeringPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSteeringPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListSteeringPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSteeringPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListSteeringPolicyAttachments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSteeringPolicyAttachments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListSteeringPolicyAttachments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSteeringPolicyAttachments(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListTsigKeys(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTsigKeys(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListTsigKeys(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTsigKeys(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListZones(request, retryConfiguration, cancellationToken).Result
+                request => client.ListZones(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.DnsService
                     }
                     return request;
                 },
-                request => client.ListZones(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListZones(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

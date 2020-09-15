@@ -8,7 +8,7 @@
     <RootNamespace>Oci.BudgetService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Budget</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Budget</PackageTags>
     <Description>To manage budgets and budget alerts</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@ namespace Oci.Common.Waiters
         private readonly WaiterAgent<Request, Response> agent;
         private readonly WaiterConfiguration configuration;
 
-        // A function which invokes waiter agent to wait until 
+        // A function which invokes waiter agent to wait until
         // a condition is met and returns the response.
         private readonly Func<Response> invokableWaiterAgent;
 
@@ -34,10 +34,17 @@ namespace Oci.Common.Waiters
         }
 
         /// <summary>
-        /// Executes the waiter agent and blocks the current thread until the condition is met or throws an exception.
+        /// Executes the waiter agent in a new thread and it is blocked until the condition is met or throws an exception.
         /// </summary>
         /// <returns>Response</returns>
         public Response Execute()
+        {
+            var task = Task.Run<Response>(() => GetResponse());
+            var response = task.Result;
+            return response;
+        }
+
+        private Response GetResponse()
         {
             if (this.invokableWaiterAgent != null)
             {

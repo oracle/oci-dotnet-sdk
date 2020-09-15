@@ -69,7 +69,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListClusterNetworkInstances(request, retryConfiguration, cancellationToken).Result
+                request => client.ListClusterNetworkInstances(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListClusterNetworkInstances(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListClusterNetworkInstances(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListClusterNetworks(request, retryConfiguration, cancellationToken).Result
+                request => client.ListClusterNetworks(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListClusterNetworks(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListClusterNetworks(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceConfigurations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstanceConfigurations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceConfigurations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstanceConfigurations(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstancePoolInstances(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstancePoolInstances(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstancePoolInstances(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstancePoolInstances(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstancePools(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstancePools(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstancePools(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstancePools(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

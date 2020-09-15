@@ -8,7 +8,7 @@
     <RootNamespace>Oci.CimsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;IncidentManagement;Cims</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;IncidentManagement;Cims</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Incident Management Service</Description>
   </PropertyGroup>
   <ItemGroup>

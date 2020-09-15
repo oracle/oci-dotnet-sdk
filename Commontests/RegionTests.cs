@@ -81,6 +81,28 @@ namespace Oci.Common
             Assert.Throws<ArgumentException>(() => Region.Register(existingRegionId, Realm.OC2));
         }
 
+        [Theory]
+        [InlineData("us-phoenix-1", "phx")]
+        [InlineData("eu-frankfurt-1", "fra")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void FromRegionIdOrCodeTest(string regionId, string regionCode)
+        {
+            var region = Region.FromRegionCodeOrId(regionId);
+            Assert.Equal(regionId, region.RegionId);
+
+            region = Region.FromRegionCodeOrId(regionCode);
+            Assert.Equal(regionCode, region.RegionCode);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void FromRegionIdOrCodeExceptionTest()
+        {
+            Assert.Throws<ArgumentException>(() => Region.FromRegionCodeOrId("invalid"));
+        }
+
         private bool AreRegionsSame(Region r1, Region r2)
         {
             if (!r1.RegionId.Equals(r2.RegionId))

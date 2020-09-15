@@ -69,7 +69,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListExportSets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListExportSets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListExportSets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListExportSets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListExports(request, retryConfiguration, cancellationToken).Result
+                request => client.ListExports(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListExports(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListExports(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListFileSystems(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFileSystems(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListFileSystems(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFileSystems(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListMountTargets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMountTargets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListMountTargets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMountTargets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListSnapshots(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSnapshots(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.FilestorageService
                     }
                     return request;
                 },
-                request => client.ListSnapshots(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSnapshots(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

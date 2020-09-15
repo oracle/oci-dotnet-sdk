@@ -69,7 +69,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListModels(request, retryConfiguration, cancellationToken).Result
+                request => client.ListModels(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListModels(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListModels(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListNotebookSessionShapes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListNotebookSessionShapes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListNotebookSessionShapes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListNotebookSessionShapes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListNotebookSessions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListNotebookSessions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListNotebookSessions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListNotebookSessions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListProjects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListProjects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListProjects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListProjects(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.DatascienceService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

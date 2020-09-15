@@ -69,7 +69,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListQuotas(request, retryConfiguration, cancellationToken).Result
+                request => client.ListQuotas(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.LimitsService
                     }
                     return request;
                 },
-                request => client.ListQuotas(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListQuotas(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

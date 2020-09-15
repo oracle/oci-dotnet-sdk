@@ -10,7 +10,7 @@
     <RootNamespace>Oci.LoggingingestionService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Loggingingestion</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Loggingingestion</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Loggingingestion Service</Description>
   </PropertyGroup>
   <ItemGroup>

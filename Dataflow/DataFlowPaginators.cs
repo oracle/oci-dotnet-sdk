@@ -69,7 +69,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result
+                request => client.ListApplications(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListApplications(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListPrivateEndpoints(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPrivateEndpoints(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListPrivateEndpoints(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPrivateEndpoints(request, retryConfiguration, cancellationToken),
                 response => response.PrivateEndpointCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListRunLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListRunLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListRunLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListRunLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListRuns(request, retryConfiguration, cancellationToken).Result
+                request => client.ListRuns(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListRuns(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListRuns(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestErrorCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestLogCollection.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.DataflowService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.WorkRequestCollection.Items
             );
         }
