@@ -69,7 +69,7 @@ namespace Oci.FunctionsService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result
+                request => client.ListApplications(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.FunctionsService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListApplications(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.FunctionsService
                     }
                     return request;
                 },
-                request => client.ListFunctions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFunctions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.FunctionsService
                     }
                     return request;
                 },
-                request => client.ListFunctions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFunctions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

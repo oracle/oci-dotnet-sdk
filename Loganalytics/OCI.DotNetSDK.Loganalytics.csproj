@@ -10,7 +10,7 @@
     <RootNamespace>Oci.LoganalyticsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Loganalytics</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Loganalytics</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Log Analytics Service</Description>
   </PropertyGroup>
   <ItemGroup>

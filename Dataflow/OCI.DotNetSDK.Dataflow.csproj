@@ -8,7 +8,7 @@
     <RootNamespace>Oci.DataflowService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Dataflow</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Dataflow</PackageTags>
     <Description>Data Flow is a fully managed service with a rich user interface to allow developers and data scientists to create, edit, and run Apache Spark applications at any scale without the need for clusters, an operations team, or highly specialized Spark knowledge. As a fully managed service, there is no infrastructure to deploy or manage. It is entirely driven by REST APIs, giving easy integration with applications or workflows.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -69,7 +69,7 @@ namespace Oci.AnnouncementsService
                     }
                     return request;
                 },
-                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.AnnouncementsService
                     }
                     return request;
                 },
-                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken),
                 response => response.AnnouncementsCollection.Items
             );
         }

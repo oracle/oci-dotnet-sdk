@@ -69,7 +69,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogListingResourceVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAppCatalogListingResourceVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogListingResourceVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAppCatalogListingResourceVersions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogListings(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAppCatalogListings(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogListings(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAppCatalogListings(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogSubscriptions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAppCatalogSubscriptions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListAppCatalogSubscriptions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAppCatalogSubscriptions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumeAttachments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBootVolumeAttachments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListBootVolumeAttachments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBootVolumeAttachments(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListComputeGlobalImageCapabilitySchemaVersions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result
+                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListComputeGlobalImageCapabilitySchemas(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result
+                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListComputeImageCapabilitySchemas(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListConsoleHistories(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConsoleHistories(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListConsoleHistories(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConsoleHistories(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostInstanceShapes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDedicatedVmHostInstanceShapes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostInstanceShapes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDedicatedVmHostInstanceShapes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostInstances(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDedicatedVmHostInstances(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostInstances(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDedicatedVmHostInstances(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostShapes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDedicatedVmHostShapes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHostShapes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDedicatedVmHostShapes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHosts(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDedicatedVmHosts(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListDedicatedVmHosts(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDedicatedVmHosts(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListImageShapeCompatibilityEntries(request, retryConfiguration, cancellationToken).Result
+                request => client.ListImageShapeCompatibilityEntries(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListImageShapeCompatibilityEntries(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListImageShapeCompatibilityEntries(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListImages(request, retryConfiguration, cancellationToken).Result
+                request => client.ListImages(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListImages(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListImages(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceConsoleConnections(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstanceConsoleConnections(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceConsoleConnections(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstanceConsoleConnections(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceDevices(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstanceDevices(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstanceDevices(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstanceDevices(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstances(request, retryConfiguration, cancellationToken).Result
+                request => client.ListInstances(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListInstances(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListInstances(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListShapes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListShapes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListShapes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListShapes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVnicAttachments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVnicAttachments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVnicAttachments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVnicAttachments(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1000,7 +1000,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeAttachments(request, retryConfiguration, cancellationToken).Result
+                request => client.ListVolumeAttachments(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1024,7 +1024,7 @@ namespace Oci.CoreService
                     }
                     return request;
                 },
-                request => client.ListVolumeAttachments(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListVolumeAttachments(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

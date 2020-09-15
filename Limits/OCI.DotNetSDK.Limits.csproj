@@ -8,7 +8,7 @@
     <RootNamespace>Oci.LimitsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Limits</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Limits</PackageTags>
     <Description>Oracle Cloud Infrastructure Limits Service provides the ability to query limits and quotas for a given resource or set of resources in a compartment.</Description>
   </PropertyGroup>
   <ItemGroup>

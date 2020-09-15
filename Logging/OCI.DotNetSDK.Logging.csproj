@@ -10,7 +10,7 @@
     <RootNamespace>Oci.LoggingService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Logging</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Logging</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Logging Service</Description>
   </PropertyGroup>
   <ItemGroup>

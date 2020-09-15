@@ -69,7 +69,7 @@ namespace Oci.MysqlService
                     }
                     return request;
                 },
-                request => client.ListDbSystems(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDbSystems(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.MysqlService
                     }
                     return request;
                 },
-                request => client.ListDbSystems(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDbSystems(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

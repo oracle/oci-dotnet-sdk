@@ -6,6 +6,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Oci.Common.Utils
 {
@@ -23,11 +24,11 @@ namespace Oci.Common.Utils
         // Function which takes opcNextPageId as input and returns list request.
         private readonly Func<string, Request> getListRequestFunction;
         // Function which invokes list request and returns response.
-        private readonly Func<Request, Response> listRequestFunction;
+        private readonly Func<Request, Task<Response>> listRequestFunction;
 
         public ResponseEnumerable(Func<Response, string> getNextPageTokenFunction,
             Func<string, Request> getListRequestFunction,
-            Func<Request, Response> listRequestFunction)
+            Func<Request, Task<Response>> listRequestFunction)
         {
             this.getNextPageTokenFunction = getNextPageTokenFunction;
             this.getListRequestFunction = getListRequestFunction;
@@ -41,9 +42,16 @@ namespace Oci.Common.Utils
 
             do
             {
-                response = listRequestFunction.Invoke(getListRequestFunction.Invoke(nextPageToken));
+                var task = Task.Run<Response>(async () => await GetNextPageResponseAsync(nextPageToken).ConfigureAwait(false));
+                response = task.Result;
                 yield return response;
             } while (!string.IsNullOrEmpty(nextPageToken = getNextPageTokenFunction(response)));
+        }
+
+        private async Task<Response> GetNextPageResponseAsync(string nextPageToken)
+        {
+            var response = await listRequestFunction.Invoke(getListRequestFunction.Invoke(nextPageToken));
+            return response;
         }
 
         IEnumerator IEnumerable.GetEnumerator()

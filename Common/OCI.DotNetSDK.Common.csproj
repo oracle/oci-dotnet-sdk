@@ -9,7 +9,7 @@
     <RootNamespace>Oci.Common</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure</PackageTags>
     <Description>The common package provides supporting classes and methods used by service packages.It includes HTTP request/response (de)serialization, request signing, JSON parsing, and other helper functions.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -69,7 +69,7 @@ namespace Oci.AuditService
                     }
                     return request;
                 },
-                request => client.ListEvents(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEvents(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.AuditService
                     }
                     return request;
                 },
-                request => client.ListEvents(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEvents(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

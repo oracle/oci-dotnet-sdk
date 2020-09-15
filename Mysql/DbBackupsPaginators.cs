@@ -69,7 +69,7 @@ namespace Oci.MysqlService
                     }
                     return request;
                 },
-                request => client.ListBackups(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBackups(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.MysqlService
                     }
                     return request;
                 },
-                request => client.ListBackups(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBackups(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

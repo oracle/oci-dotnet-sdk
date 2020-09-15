@@ -8,7 +8,7 @@
     <RootNamespace>Oci.ObjectstorageService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Objectstorage</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Objectstorage</PackageTags>
     <Description>Object Storage helps you manage data as objects stored in containers.</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -69,7 +69,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListBuckets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListBuckets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListBuckets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListBuckets(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListMultipartUploadParts(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMultipartUploadParts(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListMultipartUploadParts(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMultipartUploadParts(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListMultipartUploads(request, retryConfiguration, cancellationToken).Result
+                request => client.ListMultipartUploads(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListMultipartUploads(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListMultipartUploads(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListObjectVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListObjectVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListObjectVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListObjectVersions(request, retryConfiguration, cancellationToken),
                 response => response.ObjectVersionCollection.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListObjects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListObjects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListObjects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListObjects(request, retryConfiguration, cancellationToken),
                 response => response.ListObjects.Objects
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListPreauthenticatedRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPreauthenticatedRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListPreauthenticatedRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPreauthenticatedRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListReplicationPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListReplicationPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListReplicationPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListReplicationPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListReplicationSources(request, retryConfiguration, cancellationToken).Result
+                request => client.ListReplicationSources(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListReplicationSources(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListReplicationSources(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListRetentionRules(request, retryConfiguration, cancellationToken).Result
+                request => client.ListRetentionRules(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListRetentionRules(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListRetentionRules(request, retryConfiguration, cancellationToken),
                 response => response.RetentionRuleCollection.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.ObjectstorageService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

@@ -8,7 +8,7 @@
     <RootNamespace>Oci.CoreService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Core</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Core</PackageTags>
     <Description>Core service to manage Compute, Block Storage and Networking</Description>
   </PropertyGroup>
   <ItemGroup>

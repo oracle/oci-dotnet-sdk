@@ -10,7 +10,7 @@
     <RootNamespace>Oci.LoggingsearchService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Loggingsearch</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Loggingsearch</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Loggingsearch Service</Description>
   </PropertyGroup>
   <ItemGroup>

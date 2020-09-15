@@ -8,7 +8,7 @@
     <RootNamespace>Oci.LoadbalancerService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Loadbalancer</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Loadbalancer</PackageTags>
     <Description>Load Balancing helps you create a regional load balancer within your VCN.</Description>
   </PropertyGroup>
   <ItemGroup>

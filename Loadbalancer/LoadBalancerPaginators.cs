@@ -69,7 +69,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListLoadBalancerHealths(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLoadBalancerHealths(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListLoadBalancerHealths(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLoadBalancerHealths(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListLoadBalancers(request, retryConfiguration, cancellationToken).Result
+                request => client.ListLoadBalancers(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListLoadBalancers(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListLoadBalancers(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListProtocols(request, retryConfiguration, cancellationToken).Result
+                request => client.ListProtocols(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListProtocols(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListProtocols(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListShapes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListShapes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListShapes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListShapes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.LoadbalancerService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

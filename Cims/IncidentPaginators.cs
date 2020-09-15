@@ -69,7 +69,7 @@ namespace Oci.CimsService
                     }
                     return request;
                 },
-                request => client.ListIncidentResourceTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListIncidentResourceTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.CimsService
                     }
                     return request;
                 },
-                request => client.ListIncidentResourceTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListIncidentResourceTypes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.CimsService
                     }
                     return request;
                 },
-                request => client.ListIncidents(request, retryConfiguration, cancellationToken).Result
+                request => client.ListIncidents(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.CimsService
                     }
                     return request;
                 },
-                request => client.ListIncidents(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListIncidents(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

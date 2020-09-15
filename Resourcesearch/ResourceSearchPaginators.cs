@@ -69,7 +69,7 @@ namespace Oci.ResourcesearchService
                     }
                     return request;
                 },
-                request => client.ListResourceTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListResourceTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.ResourcesearchService
                     }
                     return request;
                 },
-                request => client.ListResourceTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListResourceTypes(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

@@ -114,45 +114,31 @@ namespace Oci.Common.Auth
                 httpRequestMsg.Headers.Add(Constants.AUTHORIZATION_HEADER, AUTHORIZATION_HEADER_VALUE);
 
                 HttpResponseMessage response = null;
-                using(var httpClient = new HttpClient())
+                using (var httpClient = new HttpClient())
                 {
                     response = httpClient.SendAsync(httpRequestMsg).Result;
                 }
-
-                // regionStr can be a shortCode or regionId
-                var regionStr = response.Content.ReadAsStringAsync().Result;
-                 if (response == null || !response.IsSuccessStatusCode)
+                if (response == null || !response.IsSuccessStatusCode)
                 {
                     logger.Debug("Received non successful response while trying to get the region of the instance");
                     ResponseHelper.HandleNonSuccessfulResponse(response);
                 }
 
-                string regionId = null;
-                Realm realm = null;
-                foreach (var region in Region.Values())
-                {
-                    if (region.RegionCode.Equals(regionStr))
-                    {
-                        regionId = region.RegionId;
-                        realm = region.Realm;
-                    }
-                }
-
+                // regionStr can be a shortCode or regionId
+                var regionStr = response.Content.ReadAsStringAsync().Result;
                 try
                 {
-                    this.Region = Region.FromRegionId(regionId);
-                    realm = this.Region.Realm;
+                    this.Region = Region.FromRegionCodeOrId(regionStr);
                 }
                 catch (ArgumentException e)
                 {
-                    logger.Warn($"Received exception: {e}, Region not supported by this version of the SDK, registering region ${regionId} under OC1 realm");
-                    this.Region = Region.Register(regionId, Realm.OC1);
-                    realm = Realm.OC1;
+                    logger.Warn($"Received exception: {e}, Region not supported by this version of the SDK, registering region {regionStr} under OC1 realm");
+                    this.Region = Region.Register(regionStr, Realm.OC1);
                 }
 
                 try
                 {
-                    this.federationEndpoint = EndpointBuilder.CreateEndpoint(SERVICE, regionId, realm);
+                    this.federationEndpoint = EndpointBuilder.CreateEndpoint(SERVICE, this.Region.RegionId, this.Region.Realm);
                     logger.Info($"federation endpoint is {this.federationEndpoint}");
                 }
                 catch (ArgumentNullException e)

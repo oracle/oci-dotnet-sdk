@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 4.4.0 - 2020-09-15
+### Added
+
+- Support for the Cloud Guard service
+- Support for specifying desired consumption models when creating instances in the Integration service
+- Support for dynamic shapes in the Load Balancing service
+- Fix issue retrieving region from regionCode
+
 ## 4.3.0 - 2020-09-08
 ### Added
 - Support for Logging Service

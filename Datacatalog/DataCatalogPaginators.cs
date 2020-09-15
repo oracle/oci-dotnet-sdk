@@ -69,7 +69,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListAttributeTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAttributeTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListAttributeTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAttributeTags(request, retryConfiguration, cancellationToken),
                 response => response.AttributeTagCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListAttributes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAttributes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListAttributes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAttributes(request, retryConfiguration, cancellationToken),
                 response => response.AttributeCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListCatalogPrivateEndpoints(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCatalogPrivateEndpoints(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListCatalogPrivateEndpoints(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCatalogPrivateEndpoints(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListCatalogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCatalogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListCatalogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCatalogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListConnections(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConnections(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListConnections(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConnections(request, retryConfiguration, cancellationToken),
                 response => response.ConnectionCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListDataAssetTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataAssetTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListDataAssetTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataAssetTags(request, retryConfiguration, cancellationToken),
                 response => response.DataAssetTagCollection.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListDataAssets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataAssets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListDataAssets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataAssets(request, retryConfiguration, cancellationToken),
                 response => response.DataAssetCollection.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListEntities(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEntities(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListEntities(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEntities(request, retryConfiguration, cancellationToken),
                 response => response.EntityCollection.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListEntityTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListEntityTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListEntityTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListEntityTags(request, retryConfiguration, cancellationToken),
                 response => response.EntityTagCollection.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListFolderTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFolderTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListFolderTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFolderTags(request, retryConfiguration, cancellationToken),
                 response => response.FolderTagCollection.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListFolders(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFolders(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListFolders(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFolders(request, retryConfiguration, cancellationToken),
                 response => response.FolderCollection.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListGlossaries(request, retryConfiguration, cancellationToken).Result
+                request => client.ListGlossaries(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListGlossaries(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListGlossaries(request, retryConfiguration, cancellationToken),
                 response => response.GlossaryCollection.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobDefinitions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListJobDefinitions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobDefinitions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListJobDefinitions(request, retryConfiguration, cancellationToken),
                 response => response.JobDefinitionCollection.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobExecutions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListJobExecutions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobExecutions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListJobExecutions(request, retryConfiguration, cancellationToken),
                 response => response.JobExecutionCollection.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListJobLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListJobLogs(request, retryConfiguration, cancellationToken),
                 response => response.JobLogCollection.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobMetrics(request, retryConfiguration, cancellationToken).Result
+                request => client.ListJobMetrics(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobMetrics(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListJobMetrics(request, retryConfiguration, cancellationToken),
                 response => response.JobMetricCollection.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListJobs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListJobs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListJobs(request, retryConfiguration, cancellationToken),
                 response => response.JobCollection.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTags(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTags(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTags(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTags(request, retryConfiguration, cancellationToken),
                 response => response.TermCollection.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTermRelationships(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTermRelationships(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTermRelationships(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTermRelationships(request, retryConfiguration, cancellationToken),
                 response => response.TermRelationshipCollection.Items
             );
         }
@@ -1000,7 +1000,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTerms(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTerms(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1024,7 +1024,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTerms(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTerms(request, retryConfiguration, cancellationToken),
                 response => response.TermCollection.Items
             );
         }
@@ -1049,7 +1049,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1073,7 +1073,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTypes(request, retryConfiguration, cancellationToken),
                 response => response.TypeCollection.Items
             );
         }
@@ -1098,7 +1098,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1122,7 +1122,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1147,7 +1147,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1171,7 +1171,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1196,7 +1196,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1220,7 +1220,7 @@ namespace Oci.DatacatalogService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

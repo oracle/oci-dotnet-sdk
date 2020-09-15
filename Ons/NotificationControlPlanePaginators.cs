@@ -69,7 +69,7 @@ namespace Oci.OnsService
                     }
                     return request;
                 },
-                request => client.ListTopics(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTopics(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.OnsService
                     }
                     return request;
                 },
-                request => client.ListTopics(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTopics(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

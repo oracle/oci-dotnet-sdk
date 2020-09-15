@@ -8,7 +8,7 @@
     <RootNamespace>Oci.Announcementsservice</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;AnnouncementsService</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;AnnouncementsService</PackageTags>
     <Description>The Announcements service informs you about operational incidents impacting your environment.</Description>
   </PropertyGroup>
   <ItemGroup>

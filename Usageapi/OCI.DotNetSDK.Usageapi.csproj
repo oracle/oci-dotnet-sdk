@@ -10,7 +10,7 @@
     <RootNamespace>Oci.UsageapiService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Usageapi</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Usageapi</PackageTags>
     <Description>Usage API Service enables to see the current consumption as well as the limit set for a given service.</Description>
   </PropertyGroup>
   <ItemGroup>

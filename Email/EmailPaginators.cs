@@ -69,7 +69,7 @@ namespace Oci.EmailService
                     }
                     return request;
                 },
-                request => client.ListSenders(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSenders(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.EmailService
                     }
                     return request;
                 },
-                request => client.ListSenders(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSenders(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.EmailService
                     }
                     return request;
                 },
-                request => client.ListSuppressions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSuppressions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.EmailService
                     }
                     return request;
                 },
-                request => client.ListSuppressions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSuppressions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

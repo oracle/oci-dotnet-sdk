@@ -69,7 +69,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListKeyVersions(request, retryConfiguration, cancellationToken).Result
+                request => client.ListKeyVersions(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListKeyVersions(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListKeyVersions(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListKeys(request, retryConfiguration, cancellationToken).Result
+                request => client.ListKeys(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.KeymanagementService
                     }
                     return request;
                 },
-                request => client.ListKeys(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListKeys(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

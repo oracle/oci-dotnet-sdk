@@ -8,7 +8,7 @@
     <PackageId>OCI.DotNetSDK.Vault</PackageId>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Vault</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Vault</PackageTags>
     <Description>The Vault service helps you centrally manage the encryption keys that protect your data and the secret credentials that you use to access resources.</Description>
   </PropertyGroup>
   <ItemGroup>

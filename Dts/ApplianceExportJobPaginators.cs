@@ -69,7 +69,7 @@ namespace Oci.DtsService
                     }
                     return request;
                 },
-                request => client.ListApplianceExportJobs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListApplianceExportJobs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DtsService
                     }
                     return request;
                 },
-                request => client.ListApplianceExportJobs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListApplianceExportJobs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

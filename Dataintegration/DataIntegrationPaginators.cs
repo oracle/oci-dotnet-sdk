@@ -69,7 +69,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result
+                request => client.ListApplications(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListApplications(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListApplications(request, retryConfiguration, cancellationToken),
                 response => response.ApplicationSummaryCollection.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListConnectionValidations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConnectionValidations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListConnectionValidations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConnectionValidations(request, retryConfiguration, cancellationToken),
                 response => response.ConnectionValidationSummaryCollection.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListConnections(request, retryConfiguration, cancellationToken).Result
+                request => client.ListConnections(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListConnections(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListConnections(request, retryConfiguration, cancellationToken),
                 response => response.ConnectionSummaryCollection.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataAssets(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataAssets(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataAssets(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataAssets(request, retryConfiguration, cancellationToken),
                 response => response.DataAssetSummaryCollection.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataEntities(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataEntities(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataEntities(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataEntities(request, retryConfiguration, cancellationToken),
                 response => response.DataEntitySummaryCollection.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataFlowValidations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataFlowValidations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataFlowValidations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataFlowValidations(request, retryConfiguration, cancellationToken),
                 response => response.DataFlowValidationSummaryCollection.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataFlows(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDataFlows(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDataFlows(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDataFlows(request, retryConfiguration, cancellationToken),
                 response => response.DataFlowSummaryCollection.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDependentObjects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListDependentObjects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListDependentObjects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListDependentObjects(request, retryConfiguration, cancellationToken),
                 response => response.DependentObjectSummaryCollection.Items
             );
         }
@@ -461,7 +461,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListFolders(request, retryConfiguration, cancellationToken).Result
+                request => client.ListFolders(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -485,7 +485,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListFolders(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListFolders(request, retryConfiguration, cancellationToken),
                 response => response.FolderSummaryCollection.Items
             );
         }
@@ -510,7 +510,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListPatches(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPatches(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -534,7 +534,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListPatches(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPatches(request, retryConfiguration, cancellationToken),
                 response => response.PatchSummaryCollection.Items
             );
         }
@@ -559,7 +559,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListProjects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListProjects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -583,7 +583,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListProjects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListProjects(request, retryConfiguration, cancellationToken),
                 response => response.ProjectSummaryCollection.Items
             );
         }
@@ -608,7 +608,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListPublishedObjects(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPublishedObjects(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -632,7 +632,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListPublishedObjects(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPublishedObjects(request, retryConfiguration, cancellationToken),
                 response => response.PublishedObjectSummaryCollection.Items
             );
         }
@@ -657,7 +657,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListSchemas(request, retryConfiguration, cancellationToken).Result
+                request => client.ListSchemas(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -681,7 +681,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListSchemas(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListSchemas(request, retryConfiguration, cancellationToken),
                 response => response.SchemaSummaryCollection.Items
             );
         }
@@ -706,7 +706,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskRunLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaskRunLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -730,7 +730,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskRunLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaskRunLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -755,7 +755,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskRuns(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaskRuns(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -779,7 +779,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskRuns(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaskRuns(request, retryConfiguration, cancellationToken),
                 response => response.TaskRunSummaryCollection.Items
             );
         }
@@ -804,7 +804,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskValidations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTaskValidations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -828,7 +828,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTaskValidations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTaskValidations(request, retryConfiguration, cancellationToken),
                 response => response.TaskValidationSummaryCollection.Items
             );
         }
@@ -853,7 +853,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTasks(request, retryConfiguration, cancellationToken).Result
+                request => client.ListTasks(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -877,7 +877,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListTasks(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListTasks(request, retryConfiguration, cancellationToken),
                 response => response.TaskSummaryCollection.Items
             );
         }
@@ -902,7 +902,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -926,7 +926,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestErrors(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -951,7 +951,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -975,7 +975,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequestLogs(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1000,7 +1000,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1024,7 +1024,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -1049,7 +1049,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkspaces(request, retryConfiguration, cancellationToken).Result
+                request => client.ListWorkspaces(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -1073,7 +1073,7 @@ namespace Oci.DataintegrationService
                     }
                     return request;
                 },
-                request => client.ListWorkspaces(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListWorkspaces(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

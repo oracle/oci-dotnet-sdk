@@ -8,7 +8,7 @@
     <RootNamespace>Oci.AutoscalingService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Autoscaling</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Autoscaling</PackageTags>
     <Description>AutoScaling dynamically scales Compute resources to meet application requirements</Description>
   </PropertyGroup>
   <ItemGroup>

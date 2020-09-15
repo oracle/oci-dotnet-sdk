@@ -69,7 +69,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListAcceptedAgreements(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAcceptedAgreements(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListAcceptedAgreements(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAcceptedAgreements(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListAgreements(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAgreements(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListAgreements(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAgreements(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -167,7 +167,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListCategories(request, retryConfiguration, cancellationToken).Result
+                request => client.ListCategories(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -191,7 +191,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListCategories(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListCategories(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -216,7 +216,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListListings(request, retryConfiguration, cancellationToken).Result
+                request => client.ListListings(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -240,7 +240,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListListings(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListListings(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -265,7 +265,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListPackages(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPackages(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -289,7 +289,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListPackages(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPackages(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -314,7 +314,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListPublishers(request, retryConfiguration, cancellationToken).Result
+                request => client.ListPublishers(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -338,7 +338,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListPublishers(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListPublishers(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -363,7 +363,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListReportTypes(request, retryConfiguration, cancellationToken).Result
+                request => client.ListReportTypes(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -387,7 +387,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListReportTypes(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListReportTypes(request, retryConfiguration, cancellationToken),
                 response => response.ReportTypeCollection.Items
             );
         }
@@ -412,7 +412,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListReports(request, retryConfiguration, cancellationToken).Result
+                request => client.ListReports(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -436,7 +436,7 @@ namespace Oci.MarketplaceService
                     }
                     return request;
                 },
-                request => client.ListReports(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListReports(request, retryConfiguration, cancellationToken),
                 response => response.ReportCollection.Items
             );
         }

@@ -69,7 +69,7 @@ namespace Oci.AutoscalingService
                     }
                     return request;
                 },
-                request => client.ListAutoScalingConfigurations(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAutoScalingConfigurations(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -93,7 +93,7 @@ namespace Oci.AutoscalingService
                     }
                     return request;
                 },
-                request => client.ListAutoScalingConfigurations(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAutoScalingConfigurations(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }
@@ -118,7 +118,7 @@ namespace Oci.AutoscalingService
                     }
                     return request;
                 },
-                request => client.ListAutoScalingPolicies(request, retryConfiguration, cancellationToken).Result
+                request => client.ListAutoScalingPolicies(request, retryConfiguration, cancellationToken)
             );
         }
 
@@ -142,7 +142,7 @@ namespace Oci.AutoscalingService
                     }
                     return request;
                 },
-                request => client.ListAutoScalingPolicies(request, retryConfiguration, cancellationToken).Result,
+                request => client.ListAutoScalingPolicies(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

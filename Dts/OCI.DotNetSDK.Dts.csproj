@@ -8,7 +8,7 @@
     <RootNamespace>Oci.DtsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;DataTransferService;Dts</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;DataTransferService;Dts</PackageTags>
     <Description>Data Transfer helps you easily and securely migrate your data in an offline manner to Oracle Cloud Infrastructure.</Description>
   </PropertyGroup>
   <ItemGroup>

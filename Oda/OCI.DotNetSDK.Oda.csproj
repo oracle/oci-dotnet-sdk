@@ -8,7 +8,7 @@
     <RootNamespace>Oci.OdaService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;DigitalAssistant;Oda</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;DigitalAssistant;Oda</PackageTags>
     <Description>Oracle Digital Assistant is a platform that allows you to create and deploy digital assistants, which are AI-driven interfaces that help users accomplish a variety of tasks in natural language conversations</Description>
   </PropertyGroup>
   <ItemGroup>

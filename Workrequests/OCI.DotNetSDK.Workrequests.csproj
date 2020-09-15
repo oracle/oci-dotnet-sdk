@@ -8,7 +8,7 @@
     <RootNamespace>Oci.WorkrequestsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Cloud;oci-sdk;OracleCloudInfrastructure;Workrequests</PackageTags>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Workrequests</PackageTags>
     <Description>Work requests provide visibility into the status of the in-progress, long-running workflows.</Description>
   </PropertyGroup>
   <ItemGroup>
