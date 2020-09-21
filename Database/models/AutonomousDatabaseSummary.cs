@@ -490,6 +490,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
+        ///
+        /// <value>
+        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// </value>
+        ///
+        public enum PermissionLevelEnum {
+            [EnumMember(Value = "RESTRICTED")]
+            Restricted,
+            [EnumMember(Value = "UNRESTRICTED")]
+            Unrestricted
+        };
+
+        /// <value>
+        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// </value>
+        [JsonProperty(PropertyName = "permissionLevel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PermissionLevelEnum> PermissionLevel { get; set; }
 
         /// <value>
         /// The timestamp of the last switchover operation for the Autonomous Database.

@@ -20,7 +20,7 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
-        /// The wrapped/encrypted key material to import. It is encrypted using RSA wrapped key and Base64 encoded.
+        /// The key material to import, wrapped by the vault's public RSA wrapping key and base64-encoded.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.KeymanagementService.Models
         public string KeyMaterial { get; set; }
         ///
         /// <value>
-        /// The wrapping mechanism to be used during key import
+        /// The wrapping mechanism to use during key import.
         /// </value>
         ///
         public enum WrappingAlgorithmEnum {
@@ -39,7 +39,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// The wrapping mechanism to be used during key import
+        /// The wrapping mechanism to use during key import.
         /// </value>
         /// <remarks>
         /// Required

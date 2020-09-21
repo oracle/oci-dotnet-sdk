@@ -93,5 +93,33 @@ namespace Oci.KeymanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        ///
+        /// <value>
+        /// A key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed. A 
+        /// protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are 
+        /// performed inside the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's 
+        /// RSA wrapping key which persists on the HSM. All cryptographic operations that use a key with a protection mode of 
+        /// `SOFTWARE` are performed on the server.
+        /// 
+        /// </value>
+        ///
+        public enum ProtectionModeEnum {
+            [EnumMember(Value = "HSM")]
+            Hsm,
+            [EnumMember(Value = "SOFTWARE")]
+            Software
+        };
+
+        /// <value>
+        /// A key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed. A 
+        /// protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are 
+        /// performed inside the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's 
+        /// RSA wrapping key which persists on the HSM. All cryptographic operations that use a key with a protection mode of 
+        /// `SOFTWARE` are performed on the server.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "protectionMode")]
+        public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
     }
 }

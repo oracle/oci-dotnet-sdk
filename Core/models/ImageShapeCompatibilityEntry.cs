@@ -41,6 +41,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
 
+        [JsonProperty(PropertyName = "memoryConstraints")]
+        public ImageMemoryConstraints MemoryConstraints { get; set; }
+
         [JsonProperty(PropertyName = "ocpuConstraints")]
         public ImageOcpuConstraints OcpuConstraints { get; set; }
     }

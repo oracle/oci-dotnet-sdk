@@ -283,7 +283,7 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Generates a new [KeyVersion](https://docs.cloud.oracle.com/api/#/en/key/release/KeyVersion/) resource that provides new cryptographic
+        /// Generates a new [KeyVersion](https://docs.cloud.oracle.com/api/#/en/key/latest/KeyVersion/) resource that provides new cryptographic
         /// material for a master encryption key. The key must be in an &#x60;ENABLED&#x60; state to be rotated.
         /// &lt;br/&gt;
         /// As a management operation, this call is subject to a Key Management limit that applies to the total number
@@ -630,7 +630,7 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Lists all [KeyVersion](https://docs.cloud.oracle.com/api/#/en/key/release/KeyVersion/) resources for the specified
+        /// Lists all [KeyVersion](https://docs.cloud.oracle.com/api/#/en/key/latest/KeyVersion/) resources for the specified
         /// master encryption key.
         /// &lt;br/&gt;
         /// As a management operation, this call is subject to a Key Management limit that applies to the total number
