@@ -9,22 +9,21 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using Oci.KeymanagementService.Models;
 
-
-namespace Oci.CoreService.Models
+namespace Oci.KeymanagementService.Requests
 {
-    /// <summary>
-    /// Image shape compatibility details.
-    /// </summary>
-    public class AddImageShapeCompatibilityEntryDetails 
+    public class ExportKeyRequest : Oci.Common.IOciRequest
     {
         
-        [JsonProperty(PropertyName = "memoryConstraints")]
-        public ImageMemoryConstraints MemoryConstraints { get; set; }
-
-        [JsonProperty(PropertyName = "ocpuConstraints")]
-        public ImageOcpuConstraints OcpuConstraints { get; set; }
+        /// <value>
+        /// ExportKeyDetails
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExportKeyDetails is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public ExportKeyDetails ExportKeyDetails { get; set; }
     }
 }

@@ -135,6 +135,12 @@ namespace Oci.DatabaseService.Models
         public string CorporateProxy { get; set; }
 
         /// <value>
+        /// The list of contacts for the Exadata Infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "contacts")]
+        public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
+
+        /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.
         /// </value>
         /// <remarks>

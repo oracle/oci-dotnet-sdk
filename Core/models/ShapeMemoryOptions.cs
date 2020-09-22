@@ -44,5 +44,19 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultPerOcpuInGBs")]
         public System.Nullable<float> DefaultPerOcpuInGBs { get; set; }
+
+        /// <value>
+        /// The minimum amount of memory per OCPU available for this shape, in gigabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "minPerOcpuInGBs")]
+        public System.Nullable<float> MinPerOcpuInGBs { get; set; }
+
+        /// <value>
+        /// The maximum amount of memory per OCPU available for this shape, in gigabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxPerOcpuInGBs")]
+        public System.Nullable<float> MaxPerOcpuInGBs { get; set; }
     }
 }
