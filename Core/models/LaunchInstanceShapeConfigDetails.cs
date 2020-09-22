@@ -38,5 +38,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
+
+        /// <value>
+        /// The total amount of memory available to the instance, in gigabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryInGBs")]
+        public System.Nullable<float> MemoryInGBs { get; set; }
     }
 }

@@ -88,7 +88,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
 
         /// <value>
-        /// The public key in PEM format to encrypt the key material before importing it with ImportKey/ImportKeyVersion.
+        /// The public key, in PEM format, to use to wrap the key material before importing it.
         /// 
         /// </value>
         /// <remarks>

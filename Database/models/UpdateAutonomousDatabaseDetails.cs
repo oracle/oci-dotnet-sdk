@@ -189,6 +189,42 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
+        ///
+        /// <value>
+        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// </value>
+        ///
+        public enum OpenModeEnum {
+            [EnumMember(Value = "READ_ONLY")]
+            ReadOnly,
+            [EnumMember(Value = "READ_WRITE")]
+            ReadWrite
+        };
+
+        /// <value>
+        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// </value>
+        [JsonProperty(PropertyName = "openMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OpenModeEnum> OpenMode { get; set; }
+        ///
+        /// <value>
+        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// </value>
+        ///
+        public enum PermissionLevelEnum {
+            [EnumMember(Value = "RESTRICTED")]
+            Restricted,
+            [EnumMember(Value = "UNRESTRICTED")]
+            Unrestricted
+        };
+
+        /// <value>
+        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// </value>
+        [JsonProperty(PropertyName = "permissionLevel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PermissionLevelEnum> PermissionLevel { get; set; }
 
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the resource is associated with.

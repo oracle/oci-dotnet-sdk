@@ -54,7 +54,7 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Decrypts data using the given [DecryptDataDetails](https://docs.cloud.oracle.com/api/#/en/key/release/datatypes/DecryptDataDetails) resource.
+        /// Decrypts data using the given [DecryptDataDetails](https://docs.cloud.oracle.com/api/#/en/key/latest/datatypes/DecryptDataDetails) resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -93,7 +93,7 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Encrypts data using the given [EncryptDataDetails](https://docs.cloud.oracle.com/api/#/en/key/release/datatypes/EncryptDataDetails) resource.
+        /// Encrypts data using the given [EncryptDataDetails](https://docs.cloud.oracle.com/api/#/en/key/latest/datatypes/EncryptDataDetails) resource.
         /// Plaintext included in the example request is a base64-encoded value of a UTF-8 string.
         /// 
         /// </summary>
@@ -128,6 +128,47 @@ namespace Oci.KeymanagementService
             catch (Exception e)
             {
                 logger.Error($"Encrypt failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Exports a specific version of a master encryption key according to the details of the request. For their protection, 
+        /// keys that you create and store on a hardware security module (HSM) can never leave the HSM. You can only export keys 
+        /// stored on the server. For export, the key version is encrypted by an RSA public key that you provide.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ExportKeyResponse> ExportKey(ExportKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called exportKey");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20180608/exportKey".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ExportKeyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ExportKey failed with error: {e.Message}");
                 throw;
             }
         }

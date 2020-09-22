@@ -3,6 +3,7 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
+using System;
 using System.Net.Http;
 using System.Security.Authentication;
 using System.Threading;
@@ -17,9 +18,17 @@ namespace Oci.Common.Http
         public RestClientHandler(RequestCallback callback)
         {
             this.callback = callback;
-
-            SslProtocols = SslProtocols.Tls12;
             ClientCertificateOptions = ClientCertificateOption.Automatic;
+            try
+            {
+                SslProtocols = SslProtocols.Tls12;
+            }
+            catch (PlatformNotSupportedException e)
+            {
+                var msg = "Please upgrade to .NET Framework 4.7.2 or higher." +
+                "Or make sure TLS 1.2 is enabled in your operating system. If your API calls to OCI succeed then TLS 1.2 is enabled";
+                logger.Warn($"Received exception as SslProtocols property is not supported on this platform: {e}, {msg}");
+            }
         }
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
