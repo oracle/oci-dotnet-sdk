@@ -98,5 +98,11 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIpId")]
         public string PrivateIpId { get; set; }
+
+        /// <value>
+        /// OCID of the pool object created by the current tenancy
+        /// </value>
+        [JsonProperty(PropertyName = "publicIpPoolId")]
+        public string PublicIpPoolId { get; set; }
     }
 }

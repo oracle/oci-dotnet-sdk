@@ -69,6 +69,13 @@ namespace Oci.ApigatewayService.Models
         public string SubnetId { get; set; }
 
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "certificateId")]
+        public string CertificateId { get; set; }
+
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         /// with no predefined name, type, or namespace. For more information, see
         /// [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

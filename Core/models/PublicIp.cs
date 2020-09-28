@@ -257,5 +257,11 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+
+        /// <value>
+        /// OCID of the pool object created by the current tenancy
+        /// </value>
+        [JsonProperty(PropertyName = "publicIpPoolId")]
+        public string PublicIpPoolId { get; set; }
     }
 }

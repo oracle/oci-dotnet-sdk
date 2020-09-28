@@ -110,5 +110,41 @@ namespace Oci.ObjectstorageService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-sse-customer-key-sha256")]
         public string OpcSseCustomerKeySha256 { get; set; }
+        
+        /// <value>
+        /// This value will be used in Content-Disposition header of the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseContentDisposition")]
+        public string HttpResponseContentDisposition { get; set; }
+        
+        /// <value>
+        /// This value will be used in Cache-Control header of the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseCacheControl")]
+        public string HttpResponseCacheControl { get; set; }
+        
+        /// <value>
+        /// This value will be used in Content-Type header of the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseContentType")]
+        public string HttpResponseContentType { get; set; }
+        
+        /// <value>
+        /// This value will be used in Content-Language header of the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseContentLanguage")]
+        public string HttpResponseContentLanguage { get; set; }
+        
+        /// <value>
+        /// This value will be used in Content-Encoding header of the response
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseContentEncoding")]
+        public string HttpResponseContentEncoding { get; set; }
+        
+        /// <value>
+        /// This value will be used in Expires header of the response
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpResponseExpires")]
+        public string HttpResponseExpires { get; set; }
     }
 }

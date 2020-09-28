@@ -27,6 +27,12 @@ namespace Oci.ApigatewayService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Filter gateways by the certificate ocid.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "certificateId")]
+        public string CertificateId { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// <br/>
         /// Example: My new resource

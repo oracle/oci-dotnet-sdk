@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// OCPU options for an image and shape.
+    /// For a flexible image and shape, the amount of memory supported for instances that use this image.
     /// </summary>
     public class ImageMemoryConstraints 
     {
         
         /// <value>
-        /// The minimum amount of memory supported for this image and shape, in gigabytes.
+        /// The minimum amount of memory, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "minInGBs")]
         public System.Nullable<int> MinInGBs { get; set; }
 
         /// <value>
-        /// The maximum amount of memory supported for this image and shape, in gigabytes.
+        /// The maximum amount of memory, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "maxInGBs")]
         public System.Nullable<int> MaxInGBs { get; set; }

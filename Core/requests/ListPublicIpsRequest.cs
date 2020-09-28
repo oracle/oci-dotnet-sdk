@@ -114,5 +114,12 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifetime")]
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that belong to the given public IP pool.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "publicIpPoolId")]
+        public string PublicIpPoolId { get; set; }
     }
 }
