@@ -48,7 +48,13 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "UPDATE_DEPLOYMENT")]
             UpdateDeployment,
             [EnumMember(Value = "DELETE_DEPLOYMENT")]
-            DeleteDeployment
+            DeleteDeployment,
+            [EnumMember(Value = "CREATE_CERTIFICATE")]
+            CreateCertificate,
+            [EnumMember(Value = "UPDATE_CERTIFICATE")]
+            UpdateCertificate,
+            [EnumMember(Value = "DELETE_CERTIFICATE")]
+            DeleteCertificate
         };
 
         /// <value>

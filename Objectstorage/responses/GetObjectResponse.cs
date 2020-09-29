@@ -157,6 +157,13 @@ namespace Oci.ObjectstorageService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "version-id")]
         public string VersionId { get; set; }
 
+
+        /// <value>
+        /// Time after which object is no longer cacheable, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616#section-14.21).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "expires")]
+        public System.Nullable<System.DateTime> Expires { get; set; }
+
         /// <value>
         /// The returned System.IO.Stream instance, or null if {@link #isNotModified()} is true.  Caller must always close the stream to avoid holding resources.
         /// </value>

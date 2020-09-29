@@ -145,6 +145,19 @@ namespace Oci.ApigatewayService.Models
         public string Hostname { get; set; }
 
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "certificateId")]
+        public string CertificateId { get; set; }
+
+        /// <value>
+        /// An array of IP addresses associated with the gateway.
+        /// </value>
+        [JsonProperty(PropertyName = "ipAddresses")]
+        public System.Collections.Generic.List<IpAddress> IpAddresses { get; set; }
+
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         /// with no predefined name, type, or namespace. For more information, see
         /// [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

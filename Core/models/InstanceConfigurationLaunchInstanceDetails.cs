@@ -294,6 +294,10 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PreferredMaintenanceActionEnum> PreferredMaintenanceAction { get; set; }
 
+        /// <value>
+        /// Options for defining the availabiity of a VM instance after a maintenance event that impacts the underlying hardware.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public InstanceConfigurationAvailabilityConfig AvailabilityConfig { get; set; }
     }
