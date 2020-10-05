@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A DataType object is a simple primitive type that describes the type of a single atomic unit of data.  For example, INT, VARCHAR, NUMBER, etc.
+    /// A `DataType` object is a simple primitive type that describes the type of a single atomic unit of data.  For example, `INT`, `VARCHAR`, `NUMBER`, and so on.
     /// </summary>
     public class DataType : BaseType
     {
                 ///
         /// <value>
-        /// dtType
+        /// The data type.
         /// </value>
         ///
         public enum DtTypeEnum {
@@ -33,14 +33,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// dtType
+        /// The data type.
         /// </value>
         [JsonProperty(PropertyName = "dtType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DtTypeEnum> DtType { get; set; }
 
         /// <value>
-        /// typeSystemName
+        /// The data type system name.
         /// </value>
         [JsonProperty(PropertyName = "typeSystemName")]
         public string TypeSystemName { get; set; }

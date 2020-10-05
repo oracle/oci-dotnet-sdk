@@ -43,13 +43,13 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Whether the configuration is contained or not.
+        /// Specifies whether the configuration is contained or not.
         /// </value>
         [JsonProperty(PropertyName = "isContained")]
         public System.Nullable<bool> IsContained { get; set; }
@@ -61,7 +61,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// configParamDefs
+        /// The parameter configuration details.
         /// </value>
         [JsonProperty(PropertyName = "configParameterDefinitions")]
         public System.Collections.Generic.Dictionary<string, ConfigParameterDefinition> ConfigParameterDefinitions { get; set; }

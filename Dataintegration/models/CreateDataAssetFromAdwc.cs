@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The ADWC data asset details.
+    /// Details for the Autonomous Data Warehouse data asset type.
     /// </summary>
     public class CreateDataAssetFromAdwc : CreateDataAssetDetails
     {
         
         /// <value>
-        /// The service name for the data asset.
+        /// The Autonomous Data Warehouse instance service name.
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
 
         /// <value>
-        /// The driver class for the data asset.
+        /// The Autonomous Data Warehouse driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
 
         /// <value>
-        /// The credential file content from a wallet for the data asset.
+        /// The credential file content from a Autonomous Data Warehouse wallet.
         /// </value>
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }

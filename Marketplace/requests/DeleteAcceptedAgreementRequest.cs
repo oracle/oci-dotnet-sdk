@@ -27,7 +27,7 @@ namespace Oci.MarketplaceService.Requests
         public string AcceptedAgreementId { get; set; }
         
         /// <value>
-        /// Deprecated. The signature value is ignored.
+        /// Previously, the signature generated for the listing package terms of use agreement, but now deprecated and ignored.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "signature")]
         public string Signature { get; set; }

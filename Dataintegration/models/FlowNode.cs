@@ -43,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -55,13 +55,13 @@ namespace Oci.DataintegrationService.Models
         public string Description { get; set; }
 
         /// <value>
-        /// inputLinks
+        /// An array of input links.
         /// </value>
         [JsonProperty(PropertyName = "inputLinks")]
         public System.Collections.Generic.List<InputLink> InputLinks { get; set; }
 
         /// <value>
-        /// outputLinks
+        /// An array of output links.
         /// </value>
         [JsonProperty(PropertyName = "outputLinks")]
         public System.Collections.Generic.List<OutputLink> OutputLinks { get; set; }

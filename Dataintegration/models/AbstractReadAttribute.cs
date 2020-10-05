@@ -28,7 +28,9 @@ namespace Oci.DataintegrationService.Models
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "ORACLEREADATTRIBUTE")]
-            Oraclereadattribute
+            Oraclereadattribute,
+            [EnumMember(Value = "ORACLE_READ_ATTRIBUTE")]
+            OracleReadAttribute
         };
 
         /// <value>

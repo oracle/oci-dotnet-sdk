@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// DIS workspace id
+        /// The workspace ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DataintegrationService.Requests
         public string WorkspaceId { get; set; }
         
         /// <value>
-        /// The connection key
+        /// The connection key.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.DataintegrationService.Requests
         public string ConnectionKey { get; set; }
         
         /// <value>
-        /// Schema resource name used for retrieving schemas
+        /// The schema resource name used for retrieving schemas.
         /// </value>
         /// <remarks>
         /// Required

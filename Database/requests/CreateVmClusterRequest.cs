@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to create a VM cluster.
+        /// Request to create an Exadata Cloud@Customer VM cluster.
         /// </value>
         /// <remarks>
         /// Required

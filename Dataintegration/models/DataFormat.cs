@@ -38,7 +38,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORC")]
             Orc,
             [EnumMember(Value = "PARQUET")]
-            Parquet
+            Parquet,
+            [EnumMember(Value = "AVRO")]
+            Avro
         };
 
         /// <value>

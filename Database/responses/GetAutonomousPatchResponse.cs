@@ -23,8 +23,8 @@ namespace Oci.DatabaseService.Responses
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
-        /// a particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you contact Oracle about
+        /// a particular request, then you must provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// DIS workspace id
+        /// The workspace ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DataintegrationService.Requests
         public string WorkspaceId { get; set; }
         
         /// <value>
-        /// DIS application key
+        /// The application key.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.DataintegrationService.Requests
         public string ApplicationKey { get; set; }
         
         /// <value>
-        /// DIS patch key
+        /// The patch key.
         /// </value>
         /// <remarks>
         /// Required

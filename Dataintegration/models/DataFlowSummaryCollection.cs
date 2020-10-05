@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of DataFlow summaries
+        /// The array of data flow summaries.
         /// </value>
         /// <remarks>
         /// Required

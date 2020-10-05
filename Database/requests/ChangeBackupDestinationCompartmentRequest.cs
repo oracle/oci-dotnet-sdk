@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move backup destination to a different compartment
+        /// Request to move backup destination to a different compartment.
         /// 
         /// </value>
         /// <remarks>

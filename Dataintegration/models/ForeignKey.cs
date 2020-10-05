@@ -22,13 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -37,25 +37,25 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// attributeRefs
+        /// An array of attribute references.
         /// </value>
         [JsonProperty(PropertyName = "attributeRefs")]
         public System.Collections.Generic.List<KeyAttribute> AttributeRefs { get; set; }
 
         /// <value>
-        /// updateRule
+        /// The update rule.
         /// </value>
         [JsonProperty(PropertyName = "updateRule")]
         public System.Nullable<int> UpdateRule { get; set; }
 
         /// <value>
-        /// deleteRule
+        /// The delete rule.
         /// </value>
         [JsonProperty(PropertyName = "deleteRule")]
         public System.Nullable<int> DeleteRule { get; set; }

@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Summary of a Workspace.
+    /// Summary details of a workspace.
     /// </summary>
     public class WorkspaceSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable.
+        /// A system-generated and immutable identifier assigned to the workspace upon creation.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <value>
-        /// A detailed description of the workspace.
+        /// A user defined description for the workspace.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

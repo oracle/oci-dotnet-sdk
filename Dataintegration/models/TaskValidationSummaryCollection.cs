@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// List of task validation summaries
+    /// A list of task validation summaries.
     /// </summary>
     public class TaskValidationSummaryCollection 
     {
         
         /// <value>
-        /// The array of validation summaries
+        /// An array of validation summaries.
         /// </value>
         /// <remarks>
         /// Required

@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// DIS workspace id
+        /// The workspace ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DataintegrationService.Requests
         public string WorkspaceId { get; set; }
         
         /// <value>
-        /// DIS application key
+        /// The application key.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.DataintegrationService.Requests
         public string ApplicationKey { get; set; }
         
         /// <value>
-        /// DIS published object key
+        /// The published object key.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DataintegrationService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// This is used to expand references of the object. If value is true, then all referenced objects will be expanded. If value is false, then shallow objects will be returned in place of references. Default is false. <br><br><B>Examples:-</B><br> <ul> <li><B>?expandReferences=true</B> returns all objects of type data loader task</li> </ul>
+        /// Used to expand references of the object. If value is true, then all referenced objects are expanded. If value is false, then shallow objects are returned in place of references. Default is false. <br><br><B>Example: </B><br> <ul> <li><B>?expandReferences=true</B> returns all objects of type data loader task</li> </ul>
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "expandReferences")]
         public string ExpandReferences { get; set; }

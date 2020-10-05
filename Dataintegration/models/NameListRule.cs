@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The name list rule which defines how fields are projected. For example this may be all fields begining with STR.
+    /// The name list rule which defines how fields are projected. For example, this may be all fields begining with STR.
     /// </summary>
     public class NameListRule : ProjectionRule
     {
         
         /// <value>
-        /// skipRemainingRulesOnMatch
+        /// Specifies whether to skip remaining rules when a match is found.
         /// </value>
         [JsonProperty(PropertyName = "isSkipRemainingRulesOnMatch")]
         public System.Nullable<bool> IsSkipRemainingRulesOnMatch { get; set; }
 
         /// <value>
-        /// Reference to a typed object, this can be either a key value to an object within the document, a shall referenced to a TypedObject or a full TypedObject definition.
+        /// Reference to a typed object. This can be either a key value to an object within the document, a shall referenced to a `TypedObject`, or a full `TypedObject` definition.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Object Scope { get; set; }
 
         /// <value>
-        /// cascade
+        /// Specifies whether to cascade or not.
         /// </value>
         [JsonProperty(PropertyName = "isCascade")]
         public System.Nullable<bool> IsCascade { get; set; }
         ///
         /// <value>
-        /// matchingStrategy
+        /// The pattern matching strategy.
         /// </value>
         ///
         public enum MatchingStrategyEnum {
@@ -53,20 +53,20 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// matchingStrategy
+        /// The pattern matching strategy.
         /// </value>
         [JsonProperty(PropertyName = "matchingStrategy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MatchingStrategyEnum> MatchingStrategy { get; set; }
 
         /// <value>
-        /// caseSensitive
+        /// Specifies if the rule is case sensitive.
         /// </value>
         [JsonProperty(PropertyName = "isCaseSensitive")]
         public System.Nullable<bool> IsCaseSensitive { get; set; }
         ///
         /// <value>
-        /// ruleType
+        /// The rule type.
         /// </value>
         ///
         public enum RuleTypeEnum {
@@ -77,14 +77,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// ruleType
+        /// The rule type.
         /// </value>
         [JsonProperty(PropertyName = "ruleType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RuleTypeEnum> RuleType { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "names")]
         public System.Collections.Generic.List<string> Names { get; set; }

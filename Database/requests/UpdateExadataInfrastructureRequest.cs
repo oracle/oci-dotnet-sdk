@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Requests
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// Request to update the properties of an Exadata infrastructure
+        /// Request to update the properties of an Exadata Cloud@Customer infrastructure.
         /// </value>
         /// <remarks>
         /// Required

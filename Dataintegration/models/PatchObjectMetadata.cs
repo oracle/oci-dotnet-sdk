@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A summary type containing information about the object including its key, name and when/who created/updated it
+    /// A summary type containing information about the object including its key, name and when/who created/updated it.
     /// </summary>
     public class PatchObjectMetadata 
     {
@@ -28,13 +28,13 @@ namespace Oci.DataintegrationService.Models
         public string Key { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// The fully qualified path of the published object which would include its project and folder.
+        /// The fully qualified path of the published object, which would include its project and folder.
         /// </value>
         [JsonProperty(PropertyName = "namePath")]
         public string NamePath { get; set; }
@@ -64,13 +64,13 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         ///
         /// <value>
-        /// The patch action, if object was created, updated or deleted.
+        /// The patch action indicating if object was created, updated, or deleted.
         /// </value>
         ///
         public enum ActionEnum {
@@ -83,7 +83,7 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The patch action, if object was created, updated or deleted.
+        /// The patch action indicating if object was created, updated, or deleted.
         /// </value>
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]

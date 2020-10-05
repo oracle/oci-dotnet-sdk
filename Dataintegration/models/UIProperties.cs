@@ -22,13 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// coordinateX
+        /// The X coordinate of the object.
         /// </value>
         [JsonProperty(PropertyName = "coordinateX")]
         public System.Nullable<decimal> CoordinateX { get; set; }
 
         /// <value>
-        /// coordinateY
+        /// The Y coordinate of the object.
         /// </value>
         [JsonProperty(PropertyName = "coordinateY")]
         public System.Nullable<decimal> CoordinateY { get; set; }

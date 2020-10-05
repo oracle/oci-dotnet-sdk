@@ -66,6 +66,8 @@ namespace Oci.DatabaseService.Models
             DbBackup,
             [EnumMember(Value = "DATABASE")]
             Database,
+            [EnumMember(Value = "VM_CLUSTER_BACKUP")]
+            VmClusterBackup,
             [EnumMember(Value = "VM_CLUSTER_NEW")]
             VmClusterNew
         };
@@ -104,6 +106,9 @@ namespace Oci.DatabaseService.Models
                     break;
                 case "DB_BACKUP":
                     obj = new CreateDbHomeWithDbSystemIdFromBackupDetails();
+                    break;
+                case "VM_CLUSTER_BACKUP":
+                    obj = new CreateDbHomeWithVmClusterIdFromBackupDetails();
                     break;
                 case "NONE":
                     obj = new CreateDbHomeWithDbSystemIdDetails();

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A parameter value.
+    /// User defined value for a parameter.
     /// </summary>
     public class ParameterValue 
     {
@@ -28,7 +28,7 @@ namespace Oci.DataintegrationService.Models
         public System.Object SimpleValue { get; set; }
 
         /// <value>
-        /// This can be any object such as a file entity, or a schema or a table.
+        /// This can be any object such as a file entity, a schema, or a table.
         /// </value>
         [JsonProperty(PropertyName = "rootObjectValue")]
         public System.Object RootObjectValue { get; set; }

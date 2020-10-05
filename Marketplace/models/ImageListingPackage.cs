@@ -35,13 +35,14 @@ namespace Oci.MarketplaceService.Models
         public string AppCatalogListingResourceVersion { get; set; }
 
         /// <value>
-        /// The id of the image corresponding to the package.
+        /// The ID of the image corresponding to the package.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
 
         /// <value>
-        /// List of regions in which this ListingPackage is available.
+        /// The regions where you can deploy the listing package. (Some packages have restrictions that limit their deployment to United States regions only.)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<Region> Regions { get; set; }

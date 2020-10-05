@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The ADWC connection details object.
+    /// The details to update an Autonomous Data Warehouse data asset connection.
     /// </summary>
     public class UpdateConnectionFromAdwc : UpdateConnectionDetails
     {

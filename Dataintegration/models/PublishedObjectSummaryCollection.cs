@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of PublishedObject summaries
+        /// The array of published object summaries.
         /// </value>
         /// <remarks>
         /// Required

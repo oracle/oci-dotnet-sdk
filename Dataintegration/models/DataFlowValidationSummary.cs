@@ -16,43 +16,43 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about dataflow validation
+    /// The information about a data flow validation.
     /// </summary>
     public class DataFlowValidationSummary 
     {
         
         /// <value>
-        /// Total number of validation messages
+        /// The total number of validation messages.
         /// </value>
         [JsonProperty(PropertyName = "totalMessageCount")]
         public System.Nullable<int> TotalMessageCount { get; set; }
 
         /// <value>
-        /// Total number of validation error messages
+        /// The total number of validation error messages.
         /// </value>
         [JsonProperty(PropertyName = "errorMessageCount")]
         public System.Nullable<int> ErrorMessageCount { get; set; }
 
         /// <value>
-        /// Total number of validation warning messages
+        /// The total number of validation warning messages.
         /// </value>
         [JsonProperty(PropertyName = "warnMessageCount")]
         public System.Nullable<int> WarnMessageCount { get; set; }
 
         /// <value>
-        /// Total number of validation information messages
+        /// The total number of validation information messages.
         /// </value>
         [JsonProperty(PropertyName = "infoMessageCount")]
         public System.Nullable<int> InfoMessageCount { get; set; }
 
         /// <value>
-        /// Detailed information of the DataFlow object validation.
+        /// The detailed information of the data flow object validation.
         /// </value>
         [JsonProperty(PropertyName = "validationMessages")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<ValidationMessage>> ValidationMessages { get; set; }
 
         /// <value>
-        /// Objects will use a 36 character key as unique ID. It is system generated and cannot be edited by user
+        /// Objects will use a 36 character key as unique ID. It is system generated and cannot be modified.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DataintegrationService.Models
         public string ModelType { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The model version of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -73,7 +73,7 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -97,7 +97,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }

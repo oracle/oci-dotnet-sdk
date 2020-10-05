@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about TaskRun.
+    /// The information about a task run.
     /// </summary>
     public class TaskRunSummary 
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The type of the object.
+        /// The object type.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -43,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -89,19 +89,19 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
 
         /// <value>
-        /// startTimeMillis
+        /// The task run start time.
         /// </value>
         [JsonProperty(PropertyName = "startTimeMillis")]
         public System.Nullable<long> StartTimeMillis { get; set; }
 
         /// <value>
-        /// endTimeMillis
+        /// The task run end time.
         /// </value>
         [JsonProperty(PropertyName = "endTimeMillis")]
         public System.Nullable<long> EndTimeMillis { get; set; }
 
         /// <value>
-        /// lastUpdated
+        /// The date and time the task run was last updated.
         /// </value>
         [JsonProperty(PropertyName = "lastUpdated")]
         public System.Nullable<long> LastUpdated { get; set; }
@@ -143,7 +143,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }

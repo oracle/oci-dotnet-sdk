@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of Project summaries
+        /// The array of project summaries.
         /// </value>
         /// <remarks>
         /// Required

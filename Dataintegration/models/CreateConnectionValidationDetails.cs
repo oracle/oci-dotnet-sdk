@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Connection validation definition
+    /// The properties used in create connection validation operations.
     /// </summary>
     public class CreateConnectionValidationDetails 
     {

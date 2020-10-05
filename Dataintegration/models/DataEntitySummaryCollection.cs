@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of DataEntity summaries
+        /// The array of data entity summaries.
         /// </value>
         /// <remarks>
         /// Required

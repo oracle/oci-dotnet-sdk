@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The rename rule can rename fields from one to another.
+    /// Lets you rename an attribute.
     /// </summary>
     public class RenameRule : ProjectionRule
     {
         
         /// <value>
-        /// skipRemainingRulesOnMatch
+        /// Specifies whether to skip remaining rules when a match is found.
         /// </value>
         [JsonProperty(PropertyName = "isSkipRemainingRulesOnMatch")]
         public System.Nullable<bool> IsSkipRemainingRulesOnMatch { get; set; }
 
         /// <value>
-        /// fromName
+        /// The attribute name that needs to be renamed.
         /// </value>
         [JsonProperty(PropertyName = "fromName")]
         public string FromName { get; set; }
 
         /// <value>
-        /// toName
+        /// The new attribute name.
         /// </value>
         [JsonProperty(PropertyName = "toName")]
         public string ToName { get; set; }

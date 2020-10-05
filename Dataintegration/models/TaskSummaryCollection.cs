@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of Task summaries.
+        /// The array of task summaries.
         /// </value>
         /// <remarks>
         /// Required

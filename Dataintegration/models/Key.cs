@@ -23,7 +23,7 @@ namespace Oci.DataintegrationService.Models
     {
                 ///
         /// <value>
-        /// The type of the key.
+        /// The key type.
         /// </value>
         ///
         public enum ModelTypeEnum {
@@ -36,7 +36,7 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The type of the key.
+        /// The key type.
         /// </value>
         /// <remarks>
         /// Required

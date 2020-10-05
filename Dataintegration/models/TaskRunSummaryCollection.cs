@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// List of taskRun summaries
+    /// A list of task run summaries.
     /// </summary>
     public class TaskRunSummaryCollection 
     {
         
         /// <value>
-        /// The array of taskRun summaries
+        /// The array of task run summaries.
         /// </value>
         /// <remarks>
         /// Required

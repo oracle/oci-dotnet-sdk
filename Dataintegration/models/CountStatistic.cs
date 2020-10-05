@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A count statistics
+    /// A count statistics.
     /// </summary>
     public class CountStatistic 
     {
         
         /// <value>
-        /// The array of statistics
+        /// The array of statistics.
         /// </value>
         /// <remarks>
         /// Required

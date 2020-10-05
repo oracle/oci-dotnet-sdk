@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// IORM Config setting request for this database
+    /// Details of the IORM configuration settings update request.
     /// 
     /// </summary>
     public class DbIormConfigUpdateDetail 
     {
         
         /// <value>
-        /// Database Name. For updating default DbPlan, pass in dbName as `default`
+        /// The database name. For the default `DbPlan`, the `dbName` is `default`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
 
         /// <value>
-        /// Relative priority of a database
+        /// The relative priority of this database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "share")]

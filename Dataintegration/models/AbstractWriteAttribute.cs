@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORACLEATPWRITEATTRIBUTE")]
             Oracleatpwriteattribute,
             [EnumMember(Value = "ORACLEADWCWRITEATTRIBUTE")]
-            Oracleadwcwriteattribute
+            Oracleadwcwriteattribute,
+            [EnumMember(Value = "ORACLE_WRITE_ATTRIBUTE")]
+            OracleWriteAttribute,
+            [EnumMember(Value = "ORACLE_ATP_WRITE_ATTRIBUTE")]
+            OracleAtpWriteAttribute,
+            [EnumMember(Value = "ORACLE_ADWC_WRITE_ATTRIBUTE")]
+            OracleAdwcWriteAttribute
         };
 
         /// <value>

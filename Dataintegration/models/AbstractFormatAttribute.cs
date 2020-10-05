@@ -30,7 +30,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "JSON_FORMAT")]
             JsonFormat,
             [EnumMember(Value = "CSV_FORMAT")]
-            CsvFormat
+            CsvFormat,
+            [EnumMember(Value = "AVRO_FORMAT")]
+            AvroFormat
         };
 
         /// <value>
@@ -65,6 +67,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "AVRO_FORMAT":
+                    obj = new AvroFormatAttribute();
+                    break;
                 case "JSON_FORMAT":
                     obj = new JsonFormatAttribute();
                     break;

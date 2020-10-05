@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about output links.
+    /// Details about the outgoing data of an operator in a data flow design.
     /// </summary>
     public class OutputLink : FlowPortLink
     {

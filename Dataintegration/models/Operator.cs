@@ -38,7 +38,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "PROJECTION_OPERATOR")]
             ProjectionOperator,
             [EnumMember(Value = "TARGET_OPERATOR")]
-            TargetOperator
+            TargetOperator,
+            [EnumMember(Value = "DISTINCT_OPERATOR")]
+            DistinctOperator,
+            [EnumMember(Value = "SORT_OPERATOR")]
+            SortOperator
         };
 
         /// <value>
@@ -68,13 +72,13 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// Details about the operator.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -104,13 +108,13 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
 
         /// <value>
-        /// An array of parameters.
+        /// An array of parameters used in the data flow.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<Parameter> Parameters { get; set; }
@@ -145,11 +149,17 @@ namespace Oci.DataintegrationService.Models
                 case "JOINER_OPERATOR":
                     obj = new Joiner();
                     break;
+                case "DISTINCT_OPERATOR":
+                    obj = new Distinct();
+                    break;
                 case "FILTER_OPERATOR":
                     obj = new Filter();
                     break;
                 case "AGGREGATOR_OPERATOR":
                     obj = new Aggregator();
+                    break;
+                case "SORT_OPERATOR":
+                    obj = new SortOper();
                     break;
                 case "PROJECTION_OPERATOR":
                     obj = new Projection();

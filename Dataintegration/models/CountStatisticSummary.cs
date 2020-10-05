@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Detail of object.
+    /// Details of the count statistic summary object.
     /// </summary>
     public class CountStatisticSummary 
     {
                 ///
         /// <value>
-        /// the type of object for the object count statistic.
+        /// The type of object for the count statistic object.
         /// </value>
         ///
         public enum ObjectTypeEnum {
@@ -43,14 +43,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// the type of object for the object count statistic.
+        /// The type of object for the count statistic object.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectTypeEnum> ObjectType { get; set; }
 
         /// <value>
-        /// the value for the object count statistic.
+        /// The value for the count statistic object.
         /// </value>
         [JsonProperty(PropertyName = "objectCount")]
         public System.Nullable<long> ObjectCount { get; set; }

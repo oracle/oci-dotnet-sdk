@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of Schema summaries
+        /// The array of schema summaries.
         /// </value>
         /// <remarks>
         /// Required

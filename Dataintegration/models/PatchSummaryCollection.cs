@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of patch summaries
+        /// The array of patch summaries.
         /// </value>
         /// <remarks>
         /// Required

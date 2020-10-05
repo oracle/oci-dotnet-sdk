@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// DIS workspace id
+        /// The workspace ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DataintegrationService.Requests
         public string WorkspaceId { get; set; }
         
         /// <value>
-        /// key of the task validation.
+        /// The task validation key.
         /// </value>
         /// <remarks>
         /// Required

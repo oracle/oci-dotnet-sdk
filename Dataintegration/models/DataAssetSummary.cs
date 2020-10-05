@@ -34,7 +34,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORACLE_ATP_DATA_ASSET")]
             OracleAtpDataAsset,
             [EnumMember(Value = "ORACLE_ADWC_DATA_ASSET")]
-            OracleAdwcDataAsset
+            OracleAdwcDataAsset,
+            [EnumMember(Value = "MYSQL_DATA_ASSET")]
+            MysqlDataAsset,
+            [EnumMember(Value = "GENERIC_JDBC_DATA_ASSET")]
+            GenericJdbcDataAsset
         };
 
         /// <value>
@@ -57,13 +61,13 @@ namespace Oci.DataintegrationService.Models
         public string ModelVersion { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// The user-defined description of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -75,19 +79,19 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
 
         /// <value>
-        /// The external key for the object
+        /// The external key for the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
 
         /// <value>
-        /// assetProperties
+        /// Additional properties for the data asset.
         /// </value>
         [JsonProperty(PropertyName = "assetProperties")]
         public System.Collections.Generic.Dictionary<string, string> AssetProperties { get; set; }
@@ -128,11 +132,17 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "MYSQL_DATA_ASSET":
+                    obj = new DataAssetSummaryFromMySQL();
+                    break;
                 case "ORACLE_ATP_DATA_ASSET":
                     obj = new DataAssetSummaryFromAtp();
                     break;
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new DataAssetSummaryFromAdwc();
+                    break;
+                case "GENERIC_JDBC_DATA_ASSET":
+                    obj = new DataAssetSummaryFromJdbc();
                     break;
                 case "ORACLE_OBJECT_STORAGE_DATA_ASSET":
                     obj = new DataAssetSummaryFromObjectStorage();

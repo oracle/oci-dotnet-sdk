@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A StructuredType object represents a data type that exists in a physical data asset object such as a table column, but is more complex, for example an Oracle database OBJECT type.   It can be composed of multiple DataType objects.
+    /// A `StructuredType` object represents a data type that exists in a physical data asset object such as a table column, but is more complex. For example, an Oracle database `OBJECT` type. It can be composed of multiple `DataType` objects.
     /// </summary>
     public class StructuredType 
     {
@@ -25,7 +25,7 @@ namespace Oci.DataintegrationService.Models
         public BaseType Schema { get; set; }
         ///
         /// <value>
-        /// dtType
+        /// The data type.
         /// </value>
         ///
         public enum DtTypeEnum {
@@ -36,14 +36,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// dtType
+        /// The data type.
         /// </value>
         [JsonProperty(PropertyName = "dtType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DtTypeEnum> DtType { get; set; }
 
         /// <value>
-        /// typeSystemName
+        /// The data type system name.
         /// </value>
         [JsonProperty(PropertyName = "typeSystemName")]
         public string TypeSystemName { get; set; }

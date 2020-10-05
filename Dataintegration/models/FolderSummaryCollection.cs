@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of Folder summaries
+        /// The array of folder summaries.
         /// </value>
         /// <remarks>
         /// Required

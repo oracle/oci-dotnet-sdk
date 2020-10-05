@@ -112,6 +112,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "shapeConfig")]
         public UpdateInstanceShapeConfigDetails ShapeConfig { get; set; }
 
+        [JsonProperty(PropertyName = "instanceOptions")]
+        public InstanceOptions InstanceOptions { get; set; }
+
         /// <value>
         /// A fault domain is a grouping of hardware and infrastructure within an availability domain.
         /// Each availability domain contains three fault domains. Fault domains let you distribute your

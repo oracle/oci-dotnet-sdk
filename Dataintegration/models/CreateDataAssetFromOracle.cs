@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Oracle data asset details.
+    /// Details for the Oracle Database data asset type.
     /// </summary>
     public class CreateDataAssetFromOracle : CreateDataAssetDetails
     {
         
         /// <value>
-        /// The host details for the data asset.
+        /// The Oracle Database hostname.
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
 
         /// <value>
-        /// The port details for the data asset.
+        /// The Oracle Database port.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public string Port { get; set; }
@@ -40,13 +40,13 @@ namespace Oci.DataintegrationService.Models
         public string ServiceName { get; set; }
 
         /// <value>
-        /// The driver class for the data asset.
+        /// The Oracle Database driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
 
         /// <value>
-        /// sid
+        /// The Oracle Database SID.
         /// </value>
         [JsonProperty(PropertyName = "sid")]
         public string Sid { get; set; }

@@ -37,19 +37,19 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Reference to a typed object, this can be either a key value to an object within the document, a shall referenced to a TypedObject or a full TypedObject definition.
+        /// Reference to a typed object, this can be either a key value to an object within the document, a shall referenced to a `TypedObject` or a full `TypedObject` definition.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Object Scope { get; set; }
 
         /// <value>
-        /// orderByRule
+        /// Specifies whether it is ordered by rule.
         /// </value>
         [JsonProperty(PropertyName = "isOrderByRule")]
         public System.Nullable<bool> IsOrderByRule { get; set; }
 
         /// <value>
-        /// projectionRules
+        /// The projection rules.
         /// </value>
         [JsonProperty(PropertyName = "projectionRules")]
         public System.Collections.Generic.List<ProjectionRule> ProjectionRules { get; set; }

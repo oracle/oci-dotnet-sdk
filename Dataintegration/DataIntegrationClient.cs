@@ -66,7 +66,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// The workspace will be moved to the desired compartment.
+        /// Moves a workspace to a specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -297,7 +297,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// The endpoint accepts the DataFlow object definition in the request payload and creates a DataFlow object validation.
+        /// Accepts the data flow definition in the request payload and creates a data flow validation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -336,7 +336,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Retrieves the data entity shape from the end data system. The input can specify the data entity to get the shape for. For databases, this can be retrieved from the database data dictionary. For files, some hints as to the file properties can also be supplied in the input.
+        /// Creates the data entity shape using the shape from the data asset.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -369,6 +369,82 @@ namespace Oci.DataintegrationService
             catch (Exception e)
             {
                 logger.Error($"CreateEntityShape failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Publish a DataFlow in a OCI DataFlow application.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateExternalPublicationResponse> CreateExternalPublication(CreateExternalPublicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalPublication");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalPublicationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalPublication failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Validates a specific task.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateExternalPublicationValidationResponse> CreateExternalPublicationValidation(CreateExternalPublicationValidationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalPublicationValidation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalPublicationValidation failed with error: {e.Message}");
                 throw;
             }
         }
@@ -530,7 +606,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Creates a data integration task or task run. The task can be based on a dataflow design or a task.
+        /// Creates a data integration task run for the specified task.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -606,7 +682,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Creates a new Data Integration Workspace ready for performing data integration.
+        /// Creates a new Data Integration workspace ready for performing data integration tasks.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -721,7 +797,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Successfully accepted the delete request. The connection validation will be deleted.
+        /// Deletes a connection validation.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -868,6 +944,83 @@ namespace Oci.DataintegrationService
             catch (Exception e)
             {
                 logger.Error($"DeleteDataFlowValidation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Removes a published object using the specified identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteExternalPublicationResponse> DeleteExternalPublication(DeleteExternalPublicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalPublication");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalPublicationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalPublication failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Removes a task validation using the specified identifier.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteExternalPublicationValidationResponse> DeleteExternalPublicationValidation(DeleteExternalPublicationValidationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalPublicationValidation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations/{externalPublicationValidationKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalPublicationValidation failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1102,7 +1255,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Deletes a Data Integration Workspace resource by identifier
+        /// Deletes a Data Integration workspace resource using the specified identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1484,6 +1637,82 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Retrieves a publshed object in an task using the specified identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetExternalPublicationResponse> GetExternalPublication(GetExternalPublicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalPublication");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalPublicationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalPublication failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves an external publication validation using the specified identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetExternalPublicationValidationResponse> GetExternalPublicationValidation(GetExternalPublicationValidationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalPublicationValidation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations/{externalPublicationValidationKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalPublicationValidation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Retrieves a folder using the specified identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1631,6 +1860,44 @@ namespace Oci.DataintegrationService
             catch (Exception e)
             {
                 logger.Error($"GetPublishedObject failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a reference in an application.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetReferenceResponse> GetReference(GetReferenceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getReference");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/applications/{applicationKey}/references/{referenceKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetReferenceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetReference failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1789,7 +2056,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Gets the status of the work request with the given ID.
+        /// Retrieves the status of the work request with the given ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1827,7 +2094,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Gets a Data Integration Workspace by identifier
+        /// Retrieves a Data Integration workspace using the specified identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1979,7 +2246,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// This endpoint can be used to list all data asset summaries
+        /// Retrieves a list of all data asset summaries.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2018,8 +2285,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Retrieves a list of summaries of data entities present in the schema identified by schema name. |
-        /// A live query is run on the data asset identified via the connection specified.
+        /// Lists a summary of data entities from the data asset using the specified connection.        
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2058,7 +2324,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Retrieves a list of data flow validations within the specified workspace
+        /// Retrieves a list of data flow validations within the specified workspace.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2173,6 +2439,83 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Retrieves a lists of external publication validations in a workspace and provides options to filter the list.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListExternalPublicationValidationsResponse> ListExternalPublicationValidations(ListExternalPublicationValidationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalPublicationValidations");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalPublicationValidationsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalPublicationValidations failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a list of external publications in an application and provides options to filter the list.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListExternalPublicationsResponse> ListExternalPublications(ListExternalPublicationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalPublications");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalPublicationsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalPublications failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Retrieves a list of folders in a project and provides options to filter the list.
         /// 
         /// </summary>
@@ -2213,6 +2556,44 @@ namespace Oci.DataintegrationService
 
         /// <summary>
         /// Retrieves a list of patches in an application and provides options to filter the list.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListPatchChangesResponse> ListPatchChanges(ListPatchChangesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listPatchChanges");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/applications/{applicationKey}/patchChanges".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListPatchChangesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListPatchChanges failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a list of patches in an application and provides options to filter the list. For listing changes based on a period and logical objects changed, see ListPatchChanges API.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2327,6 +2708,44 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Retrieves a list of references in an application. Reference objects are created when dataflows and tasks use objects, such as data assets and connections.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListReferencesResponse> ListReferences(ListReferencesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listReferences");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/applications/{applicationKey}/references".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListReferencesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListReferences failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Retrieves a list of all the schemas that can be accessed using the specified connection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2365,7 +2784,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Get log entries for task runs using its key
+        /// Gets log entries for task runs using its key.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2519,7 +2938,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Retrieves a paginated list of errors for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2558,7 +2977,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for a given work request.
+        /// Retrieves a paginated list of logs for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2636,7 +3055,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Returns a list of Data Integration Workspaces.
+        /// Retrieves a list of Data Integration workspaces.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2675,7 +3094,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// The workspace will be started.
+        /// Starts a workspace.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2714,7 +3133,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// The workspace will be stopped.
+        /// Stops a workspace.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2905,6 +3324,44 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Updates the external publication object.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateExternalPublicationResponse> UpdateExternalPublication(UpdateExternalPublicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateExternalPublication");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateExternalPublicationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateExternalPublication failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates a specific folder.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2976,6 +3433,44 @@ namespace Oci.DataintegrationService
             catch (Exception e)
             {
                 logger.Error($"UpdateProject failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the application references. For example, to map a data asset to a different target object.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateReferenceResponse> UpdateReference(UpdateReferenceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateReference");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workspaces/{workspaceId}/applications/{applicationKey}/references/{referenceKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateReferenceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateReference failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3057,7 +3552,7 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
-        /// Updates the Data Integration Workspace
+        /// Updates the specified Data Integration workspace.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

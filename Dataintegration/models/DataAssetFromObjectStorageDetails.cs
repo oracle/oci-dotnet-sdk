@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Object Storage data asset details.
+    /// Details for the Oracle Object storage data asset type.
     /// </summary>
     public class DataAssetFromObjectStorageDetails : DataAsset
     {
         
         /// <value>
-        /// url
+        /// The Oracle Object storage URL.
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
@@ -34,7 +34,7 @@ namespace Oci.DataintegrationService.Models
         public string TenancyId { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// The namespace for the specified Oracle Object storage resource. You can find the namespace under Object Storage Settings in the Console.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }

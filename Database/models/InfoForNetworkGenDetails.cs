@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Parameters for generation of the client or backup network in a VM cluster network.
+    /// Parameters for generation of the client or backup network in a VM cluster network in an Exadata Cloud@Customer system.
     /// 
     /// </summary>
     public class InfoForNetworkGenDetails 

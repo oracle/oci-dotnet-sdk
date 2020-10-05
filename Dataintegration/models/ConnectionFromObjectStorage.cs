@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Object Storage connection details.
+    /// The connection details for an Oracle Object Storage data asset.
     /// </summary>
     public class ConnectionFromObjectStorage : Connection
     {
         
         /// <value>
-        /// The credential file content from a wallet for the data asset.
+        /// The credential file content from an Oracle Object Storage wallet.
         /// </value>
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }
@@ -34,13 +34,13 @@ namespace Oci.DataintegrationService.Models
         public string UserId { get; set; }
 
         /// <value>
-        /// The fingeprint for the user.
+        /// The fingerprint for the user.
         /// </value>
         [JsonProperty(PropertyName = "fingerPrint")]
         public string FingerPrint { get; set; }
 
         /// <value>
-        /// The pass phrase for the connection.
+        /// The passphrase for the connection.
         /// </value>
         [JsonProperty(PropertyName = "passPhrase")]
         public string PassPhrase { get; set; }

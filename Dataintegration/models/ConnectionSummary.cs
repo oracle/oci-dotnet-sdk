@@ -34,7 +34,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORACLE_OBJECT_STORAGE_CONNECTION")]
             OracleObjectStorageConnection,
             [EnumMember(Value = "ORACLEDB_CONNECTION")]
-            OracledbConnection
+            OracledbConnection,
+            [EnumMember(Value = "MYSQL_CONNECTION")]
+            MysqlConnection,
+            [EnumMember(Value = "GENERIC_JDBC_CONNECTION")]
+            GenericJdbcConnection
         };
 
         /// <value>
@@ -64,13 +68,13 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// User-defined description for the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -88,7 +92,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
@@ -112,7 +116,7 @@ namespace Oci.DataintegrationService.Models
         public ObjectMetadata Metadata { get; set; }
 
         /// <value>
-        /// A map, if provided key is replaced with generated key, this structure provides mapping between user provided key and generated key
+        /// A key map. If provided, key is replaced with generated key. This structure provides mapping between user provided key and generated key.
         /// </value>
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }
@@ -138,6 +142,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "GENERIC_JDBC_CONNECTION":
+                    obj = new ConnectionSummaryFromJdbc();
+                    break;
                 case "ORACLE_ATP_CONNECTION":
                     obj = new ConnectionSummaryFromAtp();
                     break;
@@ -146,6 +153,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLE_ADWC_CONNECTION":
                     obj = new ConnectionSummaryFromAdwc();
+                    break;
+                case "MYSQL_CONNECTION":
+                    obj = new ConnectionSummaryFromMySQL();
                     break;
                 case "ORACLE_OBJECT_STORAGE_CONNECTION":
                     obj = new ConnectionSummaryFromObjectStorage();
