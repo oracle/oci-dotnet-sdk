@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about TaskRun.
+    /// The information about a task run.
     /// </summary>
     public class TaskRun 
     {
@@ -43,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DataintegrationService.Models
         public ConfigProvider ConfigProvider { get; set; }
         ///
         /// <value>
-        /// status
+        /// The status of the task run.
         /// </value>
         ///
         public enum StatusEnum {
@@ -85,50 +85,50 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// status
+        /// The status of the task run.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
 
         /// <value>
-        /// startTimeMillis
+        /// The start time.
         /// </value>
         [JsonProperty(PropertyName = "startTimeMillis")]
         public System.Nullable<long> StartTimeMillis { get; set; }
 
         /// <value>
-        /// endTimeMillis
+        /// The end time.
         /// </value>
         [JsonProperty(PropertyName = "endTimeMillis")]
         public System.Nullable<long> EndTimeMillis { get; set; }
 
         /// <value>
-        /// lastUpdated
+        /// The date and time the object was last updated.
         /// </value>
         [JsonProperty(PropertyName = "lastUpdated")]
         public System.Nullable<long> LastUpdated { get; set; }
 
         /// <value>
-        /// Number of records processed in task run.
+        /// The number of records processed in the task run.
         /// </value>
         [JsonProperty(PropertyName = "recordsWritten")]
         public System.Nullable<long> RecordsWritten { get; set; }
 
         /// <value>
-        /// Number of bytes processed in task run.
+        /// The number of bytes processed in the task run.
         /// </value>
         [JsonProperty(PropertyName = "bytesProcessed")]
         public System.Nullable<long> BytesProcessed { get; set; }
 
         /// <value>
-        /// Error message if status is ERROR
+        /// Contains an error message if status is `ERROR`.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
 
         /// <value>
-        /// Opc request id of execution of task run
+        /// The OPC request ID of execution of the task run.
         /// </value>
         [JsonProperty(PropertyName = "opcRequestId")]
         public string OpcRequestId { get; set; }
@@ -140,7 +140,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         ///
         /// <value>
-        /// The type of the task for the run.
+        /// The type of task run.
         /// </value>
         ///
         public enum TaskTypeEnum {
@@ -151,14 +151,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The type of the task for the run.
+        /// The type of task run.
         /// </value>
         [JsonProperty(PropertyName = "taskType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
@@ -167,7 +167,7 @@ namespace Oci.DataintegrationService.Models
         public ObjectMetadata Metadata { get; set; }
 
         /// <value>
-        /// A map, if provided key is replaced with generated key, this structure provides mapping between user provided key and generated key
+        /// A key map. If provided, key is replaced with generated key. This structure provides mapping between user provided key and generated key.
         /// </value>
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }

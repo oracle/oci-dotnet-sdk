@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The details of the flow port links.
+    /// Details about the link between two data flow operators.
     /// </summary>
     [JsonConverter(typeof(FlowPortLinkModelConverter))]
     public class FlowPortLink 

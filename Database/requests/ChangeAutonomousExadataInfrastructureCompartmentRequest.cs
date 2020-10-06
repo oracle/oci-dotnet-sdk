@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move Autonomous Exadata Infrastructure to a different compartment
+        /// Request to move an Autonomous Exadata Infrastructure resource to a different compartment.
         /// </value>
         /// <remarks>
         /// Required

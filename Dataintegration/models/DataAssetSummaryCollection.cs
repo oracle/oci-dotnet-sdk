@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of DataAsset summaries
+        /// The array of data asset summaries.
         /// </value>
         /// <remarks>
         /// Required

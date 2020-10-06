@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The TypedObject class is a base class for any model object that has a type.
+    /// The `TypedObject` class is a base class for any model object that has a type.
     /// </summary>
     [JsonConverter(typeof(TypedObjectModelConverter))]
     public class TypedObject 
@@ -37,6 +37,8 @@ namespace Oci.DataintegrationService.Models
             InputField,
             [EnumMember(Value = "DERIVED_FIELD")]
             DerivedField,
+            [EnumMember(Value = "MACRO_FIELD")]
+            MacroField,
             [EnumMember(Value = "OUTPUT_FIELD")]
             OutputField,
             [EnumMember(Value = "DYNAMIC_PROXY_FIELD")]
@@ -87,7 +89,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -151,6 +153,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "OUTPUT_FIELD":
                     obj = new OutputField();
+                    break;
+                case "MACRO_FIELD":
+                    obj = new MacroField();
                     break;
                 case "DERIVED_FIELD":
                     obj = new DerivedField();

@@ -31,7 +31,7 @@ namespace Oci.DataintegrationService.Models
         public string ParameterName { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// A user defined description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -49,13 +49,13 @@ namespace Oci.DataintegrationService.Models
         public string ClassFieldName { get; set; }
 
         /// <value>
-        /// Whether the parameter is static or not.
+        /// Specifies whether the parameter is static or not.
         /// </value>
         [JsonProperty(PropertyName = "isStatic")]
         public System.Nullable<bool> IsStatic { get; set; }
 
         /// <value>
-        /// Whether the parameter is a class field or not.
+        /// Specifies whether the parameter is a class field or not.
         /// </value>
         [JsonProperty(PropertyName = "isClassFieldValue")]
         public System.Nullable<bool> IsClassFieldValue { get; set; }

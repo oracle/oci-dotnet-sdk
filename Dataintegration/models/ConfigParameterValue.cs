@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// This holds the values/objects.
+    /// Contains the parameter configuration values.
     /// </summary>
     public class ConfigParameterValue 
     {

@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to create Exadata infrastructure.
+        /// Request to create Exadata Cloud@Customer infrastructure.
         /// </value>
         /// <remarks>
         /// Required

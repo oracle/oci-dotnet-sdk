@@ -34,7 +34,7 @@ namespace Oci.DataintegrationService.Models
         public System.Collections.Generic.List<string> Labels { get; set; }
 
         /// <value>
-        /// Registry version.
+        /// The registry version.
         /// </value>
         [JsonProperty(PropertyName = "registryVersion")]
         public System.Nullable<int> RegistryVersion { get; set; }
@@ -44,5 +44,11 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
+
+        /// <value>
+        /// Specifies whether this object is a favorite or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isFavorite")]
+        public System.Nullable<bool> IsFavorite { get; set; }
     }
 }

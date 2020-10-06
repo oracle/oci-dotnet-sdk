@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// The ID of the asynchronous request.
+        /// The ID of the asynchronous work request to retrieve.
         /// </value>
         /// <remarks>
         /// Required

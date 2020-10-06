@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about change compartment action.
+    /// The information needed to change the workspace compartment.
     /// </summary>
     public class ChangeCompartmentDetails 
     {

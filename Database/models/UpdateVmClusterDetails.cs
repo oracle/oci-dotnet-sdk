@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for updating the VM cluster.
+    /// Details for updating the Exadata Cloud@Customer VM cluster.
     /// </summary>
     public class UpdateVmClusterDetails 
     {

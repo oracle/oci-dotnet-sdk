@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A DerivedType object represents a more complex type that is derived from a set of simple types, for example an Address or SSN data type;
+    /// A `DerivedType` object represents a more complex type that is derived from a set of simple types, for example an `Address` or `SSN` data type.
     /// </summary>
     public class DerivedType : BaseType
     {

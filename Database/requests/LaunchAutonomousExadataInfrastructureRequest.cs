@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to launch a Autonomous Exadata Infrastructure.
+        /// Request to create an Autonomous Exadata Infrastructure resource.
         /// </value>
         /// <remarks>
         /// Required

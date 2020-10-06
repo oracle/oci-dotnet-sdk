@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// List of DependentObject summaries
+    /// A list of dependent object summaries.
     /// </summary>
     public class DependentObjectSummaryCollection 
     {
         
         /// <value>
-        /// The array of DependentObject summaries
+        /// An array of dependent object summaries.
         /// </value>
         /// <remarks>
         /// Required

@@ -123,5 +123,11 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "maximumNodeCount")]
         public System.Nullable<int> MaximumNodeCount { get; set; }
+
+        /// <value>
+        /// The maximum number of CPU cores per database node that can be enabled for this shape. Only applicable to the flex Exadata shape. Does not apply to X6, X7, and X8 fixed-shape systems.
+        /// </value>
+        [JsonProperty(PropertyName = "availableCoreCountPerNode")]
+        public System.Nullable<int> AvailableCoreCountPerNode { get; set; }
     }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Oracle write attribute
+    /// The Oracle write attribute.
     /// </summary>
     public class OracleWriteAttribute : AbstractWriteAttribute
     {

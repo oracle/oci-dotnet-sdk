@@ -106,6 +106,18 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "infrastructureType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
+
+        /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
         ///
         /// <value>
         /// The current state of the Autonomous Container Database.
@@ -226,7 +238,7 @@ namespace Oci.DatabaseService.Models
         public string AvailabilityDomain { get; set; }
 
         /// <value>
-        /// Oracle Database version of the Autonomous Container Database
+        /// Oracle Database version of the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }

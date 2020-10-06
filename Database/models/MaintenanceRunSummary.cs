@@ -130,7 +130,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE")]
             AutonomousContainerDatabase,
             [EnumMember(Value = "EXADATA_DB_SYSTEM")]
-            ExadataDbSystem
+            ExadataDbSystem,
+            [EnumMember(Value = "CLOUD_EXADATA_INFRASTRUCTURE")]
+            CloudExadataInfrastructure
         };
 
         /// <value>

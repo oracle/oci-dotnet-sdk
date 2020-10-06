@@ -22,19 +22,19 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The type of the object.
+        /// The object type.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }

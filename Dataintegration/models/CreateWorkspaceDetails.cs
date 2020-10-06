@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about new Workspace.
+    /// The information needed to create a new workspace.
     /// </summary>
     public class CreateWorkspaceDetails 
     {
@@ -60,7 +60,7 @@ namespace Oci.DataintegrationService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
 
         /// <value>
-        /// A detailed description for the workspace.
+        /// A user defined description for the workspace.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -86,7 +86,7 @@ namespace Oci.DataintegrationService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// Whether the private network connection is enabled or disabled.
+        /// Specifies whether the private network connection is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "isPrivateNetworkEnabled")]
         public System.Nullable<bool> IsPrivateNetworkEnabled { get; set; }

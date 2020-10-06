@@ -28,7 +28,7 @@ namespace Oci.DataintegrationService.Models
         public string Key { get; set; }
         ///
         /// <value>
-        /// status
+        /// The status of the object.
         /// </value>
         ///
         public enum StatusEnum {
@@ -37,7 +37,7 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// status
+        /// The status of the object.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -56,7 +56,7 @@ namespace Oci.DataintegrationService.Models
         public string ModelVersion { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

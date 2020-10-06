@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Requests
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// Request to create the VM cluster network.
+        /// Request to create the Cloud@Customer VM cluster network.
         /// </value>
         /// <remarks>
         /// Required

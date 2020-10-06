@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A reference to the object's parent
+    /// A reference to the object's parent.
     /// </summary>
     public class ParentReference 
     {
         
         /// <value>
-        /// Key of the parent object
+        /// Key of the parent object.
         /// </value>
         [JsonProperty(PropertyName = "parent")]
         public string Parent { get; set; }

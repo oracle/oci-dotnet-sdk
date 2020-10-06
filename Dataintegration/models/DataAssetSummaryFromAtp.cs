@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Oracle data asset details.
+    /// Summary details for the Autonomous Transaction Processing data asset type.
     /// </summary>
     public class DataAssetSummaryFromAtp : DataAssetSummary
     {
         
         /// <value>
-        /// The service name for the data asset.
+        /// The Autonomous Transaction Processing instance service name.
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
@@ -34,7 +34,7 @@ namespace Oci.DataintegrationService.Models
         public System.Collections.Generic.List<string> ServiceNames { get; set; }
 
         /// <value>
-        /// The driver class for the data asset.
+        /// The Autonomous Transaction Processing driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }

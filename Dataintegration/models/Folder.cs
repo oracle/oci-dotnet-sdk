@@ -40,19 +40,19 @@ namespace Oci.DataintegrationService.Models
         public string ModelVersion { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// A user defined description for the folder.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <value>
-        /// categoryName
+        /// The category name.
         /// </value>
         [JsonProperty(PropertyName = "categoryName")]
         public string CategoryName { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
@@ -82,7 +82,7 @@ namespace Oci.DataintegrationService.Models
         public ObjectMetadata Metadata { get; set; }
 
         /// <value>
-        /// A map, if provided key is replaced with generated key, this structure provides mapping between user provided key and generated key
+        /// A key map. If provided, the key is replaced with generated key. This structure provides mapping between user provided key and generated key.
         /// </value>
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }

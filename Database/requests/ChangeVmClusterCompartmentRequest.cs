@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move VM cluster to a different compartment
+        /// Request to move the Exadata Cloud@Customer VM cluster to a different compartment.
         /// </value>
         /// <remarks>
         /// Required

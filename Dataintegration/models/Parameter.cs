@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Parameters are created and assigned values that can be deferred to execution/runtime.
+    /// Parameters are created and assigned values that can be configured for each integration task.
     /// </summary>
     public class Parameter : TypedObject
     {
@@ -37,19 +37,19 @@ namespace Oci.DataintegrationService.Models
         public System.Object RootObjectDefaultValue { get; set; }
 
         /// <value>
-        /// Whether the parameter is input value.
+        /// Specifies whether the parameter is input value.
         /// </value>
         [JsonProperty(PropertyName = "isInput")]
         public System.Nullable<bool> IsInput { get; set; }
 
         /// <value>
-        /// Whether the parameter is output value.
+        /// Specifies whether the parameter is output value.
         /// </value>
         [JsonProperty(PropertyName = "isOutput")]
         public System.Nullable<bool> IsOutput { get; set; }
         ///
         /// <value>
-        /// The output aggregation type
+        /// The output aggregation type.
         /// </value>
         ///
         public enum OutputAggregationTypeEnum {
@@ -64,14 +64,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The output aggregation type
+        /// The output aggregation type.
         /// </value>
         [JsonProperty(PropertyName = "outputAggregationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OutputAggregationTypeEnum> OutputAggregationType { get; set; }
 
         /// <value>
-        /// The name of the object type.
+        /// The type of value the parameter was created for.
         /// </value>
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }

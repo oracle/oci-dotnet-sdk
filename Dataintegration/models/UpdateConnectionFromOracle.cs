@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Oracle connection details object.
+    /// The details to update an Oracle Database data asset connection.
     /// </summary>
     public class UpdateConnectionFromOracle : UpdateConnectionDetails
     {

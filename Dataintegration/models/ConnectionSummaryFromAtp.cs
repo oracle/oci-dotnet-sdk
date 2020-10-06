@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The ATP connection details.
+    /// The connection details for an Autonomous Transaction Processing data asset.
     /// </summary>
     public class ConnectionSummaryFromAtp : ConnectionSummary
     {

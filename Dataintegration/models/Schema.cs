@@ -22,19 +22,19 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The type of the object.
+        /// The object's type.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -43,13 +43,19 @@ namespace Oci.DataintegrationService.Models
         public ParentReference ParentRef { get; set; }
 
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value can be edited by the user and it is restricted to 1000 characters
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Detailed description for the object.
+        /// A resource name can have letters, numbers, and special characters. The value is editable and is restricted to 4000 characters.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceName")]
+        public string ResourceName { get; set; }
+
+        /// <value>
+        /// User-defined description for the schema.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -67,13 +73,13 @@ namespace Oci.DataintegrationService.Models
         public string ExternalKey { get; set; }
 
         /// <value>
-        /// hasContainers
+        /// Specifies whether the schema has containers.
         /// </value>
         [JsonProperty(PropertyName = "isHasContainers")]
         public System.Nullable<bool> IsHasContainers { get; set; }
 
         /// <value>
-        /// Connection key which is the default.
+        /// The default connection key.
         /// </value>
         [JsonProperty(PropertyName = "defaultConnection")]
         public string DefaultConnection { get; set; }
@@ -85,7 +91,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
 
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be edited by the user.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }

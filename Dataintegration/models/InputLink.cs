@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about input links.
+    /// Details about the incoming data to an operator in a data flow design.
     /// </summary>
     public class InputLink : FlowPortLink
     {
         
         /// <value>
-        /// From link reference.
+        /// The from link reference.
         /// </value>
         [JsonProperty(PropertyName = "fromLink")]
         public string FromLink { get; set; }

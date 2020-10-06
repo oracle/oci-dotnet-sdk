@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// Details for the new Data Integration Workspace.
+        /// The information needed to create a new Data Integration workspace.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.DataintegrationService.Requests
         public CreateWorkspaceDetails CreateWorkspaceDetails { get; set; }
         
         /// <value>
-        /// Caller may provide \"retry tokens\" allowing them to retry an operation
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

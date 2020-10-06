@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// javaTypeName
+        /// The java type name.
         /// </value>
         [JsonProperty(PropertyName = "javaTypeName")]
         public string JavaTypeName { get; set; }

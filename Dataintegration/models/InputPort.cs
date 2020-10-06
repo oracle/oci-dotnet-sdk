@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
                 ///
         /// <value>
-        /// The port details for the data asset.Type
+        /// The port details for the data asset.Type.
         /// </value>
         ///
         public enum PortTypeEnum {
@@ -35,14 +35,14 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The port details for the data asset.Type
+        /// The port details for the data asset.Type.
         /// </value>
         [JsonProperty(PropertyName = "portType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PortTypeEnum> PortType { get; set; }
 
         /// <value>
-        /// fields
+        /// An array of fields.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<TypedObject> Fields { get; set; }

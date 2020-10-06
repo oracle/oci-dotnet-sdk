@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Response details which has IORM Settings for this Exadata System
+    /// The IORM settings of the Exadata DB system.
     /// 
     /// </summary>
     public class ExadataIormConfig 
     {
                 ///
         /// <value>
-        /// The current config state of IORM settings for this Exadata System.
+        /// The current state of IORM configuration for the Exadata DB system.
         /// 
         /// </value>
         ///
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current config state of IORM settings for this Exadata System.
+        /// The current state of IORM configuration for the Exadata DB system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -49,15 +49,15 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
 
         /// <value>
-        /// Additional information about the current lifecycleState.
+        /// Additional information about the current `lifecycleState`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         ///
         /// <value>
-        /// Value for the IORM objective
-        /// Default is \"Auto\"
+        /// The current value for the IORM objective.
+        /// The default is `AUTO`.
         /// 
         /// </value>
         ///
@@ -75,8 +75,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Value for the IORM objective
-        /// Default is \"Auto\"
+        /// The current value for the IORM objective.
+        /// The default is `AUTO`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "objective")]
@@ -84,8 +84,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ObjectiveEnum> Objective { get; set; }
 
         /// <value>
-        /// Array of IORM Setting for all the database in
-        /// this Exadata DB System
+        /// An array of IORM settings for all the database in
+        /// the Exadata DB system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbPlans")]

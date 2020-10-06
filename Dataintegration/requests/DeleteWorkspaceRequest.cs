@@ -17,7 +17,7 @@ namespace Oci.DataintegrationService.Requests
     {
         
         /// <value>
-        /// DIS workspace id
+        /// The workspace ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,22 +27,21 @@ namespace Oci.DataintegrationService.Requests
         public string WorkspaceId { get; set; }
         
         /// <value>
-        /// This parameter allows users to set the timeout for DIS to gracefully close down any running jobs before stopping the workspace.
+        /// Used to set the timeout for Data Integration to gracefully close down any running jobs before stopping the workspace.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "quiesceTimeout")]
         public System.Nullable<long> QuiesceTimeout { get; set; }
         
         /// <value>
-        /// This parameter allows users to force close down the workspace.
+        /// Used to force close down the workspace.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isForceOperation")]
         public System.Nullable<bool> IsForceOperation { get; set; }
         
         /// <value>
-        /// Update and Delete operations should accept an optional If-Match header,
-        /// in which clients can send a previously-received ETag. When If-Match is
-        /// provided and its value does not exactly match the ETag of the resource
-        /// on the server, the request should fail with HTTP response status code 412
+        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+        /// The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+        /// When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]

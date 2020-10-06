@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The array of Connection summaries
+        /// The array of connection summaries.
         /// </value>
         /// <remarks>
         /// Required

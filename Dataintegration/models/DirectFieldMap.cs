@@ -22,13 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -40,13 +40,13 @@ namespace Oci.DataintegrationService.Models
         public ConfigValues ConfigValues { get; set; }
 
         /// <value>
-        /// Reference to a typed object
+        /// Reference to a typed object.
         /// </value>
         [JsonProperty(PropertyName = "sourceTypedObject")]
         public string SourceTypedObject { get; set; }
 
         /// <value>
-        /// Reference to a typed object
+        /// Reference to a typed object.
         /// </value>
         [JsonProperty(PropertyName = "targetTypedObject")]
         public string TargetTypedObject { get; set; }

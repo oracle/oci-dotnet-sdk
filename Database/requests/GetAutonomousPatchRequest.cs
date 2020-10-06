@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// The Autonomous Patch [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The autonomous patch [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required

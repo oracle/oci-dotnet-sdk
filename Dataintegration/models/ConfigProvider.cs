@@ -22,13 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// bindings
+        /// The configuration provider bindings.
         /// </value>
         [JsonProperty(PropertyName = "bindings")]
         public System.Collections.Generic.Dictionary<string, ParameterValue> Bindings { get; set; }
 
         /// <value>
-        /// childProviders
+        /// The child providers.
         /// </value>
         [JsonProperty(PropertyName = "childProviders")]
         public System.Collections.Generic.Dictionary<string, ConfigProvider> ChildProviders { get; set; }

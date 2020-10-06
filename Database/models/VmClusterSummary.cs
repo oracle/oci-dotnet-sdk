@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the VM cluster.
+    /// Details of the Exadata Cloud@Customer VM cluster.
     /// 
     /// </summary>
     public class VmClusterSummary 
@@ -67,7 +67,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
 
         /// <value>
-        /// The user-friendly name for the VM cluster. The name does not need to be unique.
+        /// The user-friendly name for the Exadata Cloud@Customer VM cluster. The name does not need to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

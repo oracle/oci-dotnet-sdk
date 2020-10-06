@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Request to create Exadata infrastructure.
+    /// Request to create Exadata Cloud@Customer infrastructure resource.
     /// 
     /// </summary>
     public class CreateExadataInfrastructureDetails 
@@ -135,7 +135,7 @@ namespace Oci.DatabaseService.Models
         public string CorporateProxy { get; set; }
 
         /// <value>
-        /// The list of contacts for the Exadata Infrastructure.
+        /// The list of contacts for the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }

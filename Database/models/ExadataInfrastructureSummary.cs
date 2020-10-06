@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the Exadata infrastructure.
+    /// Details of the Exadata Cloud@Customer infrastructure.
     /// </summary>
     public class ExadataInfrastructureSummary 
     {
@@ -80,7 +80,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
 
         /// <value>
-        /// The user-friendly name for the Exadata infrastructure. The name does not need to be unique.
+        /// The user-friendly name for the Exadata Cloud@Customer infrastructure. The name does not need to be unique.
         /// </value>
         /// <remarks>
         /// Required
@@ -222,13 +222,13 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
 
         /// <value>
-        /// The CSI Number of the Exadata Infrastructure.
+        /// The CSI Number of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "csiNumber")]
         public string CsiNumber { get; set; }
 
         /// <value>
-        /// The list of contacts for the Exadata Infrastructure.
+        /// The list of contacts for the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }

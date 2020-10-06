@@ -46,7 +46,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
 
         /// <value>
-        /// The message code
+        /// The message code.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DataintegrationService.Models
         public string Code { get; set; }
 
         /// <value>
-        /// The message text
+        /// The message text.
         /// </value>
         /// <remarks>
         /// Required

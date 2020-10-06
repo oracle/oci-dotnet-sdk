@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// List of dataflow validation summaries
+    /// A list of data flow validation summaries.
     /// </summary>
     public class DataFlowValidationSummaryCollection 
     {
         
         /// <value>
-        /// The array of validation summaries
+        /// The array of validation summaries.
         /// </value>
         /// <remarks>
         /// Required

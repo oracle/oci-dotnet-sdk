@@ -22,7 +22,7 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// Human-readable log message.
+        /// A user-friendly log message.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }

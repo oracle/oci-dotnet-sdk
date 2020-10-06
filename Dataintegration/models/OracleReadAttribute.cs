@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The Oracle read attribute
+    /// The Oracle read attribute.
     /// </summary>
     public class OracleReadAttribute : AbstractReadAttribute
     {

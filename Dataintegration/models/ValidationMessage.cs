@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The level, message key and validation message.
+    /// The level, message key, and validation message.
     /// </summary>
     public class ValidationMessage 
     {
         
         /// <value>
-        /// Total number of validation messages
+        /// The total number of validation messages.
         /// </value>
         [JsonProperty(PropertyName = "level")]
         public string Level { get; set; }
 
         /// <value>
-        /// The key.
+        /// The validation message key.
         /// </value>
         [JsonProperty(PropertyName = "messageKey")]
         public string MessageKey { get; set; }
 
         /// <value>
-        /// The message itself.
+        /// The validation message.
         /// </value>
         [JsonProperty(PropertyName = "validationMessage")]
         public string ValidationMessageProp { get; set; }

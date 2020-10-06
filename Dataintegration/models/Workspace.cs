@@ -46,7 +46,7 @@ namespace Oci.DataintegrationService.Models
         public string DnsServerZone { get; set; }
 
         /// <value>
-        /// Whether the private network connection is enabled or disabled.
+        /// Specifies whether the private network connection is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "isPrivateNetworkEnabled")]
         public System.Nullable<bool> IsPrivateNetworkEnabled { get; set; }
@@ -159,13 +159,13 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
 
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in failed state.
         /// </value>
         [JsonProperty(PropertyName = "stateMessage")]
         public string StateMessage { get; set; }
 
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// A system-generated and immutable identifier assigned to the workspace upon creation.
         /// </value>
         /// <remarks>
         /// Required

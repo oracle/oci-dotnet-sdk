@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move Db System to a different compartment
+        /// Request to move the DB system to a different compartment.
         /// </value>
         /// <remarks>
         /// Required

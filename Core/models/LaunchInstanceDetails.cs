@@ -175,6 +175,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
 
+        [JsonProperty(PropertyName = "instanceOptions")]
+        public InstanceOptions InstanceOptions { get; set; }
+
         /// <value>
         /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
         /// 

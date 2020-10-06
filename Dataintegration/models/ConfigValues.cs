@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Configuration values can be string, objects or parameters.
+    /// Configuration values can be string, objects, or parameters.
     /// </summary>
     public class ConfigValues 
     {
         
         /// <value>
-        /// configParamValues
+        /// The configuration parameter values.
         /// </value>
         [JsonProperty(PropertyName = "configParamValues")]
         public System.Collections.Generic.Dictionary<string, ConfigParameterValue> ConfigParamValues { get; set; }

@@ -66,7 +66,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Activates the specified Exadata infrastructure.
+        /// Activates the specified Exadata Cloud@Customer infrastructure.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -225,8 +225,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Move the Autonomous Exadata Infrastructure and its dependent resources to the specified compartment.
-        /// For more information about moving Autonomous Exadata Infrastructures, see
+        /// Moves the Autonomous Exadata Infrastructure resource and its dependent resources to the specified compartment.
+        /// For more information, see
         /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
         /// 
         /// </summary>
@@ -307,7 +307,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Move the backup destination and its dependent resources to the specified compartment.
-        /// For more information about moving backup destinations, see
+        /// For more information, see
         /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
         /// 
         /// </summary>
@@ -342,6 +342,86 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ChangeBackupDestinationCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// To move a cloud Exadata infrastructure resource and its dependent resources to another compartment, use the
+        /// {@link #changeCloudExadataInfrastructureCompartment(ChangeCloudExadataInfrastructureCompartmentRequest) changeCloudExadataInfrastructureCompartment} operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ChangeCloudExadataInfrastructureCompartmentResponse> ChangeCloudExadataInfrastructureCompartment(ChangeCloudExadataInfrastructureCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeCloudExadataInfrastructureCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures/{cloudExadataInfrastructureId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeCloudExadataInfrastructureCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeCloudExadataInfrastructureCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// To move a cloud VM cluster and its dependent resources to another compartment, use the
+        /// {@link #changeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest) changeCloudVmClusterCompartment} operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ChangeCloudVmClusterCompartmentResponse> ChangeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeCloudVmClusterCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeCloudVmClusterCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeCloudVmClusterCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -429,7 +509,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move an Exadata infrastructure and its dependent resources to another compartment, use the
+        /// To move an Exadata Cloud@Customer infrastructure resource and its dependent resources to another compartment, use the
         /// {@link #changeExadataInfrastructureCompartment(ChangeExadataInfrastructureCompartmentRequest) changeExadataInfrastructureCompartment} operation.
         /// 
         /// </summary>
@@ -469,7 +549,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move a VM cluster and its dependent resources to another compartment, use the
+        /// To move an Exadata Cloud@Customer VM cluster and its dependent resources to another compartment, use the
         /// {@link #changeVmClusterCompartment(ChangeVmClusterCompartmentRequest) changeVmClusterCompartment} operation.
         /// 
         /// </summary>
@@ -550,7 +630,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Create a new Autonomous Container Database in the specified Autonomous Exadata Infrastructure.
+        /// Creates an Autonomous Container Database in the specified Autonomous Exadata Infrastructure.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -745,7 +825,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates an Autonomous VM cluster.
+        /// Creates an Autonomous VM cluster for Exadata Cloud@Customer.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -823,7 +903,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a backup destination.
+        /// Creates a backup destination in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -862,7 +942,84 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a new console connection to the specified dbNode.
+        /// Creates a cloud Exadata infrastructure resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateCloudExadataInfrastructureResponse> CreateCloudExadataInfrastructure(CreateCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createCloudExadataInfrastructure");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateCloudExadataInfrastructureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateCloudExadataInfrastructure failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateCloudVmClusterResponse> CreateCloudVmCluster(CreateCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createCloudVmCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateCloudVmClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateCloudVmCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new console connection to the specified database node.
         /// After the console connection has been created and is available,
         /// you connect to the console using SSH.
         /// 
@@ -949,7 +1106,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a new database in the specified Database Home. If the database version is provided, it must match the version of the Database Home. Applies to Exadata DB systems and Exadata Cloud at Customer.
+        /// Creates a new database in the specified Database Home. If the database version is provided, it must match the version of the Database Home. Applies to Exadata and Exadata Cloud@Customer systems.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1027,7 +1184,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a new Database Home in the specified DB system based on the request parameters you provide. Applies to bare metal DB systems, Exadata DB systems, and Exadata Cloud at Customer systems.
+        /// Creates a new Database Home in the specified database system based on the request parameters you provide. Applies to bare metal DB systems, Exadata systems, and Exadata Cloud@Customer systems.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1066,7 +1223,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Create Exadata infrastructure.
+        /// Creates Exadata Cloud@Customer infrastructure.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1145,7 +1302,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a VM cluster.
+        /// Creates an Exadata Cloud@Customer VM cluster.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1184,7 +1341,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates the VM cluster network.
+        /// Creates the Exadata Cloud@Customer VM cluster network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1230,7 +1387,7 @@ namespace Oci.DatabaseService
         /// - reset - power off and power on
         /// &lt;br/&gt;
         /// **Note:** Stopping a node affects billing differently, depending on the type of DB system:
-        /// *Bare metal and Exadata DB systems* - The _stop_ state has no effect on the resources you consume.
+        /// *Bare metal and Exadata systems* - The _stop_ state has no effect on the resources you consume.
         /// Billing continues for DB nodes that you stop, and related resources continue
         /// to apply against any relevant quotas. You must terminate the DB system
         /// ({@link #terminateDbSystem(TerminateDbSystemRequest) terminateDbSystem})
@@ -1352,7 +1509,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified Autonomous VM cluster.
+        /// Deletes the specified Autonomous VM cluster in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1429,7 +1586,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes a backup destination.
+        /// Deletes a backup destination in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1468,7 +1625,85 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified Db node console connection.
+        /// Deletes the cloud Exadata infrastructure resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteCloudExadataInfrastructureResponse> DeleteCloudExadataInfrastructure(DeleteCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteCloudExadataInfrastructure");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures/{cloudExadataInfrastructureId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteCloudExadataInfrastructureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteCloudExadataInfrastructure failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteCloudVmClusterResponse> DeleteCloudVmCluster(DeleteCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteCloudVmCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteCloudVmClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteCloudVmCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified database node console connection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1506,9 +1741,9 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the database. Applies only to Exadata DB systems.
+        /// Deletes the specified database. Applies only to Exadata systems.
         /// &lt;br/&gt;
-        /// The data in this database is local to the DB system and will be lost when the database is deleted. Oracle recommends that you back up any data in the DB system prior to deleting it. You can use the &#x60;performFinalBackup&#x60; parameter to have the Exadata DB system database backed up before it is deleted.
+        /// The data in this database is local to the Exadata system and will be lost when the database is deleted. Oracle recommends that you back up any data in the Exadata system prior to deleting it. You can use the &#x60;performFinalBackup&#x60; parameter to have the Exadata system database backed up before it is deleted.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1585,9 +1820,9 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes a Database Home. Applies to bare metal DB systems, Exadata DB systems, and Exadata Cloud at Customer systems.
+        /// Deletes a Database Home. Applies to bare metal DB systems, Exadata Cloud Service, and Exadata Cloud@Customer systems.
         /// &lt;br/&gt;
-        /// Oracle recommends that you use the &#x60;performFinalBackup&#x60; parameter to back up any data on a bare metal DB system before you delete a Database Home. On an Exadata Cloud at Customer system or an Exadata DB system, you can delete a Database Home only when there are no databases in it and therefore you cannot use the &#x60;performFinalBackup&#x60; parameter to back up data.
+        /// Oracle recommends that you use the &#x60;performFinalBackup&#x60; parameter to back up any data on a bare metal DB system before you delete a Database Home. On an Exadata Cloud@Customer system or an Exadata Cloud Service system, you can delete a Database Home only when there are no databases in it and therefore you cannot use the &#x60;performFinalBackup&#x60; parameter to back up data.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1626,7 +1861,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the Exadata infrastructure.
+        /// Deletes the Exadata Cloud@Customer infrastructure.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1665,7 +1900,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified VM cluster.
+        /// Deletes the specified Exadata Cloud@Customer VM cluster.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1704,7 +1939,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified VM cluster network.
+        /// Deletes the specified Exadata Cloud@Customer VM cluster network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1782,7 +2017,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Downloads the configuration file for the specified Exadata infrastructure.
+        /// Downloads the configuration file for the specified Exadata Cloud@Customer infrastructure.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1821,7 +2056,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Downloads the configuration file for the specified VM Cluster Network.
+        /// Downloads the configuration file for the specified Exadata Cloud@Customer VM cluster network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2020,7 +2255,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Generates a recommended VM cluster network configuration.
+        /// Generates a recommended Cloud@Customer VM cluster network configuration.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2330,7 +2565,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Autonomous Exadata Infrastructure.
+        /// Gets information about the specified Autonomous Exadata Infrastructure resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2368,7 +2603,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Autonomous Patch.
+        /// Gets information about a specific autonomous patch.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2406,7 +2641,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Autonomous VM cluster.
+        /// Gets information about the specified Autonomous VM cluster for an Exadata Cloud@Customer system.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2482,7 +2717,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified backup destination.
+        /// Gets information about the specified backup destination in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2521,7 +2756,201 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the specified Db node console connection&#39;s information.
+        /// Gets information about the specified cloud Exadata infrastructure resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetCloudExadataInfrastructureResponse> GetCloudExadataInfrastructure(GetCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCloudExadataInfrastructure");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures/{cloudExadataInfrastructureId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCloudExadataInfrastructureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCloudExadataInfrastructure failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about the specified cloud VM cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetCloudVmClusterResponse> GetCloudVmCluster(GetCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCloudVmCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCloudVmClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCloudVmCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the IORM configuration for the specified cloud VM cluster.
+        /// If you have not specified an IORM configuration, the default configuration is returned.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetCloudVmClusterIormConfigResponse> GetCloudVmClusterIormConfig(GetCloudVmClusterIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCloudVmClusterIormConfig");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/CloudVmClusterIormConfig".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCloudVmClusterIormConfigResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCloudVmClusterIormConfig failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about a specified maintenance update package.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetCloudVmClusterUpdateResponse> GetCloudVmClusterUpdate(GetCloudVmClusterUpdateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCloudVmClusterUpdate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/updates/{updateId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCloudVmClusterUpdateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCloudVmClusterUpdate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the maintenance update history details for the specified update history entry.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetCloudVmClusterUpdateHistoryEntryResponse> GetCloudVmClusterUpdateHistoryEntry(GetCloudVmClusterUpdateHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCloudVmClusterUpdateHistoryEntry");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/updateHistoryEntries/{updateHistoryEntryId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCloudVmClusterUpdateHistoryEntryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCloudVmClusterUpdateHistoryEntry failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the specified database node console connection&#39;s information.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2598,7 +3027,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about a specific database.
+        /// Gets information about the specified database.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2866,7 +3295,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about a specified patch package.
+        /// Gets information the specified patch.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2905,7 +3334,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the patch history details for the specified patchHistoryEntryId.
+        /// Gets the details of the specified patch operation on the specified DB system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2944,7 +3373,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Exadata infrastructure.
+        /// Gets information about the specified Exadata Cloud@Customer infrastructure.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2982,7 +3411,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets details of the available and consumed OCPUs for the specified Autonomous Exadata Infrastructure instance.
+        /// Gets details of the available and consumed OCPUs for the specified Autonomous Exadata Infrastructure resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3021,8 +3450,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets &#x60;IORM&#x60; Setting for the requested Exadata DB System.
-        /// The default IORM Settings is pre-created in all the Exadata DB System.
+        /// Gets the IORM configuration settings for the specified cloud Exadata system.
+        /// All Exadata service instances have default IORM settings.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3140,7 +3569,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified VM cluster.
+        /// Gets information about the specified Exadata Cloud@Customer VM cluster.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3178,7 +3607,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified VM cluster network.
+        /// Gets information about the specified Exadata Cloud@Customer VM cluster network.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3255,7 +3684,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the patch history details for the specified patchHistoryEntryId.
+        /// Gets the patch history details for the specified patch history entry.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3294,7 +3723,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Launches a new Autonomous Exadata Infrastructure in the specified compartment and availability domain.
+        /// Creates a new Autonomous Exadata Infrastructure in the specified compartment and availability domain.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3535,7 +3964,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Autonomous Database clones for the specified Autonomous Database.
+        /// Lists the Autonomous Database clones for the specified Autonomous Database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3574,7 +4003,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of Autonomous Databases.
+        /// Gets a list of Autonomous Databases based on the query parameters specified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3691,7 +4120,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the shapes that can be used to launch a new Autonomous Exadata Infrastructure DB system. The shape determines resources to allocate to the DB system (CPU cores, memory and storage).
+        /// Gets a list of the shapes that can be used to launch a new Autonomous Exadata Infrastructure resource. The shape determines resources to allocate (CPU cores, memory and storage).
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3768,7 +4197,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of Autonomous VM clusters in the specified compartment.
+        /// Gets a list of Exadata Cloud@Customer Autonomous VM clusters in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3846,7 +4275,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of backups based on the databaseId or compartmentId specified. Either one of the query parameters must be provided.
+        /// Gets a list of backups based on the &#x60;databaseId&#x60; or &#x60;compartmentId&#x60; specified. Either one of these query parameters must be provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3885,7 +4314,163 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Lists the console connections for the specified Db node.
+        /// Gets a list of the cloud Exadata infrastructure in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListCloudExadataInfrastructuresResponse> ListCloudExadataInfrastructures(ListCloudExadataInfrastructuresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listCloudExadataInfrastructures");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListCloudExadataInfrastructuresResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCloudExadataInfrastructures failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the history of the maintenance update actions performed on the specified cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListCloudVmClusterUpdateHistoryEntriesResponse> ListCloudVmClusterUpdateHistoryEntries(ListCloudVmClusterUpdateHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listCloudVmClusterUpdateHistoryEntries");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/updateHistoryEntries".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListCloudVmClusterUpdateHistoryEntriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCloudVmClusterUpdateHistoryEntries failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the maintenance updates that can be applied to the requested cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListCloudVmClusterUpdatesResponse> ListCloudVmClusterUpdates(ListCloudVmClusterUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listCloudVmClusterUpdates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/updates".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListCloudVmClusterUpdatesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCloudVmClusterUpdates failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the cloud VM clusters in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListCloudVmClustersResponse> ListCloudVmClusters(ListCloudVmClustersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listCloudVmClusters");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListCloudVmClustersResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCloudVmClusters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the console connections for the specified database node.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4080,7 +4665,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets history of the actions taken for patches for the specified Database Home.
+        /// Lists the history of patch operations on the specified Database Home.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4158,7 +4743,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of Database Homes in the specified DB system and compartment. A Database Home is a directory where Oracle Database software is installed.
+        /// Lists the Database Homes in the specified DB system and compartment. A Database Home is a directory where Oracle Database software is installed.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4197,7 +4782,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of database nodes in the specified DB system and compartment. A database node is a server running database software.
+        /// Lists the database nodes in the specified DB system and compartment. A database node is a server running database software.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4275,7 +4860,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Lists the patches applicable to the requested DB system.
+        /// Lists the patches applicable to the specified DB system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4352,7 +4937,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the DB systems in the specified compartment. You can specify a backupId to list only the DB systems that support creating a database using this backup in this compartment.
+        /// Lists the DB systems in the specified compartment. You can specify a &#x60;backupId&#x60; to list only the DB systems that support creating a database using this backup in this compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4429,7 +5014,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Exadata infrastructure in the specified compartment.
+        /// Gets a list of the Exadata Cloud@Customer infrastructure resources in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4468,7 +5053,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of supported GI versions for VM Cluster.
+        /// Gets a list of supported GI versions for the Exadata Cloud@Customer VM cluster.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4545,7 +5130,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the VM cluster networks in the specified compartment.
+        /// Gets a list of the Exadata Cloud@Customer VM cluster networks in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4584,7 +5169,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the history of the patch actions performed on the specified Vm cluster.
+        /// Gets the history of the patch actions performed on the specified VM cluster in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4623,7 +5208,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Lists the patches applicable to the requested Vm cluster.
+        /// Lists the patches applicable to the specified VM cluster in an Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4662,7 +5247,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the VM clusters in the specified compartment.
+        /// Gets a list of the Exadata Cloud@Customer VM clusters in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4696,6 +5281,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ListVmClusters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Migrates the Exadata DB system to the cloud Exadata infrastructure model. All related resources will be migrated.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<MigrateExadataDbSystemResourceModelResponse> MigrateExadataDbSystemResourceModel(MigrateExadataDbSystemResourceModelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called migrateExadataDbSystemResourceModel");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/actions/migration".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<MigrateExadataDbSystemResourceModelResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"MigrateExadataDbSystemResourceModel failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4969,6 +5593,82 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"RestoreDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new version of an existing [Vault service](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) key.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<RotateAutonomousContainerDatabaseEncryptionKeyResponse> RotateAutonomousContainerDatabaseEncryptionKey(RotateAutonomousContainerDatabaseEncryptionKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called rotateAutonomousContainerDatabaseEncryptionKey");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousContainerDatabases/{autonomousContainerDatabaseId}/actions/rotateKey".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RotateAutonomousContainerDatabaseEncryptionKeyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RotateAutonomousContainerDatabaseEncryptionKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Rotate existing AutonomousDatabase [Vault service](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) key.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<RotateAutonomousDatabaseEncryptionKeyResponse> RotateAutonomousDatabaseEncryptionKey(RotateAutonomousDatabaseEncryptionKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called rotateAutonomousDatabaseEncryptionKey");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousDatabases/{autonomousDatabaseId}/actions/rotateKey".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RotateAutonomousDatabaseEncryptionKeyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RotateAutonomousDatabaseEncryptionKey failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5249,7 +5949,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Terminates an Autonomous Exadata Infrastructure, which permanently deletes the Exadata Infrastructure and any container databases and databases contained in the Exadata Infrastructure. The database data is local to the Autonomous Exadata Infrastructure and will be lost when the system is terminated. Oracle recommends that you back up any data in the Autonomous Exadata Infrastructure prior to terminating it.
+        /// Terminates an Autonomous Exadata Infrastructure, which permanently deletes the infrastructure resource and any container databases and databases contained in the resource. The database data is local to the Autonomous Exadata Infrastructure and will be lost when the system is terminated. Oracle recommends that you back up any data in the Autonomous Exadata Infrastructure prior to terminating it.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5557,7 +6257,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified Autonomous VM cluster.
+        /// Updates the specified Autonomous VM cluster for the Exadata Cloud@Customer system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5637,7 +6337,124 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Update a Database based on the request parameters you provide.
+        /// Updates the Cloud Exadata infrastructure resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateCloudExadataInfrastructureResponse> UpdateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateCloudExadataInfrastructure");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudExadataInfrastructures/{cloudExadataInfrastructureId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateCloudExadataInfrastructureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateCloudExadataInfrastructure failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the specified cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateCloudVmClusterResponse> UpdateCloudVmCluster(UpdateCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateCloudVmCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateCloudVmClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateCloudVmCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the IORM settings for the specified cloud VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateCloudVmClusterIormConfigResponse> UpdateCloudVmClusterIormConfig(UpdateCloudVmClusterIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateCloudVmClusterIormConfig");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/cloudVmClusters/{cloudVmClusterId}/CloudVmClusterIormConfig".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateCloudVmClusterIormConfigResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateCloudVmClusterIormConfig failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Update the specified database based on the request parameters provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5714,7 +6531,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Patches the specified dbHome.
+        /// Patches the specified Database Home.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5752,7 +6569,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the properties of a DB system, such as the CPU core count.
+        /// Updates the properties of the specified DB system.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5790,7 +6607,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the Exadata infrastructure.
+        /// Updates the Exadata Cloud@Customer infrastructure.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5829,7 +6646,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Update &#x60;IORM&#x60; Settings for the requested Exadata DB System.
+        /// Updates IORM settings for the specified Exadata system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5906,7 +6723,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified VM cluster.
+        /// Updates the specified Exadata Cloud@Customer VM cluster.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5945,7 +6762,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified VM cluster network.
+        /// Updates the specified Exadata Cloud@Customer VM cluster network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5984,7 +6801,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Validates the specified VM cluster network.
+        /// Validates the specified Exadata Cloud@Customer VM cluster network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

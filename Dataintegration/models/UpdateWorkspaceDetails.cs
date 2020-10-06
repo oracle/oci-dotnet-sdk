@@ -36,7 +36,7 @@ namespace Oci.DataintegrationService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
 
         /// <value>
-        /// A detailed description for the workspace.
+        /// A user defined description for the workspace.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

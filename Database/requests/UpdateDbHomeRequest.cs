@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Requests
         public string DbHomeId { get; set; }
         
         /// <value>
-        /// Request to update the properties of a DB Home.
+        /// Request to update the properties of a Database Home.
         /// </value>
         /// <remarks>
         /// Required

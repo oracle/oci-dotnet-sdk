@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// A summary type containing information about the object including its key, name and when/who created/updated it
+    /// A summary type containing information about the object including its key, name and when/who created/updated it.
     /// </summary>
     public class ObjectMetadata 
     {
@@ -70,21 +70,27 @@ namespace Oci.DataintegrationService.Models
         public string IdentifierPath { get; set; }
 
         /// <value>
-        /// infoFields
+        /// Information property fields.
         /// </value>
         [JsonProperty(PropertyName = "infoFields")]
         public System.Collections.Generic.Dictionary<string, string> InfoFields { get; set; }
 
         /// <value>
-        /// registryVersion
+        /// The registry version of the object.
         /// </value>
         [JsonProperty(PropertyName = "registryVersion")]
         public System.Nullable<int> RegistryVersion { get; set; }
 
         /// <value>
-        /// Labels are keywords or tags that you can add to data assets, dataflows etc. You can define your own labels and use them to categorize content.
+        /// Labels are keywords or tags that you can add to data assets, dataflows and so on. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
+
+        /// <value>
+        /// Specifies whether this object is a favorite or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isFavorite")]
+        public System.Nullable<bool> IsFavorite { get; set; }
     }
 }

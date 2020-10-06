@@ -22,13 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// The key of the object.
+        /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
 
         /// <value>
-        /// The model version of an object.
+        /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -72,6 +72,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "writeMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WriteModeEnum> WriteMode { get; set; }
+
+        [JsonProperty(PropertyName = "mergeKey")]
+        public UniqueKey MergeKey { get; set; }
 
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
