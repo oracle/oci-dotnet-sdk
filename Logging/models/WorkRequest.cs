@@ -22,7 +22,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// The OCID of the work request.
+        /// The work request OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
 
         /// <value>
-        /// The OCID of the work request\u2019s compartment.
+        /// The work request\u2019s compartment OCID.
         /// </value>
         /// <remarks>
         /// Required

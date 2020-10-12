@@ -181,5 +181,17 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
+
+        /// <value>
+        /// Expression for logical entities against which names of dataObjects will be matched.
+        /// </value>
+        [JsonProperty(PropertyName = "expression")]
+        public string Expression { get; set; }
+
+        /// <value>
+        /// Custom properties defined by users.
+        /// </value>
+        [JsonProperty(PropertyName = "customProperties")]
+        public System.Collections.Generic.List<FacetedSearchCustomProperty> CustomProperties { get; set; }
     }
 }

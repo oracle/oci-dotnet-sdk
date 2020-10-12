@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingingestionService.Models
 {
     /// <summary>
-    /// Contains the content of the log with associated timestamp and id. Each
+    /// Contains the log content with the associated timestamp and ID. Each
     /// entry should be less than 1 MB size.
     /// 
     /// </summary>
@@ -24,7 +24,7 @@ namespace Oci.LoggingingestionService.Models
     {
         
         /// <value>
-        /// The content of the log entry.
+        /// The log entry content.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,9 +46,8 @@ namespace Oci.LoggingingestionService.Models
         public string Id { get; set; }
 
         /// <value>
-        /// Optional. The timestamp associated with the log entry. Defaults to
-        /// PutLogsDetails.defaultlogentrytime if unspecified. An RFC3339 formatted
-        /// datetime string.
+        /// Optional. The timestamp associated with the log entry. An RFC3339-formatted date-time string. 
+        /// If unspecified, defaults to PutLogsDetails.defaultlogentrytime.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "time")]

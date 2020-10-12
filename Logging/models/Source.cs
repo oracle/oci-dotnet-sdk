@@ -23,7 +23,7 @@ namespace Oci.LoggingService.Models
     {
                 ///
         /// <value>
-        /// The source of the log.
+        /// The log source.
         /// * **OCISERVICE:** Oracle Service.
         /// 
         /// </value>
@@ -34,7 +34,7 @@ namespace Oci.LoggingService.Models
         };
 
         /// <value>
-        /// The source of the log.
+        /// The log source.
         /// * **OCISERVICE:** Oracle Service.
         /// 
         /// </value>

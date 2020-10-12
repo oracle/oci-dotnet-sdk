@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Type of Resource that Service provides.
+    /// Type of resource that a service provides.
     /// </summary>
     public class ResourceType 
     {
@@ -28,7 +28,7 @@ namespace Oci.LoggingService.Models
         public string Name { get; set; }
 
         /// <value>
-        /// categories for resources.
+        /// Categories for resources.
         /// </value>
         [JsonProperty(PropertyName = "categories")]
         public System.Collections.Generic.List<Category> Categories { get; set; }

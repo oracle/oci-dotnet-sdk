@@ -23,7 +23,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// Type of unified agent service configuration.
+        /// Type of Unified Agent service configuration.
         /// </value>
         /// <remarks>
         /// Required

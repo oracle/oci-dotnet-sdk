@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// grok pattern object
+    /// grok pattern object.
     /// </summary>
     public class GrokPattern 
     {
         
         /// <value>
-        /// The grok pattern
+        /// The grok pattern.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,25 +32,25 @@ namespace Oci.LoggingService.Models
         public string Pattern { get; set; }
 
         /// <value>
-        /// The name key to tag this grok pattern
+        /// The name key to tag this grok pattern.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Specify time field for event time. If the event doesn't have this field, current time is used.
+        /// Specify the time field for the event time. If the event doesn't have this field, the current time is used.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeKey")]
         public string FieldTimeKey { get; set; }
 
         /// <value>
-        /// Process value using specified format. This is available only when time_type is string.
+        /// Process value using the specified format. This is available only when time_type is a string.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeFormat")]
         public string FieldTimeFormat { get; set; }
 
         /// <value>
-        /// Use specified timezone. One can parse/format the time value in the specified timezone.
+        /// Use the specified time zone. The time value can be parsed or formatted in the specified time zone.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeZone")]
         public string FieldTimeZone { get; set; }

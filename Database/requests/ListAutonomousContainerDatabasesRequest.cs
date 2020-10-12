@@ -115,5 +115,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given service-level agreement type exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceLevelAgreementType")]
+        public string ServiceLevelAgreementType { get; set; }
     }
 }

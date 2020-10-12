@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// tail log source object.
+    /// Tail log source object.
     /// </summary>
     public class UnifiedAgentTailLogSource : UnifiedAgentLoggingSource
     {

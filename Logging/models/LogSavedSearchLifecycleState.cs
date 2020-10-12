@@ -14,14 +14,26 @@ namespace Oci.LoggingService.Models
 {
   /// <summary>
   /// The state of the LogSavedSearch
-    ///    1. *ACTIVE* LogSavedSearch is active and can be used by other users
-    ///    2. *DELETED* LogSavedSearch is deleted and cannot be used by other users
+    ///   1. CREATING
+    ///   2. ACTIVE   LogSavedSearch is active and can be used by other users
+    ///   3. UPDATING
+    ///   4. INACTIVE
+    ///   5. DELETING
+    ///   6. FAILED
     /// 
   /// </summary>
   public enum LogSavedSearchLifecycleState {
+      [EnumMember(Value = "CREATING")]
+      Creating,
       [EnumMember(Value = "ACTIVE")]
       Active,
-      [EnumMember(Value = "DELETED")]
-      Deleted
+      [EnumMember(Value = "UPDATING")]
+      Updating,
+      [EnumMember(Value = "INACTIVE")]
+      Inactive,
+      [EnumMember(Value = "DELETING")]
+      Deleting,
+      [EnumMember(Value = "FAILED")]
+      Failed
   }
 }

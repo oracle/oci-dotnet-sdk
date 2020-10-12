@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// A collection of LogSavedSearchSummary items
+    /// A collection of LogSavedSearchSummary items.
     /// 
     /// </summary>
     public class LogSavedSearchSummaryCollection 

@@ -45,6 +45,12 @@ namespace Oci.DatabaseService.Requests
         public string BackupId { get; set; }
         
         /// <value>
+        /// A filter to return only DB Homes that match the specified dbVersion.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbVersion")]
+        public string DbVersion { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return per page.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

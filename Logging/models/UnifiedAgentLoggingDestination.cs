@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// logging destination object.
+    /// Logging destination object.
     /// </summary>
     public class UnifiedAgentLoggingDestination 
     {

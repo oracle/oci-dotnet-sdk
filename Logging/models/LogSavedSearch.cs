@@ -43,7 +43,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -84,16 +84,6 @@ namespace Oci.LoggingService.Models
         public string Query { get; set; }
 
         /// <value>
-        /// True if the LogSavedSearch should be show as quickstart in the UI
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsQuickStart is required.")]
-        [JsonProperty(PropertyName = "isQuickStart")]
-        public System.Nullable<bool> IsQuickStart { get; set; }
-
-        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -109,5 +99,13 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+
+        /// <value>
+        /// The state of the LogSavedSearch
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LogSavedSearchLifecycleState> LifecycleState { get; set; }
     }
 }

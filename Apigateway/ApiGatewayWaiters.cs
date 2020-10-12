@@ -32,6 +32,34 @@ namespace Oci.ApigatewayService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApiRequest, GetApiResponse> ForApi(GetApiRequest request, params Api.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForApi(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApiRequest, GetApiResponse> ForApi(GetApiRequest request, WaiterConfiguration config, params Api.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetApiRequest, GetApiResponse>(
+                request,
+                request => client.GetApi(request),
+                response => targetStates.Contains(response.Api.LifecycleState.Value),
+                targetStates.Contains(Api.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetApiRequest, GetApiResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetCertificateRequest, GetCertificateResponse> ForCertificate(GetCertificateRequest request, params Certificate.LifecycleStateEnum[] targetStates)
         {
             return this.ForCertificate(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

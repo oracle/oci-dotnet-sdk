@@ -43,7 +43,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -61,20 +61,40 @@ namespace Oci.LoggingService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
 
         /// <value>
-        /// True if the LogSavedSearch should be show as quickstart in the UI
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsQuickStart is required.")]
-        [JsonProperty(PropertyName = "isQuickStart")]
-        public System.Nullable<bool> IsQuickStart { get; set; }
-
-        /// <value>
         /// Time the resource was last modified.
         /// </value>
         [JsonProperty(PropertyName = "timeLastModified")]
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
+
+        /// <value>
+        /// Description for this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+
+        /// <value>
+        /// The search query that is saved.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "query")]
+        public string Query { get; set; }
+
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+
+        /// <value>
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
 
         /// <value>
         /// The state of the LogSavedSearch

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Summary of Services that are integrated with public logging
+    /// Summary of services that are integrated with public logging.
     /// </summary>
     public class ServiceSummary 
     {
@@ -32,13 +32,13 @@ namespace Oci.LoggingService.Models
         public string TenantId { get; set; }
 
         /// <value>
-        /// Apollo project namespace if any.
+        /// Apollo project namespace, if any.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
 
         /// <value>
-        /// Service id as set in Service Principal.
+        /// Service ID as set in Service Principal.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.LoggingService.Models
         public string Endpoint { get; set; }
 
         /// <value>
-        /// User friendly service name.
+        /// User-friendly service name.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,13 +68,13 @@ namespace Oci.LoggingService.Models
         public string Name { get; set; }
 
         /// <value>
-        /// Service id.
+        /// Service ID.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <value>
-        /// Type of Resource that a Service provides.
+        /// Type of resource that a service provides.
         /// </value>
         /// <remarks>
         /// Required

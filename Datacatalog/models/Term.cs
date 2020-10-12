@@ -135,5 +135,11 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "associatedObjects")]
         public System.Collections.Generic.List<TermAssociatedObject> AssociatedObjects { get; set; }
+
+        /// <value>
+        /// The list of customized properties along with the values for this object
+        /// </value>
+        [JsonProperty(PropertyName = "customPropertyMembers")]
+        public System.Collections.Generic.List<CustomPropertyGetUsage> CustomPropertyMembers { get; set; }
     }
 }

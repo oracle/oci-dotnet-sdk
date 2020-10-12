@@ -17,7 +17,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// Compartment OCID to list resources in. Please see compartmentIdInSubtree
+        /// Compartment OCID to list resources in. See compartmentIdInSubtree
         ///      for nested compartments traversal.
         /// 
         /// </value>

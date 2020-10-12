@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// apache error log parser
+    /// Apache error log parser.
     /// </summary>
     public class UnifiedAgentApacheErrorParser : UnifiedAgentParser
     {

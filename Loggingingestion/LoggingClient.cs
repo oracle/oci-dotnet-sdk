@@ -60,7 +60,7 @@ namespace Oci.LoggingingestionService
         }
 
         /// <summary>
-        /// This Api allows ingesting logs associated with a logId. Success
+        /// This API allows ingesting logs associated with a logId. A success
         /// response implies the data has been accepted.
         /// 
         /// </summary>

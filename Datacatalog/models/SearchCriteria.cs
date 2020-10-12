@@ -27,5 +27,26 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
+
+        /// <value>
+        /// Query string that a dataObject is to be searched with. Used in the faceted query request
+        /// </value>
+        [JsonProperty(PropertyName = "facetedQuery")]
+        public string FacetedQuery { get; set; }
+
+        /// <value>
+        /// List of properties of dataObjects that needs to aggregated on for facets.
+        /// </value>
+        [JsonProperty(PropertyName = "dimensions")]
+        public System.Collections.Generic.List<string> Dimensions { get; set; }
+
+        /// <value>
+        /// Array of objects having details about sort field and order.
+        /// </value>
+        [JsonProperty(PropertyName = "sort")]
+        public System.Collections.Generic.List<FacetedSearchSortRequest> Sort { get; set; }
+
+        [JsonProperty(PropertyName = "filters")]
+        public FacetedSearchFilterRequest Filters { get; set; }
     }
 }

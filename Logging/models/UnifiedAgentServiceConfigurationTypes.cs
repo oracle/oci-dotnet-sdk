@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.LoggingService.Models
 {
   /// <summary>
-  /// Type of unified agent service configuration.
+  /// Type of Unified Agent service configuration.
   /// </summary>
   public enum UnifiedAgentServiceConfigurationTypes {
       [EnumMember(Value = "LOGGING")]

@@ -191,5 +191,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceSubtype")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MaintenanceSubtypeEnum> MaintenanceSubtype { get; set; }
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the maintenance run for the Autonomous Data Guard association's peer container database.
+        /// </value>
+        [JsonProperty(PropertyName = "peerMaintenanceRunId")]
+        public string PeerMaintenanceRunId { get; set; }
     }
 }

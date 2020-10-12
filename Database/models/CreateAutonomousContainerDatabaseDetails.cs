@@ -44,7 +44,9 @@ namespace Oci.DatabaseService.Models
         ///
         public enum ServiceLevelAgreementTypeEnum {
             [EnumMember(Value = "STANDARD")]
-            Standard
+            Standard,
+            [EnumMember(Value = "AUTONOMOUS_DATAGUARD")]
+            AutonomousDataguard
         };
 
         /// <value>
@@ -59,6 +61,42 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
         public string AutonomousExadataInfrastructureId { get; set; }
+
+        /// <value>
+        /// The OCID of the peer Autonomous Exadata Infrastructure for Autonomous Data Guard.
+        /// </value>
+        [JsonProperty(PropertyName = "peerAutonomousExadataInfrastructureId")]
+        public string PeerAutonomousExadataInfrastructureId { get; set; }
+
+        /// <value>
+        /// The display name for the peer Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "peerAutonomousContainerDatabaseDisplayName")]
+        public string PeerAutonomousContainerDatabaseDisplayName { get; set; }
+        ///
+        /// <value>
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
+        /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
+        /// in the Oracle Data Guard documentation.
+        /// 
+        /// </value>
+        ///
+        public enum ProtectionModeEnum {
+            [EnumMember(Value = "MAXIMUM_AVAILABILITY")]
+            MaximumAvailability,
+            [EnumMember(Value = "MAXIMUM_PERFORMANCE")]
+            MaximumPerformance
+        };
+
+        /// <value>
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
+        /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
+        /// in the Oracle Data Guard documentation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "protectionMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
 
         /// <value>
         /// The OCID of the Autonomous VM Cluster.
@@ -96,6 +134,14 @@ namespace Oci.DatabaseService.Models
 
         [JsonProperty(PropertyName = "maintenanceWindowDetails")]
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
+
+        /// <value>
+        /// The scheduling detail for the quarterly maintenance window of the standby Autonomous Container Database.
+        /// This value represents the number of days before the primary database maintenance schedule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
+        public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
 
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

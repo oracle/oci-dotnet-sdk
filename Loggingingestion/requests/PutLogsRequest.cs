@@ -38,7 +38,7 @@ namespace Oci.LoggingingestionService.Requests
         
         /// <value>
         /// Effective timestamp, for when the agent started processing the log
-        /// segment being sent. An RFC3339 formatted datetime string.
+        /// segment being sent. An RFC3339-formatted date-time string.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "timestamp-opc-agent-processing")]

@@ -33,7 +33,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -60,16 +60,6 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Query is required.")]
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
-
-        /// <value>
-        /// True if the LogSavedSearch should be show as quickstart in the UI
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsQuickStart is required.")]
-        [JsonProperty(PropertyName = "isQuickStart")]
-        public System.Nullable<bool> IsQuickStart { get; set; }
 
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a

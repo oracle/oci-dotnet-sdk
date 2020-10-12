@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Parameters that a category of resource supports.
+    /// Parameters that a resource category supports.
     /// </summary>
     public class Parameter 
     {
@@ -56,7 +56,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
 
         /// <value>
-        /// Java regex pattern to validate parameter value.
+        /// Java regex pattern to validate a parameter value.
         /// </value>
         [JsonProperty(PropertyName = "pattern")]
         public string Pattern { get; set; }

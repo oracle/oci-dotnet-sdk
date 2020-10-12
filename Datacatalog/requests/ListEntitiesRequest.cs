@@ -88,6 +88,12 @@ namespace Oci.DatacatalogService.Requests
         public string ExternalKey { get; set; }
         
         /// <value>
+        /// Unique pattern key.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patternKey")]
+        public string PatternKey { get; set; }
+        
+        /// <value>
         /// Last modified timestamp of this object in the external system.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeExternal")]
