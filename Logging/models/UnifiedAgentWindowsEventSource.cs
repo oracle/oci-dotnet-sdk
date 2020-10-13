@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// windows events log source object.
+    /// Windows events log source object.
     /// </summary>
     public class UnifiedAgentWindowsEventSource : UnifiedAgentLoggingSource
     {

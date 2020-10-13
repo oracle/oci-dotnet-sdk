@@ -60,6 +60,18 @@ namespace Oci.DatacatalogService.Models
         public string FolderKey { get; set; }
 
         /// <value>
+        /// Key of the associated pattern if this is a logical entity.
+        /// </value>
+        [JsonProperty(PropertyName = "patternKey")]
+        public string PatternKey { get; set; }
+
+        /// <value>
+        /// The expression realized after resolving qualifiers . Used in deriving this logical entity
+        /// </value>
+        [JsonProperty(PropertyName = "realizedExpression")]
+        public string RealizedExpression { get; set; }
+
+        /// <value>
         /// Status of the object as updated by the harvest process. When an entity object is created, it's harvest status
         /// will indicate if the entity's metadata has been fully harvested or not. The harvest process can perform
         /// shallow harvesting to allow users to browse the metadata and can on-demand deep harvest on any object
@@ -75,6 +87,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "lastJobKey")]
         public string LastJobKey { get; set; }
+
+        /// <value>
+        /// The list of customized properties along with the values for this object
+        /// </value>
+        [JsonProperty(PropertyName = "customPropertyMembers")]
+        public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
 
         /// <value>
         /// A map of maps that contains the properties which are specific to the entity type. Each entity type

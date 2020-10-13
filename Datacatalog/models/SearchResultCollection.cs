@@ -34,5 +34,17 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<SearchResult> Items { get; set; }
+
+        /// <value>
+        /// String that data objects are to be searched with.
+        /// </value>
+        [JsonProperty(PropertyName = "query")]
+        public string Query { get; set; }
+
+        /// <value>
+        /// Aggregations/facets on properties of data objects.
+        /// </value>
+        [JsonProperty(PropertyName = "facetedSearchAggregation")]
+        public System.Collections.Generic.List<FacetedSearchAggregation> FacetedSearchAggregation { get; set; }
     }
 }

@@ -85,5 +85,31 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+
+        /// <value>
+        /// The unique key of the job definition resource that was used in the Glossary import.
+        /// </value>
+        [JsonProperty(PropertyName = "importJobDefinitionKey")]
+        public string ImportJobDefinitionKey { get; set; }
+
+        /// <value>
+        /// The unique key of the job policy for Glossary import.
+        /// </value>
+        [JsonProperty(PropertyName = "importJobKey")]
+        public string ImportJobKey { get; set; }
+
+        /// <value>
+        /// The unique key of the parent job execution for which the log resource was created.
+        /// </value>
+        [JsonProperty(PropertyName = "latestImportJobExecutionKey")]
+        public string LatestImportJobExecutionKey { get; set; }
+
+        /// <value>
+        /// Status of the latest glossary import job execution, such as running, paused, or completed.
+        /// This may include additional information like time import started , import file size and % of completion
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "latestImportJobExecutionStatus")]
+        public string LatestImportJobExecutionStatus { get; set; }
     }
 }

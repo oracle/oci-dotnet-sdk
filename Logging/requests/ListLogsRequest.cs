@@ -28,7 +28,7 @@ namespace Oci.LoggingService.Requests
         
         ///
         /// <value>
-        /// The logType that the log object is for, custom or service.
+        /// The logType that the log object is for, whether custom or service.
         /// </value>
         ///
         public enum LogTypeEnum {
@@ -39,19 +39,19 @@ namespace Oci.LoggingService.Requests
         };
 
         /// <value>
-        /// The logType that the log object is for, custom or service.
+        /// The logType that the log object is for, whether custom or service.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logType")]
         public System.Nullable<LogTypeEnum> LogType { get; set; }
         
         /// <value>
-        /// Service created the log object
+        /// Service that created the log object.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceService")]
         public string SourceService { get; set; }
         
         /// <value>
-        /// Log object resource
+        /// Log object resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceResource")]
         public string SourceResource { get; set; }
@@ -107,7 +107,7 @@ namespace Oci.LoggingService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// 
         /// </value>
         ///
@@ -119,7 +119,7 @@ namespace Oci.LoggingService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]

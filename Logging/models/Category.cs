@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// categories for resources.
+    /// Categories for resources.
     /// </summary>
     public class Category 
     {
         
         /// <value>
-        /// Category name
+        /// Category name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <value>
-        /// Category display name
+        /// Category display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
 
         /// <value>
-        /// Parameters category supports.
+        /// Parameters the category supports.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<Parameter> Parameters { get; set; }

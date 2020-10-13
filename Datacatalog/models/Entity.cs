@@ -88,6 +88,18 @@ namespace Oci.DatacatalogService.Models
         public string ExternalKey { get; set; }
 
         /// <value>
+        /// Key of the associated pattern if this is a logical entity.
+        /// </value>
+        [JsonProperty(PropertyName = "patternKey")]
+        public string PatternKey { get; set; }
+
+        /// <value>
+        /// The expression realized after resolving qualifiers . Used in deriving this logical entity
+        /// </value>
+        [JsonProperty(PropertyName = "realizedExpression")]
+        public string RealizedExpression { get; set; }
+
+        /// <value>
         /// Last modified timestamp of this object in the external system.
         /// </value>
         [JsonProperty(PropertyName = "timeExternal")]
@@ -161,6 +173,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+
+        /// <value>
+        /// The list of customized properties along with the values for this object
+        /// </value>
+        [JsonProperty(PropertyName = "customPropertyMembers")]
+        public System.Collections.Generic.List<CustomPropertyGetUsage> CustomPropertyMembers { get; set; }
 
         /// <value>
         /// A map of maps that contains the properties which are specific to the entity type. Each entity type

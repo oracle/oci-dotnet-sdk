@@ -1410,6 +1410,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailoverAutonomousContainerDatabaseDataguardAssociationRequest, FailoverAutonomousContainerDatabaseDataguardAssociationResponse> ForFailoverAutonomousContainerDatabaseDataguardAssociation(FailoverAutonomousContainerDatabaseDataguardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForFailoverAutonomousContainerDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailoverAutonomousContainerDatabaseDataguardAssociationRequest, FailoverAutonomousContainerDatabaseDataguardAssociationResponse> ForFailoverAutonomousContainerDatabaseDataguardAssociation(FailoverAutonomousContainerDatabaseDataguardAssociationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<FailoverAutonomousContainerDatabaseDataguardAssociationRequest, FailoverAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
+            {
+                var response = client.FailoverAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<FailoverDataGuardAssociationRequest, FailoverDataGuardAssociationResponse> ForFailoverDataGuardAssociation(FailoverDataGuardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForFailoverDataGuardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1463,6 +1495,34 @@ namespace Oci.DatabaseService
                 targetStates.Contains(AutonomousContainerDatabase.LifecycleStateEnum.Terminated)
             );
             return new Waiter<GetAutonomousContainerDatabaseRequest, GetAutonomousContainerDatabaseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousContainerDatabaseDataguardAssociationRequest, GetAutonomousContainerDatabaseDataguardAssociationResponse> ForAutonomousContainerDatabaseDataguardAssociation(GetAutonomousContainerDatabaseDataguardAssociationRequest request, params AutonomousContainerDatabaseDataguardAssociation.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForAutonomousContainerDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousContainerDatabaseDataguardAssociationRequest, GetAutonomousContainerDatabaseDataguardAssociationResponse> ForAutonomousContainerDatabaseDataguardAssociation(GetAutonomousContainerDatabaseDataguardAssociationRequest request, WaiterConfiguration config, params AutonomousContainerDatabaseDataguardAssociation.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAutonomousContainerDatabaseDataguardAssociationRequest, GetAutonomousContainerDatabaseDataguardAssociationResponse>(
+                request,
+                request => client.GetAutonomousContainerDatabaseDataguardAssociation(request),
+                response => targetStates.Contains(response.AutonomousContainerDatabaseDataguardAssociation.LifecycleState.Value),
+                targetStates.Contains(AutonomousContainerDatabaseDataguardAssociation.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetAutonomousContainerDatabaseDataguardAssociationRequest, GetAutonomousContainerDatabaseDataguardAssociationResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -1575,6 +1635,34 @@ namespace Oci.DatabaseService
                 targetStates.Contains(AutonomousDatabaseBackup.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetAutonomousDatabaseBackupRequest, GetAutonomousDatabaseBackupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousDatabaseDataguardAssociationRequest, GetAutonomousDatabaseDataguardAssociationResponse> ForAutonomousDatabaseDataguardAssociation(GetAutonomousDatabaseDataguardAssociationRequest request, params AutonomousDatabaseDataguardAssociation.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForAutonomousDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousDatabaseDataguardAssociationRequest, GetAutonomousDatabaseDataguardAssociationResponse> ForAutonomousDatabaseDataguardAssociation(GetAutonomousDatabaseDataguardAssociationRequest request, WaiterConfiguration config, params AutonomousDatabaseDataguardAssociation.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAutonomousDatabaseDataguardAssociationRequest, GetAutonomousDatabaseDataguardAssociationResponse>(
+                request,
+                request => client.GetAutonomousDatabaseDataguardAssociation(request),
+                response => targetStates.Contains(response.AutonomousDatabaseDataguardAssociation.LifecycleState.Value),
+                targetStates.Contains(AutonomousDatabaseDataguardAssociation.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetAutonomousDatabaseDataguardAssociationRequest, GetAutonomousDatabaseDataguardAssociationResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -2267,6 +2355,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReinstateAutonomousContainerDatabaseDataguardAssociationRequest, ReinstateAutonomousContainerDatabaseDataguardAssociationResponse> ForReinstateAutonomousContainerDatabaseDataguardAssociation(ReinstateAutonomousContainerDatabaseDataguardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForReinstateAutonomousContainerDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReinstateAutonomousContainerDatabaseDataguardAssociationRequest, ReinstateAutonomousContainerDatabaseDataguardAssociationResponse> ForReinstateAutonomousContainerDatabaseDataguardAssociation(ReinstateAutonomousContainerDatabaseDataguardAssociationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ReinstateAutonomousContainerDatabaseDataguardAssociationRequest, ReinstateAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
+            {
+                var response = client.ReinstateAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ReinstateDataGuardAssociationRequest, ReinstateDataGuardAssociationResponse> ForReinstateDataGuardAssociation(ReinstateDataGuardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForReinstateDataGuardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2540,6 +2660,38 @@ namespace Oci.DatabaseService
             return new Waiter<StopAutonomousDatabaseRequest, StopAutonomousDatabaseResponse>(() =>
             {
                 var response = client.StopAutonomousDatabase(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest, SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse> ForSwitchoverAutonomousContainerDatabaseDataguardAssociation(SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForSwitchoverAutonomousContainerDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest, SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse> ForSwitchoverAutonomousContainerDatabaseDataguardAssociation(SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest, SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
+            {
+                var response = client.SwitchoverAutonomousContainerDatabaseDataguardAssociation(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

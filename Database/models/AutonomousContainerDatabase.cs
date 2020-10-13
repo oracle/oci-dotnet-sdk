@@ -63,7 +63,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "MISSION_CRITICAL")]
-            MissionCritical
+            MissionCritical,
+            [EnumMember(Value = "AUTONOMOUS_DATAGUARD")]
+            AutonomousDataguard
         };
 
         /// <value>
@@ -145,7 +147,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "RESTARTING")]
             Restarting,
             [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
-            MaintenanceInProgress
+            MaintenanceInProgress,
+            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
+            RoleChangeInProgress
         };
 
         /// <value>
@@ -215,6 +219,14 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
 
         /// <value>
+        /// The scheduling detail for the quarterly maintenance window of standby Autonomous Container Database.
+        /// This value represents the number of days before the primary database maintenance schedule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
+        public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -230,6 +242,26 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        ///
+        /// <value>
+        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// </value>
+        ///
+        public enum RoleEnum {
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            [EnumMember(Value = "STANDBY")]
+            Standby,
+            [EnumMember(Value = "DISABLED_STANDBY")]
+            DisabledStandby
+        };
+
+        /// <value>
+        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "role")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RoleEnum> Role { get; set; }
 
         /// <value>
         /// The availability domain of the Autonomous Container Database.

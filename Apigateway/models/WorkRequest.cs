@@ -54,7 +54,15 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "UPDATE_CERTIFICATE")]
             UpdateCertificate,
             [EnumMember(Value = "DELETE_CERTIFICATE")]
-            DeleteCertificate
+            DeleteCertificate,
+            [EnumMember(Value = "CREATE_API")]
+            CreateApi,
+            [EnumMember(Value = "UPDATE_API")]
+            UpdateApi,
+            [EnumMember(Value = "DELETE_API")]
+            DeleteApi,
+            [EnumMember(Value = "VALIDATE_API")]
+            ValidateApi
         };
 
         /// <value>

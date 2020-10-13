@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// grok parser
+    /// grok parser.
     /// </summary>
     public class UnifiedAgentGrokParser : UnifiedAgentParser
     {

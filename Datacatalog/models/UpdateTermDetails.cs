@@ -53,5 +53,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "workflowStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TermWorkflowStatus> WorkflowStatus { get; set; }
+
+        /// <value>
+        /// The list of customized properties along with the values for this object
+        /// </value>
+        [JsonProperty(PropertyName = "customPropertyMembers")]
+        public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
     }
 }

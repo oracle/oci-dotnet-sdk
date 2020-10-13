@@ -17,7 +17,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// The ID of the asynchronous request.
+        /// The asynchronous request ID.
         /// </value>
         /// <remarks>
         /// Required

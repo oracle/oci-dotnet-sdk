@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// The updateable configuration properties
+    /// The updatable configuration properties.
     /// </summary>
     public class UpdateConfigurationDetails 
     {

@@ -86,6 +86,33 @@ namespace Oci.LoggingService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetLogSavedSearchRequest, GetLogSavedSearchResponse> ForLogSavedSearch(GetLogSavedSearchRequest request, params LogSavedSearchLifecycleState[] targetStates)
+        {
+            return this.ForLogSavedSearch(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetLogSavedSearchRequest, GetLogSavedSearchResponse> ForLogSavedSearch(GetLogSavedSearchRequest request, WaiterConfiguration config, params LogSavedSearchLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetLogSavedSearchRequest, GetLogSavedSearchResponse>(
+                request,
+                request => client.GetLogSavedSearch(request),
+                response => targetStates.Contains(response.LogSavedSearch.LifecycleState.Value)
+            );
+            return new Waiter<GetLogSavedSearchRequest, GetLogSavedSearchResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetUnifiedAgentConfigurationRequest, GetUnifiedAgentConfigurationResponse> ForUnifiedAgentConfiguration(GetUnifiedAgentConfigurationRequest request, params LogLifecycleState[] targetStates)
         {
             return this.ForUnifiedAgentConfiguration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

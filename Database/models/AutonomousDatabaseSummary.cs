@@ -535,6 +535,26 @@ namespace Oci.DatabaseService.Models
 
         [JsonProperty(PropertyName = "standbyDb")]
         public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
+        ///
+        /// <value>
+        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// </value>
+        ///
+        public enum RoleEnum {
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            [EnumMember(Value = "STANDBY")]
+            Standby,
+            [EnumMember(Value = "DISABLED_STANDBY")]
+            DisabledStandby
+        };
+
+        /// <value>
+        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "role")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RoleEnum> Role { get; set; }
 
         /// <value>
         /// List of Oracle Database versions available for a database upgrade. If there are no version upgrades available, this list is empty.

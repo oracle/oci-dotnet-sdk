@@ -23,7 +23,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -42,12 +42,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
-
-        /// <value>
-        /// True if the LogSavedSearch should be show as quickstart in the UI
-        /// </value>
-        [JsonProperty(PropertyName = "isQuickStart")]
-        public System.Nullable<bool> IsQuickStart { get; set; }
 
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a

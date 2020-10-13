@@ -23,7 +23,7 @@ namespace Oci.LoggingService.Models
     {
                 ///
         /// <value>
-        /// type of fluent parser.
+        /// Type of fluent parser.
         /// </value>
         ///
         public enum ParserTypeEnum {
@@ -56,7 +56,7 @@ namespace Oci.LoggingService.Models
         };
 
         /// <value>
-        /// type of fluent parser.
+        /// Type of fluent parser.
         /// </value>
         /// <remarks>
         /// Required
@@ -67,31 +67,31 @@ namespace Oci.LoggingService.Models
         public System.Nullable<ParserTypeEnum> ParserType { get; set; }
 
         /// <value>
-        /// Specify time field for event time. If the event doesn't have this field, current time is used.
+        /// Specify time field for the event time. If the event doesn't have this field, the current time is used.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeKey")]
         public string FieldTimeKey { get; set; }
 
         /// <value>
-        /// Specify types for converting field into other type.
+        /// Specify types for converting a field into another type.
         /// </value>
         [JsonProperty(PropertyName = "types")]
         public System.Collections.Generic.Dictionary<string, string> Types { get; set; }
 
         /// <value>
-        /// Specify null value pattern
+        /// Specify the null value pattern.
         /// </value>
         [JsonProperty(PropertyName = "nullValuePattern")]
         public string NullValuePattern { get; set; }
 
         /// <value>
-        /// If true, empty string field is replaced with nil
+        /// If true, an empty string field is replaced with nil.
         /// </value>
         [JsonProperty(PropertyName = "isNullEmptyString")]
         public System.Nullable<bool> IsNullEmptyString { get; set; }
 
         /// <value>
-        /// If true, use Fluent::EventTime.now(current time) as a timestamp when time_key is specified
+        /// If true, use Fluent::EventTime.now(current time) as a timestamp when time_key is specified.
         /// </value>
         [JsonProperty(PropertyName = "isEstimateCurrentEvent")]
         public System.Nullable<bool> IsEstimateCurrentEvent { get; set; }
@@ -103,7 +103,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<bool> IsKeepTimeKey { get; set; }
 
         /// <value>
-        /// Specify timeout for parse processing. This is mainly for detecting wrong regexp pattern.
+        /// Specify the timeout for parse processing. This is mainly for detecting an incorrect regexp pattern.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMilliseconds")]
         public System.Nullable<int> TimeoutInMilliseconds { get; set; }

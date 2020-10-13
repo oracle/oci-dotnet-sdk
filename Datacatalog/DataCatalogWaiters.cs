@@ -172,6 +172,34 @@ namespace Oci.DatacatalogService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCustomPropertyRequest, GetCustomPropertyResponse> ForCustomProperty(GetCustomPropertyRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForCustomProperty(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCustomPropertyRequest, GetCustomPropertyResponse> ForCustomProperty(GetCustomPropertyRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCustomPropertyRequest, GetCustomPropertyResponse>(
+                request,
+                request => client.GetCustomProperty(request),
+                response => targetStates.Contains(response.CustomProperty.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetCustomPropertyRequest, GetCustomPropertyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDataAssetRequest, GetDataAssetResponse> ForDataAsset(GetDataAssetRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDataAsset(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -443,6 +471,62 @@ namespace Oci.DatacatalogService
                 response => targetStates.Contains(response.JobExecution.LifecycleState.Value)
             );
             return new Waiter<GetJobExecutionRequest, GetJobExecutionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetNamespaceRequest, GetNamespaceResponse> ForNamespace(GetNamespaceRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForNamespace(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetNamespaceRequest, GetNamespaceResponse> ForNamespace(GetNamespaceRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetNamespaceRequest, GetNamespaceResponse>(
+                request,
+                request => client.GetNamespace(request),
+                response => targetStates.Contains(response.Namespace.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetNamespaceRequest, GetNamespaceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPatternRequest, GetPatternResponse> ForPattern(GetPatternRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForPattern(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPatternRequest, GetPatternResponse> ForPattern(GetPatternRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPatternRequest, GetPatternResponse>(
+                request,
+                request => client.GetPattern(request),
+                response => targetStates.Contains(response.Pattern.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetPatternRequest, GetPatternResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

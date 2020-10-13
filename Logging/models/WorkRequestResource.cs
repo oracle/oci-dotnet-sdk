@@ -34,7 +34,7 @@ namespace Oci.LoggingService.Models
         /// <value>
         /// The way in which this resource is affected by the work tracked in the work request.
         /// A resource being created, updated, or deleted will remain in the IN_PROGRESS state until
-        /// work is complete for that resource at which point it will transition to CREATED, UPDATED,
+        /// work is complete for that resource, at which point it will transition to CREATED, UPDATED,
         /// or DELETED, respectively.
         /// 
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<ActionTypes> ActionType { get; set; }
 
         /// <value>
-        /// The identifier of the resource the work request affects.
+        /// The resource identifier the work request affects.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.LoggingService.Models
         public string Identifier { get; set; }
 
         /// <value>
-        /// The URI path that the user can do a GET on to access the resource metadata
+        /// The URI path that the user can do a GET on to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }

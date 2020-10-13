@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Contains details indicating which log group the log should move to
+    /// Contains details indicating which log group the log should move to.
     /// </summary>
     public class ChangeLogLogGroupDetails 
     {

@@ -66,7 +66,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Moves a log group into a different compartment within the same tenancy.  When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a log group into a different compartment within the same tenancy.  When provided, the If-Match is checked against the resource ETag values.
         /// For information about moving resources between compartments, see [Moving Resources Between Compartments](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
         /// </summary>
@@ -106,7 +106,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Moves a log into a different log group within the same tenancy.  When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a log into a different log group within the same tenancy.  When provided, the If-Match is checked against the ETag values of the resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -185,7 +185,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Moves unified agent configuration into a different compartment within the same tenancy.  When provided, If-Match is checked against ETag values of the resource.
+        /// Moves the unified agent configuration into a different compartment within the same tenancy.  When provided, the If-Match is checked against the ETag values of the resource.
         /// For information about moving resources between compartments, see [Moving Resources Between Compartments](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
         /// </summary>
@@ -225,8 +225,8 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Creates a log within specified log group. This call fails if log group is already created
-        /// with same displayName or (service, resource, category) triplet.
+        /// Creates a log within the specified log group. This call fails if a log group has already been created
+        /// with the same displayName or (service, resource, category) triplet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -265,8 +265,8 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Create new log group with unique display name. This call fails
-        /// if log group is already created with same displayName in the compartment.
+        /// Create a new log group with a unique display name. This call fails
+        /// if the log group is already created with the same displayName in the compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -344,7 +344,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Create unified agent config registration
+        /// Create unified agent configuration registration.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -496,7 +496,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Delete unified agent configuration
+        /// Delete unified agent configuration.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -573,7 +573,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Gets the log object config for log object OCID.
+        /// Gets the log object configuration for the log object OCID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -726,7 +726,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Get unified agent configuration for an id
+        /// Get the unified agent configuration for an ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -956,7 +956,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Lists all services supporting logging.
+        /// Lists all services that support logging.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -994,7 +994,7 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Lists all unified agent configurations in the specified compartment
+        /// Lists all unified agent configurations in the specified compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1149,8 +1149,8 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Updates existing log object with the associated config. This call
-        ///       fails if log object does not exist.
+        /// Updates the existing log object with the associated configuration. This call
+        ///       fails if the log object does not exist.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1189,8 +1189,8 @@ namespace Oci.LoggingService
         }
 
         /// <summary>
-        /// Updates existing log group with the associated config. This call
-        ///       fails if log group does not exist.
+        /// Updates the existing log group with the associated configuration. This call
+        ///       fails if the log group does not exist.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1269,7 +1269,7 @@ namespace Oci.LoggingService
 
         /// <summary>
         /// Update an existing unified agent configuration. This call
-        ///       fails if log group does not exist.
+        ///       fails if the log group does not exist.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

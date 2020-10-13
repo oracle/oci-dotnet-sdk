@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Syslog Parser
+    /// Syslog Parser.
     /// </summary>
     public class UnifiedAgentSyslogParser : UnifiedAgentParser
     {

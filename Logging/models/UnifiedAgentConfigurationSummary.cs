@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Unified Agent configuration summary object returned by list API.
+    /// Unified Agent configuration summary object returned by the list API.
     /// </summary>
     public class UnifiedAgentConfigurationSummary 
     {
@@ -42,7 +42,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
 
         /// <value>
-        /// The state of an pipeline.
+        /// The pipeline state.
         /// </value>
         /// <remarks>
         /// Required
@@ -110,7 +110,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
 
         /// <value>
-        /// Type of unified agent service configuration.
+        /// Type of Unified Agent service configuration.
         /// </value>
         /// <remarks>
         /// Required

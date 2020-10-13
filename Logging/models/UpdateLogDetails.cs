@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Update Log Object properties
+    /// Update log object properties.
     /// </summary>
     public class UpdateLogDetails 
     {
         
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.LoggingService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
 
         /// <value>
-        /// Log retention duration in days.
+        /// Log retention duration in 30-day increments (30, 60, 90 and so on).
         /// </value>
         [JsonProperty(PropertyName = "retentionDuration")]
         public System.Nullable<int> RetentionDuration { get; set; }

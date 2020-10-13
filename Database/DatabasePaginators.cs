@@ -50,6 +50,55 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousContainerDatabaseDataguardAssociations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAutonomousContainerDatabaseDataguardAssociationsResponse> ListAutonomousContainerDatabaseDataguardAssociationsResponseEnumerator(ListAutonomousContainerDatabaseDataguardAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAutonomousContainerDatabaseDataguardAssociationsRequest, ListAutonomousContainerDatabaseDataguardAssociationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousContainerDatabaseDataguardAssociations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousContainerDatabaseDataguardAssociation objects
+        /// contained in responses from the ListAutonomousContainerDatabaseDataguardAssociations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousContainerDatabaseDataguardAssociation> ListAutonomousContainerDatabaseDataguardAssociationsRecordEnumerator(ListAutonomousContainerDatabaseDataguardAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousContainerDatabaseDataguardAssociationsRequest, ListAutonomousContainerDatabaseDataguardAssociationsResponse, AutonomousContainerDatabaseDataguardAssociation>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousContainerDatabaseDataguardAssociations(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousContainerDatabases operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -290,6 +339,55 @@ namespace Oci.DatabaseService
                     return request;
                 },
                 request => client.ListAutonomousDatabaseClones(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDatabaseDataguardAssociations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAutonomousDatabaseDataguardAssociationsResponse> ListAutonomousDatabaseDataguardAssociationsResponseEnumerator(ListAutonomousDatabaseDataguardAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAutonomousDatabaseDataguardAssociationsRequest, ListAutonomousDatabaseDataguardAssociationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousDatabaseDataguardAssociations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousDatabaseDataguardAssociation objects
+        /// contained in responses from the ListAutonomousDatabaseDataguardAssociations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousDatabaseDataguardAssociation> ListAutonomousDatabaseDataguardAssociationsRecordEnumerator(ListAutonomousDatabaseDataguardAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousDatabaseDataguardAssociationsRequest, ListAutonomousDatabaseDataguardAssociationsResponse, AutonomousDatabaseDataguardAssociation>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousDatabaseDataguardAssociations(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

@@ -73,6 +73,18 @@ namespace Oci.DatacatalogService.Models
         public string ExternalKey { get; set; }
 
         /// <value>
+        /// Key of the associated pattern if this is a logical entity.
+        /// </value>
+        [JsonProperty(PropertyName = "patternKey")]
+        public string PatternKey { get; set; }
+
+        /// <value>
+        /// The expression realized after resolving qualifiers . Used in deriving this logical entity
+        /// </value>
+        [JsonProperty(PropertyName = "realizedExpression")]
+        public string RealizedExpression { get; set; }
+
+        /// <value>
         /// Full path of the data entity.
         /// </value>
         [JsonProperty(PropertyName = "path")]

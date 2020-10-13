@@ -17,7 +17,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// The OCID of the unified agent configuration.
+        /// The OCID of the Unified Agent configuration.
         /// </value>
         /// <remarks>
         /// Required

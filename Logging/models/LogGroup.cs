@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Represents a LogGroup object
+    /// Represents a LogGroup object.
     /// </summary>
     public class LogGroup 
     {
@@ -42,7 +42,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.LoggingService.Models
         public string Description { get; set; }
 
         /// <value>
-        /// The state of the log group object.
+        /// The log group object state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

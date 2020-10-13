@@ -50,6 +50,14 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
 
         /// <value>
+        /// The scheduling detail for the quarterly maintenance window of the standby Autonomous Container Database.
+        /// This value represents the number of days before the primary database maintenance schedule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
+        public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

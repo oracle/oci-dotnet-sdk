@@ -102,5 +102,11 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+
+        /// <value>
+        /// Custom properties associated with this Type.
+        /// </value>
+        [JsonProperty(PropertyName = "customProperties")]
+        public System.Collections.Generic.List<CustomPropertySummary> CustomProperties { get; set; }
     }
 }

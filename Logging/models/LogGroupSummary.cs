@@ -42,7 +42,7 @@ namespace Oci.LoggingService.Models
         public string CompartmentId { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
@@ -87,5 +87,12 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLastModified")]
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
+
+        /// <value>
+        /// The log group object state.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LogGroupLifecycleState> LifecycleState { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// Compartment OCID to list resources in. Please see compartmentIdInSubtree
+        /// Compartment OCID to list resources in. See compartmentIdInSubtree
         ///      for nested compartments traversal.
         /// 
         /// </value>
@@ -98,7 +98,7 @@ namespace Oci.LoggingService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// 
         /// </value>
         ///
@@ -110,7 +110,7 @@ namespace Oci.LoggingService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]

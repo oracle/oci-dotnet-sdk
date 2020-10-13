@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// this parser signifies a non parser and puts entire log line in a message_key.
+    /// This parser signifies a non-parser, and puts the entire log line in a message_key.
     /// </summary>
     public class UnifiedAgentNoneParser : UnifiedAgentParser
     {

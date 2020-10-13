@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Results of a UnifiedAgentConfiguration search. Contains UnifiedAgentConfigurationSummary items
+    /// Results of a UnifiedAgentConfiguration search. Contains UnifiedAgentConfigurationSummary items.
     /// </summary>
     public class UnifiedAgentConfigurationCollection 
     {

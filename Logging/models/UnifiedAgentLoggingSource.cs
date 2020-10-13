@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// logging source object.
+    /// Logging source object.
     /// </summary>
     [JsonConverter(typeof(UnifiedAgentLoggingSourceModelConverter))]
     public class UnifiedAgentLoggingSource 
@@ -33,7 +33,7 @@ namespace Oci.LoggingService.Models
         public string Name { get; set; }
         ///
         /// <value>
-        /// unified schema logging source Type
+        /// Unified schema logging source type.
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -44,7 +44,7 @@ namespace Oci.LoggingService.Models
         };
 
         /// <value>
-        /// unified schema logging source Type
+        /// Unified schema logging source type.
         /// </value>
         /// <remarks>
         /// Required

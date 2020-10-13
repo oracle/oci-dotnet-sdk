@@ -83,6 +83,8 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum UpdateTypeEnum {
+            [EnumMember(Value = "GI_UPGRADE")]
+            GiUpgrade,
             [EnumMember(Value = "GI_PATCH")]
             GiPatch
         };

@@ -32,8 +32,8 @@ namespace Oci.LoggingingestionService.Models
         public System.Collections.Generic.List<LogEntry> Entries { get; set; }
 
         /// <value>
-        /// Source of the logs that generated the message. It could be the
-        /// instance name, hostname or the source used to read the event.
+        /// Source of the logs that generated the message. This could be the
+        /// instance name, hostname, or the source used to read the event. For example, \"ServerA\".
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.LoggingingestionService.Models
 
         /// <value>
         /// This field signifies the type of logs being ingested.
-        /// For Example: ServerA.requestLogs
+        /// For Example: ServerA.requestLogs.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,17 +55,17 @@ namespace Oci.LoggingingestionService.Models
         public string Type { get; set; }
 
         /// <value>
-        /// This optional field is useful for specifying the specific subresource
+        /// This optional field is useful for specifying the specific sub-resource
         /// or input file used to read the event.
-        /// For Example: &quot;/var/log/application.log&quot;
+        /// For Example: &quot;/var/log/application.log&quot;.
         /// </value>
         [JsonProperty(PropertyName = "subject")]
         public string Subject { get; set; }
 
         /// <value>
-        /// The timestamp for all log entries in this request. This can be
+        /// The timestamp for all log entries in this batch. This can be
         /// considered as the default timestamp for each entry, unless it is
-        /// overwritten by the entry time. An RFC3339 formatted datetime
+        /// overwritten by the entry time. An RFC3339-formatted date-time
         /// string.
         /// 
         /// </value>

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Contains details indicating which compartment the resource should move to
+    /// Contains details indicating which compartment the resource should move to.
     /// </summary>
     public class ChangeUnifiedAgentConfigurationCompartmentDetails 
     {
         
         /// <value>
-        /// The ocid the compartment into which the resource should be moved.
+        /// The OCID the compartment into which the resource should be moved.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

@@ -33,7 +33,7 @@ namespace Oci.LoggingService.Models
         public string Id { get; set; }
 
         /// <value>
-        /// The display name of a user-friendly name. It has to be unique within enclosing resource,
+        /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
