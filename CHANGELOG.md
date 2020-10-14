@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 5.0.1 - 2020-10-13
+### Added
+- Fix duplicate API's in Database client
+
 ## 5.0.0 - 2020-10-13
 ### Added
 - Support for API definitions in the API Gateway service
