@@ -104,6 +104,18 @@ namespace Oci.OcvpService.Models
         public System.Nullable<int> EsxiHostsCount { get; set; }
 
         /// <value>
+        /// HCX Fully Qualified Domain Name
+        /// </value>
+        [JsonProperty(PropertyName = "hcxFqdn")]
+        public string HcxFqdn { get; set; }
+
+        /// <value>
+        /// HCX enabled or not
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxEnabled")]
+        public System.Nullable<bool> IsHcxEnabled { get; set; }
+
+        /// <value>
         /// FQDN for vCenter
         /// <br/>
         /// Example: vcenter-my-sddc.sddc.us-phoenix-1.oraclecloud.com

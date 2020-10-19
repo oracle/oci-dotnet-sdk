@@ -392,6 +392,32 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dataSafeStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataSafeStatusEnum> DataSafeStatus { get; set; }
+        ///
+        /// <value>
+        /// Status of the Operations Insights for this Autonomous Database.
+        /// </value>
+        ///
+        public enum OperationsInsightsStatusEnum {
+            [EnumMember(Value = "ENABLING")]
+            Enabling,
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLING")]
+            Disabling,
+            [EnumMember(Value = "NOT_ENABLED")]
+            NotEnabled,
+            [EnumMember(Value = "FAILED_ENABLING")]
+            FailedEnabling,
+            [EnumMember(Value = "FAILED_DISABLING")]
+            FailedDisabling
+        };
+
+        /// <value>
+        /// Status of the Operations Insights for this Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "operationsInsightsStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OperationsInsightsStatusEnum> OperationsInsightsStatus { get; set; }
 
         /// <value>
         /// The date and time when maintenance will begin.

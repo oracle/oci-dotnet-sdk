@@ -70,9 +70,9 @@ namespace Oci.SchService
         /// &lt;br/&gt;
         /// After you send your request, the service connector&#39;s state is temporarily
         /// UPDATING. When the state changes to ACTIVE, data begins transferring from the
-        /// source service to the target service. For instructions on deactivating and
-        /// activating service connectors, see
-        /// [To activate or deactivate a service connector](https://docs.cloud.oracle.com/iaas/service-connector-hub/using/index.htm).
+        /// source service to the target service. For instructions on activating service
+        /// connectors, see
+        /// [To activate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#activate).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -158,7 +158,7 @@ namespace Oci.SchService
         /// A service connector is a logically defined flow for moving data from
         /// a source service to a destination service in Oracle Cloud Infrastructure.
         /// For general information about service connectors, see
-        /// [Service Connector Hub Overview](https://docs.cloud.oracle.com/iaas/service-connector-hub/using/index.htm).
+        /// [Service Connector Hub Overview](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/overview.htm).
         /// &lt;br/&gt;
         /// For purposes of access control, you must provide the
         /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where
@@ -171,7 +171,7 @@ namespace Oci.SchService
         /// CREATING. When the state changes to ACTIVE, data begins transferring from the
         /// source service to the target service. For instructions on deactivating and
         /// activating service connectors, see
-        /// [To activate or deactivate a service connector](https://docs.cloud.oracle.com/iaas/service-connector-hub/using/index.htm).
+        /// [To activate or deactivate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/overview.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -214,8 +214,8 @@ namespace Oci.SchService
         /// &lt;br/&gt;
         /// After you send your request, the service connector&#39;s state is temporarily
         /// UPDATING and any data transfer stops. The state then changes to INACTIVE.
-        /// For instructions on deactivating and activating service connectors, see
-        /// [To activate or deactivate a service connector](https://docs.cloud.oracle.com/iaas/service-connector-hub/using/index.htm).
+        /// For instructions on deactivating service connectors, see
+        /// [To deactivate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#deactivate).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

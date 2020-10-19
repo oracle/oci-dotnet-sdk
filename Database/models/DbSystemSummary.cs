@@ -271,7 +271,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "MIGRATED")]
             Migrated,
             [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
-            MaintenanceInProgress
+            MaintenanceInProgress,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
         };
 
         /// <value>

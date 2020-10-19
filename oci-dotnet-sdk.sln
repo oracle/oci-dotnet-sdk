@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Managementage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Cloudguard", "Cloudguard\OCI.DotNetSDK.Cloudguard.csproj", "{07500F04-31D4-4308-8C76-E3CE732059BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Opsi", "Opsi\OCI.DotNetSDK.Opsi.csproj", "{C5750054-CA44-4730-A1D6-167837563090}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1433,5 +1435,17 @@ Global
         {07500F04-31D4-4308-8C76-E3CE732059BD}.Release|x64.Build.0 = Release|Any CPU
         {07500F04-31D4-4308-8C76-E3CE732059BD}.Release|x86.ActiveCfg = Release|Any CPU
         {07500F04-31D4-4308-8C76-E3CE732059BD}.Release|x86.Build.0 = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|x64.Build.0 = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Debug|x86.Build.0 = Debug|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|x64.ActiveCfg = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|x64.Build.0 = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|x86.ActiveCfg = Release|Any CPU
+        {C5750054-CA44-4730-A1D6-167837563090}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -30,6 +30,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the SDDC.
+        /// SDDC name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the region.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -111,6 +112,13 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
         public string NsxEdgeUplink2VlanId { get; set; }
+
+        /// <value>
+        /// This id is editable only when hcxEnabled is true
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxVlanId")]
+        public string HcxVlanId { get; set; }
 
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

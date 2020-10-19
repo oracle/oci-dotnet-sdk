@@ -428,6 +428,46 @@ namespace Oci.OcvpService.Models
         public string NsxEdgeUplink2VlanId { get; set; }
 
         /// <value>
+        /// HCX Private IP
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxPrivateIpId")]
+        public string HcxPrivateIpId { get; set; }
+
+        /// <value>
+        /// HCX Fully Qualified Domain Name
+        /// </value>
+        [JsonProperty(PropertyName = "hcxFqdn")]
+        public string HcxFqdn { get; set; }
+
+        /// <value>
+        /// HCX initial password
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxInitialPassword")]
+        public string HcxInitialPassword { get; set; }
+
+        /// <value>
+        /// HCX vlan id
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxVlanId")]
+        public string HcxVlanId { get; set; }
+
+        /// <value>
+        /// HCX enabled or not
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxEnabled")]
+        public System.Nullable<bool> IsHcxEnabled { get; set; }
+
+        /// <value>
+        /// HCX on-premise license key
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxOnPremKey")]
+        public string HcxOnPremKey { get; set; }
+
+        /// <value>
         /// The date and time the SDDC was created, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
