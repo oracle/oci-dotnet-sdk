@@ -33,8 +33,8 @@ namespace Oci.OcvpService.Models
         public string ComputeAvailabilityDomain { get; set; }
 
         /// <value>
-        /// A descriptive name for the SDDC. It must be unique, start with a letter, and contain only letters, digits,
-        /// whitespaces, dashes and underscores.
+        /// A descriptive name for the SDDC.
+        /// SDDC name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the region.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -92,6 +92,20 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "EsxiHostsCount is required.")]
         [JsonProperty(PropertyName = "esxiHostsCount")]
         public System.Nullable<int> EsxiHostsCount { get; set; }
+
+        /// <value>
+        /// This flag tells us if HCX is enabled or not.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxEnabled")]
+        public System.Nullable<bool> IsHcxEnabled { get; set; }
+
+        /// <value>
+        /// This id is required only when hcxEnabled is true
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxVlanId")]
+        public string HcxVlanId { get; set; }
 
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for

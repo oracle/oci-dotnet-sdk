@@ -24,7 +24,7 @@ namespace Oci.SchService.Models
     /// the request. WorkRequest objects provide visibility for
     /// in-progress work flows. For more information about work
     /// requests, see
-    /// [Viewing the State of a Work Request](https://docs.cloud.oracle.com/iaas/service-connector-hub/using/index.htm).
+    /// [Viewing the State of a Work Request](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/workrequests.htm).
     /// 
     /// </summary>
     public class WorkRequest 
