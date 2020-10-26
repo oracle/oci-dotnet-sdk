@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 6.0.0 - 2020-10-27
+### Added
+- Support for the Compute Instance Agent service
+- Support for key store resources and operations in the Database service
+- Support for specifying a key store when creating autonomous container databases in the Database service
+
+### Breaking Changes
+- ConfigFileAuthenticationDetailsProvider will no longer support setting user details but only populates user information from the given OCI configuration file. Users can instead use SimpleAuthenticationDetailsProvider.
+
 ## 5.1.0 - 2020-10-20
 ### Added
 - Support for the Operations Insights service

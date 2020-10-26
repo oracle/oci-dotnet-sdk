@@ -45,8 +45,8 @@ namespace Oci.LoggingsearchService.Models
 
         /// <value>
         /// Query corresponding to the search operation. This query is parsed and validated before execution and
-        /// should follow the spec. For query language specification see:
-        /// https://docs.cloud.oracle.com/iaas/Content/Logging/Reference/query_language_specification.htm
+        /// should follow the specification. For more information on the query language specification, see
+        /// [Logging Query Language Specification](https://docs.cloud.oracle.com/Content/Logging/Reference/query_language_specification.htm).
         /// 
         /// </value>
         /// <remarks>

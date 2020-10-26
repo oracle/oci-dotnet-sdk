@@ -3,17 +3,47 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
-using System;
 using System.IO;
 using System.Security;
 using Oci.Common.Utils;
+using Org.BouncyCastle.Crypto.Parameters;
 
 namespace Oci.Common.Auth
 {
     /// <summary>An authentication details provider implementation that reads all authentication information from config file.</summary>
-    public class ConfigFileAuthenticationDetailsProvider : SimpleAuthenticationDetailsProvider
+    public class ConfigFileAuthenticationDetailsProvider : IAuthenticationDetailsProvider, IRegionProvider, IUserDelegationDetailsProvider
     {
-        private static readonly string REGION_ENV_VAR_NAME = "OCI_REGION";
+        public Region Region
+        {
+            get
+            {
+                return (authProvider as IRegionProvider)?.Region;
+            }
+        }
+        public string TenantId
+        {
+            get
+            {
+                if (authProvider is IUserDelegationDetailsProvider)
+                {
+                    return (authProvider as IUserDelegationDetailsProvider).TenantId;
+                }
+                else
+                {
+                    return (authProvider as IAuthenticationDetailsProvider)?.TenantId;
+                }
+            }
+        }
+        public string Fingerprint
+        {
+            get
+            {
+                return (authProvider as IAuthenticationDetailsProvider)?.Fingerprint;
+            }
+        }
+        public string UserId { get { return (authProvider as IAuthenticationDetailsProvider)?.UserId; } }
+        public string KeyId { get { return (authProvider as IBasicAuthenticationDetailsProvider)?.KeyId; } }
+        public char[] PassPhraseCharacters { get { return (authProvider as IBasicAuthenticationDetailsProvider)?.PassPhraseCharacters; } }
 
         /// <summary>Constructor. Reads from the config file at default location.</summary>
         public ConfigFileAuthenticationDetailsProvider(string profile, FilePrivateKeySupplier keySupplier = null) : this(ConfigFileReader.ParseDefault(profile), keySupplier) { }
@@ -23,60 +53,60 @@ namespace Oci.Common.Auth
 
         /// <summary>
         /// Constructor. Reads from a ConfigFile object.
+        /// If ConfigFile specifies an instance principal authentication, auth provider will use instance principals with delegation token. Otherwise,
         /// If a FilePrivateKeySupplier is provided, it will be used to obtain private key. Otherwise,
         /// a FilePrivateKeySupplier object will be created based on information from configFile.
         /// If additional security checks on the private key file are needed, provide a FileSecurePrivateKeySupplier object.
         /// </summary>
         public ConfigFileAuthenticationDetailsProvider(ConfigFile configFile, FilePrivateKeySupplier keySupplier = null)
         {
-            if (keySupplier == null)
+
+            string authenticationType = configFile.GetValue(ConfigUtils.AUTH_TYPE_IDENTIFIER);
+            if (authenticationType?.Equals(ConfigUtils.AUTH_TYPE_INSTANCE_PRINCIPAL) == true)
             {
-                string pemFilePath = configFile.GetValue("key_file") ?? throw new InvalidDataException("missing key_file in config");
-                SecureString passPhrase = StringUtils.StringToSecureString(configFile.GetValue("pass_phrase"));
-                SetupConfigFileAuthenticationDetailsProvider(configFile, new FilePrivateKeySupplier(pemFilePath, passPhrase));
+                logger.Info("Choosing Config-Instanceprincipals authentication details provider");
+                authProvider = new ConfigFileInstancePrincipalsAuthenticationDetailsProvider(configFile);
             }
             else
             {
-                SetupConfigFileAuthenticationDetailsProvider(configFile, keySupplier);
+                logger.Info("Choosing Configuration authentication details provider");
+                if (keySupplier == null)
+                {
+                    string pemFilePath = configFile.GetValue(ConfigUtils.KEY_FILE) ?? throw new InvalidDataException($"missing {ConfigUtils.KEY_FILE} in config");
+                    SecureString passPhrase = StringUtils.StringToSecureString(configFile.GetValue(ConfigUtils.PASS_PHRASE));
+                    SetupConfigFileAuthenticationDetailsProvider(configFile, new FilePrivateKeySupplier(pemFilePath, passPhrase));
+                }
+                else
+                {
+                    SetupConfigFileAuthenticationDetailsProvider(configFile, keySupplier);
+                }
             }
+        }
+        public RsaKeyParameters GetPrivateKey()
+        {
+            return (authProvider as IBasicAuthenticationDetailsProvider)?.GetPrivateKey();
+        }
+
+        public string GetDelegationToken()
+        {
+            return (authProvider as IUserDelegationDetailsProvider)?.GetDelegationToken();
         }
 
         private void SetupConfigFileAuthenticationDetailsProvider(ConfigFile configFile, FilePrivateKeySupplier keySupplier)
         {
-            string fingerprint = configFile.GetValue("fingerprint") ?? throw new InvalidDataException("missing fingerprint in config");
-            string tenantId = configFile.GetValue("tenancy") ?? throw new InvalidDataException("missing tenancy in config");
-            string userId = configFile.GetValue("user") ?? throw new InvalidDataException("missing user in config");
-            string regionId = configFile.GetValue("region");
-            Region region = null;
-
-            if (String.IsNullOrEmpty(regionId))
-            {
-                logger.Info($"Config file does not contain valid regionId. Checking environment variable {REGION_ENV_VAR_NAME}");
-                regionId = Environment.GetEnvironmentVariable(REGION_ENV_VAR_NAME);
-            }
-
-            if (!String.IsNullOrEmpty(regionId))
-            {
-                try
-                {
-                    region = Region.FromRegionId(regionId);
-                }
-                catch (Exception e)
-                {
-                    logger.Info($"Found regionId '{regionId}', but not supported by this version of the SDK: {e}");
-                    region = Region.Register(regionId, Realm.OC1);
-                }
-            }
-            else
-            {
-                logger.Info("Region not specified in Config file or environment vairable. Proceeding without setting a region.");
-            }
-
-            Fingerprint = fingerprint;
-            TenantId = tenantId;
-            UserId = userId;
-            Region = region;
-            PrivateKeySupplier = keySupplier;
+            var provider = new SimpleAuthenticationDetailsProvider();
+            provider.Fingerprint = configFile.GetValue(ConfigUtils.FINGERPRINT) ?? throw new InvalidDataException($"missing {ConfigUtils.FINGERPRINT} in config");
+            provider.TenantId = configFile.GetValue(ConfigUtils.TENANCY) ?? throw new InvalidDataException($"missing {ConfigUtils.TENANCY} in config");
+            provider.UserId = configFile.GetValue(ConfigUtils.USER) ?? throw new InvalidDataException($"missing {ConfigUtils.USER} in config");
+            provider.PrivateKeySupplier = keySupplier;
+            Oci.Common.Region region;
+            ConfigUtils.SetRegion(configFile, out region);
+            provider.Region = region;
+            authProvider = provider;
         }
+
+        protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private IBasicAuthenticationDetailsProvider authProvider;
+
     }
 }

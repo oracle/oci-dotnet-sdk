@@ -22,6 +22,7 @@ namespace Oci.Common.Http.Signing
     [ExcludeFromCodeCoverage]
     public class DefaultRequestSignerTests : BaseTest
     {
+        private const string OBO_TOKEN = "FakeOBOToken";
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly Mock<IBasicAuthenticationDetailsProvider> authProviderMock;
         private readonly Mock<RsaKeyParameters> rsaKeyParamMock;
@@ -77,7 +78,8 @@ namespace Oci.Common.Http.Signing
             logger.Info($"Headers size: {headers.Length}");
 
             AssertEqualHeaders(Constants.REQUIRED_SIGNING_HEADERS, httpMethod.ToLowerInvariant(), headers);
-
+            //verify Constants.OPC_OBO_TOKEN is not included in headers for a non IUserDelegationprovider   
+            Assert.False(message.Headers.Contains(Constants.OPC_OBO_TOKEN));
             // Add optional headers
             message.Headers.Add("opc-obo-token", "dummy-obo-token");
             message.Headers.Add("x-subscription", "dummy-subscription");
@@ -130,6 +132,55 @@ namespace Oci.Common.Http.Signing
             AssertEqualHeaders(Constants.REQUIRED_EXCLUDE_BODY_SIGNING_HEADERS, httpMethod.ToLowerInvariant(), headers);
         }
 
+        [Theory]
+        [InlineData("GET", 1)]
+        [InlineData("HEAD", 1)]
+        [InlineData("DELETE", 1)]
+        [InlineData("PUT", 1)]
+        [InlineData("POST", 1)]
+        [InlineData("PATCH", 1)]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void VerifyOBOHeaderAdditionForDelegationProviders(string httpMethod, int expectedOBOHeaderCount)
+        {
+            // Set up HttpRequestMessage.
+            var method = new HttpMethod(httpMethod);
+            var uriBuilder = new UriBuilder("http://test.com/test/path")
+            {
+                Query = "query1=1&query2=2"
+            };
+
+            var message = new HttpRequestMessage(method, uriBuilder.Uri);
+            if (httpMethod.Equals("PUT") || httpMethod.Equals("POST") || httpMethod.Equals("PATCH"))
+            {
+                message.Content = new StringContent("Dummy Content");
+            }
+            message.Headers.Add("opc-request-id", "2F9BA4A30BB3452397A5BC1BFE447C5D");
+            message.Headers.Add("accept", Constants.JSON_CONTENT_TYPE);
+
+            var defaultRequestSigner = new DefaultRequestSigner(GetDelegationProviderMockObject().Object, signerMock.Object);
+
+            defaultRequestSigner.SignRequest(message);
+
+            // Validations
+            Assert.True(message.Headers.Contains(Constants.AUTHORIZATION_HEADER));
+
+            var headers = GetHeadersList(message.Headers.GetValues(Constants.AUTHORIZATION_HEADER).FirstOrDefault());
+            logger.Info($"Headers size: {headers.Length}");
+
+            AssertEqualHeaders(Constants.REQUIRED_SIGNING_HEADERS, httpMethod.ToLowerInvariant(), headers);
+
+            // Validations
+            Assert.True(message.Headers.Contains(Constants.AUTHORIZATION_HEADER));
+            headers = GetHeadersList(message.Headers.GetValues(Constants.AUTHORIZATION_HEADER).FirstOrDefault());
+            //verifies if obo token is signed
+            Assert.Contains(Constants.OPC_OBO_TOKEN, headers);
+            //verifies only one Constants.OPC_OBO_TOKEN is included in the header
+            Assert.Equal(message.Headers.GetValues(Constants.OPC_OBO_TOKEN).Count(), expectedOBOHeaderCount);
+            //verify value of Constants.OPC_OBO_TOKEN is injected into http headers when provider implements IUserDelegationDetailsProvider.
+            Assert.Equal(OBO_TOKEN, message.Headers.GetValues(Constants.OPC_OBO_TOKEN).First());
+        }
+
         private void AssertEqualHeaders(Dictionary<string, ReadOnlyCollection<string>> expectedHeaders,
             string httpMethod, string[] headers)
         {
@@ -152,5 +203,13 @@ namespace Oci.Common.Http.Signing
             return authHeader.Substring(startIndex, endIndex - startIndex).Split(' ');
         }
 
+        private Mock<IUserDelegationDetailsProvider> GetDelegationProviderMockObject()
+        {
+            var providerMock = new Mock<IUserDelegationDetailsProvider>();
+            providerMock.Setup(p => p.KeyId).Returns(authProviderMock.Object.KeyId);
+            providerMock.Setup(p => p.GetPrivateKey()).Returns(authProviderMock.Object.GetPrivateKey());
+            providerMock.Setup(p => p.GetDelegationToken()).Returns(OBO_TOKEN);
+            return providerMock;
+        }
     }
 }

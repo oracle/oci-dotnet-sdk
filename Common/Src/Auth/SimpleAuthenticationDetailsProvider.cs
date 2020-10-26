@@ -3,11 +3,14 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
+using System.IO;
+using Oci.Common.Utils;
 using Org.BouncyCastle.Crypto.Parameters;
 
 namespace Oci.Common.Auth
 {
-    /// <summary>A base authentication details provider that contains user authentication information and region information.</summary>
+    /// <summary>A base authentication details provider that contains user authentication information and region information.
+    /// This is an ideal provider to be used if customer authentication information is not read from config file.</summary>
     public class SimpleAuthenticationDetailsProvider : CustomerAuthenticationDetailsProvider, IRegionProvider
     {
         public Region Region { get; set; }

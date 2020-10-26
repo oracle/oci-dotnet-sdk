@@ -154,7 +154,7 @@ namespace Oci.Common
         {
             foreach (Region region in Values())
             {
-                if (region.RegionCode.Equals(regionCodeOrId) || region.RegionId.Equals(regionCodeOrId))
+                if ((region.RegionCode != null && region.RegionCode.Equals(regionCodeOrId)) || region.RegionId.Equals(regionCodeOrId))
                 {
                     return region;
                 }
