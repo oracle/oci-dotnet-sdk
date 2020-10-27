@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingsearchService.Models
 {
     /// <summary>
-    /// A log search result entry
+    /// A log search result entry.
     /// </summary>
     public class SearchResult 
     {
         
         /// <value>
-        /// JSON blob containing the search entry with projected fields.
+        /// JSON blob containing the search entry with the projected fields.
         /// </value>
         /// <remarks>
         /// Required

@@ -56,7 +56,8 @@ namespace Oci.Common.Auth
         public Region Region { get; set; }
         private IFederationClient federationClient;
         private ISessionKeySupplier sessionKeySupplier;
-        public char[] PassPhraseCharacters { get; set; }
+        //passphrase is not needed for instance pricipal provider; removing set accessor
+        public char[] PassPhraseCharacters { get; }
 
         public AbstractRequestingAuthenticationDetailsProvider()
         {

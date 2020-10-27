@@ -418,6 +418,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeKeyStoreCompartmentRequest, ChangeKeyStoreCompartmentResponse> ForChangeKeyStoreCompartment(ChangeKeyStoreCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeKeyStoreCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeKeyStoreCompartmentRequest, ChangeKeyStoreCompartmentResponse> ForChangeKeyStoreCompartment(ChangeKeyStoreCompartmentRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeKeyStoreCompartmentRequest, ChangeKeyStoreCompartmentResponse>(() =>
+            {
+                var response = client.ChangeKeyStoreCompartment(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeVmClusterCompartmentRequest, ChangeVmClusterCompartmentResponse> ForChangeVmClusterCompartment(ChangeVmClusterCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeVmClusterCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2200,6 +2232,34 @@ namespace Oci.DatabaseService
                 response => targetStates.Contains(response.ExadataIormConfig.LifecycleState.Value)
             );
             return new Waiter<GetExadataIormConfigRequest, GetExadataIormConfigResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetKeyStoreRequest, GetKeyStoreResponse> ForKeyStore(GetKeyStoreRequest request, params KeyStore.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForKeyStore(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetKeyStoreRequest, GetKeyStoreResponse> ForKeyStore(GetKeyStoreRequest request, WaiterConfiguration config, params KeyStore.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetKeyStoreRequest, GetKeyStoreResponse>(
+                request,
+                request => client.GetKeyStore(request),
+                response => targetStates.Contains(response.KeyStore.LifecycleState.Value),
+                targetStates.Contains(KeyStore.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetKeyStoreRequest, GetKeyStoreResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

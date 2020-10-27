@@ -122,7 +122,7 @@ namespace Oci.Examples
         *                      resources.
         * @param image         a valid OCI Registry image for the function.
         */
-        private static async Task SetUpResources(SimpleAuthenticationDetailsProvider provider, string compartmentId, string image)
+        private static async Task SetUpResources(IBasicAuthenticationDetailsProvider provider, string compartmentId, string image)
         {
             logger.Info("Setting up resources");
 
@@ -176,7 +176,7 @@ namespace Oci.Examples
         *                      resources.
         * @param payload       the payload to be sent to the function on invocation.
         */
-        private static async Task InvokeFunction(SimpleAuthenticationDetailsProvider provider, string compartmentId, string payload)
+        private static async Task InvokeFunction(IBasicAuthenticationDetailsProvider provider, string compartmentId, string payload)
         {
             var fnManagementClient = new FunctionsManagementClient(provider);
             var fnInvokeClient = new FunctionsInvokeClient(provider);
@@ -251,7 +251,7 @@ namespace Oci.Examples
         *                      resources.
         * @param name          a name prefix to easily identify the resources.
         */
-        private static async Task TearDownResources(SimpleAuthenticationDetailsProvider provider, string compartmentId)
+        private static async Task TearDownResources(IBasicAuthenticationDetailsProvider provider, string compartmentId)
         {
             var identityClient = new IdentityClient(provider);
             var vcnClient = new VirtualNetworkClient(provider);

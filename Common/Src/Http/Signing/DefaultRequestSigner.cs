@@ -66,6 +66,14 @@ namespace Oci.Common.Http.Signing
             }
 
             var headersToSign = requiredHeaders.ToList();
+            //Add the Instance OBO User delegation token to request headers if the auth details provider implements IUserDelegationDetailsProvider and
+            //if a token is available.
+            var delegationToken = (AuthDetailsProvider as IUserDelegationDetailsProvider)?.GetDelegationToken();
+            if (delegationToken != null)
+            {
+                logger.Debug($"Adding {Constants.OPC_OBO_TOKEN} to request headers");
+                requestMessage.Headers.TryAddWithoutValidation(Constants.OPC_OBO_TOKEN, delegationToken);
+            }
 
             // For PUT and POST, if the body is empty we still must explicitly set content-length = 0 and x-content-sha256.
             // The caller may already do this, but we shouldn't require it since we can determine it here.
