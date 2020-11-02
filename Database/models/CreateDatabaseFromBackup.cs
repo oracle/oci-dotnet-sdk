@@ -30,5 +30,8 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Database is required.")]
         [JsonProperty(PropertyName = "database")]
         public CreateDatabaseFromBackupDetails Database { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "DB_BACKUP";
     }
 }

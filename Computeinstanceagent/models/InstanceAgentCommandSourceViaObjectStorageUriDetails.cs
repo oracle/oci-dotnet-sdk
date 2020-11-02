@@ -30,5 +30,8 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "SourceUri is required.")]
         [JsonProperty(PropertyName = "sourceUri")]
         public string SourceUri { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "OBJECT_STORAGE_URI";
     }
 }

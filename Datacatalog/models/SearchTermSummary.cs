@@ -27,7 +27,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -39,29 +39,30 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Unique id of the parent glossary.
         /// </value>
         [JsonProperty(PropertyName = "glossaryKey")]
         public string GlossaryKey { get; set; }
-
+        
         /// <value>
         /// Name of the parent glossary.
         /// </value>
         [JsonProperty(PropertyName = "glossaryName")]
         public string GlossaryName { get; set; }
-
+        
         /// <value>
         /// This terms parent term key. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermKey")]
         public string ParentTermKey { get; set; }
-
+        
         /// <value>
         /// Name of the parent term key. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermName")]
         public string ParentTermName { get; set; }
+        
     }
 }

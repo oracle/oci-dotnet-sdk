@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The subnet [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the secondary VNIC.
         /// </value>
@@ -38,5 +38,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
     }
 }

@@ -36,7 +36,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A virtual hostname. For more information about virtual hostname string construction, see
         /// [Managing Request Routing](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingrequest.htm#routing).
@@ -49,5 +49,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+        
     }
 }

@@ -35,13 +35,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Type of the job definition.
         /// </value>
@@ -52,37 +52,37 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "jobType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
-
+        
         /// <value>
         /// Specifies if the job definition is incremental or full.
         /// </value>
         [JsonProperty(PropertyName = "isIncremental")]
         public System.Nullable<bool> IsIncremental { get; set; }
-
+        
         /// <value>
         /// The key of the data asset for which the job is defined.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
-
+        
         /// <value>
         /// The key of the connection resource to be used for the job.
         /// </value>
         [JsonProperty(PropertyName = "connectionKey")]
         public string ConnectionKey { get; set; }
-
+        
         /// <value>
         /// Specify if sample data to be extracted as part of this harvest.
         /// </value>
         [JsonProperty(PropertyName = "isSampleDataExtracted")]
         public System.Nullable<bool> IsSampleDataExtracted { get; set; }
-
+        
         /// <value>
         /// Specify the sample data size in MB, specified as number of rows, for this metadata harvest.
         /// </value>
         [JsonProperty(PropertyName = "sampleDataSizeInMBs")]
         public System.Nullable<int> SampleDataSizeInMBs { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the job type. Each job type
         /// definition may define it's set of required and optional properties. The map keys are category names and the
@@ -92,5 +92,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

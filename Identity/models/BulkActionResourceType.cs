@@ -29,7 +29,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// List of metadata keys required to identify a specific resource. Some resource-types require information besides an OCID to identify
         /// a specific resource. For example, the resource-type `buckets` requires metadataKeys {@link #deleteBucket(DeleteBucketRequest) deleteBucket}.
@@ -37,5 +37,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadataKeys")]
         public System.Collections.Generic.List<string> MetadataKeys { get; set; }
+        
     }
 }

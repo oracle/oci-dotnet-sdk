@@ -21,5 +21,8 @@ namespace Oci.ApigatewayService.Models
     /// </summary>
     public class AuthenticationOnlyRouteAuthorizationPolicy : RouteAuthorizationPolicy
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "AUTHENTICATION_ONLY";
+    }
 }

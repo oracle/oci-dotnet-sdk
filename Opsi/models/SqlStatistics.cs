@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseTimeInSec is required.")]
         [JsonProperty(PropertyName = "databaseTimeInSec")]
         public System.Double DatabaseTimeInSec { get; set; }
-
+        
         /// <value>
         /// Number of executions per hour
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ExecutionsPerHour is required.")]
         [JsonProperty(PropertyName = "executionsPerHour")]
         public System.Double ExecutionsPerHour { get; set; }
-
+        
         /// <value>
         /// Total number of executions
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ExecutionsCount is required.")]
         [JsonProperty(PropertyName = "executionsCount")]
         public System.Nullable<long> ExecutionsCount { get; set; }
-
+        
         /// <value>
         /// CPU Time in seconds
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CpuTimeInSec is required.")]
         [JsonProperty(PropertyName = "cpuTimeInSec")]
         public System.Double CpuTimeInSec { get; set; }
-
+        
         /// <value>
         /// I/O Time in seconds
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "IoTimeInSec is required.")]
         [JsonProperty(PropertyName = "ioTimeInSec")]
         public System.Double IoTimeInSec { get; set; }
-
+        
         /// <value>
         /// Inefficient Wait Time in seconds
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "InefficientWaitTimeInSec is required.")]
         [JsonProperty(PropertyName = "inefficientWaitTimeInSec")]
         public System.Double InefficientWaitTimeInSec { get; set; }
-
+        
         /// <value>
         /// Response time is the average elaspsed time per execution. It is the ratio of Total Database Time to the number of executions
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ResponseTimeInSec is required.")]
         [JsonProperty(PropertyName = "responseTimeInSec")]
         public System.Double ResponseTimeInSec { get; set; }
-
+        
         /// <value>
         /// Number of SQL execution plans used by the SQL
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "PlanCount is required.")]
         [JsonProperty(PropertyName = "planCount")]
         public System.Nullable<long> PlanCount { get; set; }
-
+        
         /// <value>
         /// Variability is the ratio of the standard deviation in response time to the mean of response time of the SQL
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Variability is required.")]
         [JsonProperty(PropertyName = "variability")]
         public System.Double Variability { get; set; }
-
+        
         /// <value>
         /// Average Active Sessions represent the average active sessions at a point in time. It is the number of sessions that are either working or waiting.
         /// </value>
@@ -120,7 +120,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "AverageActiveSessions is required.")]
         [JsonProperty(PropertyName = "averageActiveSessions")]
         public System.Double AverageActiveSessions { get; set; }
-
+        
         /// <value>
         /// Percentage of Database Time
         /// </value>
@@ -130,7 +130,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseTimePct is required.")]
         [JsonProperty(PropertyName = "databaseTimePct")]
         public System.Double DatabaseTimePct { get; set; }
-
+        
         /// <value>
         /// Percentage of Inefficiency. It is calculated by Total Database Time divided by Total Wait Time
         /// </value>
@@ -140,7 +140,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "InefficiencyInPct is required.")]
         [JsonProperty(PropertyName = "inefficiencyInPct")]
         public System.Double InefficiencyInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in CPU Time based on linear regression
         /// </value>
@@ -150,7 +150,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInCpuTimeInPct is required.")]
         [JsonProperty(PropertyName = "changeInCpuTimeInPct")]
         public System.Double ChangeInCpuTimeInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in IO Time based on linear regression
         /// </value>
@@ -160,7 +160,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInIoTimeInPct is required.")]
         [JsonProperty(PropertyName = "changeInIoTimeInPct")]
         public System.Double ChangeInIoTimeInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in Inefficient Wait Time based on linear regression
         /// </value>
@@ -170,7 +170,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInInefficientWaitTimeInPct is required.")]
         [JsonProperty(PropertyName = "changeInInefficientWaitTimeInPct")]
         public System.Double ChangeInInefficientWaitTimeInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in Response Time based on linear regression
         /// </value>
@@ -180,7 +180,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInResponseTimeInPct is required.")]
         [JsonProperty(PropertyName = "changeInResponseTimeInPct")]
         public System.Double ChangeInResponseTimeInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in Average Active Sessions based on linear regression
         /// </value>
@@ -190,7 +190,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInAverageActiveSessionsInPct is required.")]
         [JsonProperty(PropertyName = "changeInAverageActiveSessionsInPct")]
         public System.Double ChangeInAverageActiveSessionsInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in Executions per hour based on linear regression
         /// </value>
@@ -200,7 +200,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInExecutionsPerHourInPct is required.")]
         [JsonProperty(PropertyName = "changeInExecutionsPerHourInPct")]
         public System.Double ChangeInExecutionsPerHourInPct { get; set; }
-
+        
         /// <value>
         /// Percent change in Inefficiency based on linear regression
         /// </value>
@@ -210,5 +210,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ChangeInInefficiencyInPct is required.")]
         [JsonProperty(PropertyName = "changeInInefficiencyInPct")]
         public System.Double ChangeInInefficiencyInPct { get; set; }
+        
     }
 }

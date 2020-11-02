@@ -30,5 +30,8 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "Text is required.")]
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "FreeText";
     }
 }

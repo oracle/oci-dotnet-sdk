@@ -30,17 +30,18 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A set of IP addresses or CIDR notations to include in the whitelist.
         /// </value>
         [JsonProperty(PropertyName = "addresses")]
         public System.Collections.Generic.List<string> Addresses { get; set; }
-
+        
         /// <value>
         /// A list of [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of IP address lists to include in the whitelist.
         /// </value>
         [JsonProperty(PropertyName = "addressLists")]
         public System.Collections.Generic.List<string> AddressLists { get; set; }
+        
     }
 }

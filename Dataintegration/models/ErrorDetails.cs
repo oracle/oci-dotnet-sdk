@@ -32,7 +32,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A user-friendly error message.
         /// </value>
@@ -42,5 +42,6 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

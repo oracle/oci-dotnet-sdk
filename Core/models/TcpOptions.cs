@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "destinationPortRange")]
         public PortRange DestinationPortRange { get; set; }
-
+        
         /// <value>
         /// An inclusive range of allowed source ports. Use the same number for the min and max to
         /// indicate a single port. Defaults to all ports if not specified.
@@ -38,5 +38,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourcePortRange")]
         public PortRange SourcePortRange { get; set; }
+        
     }
 }

@@ -33,7 +33,7 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "secretVersionExpiryInterval")]
         public string SecretVersionExpiryInterval { get; set; }
-
+        
         /// <value>
         /// An optional property indicating the absolute time when this secret will expire, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// The minimum number of days from current time is 1 day and the maximum number of days from current time is 365 days.
@@ -41,7 +41,7 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfAbsoluteExpiry")]
         public System.Nullable<System.DateTime> TimeOfAbsoluteExpiry { get; set; }
-
+        
         /// <value>
         /// A property indicating whether to block retrieval of the secret content, on expiry. The default is false.
         /// If the secret has already expired and you would like to retrieve the secret contents,
@@ -50,5 +50,8 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "isSecretContentRetrievalBlockedOnExpiry")]
         public System.Nullable<bool> IsSecretContentRetrievalBlockedOnExpiry { get; set; }
+        
+        [JsonProperty(PropertyName = "ruleType")]
+        private readonly string ruleType = "SECRET_EXPIRY_RULE";
     }
 }

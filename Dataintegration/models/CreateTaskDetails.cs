@@ -33,32 +33,22 @@ namespace Oci.DataintegrationService.Models
             DataLoaderTask
         };
 
-        /// <value>
-        /// The type of the task.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
-
+        
         /// <value>
         /// Generated key that can be used in API calls to identify task. On scenarios where reference to the task is needed, a value can be passed in create.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
@@ -68,19 +58,19 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
@@ -90,37 +80,38 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// An array of input ports.
         /// </value>
         [JsonProperty(PropertyName = "inputPorts")]
         public System.Collections.Generic.List<InputPort> InputPorts { get; set; }
-
+        
         /// <value>
         /// An array of output ports.
         /// </value>
         [JsonProperty(PropertyName = "outputPorts")]
         public System.Collections.Generic.List<OutputPort> OutputPorts { get; set; }
-
+        
         /// <value>
         /// An array of parameters.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<Parameter> Parameters { get; set; }
-
+        
         [JsonProperty(PropertyName = "opConfigValues")]
         public ConfigValues OpConfigValues { get; set; }
-
+        
         [JsonProperty(PropertyName = "configProviderDelegate")]
         public CreateConfigProvider ConfigProviderDelegate { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "RegistryMetadata is required.")]
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 
     public class CreateTaskDetailsModelConverter : JsonConverter

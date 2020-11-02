@@ -26,23 +26,24 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "stringValue")]
         public string StringValue { get; set; }
-
+        
         /// <value>
         /// An integer value of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "intValue")]
         public System.Nullable<int> IntValue { get; set; }
-
+        
         /// <value>
         /// The root object reference value.
         /// </value>
         [JsonProperty(PropertyName = "refValue")]
         public System.Object RefValue { get; set; }
-
+        
         /// <value>
         /// Reference to the parameter by its key.
         /// </value>
         [JsonProperty(PropertyName = "parameterValue")]
         public string ParameterValue { get; set; }
+        
     }
 }

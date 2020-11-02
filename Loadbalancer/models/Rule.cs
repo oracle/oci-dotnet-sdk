@@ -46,13 +46,7 @@ namespace Oci.LoadbalancerService.Models
             HttpHeader
         };
 
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Action is required.")]
-        [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ActionEnum> Action { get; set; }
+        
     }
 
     public class RuleModelConverter : JsonConverter

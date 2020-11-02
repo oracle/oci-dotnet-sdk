@@ -29,7 +29,7 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Additional information about the event, expressed by using Markdown language and included in the
         /// details view of an announcement. Additional information might include remediation steps or
@@ -38,11 +38,14 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "additionalInformation")]
         public string AdditionalInformation { get; set; }
-
+        
         /// <value>
         /// The list of resources, if any, affected by the event described in the announcement.
         /// </value>
         [JsonProperty(PropertyName = "affectedResources")]
         public System.Collections.Generic.List<AffectedResource> AffectedResources { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "Announcement";
     }
 }

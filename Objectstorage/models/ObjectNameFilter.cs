@@ -31,7 +31,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "inclusionPrefixes")]
         public System.Collections.Generic.List<string> InclusionPrefixes { get; set; }
-
+        
         /// <value>
         /// An array of glob patterns to match the object names to include. An empty array includes all objects in the
         /// bucket. Exclusion patterns take precedence over inclusion patterns.
@@ -49,7 +49,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "inclusionPatterns")]
         public System.Collections.Generic.List<string> InclusionPatterns { get; set; }
-
+        
         /// <value>
         /// An array of glob patterns to match the object names to exclude. An empty array is ignored. Exclusion
         /// patterns take precedence over inclusion patterns.
@@ -67,5 +67,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "exclusionPatterns")]
         public System.Collections.Generic.List<string> ExclusionPatterns { get; set; }
+        
     }
 }

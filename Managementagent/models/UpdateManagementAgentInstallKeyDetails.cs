@@ -26,11 +26,12 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "isKeyActive")]
         public System.Nullable<bool> IsKeyActive { get; set; }
-
+        
         /// <value>
         /// New displayName of Agent install key.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

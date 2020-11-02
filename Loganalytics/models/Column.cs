@@ -21,5 +21,8 @@ namespace Oci.LoganalyticsService.Models
     /// </summary>
     public class Column : AbstractColumn
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "COLUMN";
+    }
 }

@@ -30,19 +30,20 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ReportingRegion is required.")]
         [JsonProperty(PropertyName = "reportingRegion")]
         public string ReportingRegion { get; set; }
-
+        
         /// <value>
         /// Status of Cloud Guard Tenant
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloudGuardStatus> Status { get; set; }
-
+        
         /// <value>
         /// Identifies if Oracle managed resources were created by customers
         /// 
         /// </value>
         [JsonProperty(PropertyName = "selfManageResources")]
         public System.Nullable<bool> SelfManageResources { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable error string.
         /// </value>
@@ -41,12 +41,13 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// Date and time the error happened, in the format defined by RFC3339.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

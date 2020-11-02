@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The text describing this patch package.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// Action that is currently being performed or was completed last.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lastAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LastActionEnum> LastAction { get; set; }
-        ///
+                ///
         ///
         public enum AvailableActionsEnum {
             [EnumMember(Value = "APPLY")]
@@ -70,7 +70,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<AvailableActionsEnum> AvailableActions { get; set; }
-
+        
         /// <value>
         /// A descriptive text associated with the lifecycleState.
         /// Typically can contain additional displayable text.
@@ -78,7 +78,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the patch as a result of lastAction.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time that the patch was released.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeReleased is required.")]
         [JsonProperty(PropertyName = "timeReleased")]
         public System.Nullable<System.DateTime> TimeReleased { get; set; }
-
+        
         /// <value>
         /// The version of this patch package.
         /// </value>
@@ -120,5 +120,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
     }
 }

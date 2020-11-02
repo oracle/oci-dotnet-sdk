@@ -26,49 +26,49 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "aliases")]
         public System.Collections.Generic.List<LogAnalyticsLabelAlias> Aliases { get; set; }
-
+        
         /// <value>
         /// suggest type
         /// </value>
         [JsonProperty(PropertyName = "suggestType")]
         public System.Nullable<long> SuggestType { get; set; }
-
+        
         /// <value>
         /// description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// edit version
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
-
+        
         /// <value>
         /// impact
         /// </value>
         [JsonProperty(PropertyName = "impact")]
         public string Impact { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// label identifier
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// Valid values are (NONE, LOW, HIGH). NONE is default.
         /// </value>
@@ -90,13 +90,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
-
+        
         /// <value>
         /// tag recommendation
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
-        ///
+                ///
         /// <value>
         /// Valid values are (INFO, PROBLEM). INFO is default.
         /// </value>
@@ -114,5 +114,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

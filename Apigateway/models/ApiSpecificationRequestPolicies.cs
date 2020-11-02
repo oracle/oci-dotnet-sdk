@@ -23,11 +23,12 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "authentication")]
         public AuthenticationPolicy Authentication { get; set; }
-
+        
         [JsonProperty(PropertyName = "rateLimiting")]
         public RateLimitingPolicy RateLimiting { get; set; }
-
+        
         [JsonProperty(PropertyName = "cors")]
         public CorsPolicy Cors { get; set; }
+        
     }
 }

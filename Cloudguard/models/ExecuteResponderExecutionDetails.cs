@@ -26,5 +26,6 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }
+        
     }
 }

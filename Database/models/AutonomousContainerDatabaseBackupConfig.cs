@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupDestinationDetails")]
         public System.Collections.Generic.List<BackupDestinationDetails> BackupDestinationDetails { get; set; }
-
+        
         /// <value>
         /// Number of days between the current and the earliest point of recoverability covered by automatic backups.
         /// This value applies to automatic backups. After a new automatic backup has been created, Oracle removes old automatic backups that are created before the window.
@@ -36,5 +36,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "recoveryWindowInDays")]
         public System.Nullable<int> RecoveryWindowInDays { get; set; }
+        
     }
 }

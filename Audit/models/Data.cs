@@ -31,7 +31,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "eventGroupingId")]
         public string EventGroupingId { get; set; }
-
+        
         /// <value>
         /// Name of the API operation that generated this event.
         /// <br/>
@@ -39,7 +39,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "eventName")]
         public string EventName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment of the resource 
         /// emitting the event.
@@ -47,7 +47,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the compartment. This value is the friendly name associated with compartmentId.
         /// This value can change, but the service logs the value that appeared at the time of the audit
@@ -57,14 +57,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentName")]
         public string CompartmentName { get; set; }
-
+        
         /// <value>
         /// The name of the resource emitting the event.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// An [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) or some other ID for the resource
         /// emitting the event.
@@ -72,14 +72,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The availability domain where the resource resides.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, 
         /// type, or namespace. Exists for cross-compatibility only. For more information, 
@@ -89,7 +89,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more
         /// information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -98,19 +98,19 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "identity")]
         public Identity Identity { get; set; }
-
+        
         [JsonProperty(PropertyName = "request")]
         public Request Request { get; set; }
-
+        
         [JsonProperty(PropertyName = "response")]
         public Response Response { get; set; }
-
+        
         [JsonProperty(PropertyName = "stateChange")]
         public StateChange StateChange { get; set; }
-
+        
         /// <value>
         /// A container object for attribues unique to the resource emitting the event.
         /// <br/>
@@ -118,5 +118,6 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "additionalDetails")]
         public System.Collections.Generic.Dictionary<string, System.Object> AdditionalDetails { get; set; }
+        
     }
 }

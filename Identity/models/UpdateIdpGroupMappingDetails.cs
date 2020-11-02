@@ -24,11 +24,12 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "idpGroupName")]
         public string IdpGroupName { get; set; }
-
+        
         /// <value>
         /// The OCID of the group.
         /// </value>
         [JsonProperty(PropertyName = "groupId")]
         public string GroupId { get; set; }
+        
     }
 }

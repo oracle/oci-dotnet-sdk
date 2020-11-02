@@ -30,7 +30,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable error string.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

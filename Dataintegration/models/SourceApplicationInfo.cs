@@ -26,23 +26,24 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "workspaceId")]
         public string WorkspaceId { get; set; }
-
+        
         /// <value>
         /// The source application key to use when creating the application.
         /// </value>
         [JsonProperty(PropertyName = "applicationKey")]
         public string ApplicationKey { get; set; }
-
+        
         /// <value>
         /// The source application version of the application.
         /// </value>
         [JsonProperty(PropertyName = "applicationVersion")]
         public string ApplicationVersion { get; set; }
-
+        
         /// <value>
         /// The last patch key for the application.
         /// </value>
         [JsonProperty(PropertyName = "lastPatchKey")]
         public string LastPatchKey { get; set; }
+        
     }
 }

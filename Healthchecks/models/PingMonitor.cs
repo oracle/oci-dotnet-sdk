@@ -27,45 +27,45 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A URL for fetching the probe results.
         /// </value>
         [JsonProperty(PropertyName = "resultsUrl")]
         public string ResultsUrl { get; set; }
-
+        
         /// <value>
         /// The region where updates must be made and where results must be fetched from.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "homeRegion")]
         public string HomeRegion { get; set; }
-
+        
         /// <value>
         /// The RFC 3339-formatted creation date and time of the probe.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A list of targets (hostnames or IP addresses) of the probe.
         /// </value>
         [JsonProperty(PropertyName = "targets")]
         public System.Collections.Generic.List<string> Targets { get; set; }
-
+        
         /// <value>
         /// A list of names of vantage points from which to execute the probe.
         /// </value>
         [JsonProperty(PropertyName = "vantagePointNames")]
         public System.Collections.Generic.List<string> VantagePointNames { get; set; }
-
+        
         /// <value>
         /// The port on which to probe endpoints. If unspecified, probes will use the
         /// default port of their protocol.
@@ -73,7 +73,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The probe timeout in seconds. Valid values: 10, 20, 30, and 60.
         /// The probe timeout must be less than or equal to `intervalInSeconds` for monitors.
@@ -81,31 +81,31 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
-
+        
         [JsonProperty(PropertyName = "protocol")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PingProbeProtocol> Protocol { get; set; }
-
+        
         /// <value>
         /// A user-friendly and mutable name suitable for display in a user interface.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The monitor interval in seconds. Valid values: 10, 30, and 60.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "intervalInSeconds")]
         public System.Nullable<int> IntervalInSeconds { get; set; }
-
+        
         /// <value>
         /// Enables or disables the monitor. Set to 'true' to launch monitoring.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace.  For more information,
@@ -114,7 +114,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -122,5 +122,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

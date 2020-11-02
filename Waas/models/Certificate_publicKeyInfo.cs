@@ -26,17 +26,18 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "algorithm")]
         public string Algorithm { get; set; }
-
+        
         /// <value>
         /// The private key exponent.
         /// </value>
         [JsonProperty(PropertyName = "exponent")]
         public System.Nullable<int> Exponent { get; set; }
-
+        
         /// <value>
         /// The number of bits in a key used by a cryptographic algorithm.
         /// </value>
         [JsonProperty(PropertyName = "keySize")]
         public System.Nullable<int> KeySize { get; set; }
+        
     }
 }

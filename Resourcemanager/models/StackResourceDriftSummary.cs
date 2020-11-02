@@ -27,25 +27,25 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "stackId")]
         public string StackId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where the stack is located.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the resource as defined in the stack.
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource provisioned by Terraform.
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The provider resource type.
         /// Must be supported by the [Oracle Cloud Infrastructure provider](https://www.terraform.io/docs/providers/oci/index.html).
@@ -53,7 +53,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-        ///
+                ///
         /// <value>
         /// The drift status of the resource.
         /// A drift status value indicates whether or not the actual state of the resource differs from the expected (defined) state for that resource.
@@ -79,7 +79,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "resourceDriftStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResourceDriftStatusEnum> ResourceDriftStatus { get; set; }
-
+        
         /// <value>
         /// Actual values of properties that the stack defines for the indicated resource.
         /// Each property and value is provided as a key-value pair.
@@ -89,7 +89,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "actualProperties")]
         public System.Collections.Generic.Dictionary<string, string> ActualProperties { get; set; }
-
+        
         /// <value>
         /// Expected values of properties that the stack defines for the indicated resource.
         /// Each property and value is provided as a key-value pair.
@@ -99,7 +99,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "expectedProperties")]
         public System.Collections.Generic.Dictionary<string, string> ExpectedProperties { get; set; }
-
+        
         /// <value>
         /// The date and time when the drift detection was executed.
         /// Format is defined by RFC3339.
@@ -107,5 +107,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeDriftChecked")]
         public System.Nullable<System.DateTime> TimeDriftChecked { get; set; }
+        
     }
 }

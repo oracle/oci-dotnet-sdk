@@ -23,8 +23,9 @@ namespace Oci.OpsiService.Models
         
         [JsonProperty(PropertyName = "databaseDetails")]
         public DatabaseDetails DatabaseDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "currentStatistics")]
         public ResourceStatistics CurrentStatistics { get; set; }
+        
     }
 }

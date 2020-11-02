@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The IPSec connection's Oracle ID (OCID).
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The date and time the IPSec connection was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -50,11 +50,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Two {@link TunnelStatus} objects.
         /// </value>
         [JsonProperty(PropertyName = "tunnels")]
         public System.Collections.Generic.List<TunnelStatus> Tunnels { get; set; }
+        
     }
 }

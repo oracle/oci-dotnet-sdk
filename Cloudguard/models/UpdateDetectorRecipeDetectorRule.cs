@@ -30,12 +30,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DetectorRuleId is required.")]
         [JsonProperty(PropertyName = "detectorRuleId")]
         public string DetectorRuleId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Details is required.")]
         [JsonProperty(PropertyName = "details")]
         public UpdateDetectorRuleDetails Details { get; set; }
+        
     }
 }

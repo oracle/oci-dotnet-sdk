@@ -20,5 +20,8 @@ namespace Oci.DataintegrationService.Models
     /// </summary>
     public class AbstractField : TypedObject
     {
-            }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "FIELD";
+    }
 }

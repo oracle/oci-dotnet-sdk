@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-        ///
+                ///
         /// <value>
         /// Oracle must verify that the customer owns the public IP prefix before traffic
         /// for that prefix can flow across the virtual circuit. Verification can take a
@@ -67,5 +67,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "verificationState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VerificationStateEnum> VerificationState { get; set; }
+        
     }
 }

@@ -25,14 +25,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "createVnicDetails")]
         public InstanceConfigurationCreateVnicDetails CreateVnicDetails { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the attachment. Does not have to be unique, and it cannot be changed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Which physical network interface card (NIC) the VNIC will use. Defaults to 0.
         /// Certain bare metal instance shapes have two active physical NICs (0 and 1). If
@@ -43,5 +43,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nicIndex")]
         public System.Nullable<int> NicIndex { get; set; }
+        
     }
 }

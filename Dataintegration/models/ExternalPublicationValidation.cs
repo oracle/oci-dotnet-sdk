@@ -26,35 +26,36 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "totalMessageCount")]
         public System.Nullable<int> TotalMessageCount { get; set; }
-
+        
         /// <value>
         /// Total number of validation error messages.
         /// </value>
         [JsonProperty(PropertyName = "errorMessageCount")]
         public System.Nullable<int> ErrorMessageCount { get; set; }
-
+        
         /// <value>
         /// Total number of validation warning messages.
         /// </value>
         [JsonProperty(PropertyName = "warnMessageCount")]
         public System.Nullable<int> WarnMessageCount { get; set; }
-
+        
         /// <value>
         /// Total number of validation information messages.
         /// </value>
         [JsonProperty(PropertyName = "infoMessageCount")]
         public System.Nullable<int> InfoMessageCount { get; set; }
-
+        
         /// <value>
         /// Detailed information of the data flow object validation.
         /// </value>
         [JsonProperty(PropertyName = "validationMessages")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<ValidationMessage>> ValidationMessages { get; set; }
-
+        
         /// <value>
         /// Objects use a 36 character key as unique ID. It is system generated and cannot be modified.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
+        
     }
 }

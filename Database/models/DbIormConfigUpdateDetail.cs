@@ -28,12 +28,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The relative priority of this database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "share")]
         public System.Nullable<int> Share { get; set; }
+        
     }
 }

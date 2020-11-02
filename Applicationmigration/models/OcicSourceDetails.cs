@@ -31,7 +31,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "Region is required.")]
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-
+        
         /// <value>
         /// The compute account id
         /// </value>
@@ -41,5 +41,8 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "ComputeAccount is required.")]
         [JsonProperty(PropertyName = "computeAccount")]
         public string ComputeAccount { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "OCIC";
     }
 }

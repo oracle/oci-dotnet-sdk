@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the compute global image capability schema
         /// 
@@ -41,14 +41,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ComputeGlobalImageCapabilitySchemaId is required.")]
         [JsonProperty(PropertyName = "computeGlobalImageCapabilitySchemaId")]
         public string ComputeGlobalImageCapabilitySchemaId { get; set; }
-
+        
         /// <value>
         /// The display name of the version
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The date and time the compute global image capability schema version was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -60,5 +60,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

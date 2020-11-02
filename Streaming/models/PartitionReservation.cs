@@ -27,23 +27,24 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "partition")]
         public string Partition { get; set; }
-
+        
         /// <value>
         /// The latest offset which has been committed for this partition.
         /// </value>
         [JsonProperty(PropertyName = "committedOffset")]
         public System.Nullable<long> CommittedOffset { get; set; }
-
+        
         /// <value>
         /// The consumer instance which currently has the partition reserved.
         /// </value>
         [JsonProperty(PropertyName = "reservedInstance")]
         public string ReservedInstance { get; set; }
-
+        
         /// <value>
         /// A timestamp when the current reservation expires.
         /// </value>
         [JsonProperty(PropertyName = "timeReservedUntil")]
         public System.Nullable<System.DateTime> TimeReservedUntil { get; set; }
+        
     }
 }

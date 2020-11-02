@@ -26,25 +26,25 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment where the application is created in the Oracle Cloud Infrastructure Data Flow Service.
         /// </value>
         [JsonProperty(PropertyName = "applicationCompartmentId")]
         public string ApplicationCompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the application.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         [JsonProperty(PropertyName = "resourceConfiguration")]
         public ResourceConfiguration ResourceConfiguration { get; set; }
-
+        
         [JsonProperty(PropertyName = "configurationDetails")]
         public ConfigurationDetails ConfigurationDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the publishing action to Oracle Cloud Infrastructure Data Flow.
         /// </value>
@@ -64,71 +64,72 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The error of the published object in the application.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
-
+        
         /// <value>
         /// The object key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The object type.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
-
+        
         /// <value>
         /// This is a version number that is used by the service to upgrade objects if needed through releases of the service.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The version of the object that is used to track changes in the object instance.
         /// </value>
         [JsonProperty(PropertyName = "objectVersion")]
         public System.Nullable<int> ObjectVersion { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects. Other values are reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         [JsonProperty(PropertyName = "metadata")]
         public ObjectMetadata Metadata { get; set; }
-
+        
         /// <value>
         /// A key map. If provided, key is replaced with generated key. This structure provides mapping between user provided key and generated key.
         /// </value>
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }
+        
     }
 }

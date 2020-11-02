@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The subnet's CIDR block.
         /// <br/>
@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the subnet.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -62,14 +62,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the set of DHCP options that the subnet uses.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dhcpOptionsId")]
         public string DhcpOptionsId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -77,7 +77,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A DNS label for the subnet, used in conjunction with the VNIC's hostname and
         /// VCN's DNS label to form a fully qualified domain name (FQDN) for each VNIC
@@ -95,7 +95,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "dnsLabel")]
         public string DnsLabel { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -104,7 +104,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The subnet's Oracle ID (OCID).
         /// </value>
@@ -114,7 +114,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// For an IPv6-enabled subnet, this is the IPv6 CIDR block for the subnet's private IP address
         /// space. The subnet size is always /64. Note that IPv6 addressing is currently supported only
@@ -124,7 +124,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipv6CidrBlock")]
         public string Ipv6CidrBlock { get; set; }
-
+        
         /// <value>
         /// For an IPv6-enabled subnet, this is the IPv6 CIDR block for the subnet's public IP address
         /// space. The subnet size is always /64. The left 48 bits are inherited from the
@@ -135,7 +135,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipv6PublicCidrBlock")]
         public string Ipv6PublicCidrBlock { get; set; }
-
+        
         /// <value>
         /// For an IPv6-enabled subnet, this is the IPv6 address of the virtual router.
         /// <br/>
@@ -143,7 +143,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipv6VirtualRouterIp")]
         public string Ipv6VirtualRouterIp { get; set; }
-        ///
+                ///
         /// <value>
         /// The subnet's current state.
         /// </value>
@@ -169,7 +169,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Whether VNICs within this subnet can have public IP addresses.
         /// Defaults to false, which means VNICs created in this subnet will
@@ -185,7 +185,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "prohibitPublicIpOnVnic")]
         public System.Nullable<bool> ProhibitPublicIpOnVnic { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table that the subnet uses.
         /// </value>
@@ -195,7 +195,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "RouteTableId is required.")]
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the security list or lists that the subnet uses. Remember
         /// that security lists are associated *with the subnet*, but the
@@ -204,7 +204,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "securityListIds")]
         public System.Collections.Generic.List<string> SecurityListIds { get; set; }
-
+        
         /// <value>
         /// The subnet's domain name, which consists of the subnet's DNS label,
         /// the VCN's DNS label, and the `oraclevcn.com` domain.
@@ -216,7 +216,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetDomainName")]
         public string SubnetDomainName { get; set; }
-
+        
         /// <value>
         /// The date and time the subnet was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -224,7 +224,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the VCN the subnet is in.
         /// </value>
@@ -234,7 +234,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The IP address of the virtual router.
         /// <br/>
@@ -246,7 +246,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VirtualRouterIp is required.")]
         [JsonProperty(PropertyName = "virtualRouterIp")]
         public string VirtualRouterIp { get; set; }
-
+        
         /// <value>
         /// The MAC address of the virtual router.
         /// <br/>
@@ -258,5 +258,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VirtualRouterMac is required.")]
         [JsonProperty(PropertyName = "virtualRouterMac")]
         public string VirtualRouterMac { get; set; }
+        
     }
 }

@@ -24,35 +24,36 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "tdeWalletPath")]
         public string TdeWalletPath { get; set; }
-
+        
         /// <value>
         /// The handle of the control file backup.
         /// </value>
         [JsonProperty(PropertyName = "cfBackupHandle")]
         public string CfBackupHandle { get; set; }
-
+        
         /// <value>
         /// The handle of the spfile backup.
         /// </value>
         [JsonProperty(PropertyName = "spfBackupHandle")]
         public string SpfBackupHandle { get; set; }
-
+        
         /// <value>
         /// The list of SQL patches that need to be applied to the backup during the restore.
         /// </value>
         [JsonProperty(PropertyName = "sqlPatches")]
         public System.Collections.Generic.List<string> SqlPatches { get; set; }
-
+        
         /// <value>
         /// The size of the data in the database, in megabytes.
         /// </value>
         [JsonProperty(PropertyName = "dataSize")]
         public System.Nullable<long> DataSize { get; set; }
-
+        
         /// <value>
         /// The size of the redo in the database, in megabytes.
         /// </value>
         [JsonProperty(PropertyName = "redoSize")]
         public System.Nullable<long> RedoSize { get; set; }
+        
     }
 }

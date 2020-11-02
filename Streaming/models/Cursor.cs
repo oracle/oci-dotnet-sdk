@@ -31,5 +31,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

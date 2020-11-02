@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DestinationRegion is required.")]
         [JsonProperty(PropertyName = "destinationRegion")]
         public string DestinationRegion { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the volume backup. Does not have to be unique and it's changeable.
         /// Avoid entering confidential information.
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the Key Management key in the destination region which will be the master encryption key
         /// for the copied volume backup.
@@ -53,5 +53,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
     }
 }

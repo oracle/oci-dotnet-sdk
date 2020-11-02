@@ -33,7 +33,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "FileSystemId is required.")]
         [JsonProperty(PropertyName = "fileSystemId")]
         public string FileSystemId { get; set; }
-
+        
         /// <value>
         /// The OCID of the snapshot.
         /// </value>
@@ -43,7 +43,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the snapshot.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Name of the snapshot. This value is immutable.
         /// <br/>
@@ -83,7 +83,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The date and time the snapshot was created, expressed
         /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
@@ -96,7 +96,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.
@@ -105,7 +105,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -113,5 +113,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

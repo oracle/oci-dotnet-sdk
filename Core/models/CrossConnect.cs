@@ -45,13 +45,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the cross-connect group this cross-connect belongs to (if any).
         /// </value>
         [JsonProperty(PropertyName = "crossConnectGroupId")]
         public string CrossConnectGroupId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -77,13 +77,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The cross-connect's Oracle ID (OCID).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The cross-connect's current state.
         /// </value>
@@ -109,19 +109,19 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The name of the FastConnect location where this cross-connect is installed.
         /// </value>
         [JsonProperty(PropertyName = "locationName")]
         public string LocationName { get; set; }
-
+        
         /// <value>
         /// A string identifying the meet-me room port for this cross-connect.
         /// </value>
         [JsonProperty(PropertyName = "portName")]
         public string PortName { get; set; }
-
+        
         /// <value>
         /// The port speed for this cross-connect.
         /// <br/>
@@ -129,7 +129,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "portSpeedShapeName")]
         public string PortSpeedShapeName { get; set; }
-
+        
         /// <value>
         /// A reference name or identifier for the physical fiber connection that this cross-connect
         /// uses.
@@ -137,7 +137,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerReferenceName")]
         public string CustomerReferenceName { get; set; }
-
+        
         /// <value>
         /// The date and time the cross-connect was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -145,5 +145,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

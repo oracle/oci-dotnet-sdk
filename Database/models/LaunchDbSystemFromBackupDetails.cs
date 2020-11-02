@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbHome is required.")]
         [JsonProperty(PropertyName = "dbHome")]
         public CreateDbHomeFromBackupDetails DbHome { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle Database Edition that applies to all the databases on the DB system.
         /// Exadata DB systems and 2-node RAC DB systems require ENTERPRISE_EDITION_EXTREME_PERFORMANCE.
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseEdition")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of redundancy configured for the DB system.
         /// NORMAL 2-way redundancy, recommended for test and development systems.
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "diskRedundancy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DiskRedundancyEnum> DiskRedundancy { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to all the databases on the DB system. The default is LICENSE_INCLUDED.
         /// 
@@ -102,5 +102,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "DB_BACKUP";
     }
 }

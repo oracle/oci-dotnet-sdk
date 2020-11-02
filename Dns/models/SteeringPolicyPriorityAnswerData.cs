@@ -25,7 +25,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "answerCondition")]
         public string AnswerCondition { get; set; }
-
+        
         /// <value>
         /// The rank assigned to the set of answers that match the expression in `answerCondition`.
         /// Answers with the lowest values move to the beginning of the list without changing the
@@ -38,5 +38,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<int> Value { get; set; }
+        
     }
 }

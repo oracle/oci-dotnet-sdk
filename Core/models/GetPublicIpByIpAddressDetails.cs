@@ -32,5 +32,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
+        
     }
 }

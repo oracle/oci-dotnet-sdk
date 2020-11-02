@@ -26,43 +26,43 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "failureMessage")]
         public string FailureMessage { get; set; }
-
+        
         /// <value>
         /// Lama Idf
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
-
+        
         /// <value>
         /// last attempt date
         /// </value>
         [JsonProperty(PropertyName = "timeLastAttempted")]
         public System.Nullable<System.DateTime> TimeLastAttempted { get; set; }
-
+        
         /// <value>
         /// retry count
         /// </value>
         [JsonProperty(PropertyName = "retryCount")]
         public System.Nullable<long> RetryCount { get; set; }
-
+        
         /// <value>
         /// source name
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// source display name
         /// </value>
         [JsonProperty(PropertyName = "sourceDisplayName")]
         public string SourceDisplayName { get; set; }
-
+        
         /// <value>
         /// source type internal name
         /// </value>
         [JsonProperty(PropertyName = "sourceTypeName")]
         public string SourceTypeName { get; set; }
-        ///
+                ///
         /// <value>
         /// lifeCycleState
         /// </value>
@@ -84,59 +84,60 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lifeCycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifeCycleStateEnum> LifeCycleState { get; set; }
-
+        
         /// <value>
         /// entity GUID
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
-
+        
         /// <value>
         /// entity name
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
-
+        
         /// <value>
         /// entity type internal name
         /// </value>
         [JsonProperty(PropertyName = "entityTypeName")]
         public string EntityTypeName { get; set; }
-
+        
         /// <value>
         /// host name
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// Agent entity name
         /// </value>
         [JsonProperty(PropertyName = "agentEntityName")]
         public string AgentEntityName { get; set; }
-
+        
         /// <value>
         /// entity type display name
         /// </value>
         [JsonProperty(PropertyName = "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }
-
+        
         /// <value>
         /// log group ocid
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// log group name
         /// </value>
         [JsonProperty(PropertyName = "logGroupName")]
         public string LogGroupName { get; set; }
-
+        
         /// <value>
         /// log group compartment
         /// </value>
         [JsonProperty(PropertyName = "logGroupCompartment")]
         public string LogGroupCompartment { get; set; }
+        
     }
 }

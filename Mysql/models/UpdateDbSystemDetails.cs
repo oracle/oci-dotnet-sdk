@@ -27,34 +27,34 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// User-provided data about the DB System.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the DB System is associated with.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The Availability Domain where the primary instance should be located.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the Fault Domain the DB System is located in.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The shape of the DB System. The shape determines resources
         /// allocated to the DB System - CPU cores and memory for VM
@@ -69,25 +69,25 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
-
+        
         /// <value>
         /// The specific MySQL version identifier.
         /// </value>
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
-
+        
         /// <value>
         /// The OCID of the Configuration to be used for Instances in this DB System.
         /// </value>
         [JsonProperty(PropertyName = "configurationId")]
         public string ConfigurationId { get; set; }
-
+        
         /// <value>
         /// The username for the administrative user for the MySQL Instance.
         /// </value>
         [JsonProperty(PropertyName = "adminUsername")]
         public string AdminUsername { get; set; }
-
+        
         /// <value>
         /// The password for the administrative user. The password must be
         /// between 8 and 32 characters long, and must contain at least 1
@@ -97,7 +97,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// New size of the data volume in GBs that will be created and attached.
         /// <br/>
@@ -108,7 +108,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The hostname for the primary endpoint of the DB System. Used for DNS.
         /// The value is the hostname portion of the primary private IP's fully qualified domain name (FQDN)
@@ -118,7 +118,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// The IP address the DB System should be configured to listen on the provided subnet.
         /// It must be a free private IP address within the subnet's CIDR. If you don't specify a
@@ -128,38 +128,39 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The port for primary endpoint of the DB System to listen on.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The TCP network port on which X Plugin listens for connections. This is the X Plugin equivalent of port.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "portX")]
         public System.Nullable<int> PortX { get; set; }
-
+        
         [JsonProperty(PropertyName = "backupPolicy")]
         public UpdateBackupPolicyDetails BackupPolicy { get; set; }
-
+        
         [JsonProperty(PropertyName = "maintenance")]
         public UpdateMaintenanceDetails Maintenance { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

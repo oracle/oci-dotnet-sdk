@@ -41,5 +41,8 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationEnum> Operation { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "FIELDS";
     }
 }

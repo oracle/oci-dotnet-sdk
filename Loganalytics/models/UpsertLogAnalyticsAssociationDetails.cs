@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// list of rule entity association details
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<UpsertLogAnalyticsAssociation> Items { get; set; }
+        
     }
 }

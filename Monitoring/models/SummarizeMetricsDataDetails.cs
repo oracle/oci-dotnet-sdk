@@ -34,7 +34,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group that you want to use as a filter. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -44,7 +44,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// The Monitoring Query Language (MQL) expression to use when searching for metric data points to
         /// aggregate. The query must specify a metric, statistic, and interval. Supported values for 
@@ -66,7 +66,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Query is required.")]
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
-
+        
         /// <value>
         /// The beginning of the time range to use when searching for metric data points.
         /// Format is defined by RFC3339. The response includes metric data points for the startTime.
@@ -76,7 +76,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "startTime")]
         public System.Nullable<System.DateTime> StartTime { get; set; }
-
+        
         /// <value>
         /// The end of the time range to use when searching for metric data points.
         /// Format is defined by RFC3339. The response excludes metric data points for the endTime.
@@ -86,7 +86,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "endTime")]
         public System.Nullable<System.DateTime> EndTime { get; set; }
-
+        
         /// <value>
         /// The time between calculated aggregation windows. Use with the query interval to vary the
         /// frequency at which aggregated data points are returned. For example, use a query interval of
@@ -98,5 +98,6 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resolution")]
         public string Resolution { get; set; }
+        
     }
 }

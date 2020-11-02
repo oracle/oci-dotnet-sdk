@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human readable description of the issue encountered.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the error happened, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -48,5 +48,6 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

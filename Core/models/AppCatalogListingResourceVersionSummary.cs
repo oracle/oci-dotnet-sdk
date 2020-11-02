@@ -26,24 +26,25 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// Date and time the listing resource version was published, in [RFC3339](https://tools.ietf.org/html/rfc3339) format.
         /// Example: 2018-03-20T12:32:53.532Z
         /// </value>
         [JsonProperty(PropertyName = "timePublished")]
         public System.Nullable<System.DateTime> TimePublished { get; set; }
-
+        
         /// <value>
         /// OCID of the listing resource.
         /// </value>
         [JsonProperty(PropertyName = "listingResourceId")]
         public string ListingResourceId { get; set; }
-
+        
         /// <value>
         /// Resource Version.
         /// </value>
         [JsonProperty(PropertyName = "listingResourceVersion")]
         public string ListingResourceVersion { get; set; }
+        
     }
 }

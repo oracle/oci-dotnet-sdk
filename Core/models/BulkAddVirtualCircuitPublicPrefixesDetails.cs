@@ -28,5 +28,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PublicPrefixes is required.")]
         [JsonProperty(PropertyName = "publicPrefixes")]
         public System.Collections.Generic.List<CreateVirtualCircuitPublicPrefixDetails> PublicPrefixes { get; set; }
+        
     }
 }

@@ -30,5 +30,6 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "PackageNames is required.")]
         [JsonProperty(PropertyName = "packageNames")]
         public System.Collections.Generic.List<string> PackageNames { get; set; }
+        
     }
 }

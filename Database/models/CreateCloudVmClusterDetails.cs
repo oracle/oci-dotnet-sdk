@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet associated with the cloud VM cluster.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup network subnet associated with the cloud VM cluster.
         /// 
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "BackupSubnetId is required.")]
         [JsonProperty(PropertyName = "backupSubnetId")]
         public string BackupSubnetId { get; set; }
-
+        
         /// <value>
         /// The number of CPU cores to enable for a cloud VM cluster. Valid values depend on the specified shape:
         /// <br/>
@@ -72,14 +72,14 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The cluster name for cloud VM cluster. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "clusterName")]
         public string ClusterName { get; set; }
-
+        
         /// <value>
         /// The percentage assigned to DATA storage (user data and database files).
         /// The remaining percentage is assigned to RECO storage (database redo logs, archive logs, and recovery manager backups). Accepted values are 35, 40, 60 and 80. The default is 80 percent assigned to DATA storage. See [Storage Configuration](https://docs.cloud.oracle.com/Content/Database/Concepts/exaoverview.htm#Exadata) in the Exadata documentation for details on the impact of the configuration settings on storage.
@@ -87,7 +87,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStoragePercentage")]
         public System.Nullable<int> DataStoragePercentage { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the cloud VM cluster. The name does not need to be unique.
         /// </value>
@@ -97,7 +97,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cloud Exadata infrastructure resource.
         /// </value>
@@ -107,7 +107,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudExadataInfrastructureId is required.")]
         [JsonProperty(PropertyName = "cloudExadataInfrastructureId")]
         public string CloudExadataInfrastructureId { get; set; }
-
+        
         /// <value>
         /// The hostname for the cloud VM cluster. The hostname must begin with an alphabetic character, and
         /// can contain alphanumeric characters and hyphens (-). The maximum length of the hostname is 16 characters for bare metal and virtual machine DB systems, and 12 characters for Exadata systems.
@@ -124,7 +124,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// A domain name used for the cloud VM cluster. If the Oracle-provided internet and VCN
         /// resolver is enabled for the specified subnet, the domain name for the subnet is used
@@ -133,7 +133,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The public key portion of one or more key pairs used for SSH access to the cloud VM cluster.
         /// </value>
@@ -143,7 +143,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SshPublicKeys is required.")]
         [JsonProperty(PropertyName = "sshPublicKeys")]
         public System.Collections.Generic.List<string> SshPublicKeys { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE.
         /// 
@@ -163,28 +163,28 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// If true, the sparse disk group is configured for the cloud VM cluster. If false, the sparse disk group is not created.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isSparseDiskgroupEnabled")]
         public System.Nullable<bool> IsSparseDiskgroupEnabled { get; set; }
-
+        
         /// <value>
         /// If true, database backup on local Exadata storage is configured for the cloud VM cluster. If false, database backup on local Exadata storage is not available in the cloud VM cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isLocalBackupEnabled")]
         public System.Nullable<bool> IsLocalBackupEnabled { get; set; }
-
+        
         /// <value>
         /// The time zone to use for the cloud VM cluster. For details, see [Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -193,14 +193,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that the backup network of this DB system belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm). Applicable only to Exadata systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupNetworkNsgIds")]
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Grid Infrastructure (GI) software version.
         /// </value>
@@ -210,7 +210,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "GiVersion is required.")]
         [JsonProperty(PropertyName = "giVersion")]
         public string GiVersion { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -219,7 +219,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -227,5 +227,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

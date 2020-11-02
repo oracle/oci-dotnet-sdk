@@ -48,7 +48,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group provided with the posted metric. A resource group is a custom string that can be used as a filter. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -58,7 +58,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the
         /// resources from which the aggregated data was returned.
@@ -70,7 +70,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the metric.
         /// <br/>
@@ -82,7 +82,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Qualifiers provided in the definition of the returned metric.
         /// Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.
@@ -95,7 +95,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Dimensions is required.")]
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
-
+        
         /// <value>
         /// The references provided in a metric definition to indicate extra information about the metric.
         /// <br/>
@@ -103,7 +103,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-
+        
         /// <value>
         /// The time between calculated aggregation windows. Use with the query interval to vary the
         /// frequency at which aggregated data points are returned. For example, use a query interval of
@@ -115,7 +115,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resolution")]
         public string Resolution { get; set; }
-
+        
         /// <value>
         /// The list of timestamp-value pairs returned for the specified request. Metric values are rolled up to the start time specified in the request. 
         /// For important limits information related to data points, see MetricData Reference at the top of this page. 
@@ -127,5 +127,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "AggregatedDatapoints is required.")]
         [JsonProperty(PropertyName = "aggregatedDatapoints")]
         public System.Collections.Generic.List<AggregatedDatapoint> AggregatedDatapoints { get; set; }
+        
     }
 }

@@ -30,25 +30,25 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DetectorRuleId is required.")]
         [JsonProperty(PropertyName = "detectorRuleId")]
         public string DetectorRuleId { get; set; }
-
+        
         /// <value>
         /// displayName
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description for TargetDetectorRecipeDetectorRule
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Recommendation for TargetDetectorRecipeDetectorRule
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
-
+        
         /// <value>
         /// detector for the rule
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "detector")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
-
+        
         /// <value>
         /// service type of the configuration to which the rule is applied
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ServiceType is required.")]
         [JsonProperty(PropertyName = "serviceType")]
         public string ServiceType { get; set; }
-
+        
         /// <value>
         /// resource type of the configuration to which the rule is applied
         /// </value>
@@ -79,10 +79,10 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-
+        
         [JsonProperty(PropertyName = "details")]
         public TargetDetectorDetails Details { get; set; }
-        ///
+                ///
         ///
         public enum ManagedListTypesEnum {
             [EnumMember(Value = "CIDR_BLOCK")]
@@ -114,30 +114,31 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
-
+        
         /// <value>
         /// The date and time the target detector recipe rule was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the target detector recipe rule was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the DetectorRule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

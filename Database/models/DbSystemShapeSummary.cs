@@ -35,19 +35,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The family of the shape used for the DB system.
         /// </value>
         [JsonProperty(PropertyName = "shapeFamily")]
         public string ShapeFamily { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use `name` instead of `shape`.
         /// </value>
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The maximum number of CPU cores that can be enabled on the DB system for this shape.
         /// </value>
@@ -57,77 +57,78 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailableCoreCount is required.")]
         [JsonProperty(PropertyName = "availableCoreCount")]
         public System.Nullable<int> AvailableCoreCount { get; set; }
-
+        
         /// <value>
         /// The minimum number of CPU cores that can be enabled on the DB system for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minimumCoreCount")]
         public System.Nullable<int> MinimumCoreCount { get; set; }
-
+        
         /// <value>
         /// The discrete number by which the CPU core count for this shape can be increased or decreased.
         /// </value>
         [JsonProperty(PropertyName = "coreCountIncrement")]
         public System.Nullable<int> CoreCountIncrement { get; set; }
-
+        
         /// <value>
         /// The minimum number of CPU cores that can be enabled per node for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minCoreCountPerNode")]
         public System.Nullable<int> MinCoreCountPerNode { get; set; }
-
+        
         /// <value>
         /// The maximum memory that can be enabled for this shape.
         /// </value>
         [JsonProperty(PropertyName = "availableMemoryInGBs")]
         public System.Nullable<int> AvailableMemoryInGBs { get; set; }
-
+        
         /// <value>
         /// The minimum memory that need be allocated per node for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minMemoryPerNodeInGBs")]
         public System.Nullable<int> MinMemoryPerNodeInGBs { get; set; }
-
+        
         /// <value>
         /// The maximum Db Node storage that can be enabled for this shape.
         /// </value>
         [JsonProperty(PropertyName = "availableDbNodeStorageInGBs")]
         public System.Nullable<int> AvailableDbNodeStorageInGBs { get; set; }
-
+        
         /// <value>
         /// The minimum Db Node storage that need be allocated per node for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minDbNodeStoragePerNodeInGBs")]
         public System.Nullable<int> MinDbNodeStoragePerNodeInGBs { get; set; }
-
+        
         /// <value>
         /// The maximum DATA storage that can be enabled for this shape.
         /// </value>
         [JsonProperty(PropertyName = "availableDataStorageInTBs")]
         public System.Nullable<int> AvailableDataStorageInTBs { get; set; }
-
+        
         /// <value>
         /// The minimum data storage that need be allocated for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minDataStorageInTBs")]
         public System.Nullable<int> MinDataStorageInTBs { get; set; }
-
+        
         /// <value>
         /// The minimum number of database nodes available for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minimumNodeCount")]
         public System.Nullable<int> MinimumNodeCount { get; set; }
-
+        
         /// <value>
         /// The maximum number of database nodes available for this shape.
         /// </value>
         [JsonProperty(PropertyName = "maximumNodeCount")]
         public System.Nullable<int> MaximumNodeCount { get; set; }
-
+        
         /// <value>
         /// The maximum number of CPU cores per database node that can be enabled for this shape. Only applicable to the flex Exadata shape. Does not apply to X6, X7, and X8 fixed-shape systems.
         /// </value>
         [JsonProperty(PropertyName = "availableCoreCountPerNode")]
         public System.Nullable<int> AvailableCoreCountPerNode { get; set; }
+        
     }
 }

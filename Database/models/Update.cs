@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Details of the maintenance update package.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// The update action.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lastAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LastActionEnum> LastAction { get; set; }
-        ///
+                ///
         /// <value>
         /// The update action.
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<AvailableActionsEnum> AvailableActions { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of cloud VM cluster maintenance update.
         /// </value>
@@ -99,14 +99,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "updateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypeEnum> UpdateType { get; set; }
-
+        
         /// <value>
         /// Descriptive text providing additional details about the lifecycle state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the maintenance update. Dependent on value of `lastAction`.
         /// </value>
@@ -128,7 +128,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the maintenance update was released.
         /// </value>
@@ -138,7 +138,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeReleased is required.")]
         [JsonProperty(PropertyName = "timeReleased")]
         public System.Nullable<System.DateTime> TimeReleased { get; set; }
-
+        
         /// <value>
         /// The version of the maintenance update package.
         /// </value>
@@ -148,5 +148,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
     }
 }

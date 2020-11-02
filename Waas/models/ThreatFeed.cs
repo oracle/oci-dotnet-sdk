@@ -26,13 +26,13 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The name of the threat intelligence feed.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The action to take when traffic is flagged as malicious by data from the threat intelligence feed. If unspecified, defaults to `OFF`.
         /// </value>
@@ -52,11 +52,12 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
-
+        
         /// <value>
         /// The description of the threat intelligence feed.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

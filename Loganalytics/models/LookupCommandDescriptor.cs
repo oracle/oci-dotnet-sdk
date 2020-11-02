@@ -21,5 +21,8 @@ namespace Oci.LoganalyticsService.Models
     /// </summary>
     public class LookupCommandDescriptor : AbstractCommandDescriptor
     {
-            }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "LOOKUP";
+    }
 }

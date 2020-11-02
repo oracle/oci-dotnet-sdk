@@ -27,7 +27,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
-
+        
         /// <value>
         /// The status code of the stock response from the mock backend.
         /// </value>
@@ -37,11 +37,14 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
         public System.Nullable<int> Status { get; set; }
-
+        
         /// <value>
         /// The headers of the stock response from the mock backend.
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.List<HeaderFieldSpecification> Headers { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "STOCK_RESPONSE_BACKEND";
     }
 }

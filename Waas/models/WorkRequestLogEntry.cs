@@ -26,11 +26,12 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the work request log event happend, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

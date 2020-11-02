@@ -24,5 +24,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "vendors")]
         public System.Collections.Generic.List<string> Vendors { get; set; }
+        
     }
 }

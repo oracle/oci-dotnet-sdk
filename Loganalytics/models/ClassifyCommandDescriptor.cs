@@ -28,19 +28,22 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "topCount")]
         public System.Nullable<int> TopCount { get; set; }
-
+        
         /// <value>
         /// Value specified in CLASSIFY command in queryString if set limits the results returned to bottom N.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bottomCount")]
         public System.Nullable<int> BottomCount { get; set; }
-
+        
         /// <value>
         /// Fields specified in CLASSIFY command in queryString if set include / exclude fields in correlate results.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "correlate")]
         public System.Collections.Generic.List<FieldsAddRemoveField> Correlate { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "CLASSIFY";
     }
 }

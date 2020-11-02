@@ -26,7 +26,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "associatedData")]
         public System.Collections.Generic.Dictionary<string, string> AssociatedData { get; set; }
-
+        
         /// <value>
         /// The encrypted data to decrypt.
         /// </value>
@@ -36,7 +36,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Ciphertext is required.")]
         [JsonProperty(PropertyName = "ciphertext")]
         public string Ciphertext { get; set; }
-
+        
         /// <value>
         /// The OCID of the key used to encrypt the ciphertext.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// Information that provides context for audit logging. You can provide this additional
         /// data as key-value pairs to include in audit logs when audit logging is enabled.
@@ -54,5 +54,6 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "loggingContext")]
         public System.Collections.Generic.Dictionary<string, string> LoggingContext { get; set; }
+        
     }
 }

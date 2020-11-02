@@ -21,5 +21,8 @@ namespace Oci.MysqlService.Models
     /// </summary>
     public class DbSystemSourceImportFromUrl : DbSystemSource
     {
-            }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "IMPORTURL";
+    }
 }

@@ -31,7 +31,7 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// List of all the fields and their value type that are indexed for querying.
         /// 
@@ -42,5 +42,6 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "Fields is required.")]
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<QueryableFieldDescription> Fields { get; set; }
+        
     }
 }

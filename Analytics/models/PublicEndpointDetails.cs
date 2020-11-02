@@ -28,12 +28,15 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
-
+        
         /// <value>
         /// Virtual Cloud Networks allowed to access this network endpoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "whitelistedVcns")]
         public System.Collections.Generic.List<VirtualCloudNetwork> WhitelistedVcns { get; set; }
+        
+        [JsonProperty(PropertyName = "networkEndpointType")]
+        private readonly string networkEndpointType = "PUBLIC";
     }
 }

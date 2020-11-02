@@ -32,7 +32,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time when the log message was written.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -44,5 +44,6 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

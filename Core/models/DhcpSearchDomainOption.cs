@@ -45,5 +45,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SearchDomainNames is required.")]
         [JsonProperty(PropertyName = "searchDomainNames")]
         public System.Collections.Generic.List<string> SearchDomainNames { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "SearchDomain";
     }
 }

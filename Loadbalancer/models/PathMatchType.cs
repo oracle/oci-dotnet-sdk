@@ -74,5 +74,6 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "matchType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MatchTypeEnum> MatchType { get; set; }
+        
     }
 }

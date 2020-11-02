@@ -29,12 +29,13 @@ namespace Oci.LimitsService.Models
         /// </value>
         [JsonProperty(PropertyName = "used")]
         public System.Nullable<long> Used { get; set; }
-
+        
         /// <value>
         /// The count of available resources.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "available")]
         public System.Nullable<long> Available { get; set; }
+        
     }
 }

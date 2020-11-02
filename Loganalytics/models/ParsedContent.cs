@@ -26,35 +26,36 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "fieldNames")]
         public System.Collections.Generic.List<string> FieldNames { get; set; }
-
+        
         /// <value>
         /// Display names for fields
         /// </value>
         [JsonProperty(PropertyName = "fieldDisplayNames")]
         public System.Collections.Generic.List<string> FieldDisplayNames { get; set; }
-
+        
         /// <value>
         /// Parsed field values
         /// </value>
         [JsonProperty(PropertyName = "parsedFieldValues")]
         public System.Collections.Generic.List<ParsedField> ParsedFieldValues { get; set; }
-
+        
         /// <value>
         /// Log Content
         /// </value>
         [JsonProperty(PropertyName = "logContent")]
         public string LogContent { get; set; }
-
+        
         /// <value>
         /// Sample Size
         /// </value>
         [JsonProperty(PropertyName = "sampleSize")]
         public System.Nullable<int> SampleSize { get; set; }
-
+        
         /// <value>
         /// Match Status
         /// </value>
         [JsonProperty(PropertyName = "matchStatus")]
         public string MatchStatus { get; set; }
+        
     }
 }

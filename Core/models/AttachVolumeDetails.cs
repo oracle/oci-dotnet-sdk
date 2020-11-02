@@ -25,14 +25,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "device")]
         public string Device { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it cannot be changed. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance.
         /// </value>
@@ -42,13 +42,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-
+        
         /// <value>
         /// Whether the attachment was created in read-only mode.
         /// </value>
         [JsonProperty(PropertyName = "isReadOnly")]
         public System.Nullable<bool> IsReadOnly { get; set; }
-
+        
         /// <value>
         /// Whether the attachment should be created in shareable mode. If an attachment
         /// is created in shareable mode, then other instances can attach the same volume, provided
@@ -58,17 +58,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isShareable")]
         public System.Nullable<bool> IsShareable { get; set; }
-
-        /// <value>
-        /// The type of volume. The only supported values are \"iscsi\" and \"paravirtualized\".
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-
+        
+        
         /// <value>
         /// The OCID of the volume.
         /// </value>
@@ -78,6 +69,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeId is required.")]
         [JsonProperty(PropertyName = "volumeId")]
         public string VolumeId { get; set; }
+        
     }
 
     public class AttachVolumeDetailsModelConverter : JsonConverter

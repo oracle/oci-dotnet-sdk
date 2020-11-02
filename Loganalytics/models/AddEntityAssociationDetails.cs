@@ -32,5 +32,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "AssociationEntities is required.")]
         [JsonProperty(PropertyName = "associationEntities")]
         public System.Collections.Generic.List<string> AssociationEntities { get; set; }
+        
     }
 }

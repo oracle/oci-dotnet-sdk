@@ -26,43 +26,43 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "bdaVersion")]
         public string BdaVersion { get; set; }
-
+        
         /// <value>
         /// Big Data Manager version installed in the cluster
         /// </value>
         [JsonProperty(PropertyName = "bdmVersion")]
         public string BdmVersion { get; set; }
-
+        
         /// <value>
         /// Big Data Service version installed in the cluster
         /// </value>
         [JsonProperty(PropertyName = "bdsVersion")]
         public string BdsVersion { get; set; }
-
+        
         /// <value>
         /// Oracle Linux version installed in the cluster
         /// </value>
         [JsonProperty(PropertyName = "osVersion")]
         public string OsVersion { get; set; }
-
+        
         /// <value>
         /// Query Server Database version
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-
+        
         /// <value>
         /// Cloud SQL cell version
         /// </value>
         [JsonProperty(PropertyName = "bdCellVersion")]
         public string BdCellVersion { get; set; }
-
+        
         /// <value>
         /// Big Data SQL version
         /// </value>
         [JsonProperty(PropertyName = "csqlCellVersion")]
         public string CsqlCellVersion { get; set; }
-
+        
         /// <value>
         /// The time the cluster was created. An RFC3339 formatted datetime string
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the BDS instance was automatically, or manually refreshed.
         /// An RFC3339 formatted datetime string
@@ -80,23 +80,24 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeRefreshed")]
         public System.Nullable<System.DateTime> TimeRefreshed { get; set; }
-
+        
         /// <value>
         /// The URL of a Cloudera Manager
         /// </value>
         [JsonProperty(PropertyName = "clouderaManagerUrl")]
         public string ClouderaManagerUrl { get; set; }
-
+        
         /// <value>
         /// The URL of a Big Data Manager
         /// </value>
         [JsonProperty(PropertyName = "bigDataManagerUrl")]
         public string BigDataManagerUrl { get; set; }
-
+        
         /// <value>
         /// The URL of a Hue Server
         /// </value>
         [JsonProperty(PropertyName = "hueServerUrl")]
         public string HueServerUrl { get; set; }
+        
     }
 }

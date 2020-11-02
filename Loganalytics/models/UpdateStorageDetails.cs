@@ -27,5 +27,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ArchivingConfiguration is required.")]
         [JsonProperty(PropertyName = "archivingConfiguration")]
         public ArchivingConfiguration ArchivingConfiguration { get; set; }
+        
     }
 }

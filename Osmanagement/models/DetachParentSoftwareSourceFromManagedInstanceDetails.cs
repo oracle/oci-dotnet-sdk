@@ -30,5 +30,6 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "SoftwareSourceId is required.")]
         [JsonProperty(PropertyName = "softwareSourceId")]
         public string SoftwareSourceId { get; set; }
+        
     }
 }

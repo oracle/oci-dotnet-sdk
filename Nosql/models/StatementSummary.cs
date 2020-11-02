@@ -54,35 +54,36 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "operation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationEnum> Operation { get; set; }
-
+        
         /// <value>
         /// The table name from the SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "tableName")]
         public string TableName { get; set; }
-
+        
         /// <value>
         /// The index name from the SQL statement, if present.
         /// </value>
         [JsonProperty(PropertyName = "indexName")]
         public string IndexName { get; set; }
-
+        
         /// <value>
         /// True if the statement includes \"IF EXISTS.\"
         /// </value>
         [JsonProperty(PropertyName = "isIfExists")]
         public System.Nullable<bool> IsIfExists { get; set; }
-
+        
         /// <value>
         /// True if the statement includes \"IF NOT EXISTS.\"
         /// </value>
         [JsonProperty(PropertyName = "isIfNotExists")]
         public System.Nullable<bool> IsIfNotExists { get; set; }
-
+        
         /// <value>
         /// If present, indicates a syntax error in the statement.
         /// </value>
         [JsonProperty(PropertyName = "syntaxError")]
         public string SyntaxError { get; set; }
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-        ///
+                ///
         /// <value>
         /// An HTTP verb (i.e. HEAD, GET, or POST) to use when performing the health check.
         /// </value>
@@ -47,13 +47,13 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "method")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MethodEnum> Method { get; set; }
-
+        
         /// <value>
         /// Path to visit on your origins when performing the health check.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// HTTP header fields to include in health check requests, expressed as `\"name\": \"value\"` properties. Because HTTP header field names are case-insensitive, any use of names that are case-insensitive equal to other names will be rejected. If Host is not specified, requests will include a Host header field with value matching the policy's protected domain. If User-Agent is not specified, requests will include a User-Agent header field with value \"waf health checks\".
         /// <br/>
@@ -61,7 +61,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.Dictionary<string, string> Headers { get; set; }
-        ///
+                ///
         ///
         public enum ExpectedResponseCodeGroupEnum {
             [EnumMember(Value = "2XX")]
@@ -83,41 +83,42 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "expectedResponseCodeGroup", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<ExpectedResponseCodeGroupEnum> ExpectedResponseCodeGroup { get; set; }
-
+        
         /// <value>
         /// Enables or disables additional check for predefined text in addition to response code.
         /// </value>
         [JsonProperty(PropertyName = "isResponseTextCheckEnabled")]
         public System.Nullable<bool> IsResponseTextCheckEnabled { get; set; }
-
+        
         /// <value>
         /// Health check will search for the given text in a case-sensitive manner within the response body and will fail if the text is not found.
         /// </value>
         [JsonProperty(PropertyName = "expectedResponseText")]
         public string ExpectedResponseText { get; set; }
-
+        
         /// <value>
         /// Time between health checks of an individual origin server, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "intervalInSeconds")]
         public System.Nullable<int> IntervalInSeconds { get; set; }
-
+        
         /// <value>
         /// Response timeout represents wait time until request is considered failed, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Number of successful health checks after which the server is marked up.
         /// </value>
         [JsonProperty(PropertyName = "healthyThreshold")]
         public System.Nullable<int> HealthyThreshold { get; set; }
-
+        
         /// <value>
         /// Number of failed health checks after which the server is marked down.
         /// </value>
         [JsonProperty(PropertyName = "unhealthyThreshold")]
         public System.Nullable<int> UnhealthyThreshold { get; set; }
+        
     }
 }

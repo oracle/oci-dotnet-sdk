@@ -26,5 +26,6 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

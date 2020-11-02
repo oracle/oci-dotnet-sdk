@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bandwidthShapeName")]
         public string BandwidthShapeName { get; set; }
-        ///
+                ///
         /// <value>
         /// Deprecated. Instead use the information in
         /// {@link FastConnectProviderService}.
@@ -76,7 +76,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bgpManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BgpManagementEnum> BgpManagement { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the BGP session associated with the virtual circuit.
         /// </value>
@@ -94,13 +94,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bgpSessionState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BgpSessionStateEnum> BgpSessionState { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// An array of mappings, each containing properties for a
         /// cross-connect or cross-connect group that is associated with this
@@ -109,7 +109,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "crossConnectMappings")]
         public System.Collections.Generic.List<CrossConnectMapping> CrossConnectMappings { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `customerAsn`.
         /// If you specify values for both, the request will be rejected.
@@ -117,7 +117,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public System.Nullable<int> CustomerBgpAsn { get; set; }
-
+        
         /// <value>
         /// The BGP ASN of the network at the other end of the BGP
         /// session from Oracle. If the session is between the customer's
@@ -129,7 +129,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerAsn")]
         public System.Nullable<long> CustomerAsn { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -138,7 +138,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -146,7 +146,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -155,7 +155,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the customer's {@link Drg}
         /// that this virtual circuit uses. Applicable only to private virtual circuits.
@@ -163,13 +163,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "gatewayId")]
         public string GatewayId { get; set; }
-
+        
         /// <value>
         /// The virtual circuit's Oracle ID (OCID).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The virtual circuit's current state. For information about
         /// the different states, see
@@ -205,41 +205,41 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The Oracle BGP ASN.
         /// </value>
         [JsonProperty(PropertyName = "oracleBgpAsn")]
         public System.Nullable<int> OracleBgpAsn { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `providerServiceId`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerName")]
         public string ProviderName { get; set; }
-
+        
         /// <value>
         /// The OCID of the service offered by the provider (if the customer is connecting via a provider).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceId")]
         public string ProviderServiceId { get; set; }
-
+        
         /// <value>
         /// The service key name offered by the provider (if the customer is connecting via a provider).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceKeyName")]
         public string ProviderServiceKeyName { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `providerServiceId`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceName")]
         public string ProviderServiceName { get; set; }
-        ///
+                ///
         /// <value>
         /// The provider's state in relation to this virtual circuit (if the
         /// customer is connecting via a provider). ACTIVE means
@@ -267,7 +267,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "providerState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProviderStateEnum> ProviderState { get; set; }
-
+        
         /// <value>
         /// For a public virtual circuit. The public IP prefixes (CIDRs) the customer wants to
         /// advertise across the connection. All prefix sizes are allowed.
@@ -275,7 +275,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "publicPrefixes")]
         public System.Collections.Generic.List<string> PublicPrefixes { get; set; }
-
+        
         /// <value>
         /// Provider-supplied reference information about this virtual circuit
         /// (if the customer is connecting via a provider).
@@ -283,7 +283,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "referenceComment")]
         public string ReferenceComment { get; set; }
-
+        
         /// <value>
         /// The Oracle Cloud Infrastructure region where this virtual
         /// circuit is located.
@@ -291,7 +291,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-        ///
+                ///
         /// <value>
         /// Provider service type.
         /// 
@@ -313,7 +313,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "serviceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ServiceTypeEnum> ServiceType { get; set; }
-
+        
         /// <value>
         /// The date and time the virtual circuit was created,
         /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -322,7 +322,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// Whether the virtual circuit supports private or public peering. For more information,
         /// see [FastConnect Overview](https://docs.cloud.oracle.com/Content/Network/Concepts/fastconnect.htm).
@@ -344,5 +344,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

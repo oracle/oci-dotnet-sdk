@@ -28,19 +28,20 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayValue")]
         public string DisplayValue { get; set; }
-
+        
         /// <value>
         /// Internal representation of the field value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "internalValue")]
         public System.Object InternalValue { get; set; }
-
+        
         /// <value>
         /// Denotes if this list-of-values value has been marked as deleted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDeleted")]
         public System.Nullable<bool> IsDeleted { get; set; }
+        
     }
 }

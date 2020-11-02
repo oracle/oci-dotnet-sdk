@@ -30,5 +30,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TargetCompartmentId is required.")]
         [JsonProperty(PropertyName = "targetCompartmentId")]
         public string TargetCompartmentId { get; set; }
+        
     }
 }

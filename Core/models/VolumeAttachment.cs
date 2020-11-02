@@ -31,16 +31,7 @@ namespace Oci.CoreService.Models
     public class VolumeAttachment 
     {
         
-        /// <value>
-        /// The type of volume attachment.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AttachmentType is required.")]
-        [JsonProperty(PropertyName = "attachmentType")]
-        public string AttachmentType { get; set; }
-
+        
         /// <value>
         /// The availability domain of an instance.
         /// <br/>
@@ -52,7 +43,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -62,13 +53,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The device name.
         /// </value>
         [JsonProperty(PropertyName = "device")]
         public string Device { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it cannot be changed.
         /// Avoid entering confidential information.
@@ -77,7 +68,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume attachment.
         /// </value>
@@ -87,7 +78,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance the volume is attached to.
         /// </value>
@@ -97,19 +88,19 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-
+        
         /// <value>
         /// Whether the attachment was created in read-only mode.
         /// </value>
         [JsonProperty(PropertyName = "isReadOnly")]
         public System.Nullable<bool> IsReadOnly { get; set; }
-
+        
         /// <value>
         /// Whether the attachment should be created in shareable mode. If an attachment is created in shareable mode, then other instances can attach the same volume, provided that they also create their attachments in shareable mode. Only certain volume types can be attached in shareable mode. Defaults to false if not specified.
         /// </value>
         [JsonProperty(PropertyName = "isShareable")]
         public System.Nullable<bool> IsShareable { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the volume attachment.
         /// </value>
@@ -135,7 +126,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the volume was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -147,7 +138,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume.
         /// </value>
@@ -157,12 +148,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeId is required.")]
         [JsonProperty(PropertyName = "volumeId")]
         public string VolumeId { get; set; }
-
+        
         /// <value>
         /// Whether in-transit encryption for the data volume's paravirtualized attachment is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
     }
 
     public class VolumeAttachmentModelConverter : JsonConverter

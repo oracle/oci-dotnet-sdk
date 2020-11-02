@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "code")]
         public System.Nullable<int> Code { get; set; }
-
+        
         /// <value>
         /// The ICMP type.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public System.Nullable<int> Type { get; set; }
+        
     }
 }

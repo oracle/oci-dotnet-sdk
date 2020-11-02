@@ -36,7 +36,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Weight is required.")]
         [JsonProperty(PropertyName = "weight")]
         public System.Nullable<int> Weight { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should treat this server as a backup unit. If `true`, the load balancer forwards no ingress
         /// traffic to this backend server unless all other backend servers not marked as \"backup\" fail the health check policy.
@@ -51,7 +51,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Backup is required.")]
         [JsonProperty(PropertyName = "backup")]
         public System.Nullable<bool> Backup { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should drain this server. Servers marked \"drain\" receive no new
         /// incoming traffic.
@@ -64,7 +64,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Drain is required.")]
         [JsonProperty(PropertyName = "drain")]
         public System.Nullable<bool> Drain { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should treat this server as offline. Offline servers receive no incoming
         /// traffic.
@@ -77,5 +77,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Offline is required.")]
         [JsonProperty(PropertyName = "offline")]
         public System.Nullable<bool> Offline { get; set; }
+        
     }
 }

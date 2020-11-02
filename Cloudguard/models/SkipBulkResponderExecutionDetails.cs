@@ -30,5 +30,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderExecutionIds is required.")]
         [JsonProperty(PropertyName = "responderExecutionIds")]
         public System.Collections.Generic.List<string> ResponderExecutionIds { get; set; }
+        
     }
 }

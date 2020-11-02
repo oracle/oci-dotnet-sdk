@@ -30,5 +30,6 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "OcpuAllocationNumber is required.")]
         [JsonProperty(PropertyName = "ocpuAllocationNumber")]
         public System.Nullable<float> OcpuAllocationNumber { get; set; }
+        
     }
 }

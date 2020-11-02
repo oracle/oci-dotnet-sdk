@@ -26,29 +26,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// is enabled flag
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// key
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// source internal name
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
+        
     }
 }

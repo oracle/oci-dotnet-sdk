@@ -21,5 +21,6 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "encryptionPassphrase")]
         public string EncryptionPassphrase { get; set; }
+        
     }
 }

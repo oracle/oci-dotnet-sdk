@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The number of OCPU cores to be made available to the database.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database workload type. The following values are valid:
         /// <br/>
@@ -84,7 +84,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbWorkload")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
-
+        
         /// <value>
         /// The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed.
         /// 
@@ -95,26 +95,26 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DataStorageSizeInTBs is required.")]
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
-
+        
         /// <value>
         /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isFreeTier")]
         public System.Nullable<bool> IsFreeTier { get; set; }
-
+        
         /// <value>
         /// The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
         /// </value>
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Autonomous Database. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
@@ -136,34 +136,34 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// If set to `TRUE`, indicates that an Autonomous Database preview version is being provisioned, and that the preview version's terms of service have been accepted. Note that preview version software is only available for databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPreviewVersionWithServiceTermsAccepted")]
         public System.Nullable<bool> IsPreviewVersionWithServiceTermsAccepted { get; set; }
-
+        
         /// <value>
         /// Indicates if auto scaling is enabled for the Autonomous Database OCPU core count. The default value is `FALSE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
-
+        
         /// <value>
         /// True if the database is on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDedicated")]
         public System.Nullable<bool> IsDedicated { get; set; }
-
+        
         /// <value>
         /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "autonomousContainerDatabaseId")]
         public string AutonomousContainerDatabaseId { get; set; }
-
+        
         /// <value>
         /// The client IP access control list (ACL). This feature is available for databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI) only.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance. This is an array of CIDR (Classless Inter-Domain Routing) notations for a subnet or VCN OCID.
@@ -174,13 +174,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
-
+        
         /// <value>
         /// Indicates whether the Autonomous Database has Data Guard enabled.
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the resource is associated with.
         /// <br/>
@@ -196,7 +196,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -205,13 +205,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointLabel")]
         public string PrivateEndpointLabel { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -220,7 +220,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -228,13 +228,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Database version for Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the database: Use `NONE` for creating a new Autonomous Database. Use `DATABASE` for creating a new Autonomous Database by cloning an existing Autonomous Database.
         /// <br/>
@@ -255,15 +255,7 @@ namespace Oci.DatabaseService.Models
             CloneToRefreshable
         };
 
-        /// <value>
-        /// The source of the database: Use `NONE` for creating a new Autonomous Database. Use `DATABASE` for creating a new Autonomous Database by cloning an existing Autonomous Database.
-        /// <br/>
-        /// For Autonomous Databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), the following cloning options are available: Use `BACKUP_FROM_ID` for creating a new Autonomous Database from a specified backup. Use `BACKUP_FROM_TIMESTAMP` for creating a point-in-time Autonomous Database clone using backups. For more information, see [Cloning an Autonomous Database](https://docs.cloud.oracle.com/Content/Database/Tasks/adbcloning.htm).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceEnum> Source { get; set; }
+        
     }
 
     public class CreateAutonomousDatabaseBaseModelConverter : JsonConverter

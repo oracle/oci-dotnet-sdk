@@ -32,7 +32,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The number of cores associated with this notebook session shape.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "CoreCount is required.")]
         [JsonProperty(PropertyName = "coreCount")]
         public System.Nullable<int> CoreCount { get; set; }
-
+        
         /// <value>
         /// The amount of memory in GBs associated with this notebook session shape.
         /// 
@@ -54,5 +54,6 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "MemoryInGBs is required.")]
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<int> MemoryInGBs { get; set; }
+        
     }
 }

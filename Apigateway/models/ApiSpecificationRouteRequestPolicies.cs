@@ -24,14 +24,15 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "authorization")]
         public RouteAuthorizationPolicy Authorization { get; set; }
-
+        
         [JsonProperty(PropertyName = "cors")]
         public CorsPolicy Cors { get; set; }
-
+        
         [JsonProperty(PropertyName = "headerTransformations")]
         public HeaderTransformationPolicy HeaderTransformations { get; set; }
-
+        
         [JsonProperty(PropertyName = "queryParameterTransformations")]
         public QueryParameterTransformationPolicy QueryParameterTransformations { get; set; }
+        
     }
 }

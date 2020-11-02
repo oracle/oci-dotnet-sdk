@@ -31,7 +31,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
@@ -43,17 +43,18 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Time the resource was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time the resource was last modified.
         /// </value>
         [JsonProperty(PropertyName = "timeLastModified")]
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
+        
     }
 }

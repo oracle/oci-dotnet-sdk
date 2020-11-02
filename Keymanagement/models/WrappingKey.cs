@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the key.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The key's current lifecycle state.
         /// <br/>
@@ -86,7 +86,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The public key, in PEM format, to use to wrap the key material before importing it.
         /// 
@@ -97,7 +97,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "PublicKey is required.")]
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }
-
+        
         /// <value>
         /// The date and time the key was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// <br/>
@@ -109,7 +109,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the vault that contains this key.
         /// </value>
@@ -119,5 +119,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
     }
 }

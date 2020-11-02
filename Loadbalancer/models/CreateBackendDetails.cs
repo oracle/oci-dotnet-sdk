@@ -35,7 +35,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The communication port for the backend server.
         /// <br/>
@@ -47,7 +47,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The load balancing policy weight assigned to the server. Backend servers with a higher weight receive a larger
         /// proportion of incoming traffic. For example, a server weighted '3' receives 3 times the number of new connections
@@ -59,7 +59,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "weight")]
         public System.Nullable<int> Weight { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should treat this server as a backup unit. If `true`, the load balancer forwards no ingress
         /// traffic to this backend server unless all other backend servers not marked as \"backup\" fail the health check policy.
@@ -70,7 +70,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "backup")]
         public System.Nullable<bool> Backup { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should drain this server. Servers marked \"drain\" receive no new
         /// incoming traffic.
@@ -79,7 +79,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "drain")]
         public System.Nullable<bool> Drain { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer should treat this server as offline. Offline servers receive no incoming
         /// traffic.
@@ -88,5 +88,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "offline")]
         public System.Nullable<bool> Offline { get; set; }
+        
     }
 }

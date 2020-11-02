@@ -29,7 +29,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "archiveUri")]
         public string ArchiveUri { get; set; }
-
+        
         /// <value>
         /// The arguments passed to the running application as command line arguments.  An argument is
         /// either a plain text or a placeholder. Placeholders are replaced using values from the parameters
@@ -40,14 +40,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<string> Arguments { get; set; }
-
+        
         /// <value>
         /// The class for the application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "className")]
         public string ClassName { get; set; }
-
+        
         /// <value>
         /// The Spark configuration passed to the running process.
         /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
@@ -55,7 +55,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "configuration")]
         public System.Collections.Generic.Dictionary<string, string> Configuration { get; set; }
-
+        
         /// <value>
         /// The OCID of a compartment.
         /// 
@@ -66,21 +66,21 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly description.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. This name is not necessarily unique.
         /// 
@@ -91,7 +91,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The VM shape for the driver. Sets the driver cores and memory.
         /// 
@@ -102,7 +102,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DriverShape is required.")]
         [JsonProperty(PropertyName = "driverShape")]
         public string DriverShape { get; set; }
-
+        
         /// <value>
         /// The VM shape for the executors. Sets the executor cores and memory.
         /// 
@@ -113,7 +113,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "ExecutorShape is required.")]
         [JsonProperty(PropertyName = "executorShape")]
         public string ExecutorShape { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the file containing the application to execute.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
@@ -125,7 +125,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "FileUri is required.")]
         [JsonProperty(PropertyName = "fileUri")]
         public string FileUri { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -133,7 +133,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The application ID.
         /// 
@@ -144,7 +144,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The Spark language.
         /// 
@@ -156,7 +156,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ApplicationLanguage> Language { get; set; }
-
+        
         /// <value>
         /// The current state of this application.
         /// 
@@ -168,7 +168,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ApplicationLifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket where the Spark job logs are to be uploaded.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
@@ -176,7 +176,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
         public string LogsBucketUri { get; set; }
-
+        
         /// <value>
         /// The number of executor VMs requested.
         /// 
@@ -187,7 +187,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "NumExecutors is required.")]
         [JsonProperty(PropertyName = "numExecutors")]
         public System.Nullable<int> NumExecutors { get; set; }
-
+        
         /// <value>
         /// The OCID of the user who created the resource.
         /// 
@@ -198,7 +198,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "OwnerPrincipalId is required.")]
         [JsonProperty(PropertyName = "ownerPrincipalId")]
         public string OwnerPrincipalId { get; set; }
-
+        
         /// <value>
         /// The username of the user who created the resource.  If the username of the owner does not exist,
         /// `null` will be returned and the caller should refer to the ownerPrincipalId value instead.
@@ -206,7 +206,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "ownerUserName")]
         public string OwnerUserName { get; set; }
-
+        
         /// <value>
         /// An array of name/value pairs used to fill placeholders found in properties like
         /// `Application.arguments`.  The name must be a string of one or more word characters
@@ -215,14 +215,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
-
+        
         /// <value>
         /// The OCID of a private endpoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
-
+        
         /// <value>
         /// The Spark version utilized to run the application.
         /// 
@@ -233,7 +233,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "SparkVersion is required.")]
         [JsonProperty(PropertyName = "sparkVersion")]
         public string SparkVersion { get; set; }
-
+        
         /// <value>
         /// The date and time a application was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -244,7 +244,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time a application was updated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -255,7 +255,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
@@ -264,5 +264,6 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "warehouseBucketUri")]
         public string WarehouseBucketUri { get; set; }
+        
     }
 }

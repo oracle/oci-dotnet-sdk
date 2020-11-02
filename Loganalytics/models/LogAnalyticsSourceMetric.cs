@@ -26,23 +26,24 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isMetricSourceEnabled")]
         public System.Nullable<bool> IsMetricSourceEnabled { get; set; }
-
+        
         /// <value>
         /// metric name
         /// </value>
         [JsonProperty(PropertyName = "metricName")]
         public string MetricName { get; set; }
-
+        
         /// <value>
         /// source internal name
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// entity type
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
+        
     }
 }

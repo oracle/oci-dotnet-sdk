@@ -17,7 +17,7 @@ namespace Oci.UsageapiService.Requests
     {
         
         /// <value>
-        /// getUsageRequest contain query inforamtion
+        /// getUsageRequest contains query inforamtion.
         /// 
         /// </value>
         /// <remarks>

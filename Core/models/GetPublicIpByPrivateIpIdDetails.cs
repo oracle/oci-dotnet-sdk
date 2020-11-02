@@ -32,5 +32,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PrivateIpId is required.")]
         [JsonProperty(PropertyName = "privateIpId")]
         public string PrivateIpId { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-
+        
         /// <value>
         /// The name of the node
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the node
         /// </value>
@@ -76,7 +76,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// BDS instance node type
         /// </value>
@@ -106,7 +106,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "nodeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NodeTypeEnum> NodeType { get; set; }
-
+        
         /// <value>
         /// Shape of the node
         /// </value>
@@ -116,13 +116,13 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The list of block volumes attached to a given node.
         /// </value>
         [JsonProperty(PropertyName = "attachedBlockVolumes")]
         public System.Collections.Generic.List<VolumeAttachmentDetail> AttachedBlockVolumes { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet in which the node should be created
         /// </value>
@@ -132,7 +132,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// IP address of the node
         /// </value>
@@ -142,19 +142,19 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The fully-qualified hostname (FQDN) of the node
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The OCID of the image from which the node was created
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// The fingerprint of the SSH key used for node access
         /// </value>
@@ -164,7 +164,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "SshFingerprint is required.")]
         [JsonProperty(PropertyName = "sshFingerprint")]
         public string SshFingerprint { get; set; }
-
+        
         /// <value>
         /// The name of the availability domain the node is running in
         /// </value>
@@ -174,7 +174,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the fault domain the node is running in
         /// </value>
@@ -184,7 +184,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "FaultDomain is required.")]
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The time the node was created. An RFC3339 formatted datetime string
         /// </value>
@@ -194,11 +194,12 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the BDS instance was updated. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

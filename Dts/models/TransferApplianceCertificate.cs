@@ -21,5 +21,6 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "certificate")]
         public string Certificate { get; set; }
+        
     }
 }

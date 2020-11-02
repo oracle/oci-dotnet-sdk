@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isDryRun")]
         public System.Nullable<bool> IsDryRun { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "DELETE";
     }
 }

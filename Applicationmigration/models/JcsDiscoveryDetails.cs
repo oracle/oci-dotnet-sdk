@@ -31,7 +31,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "WeblogicUser is required.")]
         [JsonProperty(PropertyName = "weblogicUser")]
         public string WeblogicUser { get; set; }
-
+        
         /// <value>
         /// The JCS instance weblogic admin password
         /// </value>
@@ -41,5 +41,8 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "WeblogicPassword is required.")]
         [JsonProperty(PropertyName = "weblogicPassword")]
         public string WeblogicPassword { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "JCS";
     }
 }

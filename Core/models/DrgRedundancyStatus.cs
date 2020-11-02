@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The redundancy status of the DRG.
         /// </value>
@@ -58,5 +58,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
+        
     }
 }

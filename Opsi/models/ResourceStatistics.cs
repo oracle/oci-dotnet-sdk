@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Usage is required.")]
         [JsonProperty(PropertyName = "usage")]
         public System.Double Usage { get; set; }
-
+        
         /// <value>
         /// The maximum allocated amount of the resource metric type  (CPU, STORAGE).
         /// 
@@ -42,20 +42,20 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public System.Double Capacity { get; set; }
-
+        
         /// <value>
         /// The base allocated amount of the resource metric type  (CPU, STORAGE).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "baseCapacity")]
         public System.Double BaseCapacity { get; set; }
-
+        
         /// <value>
         /// Indicates if auto scaling feature is enabled or disabled on a database. It will be false for all metrics other than CPU.
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
-
+        
         /// <value>
         /// Resource utilization in percentage
         /// </value>
@@ -65,7 +65,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "UtilizationPercent is required.")]
         [JsonProperty(PropertyName = "utilizationPercent")]
         public System.Double UtilizationPercent { get; set; }
-
+        
         /// <value>
         /// Change in resource utilization in percentage
         /// </value>
@@ -75,5 +75,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "UsageChangePercent is required.")]
         [JsonProperty(PropertyName = "usageChangePercent")]
         public System.Double UsageChangePercent { get; set; }
+        
     }
 }

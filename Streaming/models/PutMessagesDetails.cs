@@ -30,5 +30,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Messages is required.")]
         [JsonProperty(PropertyName = "messages")]
         public System.Collections.Generic.List<PutMessagesDetailsEntry> Messages { get; set; }
+        
     }
 }

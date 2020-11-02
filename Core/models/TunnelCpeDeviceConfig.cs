@@ -34,5 +34,6 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "tunnelCpeDeviceConfigParameter")]
         public System.Collections.Generic.List<CpeDeviceConfigAnswer> TunnelCpeDeviceConfigParameter { get; set; }
+        
     }
 }

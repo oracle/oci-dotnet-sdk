@@ -41,7 +41,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The type of matching to apply to incoming URIs.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "PathMatchType is required.")]
         [JsonProperty(PropertyName = "pathMatchType")]
         public PathMatchType PathMatchType { get; set; }
-
+        
         /// <value>
         /// The name of the target backend set for requests where the incoming URI matches the specified path.
         /// <br/>
@@ -63,5 +63,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "BackendSetName is required.")]
         [JsonProperty(PropertyName = "backendSetName")]
         public string BackendSetName { get; set; }
+        
     }
 }

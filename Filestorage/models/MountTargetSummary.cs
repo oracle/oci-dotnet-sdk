@@ -30,7 +30,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the mount target.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -53,7 +53,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the associated export set. Controls what file
         /// systems will be exported using Network File System (NFS) protocol on
@@ -62,7 +62,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "exportSetId")]
         public string ExportSetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the mount target.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the mount target.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the private IP addresses associated with this mount target.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "PrivateIpIds is required.")]
         [JsonProperty(PropertyName = "privateIpIds")]
         public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the mount target is in.
         /// </value>
@@ -120,7 +120,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with this mount target.
         /// A maximum of 5 is allowed.
@@ -130,7 +130,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The date and time the mount target was created, expressed
         /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
@@ -143,7 +143,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.
@@ -152,7 +152,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -160,5 +160,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

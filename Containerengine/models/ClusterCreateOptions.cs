@@ -26,23 +26,24 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceLbSubnetIds")]
         public System.Collections.Generic.List<string> ServiceLbSubnetIds { get; set; }
-
+        
         /// <value>
         /// Network configuration for Kubernetes.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesNetworkConfig")]
         public KubernetesNetworkConfig KubernetesNetworkConfig { get; set; }
-
+        
         /// <value>
         /// Configurable cluster add-ons
         /// </value>
         [JsonProperty(PropertyName = "addOns")]
         public AddOnOptions AddOns { get; set; }
-
+        
         /// <value>
         /// Configurable cluster admission controllers
         /// </value>
         [JsonProperty(PropertyName = "admissionControllerOptions")]
         public AdmissionControllerOptions AdmissionControllerOptions { get; set; }
+        
     }
 }

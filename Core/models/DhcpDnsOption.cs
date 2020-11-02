@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customDnsServers")]
         public System.Collections.Generic.List<string> CustomDnsServers { get; set; }
-        ///
+                ///
         /// <value>
         /// * **VcnLocal:** Reserved for future use.
         /// <br/>
@@ -85,5 +85,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "serverType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ServerTypeEnum> ServerType { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "DomainNameServer";
     }
 }

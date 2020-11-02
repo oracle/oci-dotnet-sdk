@@ -26,23 +26,24 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The properties value type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Whether instances of the type are required to set this property.
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
-
+        
         /// <value>
         /// Indicates if this property value can be updated.
         /// </value>
         [JsonProperty(PropertyName = "isUpdatable")]
         public System.Nullable<bool> IsUpdatable { get; set; }
+        
     }
 }

@@ -28,5 +28,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
+        
     }
 }

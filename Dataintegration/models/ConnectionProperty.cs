@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The value for the connection name property.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

@@ -30,17 +30,18 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Name of the associated object.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// URI of the associated object within the data catalog API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
     }
 }

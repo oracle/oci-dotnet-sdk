@@ -35,16 +35,7 @@ namespace Oci.DataintegrationService.Models
             FileEntity
         };
 
-        /// <value>
-        /// The data entity type.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
     }
 
     public class DataEntityDetailsModelConverter : JsonConverter

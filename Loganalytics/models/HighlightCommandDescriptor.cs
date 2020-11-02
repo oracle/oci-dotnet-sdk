@@ -28,19 +28,22 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "color")]
         public string Color { get; set; }
-
+        
         /// <value>
         /// List of fields specified to highlight with the same color if matches found.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<string> Fields { get; set; }
-
+        
         /// <value>
         /// List of terms or phrases to highlight if found.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keywords")]
         public System.Collections.Generic.List<string> Keywords { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "HIGHLIGHT";
     }
 }

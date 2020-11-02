@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the virtual machine instance shapes that can be launched on a dedicated VM host.
         /// 
@@ -39,5 +39,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceShapeName is required.")]
         [JsonProperty(PropertyName = "instanceShapeName")]
         public string InstanceShapeName { get; set; }
+        
     }
 }

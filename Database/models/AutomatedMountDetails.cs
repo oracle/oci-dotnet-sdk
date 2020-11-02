@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "NfsServer is required.")]
         [JsonProperty(PropertyName = "nfsServer")]
         public System.Collections.Generic.List<string> NfsServer { get; set; }
-
+        
         /// <value>
         /// Specifies the directory on which to mount the file system
         /// </value>
@@ -40,5 +40,8 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "NfsServerExport is required.")]
         [JsonProperty(PropertyName = "nfsServerExport")]
         public string NfsServerExport { get; set; }
+        
+        [JsonProperty(PropertyName = "mountType")]
+        private readonly string mountType = "AUTOMATED_MOUNT";
     }
 }

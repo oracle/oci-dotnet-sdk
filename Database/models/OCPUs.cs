@@ -27,14 +27,15 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "totalCpu")]
         public System.Nullable<float> TotalCpu { get; set; }
-
+        
         /// <value>
         /// The total number of consumed OCPUs in the Autonomous Exadata Infrastructure instance.
         /// </value>
         [JsonProperty(PropertyName = "consumedCpu")]
         public System.Nullable<float> ConsumedCpu { get; set; }
-
+        
         [JsonProperty(PropertyName = "byWorkloadType")]
         public WorkloadType ByWorkloadType { get; set; }
+        
     }
 }

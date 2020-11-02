@@ -30,12 +30,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
         public Condition Condition { get; set; }
+        
     }
 }

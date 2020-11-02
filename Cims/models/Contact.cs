@@ -26,19 +26,19 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "contactName")]
         public string ContactName { get; set; }
-
+        
         /// <value>
         /// The email of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactEmail")]
         public string ContactEmail { get; set; }
-
+        
         /// <value>
         /// The phone number of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactPhone")]
         public string ContactPhone { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of contact, such as primary or alternate.
         /// </value>
@@ -62,5 +62,6 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "contactType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ContactTypeEnum> ContactType { get; set; }
+        
     }
 }

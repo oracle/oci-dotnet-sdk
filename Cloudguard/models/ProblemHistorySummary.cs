@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// problemId for which history is associated to.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ProblemId is required.")]
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
-
+        
         /// <value>
         /// Actor type who performed the operation
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "actorType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActorType> ActorType { get; set; }
-
+        
         /// <value>
         /// Resource Name who performed activity
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ActorName is required.")]
         [JsonProperty(PropertyName = "actorName")]
         public string ActorName { get; set; }
-
+        
         /// <value>
         /// Activity explanation details
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Explanation is required.")]
         [JsonProperty(PropertyName = "explanation")]
         public string Explanation { get; set; }
-
+        
         /// <value>
         /// Problem Lifecycle Detail Status
         /// </value>
@@ -82,14 +82,14 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleDetail")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
-
+        
         /// <value>
         /// Event status
         /// </value>
         [JsonProperty(PropertyName = "eventStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EventStatus> EventStatus { get; set; }
-
+        
         /// <value>
         /// Type of the Entity
         /// </value>
@@ -99,7 +99,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Impacted Resource Names in a comma-separated string.
         /// </value>
@@ -109,11 +109,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Delta is required.")]
         [JsonProperty(PropertyName = "delta")]
         public string Delta { get; set; }
-
+        
         /// <value>
         /// User Defined Comments
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
+        
     }
 }

@@ -37,5 +37,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

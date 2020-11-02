@@ -23,18 +23,19 @@ namespace Oci.CloudguardService.Models
         
         [JsonProperty(PropertyName = "condition")]
         public Condition Condition { get; set; }
-
+        
         /// <value>
         /// Configurations associated with the ResponderRule
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }
-
+        
         /// <value>
         /// Execution Mode for ResponderRule
         /// </value>
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResponderModeTypes> Mode { get; set; }
+        
     }
 }

@@ -24,17 +24,18 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The critical flag of the extension. Critical extensions must be processed, non-critical extensions can be ignored.
         /// </value>
         [JsonProperty(PropertyName = "isCritical")]
         public System.Nullable<bool> IsCritical { get; set; }
-
+        
         /// <value>
         /// The certificate extension value.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequest.OperationTypeEnum> OperationType { get; set; }
-
+        
         /// <value>
         /// The status of the specified work request.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequest.StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) identifying this work request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Unique identifier ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)) of the compartment that contains the work request.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Percentage of the work request completed.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time when the work request was created.
         /// Format is defined by RFC3339.
@@ -94,7 +94,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time when the work request transitioned from ACCEPTED to IN_PROGRESS.
         /// Format is defined by RFC3339.
@@ -102,7 +102,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time when the work request reached a terminal state (FAILED or SUCCEEDED).
         /// Format is defined by RFC3339.
@@ -110,5 +110,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

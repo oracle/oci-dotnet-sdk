@@ -30,7 +30,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The identifier of the compartment that contains the work request.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The identifier of the Digital Assistant instance to which this work request pertains.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "OdaInstanceId is required.")]
         [JsonProperty(PropertyName = "odaInstanceId")]
         public string OdaInstanceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of the operation that's associated with the work request.
         /// </value>
@@ -92,7 +92,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "requestAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RequestActionEnum> RequestAction { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of current work request.
         /// </value>
@@ -122,7 +122,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// A short message that provides more detail about the current status.
         /// For example, if a work request fails, then this may include information
@@ -131,7 +131,7 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "statusMessage")]
         public string StatusMessage { get; set; }
-
+        
         /// <value>
         /// The resources that this work request affects.
         /// </value>
@@ -141,7 +141,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// </value>
@@ -151,7 +151,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time that the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -163,7 +163,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time that the request was started, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), CKQ
         /// section 14.29.
@@ -171,12 +171,13 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time that the object finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339). CKQ
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

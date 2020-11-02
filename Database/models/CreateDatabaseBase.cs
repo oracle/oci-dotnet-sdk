@@ -34,13 +34,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbHomeId is required.")]
         [JsonProperty(PropertyName = "dbHomeId")]
         public string DbHomeId { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Database version. To get a list of supported versions, use the {@link #listDbVersions(ListDbVersionsRequest) listDbVersions} operation.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the database:
         /// Use `NONE` for creating a new database.
@@ -56,20 +56,7 @@ namespace Oci.DatabaseService.Models
             DbBackup
         };
 
-        /// <value>
-        /// The source of the database:
-        /// Use `NONE` for creating a new database.
-        /// Use `DB_BACKUP` for creating a new database by restoring from a backup.
-        /// The default is `NONE`.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Source is required.")]
-        [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceEnum> Source { get; set; }
+        
     }
 
     public class CreateDatabaseBaseModelConverter : JsonConverter

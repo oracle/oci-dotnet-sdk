@@ -26,5 +26,8 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "sortClauses")]
         public System.Collections.Generic.List<SortClause> SortClauses { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SORT";
     }
 }

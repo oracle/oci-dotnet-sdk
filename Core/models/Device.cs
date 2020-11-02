@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The flag denoting whether device is available.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IsAvailable is required.")]
         [JsonProperty(PropertyName = "isAvailable")]
         public System.Nullable<bool> IsAvailable { get; set; }
+        
     }
 }

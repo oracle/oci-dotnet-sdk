@@ -31,7 +31,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "nodeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Node.NodeTypeEnum> NodeType { get; set; }
-
+        
         /// <value>
         /// Shape of the node
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The size of block volume in GB that needs to be attached to a given node.
         /// All the necessary details needed for attachment are managed by service itself.
@@ -53,7 +53,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "BlockVolumeSizeInGBs is required.")]
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet in which the node should be created
         /// </value>
@@ -63,5 +63,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
     }
 }

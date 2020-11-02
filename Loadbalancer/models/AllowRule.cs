@@ -38,7 +38,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Conditions is required.")]
         [JsonProperty(PropertyName = "conditions")]
         public System.Collections.Generic.List<RuleCondition> Conditions { get; set; }
-
+        
         /// <value>
         /// A brief description of the access control rule. Avoid entering confidential information.
         /// <br/>
@@ -46,5 +46,8 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "ALLOW";
     }
 }

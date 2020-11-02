@@ -25,5 +25,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "securityRuleIds")]
         public System.Collections.Generic.List<string> SecurityRuleIds { get; set; }
+        
     }
 }

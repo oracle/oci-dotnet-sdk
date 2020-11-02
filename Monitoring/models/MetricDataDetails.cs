@@ -36,7 +36,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group to assign to the metric. A resource group is a custom string that can be used as a filter. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -46,7 +46,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to use for metrics.
         /// 
@@ -57,7 +57,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the metric.
         /// <br/>
@@ -72,7 +72,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Qualifiers provided in a metric definition. Available dimensions vary by metric namespace.
         /// Each dimension takes the form of a key-value pair. 
@@ -88,7 +88,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Dimensions is required.")]
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
-
+        
         /// <value>
         /// Properties describing metrics. These are not part of the unique fields identifying the metric.
         /// Each metadata item takes the form of a key-value pair. The character limit for a metadata key is 256. The character limit for a metadata value is 256.
@@ -97,7 +97,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-
+        
         /// <value>
         /// A list of metric values with timestamps. At least one data point is required per call. 
         /// 
@@ -108,5 +108,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Datapoints is required.")]
         [JsonProperty(PropertyName = "datapoints")]
         public System.Collections.Generic.List<Datapoint> Datapoints { get; set; }
+        
     }
 }

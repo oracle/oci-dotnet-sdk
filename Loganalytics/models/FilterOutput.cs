@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "DisplayQueryString is required.")]
         [JsonProperty(PropertyName = "displayQueryString")]
         public string DisplayQueryString { get; set; }
-
+        
         /// <value>
         /// Modified localization agnostic query string.
         /// 
@@ -43,12 +43,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalQueryString is required.")]
         [JsonProperty(PropertyName = "internalQueryString")]
         public string InternalQueryString { get; set; }
-
+        
         /// <value>
         /// Operation response time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "responseTimeInMs")]
         public System.Nullable<long> ResponseTimeInMs { get; set; }
+        
     }
 }

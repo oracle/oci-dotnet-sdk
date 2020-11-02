@@ -29,13 +29,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "patchId")]
         public string PatchId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database software image.
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
-        ///
+                ///
         /// <value>
         /// The action to perform on the patch.
         /// </value>
@@ -53,5 +53,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
+        
     }
 }

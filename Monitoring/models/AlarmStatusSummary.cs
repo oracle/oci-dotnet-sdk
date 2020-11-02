@@ -41,7 +41,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The configured name of the alarm.
         /// <br/>
@@ -53,7 +53,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The configured severity of the alarm.
         /// <br/>
@@ -83,7 +83,7 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
-
+        
         /// <value>
         /// Timestamp for the transition of the alarm state. For example, the time when the alarm transitioned from OK to Firing.
         /// <br/>
@@ -95,7 +95,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "TimestampTriggered is required.")]
         [JsonProperty(PropertyName = "timestampTriggered")]
         public System.Nullable<System.DateTime> TimestampTriggered { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of this alarm.
         /// <br/>
@@ -123,12 +123,13 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The configuration details for suppressing an alarm.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "suppression")]
         public Suppression Suppression { get; set; }
+        
     }
 }

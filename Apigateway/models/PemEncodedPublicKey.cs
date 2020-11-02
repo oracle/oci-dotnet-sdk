@@ -30,5 +30,8 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
+        
+        [JsonProperty(PropertyName = "format")]
+        private readonly string format = "PEM";
     }
 }

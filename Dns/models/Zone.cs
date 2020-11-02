@@ -29,7 +29,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of the zone. Must be either `PRIMARY` or `SECONDARY`.
         /// 
@@ -49,13 +49,13 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "zoneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ZoneTypeEnum> ZoneType { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the zone.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -65,7 +65,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -75,7 +75,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// External master servers for the zone. `externalMasters` becomes a
         /// required parameter when the `zoneType` value is `SECONDARY`.
@@ -83,19 +83,19 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "externalMasters")]
         public System.Collections.Generic.List<ExternalMaster> ExternalMasters { get; set; }
-
+        
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
-
+        
         /// <value>
         /// The OCID of the zone.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The date and time the resource was created in \"YYYY-MM-ddThh:mmZ\" format
         /// with a Z offset, as defined by RFC 3339.
@@ -104,7 +104,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Version is the never-repeating, totally-orderable, version of the
         /// zone, from which the serial field of the zone's SOA record is
@@ -113,14 +113,14 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// The current serial of the zone. As seen in the zone's SOA record.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serial")]
         public System.Nullable<long> Serial { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the zone resource.
         /// </value>
@@ -144,11 +144,12 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The authoritative nameservers for the zone.
         /// </value>
         [JsonProperty(PropertyName = "nameservers")]
         public System.Collections.Generic.List<Nameserver> Nameservers { get; set; }
+        
     }
 }

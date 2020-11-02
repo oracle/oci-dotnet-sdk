@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "EndTimestamp is required.")]
         [JsonProperty(PropertyName = "endTimestamp")]
         public System.Nullable<System.DateTime> EndTimestamp { get; set; }
-
+        
         /// <value>
         /// Total amount used of the resource metric type (CPU, STORAGE).
         /// 
@@ -43,7 +43,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Usage is required.")]
         [JsonProperty(PropertyName = "usage")]
         public System.Double Usage { get; set; }
-
+        
         /// <value>
         /// Upper uncertainty bound of the current usage value.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "HighValue is required.")]
         [JsonProperty(PropertyName = "highValue")]
         public System.Double HighValue { get; set; }
-
+        
         /// <value>
         /// Lower uncertainty bound of the current usage value.
         /// </value>
@@ -63,5 +63,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "LowValue is required.")]
         [JsonProperty(PropertyName = "lowValue")]
         public System.Double LowValue { get; set; }
+        
     }
 }

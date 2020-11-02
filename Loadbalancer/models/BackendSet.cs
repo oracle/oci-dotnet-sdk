@@ -44,7 +44,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The load balancer policy for the backend set. To get a list of available policies, use the
         /// {@link #listPolicies(ListPoliciesRequest) listPolicies} operation.
@@ -57,28 +57,29 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Policy is required.")]
         [JsonProperty(PropertyName = "policy")]
         public string Policy { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Backends is required.")]
         [JsonProperty(PropertyName = "backends")]
         public System.Collections.Generic.List<Backend> Backends { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "HealthChecker is required.")]
         [JsonProperty(PropertyName = "healthChecker")]
         public HealthChecker HealthChecker { get; set; }
-
+        
         [JsonProperty(PropertyName = "sslConfiguration")]
         public SSLConfiguration SslConfiguration { get; set; }
-
+        
         [JsonProperty(PropertyName = "sessionPersistenceConfiguration")]
         public SessionPersistenceConfigurationDetails SessionPersistenceConfiguration { get; set; }
-
+        
         [JsonProperty(PropertyName = "lbCookieSessionPersistenceConfiguration")]
         public LBCookieSessionPersistenceConfigurationDetails LbCookieSessionPersistenceConfiguration { get; set; }
+        
     }
 }

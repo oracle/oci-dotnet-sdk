@@ -22,16 +22,7 @@ namespace Oci.ApplicationmigrationService.Models
     public class SourceDetails 
     {
         
-        /// <value>
-        /// The type of source environment
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceTypes> Type { get; set; }
+        
     }
 
     public class SourceDetailsModelConverter : JsonConverter

@@ -26,17 +26,18 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "cidr")]
         public string Cidr { get; set; }
-
+        
         /// <value>
         /// The date and time the last change was made to the indicated edge node subnet, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }
-
+        
         /// <value>
         /// The name of the region containing the indicated subnet.
         /// </value>
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
+        
     }
 }

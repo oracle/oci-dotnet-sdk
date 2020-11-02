@@ -32,13 +32,13 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the WAAS policy. The name can be changed and does not need to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The web application domain that the WAAS policy protects.
         /// </value>
@@ -48,32 +48,32 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Domain is required.")]
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// An array of additional domains for the specified web application.
         /// </value>
         [JsonProperty(PropertyName = "additionalDomains")]
         public System.Collections.Generic.List<string> AdditionalDomains { get; set; }
-
+        
         /// <value>
         /// A map of host to origin for the web application. The key should be a customer friendly name for the host, ex. primary, secondary, etc.
         /// </value>
         [JsonProperty(PropertyName = "origins")]
         public System.Collections.Generic.Dictionary<string, Origin> Origins { get; set; }
-
+        
         /// <value>
         /// The map of origin groups and their keys used to associate origins to the `wafConfig`. Origin groups allow you to apply weights to groups of origins for load balancing purposes. Origins with higher weights will receive larger proportions of client requests.
         /// To add additional origins to your WAAS policy, update the `origins` field of a `UpdateWaasPolicy` request.
         /// </value>
         [JsonProperty(PropertyName = "originGroups")]
         public System.Collections.Generic.Dictionary<string, OriginGroup> OriginGroups { get; set; }
-
+        
         [JsonProperty(PropertyName = "policyConfig")]
         public PolicyConfig PolicyConfig { get; set; }
-
+        
         [JsonProperty(PropertyName = "wafConfig")]
         public WafConfigDetails WafConfig { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -82,7 +82,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -91,5 +91,6 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

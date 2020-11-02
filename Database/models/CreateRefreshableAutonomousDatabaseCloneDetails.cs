@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SourceId is required.")]
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
         /// </value>
@@ -49,5 +49,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "refreshableMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "CLONE_TO_REFRESHABLE";
     }
 }

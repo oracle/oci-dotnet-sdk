@@ -40,5 +40,6 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "ads")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AdsEnum> Ads { get; set; }
+        
     }
 }

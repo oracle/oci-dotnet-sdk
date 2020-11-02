@@ -27,7 +27,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// List of file paths against which the expression can be tried, as a check. This documents, for reference
         /// purposes, some example objects a pattern is meant to work with.
@@ -37,7 +37,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFilePathList")]
         public System.Collections.Generic.List<string> CheckFilePathList { get; set; }
-
+        
         /// <value>
         /// The maximum number of UNMATCHED files, in checkFilePathList, above which the check fails.
         /// Optional, if checkFilePathList is provided.
@@ -47,5 +47,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFailureLimit")]
         public System.Nullable<int> CheckFailureLimit { get; set; }
+        
     }
 }

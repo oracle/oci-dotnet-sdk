@@ -26,5 +26,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "caseCondition")]
         public string CaseCondition { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Name of the BDS instance
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the BDS instance
         /// </value>
@@ -88,7 +88,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// Version of the Hadoop distribution
         /// </value>
@@ -106,7 +106,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "clusterVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ClusterVersionEnum> ClusterVersion { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether or not the cluster is HA
         /// </value>
@@ -116,7 +116,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IsHighAvailability is required.")]
         [JsonProperty(PropertyName = "isHighAvailability")]
         public System.Nullable<bool> IsHighAvailability { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether or not the cluster should be setup as secure.
         /// </value>
@@ -126,7 +126,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IsSecure is required.")]
         [JsonProperty(PropertyName = "isSecure")]
         public System.Nullable<bool> IsSecure { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether we configure Cloud SQL or not
         /// </value>
@@ -136,19 +136,19 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IsCloudSqlConfigured is required.")]
         [JsonProperty(PropertyName = "isCloudSqlConfigured")]
         public System.Nullable<bool> IsCloudSqlConfigured { get; set; }
-
+        
         /// <value>
         /// Additional configuration of customer's network.
         /// </value>
         [JsonProperty(PropertyName = "networkConfig")]
         public NetworkConfig NetworkConfig { get; set; }
-
+        
         /// <value>
         /// Specific info about a Hadoop cluster
         /// </value>
         [JsonProperty(PropertyName = "clusterDetails")]
         public ClusterDetails ClusterDetails { get; set; }
-
+        
         /// <value>
         /// The list of nodes in the BDS instance
         /// </value>
@@ -158,31 +158,31 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Nodes is required.")]
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<Node> Nodes { get; set; }
-
+        
         /// <value>
         /// The information about added Cloud SQL capability
         /// </value>
         [JsonProperty(PropertyName = "cloudSqlDetails")]
         public CloudSqlDetails CloudSqlDetails { get; set; }
-
+        
         /// <value>
         /// The user who created the BDS instance.
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
-
+        
         /// <value>
         /// The time the BDS instance was created. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the BDS instance was updated. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Number of nodes that forming the cluster
         /// </value>
@@ -192,19 +192,20 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "NumberOfNodes is required.")]
         [JsonProperty(PropertyName = "numberOfNodes")]
         public System.Nullable<int> NumberOfNodes { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Stream is required.")]
         [JsonProperty(PropertyName = "stream")]
         public string Stream { get; set; }
-
+        
         /// <value>
         /// The ID of the partition where the message is stored.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Partition is required.")]
         [JsonProperty(PropertyName = "partition")]
         public string Partition { get; set; }
-
+        
         /// <value>
         /// The key associated with the message, expressed as a byte array.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public System.Byte[] Key { get; set; }
-
+        
         /// <value>
         /// The value associated with the message, expressed as a byte array.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Byte[] Value { get; set; }
-
+        
         /// <value>
         /// The offset of the message, which uniquely identifies it within the partition.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Offset is required.")]
         [JsonProperty(PropertyName = "offset")]
         public System.Nullable<long> Offset { get; set; }
-
+        
         /// <value>
         /// The timestamp indicating when the server appended the message to the stream.
         /// </value>
@@ -80,5 +80,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

@@ -33,7 +33,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A list of new values.  Each value can be a constant or may include one or more expressions enclosed within
         /// ${} delimiters.
@@ -45,7 +45,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Values is required.")]
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
-        ///
+                ///
         /// <value>
         /// If a header with the same name already exists in the request, OVERWRITE will overwrite the value,
         /// APPEND will append to the existing value, or SKIP will keep the existing value.
@@ -69,5 +69,6 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "ifExists")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IfExistsEnum> IfExists { get; set; }
+        
     }
 }

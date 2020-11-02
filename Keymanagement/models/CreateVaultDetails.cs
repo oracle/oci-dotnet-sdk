@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -36,7 +36,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the vault. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -48,7 +48,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -56,7 +56,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of vault to create. Each type of vault stores the key with different degrees of isolation and has different options and pricing.
         /// 
@@ -80,5 +80,6 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "vaultType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VaultTypeEnum> VaultType { get; set; }
+        
     }
 }

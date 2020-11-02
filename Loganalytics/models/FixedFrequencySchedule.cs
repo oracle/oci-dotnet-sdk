@@ -34,7 +34,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "RecurringInterval is required.")]
         [JsonProperty(PropertyName = "recurringInterval")]
         public string RecurringInterval { get; set; }
-
+        
         /// <value>
         /// Number of times (0-based) to execute until auto-stop.
         /// Default value -1 will execute indefinitely.
@@ -43,5 +43,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "repeatCount")]
         public System.Nullable<int> RepeatCount { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "FIXED_FREQUENCY";
     }
 }

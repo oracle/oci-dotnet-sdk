@@ -27,5 +27,8 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Uri is required.")]
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
+        [JsonProperty(PropertyName = "destination")]
+        private readonly string destination = "PRE_AUTHENTICATED_REQUEST_URI";
     }
 }

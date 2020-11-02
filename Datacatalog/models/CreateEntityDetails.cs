@@ -32,13 +32,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of a data entity.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Last modified timestamp of the object in the external system.
         /// </value>
@@ -48,37 +48,37 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "TimeExternal is required.")]
         [JsonProperty(PropertyName = "timeExternal")]
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
-
+        
         /// <value>
         /// Property to indicate if the object is a physical materialized object or virtual. For example, View.
         /// </value>
         [JsonProperty(PropertyName = "isLogical")]
         public System.Nullable<bool> IsLogical { get; set; }
-
+        
         /// <value>
         /// Property to indicate if the object is a sub object of a parent physical object.
         /// </value>
         [JsonProperty(PropertyName = "isPartition")]
         public System.Nullable<bool> IsPartition { get; set; }
-
+        
         /// <value>
         /// Key of the associated folder.
         /// </value>
         [JsonProperty(PropertyName = "folderKey")]
         public string FolderKey { get; set; }
-
+        
         /// <value>
         /// Key of the associated pattern if this is a logical entity.
         /// </value>
         [JsonProperty(PropertyName = "patternKey")]
         public string PatternKey { get; set; }
-
+        
         /// <value>
         /// The expression realized after resolving qualifiers . Used in deriving this logical entity
         /// </value>
         [JsonProperty(PropertyName = "realizedExpression")]
         public string RealizedExpression { get; set; }
-
+        
         /// <value>
         /// Status of the object as updated by the harvest process. When an entity object is created , it's harvest status
         /// will indicate if the entity's metadata has been fully harvested or not. The harvest process can perform
@@ -89,19 +89,19 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "harvestStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
-
+        
         /// <value>
         /// Key of the last harvest process to update this object.
         /// </value>
         [JsonProperty(PropertyName = "lastJobKey")]
         public string LastJobKey { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the entity type. Each entity type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -114,5 +114,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

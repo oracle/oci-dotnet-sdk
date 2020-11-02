@@ -24,5 +24,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "deviceLabels")]
         public System.Collections.Generic.List<string> DeviceLabels { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The node IP address.
         /// </value>
@@ -40,17 +40,18 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Ip is required.")]
         [JsonProperty(PropertyName = "ip")]
         public string Ip { get; set; }
-
+        
         /// <value>
         /// The node virtual IP (VIP) host name.
         /// </value>
         [JsonProperty(PropertyName = "vipHostname")]
         public string VipHostname { get; set; }
-
+        
         /// <value>
         /// The node virtual IP (VIP) address.
         /// </value>
         [JsonProperty(PropertyName = "vip")]
         public string Vip { get; set; }
+        
     }
 }

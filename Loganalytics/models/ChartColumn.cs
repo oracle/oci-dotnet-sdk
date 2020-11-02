@@ -28,26 +28,29 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "intervalGap")]
         public string IntervalGap { get; set; }
-
+        
         /// <value>
         /// List of timestamps making up the timeseries datapoints.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "intervals")]
         public System.Collections.Generic.List<long> Intervals { get; set; }
-
+        
         /// <value>
         /// Total matching count for each timeseries datapoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalIntervalCounts")]
         public System.Collections.Generic.List<long> TotalIntervalCounts { get; set; }
-
+        
         /// <value>
         /// List of series data sets representing various link command results.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "series")]
         public System.Collections.Generic.List<ChartDataColumn> Series { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "CHART_COLUMN";
     }
 }

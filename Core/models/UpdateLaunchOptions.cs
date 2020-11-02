@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bootVolumeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BootVolumeTypeEnum> BootVolumeType { get; set; }
-        ///
+                ///
         /// <value>
         /// Emulation type for the physical network interface card (NIC).
         /// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
@@ -115,7 +115,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "networkType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
-
+        
         /// <value>
         /// Whether to enable in-transit encryption for the boot volume's paravirtualized attachment.
         /// <br/>
@@ -131,5 +131,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
     }
 }

@@ -47,5 +47,8 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "executionPlanStrategy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ExecutionPlanStrategyEnum> ExecutionPlanStrategy { get; set; }
+        
+        [JsonProperty(PropertyName = "operation")]
+        private readonly string operation = "DESTROY";
     }
 }

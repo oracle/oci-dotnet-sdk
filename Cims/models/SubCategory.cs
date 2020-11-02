@@ -26,11 +26,12 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "subCategoryKey")]
         public string SubCategoryKey { get; set; }
-
+        
         /// <value>
         /// The name of the subcategory. For example, `Backup Count` or `Custom Image Count`.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

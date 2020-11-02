@@ -23,11 +23,12 @@ namespace Oci.DatacatalogService.Models
         
         [JsonProperty(PropertyName = "connectionDetail")]
         public CreateConnectionDetails ConnectionDetail { get; set; }
-
+        
         /// <value>
         /// The information used to validate the connection.
         /// </value>
         [JsonProperty(PropertyName = "connectionPayload")]
         public System.Byte[] ConnectionPayload { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "PlanHash is required.")]
         [JsonProperty(PropertyName = "planHash")]
         public System.Nullable<long> PlanHash { get; set; }
-
+        
         /// <value>
         /// Plan XML Content
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "PlanContent is required.")]
         [JsonProperty(PropertyName = "planContent")]
         public string PlanContent { get; set; }
+        
     }
 }

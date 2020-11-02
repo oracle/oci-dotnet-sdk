@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "coordinateX")]
         public System.Nullable<decimal> CoordinateX { get; set; }
-
+        
         /// <value>
         /// The Y coordinate of the object.
         /// </value>
         [JsonProperty(PropertyName = "coordinateY")]
         public System.Nullable<decimal> CoordinateY { get; set; }
+        
     }
 }

@@ -37,22 +37,13 @@ namespace Oci.DataintegrationService.Models
             RuleBasedFieldMap
         };
 
-        /// <value>
-        /// The model type for the field map.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 
     public class FieldMapModelConverter : JsonConverter

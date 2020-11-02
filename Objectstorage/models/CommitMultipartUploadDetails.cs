@@ -33,7 +33,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "PartsToCommit is required.")]
         [JsonProperty(PropertyName = "partsToCommit")]
         public System.Collections.Generic.List<CommitMultipartUploadPartDetails> PartsToCommit { get; set; }
-
+        
         /// <value>
         /// The part numbers for the parts to be excluded from the completed object.
         /// Each part created for this upload must be in either partsToExclude or partsToCommit, but cannot be in both.
@@ -41,5 +41,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "partsToExclude")]
         public System.Collections.Generic.List<int> PartsToExclude { get; set; }
+        
     }
 }

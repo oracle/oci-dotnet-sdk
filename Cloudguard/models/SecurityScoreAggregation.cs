@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DimensionsMap is required.")]
         [JsonProperty(PropertyName = "dimensionsMap")]
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
-
+        
         /// <value>
         /// The security rating with given dimension/s
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "securityRating")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SecurityRating> SecurityRating { get; set; }
-
+        
         /// <value>
         /// The security score with given dimension/s
         /// </value>
@@ -51,5 +51,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "SecurityScore is required.")]
         [JsonProperty(PropertyName = "securityScore")]
         public System.Nullable<int> SecurityScore { get; set; }
+        
     }
 }

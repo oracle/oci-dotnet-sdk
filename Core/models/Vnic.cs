@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the VNIC.
         /// </value>
@@ -66,7 +66,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique.
         /// Avoid entering confidential information.
@@ -83,7 +83,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -92,7 +92,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The hostname for the VNIC's primary private IP. Used for DNS. The value is the hostname
         /// portion of the primary private IP's fully qualified domain name (FQDN)
@@ -108,7 +108,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// The OCID of the VNIC.
         /// </value>
@@ -118,7 +118,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Whether the VNIC is the primary VNIC (the VNIC that is automatically created
         /// and attached during instance launch).
@@ -126,7 +126,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the VNIC.
         /// </value>
@@ -152,7 +152,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The MAC address of the VNIC.
         /// <br/>
@@ -164,7 +164,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "macAddress")]
         public string MacAddress { get; set; }
-
+        
         /// <value>
         /// A list of the OCIDs of the network security groups that the VNIC belongs to.
         /// <br/>
@@ -178,7 +178,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
         /// belonging to a subnet), the `vlanId` is the OCID of the VLAN the VNIC is in. See
@@ -187,7 +187,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
-
+        
         /// <value>
         /// The private IP address of the primary `privateIp` object on the VNIC.
         /// The address is within the CIDR of the VNIC's subnet.
@@ -196,14 +196,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
-
+        
         /// <value>
         /// The public IP address of the VNIC, if one is assigned.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicIp")]
         public string PublicIp { get; set; }
-
+        
         /// <value>
         /// Whether the source/destination check is disabled on the VNIC.
         /// Defaults to `false`, which means the check is performed. For information
@@ -219,13 +219,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]
         public System.Nullable<bool> SkipSourceDestCheck { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the VNIC is in.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The date and time the VNIC was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -237,5 +237,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

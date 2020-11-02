@@ -32,7 +32,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the topic.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "TopicId is required.")]
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment for the topic.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// The lifecycle state of the topic.
         /// 
@@ -80,13 +80,13 @@ namespace Oci.OnsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The description of the topic.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The time the topic was created.
         /// </value>
@@ -96,14 +96,14 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// For optimistic concurrency control. See `if-match`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -111,7 +111,7 @@ namespace Oci.OnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -119,7 +119,7 @@ namespace Oci.OnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The endpoint for managing subscriptions or publishing messages to the topic.
         /// 
@@ -130,5 +130,6 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "ApiEndpoint is required.")]
         [JsonProperty(PropertyName = "apiEndpoint")]
         public string ApiEndpoint { get; set; }
+        
     }
 }

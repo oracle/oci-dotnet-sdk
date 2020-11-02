@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Unique identifier for the Windows update. NOTE - This is not an OCID, 
         /// but is a unique identifier assigned by Microsoft.
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The purpose of this update.
         /// </value>
@@ -53,5 +53,6 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "updateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
+        
     }
 }

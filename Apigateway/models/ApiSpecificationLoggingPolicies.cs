@@ -24,8 +24,9 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "accessLog")]
         public AccessLogPolicy AccessLog { get; set; }
-
+        
         [JsonProperty(PropertyName = "executionLog")]
         public ExecutionLogPolicy ExecutionLog { get; set; }
+        
     }
 }

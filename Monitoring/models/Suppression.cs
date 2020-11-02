@@ -37,7 +37,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The start date and time for the suppression to take place, inclusive. Format defined by RFC3339.
         /// <br/>
@@ -49,7 +49,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "TimeSuppressFrom is required.")]
         [JsonProperty(PropertyName = "timeSuppressFrom")]
         public System.Nullable<System.DateTime> TimeSuppressFrom { get; set; }
-
+        
         /// <value>
         /// The end date and time for the suppression to take place, inclusive. Format defined by RFC3339.
         /// <br/>
@@ -61,5 +61,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "TimeSuppressUntil is required.")]
         [JsonProperty(PropertyName = "timeSuppressUntil")]
         public System.Nullable<System.DateTime> TimeSuppressUntil { get; set; }
+        
     }
 }

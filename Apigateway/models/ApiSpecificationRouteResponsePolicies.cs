@@ -24,5 +24,6 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "headerTransformations")]
         public HeaderTransformationPolicy HeaderTransformations { get; set; }
+        
     }
 }

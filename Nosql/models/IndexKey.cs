@@ -30,7 +30,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "ColumnName is required.")]
         [JsonProperty(PropertyName = "columnName")]
         public string ColumnName { get; set; }
-
+        
         /// <value>
         /// If the specified column is of type JSON, jsonPath contains
         /// a dotted path indicating the field within the JSON object
@@ -39,7 +39,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "jsonPath")]
         public string JsonPath { get; set; }
-
+        
         /// <value>
         /// If the specified column is of type JSON, jsonFieldType contains
         /// the type of the field indicated by jsonPath.
@@ -47,5 +47,6 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "jsonFieldType")]
         public string JsonFieldType { get; set; }
+        
     }
 }

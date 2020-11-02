@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The tag use for filtering.
+    /// The tag used for filtering.
     /// </summary>
     public class Tag 
     {
@@ -26,17 +26,18 @@ namespace Oci.UsageapiService.Models
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
-        /// The key of the tag.
+        /// The tag key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
-        /// The value of the tag.
+        /// The tag value.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

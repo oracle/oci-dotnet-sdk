@@ -26,5 +26,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersions")]
         public System.Collections.Generic.List<string> KubernetesVersions { get; set; }
+        
     }
 }

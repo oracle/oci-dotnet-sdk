@@ -28,67 +28,67 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the attribute.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Data type of the attribute as defined in the external system.
         /// </value>
         [JsonProperty(PropertyName = "externalDataType")]
         public string ExternalDataType { get; set; }
-
+        
         /// <value>
         /// Property that identifies if this attribute can be used as a watermark to extract incremental data.
         /// </value>
         [JsonProperty(PropertyName = "isIncrementalData")]
         public System.Nullable<bool> IsIncrementalData { get; set; }
-
+        
         /// <value>
         /// Property that identifies if this attribute can be assigned nullable values.
         /// </value>
         [JsonProperty(PropertyName = "isNullable")]
         public System.Nullable<bool> IsNullable { get; set; }
-
+        
         /// <value>
         /// Max allowed length of the attribute value.
         /// </value>
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<long> Length { get; set; }
-
+        
         /// <value>
         /// Position of the attribute in the record definition.
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
-
+        
         /// <value>
         /// Precision of the attribute value usually applies to float data type.
         /// </value>
         [JsonProperty(PropertyName = "precision")]
         public System.Nullable<int> Precision { get; set; }
-
+        
         /// <value>
         /// Scale of the attribute value usually applies to float data type.
         /// </value>
         [JsonProperty(PropertyName = "scale")]
         public System.Nullable<int> Scale { get; set; }
-
+        
         /// <value>
         /// Last modified timestamp of this object in the external system.
         /// </value>
         [JsonProperty(PropertyName = "timeExternal")]
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
-
+        
         /// <value>
         /// The minimum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
         /// </value>
         [JsonProperty(PropertyName = "minCollectionCount")]
         public System.Nullable<int> MinCollectionCount { get; set; }
-
+        
         /// <value>
         /// The maximum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
         /// For type specifications in systems that specify only \"capacity\" without upper or lower bound , this property can also be used to just mean \"capacity\".
@@ -97,25 +97,25 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxCollectionCount")]
         public System.Nullable<int> MaxCollectionCount { get; set; }
-
+        
         /// <value>
         /// External entity key that represents the datatype of this attribute , applicable if this attribute is a complex type.
         /// </value>
         [JsonProperty(PropertyName = "externalDatatypeEntityKey")]
         public string ExternalDatatypeEntityKey { get; set; }
-
+        
         /// <value>
         /// External attribute key that represents the parent attribute  of this attribute , applicable if the parent attribute is of complex type.
         /// </value>
         [JsonProperty(PropertyName = "externalParentAttributeKey")]
         public string ExternalParentAttributeKey { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the attribute type. Each attribute type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -128,5 +128,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

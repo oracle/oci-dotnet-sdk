@@ -29,5 +29,6 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "issueTypeKey")]
         public string IssueTypeKey { get; set; }
+        
     }
 }

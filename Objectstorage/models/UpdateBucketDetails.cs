@@ -29,13 +29,13 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// The compartmentId for the compartment to move the bucket to.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the bucket. Valid characters are uppercase or lowercase letters, numbers, hyphens, underscores, and periods.
         /// Bucket names must be unique within an Object Storage namespace. Avoid entering confidential information.
@@ -43,13 +43,13 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Arbitrary string, up to 4KB, of keys and values for user-defined metadata.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of public access enabled on this bucket. A bucket is set to `NoPublicAccess` by default, which only allows an
         /// authenticated caller to access the bucket and its contents. When `ObjectRead` is enabled on the bucket, public access
@@ -77,7 +77,7 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "publicAccessType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PublicAccessTypeEnum> PublicAccessType { get; set; }
-
+        
         /// <value>
         /// Whether or not events are emitted for object state changes in this bucket. By default, `objectEventsEnabled` is
         /// set to `false`. Set `objectEventsEnabled` to `true` to emit events for object state changes. For more information
@@ -86,7 +86,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "objectEventsEnabled")]
         public System.Nullable<bool> ObjectEventsEnabled { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -94,7 +94,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -102,7 +102,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Key Management master encryption key to associate
         /// with the specified bucket. If this value is empty, the Update operation will remove the associated key, if
@@ -112,7 +112,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-        ///
+                ///
         /// <value>
         /// The versioning status on the bucket. If in state `Enabled`, multiple versions of the same object can be kept in the bucket.
         /// When the object is overwritten or deleted, previous versions will still be available. When versioning is `Suspended`, the previous versions will still remain but new versions will no longer be created when overwitten or deleted.
@@ -136,5 +136,6 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "versioning")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VersioningEnum> Versioning { get; set; }
+        
     }
 }

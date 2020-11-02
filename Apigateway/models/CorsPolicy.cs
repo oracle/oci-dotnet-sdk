@@ -35,7 +35,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "AllowedOrigins is required.")]
         [JsonProperty(PropertyName = "allowedOrigins")]
         public System.Collections.Generic.List<string> AllowedOrigins { get; set; }
-
+        
         /// <value>
         /// The list of allowed HTTP methods that will be returned for the preflight OPTIONS request in the
         /// Access-Control-Allow-Methods header. '*' will allow all methods.
@@ -43,7 +43,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "allowedMethods")]
         public System.Collections.Generic.List<string> AllowedMethods { get; set; }
-
+        
         /// <value>
         /// The list of headers that will be allowed from the client via the Access-Control-Allow-Headers header.
         /// '*' will allow all headers.
@@ -51,7 +51,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "allowedHeaders")]
         public System.Collections.Generic.List<string> AllowedHeaders { get; set; }
-
+        
         /// <value>
         /// The list of headers that the client will be allowed to see from the response as indicated by the
         /// Access-Control-Expose-Headers header. '*' will expose all headers.
@@ -59,14 +59,14 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "exposedHeaders")]
         public System.Collections.Generic.List<string> ExposedHeaders { get; set; }
-
+        
         /// <value>
         /// Whether to send the Access-Control-Allow-Credentials header to allow CORS requests with cookies.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAllowCredentialsEnabled")]
         public System.Nullable<bool> IsAllowCredentialsEnabled { get; set; }
-
+        
         /// <value>
         /// The time in seconds for the client to cache preflight responses. This is sent as the Access-Control-Max-Age
         /// if greater than 0.
@@ -74,5 +74,6 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxAgeInSeconds")]
         public System.Nullable<int> MaxAgeInSeconds { get; set; }
+        
     }
 }

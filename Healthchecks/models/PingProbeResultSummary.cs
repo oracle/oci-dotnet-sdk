@@ -31,14 +31,14 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The OCID of the monitor or on-demand probe responsible for creating this result.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "probeConfigurationId")]
         public string ProbeConfigurationId { get; set; }
-
+        
         /// <value>
         /// The date and time the probe was executed, expressed in milliseconds since the
         /// POSIX epoch. This field is defined by the PerformanceResourceTiming interface
@@ -48,26 +48,26 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "startTime")]
         public System.Double StartTime { get; set; }
-
+        
         /// <value>
         /// The target hostname or IP address of the probe.
         /// </value>
         [JsonProperty(PropertyName = "target")]
         public string Target { get; set; }
-
+        
         /// <value>
         /// The name of the vantage point that executed the probe.
         /// </value>
         [JsonProperty(PropertyName = "vantagePointName")]
         public string VantagePointName { get; set; }
-
+        
         /// <value>
         /// True if the probe did not complete before the configured `timeoutInSeconds` value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isTimedOut")]
         public System.Nullable<bool> IsTimedOut { get; set; }
-
+        
         /// <value>
         /// True if the probe result is determined to be healthy based on probe
         /// type-specific criteria.  For HTTP probes, a probe result is considered
@@ -77,7 +77,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "isHealthy")]
         public System.Nullable<bool> IsHealthy { get; set; }
-        ///
+                ///
         /// <value>
         /// The category of error if an error occurs executing the probe.
         /// The `errorMessage` field provides a message with the error details.
@@ -115,23 +115,23 @@ namespace Oci.HealthchecksService.Models
         [JsonProperty(PropertyName = "errorCategory")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ErrorCategoryEnum> ErrorCategory { get; set; }
-
+        
         /// <value>
         /// The error information indicating why a probe execution failed.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
-
+        
         [JsonProperty(PropertyName = "protocol")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PingProbeProtocol> Protocol { get; set; }
-
+        
         [JsonProperty(PropertyName = "connection")]
         public Connection Connection { get; set; }
-
+        
         [JsonProperty(PropertyName = "dns")]
         public DNS Dns { get; set; }
-
+        
         /// <value>
         /// The time immediately before the vantage point starts the domain name lookup for
         /// the resource.
@@ -139,7 +139,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "domainLookupStart")]
         public System.Double DomainLookupStart { get; set; }
-
+        
         /// <value>
         /// The time immediately before the vantage point finishes the domain name lookup for
         /// the resource.
@@ -147,14 +147,14 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "domainLookupEnd")]
         public System.Double DomainLookupEnd { get; set; }
-
+        
         /// <value>
         /// The latency of the probe execution, in milliseconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "latencyInMs")]
         public System.Double LatencyInMs { get; set; }
-
+        
         /// <value>
         /// The ICMP code of the response message.  This field is not used when the protocol
         /// is set to TCP.  For more information on ICMP codes, see
@@ -163,5 +163,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "icmpCode")]
         public System.Nullable<int> IcmpCode { get; set; }
+        
     }
 }

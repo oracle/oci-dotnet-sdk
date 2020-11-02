@@ -28,7 +28,7 @@ namespace Oci.SchService.Models
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// The name of the bucket. Avoid entering confidential information.
         /// 
@@ -39,12 +39,15 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <value>
         /// The prefix of the objects. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "objectNamePrefix")]
         public string ObjectNamePrefix { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "objectStorage";
     }
 }

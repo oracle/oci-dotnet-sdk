@@ -32,30 +32,31 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the glossary.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Status of the approval process workflow for this business glossary.
         /// </value>
         [JsonProperty(PropertyName = "workflowStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TermWorkflowStatus> WorkflowStatus { get; set; }
-
+        
         /// <value>
         /// OCID of the user who is the owner of the glossary.
         /// </value>
         [JsonProperty(PropertyName = "owner")]
         public string Owner { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
+        
     }
 }

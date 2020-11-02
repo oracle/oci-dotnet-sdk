@@ -33,25 +33,25 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The `DB_UNIQUE_NAME` of the Oracle Database being backed up.
         /// </value>
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }
-
+        
         /// <value>
         /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
-
+        
         /// <value>
         /// The name of the pluggable database. The name must begin with an alphabetic character and can contain a maximum of eight alphanumeric characters. Special characters are not permitted. Pluggable database should not be same as database name.
         /// </value>
         [JsonProperty(PropertyName = "pdbName")]
         public string PdbName { get; set; }
-
+        
         /// <value>
         /// A strong password for SYS, SYSTEM, and PDB Admin. The password must be at least nine characters and contain at least two uppercase, two lowercase, two numbers, and two special characters. The special characters must be _, \\#, or -.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// The character set for the database.  The default is AL32UTF8. Allowed values are:
         /// <br/>
@@ -70,7 +70,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "characterSet")]
         public string CharacterSet { get; set; }
-
+        
         /// <value>
         /// The national character set for the database.  The default is AL16UTF16. Allowed values are:
         /// AL16UTF16 or UTF8.
@@ -78,7 +78,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "ncharacterSet")]
         public string NcharacterSet { get; set; }
-        ///
+                ///
         /// <value>
         /// The database workload type.
         /// </value>
@@ -96,10 +96,10 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbWorkload")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
-
+        
         [JsonProperty(PropertyName = "dbBackupConfig")]
         public DbBackupConfig DbBackupConfig { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -108,7 +108,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -116,5 +116,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

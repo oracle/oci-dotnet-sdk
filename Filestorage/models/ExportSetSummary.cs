@@ -30,7 +30,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the export set.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -53,7 +53,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the export set.
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the export set.
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the export set was created, expressed
         /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
@@ -102,7 +102,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the virtual cloud network (VCN) the export set is in.
         /// </value>
@@ -112,5 +112,6 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
+        
     }
 }

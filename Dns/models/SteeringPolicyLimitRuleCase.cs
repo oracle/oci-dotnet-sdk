@@ -26,7 +26,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "caseCondition")]
         public string CaseCondition { get; set; }
-
+        
         /// <value>
         /// The number of answers allowed to remain after the limit rule has been processed, keeping only the
         /// first of the remaining answers in the list. Example: If the count property is set to 2 andfour answers remain before the limit rule is processed, only the first two answers in the list willremain after the limit rule has been processed.
@@ -37,5 +37,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Count is required.")]
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

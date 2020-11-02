@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "workspaceId")]
         public string WorkspaceId { get; set; }
-
+        
         /// <value>
         /// The source application key to use when creating the application.
         /// </value>
         [JsonProperty(PropertyName = "applicationKey")]
         public string ApplicationKey { get; set; }
+        
     }
 }

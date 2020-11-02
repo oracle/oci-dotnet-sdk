@@ -21,5 +21,8 @@ namespace Oci.AutoscalingService.Models
         
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<UpdateConditionDetails> Rules { get; set; }
+        
+        [JsonProperty(PropertyName = "policyType")]
+        private readonly string policyType = "threshold";
     }
 }

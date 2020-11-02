@@ -31,7 +31,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the DB System. It does not have to be unique.
         /// </value>
@@ -41,40 +41,40 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// User-provided data about the DB System.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment the DB System belongs in.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The Availability Domain where the primary DB System should be located.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the Fault Domain the DB System is located in.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The network endpoints available for this DB System.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "endpoints")]
         public System.Collections.Generic.List<DbSystemEndpoint> Endpoints { get; set; }
-
+        
         /// <value>
         /// The current state of the DB System.
         /// </value>
@@ -85,7 +85,7 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbSystem.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Name of the MySQL Version in use for the DB System.
         /// </value>
@@ -95,7 +95,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "MysqlVersion is required.")]
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
-
+        
         /// <value>
         /// The date and time the DB System was created.
         /// </value>
@@ -105,7 +105,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the DB System was last updated.
         /// </value>
@@ -115,19 +115,20 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

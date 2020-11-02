@@ -28,7 +28,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "className")]
         public string ClassName { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the file containing the application to execute.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
@@ -36,14 +36,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "fileUri")]
         public string FileUri { get; set; }
-
+        
         /// <value>
         /// The Spark version utilized to run the application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sparkVersion")]
         public string SparkVersion { get; set; }
-
+        
         /// <value>
         /// The Spark language.
         /// 
@@ -51,7 +51,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ApplicationLanguage> Language { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of an archive.zip file containing custom dependencies that may be used to support the execution a Python, Java, or Scala application.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
@@ -59,7 +59,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "archiveUri")]
         public string ArchiveUri { get; set; }
-
+        
         /// <value>
         /// The arguments passed to the running application as command line arguments.  An argument is
         /// either a plain text or a placeholder. Placeholders are replaced using values from the parameters
@@ -70,7 +70,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<string> Arguments { get; set; }
-
+        
         /// <value>
         /// The Spark configuration passed to the running process.
         /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
@@ -78,42 +78,42 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "configuration")]
         public System.Collections.Generic.Dictionary<string, string> Configuration { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly description. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The VM shape for the driver. Sets the driver cores and memory.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "driverShape")]
         public string DriverShape { get; set; }
-
+        
         /// <value>
         /// The VM shape for the executors. Sets the executor cores and memory.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "executorShape")]
         public string ExecutorShape { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -121,7 +121,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket where the Spark job logs are to be uploaded.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
@@ -129,14 +129,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
         public string LogsBucketUri { get; set; }
-
+        
         /// <value>
         /// The number of executor VMs requested.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "numExecutors")]
         public System.Nullable<int> NumExecutors { get; set; }
-
+        
         /// <value>
         /// An array of name/value pairs used to fill placeholders found in properties like
         /// `Application.arguments`.  The name must be a string of one or more word characters
@@ -145,14 +145,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
-
+        
         /// <value>
         /// The OCID of a private endpoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
-
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
@@ -161,5 +161,6 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "warehouseBucketUri")]
         public string WarehouseBucketUri { get; set; }
+        
     }
 }

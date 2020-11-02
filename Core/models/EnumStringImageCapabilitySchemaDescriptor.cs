@@ -30,11 +30,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Values is required.")]
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
-
+        
         /// <value>
         /// the default value
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
+        
+        [JsonProperty(PropertyName = "descriptorType")]
+        private readonly string descriptorType = "enumstring";
     }
 }

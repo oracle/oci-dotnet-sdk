@@ -31,20 +31,20 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeerRole.RoleEnum> Role { get; set; }
-
+        
         /// <value>
         /// peer alias
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "OcpuAllocationParam is required.")]
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
-
+        
         /// <value>
         /// Availability Domain to place new peer
         /// </value>
@@ -55,5 +55,6 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "ad")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AvailabilityDomain.AdsEnum> Ad { get; set; }
+        
     }
 }

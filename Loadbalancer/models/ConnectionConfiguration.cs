@@ -37,7 +37,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "IdleTimeout is required.")]
         [JsonProperty(PropertyName = "idleTimeout")]
         public System.Nullable<long> IdleTimeout { get; set; }
-
+        
         /// <value>
         /// The backend TCP Proxy Protocol version.
         /// <br/>
@@ -45,5 +45,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "backendTcpProxyProtocolVersion")]
         public System.Nullable<int> BackendTcpProxyProtocolVersion { get; set; }
+        
     }
 }

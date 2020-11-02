@@ -31,5 +31,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "exportOptions")]
         public System.Collections.Generic.List<ClientOptions> ExportOptions { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// display name of the resource
         /// </value>
@@ -40,11 +40,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// List of rules
         /// </value>
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<RuleSummary> Rules { get; set; }
+        
     }
 }

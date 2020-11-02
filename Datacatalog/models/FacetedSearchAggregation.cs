@@ -26,11 +26,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Count of number of data objects having property.
         /// </value>
         [JsonProperty(PropertyName = "aggregation")]
         public System.Collections.Generic.Dictionary<string, long> Aggregation { get; set; }
+        
     }
 }

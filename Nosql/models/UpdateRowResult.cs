@@ -26,7 +26,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// The version string associated with the existing row.
         /// Returned if the put fails due to options setting in the
@@ -35,13 +35,13 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "existingVersion")]
         public string ExistingVersion { get; set; }
-
+        
         /// <value>
         /// The map of values from a row.
         /// </value>
         [JsonProperty(PropertyName = "existingValue")]
         public System.Collections.Generic.Dictionary<string, System.Object> ExistingValue { get; set; }
-
+        
         /// <value>
         /// The value generated if the operation created a new value for
         /// an identity column. If the table has no identity column, this value
@@ -51,8 +51,9 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "generatedValue")]
         public string GeneratedValue { get; set; }
-
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
+        
     }
 }

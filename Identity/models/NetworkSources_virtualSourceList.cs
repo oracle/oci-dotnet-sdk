@@ -21,8 +21,9 @@ namespace Oci.IdentityService.Models
         
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         [JsonProperty(PropertyName = "ipRanges")]
         public System.Collections.Generic.List<string> IpRanges { get; set; }
+        
     }
 }

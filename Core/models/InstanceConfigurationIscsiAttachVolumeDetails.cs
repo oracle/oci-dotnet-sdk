@@ -24,5 +24,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "useChap")]
         public System.Nullable<bool> UseChap { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "iscsi";
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
-
+        
         /// <value>
         /// The size of block volume in GB that needs to be added to each worker node.
         /// All the necessary details needed for attachment are managed by service itself.
@@ -42,5 +42,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "BlockVolumeSizeInGBs is required.")]
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
+        
     }
 }

@@ -29,19 +29,19 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Whether the attachment should be created in read-only mode.
         /// </value>
         [JsonProperty(PropertyName = "isReadOnly")]
         public System.Nullable<bool> IsReadOnly { get; set; }
-
+        
         /// <value>
         /// The device name.
         /// </value>
         [JsonProperty(PropertyName = "device")]
         public string Device { get; set; }
-
+        
         /// <value>
         /// Whether the attachment should be created in shareable mode. If an attachment
         /// is created in shareable mode, then other instances can attach the same volume, provided
@@ -51,16 +51,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isShareable")]
         public System.Nullable<bool> IsShareable { get; set; }
-
-        /// <value>
-        /// The type of volume. The only supported values are \"iscsi\" and \"paravirtualized\".
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        
+        
     }
 
     public class InstanceConfigurationAttachVolumeDetailsModelConverter : JsonConverter

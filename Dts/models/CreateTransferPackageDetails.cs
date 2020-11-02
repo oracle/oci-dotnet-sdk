@@ -21,11 +21,12 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "originalPackageDeliveryTrackingNumber")]
         public string OriginalPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "returnPackageDeliveryTrackingNumber")]
         public string ReturnPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "packageDeliveryVendor")]
         public string PackageDeliveryVendor { get; set; }
+        
     }
 }

@@ -33,5 +33,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

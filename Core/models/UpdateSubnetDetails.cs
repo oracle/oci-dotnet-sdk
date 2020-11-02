@@ -27,14 +27,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the set of DHCP options the subnet will use.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dhcpOptionsId")]
         public string DhcpOptionsId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -42,7 +42,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -51,14 +51,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table the subnet will use.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the security list or lists the subnet will use. This
         /// replaces the entire current set of security lists. Remember that
@@ -68,5 +68,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "securityListIds")]
         public System.Collections.Generic.List<string> SecurityListIds { get; set; }
+        
     }
 }

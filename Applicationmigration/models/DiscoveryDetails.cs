@@ -22,16 +22,7 @@ namespace Oci.ApplicationmigrationService.Models
     public class DiscoveryDetails 
     {
         
-        /// <value>
-        /// The type of migration
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MigrationTypes> Type { get; set; }
+        
     }
 
     public class DiscoveryDetailsModelConverter : JsonConverter

@@ -33,7 +33,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "ApiEndpoint is required.")]
         [JsonProperty(PropertyName = "apiEndpoint")]
         public string ApiEndpoint { get; set; }
-
+        
         /// <value>
         /// The personal access token to be configured on the Git repository. Avoid entering confidential information.
         /// </value>
@@ -43,5 +43,8 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "AccessToken is required.")]
         [JsonProperty(PropertyName = "accessToken")]
         public string AccessToken { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceProviderType")]
+        private readonly string configSourceProviderType = "GITLAB_ACCESS_TOKEN";
     }
 }

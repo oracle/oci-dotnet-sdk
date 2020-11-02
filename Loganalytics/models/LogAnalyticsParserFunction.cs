@@ -23,59 +23,60 @@ namespace Oci.LoganalyticsService.Models
         
         [JsonProperty(PropertyName = "parserMetaPlugin")]
         public LogAnalyticsParserMetaPlugin ParserMetaPlugin { get; set; }
-
+        
         /// <value>
         /// plugin instance Id
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionId")]
         public System.Nullable<long> ParserFunctionId { get; set; }
-
+        
         /// <value>
         /// plugin instance internal name
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionName")]
         public string ParserFunctionName { get; set; }
-
+        
         /// <value>
         /// is enabled flag
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// parser Id
         /// </value>
         [JsonProperty(PropertyName = "parserId")]
         public System.Nullable<long> ParserId { get; set; }
-
+        
         /// <value>
         /// parser internal name
         /// </value>
         [JsonProperty(PropertyName = "parserName")]
         public string ParserName { get; set; }
-
+        
         /// <value>
         /// plugin type internal name
         /// </value>
         [JsonProperty(PropertyName = "parserMetaPluginName")]
         public string ParserMetaPluginName { get; set; }
-
+        
         /// <value>
         /// priority
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionPriority")]
         public System.Nullable<long> ParserFunctionPriority { get; set; }
-
+        
         /// <value>
         /// parameter map list
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionParameters")]
         public System.Collections.Generic.List<LogAnalyticsParserFunctionParameter> ParserFunctionParameters { get; set; }
+        
     }
 }

@@ -26,17 +26,18 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "proxyCount")]
         public System.Nullable<int> ProxyCount { get; set; }
-
+        
         /// <value>
         /// Number of CA replicas
         /// </value>
         [JsonProperty(PropertyName = "caCount")]
         public System.Nullable<int> CaCount { get; set; }
-
+        
         /// <value>
         /// Number of console replicas
         /// </value>
         [JsonProperty(PropertyName = "consoleCount")]
         public System.Nullable<int> ConsoleCount { get; set; }
+        
     }
 }

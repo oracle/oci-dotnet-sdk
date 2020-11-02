@@ -33,7 +33,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// The name of the bucket. Avoid entering confidential information.
         /// Example: my-new-bucket1
@@ -44,7 +44,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The compartment ID in which the bucket is authorized.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the user who created the bucket.
         /// </value>
@@ -64,7 +64,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "CreatedBy is required.")]
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
-
+        
         /// <value>
         /// The date and time the bucket was created, as described in [RFC 2616](https://tools.ietf.org/html/rfc2616#section-14.29).
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) for the bucket.
         /// </value>
@@ -84,7 +84,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Etag is required.")]
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -92,7 +92,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -100,5 +100,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -90,7 +90,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "ExportOptions is required.")]
         [JsonProperty(PropertyName = "exportOptions")]
         public System.Collections.Generic.List<ClientOptions> ExportOptions { get; set; }
-
+        
         /// <value>
         /// The OCID of this export's export set.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "ExportSetId is required.")]
         [JsonProperty(PropertyName = "exportSetId")]
         public string ExportSetId { get; set; }
-
+        
         /// <value>
         /// The OCID of this export's file system.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "FileSystemId is required.")]
         [JsonProperty(PropertyName = "fileSystemId")]
         public string FileSystemId { get; set; }
-
+        
         /// <value>
         /// The OCID of this export.
         /// </value>
@@ -120,7 +120,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of this export.
         /// </value>
@@ -146,7 +146,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Path used to access the associated file system.
         /// <br/>
@@ -160,7 +160,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The date and time the export was created, expressed
         /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
@@ -173,5 +173,6 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

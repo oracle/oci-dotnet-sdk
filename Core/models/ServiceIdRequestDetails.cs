@@ -29,5 +29,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ServiceId is required.")]
         [JsonProperty(PropertyName = "serviceId")]
         public string ServiceId { get; set; }
+        
     }
 }

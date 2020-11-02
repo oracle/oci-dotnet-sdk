@@ -26,11 +26,12 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Categories for resources.
         /// </value>
         [JsonProperty(PropertyName = "categories")]
         public System.Collections.Generic.List<Category> Categories { get; set; }
+        
     }
 }

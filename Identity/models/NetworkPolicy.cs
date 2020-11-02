@@ -28,5 +28,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "networkSourceIds")]
         public System.Collections.Generic.List<string> NetworkSourceIds { get; set; }
+        
     }
 }

@@ -38,19 +38,19 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A user-supplied display name for the backup.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A user-supplied description for the backup.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The time the backup record was created.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time at which the backup was updated.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the backup.
         /// </value>
@@ -112,7 +112,7 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
@@ -122,7 +122,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "LifecycleDetails is required.")]
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of backup.
         /// </value>
@@ -144,7 +144,7 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "backupType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BackupTypeEnum> BackupType { get; set; }
-        ///
+                ///
         /// <value>
         /// If the backup was created automatically, or by a manual request.
         /// </value>
@@ -166,7 +166,7 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "creationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CreationTypeEnum> CreationType { get; set; }
-
+        
         /// <value>
         /// The OCID of the DB System the backup is associated with.
         /// </value>
@@ -176,50 +176,51 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "DbSystemId is required.")]
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <value>
         /// The size of the backup in base-2 (IEC) gibibytes. (GiB).
         /// </value>
         [JsonProperty(PropertyName = "backupSizeInGBs")]
         public System.Nullable<int> BackupSizeInGBs { get; set; }
-
+        
         /// <value>
         /// Number of days to retain this backup.
         /// </value>
         [JsonProperty(PropertyName = "retentionInDays")]
         public System.Nullable<int> RetentionInDays { get; set; }
-
+        
         /// <value>
         /// Initial size of the data volume in GiBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The MySQL server version of the DB System used for backup.
         /// </value>
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
-
+        
         /// <value>
         /// The shape of the DB System used for backup.
         /// </value>
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

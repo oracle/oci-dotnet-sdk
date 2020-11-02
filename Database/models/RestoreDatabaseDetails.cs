@@ -25,19 +25,20 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseSCN")]
         public string DatabaseSCN { get; set; }
-
+        
         /// <value>
         /// Restores to the timestamp specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// Restores to the last known good state with the least possible data loss.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "latest")]
         public System.Nullable<bool> Latest { get; set; }
+        
     }
 }

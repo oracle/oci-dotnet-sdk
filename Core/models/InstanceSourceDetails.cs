@@ -20,18 +20,7 @@ namespace Oci.CoreService.Models
     public class InstanceSourceDetails 
     {
         
-        /// <value>
-        /// The source type for the instance.
-        /// Use `image` when specifying the image OCID. Use `bootVolume` when specifying
-        /// the boot volume OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        public string SourceType { get; set; }
+        
     }
 
     public class InstanceSourceDetailsModelConverter : JsonConverter

@@ -32,12 +32,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "AliasName is required.")]
         [JsonProperty(PropertyName = "aliasName")]
         public string AliasName { get; set; }
-
+        
         /// <value>
         /// The description about the database alias parsed from the file metadata.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "aliasDetails")]
         public string AliasDetails { get; set; }
+        
     }
 }

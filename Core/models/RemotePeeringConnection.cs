@@ -42,7 +42,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -63,7 +63,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the DRG that this RPC belongs to.
         /// </value>
@@ -73,7 +73,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DrgId is required.")]
         [JsonProperty(PropertyName = "drgId")]
         public string DrgId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the RPC.
         /// </value>
@@ -92,7 +92,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Whether the VCN at the other end of the peering is in a different tenancy.
         /// <br/>
@@ -104,7 +104,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IsCrossTenancyPeering is required.")]
         [JsonProperty(PropertyName = "isCrossTenancyPeering")]
         public System.Nullable<bool> IsCrossTenancyPeering { get; set; }
-        ///
+                ///
         /// <value>
         /// The RPC's current lifecycle state.
         /// </value>
@@ -130,14 +130,14 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// If this RPC is peered, this value is the OCID of the other RPC.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerId")]
         public string PeerId { get; set; }
-
+        
         /// <value>
         /// If this RPC is peered, this value is the region that contains the other RPC.
         /// <br/>
@@ -145,14 +145,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerRegionName")]
         public string PeerRegionName { get; set; }
-
+        
         /// <value>
         /// If this RPC is peered, this value is the OCID of the other RPC's tenancy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerTenancyId")]
         public string PeerTenancyId { get; set; }
-        ///
+                ///
         /// <value>
         /// Whether the RPC is peered with another RPC. `NEW` means the RPC has not yet been
         /// peered. `PENDING` means the peering is being established. `REVOKED` means the
@@ -186,7 +186,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "peeringStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeeringStatusEnum> PeeringStatus { get; set; }
-
+        
         /// <value>
         /// The date and time the RPC was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -198,5 +198,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

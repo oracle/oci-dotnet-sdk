@@ -27,11 +27,12 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<AnnouncementSummary> Items { get; set; }
-
+        
         /// <value>
         /// The user-specific status for found announcements.
         /// </value>
         [JsonProperty(PropertyName = "userStatuses")]
         public System.Collections.Generic.List<AnnouncementUserStatusDetails> UserStatuses { get; set; }
+        
     }
 }

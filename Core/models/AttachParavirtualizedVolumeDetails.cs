@@ -24,5 +24,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "paravirtualized";
     }
 }

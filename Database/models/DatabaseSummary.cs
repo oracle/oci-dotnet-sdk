@@ -35,7 +35,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -45,37 +45,37 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The character set for the database.
         /// </value>
         [JsonProperty(PropertyName = "characterSet")]
         public string CharacterSet { get; set; }
-
+        
         /// <value>
         /// The national character set for the database.
         /// </value>
         [JsonProperty(PropertyName = "ncharacterSet")]
         public string NcharacterSet { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Home.
         /// </value>
         [JsonProperty(PropertyName = "dbHomeId")]
         public string DbHomeId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system.
         /// </value>
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "vmClusterId")]
         public string VmClusterId { get; set; }
-
+        
         /// <value>
         /// The database name.
         /// </value>
@@ -85,19 +85,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The name of the pluggable database. The name must begin with an alphabetic character and can contain a maximum of eight alphanumeric characters. Special characters are not permitted. Pluggable database should not be same as database name.
         /// </value>
         [JsonProperty(PropertyName = "pdbName")]
         public string PdbName { get; set; }
-
+        
         /// <value>
         /// The database workload type.
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]
         public string DbWorkload { get; set; }
-
+        
         /// <value>
         /// A system-generated name for the database to ensure uniqueness within an Oracle Data Guard group (a primary database and its standby databases). The unique name cannot be changed.
         /// 
@@ -108,13 +108,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbUniqueName is required.")]
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the database.
         /// </value>
@@ -148,22 +148,22 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the database was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time when the latest database backup was created.
         /// </value>
         [JsonProperty(PropertyName = "lastBackupTimestamp")]
         public System.Nullable<System.DateTime> LastBackupTimestamp { get; set; }
-
+        
         [JsonProperty(PropertyName = "dbBackupConfig")]
         public DbBackupConfig DbBackupConfig { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -172,7 +172,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -180,23 +180,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The Connection strings used to connect to the Oracle Database.
         /// </value>
         [JsonProperty(PropertyName = "connectionStrings")]
         public DatabaseConnectionStrings ConnectionStrings { get; set; }
-
+        
         /// <value>
         /// Point in time recovery timeStamp of the source database at which cloned database system is cloned from the source database system, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339)
         /// </value>
         [JsonProperty(PropertyName = "sourceDatabasePointInTimeRecoveryTimestamp")]
         public System.Nullable<System.DateTime> SourceDatabasePointInTimeRecoveryTimestamp { get; set; }
-
+        
         /// <value>
         /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
+        
     }
 }

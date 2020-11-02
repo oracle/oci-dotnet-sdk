@@ -32,5 +32,8 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "SourceUrl is required.")]
         [JsonProperty(PropertyName = "sourceUrl")]
         public string SourceUrl { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "IMPORTURL";
     }
 }

@@ -41,11 +41,12 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-
+        
         [JsonProperty(PropertyName = "sseCustomerKey")]
         public SSECustomerKeyDetails SseCustomerKey { get; set; }
-
+        
         [JsonProperty(PropertyName = "sourceSseCustomerKey")]
         public SSECustomerKeyDetails SourceSseCustomerKey { get; set; }
+        
     }
 }

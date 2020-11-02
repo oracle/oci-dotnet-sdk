@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The fault domains to place instances.
         /// <br/>
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomains")]
         public System.Collections.Generic.List<string> FaultDomains { get; set; }
-
+        
         /// <value>
         /// The OCID of the primary subnet to place instances.
         /// </value>
@@ -61,11 +61,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PrimarySubnetId is required.")]
         [JsonProperty(PropertyName = "primarySubnetId")]
         public string PrimarySubnetId { get; set; }
-
+        
         /// <value>
         /// The set of subnet OCIDs for secondary VNICs for instances in the pool.
         /// </value>
         [JsonProperty(PropertyName = "secondaryVnicSubnets")]
         public System.Collections.Generic.List<InstancePoolPlacementSecondaryVnicSubnet> SecondaryVnicSubnets { get; set; }
+        
     }
 }

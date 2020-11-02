@@ -30,23 +30,24 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public System.Guid Code { get; set; }
-
+        
         /// <value>
         /// Name of the tax code.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Country, which imposes the tax.
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
+        
         /// <value>
         /// The URL with more details about this tax.
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+        
     }
 }

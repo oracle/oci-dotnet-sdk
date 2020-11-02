@@ -52,7 +52,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "AllowedMethods is required.")]
         [JsonProperty(PropertyName = "allowedMethods")]
         public System.Collections.Generic.List<string> AllowedMethods { get; set; }
-
+        
         /// <value>
         /// The HTTP status code to return when the requested HTTP method is not in the list of allowed methods.
         /// The associated status line returned with the code is mapped from the standard HTTP specification. The
@@ -62,5 +62,8 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "statusCode")]
         public System.Nullable<int> StatusCode { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "CONTROL_ACCESS_USING_HTTP_METHODS";
     }
 }

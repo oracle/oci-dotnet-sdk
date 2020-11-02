@@ -31,25 +31,26 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PricingTypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The type of pricing for a PAYGO model, eg PER_OCPU_LINEAR, PER_OCPU_MIN_BILLING, PER_INSTANCE.  Null if type is not PAYGO.
         /// </value>
         [JsonProperty(PropertyName = "payGoStrategy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PricingStrategyEnum> PayGoStrategy { get; set; }
-
+        
         /// <value>
         /// The currency of the pricing model.
         /// </value>
         [JsonProperty(PropertyName = "currency")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PricingCurrencyEnum> Currency { get; set; }
-
+        
         /// <value>
         /// The pricing rate.
         /// </value>
         [JsonProperty(PropertyName = "rate")]
         public System.Nullable<decimal> Rate { get; set; }
+        
     }
 }

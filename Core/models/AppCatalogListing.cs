@@ -26,48 +26,49 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "contactUrl")]
         public string ContactUrl { get; set; }
-
+        
         /// <value>
         /// Description of the listing.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the listing.
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// Name of the listing.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Date and time the listing was published, in [RFC3339](https://tools.ietf.org/html/rfc3339) format.
         /// Example: 2018-03-20T12:32:53.532Z
         /// </value>
         [JsonProperty(PropertyName = "timePublished")]
         public System.Nullable<System.DateTime> TimePublished { get; set; }
-
+        
         /// <value>
         /// Publisher's logo URL.
         /// </value>
         [JsonProperty(PropertyName = "publisherLogoUrl")]
         public string PublisherLogoUrl { get; set; }
-
+        
         /// <value>
         /// Name of the publisher who published this listing.
         /// </value>
         [JsonProperty(PropertyName = "publisherName")]
         public string PublisherName { get; set; }
-
+        
         /// <value>
         /// Summary of the listing.
         /// </value>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
+        
     }
 }

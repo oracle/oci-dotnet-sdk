@@ -31,7 +31,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// If the field is set, specifies the default compartment assignment for the Amazon S3 Compatibility API.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DefaultS3CompartmentId is required.")]
         [JsonProperty(PropertyName = "defaultS3CompartmentId")]
         public string DefaultS3CompartmentId { get; set; }
-
+        
         /// <value>
         /// If the field is set, specifies the default compartment assignment for the Swift API.
         /// </value>
@@ -51,5 +51,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DefaultSwiftCompartmentId is required.")]
         [JsonProperty(PropertyName = "defaultSwiftCompartmentId")]
         public string DefaultSwiftCompartmentId { get; set; }
+        
     }
 }

@@ -23,11 +23,12 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "wrappedRule")]
         public ProjectionRule WrappedRule { get; set; }
-
+        
         /// <value>
         /// Specifies if the sort key has ascending order.
         /// </value>
         [JsonProperty(PropertyName = "isAscending")]
         public System.Nullable<bool> IsAscending { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The number of partitions in the stream.
         /// </value>
@@ -42,19 +42,19 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Partitions is required.")]
         [JsonProperty(PropertyName = "partitions")]
         public System.Nullable<int> Partitions { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the stream.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the stream pool that contains the stream.
         /// </value>
         [JsonProperty(PropertyName = "streamPoolId")]
         public string StreamPoolId { get; set; }
-
+        
         /// <value>
         /// The retention period of the stream, in hours. Accepted values are between 24 and 168 (7 days).
         /// If not specified, the stream will have a retention period of 24 hours.
@@ -62,7 +62,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "retentionInHours")]
         public System.Nullable<int> RetentionInHours { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair that is applied with no predefined name, type, or namespace. Exists for cross-compatibility only.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -71,7 +71,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -79,5 +79,6 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

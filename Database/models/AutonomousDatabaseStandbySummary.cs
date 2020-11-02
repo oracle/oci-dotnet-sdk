@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "lagTimeInSeconds")]
         public System.Nullable<int> LagTimeInSeconds { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Autonomous Database.
         /// </value>
@@ -79,11 +79,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

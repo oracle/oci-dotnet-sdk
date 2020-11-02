@@ -34,14 +34,14 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Objects is required.")]
         [JsonProperty(PropertyName = "objects")]
         public System.Collections.Generic.List<ObjectSummary> Objects { get; set; }
-
+        
         /// <value>
         /// Prefixes that are common to the results returned by the request if the request specified a delimiter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "prefixes")]
         public System.Collections.Generic.List<string> Prefixes { get; set; }
-
+        
         /// <value>
         /// The name of the object to use in the 'start' parameter to obtain the next page of
         /// a truncated ListObjects response. Avoid entering confidential information.
@@ -49,5 +49,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nextStartWith")]
         public string NextStartWith { get; set; }
+        
     }
 }

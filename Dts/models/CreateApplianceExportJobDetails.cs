@@ -25,46 +25,46 @@ namespace Oci.DtsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// List of objects with names matching this prefix would be part of this export job.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
-
+        
         /// <value>
         /// Object names returned by a list query must be greater or equal to this parameter.
         /// </value>
         [JsonProperty(PropertyName = "rangeStart")]
         public string RangeStart { get; set; }
-
+        
         /// <value>
         /// Object names returned by a list query must be strictly less than this parameter.
         /// </value>
         [JsonProperty(PropertyName = "rangeEnd")]
         public string RangeEnd { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "CustomerShippingAddress is required.")]
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -73,7 +73,7 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -82,5 +82,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

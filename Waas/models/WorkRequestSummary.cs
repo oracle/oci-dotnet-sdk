@@ -30,7 +30,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A description of the operation requested by the work request.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestOperationTypes> OperationType { get; set; }
-
+        
         /// <value>
         /// The current status of the work request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatusValues> Status { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request.
         /// </value>
@@ -62,19 +62,19 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources being used to complete the work request operation.
         /// </value>
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// The percentage of work completed by the work request.
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<int> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was created, expressed in RFC 3339 timestamp format.
         /// </value>
@@ -84,7 +84,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request moved from the `ACCEPTED` state to the `IN_PROGRESS` state, expressed in RFC 3339 timestamp format.
         /// </value>
@@ -94,7 +94,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was fulfilled or terminated, in the format defined by RFC3339.
         /// </value>
@@ -104,5 +104,6 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "TimeFinished is required.")]
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

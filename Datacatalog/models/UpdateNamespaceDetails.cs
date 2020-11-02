@@ -28,17 +28,18 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the namespace.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// If this field is defined by service or by a user
         /// </value>
         [JsonProperty(PropertyName = "isServiceDefined")]
         public System.Nullable<bool> IsServiceDefined { get; set; }
+        
     }
 }

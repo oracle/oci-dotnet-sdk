@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
                 ///
         /// <value>
-        /// The operator of the filter. Example: 'AND', 'OR', 'NOT'.
+        /// The filter operator. Example: 'AND', 'OR', 'NOT'.
         /// </value>
         ///
         public enum OperatorEnum {
@@ -35,28 +35,29 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The operator of the filter. Example: 'AND', 'OR', 'NOT'.
+        /// The filter operator. Example: 'AND', 'OR', 'NOT'.
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
-
+        
         /// <value>
         /// The dimensions to filter on.
         /// </value>
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.List<Dimension> Dimensions { get; set; }
-
+        
         /// <value>
         /// The tags to filter on.
         /// </value>
         [JsonProperty(PropertyName = "tags")]
         public System.Collections.Generic.List<Tag> Tags { get; set; }
-
+        
         /// <value>
         /// The nested filter object.
         /// </value>
         [JsonProperty(PropertyName = "filters")]
         public System.Collections.Generic.List<Filter> Filters { get; set; }
+        
     }
 }

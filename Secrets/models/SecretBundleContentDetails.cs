@@ -31,16 +31,7 @@ namespace Oci.SecretsService.Models
             Base64
         };
 
-        /// <value>
-        /// The formatting type of the secret contents.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ContentType is required.")]
-        [JsonProperty(PropertyName = "contentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ContentTypeEnum> ContentType { get; set; }
+        
     }
 
     public class SecretBundleContentDetailsModelConverter : JsonConverter

@@ -30,7 +30,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "OsnKey is required.")]
         [JsonProperty(PropertyName = "osnKey")]
         public string OsnKey { get; set; }
-
+        
         /// <value>
         /// Availability Domain of OSN
         /// </value>
@@ -41,10 +41,10 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "ad")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AvailabilityDomain.AdsEnum> Ad { get; set; }
-
+        
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the OSN.
         /// </value>
@@ -64,5 +64,6 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

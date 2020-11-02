@@ -31,5 +31,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SharedSecret is required.")]
         [JsonProperty(PropertyName = "sharedSecret")]
         public string SharedSecret { get; set; }
+        
     }
 }

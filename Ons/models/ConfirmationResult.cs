@@ -34,7 +34,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "TopicName is required.")]
         [JsonProperty(PropertyName = "topicName")]
         public string TopicName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the topic associated with the specified subscription.
         /// 
@@ -45,7 +45,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "TopicId is required.")]
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
-
+        
         /// <value>
         /// A locator that corresponds to the subscription protocol.
         /// For example, an email address for a subscription that uses the `EMAIL` protocol, or a URL for a subscription that uses an HTTP-based protocol.
@@ -57,7 +57,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Endpoint is required.")]
         [JsonProperty(PropertyName = "endpoint")]
         public string Endpoint { get; set; }
-
+        
         /// <value>
         /// The URL for unsubscribing from the topic.
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "UnsubscribeUrl is required.")]
         [JsonProperty(PropertyName = "unsubscribeUrl")]
         public string UnsubscribeUrl { get; set; }
-
+        
         /// <value>
         /// A human-readable string indicating the status of the subscription confirmation.
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription specified in the request.
         /// </value>
@@ -87,5 +87,6 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "SubscriptionId is required.")]
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
+        
     }
 }

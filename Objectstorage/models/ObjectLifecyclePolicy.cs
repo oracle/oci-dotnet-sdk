@@ -29,7 +29,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The live lifecycle policy on the bucket.
         /// <br/>
@@ -39,5 +39,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ObjectLifecycleRule> Items { get; set; }
+        
     }
 }

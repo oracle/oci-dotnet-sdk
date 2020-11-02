@@ -26,5 +26,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
+        
     }
 }

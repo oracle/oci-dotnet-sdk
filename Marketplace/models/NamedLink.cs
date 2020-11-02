@@ -26,11 +26,12 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The URL of the resource.
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+        
     }
 }

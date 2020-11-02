@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Unique identifier for the Windows update. NOTE - This is not an OCID,
         /// but is a unique identifier assigned by Microsoft.
@@ -42,13 +42,13 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Information about the Windows Update.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The purpose of this update.
         /// </value>
@@ -59,36 +59,37 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "updateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
-
+        
         /// <value>
         /// size of the package in bytes
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
         public System.Nullable<long> SizeInBytes { get; set; }
-
+        
         /// <value>
         /// Indicates whether the update can be installed using OSMS.
         /// </value>
         [JsonProperty(PropertyName = "isEligibleForInstallation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IsEligibleForInstallation> IsEligibleForInstallation { get; set; }
-
+        
         /// <value>
         /// List of requirements forinstalling on a managed instances
         /// </value>
         [JsonProperty(PropertyName = "installationRequirements", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<InstallationRequirements> InstallationRequirements { get; set; }
-
+        
         /// <value>
         /// Indicates whether a reboot may be required to complete installation of this update.
         /// </value>
         [JsonProperty(PropertyName = "isRebootRequiredForInstallation")]
         public System.Nullable<bool> IsRebootRequiredForInstallation { get; set; }
-
+        
         /// <value>
         /// List of the Microsoft Knowledge Base Article Ids related to this Windows Update.
         /// </value>
         [JsonProperty(PropertyName = "kbArticleIds")]
         public System.Collections.Generic.List<string> KbArticleIds { get; set; }
+        
     }
 }

@@ -26,5 +26,6 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "sortRules")]
         public System.Collections.Generic.List<SortKeyRule> SortRules { get; set; }
+        
     }
 }

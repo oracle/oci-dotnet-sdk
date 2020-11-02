@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A string that describes the details of the rule. It does not have to be unique, and can be changed.
         /// Avoid entering confidential information.
@@ -39,7 +39,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to which this rule belongs.
         /// </value>
@@ -49,7 +49,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Object Storage namespace.
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "OsNamespace is required.")]
         [JsonProperty(PropertyName = "osNamespace")]
         public string OsNamespace { get; set; }
-
+        
         /// <value>
         /// Name of the Object Storage bucket.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "OsBucketName is required.")]
         [JsonProperty(PropertyName = "osBucketName")]
         public string OsBucketName { get; set; }
-
+        
         /// <value>
         /// The type of collection.
         /// Accepted values are: LIVE.
@@ -80,7 +80,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "collectionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectCollectionRuleCollectionTypes> CollectionType { get; set; }
-
+        
         /// <value>
         /// The oldest time of the file in the bucket to consider for collection.
         /// Accepted values are: BEGINNING or CURRENT_TIME or RFC3339 formatted datetime string.
@@ -89,7 +89,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "pollSince")]
         public string PollSince { get; set; }
-
+        
         /// <value>
         /// The oldest time of the file in the bucket to consider for collection.
         /// Accepted values are: CURRENT_TIME or RFC3339 formatted datetime string.
@@ -98,7 +98,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "pollTill")]
         public string PollTill { get; set; }
-
+        
         /// <value>
         /// Log Analytics Log group OCID to associate the processed logs with.
         /// </value>
@@ -108,7 +108,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "LogGroupId is required.")]
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// Name of the Log Analytics Source to use for the processing.
         /// </value>
@@ -118,13 +118,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "LogSourceName is required.")]
         [JsonProperty(PropertyName = "logSourceName")]
         public string LogSourceName { get; set; }
-
+        
         /// <value>
         /// Log Analytics entity OCID. Associates the processed logs with the given entity (optional).
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
-
+        
         /// <value>
         /// An optional character encoding to aid in detecting the character encoding of the contents of the objects while processing.
         /// It is recommended to set this value as ISO_8589_1 when configuring content of the objects having more numeric characters,
@@ -134,7 +134,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "charEncoding")]
         public string CharEncoding { get; set; }
-
+        
         /// <value>
         /// The override is used to modify some important configuration properties for objects matching a specific pattern inside the bucket.
         /// Supported propeties for override are - logSourceName, charEncoding.
@@ -143,19 +143,20 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "overrides")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<PropertyOverride>> Overrides { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
     }
 }

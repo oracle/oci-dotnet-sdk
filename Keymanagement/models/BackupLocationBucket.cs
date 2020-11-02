@@ -27,19 +27,22 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ObjectName is required.")]
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
+        
+        [JsonProperty(PropertyName = "destination")]
+        private readonly string destination = "BUCKET";
     }
 }

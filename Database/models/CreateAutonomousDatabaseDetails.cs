@@ -21,5 +21,8 @@ namespace Oci.DatabaseService.Models
     /// </summary>
     public class CreateAutonomousDatabaseDetails : CreateAutonomousDatabaseBase
     {
-            }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "NONE";
+    }
 }

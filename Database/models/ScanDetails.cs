@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The SCAN port. Default is 1521.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The list of SCAN IP addresses. Three addresses should be provided.
         /// </value>
@@ -51,5 +51,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Ips is required.")]
         [JsonProperty(PropertyName = "ips")]
         public System.Collections.Generic.List<string> Ips { get; set; }
+        
     }
 }

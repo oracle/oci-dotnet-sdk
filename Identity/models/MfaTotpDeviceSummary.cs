@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the user the MFA TOTP device belongs to.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "UserId is required.")]
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// Date and time the `MfaTotpDevice` object was created, in the format defined by RFC3339.
         /// <br/>
@@ -53,7 +53,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Date and time when this MFA TOTP device will expire, in the format defined by RFC3339.
         /// Null if it never expires.
@@ -62,7 +62,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeExpires")]
         public System.Nullable<System.DateTime> TimeExpires { get; set; }
-        ///
+                ///
         /// <value>
         /// The MFA TOTP device's current state.
         /// 
@@ -92,7 +92,7 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The detailed status of INACTIVE lifecycleState.
         /// Allowed values are:
@@ -104,7 +104,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
-
+        
         /// <value>
         /// Flag to indicate if the MFA TOTP device has been activated
         /// </value>
@@ -114,5 +114,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IsActivated is required.")]
         [JsonProperty(PropertyName = "isActivated")]
         public System.Nullable<bool> IsActivated { get; set; }
+        
     }
 }

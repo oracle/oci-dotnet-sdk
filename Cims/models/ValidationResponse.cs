@@ -26,5 +26,6 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isValidUser")]
         public System.Nullable<bool> IsValidUser { get; set; }
+        
     }
 }

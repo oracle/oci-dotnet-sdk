@@ -49,7 +49,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "executionPlanStrategy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ExecutionPlanStrategyEnum> ExecutionPlanStrategy { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the plan job that contains the execution plan used for this job,
         /// or `null` if no execution plan was used.
@@ -57,5 +57,8 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "executionPlanJobId")]
         public string ExecutionPlanJobId { get; set; }
+        
+        [JsonProperty(PropertyName = "operation")]
+        private readonly string operation = "APPLY";
     }
 }

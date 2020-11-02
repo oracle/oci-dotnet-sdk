@@ -26,5 +26,18 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<TableSummary> Items { get; set; }
+        
+        /// <value>
+        /// The maximum number of reclaimable tables allowed in the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "maxAutoReclaimableTables")]
+        public System.Nullable<int> MaxAutoReclaimableTables { get; set; }
+        
+        /// <value>
+        /// The current number of reclaimable tables in the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "autoReclaimableTables")]
+        public System.Nullable<int> AutoReclaimableTables { get; set; }
+        
     }
 }

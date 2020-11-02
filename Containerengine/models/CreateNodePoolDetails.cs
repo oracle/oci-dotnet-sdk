@@ -30,7 +30,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the cluster to which this node pool is attached.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "ClusterId is required.")]
         [JsonProperty(PropertyName = "clusterId")]
         public string ClusterId { get; set; }
-
+        
         /// <value>
         /// The name of the node pool. Avoid entering confidential information.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes to install on the nodes in the node pool.
         /// </value>
@@ -60,13 +60,13 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "KubernetesVersion is required.")]
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to each underlying OCI instance in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "nodeMetadata")]
         public System.Collections.Generic.Dictionary<string, string> NodeMetadata { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use `nodeSourceDetails` instead.
         /// If you specify values for both, this value is ignored.
@@ -75,14 +75,14 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "nodeImageName")]
         public string NodeImageName { get; set; }
-
+        
         /// <value>
         /// Specify the source to use to launch nodes in the node pool. Currently, image is the only supported source.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeSourceDetails")]
         public NodeSourceDetails NodeSourceDetails { get; set; }
-
+        
         /// <value>
         /// The name of the node shape of the nodes in the node pool.
         /// </value>
@@ -92,26 +92,26 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "NodeShape is required.")]
         [JsonProperty(PropertyName = "nodeShape")]
         public string NodeShape { get; set; }
-
+        
         /// <value>
         /// Specify the configuration of the shape to launch nodes in the node pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeShapeConfig")]
         public CreateNodeShapeConfigDetails NodeShapeConfig { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to nodes after they join the Kubernetes cluster.
         /// </value>
         [JsonProperty(PropertyName = "initialNodeLabels")]
         public System.Collections.Generic.List<KeyValue> InitialNodeLabels { get; set; }
-
+        
         /// <value>
         /// The SSH public key on each node in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKey")]
         public string SshPublicKey { get; set; }
-
+        
         /// <value>
         /// Optional, default to 1. The number of nodes to create in each subnet specified in subnetIds property.
         /// When used, subnetIds is required. This property is deprecated, use nodeConfigDetails instead.
@@ -119,7 +119,7 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "quantityPerSubnet")]
         public System.Nullable<int> QuantityPerSubnet { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the subnets in which to place nodes for this node pool. When used, quantityPerSubnet
         /// can be provided. This property is deprecated, use nodeConfigDetails. Exactly one of the
@@ -128,7 +128,7 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
-
+        
         /// <value>
         /// The configuration of nodes in the node pool. Exactly one of the
         /// subnetIds or nodeConfigDetails properties must be specified.
@@ -136,5 +136,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "nodeConfigDetails")]
         public CreateNodePoolNodeConfigDetails NodeConfigDetails { get; set; }
+        
     }
 }

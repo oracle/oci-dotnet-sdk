@@ -26,8 +26,11 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "javaTypeName")]
         public string JavaTypeName { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "JAVA_TYPE";
     }
 }

@@ -27,19 +27,19 @@ namespace Oci.LimitsService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The service name of the limit.
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// The limit description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// Reflects the scope of the resource limit: which can be Global (across all regions), regional or ad specific.
         /// 
@@ -61,14 +61,14 @@ namespace Oci.LimitsService.Models
         [JsonProperty(PropertyName = "scopeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScopeTypeEnum> ScopeType { get; set; }
-
+        
         /// <value>
         /// If true, quota policies can be created on top of this resource limit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "areQuotasSupported")]
         public System.Nullable<bool> AreQuotasSupported { get; set; }
-
+        
         /// <value>
         /// Reflects if the GetResourceAvailability API is supported for this limit or not.
         /// If not, the API will return an empty JSON response.
@@ -76,5 +76,6 @@ namespace Oci.LimitsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isResourceAvailabilitySupported")]
         public System.Nullable<bool> IsResourceAvailabilitySupported { get; set; }
+        
     }
 }

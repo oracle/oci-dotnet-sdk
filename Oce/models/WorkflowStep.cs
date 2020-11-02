@@ -26,11 +26,12 @@ namespace Oci.OceService.Models
         /// </value>
         [JsonProperty(PropertyName = "stepName")]
         public string StepName { get; set; }
-
+        
         /// <value>
         /// workflow step status
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
+        
     }
 }

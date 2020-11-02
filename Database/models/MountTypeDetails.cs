@@ -33,16 +33,7 @@ namespace Oci.DatabaseService.Models
             AutomatedMount
         };
 
-        /// <value>
-        /// Mount type for backup destination.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MountType is required.")]
-        [JsonProperty(PropertyName = "mountType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MountTypeEnum> MountType { get; set; }
+        
     }
 
     public class MountTypeDetailsModelConverter : JsonConverter

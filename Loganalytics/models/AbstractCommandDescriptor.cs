@@ -105,18 +105,7 @@ namespace Oci.LoganalyticsService.Models
             HighlightRows
         };
 
-        /// <value>
-        /// Name of querylanguage command
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
-        [JsonProperty(PropertyName = "name")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NameEnum> Name { get; set; }
-
+        
         /// <value>
         /// Command fragment display string from user specified query string formatted by query builder.
         /// 
@@ -127,7 +116,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "DisplayQueryString is required.")]
         [JsonProperty(PropertyName = "displayQueryString")]
         public string DisplayQueryString { get; set; }
-
+        
         /// <value>
         /// Command fragment internal string from user specified query string formatted by query builder.
         /// 
@@ -138,27 +127,28 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalQueryString is required.")]
         [JsonProperty(PropertyName = "internalQueryString")]
         public string InternalQueryString { get; set; }
-
+        
         /// <value>
         /// querylanguage command designation for example; reporting vs filtering
         /// 
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-
+        
         /// <value>
         /// Fields referenced in command fragment from user specified query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "referencedFields")]
         public System.Collections.Generic.List<AbstractField> ReferencedFields { get; set; }
-
+        
         /// <value>
         /// Fields declared in command fragment from user specified query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "declaredFields")]
         public System.Collections.Generic.List<AbstractField> DeclaredFields { get; set; }
+        
     }
 
     public class AbstractCommandDescriptorModelConverter : JsonConverter

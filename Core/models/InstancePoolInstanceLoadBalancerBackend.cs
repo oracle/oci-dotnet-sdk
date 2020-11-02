@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-
+        
         /// <value>
         /// The name of the backend set on the load balancer.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BackendSetName is required.")]
         [JsonProperty(PropertyName = "backendSetName")]
         public string BackendSetName { get; set; }
-
+        
         /// <value>
         /// The name of the backend in the backend set.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BackendName is required.")]
         [JsonProperty(PropertyName = "backendName")]
         public string BackendName { get; set; }
-        ///
+                ///
         /// <value>
         /// The health of the backend as observed by the load balancer.
         /// </value>
@@ -76,5 +76,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "backendHealthStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BackendHealthStatusEnum> BackendHealthStatus { get; set; }
+        
     }
 }

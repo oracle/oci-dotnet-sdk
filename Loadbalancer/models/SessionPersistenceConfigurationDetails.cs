@@ -47,7 +47,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CookieName is required.")]
         [JsonProperty(PropertyName = "cookieName")]
         public string CookieName { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer is prevented from directing traffic from a persistent session client to
         /// a different backend server if the original server is unavailable. Defaults to false.
@@ -56,5 +56,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "disableFallback")]
         public System.Nullable<bool> DisableFallback { get; set; }
+        
     }
 }

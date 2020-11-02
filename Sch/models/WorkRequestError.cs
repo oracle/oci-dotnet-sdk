@@ -33,7 +33,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human readable description of the issue encountered.
         /// 
@@ -44,7 +44,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time when the error occurred.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -56,5 +56,6 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

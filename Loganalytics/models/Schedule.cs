@@ -33,17 +33,7 @@ namespace Oci.LoganalyticsService.Models
             Cron
         };
 
-        /// <value>
-        /// Schedule type discriminator.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
-        ///
+                ///
         /// <value>
         /// Schedule misfire retry policy.
         /// </value>
@@ -63,6 +53,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "misfirePolicy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MisfirePolicyEnum> MisfirePolicy { get; set; }
+        
     }
 
     public class ScheduleModelConverter : JsonConverter

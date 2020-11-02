@@ -48,12 +48,13 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<int> Value { get; set; }
+        
     }
 }

@@ -28,12 +28,15 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
-
+        
         /// <value>
         /// Literal value specified in queryString.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public System.Object Value { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "LITERAL";
     }
 }

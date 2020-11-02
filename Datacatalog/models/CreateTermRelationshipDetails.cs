@@ -32,13 +32,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the term relationship usually defined at the time of creation.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Unique id of the related term.
         /// </value>
@@ -48,5 +48,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "RelatedTermKey is required.")]
         [JsonProperty(PropertyName = "relatedTermKey")]
         public string RelatedTermKey { get; set; }
+        
     }
 }

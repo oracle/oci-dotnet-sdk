@@ -32,7 +32,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name of the Analytics instance. This name must be unique in the tenancy and cannot be changed.
         /// 
@@ -43,14 +43,14 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Optional description.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// 
@@ -61,7 +61,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The current state of an instance.
         /// 
@@ -73,7 +73,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AnalyticsInstanceLifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Analytics feature set.
         /// 
@@ -85,14 +85,14 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "featureSet")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FeatureSet> FeatureSet { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
-
+        
         /// <value>
         /// The license used for the service.
         /// 
@@ -100,28 +100,28 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "licenseType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseType> LicenseType { get; set; }
-
+        
         /// <value>
         /// Email address receiving notifications.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "emailNotification")]
         public string EmailNotification { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "NetworkEndpointDetails is required.")]
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
-
+        
         /// <value>
         /// URL of the Analytics service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceUrl")]
         public string ServiceUrl { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -130,7 +130,7 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -139,7 +139,7 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The date and time the instance was created, in the format defined by RFC3339.
         /// <br/>
@@ -151,7 +151,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the instance was last updated (in the format defined by RFC3339).
         /// This timestamp represents updates made through this API. External events do not
@@ -160,5 +160,6 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

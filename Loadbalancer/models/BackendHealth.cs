@@ -65,7 +65,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// A list of the most recent health check results returned for the specified backend server.
         /// 
@@ -76,5 +76,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "HealthCheckResults is required.")]
         [JsonProperty(PropertyName = "healthCheckResults")]
         public System.Collections.Generic.List<HealthCheckResult> HealthCheckResults { get; set; }
+        
     }
 }

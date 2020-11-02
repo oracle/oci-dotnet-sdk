@@ -26,11 +26,14 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "wrappedType")]
         public System.Object WrappedType { get; set; }
-
+        
         [JsonProperty(PropertyName = "configValues")]
         public ConfigValues ConfigValues { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "CONFIGURED_TYPE";
     }
 }

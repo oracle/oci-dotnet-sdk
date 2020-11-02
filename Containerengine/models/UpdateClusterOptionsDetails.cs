@@ -26,5 +26,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "admissionControllerOptions")]
         public AdmissionControllerOptions AdmissionControllerOptions { get; set; }
+        
     }
 }

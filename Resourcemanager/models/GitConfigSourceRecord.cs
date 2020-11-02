@@ -33,23 +33,26 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "ConfigurationSourceProviderId is required.")]
         [JsonProperty(PropertyName = "configurationSourceProviderId")]
         public string ConfigurationSourceProviderId { get; set; }
-
+        
         /// <value>
         /// The URL of the Git repository.
         /// </value>
         [JsonProperty(PropertyName = "repositoryUrl")]
         public string RepositoryUrl { get; set; }
-
+        
         /// <value>
         /// The name of the branch within the Git repository.
         /// </value>
         [JsonProperty(PropertyName = "branchName")]
         public string BranchName { get; set; }
-
+        
         /// <value>
         /// The unique identifier (SHA-1 hash) of the individual change to the Git repository.
         /// </value>
         [JsonProperty(PropertyName = "commitId")]
         public string CommitId { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceRecordType")]
+        private readonly string configSourceRecordType = "GIT_CONFIG_SOURCE";
     }
 }

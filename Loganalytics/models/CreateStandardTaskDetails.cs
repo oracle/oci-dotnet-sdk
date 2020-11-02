@@ -34,7 +34,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "taskType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TaskType> TaskType { get; set; }
-
+        
         /// <value>
         /// Schedules, typically a single schedule.
         /// </value>
@@ -44,12 +44,15 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Schedules is required.")]
         [JsonProperty(PropertyName = "schedules")]
         public System.Collections.Generic.List<Schedule> Schedules { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
         public Action Action { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "STANDARD";
     }
 }

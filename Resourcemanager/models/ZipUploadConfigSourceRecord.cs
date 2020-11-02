@@ -21,5 +21,8 @@ namespace Oci.ResourcemanagerService.Models
     /// </summary>
     public class ZipUploadConfigSourceRecord : ConfigSourceRecord
     {
-            }
+        
+        [JsonProperty(PropertyName = "configSourceRecordType")]
+        private readonly string configSourceRecordType = "ZIP_UPLOAD";
+    }
 }

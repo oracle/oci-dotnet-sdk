@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CrossConnectId is required.")]
         [JsonProperty(PropertyName = "crossConnectId")]
         public string CrossConnectId { get; set; }
-        ///
+                ///
         /// <value>
         /// Whether Oracle's side of the interface is up or down.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "interfaceState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InterfaceStateEnum> InterfaceState { get; set; }
-
+        
         /// <value>
         /// The light level of the cross-connect (in dBm).
         /// <br/>
@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "lightLevelIndBm")]
         public System.Nullable<float> LightLevelIndBm { get; set; }
-        ///
+                ///
         /// <value>
         /// Status indicator corresponding to the light level.
         /// <br/>
@@ -102,5 +102,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lightLevelIndicator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LightLevelIndicatorEnum> LightLevelIndicator { get; set; }
+        
     }
 }

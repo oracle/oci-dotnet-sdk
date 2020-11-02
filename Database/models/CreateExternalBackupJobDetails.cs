@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where this backup should be created.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the backup. This name does not have to be unique.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Database version.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbVersion is required.")]
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-
+        
         /// <value>
         /// The name of the database from which the backup is being taken.
         /// </value>
@@ -68,19 +68,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The `DB_UNIQUE_NAME` of the Oracle Database being backed up.
         /// </value>
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }
-
+        
         /// <value>
         /// The pluggable database name.
         /// </value>
         [JsonProperty(PropertyName = "pdbName")]
         public string PdbName { get; set; }
-
+        
         /// <value>
         /// The `DBID` of the Oracle Database being backed up.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ExternalDatabaseIdentifier is required.")]
         [JsonProperty(PropertyName = "externalDatabaseIdentifier")]
         public System.Nullable<long> ExternalDatabaseIdentifier { get; set; }
-
+        
         /// <value>
         /// The character set for the database.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CharacterSet is required.")]
         [JsonProperty(PropertyName = "characterSet")]
         public string CharacterSet { get; set; }
-
+        
         /// <value>
         /// The national character set for the database.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "NcharacterSet is required.")]
         [JsonProperty(PropertyName = "ncharacterSet")]
         public string NcharacterSet { get; set; }
-        ///
+                ///
         /// <value>
         /// The mode (single instance or RAC) of the database being backed up.
         /// </value>
@@ -132,7 +132,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseModeEnum> DatabaseMode { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle Database edition to use for creating a database from this standalone backup.
         /// Note that 2-node RAC DB systems require Enterprise Edition - Extreme Performance.
@@ -162,5 +162,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseEdition")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
+        
     }
 }

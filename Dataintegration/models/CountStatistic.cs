@@ -30,5 +30,6 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "ObjectTypeCountList is required.")]
         [JsonProperty(PropertyName = "objectTypeCountList")]
         public System.Collections.Generic.List<CountStatisticSummary> ObjectTypeCountList { get; set; }
+        
     }
 }

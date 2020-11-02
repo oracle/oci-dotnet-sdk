@@ -33,18 +33,7 @@ namespace Oci.LoggingService.Models
             Ociservice
         };
 
-        /// <value>
-        /// The log source.
-        /// * **OCISERVICE:** Oracle Service.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceTypeEnum> SourceType { get; set; }
+        
     }
 
     public class SourceModelConverter : JsonConverter

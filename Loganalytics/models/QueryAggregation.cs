@@ -28,56 +28,56 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "totalCount")]
         public System.Nullable<int> TotalCount { get; set; }
-
+        
         /// <value>
         /// Number of rows matched by query.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalMatchedCount")]
         public System.Nullable<long> TotalMatchedCount { get; set; }
-
+        
         /// <value>
         /// True if query did not complete processing all data.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arePartialResults")]
         public System.Nullable<bool> ArePartialResults { get; set; }
-
+        
         /// <value>
         /// Explanation of why results may be partial. Only set if isPartialResults is true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partialResultReason")]
         public string PartialResultReason { get; set; }
-
+        
         /// <value>
         /// Query result columns
         /// 
         /// </value>
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<AbstractColumn> Columns { get; set; }
-
+        
         /// <value>
         /// Query result fields
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<AbstractColumn> Fields { get; set; }
-
+        
         /// <value>
         /// Query result data
         /// 
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> Items { get; set; }
-
+        
         /// <value>
         /// Time ellapsed executing query in milli-seconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryExecutionTimeInMs")]
         public System.Nullable<long> QueryExecutionTimeInMs { get; set; }
-
+        
         /// <value>
         /// Percentage progress completion of the query.
         /// 
@@ -88,5 +88,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<int> PercentComplete { get; set; }
+        
     }
 }

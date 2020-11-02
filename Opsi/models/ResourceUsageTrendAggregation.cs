@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "EndTimestamp is required.")]
         [JsonProperty(PropertyName = "endTimestamp")]
         public System.Nullable<System.DateTime> EndTimestamp { get; set; }
-
+        
         /// <value>
         /// Total amount used of the resource metric type (CPU, STORAGE).
         /// 
@@ -41,7 +41,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Usage is required.")]
         [JsonProperty(PropertyName = "usage")]
         public System.Double Usage { get; set; }
-
+        
         /// <value>
         /// The maximum allocated amount of the resource metric type  (CPU, STORAGE).
         /// 
@@ -52,5 +52,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public System.Double Capacity { get; set; }
+        
     }
 }

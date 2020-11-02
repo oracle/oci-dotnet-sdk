@@ -26,41 +26,44 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// Reference to a typed object, this can be either a key value to an object within the document, a shall referenced to a `TypedObject` or a full `TypedObject` definition.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Object Scope { get; set; }
-
+        
         /// <value>
         /// Specifies whether it is ordered by rule.
         /// </value>
         [JsonProperty(PropertyName = "isOrderByRule")]
         public System.Nullable<bool> IsOrderByRule { get; set; }
-
+        
         /// <value>
         /// The projection rules.
         /// </value>
         [JsonProperty(PropertyName = "projectionRules")]
         public System.Collections.Generic.List<ProjectionRule> ProjectionRules { get; set; }
-
+        
         [JsonProperty(PropertyName = "configValues")]
         public ConfigValues ConfigValues { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "RULE_TYPE_CONFIGS";
     }
 }

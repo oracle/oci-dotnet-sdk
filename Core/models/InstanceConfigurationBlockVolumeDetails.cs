@@ -24,14 +24,15 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "attachDetails")]
         public InstanceConfigurationAttachVolumeDetails AttachDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "createDetails")]
         public InstanceConfigurationCreateVolumeDetails CreateDetails { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume.
         /// </value>
         [JsonProperty(PropertyName = "volumeId")]
         public string VolumeId { get; set; }
+        
     }
 }

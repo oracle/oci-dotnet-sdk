@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// DisplayName of detector recipe
         /// </value>
@@ -40,13 +40,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detector recipe description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// compartmentId of detector recipe
         /// </value>
@@ -56,13 +56,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Recipe Ocid of the Source Recipe to be cloned
         /// </value>
         [JsonProperty(PropertyName = "sourceDetectorRecipeId")]
         public string SourceDetectorRecipeId { get; set; }
-
+        
         /// <value>
         /// Owner of detector recipe
         /// </value>
@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "owner")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OwnerType> Owner { get; set; }
-
+        
         /// <value>
         /// Type of detector
         /// </value>
@@ -84,46 +84,46 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "detector")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
-
+        
         /// <value>
         /// List of detetor rules for the detector type
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<DetectorRecipeDetectorRule> DetectorRules { get; set; }
-
+        
         /// <value>
         /// The date and time the detector recipe was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the detector recipe was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -133,5 +133,6 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

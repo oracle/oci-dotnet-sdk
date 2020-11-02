@@ -33,7 +33,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "SourceName is required.")]
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// The new name of the source object.
         /// </value>
@@ -43,23 +43,24 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "NewName is required.")]
         [JsonProperty(PropertyName = "newName")]
         public string NewName { get; set; }
-
+        
         /// <value>
         /// The if-match entity tag (ETag) of the source object.
         /// </value>
         [JsonProperty(PropertyName = "srcObjIfMatchETag")]
         public string SrcObjIfMatchETag { get; set; }
-
+        
         /// <value>
         /// The if-match entity tag (ETag) of the new object.
         /// </value>
         [JsonProperty(PropertyName = "newObjIfMatchETag")]
         public string NewObjIfMatchETag { get; set; }
-
+        
         /// <value>
         /// The if-none-match entity tag (ETag) of the new object.
         /// </value>
         [JsonProperty(PropertyName = "newObjIfNoneMatchETag")]
         public string NewObjIfNoneMatchETag { get; set; }
+        
     }
 }

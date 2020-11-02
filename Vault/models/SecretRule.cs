@@ -33,16 +33,7 @@ namespace Oci.VaultService.Models
             SecretReuseRule
         };
 
-        /// <value>
-        /// The type of rule, which either controls when the secret contents expire or whether they can be reused.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RuleType is required.")]
-        [JsonProperty(PropertyName = "ruleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<RuleTypeEnum> RuleType { get; set; }
+        
     }
 
     public class SecretRuleModelConverter : JsonConverter

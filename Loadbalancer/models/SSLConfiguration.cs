@@ -37,7 +37,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "VerifyDepth is required.")]
         [JsonProperty(PropertyName = "verifyDepth")]
         public System.Nullable<int> VerifyDepth { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer listener should verify peer certificates.
         /// <br/>
@@ -49,7 +49,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "VerifyPeerCertificate is required.")]
         [JsonProperty(PropertyName = "verifyPeerCertificate")]
         public System.Nullable<bool> VerifyPeerCertificate { get; set; }
-
+        
         /// <value>
         /// A friendly name for the certificate bundle. It must be unique and it cannot be changed.
         /// Valid certificate bundle names include only alphanumeric characters, dashes, and underscores.
@@ -63,7 +63,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CertificateName is required.")]
         [JsonProperty(PropertyName = "certificateName")]
         public string CertificateName { get; set; }
-        ///
+                ///
         /// <value>
         /// When this attribute is set to ENABLED, the system gives preference to the server ciphers over the client
         /// ciphers.
@@ -91,7 +91,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "serverOrderPreference")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ServerOrderPreferenceEnum> ServerOrderPreference { get; set; }
-
+        
         /// <value>
         /// The name of the cipher suite to use for HTTPS or SSL connections.
         /// <br/>
@@ -121,7 +121,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "cipherSuiteName")]
         public string CipherSuiteName { get; set; }
-
+        
         /// <value>
         /// A list of SSL protocols the load balancer must support for HTTPS or SSL connections.
         /// <br/>
@@ -150,5 +150,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "protocols")]
         public System.Collections.Generic.List<string> Protocols { get; set; }
+        
     }
 }

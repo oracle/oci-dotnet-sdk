@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// SQL performance statistic value
         /// 
@@ -42,5 +42,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Values is required.")]
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<System.Double> Values { get; set; }
+        
     }
 }

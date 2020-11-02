@@ -26,5 +26,6 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "parent")]
         public string Parent { get; set; }
+        
     }
 }

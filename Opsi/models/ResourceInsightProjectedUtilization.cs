@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Low is required.")]
         [JsonProperty(PropertyName = "low")]
         public System.Collections.Generic.List<ResourceInsightProjectedUtilizationItem> Low { get; set; }
-
+        
         /// <value>
         /// List of db ids with high usage
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "High is required.")]
         [JsonProperty(PropertyName = "high")]
         public System.Collections.Generic.List<ResourceInsightProjectedUtilizationItem> High { get; set; }
+        
     }
 }

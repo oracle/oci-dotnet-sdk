@@ -21,8 +21,9 @@ namespace Oci.KeymanagementService.Models
         
         [JsonProperty(PropertyName = "backupLocation")]
         public BackupLocation BackupLocation { get; set; }
-
+        
         [JsonProperty(PropertyName = "isIncludeKeys")]
         public System.Nullable<bool> IsIncludeKeys { get; set; }
+        
     }
 }

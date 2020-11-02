@@ -28,5 +28,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BootVolumeId is required.")]
         [JsonProperty(PropertyName = "bootVolumeId")]
         public string BootVolumeId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "bootVolume";
     }
 }

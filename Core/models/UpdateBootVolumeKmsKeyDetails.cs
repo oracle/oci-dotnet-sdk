@@ -27,5 +27,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
     }
 }

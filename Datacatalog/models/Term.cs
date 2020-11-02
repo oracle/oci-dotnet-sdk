@@ -33,7 +33,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -41,105 +41,106 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the term.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Unique id of the parent glossary.
         /// </value>
         [JsonProperty(PropertyName = "glossaryKey")]
         public string GlossaryKey { get; set; }
-
+        
         /// <value>
         /// This terms parent term key. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermKey")]
         public string ParentTermKey { get; set; }
-
+        
         /// <value>
         /// Indicates whether a term may contain child terms.
         /// </value>
         [JsonProperty(PropertyName = "isAllowedToHaveChildTerms")]
         public System.Nullable<bool> IsAllowedToHaveChildTerms { get; set; }
-
+        
         /// <value>
         /// Absolute path of the term.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The current state of the term.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the term was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The last time that any change was made to the term. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the term.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who modified the term.
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who is the owner of this business terminology.
         /// </value>
         [JsonProperty(PropertyName = "owner")]
         public string Owner { get; set; }
-
+        
         /// <value>
         /// Status of the approval process workflow for this business term in the glossary.
         /// </value>
         [JsonProperty(PropertyName = "workflowStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TermWorkflowStatus> WorkflowStatus { get; set; }
-
+        
         /// <value>
         /// URI to the term instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// The number of objects tagged with this term
         /// </value>
         [JsonProperty(PropertyName = "associatedObjectCount")]
         public System.Nullable<int> AssociatedObjectCount { get; set; }
-
+        
         /// <value>
         /// Array of objects associated to a term.
         /// </value>
         [JsonProperty(PropertyName = "associatedObjects")]
         public System.Collections.Generic.List<TermAssociatedObject> AssociatedObjects { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertyGetUsage> CustomPropertyMembers { get; set; }
+        
     }
 }

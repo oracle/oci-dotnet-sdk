@@ -26,17 +26,18 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "level")]
         public string Level { get; set; }
-
+        
         /// <value>
         /// The validation message key.
         /// </value>
         [JsonProperty(PropertyName = "messageKey")]
         public string MessageKey { get; set; }
-
+        
         /// <value>
         /// The validation message.
         /// </value>
         [JsonProperty(PropertyName = "validationMessage")]
         public string ValidationMessageProp { get; set; }
+        
     }
 }

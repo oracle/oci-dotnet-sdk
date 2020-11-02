@@ -26,5 +26,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "customPropertyIds")]
         public System.Collections.Generic.List<string> CustomPropertyIds { get; set; }
+        
     }
 }

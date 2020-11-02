@@ -30,7 +30,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// The way in which this resource is affected by the work tracked in the work request.
         /// A resource being created, updated, or deleted will remain in the IN_PROGRESS state until
@@ -45,7 +45,7 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypes> ActionType { get; set; }
-
+        
         /// <value>
         /// The identifier of the resource the work request affects.
         /// </value>
@@ -55,13 +55,13 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that the user can do a GET on to access the resource metadata
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
         /// section 14.29.
@@ -69,7 +69,7 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the request was started, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
         /// section 14.29.
@@ -77,7 +77,7 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the request was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
         /// section 14.29.
@@ -85,7 +85,7 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-
+        
         /// <value>
         /// Additional metadata about the resource that has been operated upon by
         /// this work request. For WorkRequests operationType WORK_DELIVERY the metadata will contain: workDeliveryStatus
@@ -95,5 +95,6 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Object Metadata { get; set; }
+        
     }
 }

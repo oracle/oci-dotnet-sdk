@@ -32,5 +32,8 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "cases")]
         public System.Collections.Generic.List<SteeringPolicyHealthRuleCase> Cases { get; set; }
+        
+        [JsonProperty(PropertyName = "ruleType")]
+        private readonly string ruleType = "HEALTH";
     }
 }

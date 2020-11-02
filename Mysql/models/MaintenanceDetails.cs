@@ -34,5 +34,6 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "windowStartTime")]
         public string WindowStartTime { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ActiveDataSizeInBytes is required.")]
         [JsonProperty(PropertyName = "activeDataSizeInBytes")]
         public System.Nullable<long> ActiveDataSizeInBytes { get; set; }
-
+        
         /// <value>
         /// number of bytes archived in object store
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ArchivedDataSizeInBytes is required.")]
         [JsonProperty(PropertyName = "archivedDataSizeInBytes")]
         public System.Nullable<long> ArchivedDataSizeInBytes { get; set; }
-
+        
         /// <value>
         /// number of bytes recalled from archived data in object store
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "RecalledArchivedDataSizeInBytes is required.")]
         [JsonProperty(PropertyName = "recalledArchivedDataSizeInBytes")]
         public System.Nullable<long> RecalledArchivedDataSizeInBytes { get; set; }
+        
     }
 }

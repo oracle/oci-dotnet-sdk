@@ -36,18 +36,7 @@ namespace Oci.ComputeinstanceagentService.Models
             ObjectStorageTuple
         };
 
-        /// <value>
-        /// The response type where the command reponse is made available
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OutputType is required.")]
-        [JsonProperty(PropertyName = "outputType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<OutputTypeEnum> OutputType { get; set; }
-
+        
         /// <value>
         /// command exit code.
         /// </value>
@@ -57,12 +46,13 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "ExitCode is required.")]
         [JsonProperty(PropertyName = "exitCode")]
         public System.Nullable<int> ExitCode { get; set; }
-
+        
         /// <value>
         /// optional status message that agent's can populate for additional troubleshooting.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 
     public class InstanceAgentCommandExecutionOutputContentModelConverter : JsonConverter

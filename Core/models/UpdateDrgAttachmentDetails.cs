@@ -26,7 +26,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table the DRG attachment will use.
         /// <br/>
@@ -38,5 +38,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
+        
     }
 }

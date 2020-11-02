@@ -26,41 +26,42 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
-
+        
         /// <value>
         /// source name
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// source type internal name
         /// </value>
         [JsonProperty(PropertyName = "sourceTypeName")]
         public string SourceTypeName { get; set; }
-
+        
         /// <value>
         /// entity GUID
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
-
+        
         /// <value>
         /// entity type internal name
         /// </value>
         [JsonProperty(PropertyName = "entityTypeName")]
         public string EntityTypeName { get; set; }
-
+        
         /// <value>
         /// host name
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// log group ocid
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
+        
     }
 }

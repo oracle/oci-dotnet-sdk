@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ByoipRangeId is required.")]
         [JsonProperty(PropertyName = "byoipRangeId")]
         public string ByoipRangeId { get; set; }
-
+        
         /// <value>
         /// The CIDR IP address range to be added to the Public Ip Pool
         /// Example: 10.0.1.0/24
@@ -41,5 +41,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
     }
 }

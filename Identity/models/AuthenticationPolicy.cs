@@ -24,14 +24,15 @@ namespace Oci.IdentityService.Models
         
         [JsonProperty(PropertyName = "passwordPolicy")]
         public PasswordPolicy PasswordPolicy { get; set; }
-
+        
         /// <value>
         /// Compartment OCID.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "networkPolicy")]
         public NetworkPolicy NetworkPolicy { get; set; }
+        
     }
 }

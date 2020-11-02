@@ -41,7 +41,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the alarm. It does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -56,7 +56,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the alarm.
         /// 
@@ -67,7 +67,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the metric
         /// being evaluated by the alarm.
@@ -79,7 +79,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "MetricCompartmentId is required.")]
         [JsonProperty(PropertyName = "metricCompartmentId")]
         public string MetricCompartmentId { get; set; }
-
+        
         /// <value>
         /// When true, the alarm evaluates metrics from all compartments and subcompartments. The parameter can
         /// only be set to true when metricCompartmentId is the tenancy OCID (the tenancy is the root compartment).
@@ -91,7 +91,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "metricCompartmentIdInSubtree")]
         public System.Nullable<bool> MetricCompartmentIdInSubtree { get; set; }
-
+        
         /// <value>
         /// The source service or application emitting the metric that is evaluated by the alarm.
         /// <br/>
@@ -103,7 +103,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group specified as a filter for metric data retrieved by the alarm. A resource group is a custom string that can be used as a filter. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -113,7 +113,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// The Monitoring Query Language (MQL) expression to evaluate for the alarm. The Alarms feature of 
         /// the Monitoring service interprets results for each returned time series as Boolean values, 
@@ -148,14 +148,14 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Query is required.")]
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
-
+        
         /// <value>
         /// The time between calculated aggregation windows for the alarm. Supported value: `1m`
         /// 
         /// </value>
         [JsonProperty(PropertyName = "resolution")]
         public string Resolution { get; set; }
-
+        
         /// <value>
         /// The period of time that the condition defined in the alarm must persist before the alarm state 
         /// changes from \"OK\" to \"FIRING\". For example, a value of 5 minutes means that the 
@@ -175,7 +175,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "pendingDuration")]
         public string PendingDuration { get; set; }
-        ///
+                ///
         /// <value>
         /// The perceived type of response required when the alarm is in the \"FIRING\" state.
         /// <br/>
@@ -205,7 +205,7 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
-
+        
         /// <value>
         /// The human-readable content of the notification delivered. Oracle recommends providing guidance
         /// to operators for resolving the alarm condition. Consider adding links to standard runbook
@@ -215,7 +215,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
-
+        
         /// <value>
         /// A list of destinations to which the notifications for this alarm will be delivered. 
         /// Each destination is represented by an [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) related to the supported destination service.
@@ -229,7 +229,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Destinations is required.")]
         [JsonProperty(PropertyName = "destinations")]
         public System.Collections.Generic.List<string> Destinations { get; set; }
-
+        
         /// <value>
         /// The frequency at which notifications are re-submitted, if the alarm keeps firing without
         /// interruption. Format defined by ISO 8601. For example, `PT4H` indicates four hours.
@@ -241,14 +241,14 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "repeatNotificationDuration")]
         public string RepeatNotificationDuration { get; set; }
-
+        
         /// <value>
         /// The configuration details for suppressing an alarm.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "suppression")]
         public Suppression Suppression { get; set; }
-
+        
         /// <value>
         /// Whether the alarm is enabled.
         /// <br/>
@@ -260,21 +260,21 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the alarm.
         /// <br/>
@@ -302,7 +302,7 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the alarm was created. Format defined by RFC3339.
         /// <br/>
@@ -314,7 +314,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the alarm was last updated. Format defined by RFC3339.
         /// <br/>
@@ -326,5 +326,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

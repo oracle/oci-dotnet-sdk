@@ -26,19 +26,22 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadataUrl")]
         public string MetadataUrl { get; set; }
-
+        
         /// <value>
         /// The XML that contains the information required for federating.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public string Metadata { get; set; }
-
+        
         /// <value>
         /// Extra name value pairs associated with this identity provider.
         /// Example: {&quot;clientId&quot;: &quot;app_sf3kdjf3&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformAttributes")]
         public System.Collections.Generic.Dictionary<string, string> FreeformAttributes { get; set; }
+        
+        [JsonProperty(PropertyName = "protocol")]
+        private readonly string protocol = "SAML2";
     }
 }

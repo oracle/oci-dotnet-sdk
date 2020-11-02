@@ -31,19 +31,20 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// Restores using the backup with the System Change Number (SCN) specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSCN")]
         public string DatabaseSCN { get; set; }
-
+        
         /// <value>
         /// Restores to the last known good state with the least possible data loss.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "latest")]
         public System.Nullable<bool> Latest { get; set; }
+        
     }
 }

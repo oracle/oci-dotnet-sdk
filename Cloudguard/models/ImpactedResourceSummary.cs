@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Unique id of the Impacted Resource
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResourceId is required.")]
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// Problem Id to which the Impacted Resource is associated
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ProblemId is required.")]
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
-
+        
         /// <value>
         /// Compartment Id where the resource is created
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Name of the Impacted Resource
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResourceName is required.")]
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// Type of the Impacted Resource
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-
+        
         /// <value>
         /// Region where the resource is created
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Region is required.")]
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-
+        
         /// <value>
         /// Time when the problem was identified
         /// </value>
@@ -100,5 +100,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TimeIdentified is required.")]
         [JsonProperty(PropertyName = "timeIdentified")]
         public System.Nullable<System.DateTime> TimeIdentified { get; set; }
+        
     }
 }

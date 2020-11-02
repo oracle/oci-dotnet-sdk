@@ -25,5 +25,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "blocked")]
         public System.Nullable<bool> Blocked { get; set; }
+        
     }
 }

@@ -26,41 +26,42 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "extraInfoAttributes")]
         public System.Collections.Generic.Dictionary<string, string> ExtraInfoAttributes { get; set; }
-
+        
         /// <value>
         /// field name value map
         /// </value>
         [JsonProperty(PropertyName = "fieldNameValueMap")]
         public System.Collections.Generic.Dictionary<string, string> FieldNameValueMap { get; set; }
-
+        
         /// <value>
         /// field position value map
         /// </value>
         [JsonProperty(PropertyName = "fieldPositionValueMap")]
         public System.Collections.Generic.Dictionary<string, string> FieldPositionValueMap { get; set; }
-
+        
         /// <value>
         /// fields
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.Dictionary<string, string> Fields { get; set; }
-
+        
         /// <value>
         /// log entry
         /// </value>
         [JsonProperty(PropertyName = "logEntry")]
         public string LogEntry { get; set; }
-
+        
         /// <value>
         /// match status
         /// </value>
         [JsonProperty(PropertyName = "matchStatus")]
         public string MatchStatus { get; set; }
-
+        
         /// <value>
         /// match status description
         /// </value>
         [JsonProperty(PropertyName = "matchStatusDescription")]
         public string MatchStatusDescription { get; set; }
+        
     }
 }

@@ -27,5 +27,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ObjectLifecycleRule> Items { get; set; }
+        
     }
 }

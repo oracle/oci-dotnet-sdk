@@ -24,41 +24,42 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceDisplayName")]
         public string SourceDisplayName { get; set; }
-
+        
         /// <value>
         /// source internal name
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// source Id
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
-
+        
         /// <value>
         /// label Operator
         /// </value>
         [JsonProperty(PropertyName = "labelOperatorName")]
         public string LabelOperatorName { get; set; }
-
+        
         /// <value>
         /// label Condition
         /// </value>
         [JsonProperty(PropertyName = "labelCondition")]
         public string LabelCondition { get; set; }
-
+        
         /// <value>
         /// label Field Display Name
         /// </value>
         [JsonProperty(PropertyName = "labelFieldDisplayname")]
         public string LabelFieldDisplayname { get; set; }
-
+        
         /// <value>
         /// label Field name
         /// </value>
         [JsonProperty(PropertyName = "labelFieldName")]
         public string LabelFieldName { get; set; }
+        
     }
 }

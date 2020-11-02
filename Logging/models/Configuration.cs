@@ -26,15 +26,16 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public Source Source { get; set; }
-
+        
         [JsonProperty(PropertyName = "archiving")]
         public Archiving Archiving { get; set; }
+        
     }
 }

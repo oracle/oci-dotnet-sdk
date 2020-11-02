@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "authorizedEntityName")]
         public string AuthorizedEntityName { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of cross-connect fiber, termination, and optical specification.
         /// </value>
@@ -46,32 +46,32 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "circuitType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CircuitTypeEnum> CircuitType { get; set; }
-
+        
         /// <value>
         /// The OCID of the cross-connect.
         /// </value>
         [JsonProperty(PropertyName = "crossConnectId")]
         public string CrossConnectId { get; set; }
-
+        
         /// <value>
         /// The address of the FastConnect location.
         /// </value>
         [JsonProperty(PropertyName = "facilityLocation")]
         public string FacilityLocation { get; set; }
-
+        
         /// <value>
         /// The meet-me room port for this cross-connect.
         /// </value>
         [JsonProperty(PropertyName = "portName")]
         public string PortName { get; set; }
-
+        
         /// <value>
         /// The date and time when the Letter of Authority expires, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeExpires")]
         public System.Nullable<System.DateTime> TimeExpires { get; set; }
-
+        
         /// <value>
         /// The date and time the Letter of Authority was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -79,5 +79,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeIssued")]
         public System.Nullable<System.DateTime> TimeIssued { get; set; }
+        
     }
 }

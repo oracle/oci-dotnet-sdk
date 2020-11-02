@@ -29,5 +29,6 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "highlights")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> Highlights { get; set; }
+        
     }
 }

@@ -29,7 +29,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "activeStorageDuration")]
         public string ActiveStorageDuration { get; set; }
-
+        
         /// <value>
         /// duration before data is deleted from object storage, as described in
         /// https://en.wikipedia.org/wiki/ISO_8601#Durations
@@ -38,5 +38,6 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "archivalStorageDuration")]
         public string ArchivalStorageDuration { get; set; }
+        
     }
 }

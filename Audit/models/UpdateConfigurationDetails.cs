@@ -34,5 +34,6 @@ namespace Oci.AuditService.Models
         [Required(ErrorMessage = "RetentionPeriodDays is required.")]
         [JsonProperty(PropertyName = "retentionPeriodDays")]
         public System.Nullable<int> RetentionPeriodDays { get; set; }
+        
     }
 }

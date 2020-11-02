@@ -31,7 +31,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "previous")]
         public System.Collections.Generic.Dictionary<string, System.Object> Previous { get; set; }
-
+        
         /// <value>
         /// Provides the current state of fields that may have changed during an operation. To determine
         /// how the current operation changed a resource, compare the information in this attribute to 
@@ -40,5 +40,6 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "current")]
         public System.Collections.Generic.Dictionary<string, System.Object> Current { get; set; }
+        
     }
 }

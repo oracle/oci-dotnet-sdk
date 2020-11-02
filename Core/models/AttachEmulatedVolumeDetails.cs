@@ -18,5 +18,8 @@ namespace Oci.CoreService.Models
     
     public class AttachEmulatedVolumeDetails : AttachVolumeDetails
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "emulated";
+    }
 }

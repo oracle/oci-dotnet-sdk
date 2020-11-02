@@ -39,22 +39,7 @@ namespace Oci.WaasService.Models
             StickyCookie
         };
 
-        /// <value>
-        /// Load balancing methods are algorithms used to efficiently distribute traffic among origin servers.
-        /// <br/>
-        /// - **IP_HASH:** All the incoming requests from the same client IP address should go to the same content origination server. IP_HASH load balancing method uses origin weights when choosing which origin should the hash be assigned to initially.
-        /// <br/>
-        /// - **ROUND_ROBIN:** Forwards requests sequentially to the available origin servers. The first request - to the first origin server, the second request - to the next origin server, and so on. After it sends a request to the last origin server, it starts again with the first origin server. When using weights on origins, Weighted Round Robin assigns more requests to origins with a greater weight. Over a period of time, origins will receive a number of requests in proportion to their weight.
-        /// <br/>
-        /// - **STICKY_COOKIE:** Adds a session cookie to the first response from the origin server and identifies the server that sent the response. The client's next request contains the cookie value, and nginx routes the request to the origin server that responded to the first request. STICKY_COOKIE load balancing method falls back to Round Robin for the first request.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Method is required.")]
-        [JsonProperty(PropertyName = "method")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MethodEnum> Method { get; set; }
+        
     }
 
     public class LoadBalancingMethodModelConverter : JsonConverter

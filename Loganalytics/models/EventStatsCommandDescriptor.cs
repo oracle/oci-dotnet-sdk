@@ -28,12 +28,15 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "groupByFields")]
         public System.Collections.Generic.List<AbstractField> GroupByFields { get; set; }
-
+        
         /// <value>
         /// Statistical functions specified in the query string. Atleast 1 is required for a EVENTSTATS command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "functions")]
         public System.Collections.Generic.List<FunctionField> Functions { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "EVENT_STATS";
     }
 }

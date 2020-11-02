@@ -31,7 +31,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> Status { get; set; }
-
+        
         /// <value>
         /// List of ProblemIds to be passed in to update the Problem status.
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ProblemIds is required.")]
         [JsonProperty(PropertyName = "problemIds")]
         public System.Collections.Generic.List<string> ProblemIds { get; set; }
+        
     }
 }

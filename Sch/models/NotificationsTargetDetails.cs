@@ -32,5 +32,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "TopicId is required.")]
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "notifications";
     }
 }

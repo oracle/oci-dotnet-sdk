@@ -23,17 +23,18 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "dataAsset")]
         public DataAsset DataAsset { get; set; }
-
+        
         [JsonProperty(PropertyName = "connection")]
         public Connection Connection { get; set; }
-
+        
         /// <value>
         /// The compartment ID of the object store.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "schema")]
         public Schema Schema { get; set; }
+        
     }
 }

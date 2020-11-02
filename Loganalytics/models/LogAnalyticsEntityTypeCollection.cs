@@ -31,5 +31,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsEntityTypeSummary> Items { get; set; }
+        
     }
 }

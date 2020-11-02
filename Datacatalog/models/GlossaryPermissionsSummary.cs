@@ -26,11 +26,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "glossaryKey")]
         public string GlossaryKey { get; set; }
-
+        
         /// <value>
         /// An array of permissions.
         /// </value>
         [JsonProperty(PropertyName = "userPermissions")]
         public System.Collections.Generic.List<string> UserPermissions { get; set; }
+        
     }
 }

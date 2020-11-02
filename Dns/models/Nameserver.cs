@@ -30,5 +30,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+        
     }
 }

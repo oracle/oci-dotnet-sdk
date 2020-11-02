@@ -30,5 +30,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "CatalogPrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "catalogPrivateEndpointId")]
         public string CatalogPrivateEndpointId { get; set; }
+        
     }
 }

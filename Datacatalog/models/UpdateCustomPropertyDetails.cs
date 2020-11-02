@@ -28,55 +28,55 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// If this field allows to sort from UI
         /// </value>
         [JsonProperty(PropertyName = "isSortable")]
         public System.Nullable<bool> IsSortable { get; set; }
-
+        
         /// <value>
         /// If this field allows to filter or create facets from UI
         /// </value>
         [JsonProperty(PropertyName = "isFilterable")]
         public System.Nullable<bool> IsFilterable { get; set; }
-
+        
         /// <value>
         /// If this field allows multiple values to be set
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
-
+        
         /// <value>
         /// If this field is a hidden field
         /// </value>
         [JsonProperty(PropertyName = "isHidden")]
         public System.Nullable<bool> IsHidden { get; set; }
-
+        
         /// <value>
         /// If this field is a editable field
         /// </value>
         [JsonProperty(PropertyName = "isEditable")]
         public System.Nullable<bool> IsEditable { get; set; }
-
+        
         /// <value>
         /// If this field is allowed to pop in search results
         /// </value>
         [JsonProperty(PropertyName = "isHiddenInSearch")]
         public System.Nullable<bool> IsHiddenInSearch { get; set; }
-
+        
         /// <value>
         /// Allowed values for the custom property if any
         /// </value>
         [JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.List<string> AllowedValues { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the asset type. Each data asset type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -86,5 +86,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

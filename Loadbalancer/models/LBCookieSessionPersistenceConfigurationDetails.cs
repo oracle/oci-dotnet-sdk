@@ -47,7 +47,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "cookieName")]
         public string CookieName { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer is prevented from directing traffic from a persistent session client to
         /// a different backend server if the original server is unavailable. Defaults to false.
@@ -56,7 +56,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "disableFallback")]
         public System.Nullable<bool> DisableFallback { get; set; }
-
+        
         /// <value>
         /// The domain in which the cookie is valid. The `Set-cookie` header inserted by the load balancer contains a
         /// domain attribute with the specified value.
@@ -84,7 +84,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The path in which the cookie is valid. The `Set-cookie header` inserted by the load balancer contains a `Path`
         /// attribute with the specified value.
@@ -98,7 +98,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The amount of time the cookie remains valid. The `Set-cookie` header inserted by the load balancer contains
         /// a `Max-Age` attribute with the specified value.
@@ -111,7 +111,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxAgeInSeconds")]
         public System.Nullable<int> MaxAgeInSeconds { get; set; }
-
+        
         /// <value>
         /// Whether the `Set-cookie` header should contain the `Secure` attribute. If `true`, the `Set-cookie` header
         /// inserted by the load balancer contains the `Secure` attribute, which directs the client or browser to send the
@@ -124,7 +124,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isSecure")]
         public System.Nullable<bool> IsSecure { get; set; }
-
+        
         /// <value>
         /// Whether the `Set-cookie` header should contain the `HttpOnly` attribute. If `true`, the `Set-cookie` header
         /// inserted by the load balancer contains the `HttpOnly` attribute, which limits the scope of the cookie to HTTP
@@ -135,5 +135,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isHttpOnly")]
         public System.Nullable<bool> IsHttpOnly { get; set; }
+        
     }
 }

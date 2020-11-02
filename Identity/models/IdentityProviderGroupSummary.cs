@@ -27,31 +27,31 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the `IdentityProvider` this group belongs to.
         /// </value>
         [JsonProperty(PropertyName = "identityProviderId")]
         public string IdentityProviderId { get; set; }
-
+        
         /// <value>
         /// Display name of the group
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Display name of the group
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Identifier of the group in the identity provider
         /// </value>
         [JsonProperty(PropertyName = "externalIdentifier")]
         public string ExternalIdentifier { get; set; }
-
+        
         /// <value>
         /// Date and time the `IdentityProviderGroup` was created, in the format defined by RFC3339.
         /// <br/>
@@ -59,7 +59,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Date and time the `IdentityProviderGroup` was last modified, in the format defined by RFC3339.
         /// <br/>
@@ -67,5 +67,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }
+        
     }
 }

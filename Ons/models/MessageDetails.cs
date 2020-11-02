@@ -27,7 +27,7 @@ namespace Oci.OnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
-
+        
         /// <value>
         /// The body of the message to be published.
         /// For `messageType` of JSON, a default key-value pair is required. Example: {&quot;default&quot;: &quot;Alarm breached&quot;, &quot;Email&quot;: &quot;Alarm breached: <url>&quot;}.Avoid entering confidential information.
@@ -38,5 +38,6 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Body is required.")]
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
+        
     }
 }

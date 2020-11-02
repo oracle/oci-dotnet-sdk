@@ -31,12 +31,15 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbSystemId is required.")]
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Database is required.")]
         [JsonProperty(PropertyName = "database")]
         public CreateDatabaseFromBackupDetails Database { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "DB_BACKUP";
     }
 }

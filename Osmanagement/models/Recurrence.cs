@@ -46,7 +46,7 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "intervalType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IntervalTypeEnum> IntervalType { get; set; }
-
+        
         /// <value>
         /// the value for the interval period for the recurrence
         /// </value>
@@ -56,5 +56,6 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "IntervalValue is required.")]
         [JsonProperty(PropertyName = "intervalValue")]
         public string IntervalValue { get; set; }
+        
     }
 }

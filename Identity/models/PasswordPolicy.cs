@@ -27,35 +27,36 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "minimumPasswordLength")]
         public System.Nullable<int> MinimumPasswordLength { get; set; }
-
+        
         /// <value>
         /// At least one uppercase character required.
         /// </value>
         [JsonProperty(PropertyName = "isUppercaseCharactersRequired")]
         public System.Nullable<bool> IsUppercaseCharactersRequired { get; set; }
-
+        
         /// <value>
         /// At least one lower case character required.
         /// </value>
         [JsonProperty(PropertyName = "isLowercaseCharactersRequired")]
         public System.Nullable<bool> IsLowercaseCharactersRequired { get; set; }
-
+        
         /// <value>
         /// At least one numeric character required.
         /// </value>
         [JsonProperty(PropertyName = "isNumericCharactersRequired")]
         public System.Nullable<bool> IsNumericCharactersRequired { get; set; }
-
+        
         /// <value>
         /// At least one special character required.
         /// </value>
         [JsonProperty(PropertyName = "isSpecialCharactersRequired")]
         public System.Nullable<bool> IsSpecialCharactersRequired { get; set; }
-
+        
         /// <value>
         /// User name is allowed to be part of the password.
         /// </value>
         [JsonProperty(PropertyName = "isUsernameContainmentAllowed")]
         public System.Nullable<bool> IsUsernameContainmentAllowed { get; set; }
+        
     }
 }

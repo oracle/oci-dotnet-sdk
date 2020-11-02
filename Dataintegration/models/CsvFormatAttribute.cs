@@ -26,41 +26,44 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "encoding")]
         public string Encoding { get; set; }
-
+        
         /// <value>
         /// The escape character for the CSV format.
         /// </value>
         [JsonProperty(PropertyName = "escapeCharacter")]
         public string EscapeCharacter { get; set; }
-
+        
         /// <value>
         /// The delimiter for the CSV format.
         /// </value>
         [JsonProperty(PropertyName = "delimiter")]
         public string Delimiter { get; set; }
-
+        
         /// <value>
         /// The quote character for the CSV format.
         /// </value>
         [JsonProperty(PropertyName = "quoteCharacter")]
         public string QuoteCharacter { get; set; }
-
+        
         /// <value>
         /// Defines whether the file has a header row.
         /// </value>
         [JsonProperty(PropertyName = "hasHeader")]
         public System.Nullable<bool> HasHeader { get; set; }
-
+        
         /// <value>
         /// Defines whether a file pattern is supported.
         /// </value>
         [JsonProperty(PropertyName = "isFilePattern")]
         public System.Nullable<bool> IsFilePattern { get; set; }
-
+        
         /// <value>
         /// Format for timestamp information.
         /// </value>
         [JsonProperty(PropertyName = "timestampFormat")]
         public string TimestampFormat { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "CSV_FORMAT";
     }
 }

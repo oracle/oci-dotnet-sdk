@@ -38,31 +38,31 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "blockAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BlockActionEnum> BlockAction { get; set; }
-
+        
         /// <value>
         /// The response code returned when `action` is set to `BLOCK`, `blockAction` is set to `SET_RESPONSE_CODE`, and the traffic is detected as malicious by a protection rule. If unspecified, defaults to `403`. The list of available response codes: `400`, `401`, `403`, `405`, `409`, `411`, `412`, `413`, `414`, `415`, `416`, `500`, `501`, `502`, `503`, `504`, `507`.
         /// </value>
         [JsonProperty(PropertyName = "blockResponseCode")]
         public System.Nullable<int> BlockResponseCode { get; set; }
-
+        
         /// <value>
         /// The message to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the traffic is detected as malicious by a protection rule. If unspecified, defaults to 'Access to the website is blocked.'
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageMessage")]
         public string BlockErrorPageMessage { get; set; }
-
+        
         /// <value>
         /// The error code to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the traffic is detected as malicious by a protection rule. If unspecified, defaults to `403`.
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageCode")]
         public string BlockErrorPageCode { get; set; }
-
+        
         /// <value>
         /// The description text to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the traffic is detected as malicious by a protection rule. If unspecified, defaults to `Access blocked by website owner. Please contact support.`
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageDescription")]
         public string BlockErrorPageDescription { get; set; }
-
+        
         /// <value>
         /// The maximum number of arguments allowed to be passed to your application before an action is taken. Arguements are query parameters or body parameters in a PUT or POST request. If unspecified, defaults to `255`. This setting only applies if a corresponding protection rule is enabled, such as the \"Number of Arguments Limits\" rule (key: 960335).
         /// <br/>
@@ -70,19 +70,19 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxArgumentCount")]
         public System.Nullable<int> MaxArgumentCount { get; set; }
-
+        
         /// <value>
         /// The maximum length allowed for each argument name, in characters. Arguements are query parameters or body parameters in a PUT or POST request. If unspecified, defaults to `400`. This setting only applies if a corresponding protection rule is enabled, such as the \"Values Limits\" rule (key: 960208).
         /// </value>
         [JsonProperty(PropertyName = "maxNameLengthPerArgument")]
         public System.Nullable<int> MaxNameLengthPerArgument { get; set; }
-
+        
         /// <value>
         /// The maximum length allowed for the sum of the argument name and value, in characters. Arguements are query parameters or body parameters in a PUT or POST request. If unspecified, defaults to `64000`. This setting only applies if a corresponding protection rule is enabled, such as the \"Total Arguments Limits\" rule (key: 960341).
         /// </value>
         [JsonProperty(PropertyName = "maxTotalNameLengthOfArguments")]
         public System.Nullable<int> MaxTotalNameLengthOfArguments { get; set; }
-
+        
         /// <value>
         /// The length of time to analyze traffic traffic, in days. After the analysis period, `WafRecommendations` will be populated. If unspecified, defaults to `10`.
         /// <br/>
@@ -90,7 +90,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "recommendationsPeriodInDays")]
         public System.Nullable<int> RecommendationsPeriodInDays { get; set; }
-
+        
         /// <value>
         /// Inspects the response body of origin responses. Can be used to detect leakage of sensitive data. If unspecified, defaults to `false`.
         /// <br/>
@@ -98,13 +98,13 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "isResponseInspected")]
         public System.Nullable<bool> IsResponseInspected { get; set; }
-
+        
         /// <value>
         /// The maximum response size to be fully inspected, in binary kilobytes (KiB). Anything over this limit will be partially inspected. If unspecified, defaults to `1024`.
         /// </value>
         [JsonProperty(PropertyName = "maxResponseSizeInKiB")]
         public System.Nullable<int> MaxResponseSizeInKiB { get; set; }
-        ///
+                ///
         ///
         public enum AllowedHttpMethodsEnum {
             [EnumMember(Value = "OPTIONS")]
@@ -134,7 +134,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "allowedHttpMethods", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<AllowedHttpMethodsEnum> AllowedHttpMethods { get; set; }
-
+        
         /// <value>
         /// The list of media types to allow for inspection, if `isResponseInspected` is enabled. Only responses with MIME types in this list will be inspected. If unspecified, defaults to `[\"text/html\", \"text/plain\", \"text/xml\"]`.
         /// <br/>
@@ -161,5 +161,6 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "mediaTypes")]
         public System.Collections.Generic.List<string> MediaTypes { get; set; }
+        
     }
 }

@@ -29,7 +29,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The optional private IP you want to be associated with your private stream pool.
         /// That parameter can only be specified when the subnetId parameter is set. It cannot be changed.
@@ -41,7 +41,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointIp")]
         public string PrivateEndpointIp { get; set; }
-
+        
         /// <value>
         /// The optional list of network security groups to be used with the private endpoint of the stream pool.
         /// That value cannot be changed.
@@ -49,5 +49,6 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
     }
 }

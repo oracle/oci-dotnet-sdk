@@ -30,7 +30,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Entries is required.")]
         [JsonProperty(PropertyName = "entries")]
         public System.Collections.Generic.List<LogEntry> Entries { get; set; }
-
+        
         /// <value>
         /// Source of the logs that generated the message. This could be the
         /// instance name, hostname, or the source used to read the event. For example, \"ServerA\".
@@ -42,7 +42,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
-
+        
         /// <value>
         /// This field signifies the type of logs being ingested.
         /// For Example: ServerA.requestLogs.
@@ -53,7 +53,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// This optional field is useful for specifying the specific sub-resource
         /// or input file used to read the event.
@@ -61,7 +61,7 @@ namespace Oci.LoggingingestionService.Models
         /// </value>
         [JsonProperty(PropertyName = "subject")]
         public string Subject { get; set; }
-
+        
         /// <value>
         /// The timestamp for all log entries in this batch. This can be
         /// considered as the default timestamp for each entry, unless it is
@@ -75,5 +75,6 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Defaultlogentrytime is required.")]
         [JsonProperty(PropertyName = "defaultlogentrytime")]
         public System.Nullable<System.DateTime> Defaultlogentrytime { get; set; }
+        
     }
 }

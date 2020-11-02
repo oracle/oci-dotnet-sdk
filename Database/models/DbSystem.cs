@@ -21,7 +21,7 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "iormConfigCache")]
         public ExadataIormConfig IormConfigCache { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system.
         /// </value>
@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the DB system. The name does not have to be unique.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The name of the availability domain that the DB system is located in.
         /// </value>
@@ -61,13 +61,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// List of the Fault Domains in which this DB system is provisioned.
         /// </value>
         [JsonProperty(PropertyName = "faultDomains")]
         public System.Collections.Generic.List<string> FaultDomains { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the DB system is associated with.
         /// <br/>
@@ -86,7 +86,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup network subnet the DB system is associated with. Applicable only to Exadata DB systems.
         /// <br/>
@@ -95,7 +95,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupSubnetId")]
         public string BackupSubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -104,14 +104,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that the backup network of this DB system belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm). Applicable only to Exadata systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupNetworkNsgIds")]
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
-
+        
         /// <value>
         /// The shape of the DB system. The shape determines resources to allocate to the DB system.
         /// - For virtual machine shapes, the number of CPU cores and memory
@@ -124,10 +124,10 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         [JsonProperty(PropertyName = "dbSystemOptions")]
         public DbSystemOptions DbSystemOptions { get; set; }
-
+        
         /// <value>
         /// The public key portion of one or more key pairs used for SSH access to the DB system.
         /// </value>
@@ -137,13 +137,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SshPublicKeys is required.")]
         [JsonProperty(PropertyName = "sshPublicKeys")]
         public System.Collections.Generic.List<string> SshPublicKeys { get; set; }
-
+        
         /// <value>
         /// The time zone of the DB system. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
-
+        
         /// <value>
         /// The hostname for the DB system.
         /// </value>
@@ -153,7 +153,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The domain name for the DB system.
         /// </value>
@@ -163,13 +163,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Domain is required.")]
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The Oracle Database version of the DB system.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// The number of CPU cores enabled on the DB system.
         /// </value>
@@ -179,14 +179,14 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The cluster name for Exadata and 2-node RAC virtual machine DB systems. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "clusterName")]
         public string ClusterName { get; set; }
-
+        
         /// <value>
         /// The percentage assigned to DATA storage (user data and database files).
         /// The remaining percentage is assigned to RECO storage (database redo logs, archive logs, and recovery manager backups). Accepted values are 40 and 80. The default is 80 percent assigned to DATA storage. Not applicable for virtual machine DB systems.
@@ -194,7 +194,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStoragePercentage")]
         public System.Nullable<int> DataStoragePercentage { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle Database edition that applies to all the databases on the DB system.
         /// 
@@ -222,19 +222,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseEdition")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last patch history. This value is updated as soon as a patch operation starts.
         /// </value>
         [JsonProperty(PropertyName = "lastPatchHistoryEntryId")]
         public string LastPatchHistoryEntryId { get; set; }
-
+        
         /// <value>
         /// The port number configured for the listener on the DB system.
         /// </value>
         [JsonProperty(PropertyName = "listenerPort")]
         public System.Nullable<int> ListenerPort { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the DB system.
         /// </value>
@@ -270,19 +270,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the DB system was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of redundancy configured for the DB system.
         /// NORMAL is 2-way redundancy.
@@ -306,14 +306,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "diskRedundancy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DiskRedundancyEnum> DiskRedundancy { get; set; }
-
+        
         /// <value>
         /// True, if Sparse Diskgroup is configured for Exadata dbsystem, False, if Sparse diskgroup was not configured.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sparseDiskgroup")]
         public System.Nullable<bool> SparseDiskgroup { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Single Client Access Name (SCAN) IP addresses associated with the DB system.
         /// SCAN IP addresses are typically used for load balancing and are not assigned to any interface.
@@ -324,7 +324,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "scanIpIds")]
         public System.Collections.Generic.List<string> ScanIpIds { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the virtual IP (VIP) addresses associated with the DB system.
         /// The Cluster Ready Services (CRS) creates and maintains one VIP address for each node in the DB system to
@@ -335,35 +335,35 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "vipIds")]
         public System.Collections.Generic.List<string> VipIds { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DNS record for the SCAN IP addresses that are associated with the DB system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scanDnsRecordId")]
         public string ScanDnsRecordId { get; set; }
-
+        
         /// <value>
         /// The data storage size, in gigabytes, that is currently available to the DB system. Applies only for virtual machine DB systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The RECO/REDO storage size, in gigabytes, that is currently allocated to the DB system. Applies only for virtual machine DB systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "recoStorageSizeInGB")]
         public System.Nullable<int> RecoStorageSizeInGB { get; set; }
-
+        
         /// <value>
         /// The number of nodes in the DB system. For RAC DB systems, the value is greater than 1.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeCount")]
         public System.Nullable<int> NodeCount { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to all the databases on the DB system. The default is LICENSE_INCLUDED.
         /// 
@@ -383,22 +383,22 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "lastMaintenanceRunId")]
         public string LastMaintenanceRunId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the next maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "nextMaintenanceRunId")]
         public string NextMaintenanceRunId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -407,7 +407,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -415,17 +415,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system.
         /// </value>
         [JsonProperty(PropertyName = "sourceDbSystemId")]
         public string SourceDbSystemId { get; set; }
-
+        
         /// <value>
         /// The point in time for a cloned database system when the data disks were cloned from the source database system, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "pointInTimeDataDiskCloneTimestamp")]
         public System.Nullable<System.DateTime> PointInTimeDataDiskCloneTimestamp { get; set; }
+        
     }
 }

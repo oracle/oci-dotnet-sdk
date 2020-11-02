@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The range of IPv4 addresses that will be used for layer 3 communication with
         /// hosts outside the VLAN.
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the VLAN.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -78,7 +78,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -87,7 +87,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The VLAN's Oracle ID (OCID).
         /// </value>
@@ -97,7 +97,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The VLAN's current state.
         /// </value>
@@ -125,7 +125,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A list of the OCIDs of the network security groups (NSGs) to use with this VLAN.
         /// All VNICs in the VLAN belong to these NSGs. For more
@@ -135,7 +135,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The IEEE 802.1Q VLAN tag of this VLAN.
         /// <br/>
@@ -143,13 +143,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanTag")]
         public System.Nullable<int> VlanTag { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table that the VLAN uses.
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-
+        
         /// <value>
         /// The date and time the VLAN was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -157,7 +157,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the VCN the VLAN is in.
         /// </value>
@@ -167,5 +167,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
+        
     }
 }

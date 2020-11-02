@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "BucketId is required.")]
         [JsonProperty(PropertyName = "bucketId")]
         public string BucketId { get; set; }
-
+        
         /// <value>
         /// Total number of SQL executions
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ExecutionsCount is required.")]
         [JsonProperty(PropertyName = "executionsCount")]
         public System.Nullable<long> ExecutionsCount { get; set; }
+        
     }
 }

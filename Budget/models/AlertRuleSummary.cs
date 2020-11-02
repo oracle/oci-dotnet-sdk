@@ -30,7 +30,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the budget
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "BudgetId is required.")]
         [JsonProperty(PropertyName = "budgetId")]
         public string BudgetId { get; set; }
-
+        
         /// <value>
         /// The name of the alert rule.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// ACTUAL means the alert will trigger based on actual usage.
         /// FORECAST means the alert will trigger based on predicted usage.
@@ -63,7 +63,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlertType> Type { get; set; }
-
+        
         /// <value>
         /// The threshold for triggering the alert. If thresholdType is PERCENTAGE, the maximum value is 10000.
         /// 
@@ -74,7 +74,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "Threshold is required.")]
         [JsonProperty(PropertyName = "threshold")]
         public System.Nullable<decimal> Threshold { get; set; }
-
+        
         /// <value>
         /// The type of threshold.
         /// </value>
@@ -85,7 +85,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "thresholdType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ThresholdType> ThresholdType { get; set; }
-
+        
         /// <value>
         /// The current state of the alert rule.
         /// </value>
@@ -96,25 +96,25 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Custom message that will be sent when alert is triggered
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The description of the alert rule.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Version of the alert rule. Starts from 1 and increments by 1.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<int> Version { get; set; }
-
+        
         /// <value>
         /// The audience that will receive the alert when it triggers.
         /// </value>
@@ -124,7 +124,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "Recipients is required.")]
         [JsonProperty(PropertyName = "recipients")]
         public string Recipients { get; set; }
-
+        
         /// <value>
         /// Time when budget was created
         /// </value>
@@ -134,7 +134,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time when budget was updated
         /// </value>
@@ -144,7 +144,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -153,7 +153,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -162,5 +162,6 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

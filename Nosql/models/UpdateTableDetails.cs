@@ -31,16 +31,16 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Complete ALTER TABLE DDL statement.
         /// </value>
         [JsonProperty(PropertyName = "ddlStatement")]
         public string DdlStatement { get; set; }
-
+        
         [JsonProperty(PropertyName = "tableLimits")]
         public TableLimits TableLimits { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined
         /// name, type or scope. Exists for cross-compatibility only.
@@ -48,12 +48,13 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and
         /// scoped to a namespace.  Example: {&quot;foo-namespace&quot;:{&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -31,5 +31,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DatabaseAdminPassword is required.")]
         [JsonProperty(PropertyName = "databaseAdminPassword")]
         public string DatabaseAdminPassword { get; set; }
+        
     }
 }

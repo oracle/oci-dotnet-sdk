@@ -30,5 +30,6 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "WorkSubmissionKeyProp is required.")]
         [JsonProperty(PropertyName = "workSubmissionKey")]
         public string WorkSubmissionKeyProp { get; set; }
+        
     }
 }

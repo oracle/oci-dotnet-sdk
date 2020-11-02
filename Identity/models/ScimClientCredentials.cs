@@ -27,11 +27,12 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "clientId")]
         public string ClientId { get; set; }
-
+        
         /// <value>
         /// The client secret.
         /// </value>
         [JsonProperty(PropertyName = "clientSecret")]
         public string ClientSecret { get; set; }
+        
     }
 }

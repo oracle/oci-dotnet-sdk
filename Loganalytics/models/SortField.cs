@@ -41,5 +41,8 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "direction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DirectionEnum> Direction { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "SORT";
     }
 }

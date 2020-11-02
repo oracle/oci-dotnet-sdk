@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance pool of the load balancer attachment.
         /// 
@@ -41,7 +41,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstancePoolId is required.")]
         [JsonProperty(PropertyName = "instancePoolId")]
         public string InstancePoolId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the load balancer attached to the instance pool.
         /// 
@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-
+        
         /// <value>
         /// The name of the backend set on the load balancer.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BackendSetName is required.")]
         [JsonProperty(PropertyName = "backendSetName")]
         public string BackendSetName { get; set; }
-
+        
         /// <value>
         /// The port value used for the backends.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// Indicates which VNIC on each instance in the instance pool should be used to associate with the load balancer. Possible values are \"PrimaryVnic\" or the displayName of one of the secondary VNICs on the instance configuration that is associated with the instance pool.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VnicSelection is required.")]
         [JsonProperty(PropertyName = "vnicSelection")]
         public string VnicSelection { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the interaction between the instance pool and the load balancer.
         /// </value>
@@ -108,5 +108,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

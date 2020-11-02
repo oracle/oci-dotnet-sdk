@@ -26,17 +26,20 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <value>
         /// The file name for the attribute.
         /// </value>
         [JsonProperty(PropertyName = "stagingFileName")]
         public string StagingFileName { get; set; }
-
+        
         [JsonProperty(PropertyName = "stagingDataAsset")]
         public DataAsset StagingDataAsset { get; set; }
-
+        
         [JsonProperty(PropertyName = "stagingConnection")]
         public Connection StagingConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLEATPWRITEATTRIBUTE";
     }
 }

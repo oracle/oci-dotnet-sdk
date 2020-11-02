@@ -30,20 +30,20 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Recommendation type
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RecommendationType> Type { get; set; }
-
+        
         /// <value>
         /// Tenant Identifier
         /// </value>
         [JsonProperty(PropertyName = "tenantId")]
         public string TenantId { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// targetId associated with the problem
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TargetId is required.")]
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
-
+        
         /// <value>
         /// Recommendation details
         /// </value>
@@ -73,14 +73,14 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Details is required.")]
         [JsonProperty(PropertyName = "details")]
         public System.Collections.Generic.Dictionary<string, string> Details { get; set; }
-
+        
         /// <value>
         /// The Risk Level
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
-
+        
         /// <value>
         /// Count number of the problem
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ProblemCount is required.")]
         [JsonProperty(PropertyName = "problemCount")]
         public System.Nullable<long> ProblemCount { get; set; }
-
+        
         /// <value>
         /// The current state of the Recommendation.
         /// </value>
@@ -101,7 +101,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The lifecycleDetail will give more detail on the substate of the lifecycleState.
         /// </value>
@@ -112,19 +112,19 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleDetail")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RecommendationLifecycleDetail> LifecycleDetail { get; set; }
-
+        
         /// <value>
         /// problem creating time
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// problem updating time
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// recommendation string showing on UX
         /// </value>
@@ -134,7 +134,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// description of the recommendation
         /// </value>
@@ -144,5 +144,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

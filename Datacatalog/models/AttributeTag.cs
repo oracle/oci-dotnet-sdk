@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "attributeKey")]
         public string AttributeKey { get; set; }
-
+        
         /// <value>
         /// Unique tag key that is immutable.
         /// </value>
@@ -36,55 +36,56 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Name of the tag which matches the term name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Unique key of the related term.
         /// </value>
         [JsonProperty(PropertyName = "termKey")]
         public string TermKey { get; set; }
-
+        
         /// <value>
         /// Path of the related term.
         /// </value>
         [JsonProperty(PropertyName = "termPath")]
         public string TermPath { get; set; }
-
+        
         /// <value>
         /// Description of the related term.
         /// </value>
         [JsonProperty(PropertyName = "termDescription")]
         public string TermDescription { get; set; }
-
+        
         /// <value>
         /// The current state of the tag.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the tag was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the tag.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// URI to the tag instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
     }
 }

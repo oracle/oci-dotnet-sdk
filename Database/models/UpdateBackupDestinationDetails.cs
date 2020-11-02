@@ -28,20 +28,20 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpcUsers")]
         public System.Collections.Generic.List<string> VpcUsers { get; set; }
-
+        
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the connection string for connecting to the Recovery Appliance.
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
-
+        
         /// <value>
         /// The local directory path on each VM cluster node where the NFS server location is mounted. The local directory path and the NFS server location must each be the same across all of the VM cluster nodes. Ensure that the NFS mount is maintained continuously on all of the VM cluster nodes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "localMountPointPath")]
         public string LocalMountPointPath { get; set; }
-        ///
+                ///
         /// <value>
         /// NFS Mount type for backup destination.
         /// </value>
@@ -59,19 +59,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "nfsMountType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NfsMountTypeEnum> NfsMountType { get; set; }
-
+        
         /// <value>
         /// IP addresses for NFS Auto mount.
         /// </value>
         [JsonProperty(PropertyName = "nfsServer")]
         public System.Collections.Generic.List<string> NfsServer { get; set; }
-
+        
         /// <value>
         /// Specifies the directory on which to mount the file system
         /// </value>
         [JsonProperty(PropertyName = "nfsServerExport")]
         public string NfsServerExport { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -80,7 +80,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -88,5 +88,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

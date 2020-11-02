@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the maintenance run.
         /// </value>
@@ -51,13 +51,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the maintenance run.
         /// </value>
@@ -91,13 +91,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the maintenance run is scheduled to occur.
         /// </value>
@@ -107,19 +107,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeScheduled is required.")]
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
-
+        
         /// <value>
         /// The date and time the maintenance run starts.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the maintenance run was completed.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of the target resource on which the maintenance run occurs.
         /// </value>
@@ -141,13 +141,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "targetResourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TargetResourceTypeEnum> TargetResourceType { get; set; }
-
+        
         /// <value>
         /// The ID of the target resource on which the maintenance run occurs.
         /// </value>
         [JsonProperty(PropertyName = "targetResourceId")]
         public string TargetResourceId { get; set; }
-        ///
+                ///
         /// <value>
         /// Maintenance type.
         /// </value>
@@ -165,13 +165,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MaintenanceTypeEnum> MaintenanceType { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the patch to be applied in the maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "patchId")]
         public string PatchId { get; set; }
-        ///
+                ///
         /// <value>
         /// Maintenance sub-type.
         /// </value>
@@ -191,11 +191,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceSubtype")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MaintenanceSubtypeEnum> MaintenanceSubtype { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the maintenance run for the Autonomous Data Guard association's peer container database.
         /// </value>
         [JsonProperty(PropertyName = "peerMaintenanceRunId")]
         public string PeerMaintenanceRunId { get; set; }
+        
     }
 }

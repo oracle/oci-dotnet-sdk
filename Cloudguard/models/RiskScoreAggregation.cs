@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DimensionsMap is required.")]
         [JsonProperty(PropertyName = "dimensionsMap")]
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
-
+        
         /// <value>
         /// The risk score with given dimensions
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "RiskScore is required.")]
         [JsonProperty(PropertyName = "riskScore")]
         public System.Nullable<int> RiskScore { get; set; }
+        
     }
 }

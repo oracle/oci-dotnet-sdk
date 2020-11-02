@@ -31,7 +31,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "fromCompartmentId")]
         public string FromCompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the table's new compartment.
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "ToCompartmentId is required.")]
         [JsonProperty(PropertyName = "toCompartmentId")]
         public string ToCompartmentId { get; set; }
+        
     }
 }

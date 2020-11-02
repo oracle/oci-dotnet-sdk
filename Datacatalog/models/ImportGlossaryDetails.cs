@@ -26,5 +26,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "glossaryFileContents")]
         public System.Byte[] GlossaryFileContents { get; set; }
+        
     }
 }

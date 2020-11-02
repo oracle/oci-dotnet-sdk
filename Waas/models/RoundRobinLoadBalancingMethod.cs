@@ -21,5 +21,8 @@ namespace Oci.WaasService.Models
     /// </summary>
     public class RoundRobinLoadBalancingMethod : LoadBalancingMethod
     {
-            }
+        
+        [JsonProperty(PropertyName = "method")]
+        private readonly string method = "ROUND_ROBIN";
+    }
 }

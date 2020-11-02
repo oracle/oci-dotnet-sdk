@@ -34,7 +34,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the load balancer with which the work request
         /// is associated.
@@ -46,7 +46,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-
+        
         /// <value>
         /// The type of action the work request represents.
         /// <br/>
@@ -58,13 +58,13 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the load balancer.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the work request.
         /// 
@@ -92,7 +92,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A collection of data, related to the load balancer provisioning process, that helps with debugging in the event of failure.
         /// Possible data elements include:
@@ -110,7 +110,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was created, in the format defined by RFC3339.
         /// <br/>
@@ -122,7 +122,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was completed, in the format defined by RFC3339.
         /// <br/>
@@ -130,12 +130,13 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ErrorDetails is required.")]
         [JsonProperty(PropertyName = "errorDetails")]
         public System.Collections.Generic.List<WorkRequestError> ErrorDetails { get; set; }
+        
     }
 }

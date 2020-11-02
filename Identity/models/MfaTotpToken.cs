@@ -28,5 +28,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "totpToken")]
         public string TotpToken { get; set; }
+        
     }
 }

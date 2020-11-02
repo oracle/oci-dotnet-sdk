@@ -35,7 +35,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "MetadataUrl is required.")]
         [JsonProperty(PropertyName = "metadataUrl")]
         public string MetadataUrl { get; set; }
-
+        
         /// <value>
         /// The identity provider's signing certificate used by the IAM Service
         /// to validate the SAML2 token.
@@ -47,7 +47,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "SigningCertificate is required.")]
         [JsonProperty(PropertyName = "signingCertificate")]
         public string SigningCertificate { get; set; }
-
+        
         /// <value>
         /// The URL to redirect federated users to for authentication with the
         /// identity provider.
@@ -59,12 +59,15 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "RedirectUrl is required.")]
         [JsonProperty(PropertyName = "redirectUrl")]
         public string RedirectUrl { get; set; }
-
+        
         /// <value>
         /// Extra name value pairs associated with this identity provider.
         /// Example: {&quot;clientId&quot;: &quot;app_sf3kdjf3&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformAttributes")]
         public System.Collections.Generic.Dictionary<string, string> FreeformAttributes { get; set; }
+        
+        [JsonProperty(PropertyName = "protocol")]
+        private readonly string protocol = "SAML2";
     }
 }

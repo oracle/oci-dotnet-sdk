@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name you assign to the policy during creation. The name must be unique across all policies
         /// in the tenancy and cannot be changed.
@@ -40,7 +40,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// An array of policy statements written in the policy language. See
         /// [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm) and
@@ -53,7 +53,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Statements is required.")]
         [JsonProperty(PropertyName = "statements")]
         public System.Collections.Generic.List<string> Statements { get; set; }
-
+        
         /// <value>
         /// The description you assign to the policy during creation. Does not have to be unique, and it's changeable.
         /// 
@@ -64,7 +64,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The version of the policy. If null or set to an empty string, when a request comes in for authorization, the
         /// policy will be evaluated according to the current behavior of the services at that moment. If set to a particular
@@ -73,7 +73,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "versionDate")]
         public System.Nullable<System.DateTime> VersionDate { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -81,7 +81,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -89,5 +89,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

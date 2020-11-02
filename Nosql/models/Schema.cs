@@ -30,7 +30,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Columns is required.")]
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<Column> Columns { get; set; }
-
+        
         /// <value>
         /// A list of column names that make up a key.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "PrimaryKey is required.")]
         [JsonProperty(PropertyName = "primaryKey")]
         public System.Collections.Generic.List<string> PrimaryKey { get; set; }
-
+        
         /// <value>
         /// A list of column names that make up a key.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "ShardKey is required.")]
         [JsonProperty(PropertyName = "shardKey")]
         public System.Collections.Generic.List<string> ShardKey { get; set; }
-
+        
         /// <value>
         /// The default Time-to-Live for the table, in days.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Ttl is required.")]
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
+        
     }
 }

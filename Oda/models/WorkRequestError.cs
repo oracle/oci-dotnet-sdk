@@ -32,7 +32,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable description of the issue.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// When the error occurred. A date-time string as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "TimeStamp is required.")]
         [JsonProperty(PropertyName = "timeStamp")]
         public System.Nullable<System.DateTime> TimeStamp { get; set; }
+        
     }
 }

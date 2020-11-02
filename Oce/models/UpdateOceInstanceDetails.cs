@@ -26,32 +26,33 @@ namespace Oci.OceService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Web Application Firewall(WAF) primary domain
         /// </value>
         [JsonProperty(PropertyName = "wafPrimaryDomain")]
         public string WafPrimaryDomain { get; set; }
-
+        
         /// <value>
         /// Flag indicating whether the instance license is new cloud or bring your own license
         /// </value>
         [JsonProperty(PropertyName = "instanceLicenseType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

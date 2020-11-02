@@ -30,23 +30,24 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Reference is required.")]
         [JsonProperty(PropertyName = "reference")]
         public string Reference { get; set; }
-
+        
         /// <value>
         /// Status
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// The time when the upload processing started
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The details about upload processing failure
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
+        
     }
 }

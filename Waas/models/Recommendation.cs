@@ -28,36 +28,37 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The list of the ModSecurity rule IDs associated with the protection rule.
         /// For more information about ModSecurity's open source WAF rules, see [Mod Security's documentation](https://www.modsecurity.org/CRS/Documentation/index.html).
         /// </value>
         [JsonProperty(PropertyName = "modSecurityRuleIds")]
         public System.Collections.Generic.List<string> ModSecurityRuleIds { get; set; }
-
+        
         /// <value>
         /// The name of the recommended protection rule.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description of the recommended protection rule.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The list of labels for the recommended protection rule.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
-
+        
         /// <value>
         /// The recommended action to apply to the protection rule.
         /// </value>
         [JsonProperty(PropertyName = "recommendedAction")]
         public string RecommendedAction { get; set; }
+        
     }
 }

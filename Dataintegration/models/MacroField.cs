@@ -23,23 +23,26 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "expr")]
         public Expression Expr { get; set; }
-
+        
         [JsonProperty(PropertyName = "type")]
         public BaseType Type { get; set; }
-
+        
         /// <value>
         /// Specifies whether the type of macro fields is inferred from an expression or useType (false) or the source field (true).
         /// </value>
         [JsonProperty(PropertyName = "isUseSourceType")]
         public System.Nullable<bool> IsUseSourceType { get; set; }
-
+        
         [JsonProperty(PropertyName = "useType")]
         public ConfiguredType UseType { get; set; }
-
+        
         /// <value>
         /// Labels are keywords or labels that you can add to data assets, dataflows, and so on. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "MACRO_FIELD";
     }
 }

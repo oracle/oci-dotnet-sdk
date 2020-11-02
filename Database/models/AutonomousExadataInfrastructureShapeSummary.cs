@@ -35,7 +35,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The maximum number of CPU cores that can be enabled on the Autonomous Exadata Infrastructure.
         /// </value>
@@ -45,29 +45,30 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailableCoreCount is required.")]
         [JsonProperty(PropertyName = "availableCoreCount")]
         public System.Nullable<int> AvailableCoreCount { get; set; }
-
+        
         /// <value>
         /// The minimum number of CPU cores that can be enabled on the Autonomous Exadata Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "minimumCoreCount")]
         public System.Nullable<int> MinimumCoreCount { get; set; }
-
+        
         /// <value>
         /// The increment in which core count can be increased or decreased.
         /// </value>
         [JsonProperty(PropertyName = "coreCountIncrement")]
         public System.Nullable<int> CoreCountIncrement { get; set; }
-
+        
         /// <value>
         /// The minimum number of nodes available for the shape.
         /// </value>
         [JsonProperty(PropertyName = "minimumNodeCount")]
         public System.Nullable<int> MinimumNodeCount { get; set; }
-
+        
         /// <value>
         /// The maximum number of nodes available for the shape.
         /// </value>
         [JsonProperty(PropertyName = "maximumNodeCount")]
         public System.Nullable<int> MaximumNodeCount { get; set; }
+        
     }
 }

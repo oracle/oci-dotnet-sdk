@@ -25,7 +25,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "answerCondition")]
         public string AnswerCondition { get; set; }
-
+        
         /// <value>
         /// The weight assigned to the set of selected answers. Answers with a higher weight will be served
         /// more frequently. Answers can be given a value between `0` and `255`.
@@ -37,5 +37,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<int> Value { get; set; }
+        
     }
 }

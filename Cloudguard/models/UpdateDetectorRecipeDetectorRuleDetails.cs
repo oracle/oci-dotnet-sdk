@@ -23,5 +23,6 @@ namespace Oci.CloudguardService.Models
         
         [JsonProperty(PropertyName = "details")]
         public UpdateDetectorRuleDetails Details { get; set; }
+        
     }
 }

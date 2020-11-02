@@ -27,17 +27,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cdbDefault")]
         public string CdbDefault { get; set; }
-
+        
         /// <value>
         /// IP based CDB Connection String.
         /// </value>
         [JsonProperty(PropertyName = "cdbIpDefault")]
         public string CdbIpDefault { get; set; }
-
+        
         /// <value>
         /// All connection strings to use to connect to the Database.
         /// </value>
         [JsonProperty(PropertyName = "allConnectionStrings")]
         public System.Collections.Generic.Dictionary<string, string> AllConnectionStrings { get; set; }
+        
     }
 }

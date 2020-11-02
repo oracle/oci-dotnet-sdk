@@ -26,8 +26,11 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "fromLink")]
         public string FromLink { get; set; }
-
+        
         [JsonProperty(PropertyName = "fieldMap")]
         public FieldMap FieldMap { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "INPUT_LINK";
     }
 }

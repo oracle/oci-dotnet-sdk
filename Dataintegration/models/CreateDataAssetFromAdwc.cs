@@ -26,20 +26,23 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// The Autonomous Data Warehouse driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
-
+        
         /// <value>
         /// The credential file content from a Autonomous Data Warehouse wallet.
         /// </value>
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public CreateConnectionFromAdwc DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_ADWC_DATA_ASSET";
     }
 }

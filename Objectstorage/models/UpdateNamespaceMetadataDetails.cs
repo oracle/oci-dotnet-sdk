@@ -28,11 +28,12 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultS3CompartmentId")]
         public string DefaultS3CompartmentId { get; set; }
-
+        
         /// <value>
         /// The updated compartment id for use by a Swift client, if this field is set.
         /// </value>
         [JsonProperty(PropertyName = "defaultSwiftCompartmentId")]
         public string DefaultSwiftCompartmentId { get; set; }
+        
     }
 }

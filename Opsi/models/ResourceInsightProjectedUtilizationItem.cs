@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Days to reach projected utilization
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DaysToReach is required.")]
         [JsonProperty(PropertyName = "daysToReach")]
         public System.Nullable<int> DaysToReach { get; set; }
+        
     }
 }

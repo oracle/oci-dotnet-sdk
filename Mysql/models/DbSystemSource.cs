@@ -37,17 +37,7 @@ namespace Oci.MysqlService.Models
             Importurl
         };
 
-        /// <value>
-        /// The specific source identifier.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceTypeEnum> SourceType { get; set; }
+        
     }
 
     public class DbSystemSourceModelConverter : JsonConverter

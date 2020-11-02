@@ -26,23 +26,24 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
-
+        
         /// <value>
         /// is the field multi valued
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
-
+        
         /// <value>
         /// current usage
         /// </value>
         [JsonProperty(PropertyName = "currentUsage")]
         public System.Nullable<long> CurrentUsage { get; set; }
-
+        
         /// <value>
         /// maximum available
         /// </value>
         [JsonProperty(PropertyName = "maxAvailable")]
         public System.Nullable<int> MaxAvailable { get; set; }
+        
     }
 }

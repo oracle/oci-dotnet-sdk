@@ -26,17 +26,18 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "options")]
         public System.Collections.Generic.Dictionary<string, string> Options { get; set; }
-
+        
         /// <value>
         /// The new target object to reference. This should be of type `DataAsset`. The child references can be of type `Connection`.
         /// </value>
         [JsonProperty(PropertyName = "targetObject")]
         public System.Object TargetObject { get; set; }
-
+        
         /// <value>
         /// The list of child references that also need to be updated.
         /// </value>
         [JsonProperty(PropertyName = "childReferences")]
         public System.Collections.Generic.List<ChildReferenceDetail> ChildReferences { get; set; }
+        
     }
 }

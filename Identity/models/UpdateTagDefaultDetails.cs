@@ -29,7 +29,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// If you specify that a value is required, a value is set during resource creation (either by 
         /// the user creating the resource or another tag defualt). If no value is set, resource 
@@ -42,5 +42,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
+        
     }
 }

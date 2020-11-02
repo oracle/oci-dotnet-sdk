@@ -27,5 +27,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeRefreshCutoff")]
         public System.Nullable<System.DateTime> TimeRefreshCutoff { get; set; }
+        
     }
 }

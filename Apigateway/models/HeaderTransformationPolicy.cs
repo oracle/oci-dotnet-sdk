@@ -24,11 +24,12 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "setHeaders")]
         public SetHeaderPolicy SetHeaders { get; set; }
-
+        
         [JsonProperty(PropertyName = "renameHeaders")]
         public RenameHeaderPolicy RenameHeaders { get; set; }
-
+        
         [JsonProperty(PropertyName = "filterHeaders")]
         public FilterHeaderPolicy FilterHeaders { get; set; }
+        
     }
 }

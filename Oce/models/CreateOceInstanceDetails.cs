@@ -26,7 +26,7 @@ namespace Oci.OceService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -36,7 +36,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// OceInstance Name
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Tenancy Identifier
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "TenancyId is required.")]
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
-
+        
         /// <value>
         /// Identity Cloud Service access token identifying a stripe and service administrator user
         /// </value>
@@ -66,10 +66,10 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "IdcsAccessToken is required.")]
         [JsonProperty(PropertyName = "idcsAccessToken")]
         public string IdcsAccessToken { get; set; }
-
+        
         [JsonProperty(PropertyName = "identityStripe")]
         public IdentityStripeDetails IdentityStripe { get; set; }
-
+        
         /// <value>
         /// Tenancy Name
         /// </value>
@@ -79,7 +79,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "TenancyName is required.")]
         [JsonProperty(PropertyName = "tenancyName")]
         public string TenancyName { get; set; }
-        ///
+                ///
         /// <value>
         /// Instance type based on its usage
         /// </value>
@@ -97,7 +97,7 @@ namespace Oci.OceService.Models
         [JsonProperty(PropertyName = "instanceUsageType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
-
+        
         /// <value>
         /// Object Storage Namespace of Tenancy
         /// </value>
@@ -107,7 +107,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "ObjectStorageNamespace is required.")]
         [JsonProperty(PropertyName = "objectStorageNamespace")]
         public string ObjectStorageNamespace { get; set; }
-
+        
         /// <value>
         /// Admin Email for Notification
         /// </value>
@@ -117,7 +117,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "AdminEmail is required.")]
         [JsonProperty(PropertyName = "adminEmail")]
         public string AdminEmail { get; set; }
-
+        
         /// <value>
         /// Upgrade schedule type representing service to be upgraded immediately whenever latest version is released
         /// or delay upgrade of the service to previous released version
@@ -126,13 +126,13 @@ namespace Oci.OceService.Models
         [JsonProperty(PropertyName = "upgradeSchedule")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OceInstance.UpgradeScheduleEnum> UpgradeSchedule { get; set; }
-
+        
         /// <value>
         /// Web Application Firewall(WAF) primary domain
         /// </value>
         [JsonProperty(PropertyName = "wafPrimaryDomain")]
         public string WafPrimaryDomain { get; set; }
-        ///
+                ///
         /// <value>
         /// Flag indicating whether the instance access is private or public
         /// </value>
@@ -150,26 +150,27 @@ namespace Oci.OceService.Models
         [JsonProperty(PropertyName = "instanceAccessType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InstanceAccessTypeEnum> InstanceAccessType { get; set; }
-
+        
         /// <value>
         /// Flag indicating whether the instance license is new cloud or bring your own license
         /// </value>
         [JsonProperty(PropertyName = "instanceLicenseType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

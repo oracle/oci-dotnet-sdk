@@ -31,11 +31,12 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "MessageId is required.")]
         [JsonProperty(PropertyName = "messageId")]
         public string MessageId { get; set; }
-
+        
         /// <value>
         /// The time that the service received the message.
         /// </value>
         [JsonProperty(PropertyName = "timeStamp")]
         public System.Nullable<System.DateTime> TimeStamp { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "nonOobCount")]
         public System.Nullable<int> NonOobCount { get; set; }
-
+        
         /// <value>
         /// out-of-the-box count
         /// </value>
         [JsonProperty(PropertyName = "oobCount")]
         public System.Nullable<int> OobCount { get; set; }
+        
     }
 }

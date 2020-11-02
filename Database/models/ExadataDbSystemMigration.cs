@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbSystemId is required.")]
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cloud VM cluster.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudVmClusterId is required.")]
         [JsonProperty(PropertyName = "cloudVmClusterId")]
         public string CloudVmClusterId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cloud Exadata infrastructure.
         /// </value>
@@ -51,11 +51,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudExadataInfrastructureId is required.")]
         [JsonProperty(PropertyName = "cloudExadataInfrastructureId")]
         public string CloudExadataInfrastructureId { get; set; }
-
+        
         /// <value>
         /// The details of addtional resources related to the migration.
         /// </value>
         [JsonProperty(PropertyName = "additionalMigrations")]
         public System.Collections.Generic.List<ExadataDbSystemMigrationSummary> AdditionalMigrations { get; set; }
+        
     }
 }

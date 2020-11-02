@@ -35,7 +35,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "SourceObjectName is required.")]
         [JsonProperty(PropertyName = "sourceObjectName")]
         public string SourceObjectName { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) to match against that of the source object. Used to confirm that the source object
         /// with a given name is the version of that object storing a specified ETag.
@@ -43,13 +43,13 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceObjectIfMatchETag")]
         public string SourceObjectIfMatchETag { get; set; }
-
+        
         /// <value>
         /// VersionId of the object to copy. If not provided then current version is copied by default.
         /// </value>
         [JsonProperty(PropertyName = "sourceVersionId")]
         public string SourceVersionId { get; set; }
-
+        
         /// <value>
         /// The destination region the object will be copied to, for example \"us-ashburn-1\".
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationRegion is required.")]
         [JsonProperty(PropertyName = "destinationRegion")]
         public string DestinationRegion { get; set; }
-
+        
         /// <value>
         /// The destination Object Storage namespace the object will be copied to.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationNamespace is required.")]
         [JsonProperty(PropertyName = "destinationNamespace")]
         public string DestinationNamespace { get; set; }
-
+        
         /// <value>
         /// The destination bucket the object will be copied to.
         /// </value>
@@ -79,7 +79,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationBucket is required.")]
         [JsonProperty(PropertyName = "destinationBucket")]
         public string DestinationBucket { get; set; }
-
+        
         /// <value>
         /// The name of the destination object resulting from the copy operation.
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationObjectName is required.")]
         [JsonProperty(PropertyName = "destinationObjectName")]
         public string DestinationObjectName { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) to match against that of the destination object (an object intended to be overwritten).
         /// Used to confirm that the destination object stored under a given name is the version of that object
@@ -98,7 +98,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "destinationObjectIfMatchETag")]
         public string DestinationObjectIfMatchETag { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) to avoid matching. The only valid value is '*', which indicates that the request should fail
         /// if the object already exists in the destination bucket.
@@ -106,7 +106,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "destinationObjectIfNoneMatchETag")]
         public string DestinationObjectIfNoneMatchETag { get; set; }
-
+        
         /// <value>
         /// Arbitrary string keys and values for the user-defined metadata for the object. Keys must be in
         /// \"opc-meta-*\" format. Avoid entering confidential information. Metadata key-value pairs entered
@@ -116,5 +116,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "destinationObjectMetadata")]
         public System.Collections.Generic.Dictionary<string, string> DestinationObjectMetadata { get; set; }
+        
     }
 }

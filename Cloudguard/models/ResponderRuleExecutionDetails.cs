@@ -23,11 +23,12 @@ namespace Oci.CloudguardService.Models
         
         [JsonProperty(PropertyName = "condition")]
         public Condition Condition { get; set; }
-
+        
         /// <value>
         /// ResponderRule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }
+        
     }
 }

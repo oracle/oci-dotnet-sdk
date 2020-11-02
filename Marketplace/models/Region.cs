@@ -26,17 +26,18 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The code of the region.
         /// </value>
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// Countries in the region.
         /// </value>
         [JsonProperty(PropertyName = "countries")]
         public System.Collections.Generic.List<Item> Countries { get; set; }
+        
     }
 }

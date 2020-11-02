@@ -32,13 +32,13 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Rtype is required.")]
         [JsonProperty(PropertyName = "rtype")]
         public string Rtype { get; set; }
-
+        
         /// <value>
         /// The canonical name for a substitute type of the replacement record to be used if the specified `rtype` is not allowed at the domain. The specified `ttl` and `rdata` will still apply with the substitute type.
         /// </value>
         [JsonProperty(PropertyName = "substituteRtype")]
         public string SubstituteRtype { get; set; }
-
+        
         /// <value>
         /// The Time To Live of the replacement record, in seconds.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Ttl is required.")]
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
-
+        
         /// <value>
         /// The record data of the replacement record, as whitespace-delimited tokens in
         /// type-specific presentation format.
@@ -60,5 +60,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Rdata is required.")]
         [JsonProperty(PropertyName = "rdata")]
         public string Rdata { get; set; }
+        
     }
 }

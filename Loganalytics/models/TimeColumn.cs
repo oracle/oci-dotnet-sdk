@@ -28,12 +28,15 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "span")]
         public string Span { get; set; }
-
+        
         /// <value>
         /// List of timestamps that represent each time stamp in the entire time series even if certain intervals are filtered out of query results.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "times")]
         public System.Collections.Generic.List<long> Times { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "TIME_COLUMN";
     }
 }

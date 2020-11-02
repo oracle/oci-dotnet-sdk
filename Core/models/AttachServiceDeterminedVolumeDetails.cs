@@ -18,5 +18,8 @@ namespace Oci.CoreService.Models
     
     public class AttachServiceDeterminedVolumeDetails : AttachVolumeDetails
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "service_determined";
+    }
 }

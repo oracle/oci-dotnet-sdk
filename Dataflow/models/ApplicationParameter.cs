@@ -34,7 +34,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The value of the parameter. It must be a string of 0 or more characters of any kind.
         /// Examples: \"\" (empty string), \"10\", \"mydata.xml\", \"${x}\"
@@ -46,5 +46,6 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

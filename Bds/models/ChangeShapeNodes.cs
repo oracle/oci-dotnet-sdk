@@ -24,23 +24,24 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "worker")]
         public string Worker { get; set; }
-
+        
         /// <value>
         /// master nodes shape
         /// </value>
         [JsonProperty(PropertyName = "master")]
         public string Master { get; set; }
-
+        
         /// <value>
         /// utility nodes shape
         /// </value>
         [JsonProperty(PropertyName = "utility")]
         public string Utility { get; set; }
-
+        
         /// <value>
         /// cloudsql node shape
         /// </value>
         [JsonProperty(PropertyName = "cloudsql")]
         public string Cloudsql { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Exadata Cloud@Customer VM cluster network. The name does not need to be unique.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The SCAN details.
         /// </value>
@@ -51,19 +51,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Scans is required.")]
         [JsonProperty(PropertyName = "scans")]
         public System.Collections.Generic.List<ScanDetails> Scans { get; set; }
-
+        
         /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.
         /// </value>
         [JsonProperty(PropertyName = "dns")]
         public System.Collections.Generic.List<string> Dns { get; set; }
-
+        
         /// <value>
         /// The list of NTP server IP addresses. Maximum of 3 allowed.
         /// </value>
         [JsonProperty(PropertyName = "ntp")]
         public System.Collections.Generic.List<string> Ntp { get; set; }
-
+        
         /// <value>
         /// Details of the client and backup networks.
         /// </value>
@@ -73,7 +73,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "VmNetworks is required.")]
         [JsonProperty(PropertyName = "vmNetworks")]
         public System.Collections.Generic.List<VmNetworkDetails> VmNetworks { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -90,5 +90,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

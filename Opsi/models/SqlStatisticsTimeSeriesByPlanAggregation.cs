@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "PlanHash is required.")]
         [JsonProperty(PropertyName = "planHash")]
         public System.Nullable<long> PlanHash { get; set; }
-
+        
         /// <value>
         /// SQL performance statistics for a given plan
         /// 
@@ -41,5 +41,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Statistics is required.")]
         [JsonProperty(PropertyName = "statistics")]
         public System.Collections.Generic.List<SqlStatisticsTimeSeries> Statistics { get; set; }
+        
     }
 }

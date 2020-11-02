@@ -26,11 +26,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "searchDateFilters")]
         public System.Collections.Generic.List<FacetedSearchDateFilterRequest> SearchDateFilters { get; set; }
-
+        
         /// <value>
         /// Object with string filter criteria
         /// </value>
         [JsonProperty(PropertyName = "searchStringFilters")]
         public System.Collections.Generic.List<FacetedSearchStringFilterRequest> SearchStringFilters { get; set; }
+        
     }
 }

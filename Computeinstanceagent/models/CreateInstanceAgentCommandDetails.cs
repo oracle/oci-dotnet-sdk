@@ -30,7 +30,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Command execution time limit. Zero means no timeout.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "ExecutionTimeOutInSeconds is required.")]
         [JsonProperty(PropertyName = "executionTimeOutInSeconds")]
         public System.Nullable<int> ExecutionTimeOutInSeconds { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the command. It does not have to be unique.
         /// Avoid entering confidential information.
@@ -48,19 +48,20 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Target is required.")]
         [JsonProperty(PropertyName = "target")]
         public InstanceAgentCommandTarget Target { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Content is required.")]
         [JsonProperty(PropertyName = "content")]
         public InstanceAgentCommandContent Content { get; set; }
+        
     }
 }

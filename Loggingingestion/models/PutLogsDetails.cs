@@ -32,7 +32,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Specversion is required.")]
         [JsonProperty(PropertyName = "specversion")]
         public string Specversion { get; set; }
-
+        
         /// <value>
         /// List of log-batches. Each batch has a single source, type and subject.
         /// 
@@ -43,5 +43,6 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "LogEntryBatches is required.")]
         [JsonProperty(PropertyName = "logEntryBatches")]
         public System.Collections.Generic.List<LogEntryBatch> LogEntryBatches { get; set; }
+        
     }
 }

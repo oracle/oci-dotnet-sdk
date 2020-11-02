@@ -35,7 +35,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "areInvalidCharactersAllowed")]
         public System.Nullable<bool> AreInvalidCharactersAllowed { get; set; }
-
+        
         /// <value>
         /// The maximum size of each buffer used for reading http client request header.
         /// This value indicates the maximum size allowed for each buffer.
@@ -44,5 +44,8 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "httpLargeHeaderSizeInKB")]
         public System.Nullable<int> HttpLargeHeaderSizeInKB { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "HTTP_HEADER";
     }
 }

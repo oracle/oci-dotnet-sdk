@@ -26,11 +26,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "podsCidr")]
         public string PodsCidr { get; set; }
-
+        
         /// <value>
         /// The CIDR block for Kubernetes services.
         /// </value>
         [JsonProperty(PropertyName = "servicesCidr")]
         public string ServicesCidr { get; set; }
+        
     }
 }

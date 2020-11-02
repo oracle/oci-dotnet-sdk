@@ -29,14 +29,14 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The domain for which the cookie is set, defaults to WAAS policy domain.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The time for which a browser should keep the cookie in seconds.
         /// Empty value will cause the cookie to expire at the end of a browser session.
@@ -44,5 +44,8 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "expirationTimeInSeconds")]
         public System.Nullable<int> ExpirationTimeInSeconds { get; set; }
+        
+        [JsonProperty(PropertyName = "method")]
+        private readonly string method = "STICKY_COOKIE";
     }
 }

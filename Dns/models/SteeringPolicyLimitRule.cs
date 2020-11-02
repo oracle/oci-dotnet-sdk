@@ -32,7 +32,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "cases")]
         public System.Collections.Generic.List<SteeringPolicyLimitRuleCase> Cases { get; set; }
-
+        
         /// <value>
         /// Defines a default count if `cases` is not defined for the rule or a matching case does
         /// not define `count`. `defaultCount` is **not** applied if `cases` is defined and there
@@ -42,5 +42,8 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultCount")]
         public System.Nullable<int> DefaultCount { get; set; }
+        
+        [JsonProperty(PropertyName = "ruleType")]
+        private readonly string ruleType = "LIMIT";
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
-
+        
         /// <value>
         /// The username.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Username is required.")]
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
+        
     }
 }

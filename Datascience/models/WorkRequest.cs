@@ -30,7 +30,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The type of work the work request is doing.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestOperationType> OperationType { get; set; }
-
+        
         /// <value>
         /// The current status of the work request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the work request's compartment.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// The time the work request was accepted, in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
@@ -92,17 +92,18 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The time the work request was started, in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The time the work request was finished, in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

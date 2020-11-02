@@ -30,7 +30,7 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-
+        
         /// <value>
         /// The unique identifier for this particular resource, usually an OCID.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains this resource.
         /// </value>
@@ -50,31 +50,31 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The time that this resource was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The display name (or name) of this resource, if one exists.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The availability domain where this resource exists, if applicable.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The lifecycle state of this resource, if applicable.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         public string LifecycleState { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). 
@@ -82,7 +82,7 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. 
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). 
@@ -90,7 +90,7 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// System tags associated with this resource, if any. System tags are set by Oracle Cloud Infrastructure services. Each key is predefined and scoped to namespaces.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -98,10 +98,10 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "searchContext")]
         public SearchContext SearchContext { get; set; }
-
+        
         /// <value>
         /// Additional identifiers to use together in a \"Get\" request for a specified resource, only required for resource types 
         /// that explicitly cannot be retrieved by using a single identifier, such as the resource's OCID.
@@ -109,5 +109,6 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "identityContext")]
         public System.Collections.Generic.Dictionary<string, System.Object> IdentityContext { get; set; }
+        
     }
 }

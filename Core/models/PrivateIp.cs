@@ -66,13 +66,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the private IP.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -81,7 +81,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -89,7 +89,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -98,7 +98,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The hostname for the private IP. Used for DNS. The value is the hostname
         /// portion of the private IP's fully qualified domain name (FQDN)
@@ -114,13 +114,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// The private IP's Oracle ID (OCID).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The private IP address of the `privateIp` object. The address is within the CIDR
         /// of the VNIC's subnet.
@@ -133,7 +133,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// Whether this private IP is the primary one on the VNIC. Primary private IPs
         /// are unassigned and deleted automatically when the VNIC is terminated.
@@ -142,7 +142,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
-
+        
         /// <value>
         /// Applicable only if the `PrivateIp` object is being used with a VLAN as part of
         /// the Oracle Cloud VMware Solution. The `vlanId` is the OCID of the VLAN. See
@@ -151,7 +151,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the VNIC is in.
         /// <br/>
@@ -161,7 +161,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The date and time the private IP was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -169,7 +169,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the VNIC the private IP is assigned to. The VNIC and private IP
         /// must be in the same subnet.
@@ -180,5 +180,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+        
     }
 }

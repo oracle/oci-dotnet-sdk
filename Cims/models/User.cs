@@ -30,59 +30,60 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// First name of the user.
         /// </value>
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
-
+        
         /// <value>
         /// Last name of the user.
         /// </value>
         [JsonProperty(PropertyName = "lastName")]
         public string LastName { get; set; }
-
+        
         /// <value>
         /// Country of the user.
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
+        
         /// <value>
         /// CSI to be associated to the user.
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
-
+        
         /// <value>
         /// Contact number of the user.
         /// </value>
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
-
+        
         /// <value>
         /// Timezone of the user.
         /// </value>
         [JsonProperty(PropertyName = "timezone")]
         public string Timezone { get; set; }
-
+        
         /// <value>
         /// Organization of the user.
         /// </value>
         [JsonProperty(PropertyName = "organizationName")]
         public string OrganizationName { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The email of the contact person.
         /// </value>
         [JsonProperty(PropertyName = "contactEmail")]
         public string ContactEmail { get; set; }
+        
     }
 }

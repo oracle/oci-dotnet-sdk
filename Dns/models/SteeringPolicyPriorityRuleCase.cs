@@ -26,11 +26,12 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "caseCondition")]
         public string CaseCondition { get; set; }
-
+        
         /// <value>
         /// An array of `SteeringPolicyPriorityAnswerData` objects.
         /// </value>
         [JsonProperty(PropertyName = "answerData")]
         public System.Collections.Generic.List<SteeringPolicyPriorityAnswerData> AnswerData { get; set; }
+        
     }
 }

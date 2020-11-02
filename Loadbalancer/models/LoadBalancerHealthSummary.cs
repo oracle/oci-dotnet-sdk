@@ -31,7 +31,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-        ///
+                ///
         /// <value>
         /// The overall health status of the load balancer.
         /// <br/>
@@ -95,5 +95,6 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
+        
     }
 }

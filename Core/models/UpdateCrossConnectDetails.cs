@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Set to true to activate the cross-connect. You activate it after the physical cabling
         /// is complete, and you've confirmed the cross-connect's light levels are good and your side
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isActive")]
         public System.Nullable<bool> IsActive { get; set; }
-
+        
         /// <value>
         /// A reference name or identifier for the physical fiber connection that this cross-connect
         /// uses.
@@ -65,5 +65,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerReferenceName")]
         public string CustomerReferenceName { get; set; }
+        
     }
 }

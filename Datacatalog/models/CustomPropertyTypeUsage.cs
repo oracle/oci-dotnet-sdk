@@ -26,17 +26,18 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "typeId")]
         public string TypeId { get; set; }
-
+        
         /// <value>
         /// Name of the type associated with
         /// </value>
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }
-
+        
         /// <value>
         /// Number of objects associated with this type
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

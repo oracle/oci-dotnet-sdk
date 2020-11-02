@@ -31,5 +31,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<string> Items { get; set; }
+        
     }
 }

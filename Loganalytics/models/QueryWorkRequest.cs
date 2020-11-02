@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// When the job was started.
         /// </value>
@@ -52,33 +52,33 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// When the work request was accepted. Should match timeStarted in all cases.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// When the job finished execution.
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-
+        
         /// <value>
         /// When the job will expire.
         /// </value>
         [JsonProperty(PropertyName = "timeExpires")]
         public System.Nullable<System.DateTime> TimeExpires { get; set; }
-
+        
         /// <value>
         /// Percentage progress completion of the query.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<int> PercentComplete { get; set; }
-
+        
         /// <value>
         /// Work request status.
         /// 
@@ -86,7 +86,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
-
+        
         /// <value>
         /// Asynchronous action name.
         /// 
@@ -94,7 +94,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<QueryOperationType> OperationType { get; set; }
-
+        
         /// <value>
         /// Current execution mode for the job.
         /// </value>
@@ -105,23 +105,23 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobMode> Mode { get; set; }
-
+        
         /// <value>
         /// When the job was put in to the background.
         /// </value>
         [JsonProperty(PropertyName = "timeBackgroundAt")]
         public System.Nullable<System.DateTime> TimeBackgroundAt { get; set; }
-
+        
         [JsonProperty(PropertyName = "timeFilter")]
         public TimeRange TimeFilter { get; set; }
-
+        
         /// <value>
         /// List of filters applied when the query executed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeFilters")]
         public System.Collections.Generic.List<ScopeFilter> ScopeFilters { get; set; }
-
+        
         /// <value>
         /// Default subsystem to qualify fields with in the queryString if not specified.
         /// 
@@ -133,7 +133,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
-
+        
         /// <value>
         /// Display version of the user speciified queryString.
         /// 
@@ -144,7 +144,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "DisplayQueryString is required.")]
         [JsonProperty(PropertyName = "displayQueryString")]
         public string DisplayQueryString { get; set; }
-
+        
         /// <value>
         /// Internal version of the user specified queryString.
         /// 
@@ -155,5 +155,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalQueryString is required.")]
         [JsonProperty(PropertyName = "internalQueryString")]
         public string InternalQueryString { get; set; }
+        
     }
 }

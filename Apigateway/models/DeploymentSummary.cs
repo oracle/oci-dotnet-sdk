@@ -31,7 +31,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "GatewayId is required.")]
         [JsonProperty(PropertyName = "gatewayId")]
         public string GatewayId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -51,7 +51,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which the
         /// resource is created.
@@ -63,7 +63,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The path on which all routes contained in the API
         /// deployment specification are deployed. For more information, see
@@ -77,7 +77,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "PathPrefix is required.")]
         [JsonProperty(PropertyName = "pathPrefix")]
         public string PathPrefix { get; set; }
-
+        
         /// <value>
         /// The endpoint to access this deployment on the gateway.
         /// </value>
@@ -87,26 +87,26 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Endpoint is required.")]
         [JsonProperty(PropertyName = "endpoint")]
         public string Endpoint { get; set; }
-
+        
         /// <value>
         /// The time this resource was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time this resource was last updated. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the deployment.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Deployment.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail.
         /// For example, can be used to provide actionable information for a
@@ -115,7 +115,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         /// with no predefined name, type, or namespace. For more information, see
@@ -125,7 +125,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see
@@ -135,5 +135,6 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

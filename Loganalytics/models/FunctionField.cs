@@ -28,12 +28,15 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "function")]
         public string Function { get; set; }
-
+        
         /// <value>
         /// List of function arguments if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<Argument> Arguments { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "FUNCTION";
     }
 }

@@ -27,23 +27,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// The scheduled date and time of the maintenance run to update.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
-
+        
         /// <value>
         /// If set to `TRUE`, starts patching immediately.
         /// </value>
         [JsonProperty(PropertyName = "isPatchNowEnabled")]
         public System.Nullable<bool> IsPatchNowEnabled { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the patch to be applied in the maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "patchId")]
         public string PatchId { get; set; }
+        
     }
 }

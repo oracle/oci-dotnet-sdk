@@ -36,38 +36,39 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "addOsns")]
         public System.Collections.Generic.List<CreateOsnDetails> AddOsns { get; set; }
-
+        
         [JsonProperty(PropertyName = "addReplicas")]
         public ReplicaDetails AddReplicas { get; set; }
-
+        
         /// <value>
         /// new Peers to add
         /// </value>
         [JsonProperty(PropertyName = "addPeers")]
         public System.Collections.Generic.List<CreatePeerDetails> AddPeers { get; set; }
-
+        
         [JsonProperty(PropertyName = "addStorage")]
         public ScaleStorageDetails AddStorage { get; set; }
-
+        
         /// <value>
         /// modify ocpu allocation to existing Peers
         /// </value>
         [JsonProperty(PropertyName = "modifyPeers")]
         public System.Collections.Generic.List<ModifyPeerDetails> ModifyPeers { get; set; }
-
+        
         [JsonProperty(PropertyName = "removeReplicas")]
         public ReplicaDetails RemoveReplicas { get; set; }
-
+        
         /// <value>
         /// OSN id list to remove
         /// </value>
         [JsonProperty(PropertyName = "removeOsns")]
         public System.Collections.Generic.List<string> RemoveOsns { get; set; }
-
+        
         /// <value>
         /// Peer id list to remove
         /// </value>
         [JsonProperty(PropertyName = "removePeers")]
         public System.Collections.Generic.List<string> RemovePeers { get; set; }
+        
     }
 }

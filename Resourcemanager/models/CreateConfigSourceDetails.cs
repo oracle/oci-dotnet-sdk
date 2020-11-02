@@ -23,18 +23,7 @@ namespace Oci.ResourcemanagerService.Models
     public class CreateConfigSourceDetails 
     {
         
-        /// <value>
-        /// Specifies the `configSourceType` for uploading the Terraform configuration.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigSourceType is required.")]
-        [JsonProperty(PropertyName = "configSourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ConfigSource.ConfigSourceTypeEnum> ConfigSourceType { get; set; }
-
+        
         /// <value>
         /// File path to the directory from which Terraform runs.
         /// If not specified, the root directory is used.
@@ -43,6 +32,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
         public string WorkingDirectory { get; set; }
+        
     }
 
     public class CreateConfigSourceDetailsModelConverter : JsonConverter

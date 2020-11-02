@@ -32,7 +32,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// An enum-like description of the type of work the work request is doing.
         /// </value>
@@ -52,13 +52,13 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the work request.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current status of the work request.
         /// </value>
@@ -88,40 +88,41 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The resources this work request affects.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Date and time the work was accepted, in the format defined by RFC3339.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// Date and time the work started, in the format defined by RFC3339.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// Date and time the work completed, in the format defined by RFC3339.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-
+        
         /// <value>
         /// How much progress the operation has made.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
+        
     }
 }

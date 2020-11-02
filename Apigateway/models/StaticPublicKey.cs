@@ -33,7 +33,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Kid is required.")]
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }
-        ///
+                ///
         /// <value>
         /// The format of the public key.
         /// </value>
@@ -45,16 +45,7 @@ namespace Oci.ApigatewayService.Models
             Pem
         };
 
-        /// <value>
-        /// The format of the public key.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Format is required.")]
-        [JsonProperty(PropertyName = "format")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<FormatEnum> Format { get; set; }
+        
     }
 
     public class StaticPublicKeyModelConverter : JsonConverter

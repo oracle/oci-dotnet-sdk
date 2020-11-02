@@ -26,49 +26,50 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The name of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The label for the classifier.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-
+        
         /// <value>
         /// The text describing the classifier.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The list of issues.
         /// </value>
         [JsonProperty(PropertyName = "issueTypeList")]
         public System.Collections.Generic.List<IssueType> IssueTypeList { get; set; }
-
+        
         /// <value>
         /// The scope of the incident.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Scope> Scope { get; set; }
-
+        
         /// <value>
         /// The unit to use to measure the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Unit> Unit { get; set; }
-
+        
         /// <value>
         /// The unique ID for the limit.
         /// </value>
         [JsonProperty(PropertyName = "limitId")]
         public string LimitId { get; set; }
+        
     }
 }

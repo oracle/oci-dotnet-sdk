@@ -27,5 +27,6 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<SqlPlanLine> Items { get; set; }
+        
     }
 }

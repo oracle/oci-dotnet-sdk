@@ -26,38 +26,41 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// The Oracle Database port.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public string Port { get; set; }
-
+        
         /// <value>
         /// The Oracle Database service name.
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// The Oracle Database driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
-
+        
         /// <value>
         /// The Oracle Database SID.
         /// </value>
         [JsonProperty(PropertyName = "sid")]
         public string Sid { get; set; }
-
+        
         /// <value>
         /// The credential file content from a wallet for the data asset.
         /// </value>
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public UpdateConnectionFromOracle DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_DATA_ASSET";
     }
 }

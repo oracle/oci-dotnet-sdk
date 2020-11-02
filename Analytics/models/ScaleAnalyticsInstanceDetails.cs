@@ -28,5 +28,6 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
+        
     }
 }

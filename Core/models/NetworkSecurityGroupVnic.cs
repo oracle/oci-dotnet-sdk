@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The date and time the VNIC was added to the network security group, in the format
         /// defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeAssociated")]
         public System.Nullable<System.DateTime> TimeAssociated { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VNIC.
         /// </value>
@@ -48,5 +48,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VnicId is required.")]
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+        
     }
 }

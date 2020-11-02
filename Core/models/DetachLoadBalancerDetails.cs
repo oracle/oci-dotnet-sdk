@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-
+        
         /// <value>
         /// The name of the backend set on the load balancer to detach from the instance pool.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BackendSetName is required.")]
         [JsonProperty(PropertyName = "backendSetName")]
         public string BackendSetName { get; set; }
+        
     }
 }

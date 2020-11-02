@@ -29,169 +29,170 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Name of the object.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description of the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The date and time the result object was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the result object was updated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Array of the tags associated with this object.
         /// </value>
         [JsonProperty(PropertyName = "tagSummary")]
         public System.Collections.Generic.List<SearchTagSummary> TagSummary { get; set; }
-
+        
         /// <value>
         /// Array of the terms associated with this object.
         /// </value>
         [JsonProperty(PropertyName = "termSummary")]
         public System.Collections.Generic.List<SearchTermSummary> TermSummary { get; set; }
-
+        
         /// <value>
         /// Name of the object type.
         /// </value>
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }
-
+        
         /// <value>
         /// Name of the external object type in the host data asset. For example, column, field, table, view, or file.
         /// </value>
         [JsonProperty(PropertyName = "externalTypeName")]
         public string ExternalTypeName { get; set; }
-
+        
         /// <value>
         /// Data type of the object if the object is an attribute. Null otherwise.
         /// </value>
         [JsonProperty(PropertyName = "externalDataType")]
         public string ExternalDataType { get; set; }
-
+        
         /// <value>
         /// Unique key of the data asset that is the root parent of this object.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
-
+        
         /// <value>
         /// Type name of the data asset. For example, Oracle, MySQL or Oracle Object Storage.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetType")]
         public string DataAssetType { get; set; }
-
+        
         /// <value>
         /// Name of the data asset that is the root parent of this object.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetName")]
         public string DataAssetName { get; set; }
-
+        
         /// <value>
         /// Unique key of the folder object if this object is a sub folder, entity, or attribute.
         /// </value>
         [JsonProperty(PropertyName = "folderKey")]
         public string FolderKey { get; set; }
-
+        
         /// <value>
         /// Type name of the folder. For example, schema, directory, or topic.
         /// </value>
         [JsonProperty(PropertyName = "folderType")]
         public string FolderType { get; set; }
-
+        
         /// <value>
         /// Name of the parent folder object if this object is a sub folder, entity, or attribute.
         /// </value>
         [JsonProperty(PropertyName = "folderName")]
         public string FolderName { get; set; }
-
+        
         /// <value>
         /// Unique key of the entity object if this object is an attribute.
         /// </value>
         [JsonProperty(PropertyName = "entitykey")]
         public string Entitykey { get; set; }
-
+        
         /// <value>
         /// Type name of the entity. For example, table, view, external table, file, or object.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// Name of the parent entity object if this object is an attribute.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
-
+        
         /// <value>
         /// Unique id of the parent glossary.
         /// </value>
         [JsonProperty(PropertyName = "glossaryKey")]
         public string GlossaryKey { get; set; }
-
+        
         /// <value>
         /// Name of the parent glossary if this object is a term.
         /// </value>
         [JsonProperty(PropertyName = "glossaryName")]
         public string GlossaryName { get; set; }
-
+        
         /// <value>
         /// This terms parent term key. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermKey")]
         public string ParentTermKey { get; set; }
-
+        
         /// <value>
         /// Name of the parent term. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermName")]
         public string ParentTermName { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the resource.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who updated the resource.
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// Absolute path of this resource, which could be a term, folder, entity etc, usually resolvable to this resource through a namespace hierarchy.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// Expression for logical entities against which names of dataObjects will be matched.
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// Custom properties defined by users.
         /// </value>
         [JsonProperty(PropertyName = "customProperties")]
         public System.Collections.Generic.List<FacetedSearchCustomProperty> CustomProperties { get; set; }
+        
     }
 }

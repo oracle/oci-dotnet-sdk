@@ -26,19 +26,19 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "address")]
         public string Address { get; set; }
-
+        
         /// <value>
         /// The port.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// Total connect duration, calculated using `connectEnd` minus `connectStart`.
         /// </value>
         [JsonProperty(PropertyName = "connectDuration")]
         public System.Double ConnectDuration { get; set; }
-
+        
         /// <value>
         /// The duration to secure the connection.  This value will be zero for
         /// insecure connections.  Calculated using `connectEnd` minus `secureConnectionStart`.
@@ -46,5 +46,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "secureConnectDuration")]
         public System.Double SecureConnectDuration { get; set; }
+        
     }
 }

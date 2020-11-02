@@ -32,12 +32,13 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Source IP addresses or IP address ranges igress rules.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
+        
     }
 }

@@ -26,5 +26,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "targetLogGroupId")]
         public string TargetLogGroupId { get; set; }
+        
     }
 }

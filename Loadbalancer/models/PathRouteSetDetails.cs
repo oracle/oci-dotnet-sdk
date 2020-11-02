@@ -30,5 +30,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "PathRoutes is required.")]
         [JsonProperty(PropertyName = "pathRoutes")]
         public System.Collections.Generic.List<PathRoute> PathRoutes { get; set; }
+        
     }
 }

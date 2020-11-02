@@ -20,16 +20,7 @@ namespace Oci.CoreService.Models
     public class InstanceConfigurationInstanceDetails 
     {
         
-        /// <value>
-        /// The type of instance details. Supported instanceType is compute
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InstanceType is required.")]
-        [JsonProperty(PropertyName = "instanceType")]
-        public string InstanceType { get; set; }
+        
     }
 
     public class InstanceConfigurationInstanceDetailsModelConverter : JsonConverter

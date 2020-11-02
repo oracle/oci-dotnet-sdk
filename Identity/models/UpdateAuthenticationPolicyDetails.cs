@@ -24,8 +24,9 @@ namespace Oci.IdentityService.Models
         
         [JsonProperty(PropertyName = "passwordPolicy")]
         public PasswordPolicy PasswordPolicy { get; set; }
-
+        
         [JsonProperty(PropertyName = "networkPolicy")]
         public NetworkPolicy NetworkPolicy { get; set; }
+        
     }
 }

@@ -51,15 +51,18 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "responseCode")]
         public System.Nullable<int> ResponseCode { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Conditions is required.")]
         [JsonProperty(PropertyName = "conditions")]
         public System.Collections.Generic.List<RuleCondition> Conditions { get; set; }
-
+        
         [JsonProperty(PropertyName = "redirectUri")]
         public RedirectUri RedirectUri { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "REDIRECT";
     }
 }

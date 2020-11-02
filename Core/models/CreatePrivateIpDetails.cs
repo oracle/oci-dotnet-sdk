@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The hostname for the private IP. Used for DNS. The value
         /// is the hostname portion of the private IP's fully qualified domain name (FQDN)
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// A private IP address of your choice. Must be an available IP address within
         /// the subnet's CIDR. If you don't specify a value, Oracle automatically
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The OCID of the VNIC to assign the private IP to. The VNIC and private IP
         /// must be in the same subnet.
@@ -78,7 +78,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
-
+        
         /// <value>
         /// Use this attribute only with the Oracle Cloud VMware Solution.
         /// <br/>
@@ -88,5 +88,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
+        
     }
 }

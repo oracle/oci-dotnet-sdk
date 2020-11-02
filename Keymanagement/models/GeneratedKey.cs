@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Ciphertext is required.")]
         [JsonProperty(PropertyName = "ciphertext")]
         public string Ciphertext { get; set; }
-
+        
         /// <value>
         /// The plaintext data encryption key, a base64-encoded sequence of random bytes, which is
         /// included if the [GenerateDataEncryptionKey](https://docs.cloud.oracle.com/api/#/en/key/latest/GeneratedKey/GenerateDataEncryptionKey)
@@ -37,7 +37,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "plaintext")]
         public string Plaintext { get; set; }
-
+        
         /// <value>
         /// The checksum of the plaintext data encryption key, which is included if the
         /// [GenerateDataEncryptionKey](https://docs.cloud.oracle.com/api/#/en/key/latest/GeneratedKey/GenerateDataEncryptionKey)
@@ -46,5 +46,6 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "plaintextChecksum")]
         public string PlaintextChecksum { get; set; }
+        
     }
 }

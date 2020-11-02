@@ -21,5 +21,8 @@ namespace Oci.ResourcemanagerService.Models
     /// </summary>
     public class ImportTfStateJobOperationDetails : JobOperationDetails
     {
-            }
+        
+        [JsonProperty(PropertyName = "operation")]
+        private readonly string operation = "IMPORT_TF_STATE";
+    }
 }

@@ -30,7 +30,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// The way in which this resource is affected by the work tracked in the work request.
         /// A resource being created, updated, or deleted will remain in the IN_PROGRESS state until
@@ -45,7 +45,7 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypes> ActionType { get; set; }
-
+        
         /// <value>
         /// The resource identifier the work request affects.
         /// </value>
@@ -55,11 +55,12 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that the user can do a GET on to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
+        
     }
 }

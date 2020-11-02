@@ -33,7 +33,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -46,7 +46,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A template that determines the total pre-provisioned bandwidth (ingress plus egress).
         /// To get a list of available shapes, use the {@link #listShapes(ListShapesRequest) listShapes}
@@ -60,7 +60,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "ShapeName is required.")]
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
-
+        
         /// <value>
         /// Whether the load balancer has a VCN-local (private) IP address.
         /// <br/>
@@ -76,7 +76,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPrivate")]
         public System.Nullable<bool> IsPrivate { get; set; }
-        ///
+                ///
         /// <value>
         /// Whether the load balancer has an IPv4 or IPv6 IP address.
         /// <br/>
@@ -106,16 +106,16 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "ipMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IpModeEnum> IpMode { get; set; }
-
+        
         [JsonProperty(PropertyName = "listeners")]
         public System.Collections.Generic.Dictionary<string, ListenerDetails> Listeners { get; set; }
-
+        
         [JsonProperty(PropertyName = "hostnames")]
         public System.Collections.Generic.Dictionary<string, HostnameDetails> Hostnames { get; set; }
-
+        
         [JsonProperty(PropertyName = "backendSets")]
         public System.Collections.Generic.Dictionary<string, BackendSetDetails> BackendSets { get; set; }
-
+        
         /// <value>
         /// An array of NSG [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with this load balancer.
         /// <br/>
@@ -132,7 +132,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "networkSecurityGroupIds")]
         public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
-
+        
         /// <value>
         /// An array of subnet [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
@@ -142,16 +142,16 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "SubnetIds is required.")]
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
-
+        
         [JsonProperty(PropertyName = "certificates")]
         public System.Collections.Generic.Dictionary<string, CertificateDetails> Certificates { get; set; }
-
+        
         [JsonProperty(PropertyName = "sslCipherSuites")]
         public System.Collections.Generic.Dictionary<string, SSLCipherSuiteDetails> SslCipherSuites { get; set; }
-
+        
         [JsonProperty(PropertyName = "pathRouteSets")]
         public System.Collections.Generic.Dictionary<string, PathRouteSetDetails> PathRouteSets { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -160,7 +160,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -169,8 +169,9 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "ruleSets")]
         public System.Collections.Generic.Dictionary<string, RuleSetDetails> RuleSets { get; set; }
+        
     }
 }

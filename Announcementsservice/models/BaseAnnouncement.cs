@@ -31,17 +31,8 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
-        /// <value>
-        /// The entity type.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-
+        
+        
         /// <value>
         /// The reference Jira ticket number.
         /// </value>
@@ -51,7 +42,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "ReferenceTicketNumber is required.")]
         [JsonProperty(PropertyName = "referenceTicketNumber")]
         public string ReferenceTicketNumber { get; set; }
-
+        
         /// <value>
         /// A summary of the issue. A summary might appear in the console banner view of the announcement or in
         /// an email subject line. Avoid entering confidential information.
@@ -63,14 +54,14 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "Summary is required.")]
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
-
+        
         /// <value>
         /// The label associated with an initial time value.
         /// Example: Time Started
         /// </value>
         [JsonProperty(PropertyName = "timeOneTitle")]
         public string TimeOneTitle { get; set; }
-
+        
         /// <value>
         /// The actual value of the first time value for the event. Typically, this is the time an event started, but the meaning
         /// can vary, depending on the announcement type.
@@ -78,14 +69,14 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOneValue")]
         public System.Nullable<System.DateTime> TimeOneValue { get; set; }
-
+        
         /// <value>
         /// The label associated with a second time value.
         /// Example: Time Ended
         /// </value>
         [JsonProperty(PropertyName = "timeTwoTitle")]
         public string TimeTwoTitle { get; set; }
-
+        
         /// <value>
         /// The actual value of the second time value. Typically, this is the time an event ended, but the meaning
         /// can vary, depending on the announcement type.
@@ -93,7 +84,7 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeTwoValue")]
         public System.Nullable<System.DateTime> TimeTwoValue { get; set; }
-
+        
         /// <value>
         /// Impacted Oracle Cloud Infrastructure services.
         /// </value>
@@ -103,7 +94,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "Services is required.")]
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }
-
+        
         /// <value>
         /// Impacted regions.
         /// </value>
@@ -113,7 +104,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "AffectedRegions is required.")]
         [JsonProperty(PropertyName = "affectedRegions")]
         public System.Collections.Generic.List<string> AffectedRegions { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of announcement. An announcement's type signals its severity.
         /// </value>
@@ -159,7 +150,7 @@ namespace Oci.AnnouncementsService.Models
         [JsonProperty(PropertyName = "announcementType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AnnouncementTypeEnum> AnnouncementType { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the announcement.
         /// </value>
@@ -181,7 +172,7 @@ namespace Oci.AnnouncementsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Whether the announcement is displayed as a banner in the console.
         /// </value>
@@ -191,20 +182,21 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "IsBanner is required.")]
         [JsonProperty(PropertyName = "isBanner")]
         public System.Nullable<bool> IsBanner { get; set; }
-
+        
         /// <value>
         /// The date and time the announcement was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-01-01T17:43:01.389+0000
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the announcement was last updated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-01-01T17:43:01.389+0000
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 
     public class BaseAnnouncementModelConverter : JsonConverter

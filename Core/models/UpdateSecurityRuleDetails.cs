@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Conceptually, this is the range of IP addresses that a packet originating from the instance
         /// can go to.
@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of destination for the rule. Required if `direction` = `EGRESS`.
         /// <br/>
@@ -83,7 +83,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "destinationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
-        ///
+                ///
         /// <value>
         /// Direction of the security rule. Set to `EGRESS` for rules to allow outbound IP packets,
         /// or `INGRESS` for rules to allow inbound IP packets.
@@ -109,7 +109,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "direction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DirectionEnum> Direction { get; set; }
-
+        
         /// <value>
         /// Optional and valid only for ICMP and ICMPv6. Use to specify a particular ICMP type and code
         /// as defined in:
@@ -125,7 +125,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "icmpOptions")]
         public IcmpOptions IcmpOptions { get; set; }
-
+        
         /// <value>
         /// The Oracle-assigned ID of the security rule that you want to update. You can't change this value.
         /// <br/>
@@ -137,7 +137,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A stateless rule allows traffic in one direction. Remember to add a corresponding
         /// stateless rule in the other direction if you need to support bidirectional traffic. For
@@ -148,7 +148,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isStateless")]
         public System.Nullable<bool> IsStateless { get; set; }
-
+        
         /// <value>
         /// The transport protocol. Specify either `all` or an IPv4 protocol number as
         /// defined in
@@ -162,7 +162,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
         public string Protocol { get; set; }
-
+        
         /// <value>
         /// Conceptually, this is the range of IP addresses that a packet coming into the instance
         /// can come from.
@@ -173,7 +173,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of source for the rule. Required if `direction` = `INGRESS`.
         /// <br/>
@@ -213,7 +213,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
-
+        
         /// <value>
         /// Optional and valid only for TCP. Use to specify particular destination ports for TCP rules.
         /// If you specify TCP as the protocol but omit this object, then all destination ports are allowed.
@@ -221,7 +221,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "tcpOptions")]
         public TcpOptions TcpOptions { get; set; }
-
+        
         /// <value>
         /// Optional and valid only for UDP. Use to specify particular destination ports for UDP rules.
         /// If you specify UDP as the protocol but omit this object, then all destination ports are allowed.
@@ -229,5 +229,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "udpOptions")]
         public UdpOptions UdpOptions { get; set; }
+        
     }
 }

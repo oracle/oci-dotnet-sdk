@@ -34,7 +34,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -42,37 +42,37 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of a folder.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The unique key of the containing folder or null if there is no parent folder.
         /// </value>
         [JsonProperty(PropertyName = "parentFolderKey")]
         public string ParentFolderKey { get; set; }
-
+        
         /// <value>
         /// Full path of the folder.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The key of the associated data asset.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertyGetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the folder type. Each folder type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -82,69 +82,70 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
-
+        
         /// <value>
         /// Unique external key of this object in the source system.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
-
+        
         /// <value>
         /// The date and time the folder was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The last time that any change was made to the folder. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the folder.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who modified the folder.
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// Last modified timestamp of this object in the external system.
         /// </value>
         [JsonProperty(PropertyName = "timeExternal")]
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
-
+        
         /// <value>
         /// The current state of the folder.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Status of the object as updated by the harvest process.
         /// </value>
         [JsonProperty(PropertyName = "harvestStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
-
+        
         /// <value>
         /// The key of the last harvest process to update the metadata of this object.
         /// </value>
         [JsonProperty(PropertyName = "lastJobKey")]
         public string LastJobKey { get; set; }
-
+        
         /// <value>
         /// URI to the folder instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
     }
 }

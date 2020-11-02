@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AutonomousDatabaseBackupId is required.")]
         [JsonProperty(PropertyName = "autonomousDatabaseBackupId")]
         public string AutonomousDatabaseBackupId { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database clone type.
         /// </value>
@@ -53,5 +53,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "cloneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloneTypeEnum> CloneType { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "BACKUP_FROM_ID";
     }
 }

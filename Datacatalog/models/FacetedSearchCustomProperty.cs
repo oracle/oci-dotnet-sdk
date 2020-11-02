@@ -26,17 +26,18 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Value of the custom property field
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// Data type of the custom property field
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
+        
     }
 }

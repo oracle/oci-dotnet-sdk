@@ -21,5 +21,8 @@ namespace Oci.WaasService.Models
     /// </summary>
     public class IPHashLoadBalancingMethod : LoadBalancingMethod
     {
-            }
+        
+        [JsonProperty(PropertyName = "method")]
+        private readonly string method = "IP_HASH";
+    }
 }

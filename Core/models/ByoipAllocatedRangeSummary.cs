@@ -26,12 +26,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// The OCID of the PublicIpPool containing the part of the Byoip range.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]
         public string PublicIpPoolId { get; set; }
+        
     }
 }

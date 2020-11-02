@@ -26,67 +26,67 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "aliases")]
         public System.Collections.Generic.List<LogAnalyticsLabelAlias> Aliases { get; set; }
-
+        
         /// <value>
         /// alert rule usage count
         /// </value>
         [JsonProperty(PropertyName = "countUsageInAlertRule")]
         public System.Nullable<long> CountUsageInAlertRule { get; set; }
-
+        
         /// <value>
         /// source usage count
         /// </value>
         [JsonProperty(PropertyName = "countUsageInSource")]
         public System.Nullable<long> CountUsageInSource { get; set; }
-
+        
         /// <value>
         /// id
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Object Id { get; set; }
-
+        
         /// <value>
         /// suggest type
         /// </value>
         [JsonProperty(PropertyName = "suggestType")]
         public System.Nullable<long> SuggestType { get; set; }
-
+        
         /// <value>
         /// label description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// label display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// tag edit version
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
-
+        
         /// <value>
         /// label impact
         /// </value>
         [JsonProperty(PropertyName = "impact")]
         public string Impact { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// label name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// priority
         /// </value>
@@ -108,23 +108,24 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
-
+        
         /// <value>
         /// recommendation
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
-
+        
         /// <value>
         /// type
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public System.Nullable<long> Type { get; set; }
-
+        
         /// <value>
         /// user deleted flag
         /// </value>
         [JsonProperty(PropertyName = "isUserDeleted")]
         public System.Nullable<bool> IsUserDeleted { get; set; }
+        
     }
 }

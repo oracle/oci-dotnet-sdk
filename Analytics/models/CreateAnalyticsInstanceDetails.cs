@@ -32,14 +32,14 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Optional description.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// 
@@ -50,7 +50,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Analytics feature set.
         /// 
@@ -62,14 +62,14 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "featureSet")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FeatureSet> FeatureSet { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
-
+        
         /// <value>
         /// The license used for the service.
         /// 
@@ -81,24 +81,24 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "licenseType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseType> LicenseType { get; set; }
-
+        
         /// <value>
         /// Email address receiving notifications.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "emailNotification")]
         public string EmailNotification { get; set; }
-
+        
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
-
+        
         /// <value>
         /// IDCS access token identifying a stripe and service administrator user.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "idcsAccessToken")]
         public string IdcsAccessToken { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -107,7 +107,7 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -116,5 +116,6 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
     }
 }

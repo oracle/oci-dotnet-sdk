@@ -38,7 +38,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The canonical name for the record's type. Only A, AAAA, and CNAME are supported. For more
         /// information, see [Supported DNS Resource Record Types](https://docs.cloud.oracle.com/iaas/Content/DNS/Reference/supporteddnsresource.htm).
@@ -50,7 +50,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Rtype is required.")]
         [JsonProperty(PropertyName = "rtype")]
         public string Rtype { get; set; }
-
+        
         /// <value>
         /// The record's data, as whitespace-delimited tokens in
         /// type-specific presentation format. All RDATA is normalized and the
@@ -64,7 +64,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Rdata is required.")]
         [JsonProperty(PropertyName = "rdata")]
         public string Rdata { get; set; }
-
+        
         /// <value>
         /// The freeform name of a group of one or more records in which this record is included,
         /// such as \"LAX data center\". An answer's `pool` property can be referenced in `answerCondition`
@@ -74,7 +74,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "pool")]
         public string Pool { get; set; }
-
+        
         /// <value>
         /// Set this property to `true` to indicate that the answer is administratively disabled,
         /// such as when the corresponding server is down for maintenance. An answer's `isDisabled`
@@ -84,5 +84,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isDisabled")]
         public System.Nullable<bool> IsDisabled { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The display name of the database that is associated with the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
+        
     }
 }

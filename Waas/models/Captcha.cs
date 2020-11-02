@@ -32,7 +32,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Url is required.")]
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
-
+        
         /// <value>
         /// The amount of time before the CAPTCHA expires, in seconds. If unspecified, defaults to `300`.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "SessionExpirationInSeconds is required.")]
         [JsonProperty(PropertyName = "sessionExpirationInSeconds")]
         public System.Nullable<int> SessionExpirationInSeconds { get; set; }
-
+        
         /// <value>
         /// The title used when displaying a CAPTCHA challenge. If unspecified, defaults to `Are you human?`
         /// </value>
@@ -52,19 +52,19 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Title is required.")]
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
-
+        
         /// <value>
         /// The text to show in the header when showing a CAPTCHA challenge. If unspecified, defaults to 'We have detected an increased number of attempts to access this website. To help us keep this site secure, please let us know that you are not a robot by entering the text from the image below.'
         /// </value>
         [JsonProperty(PropertyName = "headerText")]
         public string HeaderText { get; set; }
-
+        
         /// <value>
         /// The text to show in the footer when showing a CAPTCHA challenge. If unspecified, defaults to 'Enter the letters and numbers as they are shown in the image above.'
         /// </value>
         [JsonProperty(PropertyName = "footerText")]
         public string FooterText { get; set; }
-
+        
         /// <value>
         /// The text to show when incorrect CAPTCHA text is entered. If unspecified, defaults to `The CAPTCHA was incorrect. Try again.`
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "FailureMessage is required.")]
         [JsonProperty(PropertyName = "failureMessage")]
         public string FailureMessage { get; set; }
-
+        
         /// <value>
         /// The text to show on the label of the CAPTCHA challenge submit button. If unspecified, defaults to `Yes, I am human`.
         /// </value>
@@ -84,5 +84,6 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "SubmitLabel is required.")]
         [JsonProperty(PropertyName = "submitLabel")]
         public string SubmitLabel { get; set; }
+        
     }
 }

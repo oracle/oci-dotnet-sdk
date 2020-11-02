@@ -41,7 +41,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the `IdentityProvider` this mapping belongs to.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IdpId is required.")]
         [JsonProperty(PropertyName = "idpId")]
         public string IdpId { get; set; }
-
+        
         /// <value>
         /// The name of the IdP group that is mapped to the IAM Service group.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IdpGroupName is required.")]
         [JsonProperty(PropertyName = "idpGroupName")]
         public string IdpGroupName { get; set; }
-
+        
         /// <value>
         /// The OCID of the IAM Service group that is mapped to the IdP group.
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "GroupId is required.")]
         [JsonProperty(PropertyName = "groupId")]
         public string GroupId { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy containing the `IdentityProvider`.
         /// </value>
@@ -81,7 +81,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Date and time the mapping was created, in the format defined by RFC3339.
         /// <br/>
@@ -93,7 +93,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The mapping's current state.  After creating a mapping object, make sure its `lifecycleState` changes
         /// from CREATING to ACTIVE before using it.
@@ -125,11 +125,12 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The detailed status of INACTIVE lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
+        
     }
 }

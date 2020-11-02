@@ -37,18 +37,7 @@ namespace Oci.ResourcemanagerService.Models
             CompartmentConfigSource
         };
 
-        /// <value>
-        /// The type of configuration source to use for the Terraform configuration.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigSourceType is required.")]
-        [JsonProperty(PropertyName = "configSourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ConfigSourceTypeEnum> ConfigSourceType { get; set; }
-
+        
         /// <value>
         /// File path to the directory to use for running Terraform.
         /// If not specified, the root directory is used.
@@ -57,6 +46,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
         public string WorkingDirectory { get; set; }
+        
     }
 
     public class ConfigSourceModelConverter : JsonConverter

@@ -26,35 +26,36 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeObserved")]
         public System.Nullable<System.DateTime> TimeObserved { get; set; }
-
+        
         /// <value>
         /// The number of seconds this data covers.
         /// </value>
         [JsonProperty(PropertyName = "timeRangeInSeconds")]
         public System.Nullable<int> TimeRangeInSeconds { get; set; }
-
+        
         /// <value>
         /// The tenancy OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
-
+        
         /// <value>
         /// The compartment OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The policy OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "waasPolicyId")]
         public string WaasPolicyId { get; set; }
-
+        
         /// <value>
         /// Traffic in bytes.
         /// </value>
         [JsonProperty(PropertyName = "trafficInBytes")]
         public System.Nullable<int> TrafficInBytes { get; set; }
+        
     }
 }

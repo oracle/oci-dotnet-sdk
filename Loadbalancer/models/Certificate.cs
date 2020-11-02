@@ -39,7 +39,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CertificateName is required.")]
         [JsonProperty(PropertyName = "certificateName")]
         public string CertificateName { get; set; }
-
+        
         /// <value>
         /// The public certificate, in PEM format, that you received from your SSL certificate provider.
         /// <br/>
@@ -51,7 +51,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "PublicCertificate is required.")]
         [JsonProperty(PropertyName = "publicCertificate")]
         public string PublicCertificate { get; set; }
-
+        
         /// <value>
         /// The Certificate Authority certificate, or any interim certificate, that you received from your SSL certificate provider.
         /// <br/>
@@ -63,5 +63,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CaCertificate is required.")]
         [JsonProperty(PropertyName = "caCertificate")]
         public string CaCertificate { get; set; }
+        
     }
 }

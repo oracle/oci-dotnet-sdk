@@ -43,7 +43,7 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
-
+        
         /// <value>
         /// Specifies the base64-encoded 256-bit encryption key to use to encrypt or decrypt the object data.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Specifies the base64-encoded SHA256 hash of the encryption key. This value is used to check the integrity
         /// of the encryption key.
@@ -66,5 +66,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "KeySha256 is required.")]
         [JsonProperty(PropertyName = "keySha256")]
         public string KeySha256 { get; set; }
+        
     }
 }

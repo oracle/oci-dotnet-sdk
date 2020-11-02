@@ -26,13 +26,13 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The content URL of the agreement.
         /// </value>
         [JsonProperty(PropertyName = "contentUrl")]
         public string ContentUrl { get; set; }
-        ///
+                ///
         /// <value>
         /// Who authored the agreement.
         /// </value>
@@ -52,11 +52,12 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "author")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AuthorEnum> Author { get; set; }
-
+        
         /// <value>
         /// Textual prompt to read and accept the agreement.
         /// </value>
         [JsonProperty(PropertyName = "prompt")]
         public string Prompt { get; set; }
+        
     }
 }

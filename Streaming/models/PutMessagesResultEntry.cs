@@ -29,29 +29,30 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "partition")]
         public string Partition { get; set; }
-
+        
         /// <value>
         /// The offset of the message in the partition.
         /// </value>
         [JsonProperty(PropertyName = "offset")]
         public System.Nullable<long> Offset { get; set; }
-
+        
         /// <value>
         /// The timestamp indicating when the server appended the message to the stream.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// The error code, in case the message was not successfully appended to the stream.
         /// </value>
         [JsonProperty(PropertyName = "error")]
         public string Error { get; set; }
-
+        
         /// <value>
         /// A human-readable error message associated with the error code.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
+        
     }
 }

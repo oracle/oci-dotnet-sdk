@@ -28,8 +28,11 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "localMountPointPath")]
         public string LocalMountPointPath { get; set; }
-
+        
         [JsonProperty(PropertyName = "mountTypeDetails")]
         public MountTypeDetails MountTypeDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "NFS";
     }
 }

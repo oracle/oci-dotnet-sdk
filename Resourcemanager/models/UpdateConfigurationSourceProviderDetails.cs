@@ -28,21 +28,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the configuration source provider. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
-        /// <value>
-        /// The type of configuration source provider. The `GITLAB_ACCESS_TOKEN` type corresponds to Git.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "configSourceProviderType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ConfigurationSourceProvider.ConfigSourceProviderTypeEnum> ConfigSourceProviderType { get; set; }
-
+        
+        
         /// <value>
         /// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -50,7 +43,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -58,6 +51,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 
     public class UpdateConfigurationSourceProviderDetailsModelConverter : JsonConverter

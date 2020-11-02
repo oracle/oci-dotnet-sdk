@@ -30,5 +30,6 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "IpAddressProp is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddressProp { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// Value of the Identity Cloud Service tenancy.
         /// Example: idcs-8416ebdd0d674f84803f4193cce026e9
@@ -42,5 +42,6 @@ namespace Oci.OceService.Models
         [Required(ErrorMessage = "Tenancy is required.")]
         [JsonProperty(PropertyName = "tenancy")]
         public string Tenancy { get; set; }
+        
     }
 }

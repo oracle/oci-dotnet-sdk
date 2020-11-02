@@ -23,8 +23,9 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "entity")]
         public DataEntity Entity { get; set; }
-
+        
         [JsonProperty(PropertyName = "dataFormat")]
         public DataFormat DataFormat { get; set; }
+        
     }
 }

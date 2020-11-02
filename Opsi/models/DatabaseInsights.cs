@@ -26,5 +26,6 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseInsights")]
         public System.Object DatabaseInsightsProp { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// OCID for the managed instance
         /// </value>
@@ -40,25 +40,25 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Time at which the instance last checked in
         /// </value>
         [JsonProperty(PropertyName = "lastCheckin")]
         public string LastCheckin { get; set; }
-
+        
         /// <value>
         /// Time at which the instance last booted
         /// </value>
         [JsonProperty(PropertyName = "lastBoot")]
         public string LastBoot { get; set; }
-
+        
         /// <value>
         /// Number of updates available to be installed
         /// </value>
         [JsonProperty(PropertyName = "updatesAvailable")]
         public System.Nullable<int> UpdatesAvailable { get; set; }
-
+        
         /// <value>
         /// OCID for the Compartment
         /// </value>
@@ -68,13 +68,13 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Information specified by the user about the managed instance
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// status of the managed instance.
         /// </value>
@@ -96,18 +96,19 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
-
+        
         /// <value>
         /// Indicates whether a reboot is required to complete installation of updates.
         /// </value>
         [JsonProperty(PropertyName = "isRebootRequired")]
         public System.Nullable<bool> IsRebootRequired { get; set; }
+        
     }
 }

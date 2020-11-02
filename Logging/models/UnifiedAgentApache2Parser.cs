@@ -20,5 +20,8 @@ namespace Oci.LoggingService.Models
     /// </summary>
     public class UnifiedAgentApache2Parser : UnifiedAgentParser
     {
-            }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "APACHE2";
+    }
 }

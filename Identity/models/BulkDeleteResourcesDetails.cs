@@ -29,5 +29,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<BulkActionResource> Resources { get; set; }
+        
     }
 }

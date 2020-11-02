@@ -30,7 +30,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A base64 string encoding the binary shared secret.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Secret is required.")]
         [JsonProperty(PropertyName = "secret")]
         public string Secret { get; set; }
-
+        
         /// <value>
         /// TSIG Algorithms are encoded as domain names, but most consist of only one
         /// non-empty label, which is not required to be explicitly absolute.
@@ -54,5 +54,6 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Algorithm is required.")]
         [JsonProperty(PropertyName = "algorithm")]
         public string Algorithm { get; set; }
+        
     }
 }

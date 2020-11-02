@@ -30,7 +30,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Agent image platform type
         /// </value>
@@ -41,13 +41,13 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "platformType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PlatformTypes> PlatformType { get; set; }
-
+        
         /// <value>
         /// Agent image platform display name
         /// </value>
         [JsonProperty(PropertyName = "platformName")]
         public string PlatformName { get; set; }
-
+        
         /// <value>
         /// Agent image version
         /// </value>
@@ -57,30 +57,31 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// Agent image size in bytes
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<decimal> Size { get; set; }
-
+        
         /// <value>
         /// Agent image content SHA256 Hash
         /// </value>
         [JsonProperty(PropertyName = "checksum")]
         public string Checksum { get; set; }
-
+        
         /// <value>
         /// Object storage URL for download
         /// </value>
         [JsonProperty(PropertyName = "objectUrl")]
         public string ObjectUrl { get; set; }
-
+        
         /// <value>
         /// The current state of Management Agent Image
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
     }
 }

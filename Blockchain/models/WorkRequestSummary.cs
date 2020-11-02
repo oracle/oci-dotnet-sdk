@@ -52,14 +52,14 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-
+        
         /// <value>
         /// status of current work request.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequest.StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The id of the work request.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The ocid of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
@@ -83,7 +83,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// </value>
@@ -93,7 +93,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// </value>
@@ -103,7 +103,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -115,7 +115,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the request was started, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
         /// section 14.29.
@@ -123,12 +123,13 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the object was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

@@ -30,29 +30,30 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Pattern is required.")]
         [JsonProperty(PropertyName = "pattern")]
         public string Pattern { get; set; }
-
+        
         /// <value>
         /// The name key to tag this grok pattern.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Specify the time field for the event time. If the event doesn't have this field, the current time is used.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeKey")]
         public string FieldTimeKey { get; set; }
-
+        
         /// <value>
         /// Process value using the specified format. This is available only when time_type is a string.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeFormat")]
         public string FieldTimeFormat { get; set; }
-
+        
         /// <value>
         /// Use the specified time zone. The time value can be parsed or formatted in the specified time zone.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeZone")]
         public string FieldTimeZone { get; set; }
+        
     }
 }

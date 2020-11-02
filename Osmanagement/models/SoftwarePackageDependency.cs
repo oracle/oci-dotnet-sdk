@@ -26,17 +26,18 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "dependency")]
         public string Dependency { get; set; }
-
+        
         /// <value>
         /// the type of the dependency
         /// </value>
         [JsonProperty(PropertyName = "dependencyType")]
         public string DependencyType { get; set; }
-
+        
         /// <value>
         /// the modifier for the dependency
         /// </value>
         [JsonProperty(PropertyName = "dependencyModifier")]
         public string DependencyModifier { get; set; }
+        
     }
 }

@@ -26,5 +26,8 @@ namespace Oci.DnsService.Models
         
         [JsonProperty(PropertyName = "dynectMigrationDetails")]
         public DynectMigrationDetails DynectMigrationDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "migrationSource")]
+        private readonly string migrationSource = "DYNECT";
     }
 }

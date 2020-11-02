@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Unique identifier for the package available for update. NOTE - This is not an OCID
         /// </value>
@@ -40,14 +40,14 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The purpose of this update.
         /// </value>
         [JsonProperty(PropertyName = "updateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
-
+        
         /// <value>
         /// Type of the package
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Version of the installed package
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "InstalledVersion is required.")]
         [JsonProperty(PropertyName = "installedVersion")]
         public string InstalledVersion { get; set; }
-
+        
         /// <value>
         /// Version of the package available for update
         /// </value>
@@ -77,29 +77,30 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "AvailableVersion is required.")]
         [JsonProperty(PropertyName = "availableVersion")]
         public string AvailableVersion { get; set; }
-
+        
         /// <value>
         /// The architecture for which this package was built
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
         public string Architecture { get; set; }
-
+        
         /// <value>
         /// List of errata containing this update
         /// </value>
         [JsonProperty(PropertyName = "errata")]
         public System.Collections.Generic.List<Id> Errata { get; set; }
-
+        
         /// <value>
         /// List of CVEs applicable to this erratum
         /// </value>
         [JsonProperty(PropertyName = "relatedCves")]
         public System.Collections.Generic.List<string> RelatedCves { get; set; }
-
+        
         /// <value>
         /// list of software sources that provide the software package
         /// </value>
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<SoftwareSourceId> SoftwareSources { get; set; }
+        
     }
 }

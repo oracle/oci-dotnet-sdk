@@ -30,11 +30,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderRecipeId is required.")]
         [JsonProperty(PropertyName = "responderRecipeId")]
         public string ResponderRecipeId { get; set; }
-
+        
         /// <value>
         /// Override responder rules associated with reponder recipe in a target.
         /// </value>
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeResponderRuleDetails> ResponderRules { get; set; }
+        
     }
 }

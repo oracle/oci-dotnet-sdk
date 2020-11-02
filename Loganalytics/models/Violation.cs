@@ -26,25 +26,25 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "indexes")]
         public System.Collections.Generic.List<Indexes> Indexes { get; set; }
-
+        
         /// <value>
         /// ruleDescription
         /// </value>
         [JsonProperty(PropertyName = "ruleDescription")]
         public string RuleDescription { get; set; }
-
+        
         /// <value>
         /// ruleName
         /// </value>
         [JsonProperty(PropertyName = "ruleName")]
         public string RuleName { get; set; }
-
+        
         /// <value>
         /// ruleRemediation
         /// </value>
         [JsonProperty(PropertyName = "ruleRemediation")]
         public string RuleRemediation { get; set; }
-        ///
+                ///
         /// <value>
         /// ruleType
         /// </value>
@@ -62,5 +62,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "ruleType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RuleTypeEnum> RuleType { get; set; }
+        
     }
 }

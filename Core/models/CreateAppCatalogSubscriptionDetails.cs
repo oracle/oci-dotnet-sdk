@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the listing.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ListingId is required.")]
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// Listing resource version.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ListingResourceVersion is required.")]
         [JsonProperty(PropertyName = "listingResourceVersion")]
         public string ListingResourceVersion { get; set; }
-
+        
         /// <value>
         /// Oracle TOU link
         /// </value>
@@ -60,13 +60,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "OracleTermsOfUseLink is required.")]
         [JsonProperty(PropertyName = "oracleTermsOfUseLink")]
         public string OracleTermsOfUseLink { get; set; }
-
+        
         /// <value>
         /// EULA link
         /// </value>
         [JsonProperty(PropertyName = "eulaLink")]
         public string EulaLink { get; set; }
-
+        
         /// <value>
         /// Date and time the agreements were retrieved, in [RFC3339](https://tools.ietf.org/html/rfc3339) format.
         /// Example: 2018-03-20T12:32:53.532Z
@@ -77,7 +77,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeRetrieved is required.")]
         [JsonProperty(PropertyName = "timeRetrieved")]
         public System.Nullable<System.DateTime> TimeRetrieved { get; set; }
-
+        
         /// <value>
         /// A generated signature for this listing resource version retrieved the agreements API.
         /// </value>
@@ -87,5 +87,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Signature is required.")]
         [JsonProperty(PropertyName = "signature")]
         public string Signature { get; set; }
+        
     }
 }

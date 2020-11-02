@@ -23,17 +23,7 @@ namespace Oci.CoreService.Models
     public class ImageCapabilitySchemaDescriptor 
     {
         
-        /// <value>
-        /// The image capability schema descriptor type for the capability
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DescriptorType is required.")]
-        [JsonProperty(PropertyName = "descriptorType")]
-        public string DescriptorType { get; set; }
-        ///
+                ///
         ///
         public enum SourceEnum {
             [EnumMember(Value = "GLOBAL")]
@@ -49,6 +39,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "source")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceEnum> Source { get; set; }
+        
     }
 
     public class ImageCapabilitySchemaDescriptorModelConverter : JsonConverter

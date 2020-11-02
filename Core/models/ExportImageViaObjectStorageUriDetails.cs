@@ -30,5 +30,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DestinationUri is required.")]
         [JsonProperty(PropertyName = "destinationUri")]
         public string DestinationUri { get; set; }
+        
+        [JsonProperty(PropertyName = "destinationType")]
+        private readonly string destinationType = "objectStorageUri";
     }
 }

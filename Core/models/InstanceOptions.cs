@@ -29,5 +29,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "areLegacyImdsEndpointsDisabled")]
         public System.Nullable<bool> AreLegacyImdsEndpointsDisabled { get; set; }
+        
     }
 }

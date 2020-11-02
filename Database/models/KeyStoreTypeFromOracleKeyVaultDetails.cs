@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ConnectionIps is required.")]
         [JsonProperty(PropertyName = "connectionIps")]
         public System.Collections.Generic.List<string> ConnectionIps { get; set; }
-
+        
         /// <value>
         /// The administrator username to connect to Oracle Key Vault
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AdminUsername is required.")]
         [JsonProperty(PropertyName = "adminUsername")]
         public string AdminUsername { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [secret](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
         /// </value>
@@ -60,5 +60,8 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SecretId is required.")]
         [JsonProperty(PropertyName = "secretId")]
         public string SecretId { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "ORACLE_KEY_VAULT";
     }
 }

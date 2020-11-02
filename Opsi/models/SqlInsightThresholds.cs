@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DegradationInPct is required.")]
         [JsonProperty(PropertyName = "degradationInPct")]
         public System.Nullable<int> DegradationInPct { get; set; }
-
+        
         /// <value>
         /// Variability Percent Threshold is used to derive variant SQLs.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Variability is required.")]
         [JsonProperty(PropertyName = "variability")]
         public System.Nullable<float> Variability { get; set; }
-
+        
         /// <value>
         /// Inefficiency Percent Threshold is used to derive inefficient SQLs.
         /// 
@@ -53,7 +53,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "InefficiencyInPct is required.")]
         [JsonProperty(PropertyName = "inefficiencyInPct")]
         public System.Nullable<int> InefficiencyInPct { get; set; }
-
+        
         /// <value>
         /// PctIncreaseInIO is used for deriving insights for SQLs which are degrading or
         /// variant or inefficient. And these SQLs should also have increasing change in IO Time
@@ -66,7 +66,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "IncreaseInIOInPct is required.")]
         [JsonProperty(PropertyName = "increaseInIOInPct")]
         public System.Nullable<int> IncreaseInIOInPct { get; set; }
-
+        
         /// <value>
         /// PctIncreaseInCPU is used for deriving insights for SQLs which are degrading or
         /// variant or inefficient. And these SQLs should also have increasing change in CPU Time
@@ -79,7 +79,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "IncreaseInCPUInPct is required.")]
         [JsonProperty(PropertyName = "increaseInCPUInPct")]
         public System.Nullable<int> IncreaseInCPUInPct { get; set; }
-
+        
         /// <value>
         /// PctIncreaseInIO is used for deriving insights for SQLs which are degrading or
         /// variant or inefficient. And these SQLs should also have increasing change in
@@ -92,5 +92,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "IncreaseInInefficientWaitInPct is required.")]
         [JsonProperty(PropertyName = "increaseInInefficientWaitInPct")]
         public System.Nullable<int> IncreaseInInefficientWaitInPct { get; set; }
+        
     }
 }

@@ -26,7 +26,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The action to take when the custom protection rule is triggered.
         /// `DETECT` - Logs the request when the criteria of the custom protection rule are met. `BLOCK` - Blocks the request when the criteria of the custom protection rule are met.
@@ -46,8 +46,9 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
-
+        
         [JsonProperty(PropertyName = "exclusions")]
         public System.Collections.Generic.List<ProtectionRuleExclusion> Exclusions { get; set; }
+        
     }
 }

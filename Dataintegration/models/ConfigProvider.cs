@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "bindings")]
         public System.Collections.Generic.Dictionary<string, ParameterValue> Bindings { get; set; }
-
+        
         /// <value>
         /// The child providers.
         /// </value>
         [JsonProperty(PropertyName = "childProviders")]
         public System.Collections.Generic.Dictionary<string, ConfigProvider> ChildProviders { get; set; }
+        
     }
 }

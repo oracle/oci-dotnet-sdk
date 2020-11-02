@@ -32,5 +32,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+        
     }
 }

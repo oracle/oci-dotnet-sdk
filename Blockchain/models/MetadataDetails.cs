@@ -30,7 +30,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "ParamName is required.")]
         [JsonProperty(PropertyName = "paramName")]
         public string ParamName { get; set; }
-
+        
         /// <value>
         /// Metadata param value. Complex value will be a JSON string.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "ParamValue is required.")]
         [JsonProperty(PropertyName = "paramValue")]
         public string ParamValue { get; set; }
-
+        
         /// <value>
         /// Indicates if the value is a JSON string
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "IsJsonValue is required.")]
         [JsonProperty(PropertyName = "isJsonValue")]
         public System.Nullable<bool> IsJsonValue { get; set; }
+        
     }
 }

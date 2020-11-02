@@ -379,8 +379,7 @@ namespace Oci.Examples
             BootVolumeSourceDetails existingBootVolumeDetails = existingBootVolume.SourceDetails;
             BootVolumeSourceDetails bootVolumeSourceDetails = new BootVolumeSourceFromBootVolumeDetails
             {
-                Id = existingBootVolume.Id,
-                Type = "bootVolume"
+                Id = existingBootVolume.Id
             };
 
             CreateBootVolumeDetails createBootVolumeDetails = new CreateBootVolumeDetails
@@ -413,7 +412,6 @@ namespace Oci.Examples
         {
             InstanceSourceViaBootVolumeDetails instanceSourceViaBootVolumeDetails = new InstanceSourceViaBootVolumeDetails
             {
-                SourceType = "bootVolume",
                 BootVolumeId = bootVolume.Id
             };
             LaunchInstanceAgentConfigDetails launchInstanceAgentConfigDetails = new LaunchInstanceAgentConfigDetails

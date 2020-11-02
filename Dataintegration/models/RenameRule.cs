@@ -26,17 +26,20 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isSkipRemainingRulesOnMatch")]
         public System.Nullable<bool> IsSkipRemainingRulesOnMatch { get; set; }
-
+        
         /// <value>
         /// The attribute name that needs to be renamed.
         /// </value>
         [JsonProperty(PropertyName = "fromName")]
         public string FromName { get; set; }
-
+        
         /// <value>
         /// The new attribute name.
         /// </value>
         [JsonProperty(PropertyName = "toName")]
         public string ToName { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "RENAME_RULE";
     }
 }

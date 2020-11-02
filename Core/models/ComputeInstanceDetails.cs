@@ -23,11 +23,14 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "blockVolumes")]
         public System.Collections.Generic.List<InstanceConfigurationBlockVolumeDetails> BlockVolumes { get; set; }
-
+        
         [JsonProperty(PropertyName = "launchDetails")]
         public InstanceConfigurationLaunchInstanceDetails LaunchDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "secondaryVnics")]
         public System.Collections.Generic.List<InstanceConfigurationAttachVnicDetails> SecondaryVnics { get; set; }
+        
+        [JsonProperty(PropertyName = "instanceType")]
+        private readonly string instanceType = "compute";
     }
 }

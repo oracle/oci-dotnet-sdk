@@ -72,7 +72,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// A list of backend servers that are currently in the `WARNING` health state. The list identifies each backend server by
         /// IP address and port.
@@ -85,7 +85,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "WarningStateBackendNames is required.")]
         [JsonProperty(PropertyName = "warningStateBackendNames")]
         public System.Collections.Generic.List<string> WarningStateBackendNames { get; set; }
-
+        
         /// <value>
         /// A list of backend servers that are currently in the `CRITICAL` health state. The list identifies each backend server by
         /// IP address and port.
@@ -98,7 +98,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CriticalStateBackendNames is required.")]
         [JsonProperty(PropertyName = "criticalStateBackendNames")]
         public System.Collections.Generic.List<string> CriticalStateBackendNames { get; set; }
-
+        
         /// <value>
         /// A list of backend servers that are currently in the `UNKNOWN` health state. The list identifies each backend server by
         /// IP address and port.
@@ -111,7 +111,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "UnknownStateBackendNames is required.")]
         [JsonProperty(PropertyName = "unknownStateBackendNames")]
         public System.Collections.Generic.List<string> UnknownStateBackendNames { get; set; }
-
+        
         /// <value>
         /// The total number of backend servers in this backend set.
         /// <br/>
@@ -123,5 +123,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "TotalBackendCount is required.")]
         [JsonProperty(PropertyName = "totalBackendCount")]
         public System.Nullable<int> TotalBackendCount { get; set; }
+        
     }
 }

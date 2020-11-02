@@ -23,17 +23,7 @@ namespace Oci.AnalyticsService.Models
     public class NetworkEndpointDetails 
     {
         
-        /// <value>
-        /// The type of network endpoint.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NetworkEndpointType is required.")]
-        [JsonProperty(PropertyName = "networkEndpointType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NetworkEndpointType> NetworkEndpointType { get; set; }
+        
     }
 
     public class NetworkEndpointDetailsModelConverter : JsonConverter

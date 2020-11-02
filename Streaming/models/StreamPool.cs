@@ -30,7 +30,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Compartment OCID that the pool belongs to.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the stream pool.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the stream pool.
         /// </value>
@@ -80,13 +80,13 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Any additional details about the current state of the stream.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStateDetails")]
         public string LifecycleStateDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the stream pool was created, expressed in in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
         /// <br/>
@@ -98,21 +98,21 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "KafkaSettings is required.")]
         [JsonProperty(PropertyName = "kafkaSettings")]
         public KafkaSettings KafkaSettings { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "CustomEncryptionKey is required.")]
         [JsonProperty(PropertyName = "customEncryptionKey")]
         public CustomEncryptionKey CustomEncryptionKey { get; set; }
-
+        
         /// <value>
         /// True if the stream pool is private, false otherwise.
         /// If the stream pool is private, the streams inside the stream pool can only be accessed from inside the associated subnetId.
@@ -120,7 +120,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPrivate")]
         public System.Nullable<bool> IsPrivate { get; set; }
-
+        
         /// <value>
         /// The FQDN used to access the streams inside the stream pool (same FQDN as the messagesEndpoint attribute of a {@link Stream} object).
         /// If the stream pool is private, the FQDN is customized and can only be accessed from inside the associated subnetId, otherwise the FQDN is publicly resolvable.
@@ -129,10 +129,10 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "endpointFqdn")]
         public string EndpointFqdn { get; set; }
-
+        
         [JsonProperty(PropertyName = "privateEndpointSettings")]
         public PrivateEndpointSettings PrivateEndpointSettings { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. Exists for cross-compatibility only.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -141,7 +141,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -149,5 +149,6 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -30,5 +30,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeIds is required.")]
         [JsonProperty(PropertyName = "volumeIds")]
         public System.Collections.Generic.List<string> VolumeIds { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "volumeIds";
     }
 }

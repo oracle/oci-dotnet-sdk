@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the instance pool. Does not have to be unique, and it's
         /// changeable. Avoid entering confidential information.
@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance configuration associated with the
         /// instance pool.
@@ -54,7 +54,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "instanceConfigurationId")]
         public string InstanceConfigurationId { get; set; }
-
+        
         /// <value>
         /// The placement configurations for the instance pool. Provide one placement configuration for
         /// each availability domain.
@@ -66,11 +66,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "placementConfigurations")]
         public System.Collections.Generic.List<UpdateInstancePoolPlacementConfigurationDetails> PlacementConfigurations { get; set; }
-
+        
         /// <value>
         /// The number of instances that should be in the instance pool.
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
+        
     }
 }

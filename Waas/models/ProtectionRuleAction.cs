@@ -30,7 +30,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        ///
+                ///
         /// <value>
         /// The action to apply to the protection rule. If unspecified, defaults to `OFF`.
         /// </value>
@@ -54,11 +54,12 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
-
+        
         /// <value>
         /// The types of requests excluded from the protection rule action. If the requests matches the criteria in the `exclusions`, the protection rule action will not be executed.
         /// </value>
         [JsonProperty(PropertyName = "exclusions")]
         public System.Collections.Generic.List<ProtectionRuleExclusion> Exclusions { get; set; }
+        
     }
 }

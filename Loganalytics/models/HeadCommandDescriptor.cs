@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "HEAD";
     }
 }

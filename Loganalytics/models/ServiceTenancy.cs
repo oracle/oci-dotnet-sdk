@@ -30,5 +30,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TenancyId is required.")]
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
+        
     }
 }

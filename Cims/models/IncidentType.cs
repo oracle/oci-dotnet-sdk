@@ -26,29 +26,30 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name of the incident type.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The label associated with the incident type.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-
+        
         /// <value>
         /// The description of the incident type.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The list of classifiers.
         /// </value>
         [JsonProperty(PropertyName = "classifierList")]
         public System.Collections.Generic.List<Classifier> ClassifierList { get; set; }
+        
     }
 }

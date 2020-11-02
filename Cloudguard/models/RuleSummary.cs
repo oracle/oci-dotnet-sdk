@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// description of the rule
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// List of parameters applicable for rule
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Parameters is required.")]
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<OperatorSummary> Parameters { get; set; }
+        
     }
 }

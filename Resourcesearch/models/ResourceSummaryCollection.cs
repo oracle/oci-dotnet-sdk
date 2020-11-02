@@ -26,5 +26,6 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResourceSummary> Items { get; set; }
+        
     }
 }

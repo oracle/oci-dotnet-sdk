@@ -33,7 +33,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "PartNum is required.")]
         [JsonProperty(PropertyName = "partNum")]
         public System.Nullable<int> PartNum { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) returned when this part was uploaded.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Etag is required.")]
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
+        
     }
 }

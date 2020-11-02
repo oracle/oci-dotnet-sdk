@@ -30,13 +30,13 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
-
+        
         /// <value>
         /// Log group OCID.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "LogGroupId is required.")]
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// The user-friendly display name. This must be unique within the enclosing resource,
         /// and it's changeable. Avoid entering confidential information.
@@ -58,7 +58,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The logType that the log object is for, whether custom or service.
         /// </value>
@@ -80,13 +80,13 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "logType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LogTypeEnum> LogType { get; set; }
-
+        
         /// <value>
         /// Whether or not this resource is currently enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -95,7 +95,7 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -103,10 +103,10 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "configuration")]
         public Configuration Configuration { get; set; }
-
+        
         /// <value>
         /// The pipeline state.
         /// </value>
@@ -117,29 +117,30 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LogLifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Time the resource was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time the resource was last modified.
         /// </value>
         [JsonProperty(PropertyName = "timeLastModified")]
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
-
+        
         /// <value>
         /// Log retention duration in 30-day increments (30, 60, 90 and so on).
         /// </value>
         [JsonProperty(PropertyName = "retentionDuration")]
         public System.Nullable<int> RetentionDuration { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that the resource belongs to.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

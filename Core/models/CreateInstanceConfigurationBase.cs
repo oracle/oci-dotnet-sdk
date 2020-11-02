@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the instance configuration.  Does not have to be unique,
         /// and it's changeable. Avoid entering confidential information.
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the instance configuration. An instance configuration defines the
         /// settings to use when creating Compute instances, including details
@@ -83,23 +83,7 @@ namespace Oci.CoreService.Models
             Instance
         };
 
-        /// <value>
-        /// The source of the instance configuration. An instance configuration defines the
-        /// settings to use when creating Compute instances, including details
-        /// such as the base image, shape, and metadata. You can also specify the associated resources for the
-        /// instance, such as block volume attachments and network configuration.
-        /// <br/>
-        /// The following values are supported:
-        /// <br/>
-        /// * `NONE`: Creates an instance configuration using the list of settings that you specify.
-        /// <br/>
-        /// * `INSTANCE`: Creates an instance configuration using an existing instance as a template. The
-        /// instance configuration uses the same settings as the instance.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceEnum> Source { get; set; }
+        
     }
 
     public class CreateInstanceConfigurationBaseModelConverter : JsonConverter

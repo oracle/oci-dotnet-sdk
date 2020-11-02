@@ -21,5 +21,8 @@ namespace Oci.LoganalyticsService.Models
     /// </summary>
     public class Field : AbstractField
     {
-            }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "FIELD";
+    }
 }

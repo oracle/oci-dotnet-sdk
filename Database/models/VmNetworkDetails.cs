@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "VlanId is required.")]
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
-        ///
+                ///
         /// <value>
         /// The network type.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "networkType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
-
+        
         /// <value>
         /// The network netmask.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Netmask is required.")]
         [JsonProperty(PropertyName = "netmask")]
         public string Netmask { get; set; }
-
+        
         /// <value>
         /// The network gateway.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Gateway is required.")]
         [JsonProperty(PropertyName = "gateway")]
         public string Gateway { get; set; }
-
+        
         /// <value>
         /// The network domain name.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DomainName is required.")]
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; set; }
-
+        
         /// <value>
         /// The list of node details.
         /// </value>
@@ -92,5 +92,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Nodes is required.")]
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<NodeDetails> Nodes { get; set; }
+        
     }
 }

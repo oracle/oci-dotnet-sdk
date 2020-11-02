@@ -26,26 +26,26 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// Date and time the listing resource version was published, in [RFC3339](https://tools.ietf.org/html/rfc3339) format.
         /// Example: 2018-03-20T12:32:53.532Z
         /// </value>
         [JsonProperty(PropertyName = "timePublished")]
         public System.Nullable<System.DateTime> TimePublished { get; set; }
-
+        
         /// <value>
         /// OCID of the listing resource.
         /// </value>
         [JsonProperty(PropertyName = "listingResourceId")]
         public string ListingResourceId { get; set; }
-
+        
         /// <value>
         /// Resource Version.
         /// </value>
         [JsonProperty(PropertyName = "listingResourceVersion")]
         public string ListingResourceVersion { get; set; }
-
+        
         /// <value>
         /// List of regions that this listing resource version is available.
         /// <br/>
@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availableRegions")]
         public System.Collections.Generic.List<string> AvailableRegions { get; set; }
-
+        
         /// <value>
         /// Array of shapes compatible with this resource.
         /// <br/>
@@ -66,13 +66,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "compatibleShapes")]
         public System.Collections.Generic.List<string> CompatibleShapes { get; set; }
-
+        
         /// <value>
         /// List of accessible ports for instances launched with this listing resource version.
         /// </value>
         [JsonProperty(PropertyName = "accessiblePorts")]
         public System.Collections.Generic.List<int> AccessiblePorts { get; set; }
-        ///
+                ///
         ///
         public enum AllowedActionsEnum {
             [EnumMember(Value = "SNAPSHOT")]
@@ -96,5 +96,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "allowedActions", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<AllowedActionsEnum> AllowedActions { get; set; }
+        
     }
 }

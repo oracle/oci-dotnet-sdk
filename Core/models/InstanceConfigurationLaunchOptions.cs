@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bootVolumeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BootVolumeTypeEnum> BootVolumeType { get; set; }
-        ///
+                ///
         /// <value>
         /// Firmware used to boot VM.  Select the option that matches your operating system.
         /// * `BIOS` - Boot VM using BIOS style firmware.  This is compatible with both 32 bit and 64 bit operating
@@ -90,7 +90,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "firmware")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FirmwareEnum> Firmware { get; set; }
-        ///
+                ///
         /// <value>
         /// Emulation type for the physical network interface card (NIC).
         /// * `E1000` - Emulated Gigabit ethernet controller.  Compatible with Linux e1000 network driver.
@@ -120,7 +120,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "networkType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
-        ///
+                ///
         /// <value>
         /// Emulation type for volume.
         /// * `ISCSI` - ISCSI attached block storage device.
@@ -160,7 +160,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "remoteDataVolumeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RemoteDataVolumeTypeEnum> RemoteDataVolumeType { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `isPvEncryptionInTransitEnabled` in
         /// {@link #instanceConfigurationLaunchInstanceDetails(InstanceConfigurationLaunchInstanceDetailsRequest) instanceConfigurationLaunchInstanceDetails}.
@@ -168,11 +168,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
-
+        
         /// <value>
         /// Whether to enable consistent volume naming feature. Defaults to false.
         /// </value>
         [JsonProperty(PropertyName = "isConsistentVolumeNamingEnabled")]
         public System.Nullable<bool> IsConsistentVolumeNamingEnabled { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        ///
+                ///
         /// <value>
         /// The selected action. If unspecified, defaults to `OFF`.
         /// </value>
@@ -54,5 +54,6 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
+        
     }
 }

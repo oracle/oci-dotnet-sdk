@@ -28,7 +28,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "planJobId")]
         public string PlanJobId { get; set; }
-
+        
         /// <value>
         /// Specifies whether to use the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the most recently run plan job.
         /// `True` if using the latest job [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be a plan job that completed successfully.
@@ -36,7 +36,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isUseLatestJobId")]
         public System.Nullable<bool> IsUseLatestJobId { get; set; }
-
+        
         /// <value>
         /// Specifies whether to use the configuration directly, without reference to a Plan job.
         /// `True` if using the configuration directly. Note that it is not necessary
@@ -45,5 +45,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAutoApproved")]
         public System.Nullable<bool> IsAutoApproved { get; set; }
+        
     }
 }

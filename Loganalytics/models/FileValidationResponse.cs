@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InputFile is required.")]
         [JsonProperty(PropertyName = "inputFile")]
         public string InputFile { get; set; }
-
+        
         /// <value>
         /// Object Location
         /// </value>
@@ -40,11 +40,12 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ObjectLocation is required.")]
         [JsonProperty(PropertyName = "objectLocation")]
         public string ObjectLocation { get; set; }
-
+        
         /// <value>
         /// Files
         /// </value>
         [JsonProperty(PropertyName = "files")]
         public System.Collections.Generic.List<UploadFileStatus> Files { get; set; }
+        
     }
 }

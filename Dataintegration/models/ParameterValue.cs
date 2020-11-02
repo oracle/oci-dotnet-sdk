@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "simpleValue")]
         public System.Object SimpleValue { get; set; }
-
+        
         /// <value>
         /// This can be any object such as a file entity, a schema, or a table.
         /// </value>
         [JsonProperty(PropertyName = "rootObjectValue")]
         public System.Object RootObjectValue { get; set; }
+        
     }
 }

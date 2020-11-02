@@ -31,7 +31,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "ResourceId is required.")]
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The friendly name of the resource.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "ResourceName is required.")]
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// The region where the affected resource exists.
         /// </value>
@@ -51,5 +51,6 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "Region is required.")]
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
+        
     }
 }

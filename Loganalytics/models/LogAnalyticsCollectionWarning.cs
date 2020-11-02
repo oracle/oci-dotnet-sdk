@@ -27,5 +27,6 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
     }
 }

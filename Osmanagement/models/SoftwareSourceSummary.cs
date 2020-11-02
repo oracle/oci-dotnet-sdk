@@ -30,13 +30,13 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Information specified by the user about the software source
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// OCID for the Compartment
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// User friendly name for the software source
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Type of the Software Source
         /// </value>
@@ -66,7 +66,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "RepoType is required.")]
         [JsonProperty(PropertyName = "repoType")]
         public string RepoType { get; set; }
-        ///
+                ///
         /// <value>
         /// status of the software source.
         /// </value>
@@ -88,44 +88,45 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// Number of packages
         /// </value>
         [JsonProperty(PropertyName = "packages")]
         public System.Nullable<int> Packages { get; set; }
-
+        
         /// <value>
         /// The current state of the software source.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// OCID for the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
-
+        
         /// <value>
         /// Display name the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentName")]
         public string ParentName { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

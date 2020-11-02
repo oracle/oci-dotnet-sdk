@@ -26,31 +26,31 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
-
+        
         /// <value>
         /// alias display name
         /// </value>
         [JsonProperty(PropertyName = "aliasDisplayName")]
         public string AliasDisplayName { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// label display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// label name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// priority
         /// </value>
@@ -72,5 +72,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
+        
     }
 }

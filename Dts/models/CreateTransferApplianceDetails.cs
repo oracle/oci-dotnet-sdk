@@ -21,5 +21,6 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
+        
     }
 }

@@ -26,17 +26,18 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// entityId
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
-
+        
         /// <value>
         /// lookupReference
         /// </value>
         [JsonProperty(PropertyName = "lookupReference")]
         public System.Nullable<long> LookupReference { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.HealthchecksService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A list of targets (hostnames or IP addresses) of the probe.
         /// </value>
@@ -40,13 +40,13 @@ namespace Oci.HealthchecksService.Models
         [Required(ErrorMessage = "Targets is required.")]
         [JsonProperty(PropertyName = "targets")]
         public System.Collections.Generic.List<string> Targets { get; set; }
-
+        
         /// <value>
         /// A list of names of vantage points from which to execute the probe.
         /// </value>
         [JsonProperty(PropertyName = "vantagePointNames")]
         public System.Collections.Generic.List<string> VantagePointNames { get; set; }
-
+        
         /// <value>
         /// The port on which to probe endpoints. If unspecified, probes will use the
         /// default port of their protocol.
@@ -54,7 +54,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The probe timeout in seconds. Valid values: 10, 20, 30, and 60.
         /// The probe timeout must be less than or equal to `intervalInSeconds` for monitors.
@@ -62,7 +62,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
@@ -70,5 +70,6 @@ namespace Oci.HealthchecksService.Models
         [JsonProperty(PropertyName = "protocol")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PingProbeProtocol> Protocol { get; set; }
+        
     }
 }

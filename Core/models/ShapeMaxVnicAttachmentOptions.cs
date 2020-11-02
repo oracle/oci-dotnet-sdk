@@ -30,19 +30,20 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<int> Min { get; set; }
-
+        
         /// <value>
         /// The highest maximum value of VNIC attachments.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<float> Max { get; set; }
-
+        
         /// <value>
         /// The default number of VNIC attachments allowed per OCPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "defaultPerOcpu")]
         public System.Nullable<float> DefaultPerOcpu { get; set; }
+        
     }
 }

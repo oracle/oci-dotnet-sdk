@@ -41,7 +41,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the boot volume.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -60,14 +60,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The boot volume's Oracle ID (OCID).
         /// </value>
@@ -94,19 +94,19 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The image OCID used to create the boot volume.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// Specifies whether the boot volume's data has finished copying from the source boot volume or boot volume backup.
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }
-
+        
         /// <value>
         /// The number of volume performance units (VPUs) that will be applied to this boot volume per GB,
         /// representing the Block Volume service's elastic performance options.
@@ -121,7 +121,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of a boot volume.
         /// </value>
@@ -151,13 +151,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The size of the boot volume in GBs.
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
-
+        
         /// <value>
         /// The size of the volume in MBs. The value must be a multiple of 1024.
         /// This field is deprecated. Please use sizeInGBs.
@@ -169,7 +169,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SizeInMBs is required.")]
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
-
+        
         /// <value>
         /// The boot volume source, either an existing boot volume in the same availability domain or a boot volume backup.
         /// If null, this means that the boot volume was created from an image.
@@ -177,7 +177,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public BootVolumeSourceDetails SourceDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the boot volume was created. Format defined
         /// by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -189,31 +189,32 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the source volume group.
         /// </value>
         [JsonProperty(PropertyName = "volumeGroupId")]
         public string VolumeGroupId { get; set; }
-
+        
         /// <value>
         /// The OCID of the Key Management master encryption key assigned to the boot volume.
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-
+        
         /// <value>
         /// Specifies whether the auto-tune performance is enabled for this boot volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
-
+        
         /// <value>
         /// The number of Volume Performance Units per GB that this boot volume is effectively tuned to when it's idle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autoTunedVpusPerGB")]
         public System.Nullable<long> AutoTunedVpusPerGB { get; set; }
+        
     }
 }

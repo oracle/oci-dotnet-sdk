@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
-
+        
         /// <value>
         /// Inidividial worker nodes groups details
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Nodes is required.")]
         [JsonProperty(PropertyName = "nodes")]
         public ChangeShapeNodes Nodes { get; set; }
+        
     }
 }

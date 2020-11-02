@@ -23,7 +23,7 @@ namespace Oci.DatacatalogService.Models
         
         [JsonProperty(PropertyName = "connectionDetail")]
         public CreateConnectionDetails ConnectionDetail { get; set; }
-
+        
         /// <value>
         /// The information used to import the connection.
         /// </value>
@@ -33,5 +33,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "ConnectionPayload is required.")]
         [JsonProperty(PropertyName = "connectionPayload")]
         public System.Byte[] ConnectionPayload { get; set; }
+        
     }
 }

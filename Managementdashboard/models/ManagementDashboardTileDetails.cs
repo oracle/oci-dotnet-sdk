@@ -30,7 +30,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Id of saved search.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "SavedSearchId is required.")]
         [JsonProperty(PropertyName = "savedSearchId")]
         public string SavedSearchId { get; set; }
-
+        
         /// <value>
         /// Row, Y position
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Row is required.")]
         [JsonProperty(PropertyName = "row")]
         public System.Nullable<int> Row { get; set; }
-
+        
         /// <value>
         /// Column, X position
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Column is required.")]
         [JsonProperty(PropertyName = "column")]
         public System.Nullable<int> Column { get; set; }
-
+        
         /// <value>
         /// Height position
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Height is required.")]
         [JsonProperty(PropertyName = "height")]
         public System.Nullable<int> Height { get; set; }
-
+        
         /// <value>
         /// Width position
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Width is required.")]
         [JsonProperty(PropertyName = "width")]
         public System.Nullable<int> Width { get; set; }
-
+        
         /// <value>
         /// Json for internationalization.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Nls is required.")]
         [JsonProperty(PropertyName = "nls")]
         public System.Object Nls { get; set; }
-
+        
         /// <value>
         /// Json to contain options for UI.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "UiConfig is required.")]
         [JsonProperty(PropertyName = "uiConfig")]
         public System.Object UiConfig { get; set; }
-
+        
         /// <value>
         /// Array of Json to contain options for source of data.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DataConfig is required.")]
         [JsonProperty(PropertyName = "dataConfig")]
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
-        ///
+                ///
         /// <value>
         /// State of saved search.
         /// </value>
@@ -134,7 +134,7 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "state")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StateEnum> State { get; set; }
-
+        
         /// <value>
         /// Drill down configuration
         /// </value>
@@ -144,5 +144,6 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DrilldownConfig is required.")]
         [JsonProperty(PropertyName = "drilldownConfig")]
         public System.Object DrilldownConfig { get; set; }
+        
     }
 }

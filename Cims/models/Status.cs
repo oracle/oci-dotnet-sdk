@@ -30,7 +30,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// The status message for this ticket.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

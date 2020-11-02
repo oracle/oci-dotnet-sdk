@@ -33,7 +33,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Address is required.")]
         [JsonProperty(PropertyName = "address")]
         public string Address { get; set; }
-
+        
         /// <value>
         /// The server's port. Port value must be a value of 53, otherwise omit
         /// the port value.
@@ -41,14 +41,15 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         [JsonProperty(PropertyName = "tsig")]
         public TSIG Tsig { get; set; }
-
+        
         /// <value>
         /// The OCID of the TSIG key.
         /// </value>
         [JsonProperty(PropertyName = "tsigKeyId")]
         public string TsigKeyId { get; set; }
+        
     }
 }

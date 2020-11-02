@@ -29,5 +29,6 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]
         public System.Nullable<System.DateTime> TimeOfDeletion { get; set; }
+        
     }
 }

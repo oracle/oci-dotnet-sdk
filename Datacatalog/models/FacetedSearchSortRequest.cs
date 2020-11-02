@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "sortBy")]
         public string SortBy { get; set; }
-        ///
+                ///
         /// <value>
         /// Sort order for search results.
         /// </value>
@@ -44,5 +44,6 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "sortOrder")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
     }
 }

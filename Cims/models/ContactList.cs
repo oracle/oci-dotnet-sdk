@@ -30,5 +30,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "ContactListProp is required.")]
         [JsonProperty(PropertyName = "contactList")]
         public System.Collections.Generic.List<Contact> ContactListProp { get; set; }
+        
     }
 }

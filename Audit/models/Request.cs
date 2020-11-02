@@ -29,7 +29,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The full path of the API request.
         /// <br/>
@@ -37,7 +37,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The HTTP method of the request.
         /// <br/>
@@ -45,14 +45,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "action")]
         public string Action { get; set; }
-
+        
         /// <value>
         /// The parameters supplied by the caller during this operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> Parameters { get; set; }
-
+        
         /// <value>
         /// The HTTP header fields and values in the request.
         /// <br/>
@@ -60,5 +60,6 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> Headers { get; set; }
+        
     }
 }

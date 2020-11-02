@@ -20,5 +20,8 @@ namespace Oci.ComputeinstanceagentService.Models
     /// </summary>
     public class InstanceAgentCommandOutputViaTextDetails : InstanceAgentCommandOutputDetails
     {
-            }
+        
+        [JsonProperty(PropertyName = "outputType")]
+        private readonly string outputType = "TEXT";
+    }
 }

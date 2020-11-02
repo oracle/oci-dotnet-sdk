@@ -30,23 +30,24 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Uri is required.")]
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// The HTTP port on the origin that the web application listens on. If unspecified, defaults to `80`.
         /// </value>
         [JsonProperty(PropertyName = "httpPort")]
         public System.Nullable<int> HttpPort { get; set; }
-
+        
         /// <value>
         /// The HTTPS port on the origin that the web application listens on. If unspecified, defaults to `443`.
         /// </value>
         [JsonProperty(PropertyName = "httpsPort")]
         public System.Nullable<int> HttpsPort { get; set; }
-
+        
         /// <value>
         /// A list of HTTP headers to forward to your origin.
         /// </value>
         [JsonProperty(PropertyName = "customHeaders")]
         public System.Collections.Generic.List<Header> CustomHeaders { get; set; }
+        
     }
 }

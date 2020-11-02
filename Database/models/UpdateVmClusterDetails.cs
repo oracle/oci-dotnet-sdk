@@ -26,25 +26,25 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The memory to be allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]
         public System.Nullable<int> MemorySizeInGBs { get; set; }
-
+        
         /// <value>
         /// The local node storage to be allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
         public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The data disk group size to be allocated in TBs.
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Double DataStorageSizeInTBs { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to the VM cluster. The default is BRING_YOUR_OWN_LICENSE.
         /// 
@@ -64,16 +64,16 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// The public key portion of one or more key pairs used for SSH access to the VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKeys")]
         public System.Collections.Generic.List<string> SshPublicKeys { get; set; }
-
+        
         [JsonProperty(PropertyName = "version")]
         public PatchDetails Version { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -90,5 +90,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

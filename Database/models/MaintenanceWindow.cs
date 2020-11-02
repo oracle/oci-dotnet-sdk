@@ -43,13 +43,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "preference")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PreferenceEnum> Preference { get; set; }
-
+        
         /// <value>
         /// Months during the year when maintenance should be performed.
         /// </value>
         [JsonProperty(PropertyName = "months")]
         public System.Collections.Generic.List<Month> Months { get; set; }
-
+        
         /// <value>
         /// Weeks during the month when maintenance should be performed. Weeks start on the 1st, 8th, 15th, and 22nd days of the month, and have a duration of 7 days. Weeks start and end based on calendar dates, not days of the week.
         /// For example, to allow maintenance during the 2nd week of the month (from the 8th day to the 14th day of the month), use the value 2. Maintenance cannot be scheduled for the fifth week of months that contain more than 28 days.
@@ -58,25 +58,26 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "weeksOfMonth")]
         public System.Collections.Generic.List<int> WeeksOfMonth { get; set; }
-
+        
         /// <value>
         /// Days during the week when maintenance should be performed.
         /// </value>
         [JsonProperty(PropertyName = "daysOfWeek")]
         public System.Collections.Generic.List<DayOfWeek> DaysOfWeek { get; set; }
-
+        
         /// <value>
         /// The window of hours during the day when maintenance should be performed. The window is a 4 hour slot. Valid values are
         /// - 0 - represents time slot 0:00 - 3:59 UTC - 4 - represents time slot 4:00 - 7:59 UTC - 8 - represents time slot 8:00 - 11:59 UTC - 12 - represents time slot 12:00 - 15:59 UTC - 16 - represents time slot 16:00 - 19:59 UTC - 20 - represents time slot 20:00 - 23:59 UTC
         /// </value>
         [JsonProperty(PropertyName = "hoursOfDay")]
         public System.Collections.Generic.List<int> HoursOfDay { get; set; }
-
+        
         /// <value>
         /// Lead time window allows user to set a lead time to prepare for a down time. The lead time is in weeks and valid value is between 1 to 4.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "leadTimeInWeeks")]
         public System.Nullable<int> LeadTimeInWeeks { get; set; }
+        
     }
 }

@@ -27,11 +27,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-
+        
         /// <value>
         /// A single log analytics entity type property definition.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<EntityTypeProperty> Properties { get; set; }
+        
     }
 }

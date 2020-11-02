@@ -28,5 +28,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Ciphertext is required.")]
         [JsonProperty(PropertyName = "ciphertext")]
         public string Ciphertext { get; set; }
+        
     }
 }

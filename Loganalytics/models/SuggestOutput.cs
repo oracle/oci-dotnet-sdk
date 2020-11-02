@@ -32,47 +32,48 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Position is required.")]
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
-
+        
         /// <value>
         /// Context specific list of querylanguage commands if input is seeking command suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "commands")]
         public System.Collections.Generic.List<string> Commands { get; set; }
-
+        
         /// <value>
         /// Context specific list of querylanguage fields / columns if input is seeking field / column suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<string> Fields { get; set; }
-
+        
         /// <value>
         /// Context specific list of field values if input is seeking field value suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fieldValues")]
         public System.Collections.Generic.List<string> FieldValues { get; set; }
-
+        
         /// <value>
         /// Context specific list of terms / phrases if input is seeking terms / phrase suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "terms")]
         public System.Collections.Generic.List<string> Terms { get; set; }
-
+        
         /// <value>
         /// Context specific list of querylanguage command options if input is seeking command option suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "options")]
         public System.Collections.Generic.List<string> Options { get; set; }
-
+        
         /// <value>
         /// Context specific list of querylanguage querystring examples if input is seeking queryString example suggestions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "examples")]
         public System.Collections.Generic.List<string> Examples { get; set; }
+        
     }
 }

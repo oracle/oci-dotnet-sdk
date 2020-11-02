@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "QueryString is required.")]
         [JsonProperty(PropertyName = "queryString")]
         public string QueryString { get; set; }
-
+        
         /// <value>
         /// Default subsystem to qualify fields with in the queryString if not specified.
         /// 
@@ -43,12 +43,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
-
+        
         /// <value>
         /// List of edit operations to be applied in the specified order to the specified queryString.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "filters")]
         public System.Collections.Generic.List<Filter> Filters { get; set; }
+        
     }
 }

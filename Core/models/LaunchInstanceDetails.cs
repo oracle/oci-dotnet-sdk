@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Details for the primary VNIC, which is automatically created and attached when
         /// the instance is launched.
@@ -52,14 +52,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "createVnicDetails")]
         public CreateVnicDetails CreateVnicDetails { get; set; }
-
+        
         /// <value>
         /// The OCID of the dedicated VM host.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dedicatedVmHostId")]
         public string DedicatedVmHostId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -77,7 +77,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Additional metadata key/value pairs that you provide. They serve the same purpose and
         /// functionality as fields in the `metadata` object.
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> ExtendedMetadata { get; set; }
-
+        
         /// <value>
         /// A fault domain is a grouping of hardware and infrastructure within an availability domain.
         /// Each availability domain contains three fault domains. Fault domains let you distribute your
@@ -110,7 +110,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -119,7 +119,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `hostnameLabel` in
         /// {@link CreateVnicDetails}.
@@ -128,7 +128,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use `sourceDetails` with {@link #instanceSourceViaImageDetails(InstanceSourceViaImageDetailsRequest) instanceSourceViaImageDetails}
         /// source type instead. If you specify values for both, the values must match.
@@ -136,7 +136,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// This is an advanced option.
         /// <br/>
@@ -166,7 +166,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipxeScript")]
         public string IpxeScript { get; set; }
-
+        
         /// <value>
         /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any
         /// default values.
@@ -174,17 +174,17 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
-
+        
         [JsonProperty(PropertyName = "instanceOptions")]
         public InstanceOptions InstanceOptions { get; set; }
-
+        
         /// <value>
         /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public LaunchInstanceAvailabilityConfigDetails AvailabilityConfig { get; set; }
-
+        
         /// <value>
         /// Custom metadata key/value pairs that you provide, such as the SSH public key
         /// required to connect to the instance.
@@ -238,10 +238,10 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-
+        
         [JsonProperty(PropertyName = "agentConfig")]
         public LaunchInstanceAgentConfigDetails AgentConfig { get; set; }
-
+        
         /// <value>
         /// The shape of an instance. The shape determines the number of CPUs, amount of memory,
         /// and other resources allocated to the instance.
@@ -255,10 +255,10 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         [JsonProperty(PropertyName = "shapeConfig")]
         public LaunchInstanceShapeConfigDetails ShapeConfig { get; set; }
-
+        
         /// <value>
         /// Details for creating an instance.
         /// Use this parameter to specify whether a boot volume or an image should be used to launch a new instance.
@@ -266,7 +266,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceSourceDetails SourceDetails { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `subnetId` in
         /// {@link CreateVnicDetails}.
@@ -275,11 +275,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// Whether to enable in-transit encryption for the data volume's paravirtualized attachment. The default value is false.
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
     }
 }

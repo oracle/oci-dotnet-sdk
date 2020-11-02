@@ -31,26 +31,26 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "StackId is required.")]
         [JsonProperty(PropertyName = "stackId")]
         public string StackId { get; set; }
-
+        
         /// <value>
         /// Description of the job.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Terraform-specific operation to execute.
         /// </value>
         [JsonProperty(PropertyName = "operation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Job.OperationEnum> Operation { get; set; }
-
+        
         [JsonProperty(PropertyName = "jobOperationDetails")]
         public CreateJobOperationDetails JobOperationDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "applyJobPlanResolution")]
         public ApplyJobPlanResolution ApplyJobPlanResolution { get; set; }
-
+        
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -58,7 +58,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -66,5 +66,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "DefaultBackendSetName is required.")]
         [JsonProperty(PropertyName = "defaultBackendSetName")]
         public string DefaultBackendSetName { get; set; }
-
+        
         /// <value>
         /// The communication port for the listener.
         /// <br/>
@@ -44,7 +44,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The protocol on which the listener accepts connection requests.
         /// To get a list of valid protocols, use the {@link #listProtocols(ListProtocolsRequest) listProtocols}
@@ -58,13 +58,13 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
         public string Protocol { get; set; }
-
+        
         /// <value>
         /// An array of hostname resource names.
         /// </value>
         [JsonProperty(PropertyName = "hostnameNames")]
         public System.Collections.Generic.List<string> HostnameNames { get; set; }
-
+        
         /// <value>
         /// The name of the set of path-based routing rules, {@link PathRouteSet},
         /// applied to this listener's traffic.
@@ -73,13 +73,13 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "pathRouteSetName")]
         public string PathRouteSetName { get; set; }
-
+        
         [JsonProperty(PropertyName = "sslConfiguration")]
         public SSLConfigurationDetails SslConfiguration { get; set; }
-
+        
         [JsonProperty(PropertyName = "connectionConfiguration")]
         public ConnectionConfiguration ConnectionConfiguration { get; set; }
-
+        
         /// <value>
         /// The names of the {@link RuleSet} to apply to the listener.
         /// <br/>
@@ -87,5 +87,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "ruleSetNames")]
         public System.Collections.Generic.List<string> RuleSetNames { get; set; }
+        
     }
 }

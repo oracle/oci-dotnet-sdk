@@ -28,14 +28,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BootVolumeId is required.")]
         [JsonProperty(PropertyName = "bootVolumeId")]
         public string BootVolumeId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it cannot be changed. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance.
         /// </value>
@@ -45,5 +45,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
+        
     }
 }

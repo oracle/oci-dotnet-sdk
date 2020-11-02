@@ -28,28 +28,31 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "intervalGap")]
         public string IntervalGap { get; set; }
-
+        
         /// <value>
         /// Timestamps for each series data point
         /// 
         /// </value>
         [JsonProperty(PropertyName = "intervals")]
         public System.Collections.Generic.List<long> Intervals { get; set; }
-
+        
         /// <value>
         /// Sum across all column values for a given timestamp.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalIntervalCounts")]
         public System.Collections.Generic.List<long> TotalIntervalCounts { get; set; }
-
+        
         [JsonProperty(PropertyName = "totalIntervalCountsAfterFilter")]
         public System.Collections.Generic.List<long> TotalIntervalCountsAfterFilter { get; set; }
-
+        
         [JsonProperty(PropertyName = "intervalGroupCounts")]
         public System.Collections.Generic.List<long> IntervalGroupCounts { get; set; }
-
+        
         [JsonProperty(PropertyName = "intervalGroupCountsAfterFilter")]
         public System.Collections.Generic.List<long> IntervalGroupCountsAfterFilter { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "TREND_COLUMN";
     }
 }

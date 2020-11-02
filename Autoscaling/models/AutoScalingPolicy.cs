@@ -35,30 +35,21 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
-
+        
         /// <value>
         /// The ID of the autoscaling policy that is assigned after creation.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
-        /// <value>
-        /// The type of autoscaling policy.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PolicyType is required.")]
-        [JsonProperty(PropertyName = "policyType")]
-        public string PolicyType { get; set; }
-
+        
+        
         /// <value>
         /// The date and time the autoscaling configuration was created, in the format defined by RFC3339.
         /// <br/>
@@ -70,12 +61,13 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Boolean field indicating whether this policy is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
+        
     }
 
     public class AutoScalingPolicyModelConverter : JsonConverter

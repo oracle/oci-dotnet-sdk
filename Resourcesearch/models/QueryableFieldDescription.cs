@@ -56,7 +56,7 @@ namespace Oci.ResourcesearchService.Models
         [JsonProperty(PropertyName = "fieldType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FieldTypeEnum> FieldType { get; set; }
-
+        
         /// <value>
         /// The name of the field to use when constructing the query. Field names are present for all types except `OBJECT`.
         /// 
@@ -67,14 +67,14 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "FieldName is required.")]
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// Indicates that this field is actually an array of the specified field type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isArray")]
         public System.Nullable<bool> IsArray { get; set; }
-
+        
         /// <value>
         /// If the field type is `OBJECT`, then this property will provide all the individual properties of the object that can
         /// be queried.
@@ -82,5 +82,6 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "objectProperties")]
         public System.Collections.Generic.List<QueryableFieldDescription> ObjectProperties { get; set; }
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The IP address the DB System is configured to listen on.
         /// </value>
@@ -37,7 +37,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The port the MySQL instance listens on.
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The network port where to connect to use this endpoint using the X protocol.
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "PortX is required.")]
         [JsonProperty(PropertyName = "portX")]
         public System.Nullable<int> PortX { get; set; }
-        ///
+                ///
         ///
         public enum ModesEnum {
             [EnumMember(Value = "READ")]
@@ -71,7 +71,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "modes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<ModesEnum> Modes { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the endpoints, as far as it can seen from the DB System.
         /// There may be some inconsistency with the actual state of the MySQL service.
@@ -95,11 +95,12 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// Additional information about the current endpoint status.
         /// </value>
         [JsonProperty(PropertyName = "statusDetails")]
         public string StatusDetails { get; set; }
+        
     }
 }

@@ -44,7 +44,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The message code.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// The message text.
         /// </value>
@@ -64,5 +64,6 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "MessageProp is required.")]
         [JsonProperty(PropertyName = "message")]
         public string MessageProp { get; set; }
+        
     }
 }

@@ -30,25 +30,25 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "contactList")]
         public ContactList ContactList { get; set; }
-
+        
         [JsonProperty(PropertyName = "tenancyInformation")]
         public TenancyInformation TenancyInformation { get; set; }
-
+        
         [JsonProperty(PropertyName = "ticket")]
         public Ticket Ticket { get; set; }
-
+        
         [JsonProperty(PropertyName = "incidentType")]
         public IncidentResourceType IncidentType { get; set; }
-
+        
         /// <value>
         /// The kind of support ticket, such as a technical support request.
         /// </value>
@@ -59,5 +59,6 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "problemType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
+        
     }
 }

@@ -30,12 +30,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "IsArchivingEnabled is required.")]
         [JsonProperty(PropertyName = "isArchivingEnabled")]
         public System.Nullable<bool> IsArchivingEnabled { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ArchivingConfiguration is required.")]
         [JsonProperty(PropertyName = "archivingConfiguration")]
         public ArchivingConfiguration ArchivingConfiguration { get; set; }
+        
     }
 }

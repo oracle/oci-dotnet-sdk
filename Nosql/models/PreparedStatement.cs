@@ -28,8 +28,9 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "statement")]
         public string Statement { get; set; }
-
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
+        
     }
 }

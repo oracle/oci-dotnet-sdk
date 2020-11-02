@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Your identifier for your CPE device. Can be either an IP address or a hostname (specifically, the
         /// fully qualified domain name (FQDN)). The type of identifier you provide here must correspond
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpeLocalIdentifier")]
         public string CpeLocalIdentifier { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of identifier for your CPE device. The value you provide here must correspond to the value
         /// for `cpeLocalIdentifier`.
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "cpeLocalIdentifierType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CpeLocalIdentifierTypeEnum> CpeLocalIdentifierType { get; set; }
-
+        
         /// <value>
         /// Static routes to the CPE. If you provide this attribute, it replaces the entire current set of
         /// static routes. A static route's CIDR must not be a multicast address or class E address.
@@ -93,5 +93,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "staticRoutes")]
         public System.Collections.Generic.List<string> StaticRoutes { get; set; }
+        
     }
 }

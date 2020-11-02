@@ -33,16 +33,7 @@ namespace Oci.DataintegrationService.Models
             WriteOperationConfig
         };
 
-        /// <value>
-        /// The type of data operation.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
     }
 
     public class AbstractDataOperationConfigModelConverter : JsonConverter

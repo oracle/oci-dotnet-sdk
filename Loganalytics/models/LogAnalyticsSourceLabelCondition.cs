@@ -26,107 +26,108 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// visible flag
         /// </value>
         [JsonProperty(PropertyName = "isVisible")]
         public System.Nullable<bool> IsVisible { get; set; }
-
+        
         /// <value>
         /// block condition field
         /// </value>
         [JsonProperty(PropertyName = "blockConditionField")]
         public string BlockConditionField { get; set; }
-
+        
         /// <value>
         /// block condition operator
         /// </value>
         [JsonProperty(PropertyName = "blockConditionOperator")]
         public string BlockConditionOperator { get; set; }
-
+        
         /// <value>
         /// block condition value
         /// </value>
         [JsonProperty(PropertyName = "blockConditionValue")]
         public string BlockConditionValue { get; set; }
-
+        
         /// <value>
         /// condition value
         /// </value>
         [JsonProperty(PropertyName = "labelConditionValue")]
         public string LabelConditionValue { get; set; }
-
+        
         /// <value>
         /// list of condition values
         /// </value>
         [JsonProperty(PropertyName = "labelConditionValues")]
         public System.Collections.Generic.List<string> LabelConditionValues { get; set; }
-
+        
         /// <value>
         /// content example
         /// </value>
         [JsonProperty(PropertyName = "contentExample")]
         public string ContentExample { get; set; }
-
+        
         /// <value>
         /// enabled
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// field internal name
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// Id
         /// </value>
         [JsonProperty(PropertyName = "labelConditionId")]
         public System.Nullable<long> LabelConditionId { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// operator
         /// </value>
         [JsonProperty(PropertyName = "labelConditionOperator")]
         public string LabelConditionOperator { get; set; }
-
+        
         /// <value>
         /// source Id
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
-
+        
         /// <value>
         /// label display name
         /// </value>
         [JsonProperty(PropertyName = "labelDisplayName")]
         public string LabelDisplayName { get; set; }
-
+        
         /// <value>
         /// label storage field
         /// </value>
         [JsonProperty(PropertyName = "storageField")]
         public string StorageField { get; set; }
-
+        
         /// <value>
         /// label name
         /// </value>
         [JsonProperty(PropertyName = "labelName")]
         public string LabelName { get; set; }
-
+        
         /// <value>
         /// inline label exists in DB flag
         /// </value>
         [JsonProperty(PropertyName = "isInlineLabelExistingInDatabase")]
         public System.Nullable<bool> IsInlineLabelExistingInDatabase { get; set; }
+        
     }
 }

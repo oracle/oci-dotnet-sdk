@@ -32,7 +32,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -40,59 +40,59 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the pattern.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data catalog's OCID.
         /// </value>
         [JsonProperty(PropertyName = "catalogId")]
         public string CatalogId { get; set; }
-
+        
         /// <value>
         /// The current state of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the pattern was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The last time that any change was made to the pattern. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the pattern.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who last modified the pattern.
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// The expression used in the pattern that may include qualifiers. Refer to the user documentation for details of the format and examples.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// List of file paths against which the expression can be tried, as a check. This documents, for reference
         /// purposes, some example objects a pattern is meant to work with. If isEnableCheckFailureLimit is set to true,
@@ -103,7 +103,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFilePathList")]
         public System.Collections.Generic.List<string> CheckFilePathList { get; set; }
-
+        
         /// <value>
         /// Indicates whether the expression check, against the checkFilePathList, will fail the request if the count of
         /// UNMATCHED files is above the checkFailureLimit.
@@ -111,7 +111,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnableCheckFailureLimit")]
         public System.Nullable<bool> IsEnableCheckFailureLimit { get; set; }
-
+        
         /// <value>
         /// The maximum number of UNMATCHED files, in checkFilePathList, above which the check fails. Optional, if
         /// checkFilePathList is provided - but if isEnableCheckFailureLimit is set to true it is required.
@@ -119,7 +119,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFailureLimit")]
         public System.Nullable<int> CheckFailureLimit { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the pattern type. Each pattern type
         /// definition defines it's set of required and optional properties.
@@ -127,5 +127,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

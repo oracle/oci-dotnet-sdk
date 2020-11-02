@@ -30,19 +30,20 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "minInGbps")]
         public System.Nullable<float> MinInGbps { get; set; }
-
+        
         /// <value>
         /// The maximum amount of networking bandwidth, in gigabits per second.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxInGbps")]
         public System.Nullable<float> MaxInGbps { get; set; }
-
+        
         /// <value>
         /// The default amount of networking bandwidth per OCPU, in gigabits per second.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "defaultPerOcpuInGbps")]
         public System.Nullable<float> DefaultPerOcpuInGbps { get; set; }
+        
     }
 }

@@ -41,22 +41,7 @@ namespace Oci.EventsService.Models
             Faas
         };
 
-        /// <value>
-        /// The action to perform if the condition in the rule matches an event.
-        /// <br/>
-        /// * **ONS:** Send to an Oracle Notification Service topic.
-        /// * **OSS:** Send to a stream from Oracle Streaming Service.
-        /// * **FAAS:** Send to an Oracle Functions Service endpoint.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ActionType is required.")]
-        [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// Whether or not this action is currently enabled.
         /// <br/>
@@ -68,7 +53,7 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// A string that describes the details of the action. It does not have to be unique, and you can change it. Avoid entering
         /// confidential information.
@@ -76,6 +61,7 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 
     public class ActionDetailsModelConverter : JsonConverter

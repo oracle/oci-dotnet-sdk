@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -45,14 +45,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Instance agent configuration options to choose for updating the instance
         /// 
         /// </value>
         [JsonProperty(PropertyName = "agentConfig")]
         public UpdateInstanceAgentConfigDetails AgentConfig { get; set; }
-
+        
         /// <value>
         /// Custom metadata key/value string pairs that you provide. Any set of key/value pairs
         /// provided here will completely replace the current set of key/value pairs in the `metadata`
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-
+        
         /// <value>
         /// Additional metadata key/value pairs that you provide. They serve the same purpose and
         /// functionality as fields in the `metadata` object.
@@ -88,7 +88,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> ExtendedMetadata { get; set; }
-
+        
         /// <value>
         /// The shape of the instance. The shape determines the number of CPUs and the amount of memory
         /// allocated to the instance. For more information about how to change shapes, and a list of
@@ -108,13 +108,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         [JsonProperty(PropertyName = "shapeConfig")]
         public UpdateInstanceShapeConfigDetails ShapeConfig { get; set; }
-
+        
         [JsonProperty(PropertyName = "instanceOptions")]
         public InstanceOptions InstanceOptions { get; set; }
-
+        
         /// <value>
         /// A fault domain is a grouping of hardware and infrastructure within an availability domain.
         /// Each availability domain contains three fault domains. Fault domains let you distribute your
@@ -130,19 +130,20 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// Options for tuning the compatibility and performance of VM shapes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public UpdateLaunchOptions LaunchOptions { get; set; }
-
+        
         /// <value>
         /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public UpdateInstanceAvailabilityConfigDetails AvailabilityConfig { get; set; }
+        
     }
 }

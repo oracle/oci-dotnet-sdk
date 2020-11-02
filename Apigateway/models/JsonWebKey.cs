@@ -40,7 +40,7 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "kty")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<KtyEnum> Kty { get; set; }
-        ///
+                ///
         /// <value>
         /// The intended use of the public key.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "use")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UseEnum> Use { get; set; }
-        ///
+                ///
         ///
         public enum KeyOpsEnum {
             [EnumMember(Value = "verify")]
@@ -68,7 +68,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "key_ops", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<KeyOpsEnum> KeyOps { get; set; }
-
+        
         /// <value>
         /// The algorithm intended for use with this key.
         /// </value>
@@ -78,7 +78,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Alg is required.")]
         [JsonProperty(PropertyName = "alg")]
         public string Alg { get; set; }
-
+        
         /// <value>
         /// The base64 url encoded modulus of the RSA public key represented
         /// by this key.
@@ -90,7 +90,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "N is required.")]
         [JsonProperty(PropertyName = "n")]
         public string N { get; set; }
-
+        
         /// <value>
         /// The base64 url encoded exponent of the RSA public key represented
         /// by this key.
@@ -102,5 +102,8 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "E is required.")]
         [JsonProperty(PropertyName = "e")]
         public string E { get; set; }
+        
+        [JsonProperty(PropertyName = "format")]
+        private readonly string format = "JSON_WEB_KEY";
     }
 }

@@ -22,25 +22,14 @@ namespace Oci.ContainerengineService.Models
     public class NodeSourceOption 
     {
         
-        /// <value>
-        /// The source type of this option.
-        /// `IMAGE` means the OCID is of an image.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NodeSourceType> SourceType { get; set; }
-
+        
         /// <value>
         /// The user-friendly name of the entity corresponding to the OCID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
+        
     }
 
     public class NodeSourceOptionModelConverter : JsonConverter

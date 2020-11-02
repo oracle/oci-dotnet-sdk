@@ -33,7 +33,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-        ///
+                ///
         ///
         public enum MethodsEnum {
             [EnumMember(Value = "ANY")]
@@ -60,21 +60,22 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "methods", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<MethodsEnum> Methods { get; set; }
-
+        
         [JsonProperty(PropertyName = "requestPolicies")]
         public ApiSpecificationRouteRequestPolicies RequestPolicies { get; set; }
-
+        
         [JsonProperty(PropertyName = "responsePolicies")]
         public ApiSpecificationRouteResponsePolicies ResponsePolicies { get; set; }
-
+        
         [JsonProperty(PropertyName = "loggingPolicies")]
         public ApiSpecificationLoggingPolicies LoggingPolicies { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Backend is required.")]
         [JsonProperty(PropertyName = "backend")]
         public ApiSpecificationRouteBackend Backend { get; set; }
+        
     }
 }

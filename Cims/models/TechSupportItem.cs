@@ -20,5 +20,8 @@ namespace Oci.CimsService.Models
     /// </summary>
     public class TechSupportItem : Item
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "tech";
+    }
 }

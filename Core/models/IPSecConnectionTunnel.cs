@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the tunnel.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The IP address of Oracle's VPN headend.
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpnIp")]
         public string VpnIp { get; set; }
-
+        
         /// <value>
         /// The IP address of the CPE's VPN headend.
         /// <br/>
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpeIp")]
         public string CpeIp { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the tunnel based on IPSec protocol characteristics.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-        ///
+                ///
         /// <value>
         /// Internet Key Exchange protocol version.
         /// 
@@ -100,7 +100,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "ikeVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IkeVersionEnum> IkeVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// The tunnel's lifecycle state.
         /// </value>
@@ -126,7 +126,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -134,14 +134,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Information for establishing the tunnel's BGP session.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpSessionInfo")]
         public BgpSessionInfo BgpSessionInfo { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of routing used for this tunnel (either BGP dynamic routing or static routing).
         /// 
@@ -161,7 +161,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "routing")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoutingEnum> Routing { get; set; }
-
+        
         /// <value>
         /// The date and time the IPSec connection tunnel was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -169,7 +169,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// When the status of the tunnel last changed, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -177,5 +177,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStatusUpdated")]
         public System.Nullable<System.DateTime> TimeStatusUpdated { get; set; }
+        
     }
 }

@@ -29,5 +29,8 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "apiEndpoint")]
         public string ApiEndpoint { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceProviderType")]
+        private readonly string configSourceProviderType = "GITLAB_ACCESS_TOKEN";
     }
 }

@@ -25,26 +25,22 @@ namespace Oci.CimsService.Models
     public class CreateItemDetails 
     {
         
-        /// <value>
-        /// The type of the item.
-        /// </value>
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-
+        
         [JsonProperty(PropertyName = "category")]
         public CreateCategoryDetails Category { get; set; }
-
+        
         [JsonProperty(PropertyName = "subCategory")]
         public CreateSubCategoryDetails SubCategory { get; set; }
-
+        
         [JsonProperty(PropertyName = "issueType")]
         public CreateIssueTypeDetails IssueType { get; set; }
-
+        
         /// <value>
         /// The display name of the item.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 
     public class CreateItemDetailsModelConverter : JsonConverter

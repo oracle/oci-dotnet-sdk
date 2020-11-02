@@ -26,5 +26,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "userPermissions")]
         public System.Collections.Generic.List<string> UserPermissions { get; set; }
+        
     }
 }

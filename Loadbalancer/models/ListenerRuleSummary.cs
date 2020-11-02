@@ -28,12 +28,13 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "rule")]
         public Rule Rule { get; set; }
-
+        
         /// <value>
         /// The name of the rule set that the rule belongs to.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ruleSetName")]
         public string RuleSetName { get; set; }
+        
     }
 }

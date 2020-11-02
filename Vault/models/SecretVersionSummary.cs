@@ -36,14 +36,14 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "contentType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ContentTypeEnum> ContentType { get; set; }
-
+        
         /// <value>
         /// The name of the secret version. A name is unique across versions of a secret.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the secret.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "SecretId is required.")]
         [JsonProperty(PropertyName = "secretId")]
         public string SecretId { get; set; }
-        ///
+                ///
         ///
         public enum StagesEnum {
             [EnumMember(Value = "CURRENT")]
@@ -79,7 +79,7 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<StagesEnum> Stages { get; set; }
-
+        
         /// <value>
         /// A optional property indicating when the secret version was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
@@ -90,21 +90,21 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// An optional property indicating when to delete the secret version, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]
         public System.Nullable<System.DateTime> TimeOfDeletion { get; set; }
-
+        
         /// <value>
         /// An optional property indicating when the secret version will expire, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeOfExpiry")]
         public System.Nullable<System.DateTime> TimeOfExpiry { get; set; }
-
+        
         /// <value>
         /// The version number of the secret.
         /// </value>
@@ -114,5 +114,6 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "VersionNumber is required.")]
         [JsonProperty(PropertyName = "versionNumber")]
         public System.Nullable<long> VersionNumber { get; set; }
+        
     }
 }

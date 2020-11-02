@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The service endpoint to perform cryptographic operations against. Cryptographic operations include
         /// [Encrypt](https://docs.cloud.oracle.com/api/#/en/key/latest/EncryptedData/Encrypt), [Decrypt](https://docs.cloud.oracle.com/api/#/en/key/latest/DecryptedData/Decrypt),
@@ -41,7 +41,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CryptoEndpoint is required.")]
         [JsonProperty(PropertyName = "cryptoEndpoint")]
         public string CryptoEndpoint { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -49,7 +49,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for a vault. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -61,7 +61,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -69,7 +69,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of a vault.
         /// </value>
@@ -79,7 +79,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// A vault's current lifecycle state.
         /// <br/>
@@ -121,7 +121,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The service endpoint to perform management operations against. Management operations include \"Create,\" \"Update,\" \"List,\" \"Get,\" and \"Delete\" operations.
         /// 
@@ -132,7 +132,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "ManagementEndpoint is required.")]
         [JsonProperty(PropertyName = "managementEndpoint")]
         public string ManagementEndpoint { get; set; }
-
+        
         /// <value>
         /// The date and time a vault was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// <br/>
@@ -144,7 +144,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of vault. Each type of vault stores keys with different
         /// degrees of isolation and has different options and pricing.
@@ -170,5 +170,6 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "vaultType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VaultTypeEnum> VaultType { get; set; }
+        
     }
 }

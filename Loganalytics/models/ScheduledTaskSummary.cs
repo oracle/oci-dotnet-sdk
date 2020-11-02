@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Task type.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "taskType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TaskType> TaskType { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The date and time the schedule task was created, in the format defined by RFC3339.
         /// 
@@ -63,7 +63,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the scheduled task was last updated, in the format defined by RFC3339.
         /// 
@@ -74,7 +74,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the scheduled task.
         /// </value>
@@ -85,7 +85,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScheduledTask.LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// Status of the scheduled task.
         /// </value>
@@ -107,13 +107,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "taskStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TaskStatusEnum> TaskStatus { get; set; }
-
+        
         /// <value>
         /// most recent Work Request Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the asynchronous request.
         /// </value>
         [JsonProperty(PropertyName = "workRequestId")]
         public string WorkRequestId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name that is changeable and that does not have to be unique.
         /// Format: a leading alphanumeric, followed by zero or more
@@ -127,19 +127,20 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

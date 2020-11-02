@@ -30,5 +30,6 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "LogObjectId is required.")]
         [JsonProperty(PropertyName = "logObjectId")]
         public string LogObjectId { get; set; }
+        
     }
 }

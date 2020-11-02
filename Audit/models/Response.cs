@@ -30,7 +30,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// The time of the response to the audited request, expressed in
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
@@ -39,7 +39,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "responseTime")]
         public System.Nullable<System.DateTime> ResponseTime { get; set; }
-
+        
         /// <value>
         /// The headers of the response.
         /// <br/>
@@ -47,7 +47,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> Headers { get; set; }
-
+        
         /// <value>
         /// This value is included for backward compatibility with the Audit version 1 schema, where 
         /// it contained metadata of interest from the response payload.
@@ -56,12 +56,13 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "payload")]
         public System.Collections.Generic.Dictionary<string, System.Object> Payload { get; set; }
-
+        
         /// <value>
         /// A friendly description of what happened during the operation. Use this for troubleshooting.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

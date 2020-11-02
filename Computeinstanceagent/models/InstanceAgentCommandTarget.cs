@@ -26,5 +26,6 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
+        
     }
 }

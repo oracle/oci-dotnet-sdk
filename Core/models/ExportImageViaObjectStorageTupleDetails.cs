@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <value>
         /// The Object Storage namespace to export the image to.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "NamespaceName is required.")]
         [JsonProperty(PropertyName = "namespaceName")]
         public string NamespaceName { get; set; }
-
+        
         /// <value>
         /// The Object Storage object name for the exported image.
         /// </value>
@@ -48,5 +48,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ObjectName is required.")]
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
+        
+        [JsonProperty(PropertyName = "destinationType")]
+        private readonly string destinationType = "objectStorageTuple";
     }
 }

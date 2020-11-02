@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerDbSystemId")]
         public string PeerDbSystemId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB home in which to create the standby database.
         /// You must supply this value to create standby database with an existing DB home
@@ -39,5 +39,8 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerDbHomeId")]
         public string PeerDbHomeId { get; set; }
+        
+        [JsonProperty(PropertyName = "creationType")]
+        private readonly string creationType = "ExistingDbSystem";
     }
 }

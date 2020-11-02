@@ -30,7 +30,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The display name of the private endpoint.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the VCN.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the private endpoint.
         /// </value>
@@ -80,24 +80,25 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "PrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
-
+        
         /// <value>
         /// The description of the private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The date and time the private endpoint was created, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The current state of the private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
     }
 }

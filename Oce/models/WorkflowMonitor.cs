@@ -26,17 +26,18 @@ namespace Oci.OceService.Models
         /// </value>
         [JsonProperty(PropertyName = "workflowName")]
         public string WorkflowName { get; set; }
-
+        
         /// <value>
         /// resource name for this work request
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// Workflow step of workflow monitor.
         /// </value>
         [JsonProperty(PropertyName = "workflowSteps")]
         public System.Collections.Generic.List<WorkflowStep> WorkflowSteps { get; set; }
+        
     }
 }

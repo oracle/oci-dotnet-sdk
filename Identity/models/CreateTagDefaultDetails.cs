@@ -29,7 +29,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the tag definition. The tag default will always assign a default value for this tag definition.
         /// 
@@ -40,7 +40,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagDefinitionId is required.")]
         [JsonProperty(PropertyName = "tagDefinitionId")]
         public string TagDefinitionId { get; set; }
-
+        
         /// <value>
         /// The default value for the tag definition. This will be applied to all new resources created in the compartment.
         /// 
@@ -51,7 +51,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// If you specify that a value is required, a value is set during resource creation (either by 
         /// the user creating the resource or another tag defualt). If no value is set, resource 
@@ -64,5 +64,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// First name of the user.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "FirstName is required.")]
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
-
+        
         /// <value>
         /// Last name of the user.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "LastName is required.")]
         [JsonProperty(PropertyName = "lastName")]
         public string LastName { get; set; }
-
+        
         /// <value>
         /// Country of the user.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Country is required.")]
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
+        
         /// <value>
         /// CSI to be associated to the user.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Csi is required.")]
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
-
+        
         /// <value>
         /// Contact number of the user.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Phone is required.")]
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
-
+        
         /// <value>
         /// Timezone of the user.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Timezone is required.")]
         [JsonProperty(PropertyName = "timezone")]
         public string Timezone { get; set; }
-
+        
         /// <value>
         /// Organization of the user.
         /// </value>
@@ -100,5 +100,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "OrganizationName is required.")]
         [JsonProperty(PropertyName = "organizationName")]
         public string OrganizationName { get; set; }
+        
     }
 }

@@ -47,7 +47,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DatabaseAdminPassword is required.")]
         [JsonProperty(PropertyName = "databaseAdminPassword")]
         public string DatabaseAdminPassword { get; set; }
-        ///
+                ///
         /// <value>
         /// The protection mode to set up between the primary and standby databases. For more information, see
         /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
@@ -81,7 +81,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
-        ///
+                ///
         /// <value>
         /// The redo transport type to use for this Data Guard association.  Valid values depend on the specified `protectionMode`:
         /// <br/>
@@ -127,17 +127,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "transportType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TransportTypeEnum> TransportType { get; set; }
-
-        /// <value>
-        /// Specifies whether to create the peer database in an existing DB system or in a new DB system.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CreationType is required.")]
-        [JsonProperty(PropertyName = "creationType")]
-        public string CreationType { get; set; }
+        
+        
     }
 
     public class CreateDataGuardAssociationDetailsModelConverter : JsonConverter

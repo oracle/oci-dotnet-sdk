@@ -40,5 +40,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "networkSecurityGroupIds")]
         public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
     }
 }

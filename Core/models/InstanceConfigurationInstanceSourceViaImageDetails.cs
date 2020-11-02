@@ -24,11 +24,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeSizeInGBs")]
         public System.Nullable<long> BootVolumeSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The OCID of the image used to boot the instance.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "image";
     }
 }

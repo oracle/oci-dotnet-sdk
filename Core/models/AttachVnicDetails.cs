@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CreateVnicDetails is required.")]
         [JsonProperty(PropertyName = "createVnicDetails")]
         public CreateVnicDetails CreateVnicDetails { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the attachment. Does not have to be unique, and it cannot be changed.
         /// Avoid entering confidential information.
@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance.
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-
+        
         /// <value>
         /// Which physical network interface card (NIC) the VNIC will use. Defaults to 0.
         /// Certain bare metal instance shapes have two active physical NICs (0 and 1). If
@@ -58,5 +58,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nicIndex")]
         public System.Nullable<int> NicIndex { get; set; }
+        
     }
 }

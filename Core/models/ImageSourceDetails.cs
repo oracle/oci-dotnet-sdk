@@ -22,10 +22,10 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "operatingSystem")]
         public string OperatingSystem { get; set; }
-
+        
         [JsonProperty(PropertyName = "operatingSystemVersion")]
         public string OperatingSystemVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// The format of the image to be imported.  Only monolithic
         /// images are supported. This attribute is not used for exported Oracle images with the OCI image format.
@@ -47,18 +47,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sourceImageType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceImageTypeEnum> SourceImageType { get; set; }
-
-        /// <value>
-        /// The source type for the image. Use `objectStorageTuple` when specifying the namespace,
-        /// bucket name, and object name. Use `objectStorageUri` when specifying the Object Storage URL.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        public string SourceType { get; set; }
+        
+        
     }
 
     public class ImageSourceDetailsModelConverter : JsonConverter

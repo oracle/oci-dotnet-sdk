@@ -23,5 +23,8 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "sortKey")]
         public SortKey SortKey { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SORT_OPERATOR";
     }
 }

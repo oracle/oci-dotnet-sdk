@@ -23,11 +23,12 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "dataAsset")]
         public CreateDataAssetDetails DataAsset { get; set; }
-
+        
         [JsonProperty(PropertyName = "connection")]
         public CreateConnectionDetails Connection { get; set; }
-
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 }

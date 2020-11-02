@@ -26,29 +26,30 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A description of the screenshot.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The content URL of the screenshot.
         /// </value>
         [JsonProperty(PropertyName = "contentUrl")]
         public string ContentUrl { get; set; }
-
+        
         /// <value>
         /// The MIME type of the screenshot.
         /// </value>
         [JsonProperty(PropertyName = "mimeType")]
         public string MimeType { get; set; }
-
+        
         /// <value>
         /// The file extension of the screenshot.
         /// </value>
         [JsonProperty(PropertyName = "fileExtension")]
         public string FileExtension { get; set; }
+        
     }
 }

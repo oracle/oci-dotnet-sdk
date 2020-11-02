@@ -26,14 +26,15 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes to which the cluster masters should be upgraded.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "options")]
         public UpdateClusterOptionsDetails Options { get; set; }
+        
     }
 }

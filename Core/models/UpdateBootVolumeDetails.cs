@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,13 +44,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The size to resize the volume to in GBs. Has to be larger than the current size.
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
-
+        
         /// <value>
         /// The number of volume performance units (VPUs) that will be applied to this volume per GB,
         /// representing the Block Volume service's elastic performance options.
@@ -65,12 +65,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
-
+        
         /// <value>
         /// Specifies whether the auto-tune performance is enabled for this boot volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
+        
     }
 }

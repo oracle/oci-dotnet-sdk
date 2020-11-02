@@ -30,5 +30,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "NodeId is required.")]
         [JsonProperty(PropertyName = "nodeId")]
         public string NodeId { get; set; }
+        
     }
 }

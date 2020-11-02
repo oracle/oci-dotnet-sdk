@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place
         /// instances.
@@ -44,11 +44,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PrimarySubnetId is required.")]
         [JsonProperty(PropertyName = "primarySubnetId")]
         public string PrimarySubnetId { get; set; }
-
+        
         /// <value>
         /// The set of secondary VNIC data for instances in the pool.
         /// </value>
         [JsonProperty(PropertyName = "secondaryVnicSubnets")]
         public System.Collections.Generic.List<InstancePoolPlacementSecondaryVnicSubnet> SecondaryVnicSubnets { get; set; }
+        
     }
 }

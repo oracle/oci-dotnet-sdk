@@ -30,25 +30,25 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "secondsInPeriod")]
         public System.Nullable<int> SecondsInPeriod { get; set; }
-
+        
         /// <value>
         /// Read throughput during the sampling period.
         /// </value>
         [JsonProperty(PropertyName = "readUnits")]
         public System.Nullable<int> ReadUnits { get; set; }
-
+        
         /// <value>
         /// Write throughput during the sampling period.
         /// </value>
         [JsonProperty(PropertyName = "writeUnits")]
         public System.Nullable<int> WriteUnits { get; set; }
-
+        
         /// <value>
         /// The size of the table, in GB.
         /// </value>
         [JsonProperty(PropertyName = "storageInGBs")]
         public System.Nullable<int> StorageInGBs { get; set; }
-
+        
         /// <value>
         /// The number of times reads were throttled due to exceeding
         /// the read throughput limit.
@@ -56,7 +56,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "readThrottleCount")]
         public System.Nullable<int> ReadThrottleCount { get; set; }
-
+        
         /// <value>
         /// The number of times writes were throttled due to exceeding
         /// the write throughput limit.
@@ -64,7 +64,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "writeThrottleCount")]
         public System.Nullable<int> WriteThrottleCount { get; set; }
-
+        
         /// <value>
         /// The number of times writes were throttled because the table
         /// exceeded its size limit.
@@ -72,5 +72,6 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "storageThrottleCount")]
         public System.Nullable<int> StorageThrottleCount { get; set; }
+        
     }
 }

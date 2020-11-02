@@ -31,7 +31,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "Username is required.")]
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
-
+        
         /// <value>
         /// Password for this user.
         /// </value>
@@ -41,5 +41,8 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "OCIC";
     }
 }

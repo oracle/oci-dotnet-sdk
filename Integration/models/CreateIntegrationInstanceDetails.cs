@@ -30,7 +30,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// Standard or Enterprise type
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "integrationInstanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IntegrationInstanceTypeEnum> IntegrationInstanceType { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name,
         /// type or scope. Exists for cross-compatibility only.
@@ -70,7 +70,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to
         /// namespaces.
@@ -78,7 +78,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Bring your own license.
         /// </value>
@@ -88,13 +88,13 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "IsByol is required.")]
         [JsonProperty(PropertyName = "isByol")]
         public System.Nullable<bool> IsByol { get; set; }
-
+        
         /// <value>
         /// IDCS Authentication token. This is is required for pre-UCPIS cloud accounts, but not UCPIS, hence not a required parameter
         /// </value>
         [JsonProperty(PropertyName = "idcsAt")]
         public string IdcsAt { get; set; }
-
+        
         /// <value>
         /// The number of configured message packs
         /// </value>
@@ -104,7 +104,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "MessagePacks is required.")]
         [JsonProperty(PropertyName = "messagePacks")]
         public System.Nullable<int> MessagePacks { get; set; }
-        ///
+                ///
         /// <value>
         /// Optional parameter specifying which entitlement to use for billing purposes. Only required if the account possesses more than one entitlement.
         /// </value>
@@ -124,11 +124,12 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "consumptionModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
-
+        
         /// <value>
         /// The file server is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
+        
     }
 }

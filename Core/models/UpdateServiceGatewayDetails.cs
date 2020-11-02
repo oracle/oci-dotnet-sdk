@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "blockTraffic")]
         public System.Nullable<bool> BlockTraffic { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table the service gateway will use.
         /// For information about why you would associate a route table with a service gateway, see
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-
+        
         /// <value>
         /// List of all the `Service` objects you want enabled on this service gateway. Sending an empty list
         /// means you want to disable all services. Omitting this parameter entirely keeps the
@@ -79,5 +79,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<ServiceIdRequestDetails> Services { get; set; }
+        
     }
 }

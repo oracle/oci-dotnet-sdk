@@ -42,7 +42,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
-
+        
         /// <value>
         /// The length of the key, expressed as an integer. Values of 16, 24, or 32 are supported.
         /// 
@@ -53,5 +53,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Length is required.")]
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<int> Length { get; set; }
+        
     }
 }

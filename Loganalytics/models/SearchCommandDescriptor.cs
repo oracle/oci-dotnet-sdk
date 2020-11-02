@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "subQueries")]
         public System.Collections.Generic.List<ParseQueryOutput> SubQueries { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "SEARCH";
     }
 }

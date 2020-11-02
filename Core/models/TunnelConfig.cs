@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The shared secret of the IPSec tunnel.
         /// 
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SharedSecret is required.")]
         [JsonProperty(PropertyName = "sharedSecret")]
         public string SharedSecret { get; set; }
-
+        
         /// <value>
         /// The date and time the IPSec connection was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -55,5 +55,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

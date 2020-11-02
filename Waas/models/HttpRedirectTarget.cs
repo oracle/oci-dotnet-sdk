@@ -40,7 +40,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "protocol")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtocolEnum> Protocol { get; set; }
-
+        
         /// <value>
         /// The host portion of the redirect.
         /// </value>
@@ -50,13 +50,13 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Host is required.")]
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// Port number of the target destination of the redirect, default to match protocol
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The path component of the target URL (e.g., \"/path/to/resource\" in \"https://target.example.com/path/to/resource?redirected\"), which can be empty, static, or request-copying, or request-prefixing. Use of \\ is not permitted except to escape a following \\, {, or }. An empty value is treated the same as static \"/\". A static value must begin with a leading \"/\", optionally followed by other path characters. A request-copying value must exactly match \"{path}\", and will be replaced with the path component of the request URL (including its initial \"/\"). A request-prefixing value must start with \"/\" and end with a non-escaped \"{path}\", which will be replaced with the path component of the request URL (including its initial \"/\"). Only one such replacement token is allowed.
         /// </value>
@@ -66,7 +66,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The query component of the target URL (e.g., \"?redirected\" in \"https://target.example.com/path/to/resource?redirected\"), which can be empty, static, or request-copying. Use of \\ is not permitted except to escape a following \\, {, or }. An empty value results in a redirection target URL with no query component. A static value must begin with a leading \"?\", optionally followed by other query characters. A request-copying value must exactly match \"{query}\", and will be replaced with the query component of the request URL (including a leading \"?\" if and only if the request URL includes a query component).
         /// </value>
@@ -76,5 +76,6 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Query is required.")]
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
+        
     }
 }

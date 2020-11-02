@@ -37,18 +37,7 @@ namespace Oci.ComputeinstanceagentService.Models
             ObjectStorageTuple
         };
 
-        /// <value>
-        /// The source type of the command. Use `TEXT` for inlining the command. Use `OBJECT_STORAGE_TUPLE` when specifying
-        /// the namespace, bucket name, and object name. Use `OBJECT_STORAGE_URI` when specifying the Object Storage URL.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceTypeEnum> SourceType { get; set; }
+        
     }
 
     public class InstanceAgentCommandSourceDetailsModelConverter : JsonConverter

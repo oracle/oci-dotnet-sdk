@@ -42,8 +42,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "joinType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JoinTypeEnum> JoinType { get; set; }
-
+        
         [JsonProperty(PropertyName = "joinCondition")]
         public Expression JoinCondition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "JOINER_OPERATOR";
     }
 }

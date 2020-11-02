@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the key version.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the master encryption key associated with this key version.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-        ///
+                ///
         /// <value>
         /// The key version's current lifecycle state.
         /// <br/>
@@ -86,7 +86,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the key material. When this value is INTERNAL, Key Management created the key material. When this value is EXTERNAL, the key material was imported from an external source.
         /// </value>
@@ -108,7 +108,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "origin")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OriginEnum> Origin { get; set; }
-
+        
         /// <value>
         /// The date and time this key version was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// <br/>
@@ -120,14 +120,14 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// An optional property to indicate when to delete the key version, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]
         public System.Nullable<System.DateTime> TimeOfDeletion { get; set; }
-
+        
         /// <value>
         /// The OCID of the vault that contains this key version.
         /// </value>
@@ -137,5 +137,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
     }
 }

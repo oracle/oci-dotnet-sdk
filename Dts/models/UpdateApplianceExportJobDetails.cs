@@ -21,28 +21,28 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <value>
         /// List of objects with names matching this prefix would be part of this export job.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
-
+        
         /// <value>
         /// Object names returned by a list query must be greater or equal to this parameter.
         /// </value>
         [JsonProperty(PropertyName = "rangeStart")]
         public string RangeStart { get; set; }
-
+        
         /// <value>
         /// Object names returned by a list query must be strictly less than this parameter.
         /// </value>
         [JsonProperty(PropertyName = "rangeEnd")]
         public string RangeEnd { get; set; }
-
+        
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "CREATING")]
@@ -64,58 +64,58 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A property that can contain details on the lifecycle.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStateDetails")]
         public string LifecycleStateDetails { get; set; }
-
+        
         /// <value>
         /// Manifest File associated with this export job.
         /// </value>
         [JsonProperty(PropertyName = "manifestFile")]
         public string ManifestFile { get; set; }
-
+        
         /// <value>
         /// md5 digest of the manifest file.
         /// </value>
         [JsonProperty(PropertyName = "manifestMd5")]
         public string ManifestMd5 { get; set; }
-
+        
         /// <value>
         /// Total number of objects that are exported in this job.
         /// </value>
         [JsonProperty(PropertyName = "numberOfObjects")]
         public string NumberOfObjects { get; set; }
-
+        
         /// <value>
         /// Total size of objects in Bytes that are exported in this job.
         /// </value>
         [JsonProperty(PropertyName = "totalSizeInBytes")]
         public string TotalSizeInBytes { get; set; }
-
+        
         /// <value>
         /// First object in the list of objects that are exported in this job.
         /// </value>
         [JsonProperty(PropertyName = "firstObject")]
         public string FirstObject { get; set; }
-
+        
         /// <value>
         /// Last object in the list of objects that are exported in this job.
         /// </value>
         [JsonProperty(PropertyName = "lastObject")]
         public string LastObject { get; set; }
-
+        
         /// <value>
         /// First object from which the next potential export job could start.
         /// </value>
         [JsonProperty(PropertyName = "nextObject")]
         public string NextObject { get; set; }
-
+        
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -124,7 +124,7 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -133,5 +133,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

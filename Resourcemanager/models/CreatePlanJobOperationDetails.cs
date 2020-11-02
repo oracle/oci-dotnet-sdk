@@ -21,5 +21,8 @@ namespace Oci.ResourcemanagerService.Models
     /// </summary>
     public class CreatePlanJobOperationDetails : CreateJobOperationDetails
     {
-            }
+        
+        [JsonProperty(PropertyName = "operation")]
+        private readonly string operation = "PLAN";
+    }
 }

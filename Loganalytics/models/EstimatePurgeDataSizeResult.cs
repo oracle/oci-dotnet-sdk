@@ -31,5 +31,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "PurgeDataSizeInBytes is required.")]
         [JsonProperty(PropertyName = "purgeDataSizeInBytes")]
         public System.Nullable<long> PurgeDataSizeInBytes { get; set; }
+        
     }
 }

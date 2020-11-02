@@ -27,7 +27,7 @@ namespace Oci.LimitsService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The scope type of the limit.
         /// 
@@ -49,17 +49,18 @@ namespace Oci.LimitsService.Models
         [JsonProperty(PropertyName = "scopeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScopeTypeEnum> ScopeType { get; set; }
-
+        
         /// <value>
         /// If present, the returned value is only specific to this availability domain.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The resource limit value.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<long> Value { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// display name of the operand
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// data type of operand
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Datatype is required.")]
         [JsonProperty(PropertyName = "datatype")]
         public string Datatype { get; set; }
-
+        
         /// <value>
         /// operand list type
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ManagedListtype is required.")]
         [JsonProperty(PropertyName = "managedListtype")]
         public string ManagedListtype { get; set; }
-
+        
         /// <value>
         /// Filter type can be config filter or condition filter
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "filterType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConditionFilterType> FilterType { get; set; }
-
+        
         /// <value>
         /// List of parameters
         /// </value>
@@ -81,11 +81,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Operators is required.")]
         [JsonProperty(PropertyName = "operators")]
         public System.Collections.Generic.List<ConditionOperator> Operators { get; set; }
-
+        
         /// <value>
         /// configuration value type list for multilist data type
         /// </value>
         [JsonProperty(PropertyName = "multiListTypes")]
         public System.Collections.Generic.List<string> MultiListTypes { get; set; }
+        
     }
 }

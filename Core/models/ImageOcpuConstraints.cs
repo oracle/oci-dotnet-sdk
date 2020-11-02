@@ -26,11 +26,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<int> Min { get; set; }
-
+        
         /// <value>
         /// The maximum number of OCPUs supported for this image and shape.
         /// </value>
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<int> Max { get; set; }
+        
     }
 }

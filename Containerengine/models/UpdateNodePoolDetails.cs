@@ -26,19 +26,19 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes to which the nodes in the node pool should be upgraded.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to nodes after they join the Kubernetes cluster.
         /// </value>
         [JsonProperty(PropertyName = "initialNodeLabels")]
         public System.Collections.Generic.List<KeyValue> InitialNodeLabels { get; set; }
-
+        
         /// <value>
         /// The number of nodes to have in each subnet specified in the subnetIds property. This property is deprecated,
         /// use nodeConfigDetails instead. If the current value of quantityPerSubnet is greater than 0, you can only
@@ -49,7 +49,7 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "quantityPerSubnet")]
         public System.Nullable<int> QuantityPerSubnet { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the subnets in which to place nodes for this node pool. This property is deprecated,
         /// use nodeConfigDetails instead. Only one of the subnetIds or nodeConfigDetails
@@ -58,7 +58,7 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
-
+        
         /// <value>
         /// The configuration of nodes in the node pool. Only one of the subnetIds or nodeConfigDetails
         /// properties should be specified. If the current value of quantityPerSubnet is greater than 0, the node
@@ -68,37 +68,38 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "nodeConfigDetails")]
         public UpdateNodePoolNodeConfigDetails NodeConfigDetails { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to each underlying OCI instance in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "nodeMetadata")]
         public System.Collections.Generic.Dictionary<string, string> NodeMetadata { get; set; }
-
+        
         /// <value>
         /// Specify the source to use to launch nodes in the node pool. Currently, image is the only supported source.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeSourceDetails")]
         public NodeSourceDetails NodeSourceDetails { get; set; }
-
+        
         /// <value>
         /// The SSH public key to add to each node in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKey")]
         public string SshPublicKey { get; set; }
-
+        
         /// <value>
         /// The name of the node shape of the nodes in the node pool used on launch.
         /// </value>
         [JsonProperty(PropertyName = "nodeShape")]
         public string NodeShape { get; set; }
-
+        
         /// <value>
         /// Specify the configuration of the shape to launch nodes in the node pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeShapeConfig")]
         public UpdateNodeShapeConfigDetails NodeShapeConfig { get; set; }
+        
     }
 }

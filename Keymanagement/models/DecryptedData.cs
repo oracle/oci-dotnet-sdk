@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Plaintext is required.")]
         [JsonProperty(PropertyName = "plaintext")]
         public string Plaintext { get; set; }
-
+        
         /// <value>
         /// Checksum of the decrypted data.
         /// </value>
@@ -38,5 +38,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "PlaintextChecksum is required.")]
         [JsonProperty(PropertyName = "plaintextChecksum")]
         public string PlaintextChecksum { get; set; }
+        
     }
 }

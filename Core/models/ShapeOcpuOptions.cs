@@ -30,12 +30,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<float> Min { get; set; }
-
+        
         /// <value>
         /// The maximum number of OCPUs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<float> Max { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the service offered by the provider.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// Who is responsible for managing the private peering BGP information.
         /// 
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "privatePeeringBgpManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PrivatePeeringBgpManagementEnum> PrivatePeeringBgpManagement { get; set; }
-
+        
         /// <value>
         /// The name of the provider.
         /// 
@@ -80,7 +80,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ProviderName is required.")]
         [JsonProperty(PropertyName = "providerName")]
         public string ProviderName { get; set; }
-
+        
         /// <value>
         /// The name of the service offered by the provider.
         /// 
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ProviderServiceName is required.")]
         [JsonProperty(PropertyName = "providerServiceName")]
         public string ProviderServiceName { get; set; }
-        ///
+                ///
         /// <value>
         /// Who is responsible for managing the public peering BGP information.
         /// 
@@ -117,7 +117,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "publicPeeringBgpManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PublicPeeringBgpManagementEnum> PublicPeeringBgpManagement { get; set; }
-        ///
+                ///
         ///
         public enum SupportedVirtualCircuitTypesEnum {
             [EnumMember(Value = "PUBLIC")]
@@ -132,7 +132,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "supportedVirtualCircuitTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<SupportedVirtualCircuitTypesEnum> SupportedVirtualCircuitTypes { get; set; }
-        ///
+                ///
         /// <value>
         /// Who is responsible for managing the ASN information for the network at the other end
         /// of the connection from Oracle.
@@ -160,7 +160,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "customerAsnManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CustomerAsnManagementEnum> CustomerAsnManagement { get; set; }
-        ///
+                ///
         /// <value>
         /// Who is responsible for managing the provider service key.
         /// 
@@ -186,7 +186,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "providerServiceKeyManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProviderServiceKeyManagementEnum> ProviderServiceKeyManagement { get; set; }
-        ///
+                ///
         /// <value>
         /// Who is responsible for managing the virtual circuit bandwidth.
         /// 
@@ -212,7 +212,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bandwithShapeManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BandwithShapeManagementEnum> BandwithShapeManagement { get; set; }
-
+        
         /// <value>
         /// Total number of cross-connect or cross-connect groups required for the virtual circuit.
         /// 
@@ -223,7 +223,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "RequiredTotalCrossConnects is required.")]
         [JsonProperty(PropertyName = "requiredTotalCrossConnects")]
         public System.Nullable<int> RequiredTotalCrossConnects { get; set; }
-        ///
+                ///
         /// <value>
         /// Provider service type.
         /// 
@@ -247,5 +247,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

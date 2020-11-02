@@ -28,14 +28,14 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "internalName")]
         public string InternalName { get; set; }
-
+        
         /// <value>
         /// Display name - will be alias if result column is renamed by queryString.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Field denoting column data type.
         /// 
@@ -43,5 +43,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ValueType> ValueType { get; set; }
+        
     }
 }

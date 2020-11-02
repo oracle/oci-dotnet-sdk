@@ -30,13 +30,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -45,7 +45,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of database: NONE for creating a new database. DB_BACKUP for creating a new database by restoring from a database backup.
         /// 
@@ -72,13 +72,7 @@ namespace Oci.DatabaseService.Models
             VmClusterNew
         };
 
-        /// <value>
-        /// The source of database: NONE for creating a new database. DB_BACKUP for creating a new database by restoring from a database backup.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceEnum> Source { get; set; }
+        
     }
 
     public class CreateDbHomeBaseModelConverter : JsonConverter

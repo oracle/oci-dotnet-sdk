@@ -43,25 +43,14 @@ namespace Oci.LoganalyticsService.Models
             ClassifyColumn
         };
 
-        /// <value>
-        /// Column classification when column requires special designation.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// Column display name - will be alias if column is renamed by queryStrng.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Subsystem column belongs to.
         /// 
@@ -69,42 +58,42 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
-
+        
         /// <value>
         /// If the column is a 'List of Values' column, this array contains the field values that are applicable to query results or all if no filters applied.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<FieldValue> Values { get; set; }
-
+        
         /// <value>
         /// Identifies if all values in this column come from a pre-defined list of values.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isListOfValues")]
         public System.Nullable<bool> IsListOfValues { get; set; }
-
+        
         /// <value>
         /// Identifies if this column allows multiple values to exist in a single row.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
-
+        
         /// <value>
         /// Identifies if this column can be used as a grouping field in any grouping command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isGroupable")]
         public System.Nullable<bool> IsGroupable { get; set; }
-
+        
         /// <value>
         /// Identifies if this column can be used as an expression parameter in any command that accepts querylanguage expressions.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isEvaluable")]
         public System.Nullable<bool> IsEvaluable { get; set; }
-
+        
         /// <value>
         /// Field denoting column data type.
         /// 
@@ -112,20 +101,21 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ValueType> ValueType { get; set; }
-
+        
         /// <value>
         /// Same as displayName unless column renamed in which case this will hold the original display name for the column.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "originalDisplayName")]
         public string OriginalDisplayName { get; set; }
-
+        
         /// <value>
         /// Internal identifier for the column.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "internalName")]
         public string InternalName { get; set; }
+        
     }
 
     public class AbstractColumnModelConverter : JsonConverter

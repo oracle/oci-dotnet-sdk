@@ -32,14 +32,14 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// The id of a work request error.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Nullable<long> Id { get; set; }
-
+        
         /// <value>
         /// A human readable description of the issue encountered.
         /// </value>
@@ -49,7 +49,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The time the error occured. An RFC3339 formatted datetime string.
         /// </value>
@@ -59,12 +59,13 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// The OCID of a work request.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "workRequestid")]
         public string WorkRequestid { get; set; }
+        
     }
 }

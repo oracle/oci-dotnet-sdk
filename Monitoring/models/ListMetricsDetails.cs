@@ -32,7 +32,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The source service or application to use when searching for metric definitions.
         /// <br/>
@@ -40,7 +40,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group that you want to use as a filter. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -50,7 +50,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// Qualifiers that you want to use when searching for metric definitions.
         /// Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.
@@ -59,7 +59,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "dimensionFilters")]
         public System.Collections.Generic.Dictionary<string, string> DimensionFilters { get; set; }
-
+        
         /// <value>
         /// Group metrics by these fields in the response. For example, to list all metric namespaces available
         ///           in a compartment, groupBy the \"namespace\" field. Supported fields: namespace, name, resourceGroup.
@@ -70,7 +70,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }
-        ///
+                ///
         /// <value>
         /// The field to use when sorting returned metric definitions. Only one sorting level is provided.
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "sortBy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SortByEnum> SortBy { get; set; }
-        ///
+                ///
         /// <value>
         /// The sort order to use when sorting returned metric definitions. Ascending (ASC) or
         /// descending (DESC).
@@ -118,5 +118,6 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "sortOrder")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
     }
 }

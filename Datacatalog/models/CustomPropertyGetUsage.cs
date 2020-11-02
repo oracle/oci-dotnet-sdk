@@ -26,72 +26,73 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Display name of the custom property
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the custom property
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The custom property value
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// The data type of the custom property
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CustomPropertyDataType> DataType { get; set; }
-
+        
         /// <value>
         /// Namespace name of the custom property
         /// </value>
         [JsonProperty(PropertyName = "namespaceName")]
         public string NamespaceName { get; set; }
-
+        
         /// <value>
         /// Unique namespace key that is immutable
         /// </value>
         [JsonProperty(PropertyName = "namespaceKey")]
         public string NamespaceKey { get; set; }
-
+        
         /// <value>
         /// If this field allows multiple values to be set
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
-
+        
         /// <value>
         /// If this field is a hidden field
         /// </value>
         [JsonProperty(PropertyName = "isHidden")]
         public System.Nullable<bool> IsHidden { get; set; }
-
+        
         /// <value>
         /// If this field is a editable field
         /// </value>
         [JsonProperty(PropertyName = "isEditable")]
         public System.Nullable<bool> IsEditable { get; set; }
-
+        
         /// <value>
         /// Is this property allowed to have list of values
         /// </value>
         [JsonProperty(PropertyName = "isListType")]
         public System.Nullable<bool> IsListType { get; set; }
-
+        
         /// <value>
         /// Allowed values for the custom property if any
         /// </value>
         [JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.List<string> AllowedValues { get; set; }
+        
     }
 }

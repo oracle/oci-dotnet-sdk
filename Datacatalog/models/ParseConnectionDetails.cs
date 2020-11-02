@@ -23,11 +23,12 @@ namespace Oci.DatacatalogService.Models
         
         [JsonProperty(PropertyName = "connectionDetail")]
         public Connection ConnectionDetail { get; set; }
-
+        
         /// <value>
         /// The information used to parse the connection from the wallet file payload.
         /// </value>
         [JsonProperty(PropertyName = "connectionPayload")]
         public System.Byte[] ConnectionPayload { get; set; }
+        
     }
 }

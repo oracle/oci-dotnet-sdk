@@ -26,17 +26,18 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Category display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Parameters the category supports.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<Parameter> Parameters { get; set; }
+        
     }
 }

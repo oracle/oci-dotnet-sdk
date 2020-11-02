@@ -32,20 +32,20 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the Pattern.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The expression used in the pattern that may include qualifiers. Refer to the user documentation for details of the format and examples.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// List of file paths against which the expression can be tried, as a check. This documents, for reference
         /// purposes, some example objects a pattern is meant to work with. If isEnableCheckFailureLimit is set to true,
@@ -56,7 +56,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFilePathList")]
         public System.Collections.Generic.List<string> CheckFilePathList { get; set; }
-
+        
         /// <value>
         /// Indicates whether the expression check, against the checkFilePathList, will fail the request if the count of
         /// UNMATCHED files is above the checkFailureLimit.
@@ -64,7 +64,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnableCheckFailureLimit")]
         public System.Nullable<bool> IsEnableCheckFailureLimit { get; set; }
-
+        
         /// <value>
         /// The maximum number of UNMATCHED files, in checkFilePathList, above which the check fails. Optional, if
         /// checkFilePathList is provided - but if isEnableCheckFailureLimit is set to true it is required.
@@ -72,7 +72,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "checkFailureLimit")]
         public System.Nullable<int> CheckFailureLimit { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the pattern type. Each pattern type
         /// definition defines it's set of required and optional properties.
@@ -80,5 +80,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

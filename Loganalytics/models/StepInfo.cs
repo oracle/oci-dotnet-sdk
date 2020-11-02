@@ -26,17 +26,18 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "inputSequenceCurrentMatch")]
         public string InputSequenceCurrentMatch { get; set; }
-
+        
         /// <value>
         /// regexEngineClassName
         /// </value>
         [JsonProperty(PropertyName = "regexEngineClassName")]
         public string RegexEngineClassName { get; set; }
-
+        
         /// <value>
         /// stepCount
         /// </value>
         [JsonProperty(PropertyName = "stepCount")]
         public System.Nullable<int> StepCount { get; set; }
+        
     }
 }

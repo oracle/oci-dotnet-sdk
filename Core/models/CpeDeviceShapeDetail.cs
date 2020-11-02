@@ -30,13 +30,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpeDeviceShapeId")]
         public string CpeDeviceShapeId { get; set; }
-
+        
         /// <value>
         /// Basic information about this particular CPE device type.
         /// </value>
         [JsonProperty(PropertyName = "cpeDeviceInfo")]
         public CpeDeviceInfo CpeDeviceInfo { get; set; }
-
+        
         /// <value>
         /// For certain CPE devices types, the customer can provide answers to
         /// questions that are specific to the device type. This attribute contains
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<CpeDeviceConfigQuestion> Parameters { get; set; }
-
+        
         /// <value>
         /// A template of CPE device configuration information that will be merged with the customer's
         /// answers to the questions to render the final CPE device configuration content. Also see:
@@ -60,5 +60,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "template")]
         public string Template { get; set; }
+        
     }
 }

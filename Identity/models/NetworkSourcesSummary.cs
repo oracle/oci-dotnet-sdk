@@ -29,13 +29,13 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy (root compartment) containing the network source.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name you assign to the network source during creation. The name must be unique across
         /// the tenancy and cannot be changed.
@@ -43,27 +43,27 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description you assign to the network source. Does not have to be unique, and it's changeable.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A list of allowed public IP addresses and CIDR ranges.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicSourceList")]
         public System.Collections.Generic.List<string> PublicSourceList { get; set; }
-
+        
         /// <value>
         /// A list of allowed VCN OCID and IP range pairs.
         /// Example: &quot;vcnId&quot;: &quot;ocid1.vcn.oc1.iad.aaaaaaaaexampleuniqueID&quot;, &quot;ipRanges&quot;: [ &quot;129.213.39.0/24&quot; ]
         /// </value>
         [JsonProperty(PropertyName = "virtualSourceList")]
         public System.Collections.Generic.List<NetworkSources_virtualSourceList> VirtualSourceList { get; set; }
-
+        
         /// <value>
         /// A list of services allowed to make on-behalf-of requests. These requests can have different source IPs than
         /// those specified in the network source. Currently, only `all` and `none` are supported. The default is `all`.
@@ -71,7 +71,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }
-
+        
         /// <value>
         /// Date and time the group was created, in the format defined by RFC3339.
         /// <br/>
@@ -79,7 +79,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -87,7 +87,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -95,5 +95,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

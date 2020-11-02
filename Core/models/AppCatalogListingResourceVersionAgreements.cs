@@ -26,37 +26,38 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// Listing resource version associated with these agreements.
         /// </value>
         [JsonProperty(PropertyName = "listingResourceVersion")]
         public string ListingResourceVersion { get; set; }
-
+        
         /// <value>
         /// Oracle TOU link
         /// </value>
         [JsonProperty(PropertyName = "oracleTermsOfUseLink")]
         public string OracleTermsOfUseLink { get; set; }
-
+        
         /// <value>
         /// EULA link
         /// </value>
         [JsonProperty(PropertyName = "eulaLink")]
         public string EulaLink { get; set; }
-
+        
         /// <value>
         /// Date and time the agreements were retrieved, in [RFC3339](https://tools.ietf.org/html/rfc3339) format.
         /// Example: 2018-03-20T12:32:53.532Z
         /// </value>
         [JsonProperty(PropertyName = "timeRetrieved")]
         public System.Nullable<System.DateTime> TimeRetrieved { get; set; }
-
+        
         /// <value>
         /// A generated signature for this agreement retrieval operation which should be used in the create subscription call.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "signature")]
         public string Signature { get; set; }
+        
     }
 }

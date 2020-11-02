@@ -30,7 +30,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "SparkVersion is required.")]
         [JsonProperty(PropertyName = "sparkVersion")]
         public string SparkVersion { get; set; }
-
+        
         /// <value>
         /// The VM shape of the driver used while creating an Oracle Cloud Infrastructure Data Flow application. It sets the driver cores and memory.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "DriverShape is required.")]
         [JsonProperty(PropertyName = "driverShape")]
         public string DriverShape { get; set; }
-
+        
         /// <value>
         /// The shape of the executor used while creating an Oracle Cloud Infrastructure Data Flow application. It sets the executor cores and memory.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "ExecutorShape is required.")]
         [JsonProperty(PropertyName = "executorShape")]
         public string ExecutorShape { get; set; }
-
+        
         /// <value>
         /// Number of executor VMs requested while creating an Oracle Cloud Infrastructure Data Flow application.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "TotalExecutors is required.")]
         [JsonProperty(PropertyName = "totalExecutors")]
         public System.Nullable<int> TotalExecutors { get; set; }
+        
     }
 }

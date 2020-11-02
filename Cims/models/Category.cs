@@ -26,11 +26,12 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "categoryKey")]
         public string CategoryKey { get; set; }
-
+        
         /// <value>
         /// The name of the category. For example, `Compute` or `Identity`.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

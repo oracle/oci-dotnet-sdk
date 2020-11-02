@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// ManagedList display name
         /// </value>
@@ -40,13 +40,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// ManagedList description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier where the resource is created
         /// </value>
@@ -56,13 +56,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// OCID of the Source ManagedList
         /// </value>
         [JsonProperty(PropertyName = "sourceManagedListId")]
         public string SourceManagedListId { get; set; }
-
+        
         /// <value>
         /// type of the list
         /// </value>
@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "listType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ManagedListType> ListType { get; set; }
-
+        
         /// <value>
         /// provider of the feed
         /// </value>
@@ -84,13 +84,13 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "feedProvider")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FeedProviderType> FeedProvider { get; set; }
-
+        
         /// <value>
         /// If this list is editable or not
         /// </value>
         [JsonProperty(PropertyName = "isEditable")]
         public System.Nullable<bool> IsEditable { get; set; }
-
+        
         /// <value>
         /// List of ManagedListItem
         /// </value>
@@ -100,46 +100,46 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ListItems is required.")]
         [JsonProperty(PropertyName = "listItems")]
         public System.Collections.Generic.List<string> ListItems { get; set; }
-
+        
         /// <value>
         /// The date and time the managed list was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the managed list was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecyleDetails")]
         public string LifecyleDetails { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -149,5 +149,6 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

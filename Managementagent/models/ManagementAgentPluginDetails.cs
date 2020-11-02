@@ -26,7 +26,7 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "pluginId")]
         public string PluginId { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin Name
         /// </value>
@@ -36,17 +36,18 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "PluginName is required.")]
         [JsonProperty(PropertyName = "pluginName")]
         public string PluginName { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin Identifier, can be renamed
         /// </value>
         [JsonProperty(PropertyName = "pluginDisplayName")]
         public string PluginDisplayName { get; set; }
-
+        
         /// <value>
         /// Plugin Version
         /// </value>
         [JsonProperty(PropertyName = "pluginVersion")]
         public string PluginVersion { get; set; }
+        
     }
 }

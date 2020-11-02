@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ImageId is required.")]
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// The shape name.
         /// </value>
@@ -40,11 +40,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         [JsonProperty(PropertyName = "memoryConstraints")]
         public ImageMemoryConstraints MemoryConstraints { get; set; }
-
+        
         [JsonProperty(PropertyName = "ocpuConstraints")]
         public ImageOcpuConstraints OcpuConstraints { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// the end of the time interval
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeDataEnded is required.")]
         [JsonProperty(PropertyName = "timeDataEnded")]
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
-
+        
         /// <value>
         /// the start of the time interval
         /// </value>
@@ -51,12 +51,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeDataStarted is required.")]
         [JsonProperty(PropertyName = "timeDataStarted")]
         public System.Nullable<System.DateTime> TimeDataStarted { get; set; }
-
+        
         /// <value>
         /// the type of the log data to be purged
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
+        
     }
 }

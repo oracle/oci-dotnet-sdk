@@ -30,7 +30,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// Result of the validation.
         /// </value>
@@ -56,5 +56,6 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "result")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResultEnum> Result { get; set; }
+        
     }
 }

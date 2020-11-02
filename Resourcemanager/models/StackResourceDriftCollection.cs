@@ -31,5 +31,6 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<StackResourceDriftSummary> Items { get; set; }
+        
     }
 }

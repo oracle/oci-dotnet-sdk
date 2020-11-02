@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the {@link Cpe} object.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CpeId is required.")]
         [JsonProperty(PropertyName = "cpeId")]
         public string CpeId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -47,13 +47,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the DRG.
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DrgId is required.")]
         [JsonProperty(PropertyName = "drgId")]
         public string DrgId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Your identifier for your CPE device. Can be either an IP address or a hostname (specifically, the
         /// fully qualified domain name (FQDN)). The type of identifier you provide here must correspond
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpeLocalIdentifier")]
         public string CpeLocalIdentifier { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of identifier for your CPE device. The value you provide here must correspond to the value
         /// for `cpeLocalIdentifier`.
@@ -113,7 +113,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "cpeLocalIdentifierType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CpeLocalIdentifierTypeEnum> CpeLocalIdentifierType { get; set; }
-
+        
         /// <value>
         /// Static routes to the CPE. A static route's CIDR must not be a
         /// multicast address or class E address.
@@ -135,7 +135,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "StaticRoutes is required.")]
         [JsonProperty(PropertyName = "staticRoutes")]
         public System.Collections.Generic.List<string> StaticRoutes { get; set; }
-
+        
         /// <value>
         /// Information for creating the individual tunnels in the IPSec connection. You can provide a
         /// maximum of 2 `tunnelConfiguration` objects in the array (one for each of the
@@ -144,5 +144,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "tunnelConfiguration")]
         public System.Collections.Generic.List<CreateIPSecConnectionTunnelDetails> TunnelConfiguration { get; set; }
+        
     }
 }

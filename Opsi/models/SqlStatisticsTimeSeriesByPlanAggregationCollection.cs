@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-
+        
         /// <value>
         /// The start timestamp that was passed into the request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-
+        
         /// <value>
         /// Time duration in milliseconds between data points (one hour or one day).
         /// 
@@ -73,7 +73,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ItemDurationInMs is required.")]
         [JsonProperty(PropertyName = "itemDurationInMs")]
         public System.Nullable<long> ItemDurationInMs { get; set; }
-
+        
         /// <value>
         /// Array comprising of all the sampling period end timestamps in RFC 3339 format.
         /// </value>
@@ -83,7 +83,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "EndTimestamps is required.")]
         [JsonProperty(PropertyName = "endTimestamps")]
         public System.Collections.Generic.List<System.DateTime> EndTimestamps { get; set; }
-
+        
         /// <value>
         /// array of SQL performance statistics by plans
         /// </value>
@@ -93,5 +93,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<SqlStatisticsTimeSeriesByPlanAggregation> Items { get; set; }
+        
     }
 }

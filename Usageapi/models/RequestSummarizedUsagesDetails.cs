@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// details for the '/usage' query
+    /// Details for the '/usage' query.
     /// </summary>
     public class RequestSummarizedUsagesDetails 
     {
         
         /// <value>
-        /// tenant id
+        /// Tenant ID
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,9 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "TenantId is required.")]
         [JsonProperty(PropertyName = "tenantId")]
         public string TenantId { get; set; }
-
+        
         /// <value>
-        /// The start time of the usage.
+        /// The usage start time.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,9 +40,9 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "TimeUsageStarted is required.")]
         [JsonProperty(PropertyName = "timeUsageStarted")]
         public System.Nullable<System.DateTime> TimeUsageStarted { get; set; }
-
+        
         /// <value>
-        /// The end time of the usage.
+        /// The usage end time.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,13 +50,13 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "TimeUsageEnded is required.")]
         [JsonProperty(PropertyName = "timeUsageEnded")]
         public System.Nullable<System.DateTime> TimeUsageEnded { get; set; }
-        ///
+                ///
         /// <value>
-        /// The granularity of the usage.
-        /// HOURLY - Hourly aggregation of data
-        /// DAILY - Daily aggregation of data
-        /// MONTHLY - Monthly aggregation of data
-        /// TOTAL - Not Supported Yet
+        /// The usage granularity.
+        /// HOURLY - Hourly data aggregation.
+        /// DAILY - Daily data aggregation.
+        /// MONTHLY - Monthly data aggregation.
+        /// TOTAL - Not yet supported.
         /// 
         /// </value>
         ///
@@ -72,11 +72,11 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The granularity of the usage.
-        /// HOURLY - Hourly aggregation of data
-        /// DAILY - Daily aggregation of data
-        /// MONTHLY - Monthly aggregation of data
-        /// TOTAL - Not Supported Yet
+        /// The usage granularity.
+        /// HOURLY - Hourly data aggregation.
+        /// DAILY - Daily data aggregation.
+        /// MONTHLY - Monthly data aggregation.
+        /// TOTAL - Not yet supported.
         /// 
         /// </value>
         /// <remarks>
@@ -86,11 +86,11 @@ namespace Oci.UsageapiService.Models
         [JsonProperty(PropertyName = "granularity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GranularityEnum> Granularity { get; set; }
-        ///
+                ///
         /// <value>
-        /// The type of query of the usage.
+        /// The query usage type.
         /// Usage - Query the usage data.
-        /// Cost - Query the cost / billing data.
+        /// Cost - Query the cost/billing data.
         /// 
         /// </value>
         ///
@@ -102,29 +102,30 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The type of query of the usage.
+        /// The query usage type.
         /// Usage - Query the usage data.
-        /// Cost - Query the cost / billing data.
+        /// Cost - Query the cost/billing data.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<QueryTypeEnum> QueryType { get; set; }
-
+        
         /// <value>
         /// Aggregate the result by.
         /// Example:   [&quot;service&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }
-
+        
         /// <value>
-        /// The depth level of the compartment.
+        /// The compartment depth level.
         /// </value>
         [JsonProperty(PropertyName = "compartmentDepth")]
         public System.Nullable<decimal> CompartmentDepth { get; set; }
-
+        
         [JsonProperty(PropertyName = "filter")]
         public Filter Filter { get; set; }
+        
     }
 }

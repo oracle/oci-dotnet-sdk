@@ -26,11 +26,12 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The new reference object to use instead of the original reference. For example, this can be a connection reference.
         /// </value>
         [JsonProperty(PropertyName = "targetObject")]
         public System.Object TargetObject { get; set; }
+        
     }
 }

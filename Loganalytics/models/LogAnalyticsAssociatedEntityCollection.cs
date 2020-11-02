@@ -26,5 +26,6 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsAssociatedEntity> Items { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "fileName")]
         public string FileName { get; set; }
-
+        
         /// <value>
         /// Is Valid flag
         /// </value>
         [JsonProperty(PropertyName = "isValid")]
         public System.Nullable<bool> IsValid { get; set; }
+        
     }
 }

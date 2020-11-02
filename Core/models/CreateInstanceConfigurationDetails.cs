@@ -28,5 +28,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceDetails is required.")]
         [JsonProperty(PropertyName = "instanceDetails")]
         public InstanceConfigurationInstanceDetails InstanceDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "NONE";
     }
 }

@@ -24,11 +24,12 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "setQueryParameters")]
         public SetQueryParameterPolicy SetQueryParameters { get; set; }
-
+        
         [JsonProperty(PropertyName = "renameQueryParameters")]
         public RenameQueryParameterPolicy RenameQueryParameters { get; set; }
-
+        
         [JsonProperty(PropertyName = "filterQueryParameters")]
         public FilterQueryParameterPolicy FilterQueryParameters { get; set; }
+        
     }
 }

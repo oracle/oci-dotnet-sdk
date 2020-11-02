@@ -30,7 +30,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// User-defined name for the Digital Assistant instance. Avoid entering confidential information.
         /// You can change this value.
@@ -38,13 +38,13 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the Digital Assistant instance.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Identifier of the compartment that the instance belongs to.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// Shape or size of the instance.
         /// </value>
@@ -76,31 +76,31 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "shapeName")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ShapeNameEnum> ShapeName { get; set; }
-
+        
         /// <value>
         /// URL for the Digital Assistant web application that's associated with the instance.
         /// </value>
         [JsonProperty(PropertyName = "webAppUrl")]
         public string WebAppUrl { get; set; }
-
+        
         /// <value>
         /// URL for the connector's endpoint.
         /// </value>
         [JsonProperty(PropertyName = "connectorUrl")]
         public string ConnectorUrl { get; set; }
-
+        
         /// <value>
         /// When the Digital Assistant instance was created. A date-time string as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// When the Digital Assistance instance was last updated. A date-time string as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Digital Assistant instance.
         /// </value>
@@ -128,7 +128,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// The current sub-state of the Digital Assistant instance.
         /// </value>
@@ -160,7 +160,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "lifecycleSubState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleSubStateEnum> LifecycleSubState { get; set; }
-
+        
         /// <value>
         /// A message that describes the current state in more detail.
         /// For example, actionable information about an instance that's in the `FAILED` state.
@@ -168,19 +168,20 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "stateMessage")]
         public string StateMessage { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

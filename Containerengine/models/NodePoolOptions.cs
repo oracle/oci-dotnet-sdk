@@ -26,13 +26,13 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersions")]
         public System.Collections.Generic.List<string> KubernetesVersions { get; set; }
-
+        
         /// <value>
         /// Available shapes for nodes.
         /// </value>
         [JsonProperty(PropertyName = "shapes")]
         public System.Collections.Generic.List<string> Shapes { get; set; }
-
+        
         /// <value>
         /// Deprecated. See sources.
         /// When creating a node pool using the `CreateNodePoolDetails` object, only image names contained in this
@@ -41,11 +41,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "images")]
         public System.Collections.Generic.List<string> Images { get; set; }
-
+        
         /// <value>
         /// Available source of the node.
         /// </value>
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<NodeSourceOption> Sources { get; set; }
+        
     }
 }

@@ -26,5 +26,6 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

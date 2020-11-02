@@ -30,7 +30,7 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -38,13 +38,13 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A brief description of the secret. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -52,13 +52,13 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the master encryption key that is used to encrypt the secret.
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// Additional metadata that you can use to provide context about how to use the secret during rotation or
         /// other administrative tasks. For example, for a secret that you use to connect to a database, the additional
@@ -67,14 +67,14 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> Metadata { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "SecretContent is required.")]
         [JsonProperty(PropertyName = "secretContent")]
         public SecretContentDetails SecretContent { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the secret. Secret names should be unique within a vault. Avoid entering confidential information. Valid characters are uppercase or lowercase letters, numbers, hyphens, underscores, and periods.
         /// 
@@ -85,13 +85,13 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "SecretName is required.")]
         [JsonProperty(PropertyName = "secretName")]
         public string SecretName { get; set; }
-
+        
         /// <value>
         /// A list of rules to control how the secret is used and managed.
         /// </value>
         [JsonProperty(PropertyName = "secretRules")]
         public System.Collections.Generic.List<SecretRule> SecretRules { get; set; }
-
+        
         /// <value>
         /// The OCID of the vault where you want to create the secret.
         /// </value>
@@ -101,5 +101,6 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
     }
 }

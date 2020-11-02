@@ -27,7 +27,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "versionFamily")]
         public string VersionFamily { get; set; }
-
+        
         /// <value>
         /// The list of supported MySQL Versions.
         /// </value>
@@ -37,5 +37,6 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Versions is required.")]
         [JsonProperty(PropertyName = "versions")]
         public System.Collections.Generic.List<Version> Versions { get; set; }
+        
     }
 }

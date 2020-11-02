@@ -28,22 +28,22 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
-
+        
         /// <value>
         /// The number of compute servers for the cloud Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
         public System.Nullable<int> ComputeCount { get; set; }
-
+        
         /// <value>
         /// The number of storage servers for the cloud Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "storageCount")]
         public System.Nullable<int> StorageCount { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -52,7 +52,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -60,5 +60,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

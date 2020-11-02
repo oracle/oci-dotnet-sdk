@@ -35,7 +35,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Text is required.")]
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
-
+        
         /// <value>
         /// SQL execution plan hash value for a given insight. For example `Most Executed Plan` insight will have value as \"3975467901\"
         /// 
@@ -46,7 +46,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<long> Value { get; set; }
-
+        
         /// <value>
         /// SQL Insight category. For example PLANS_USED, MOST_EXECUTED, BEST_PERFORMER, WORST_PERFORMER, MOST_CPU or MOST_IO.
         /// 
@@ -57,5 +57,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
+        
     }
 }

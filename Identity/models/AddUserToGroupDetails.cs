@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "UserId is required.")]
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// The OCID of the group.
         /// </value>
@@ -38,5 +38,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "GroupId is required.")]
         [JsonProperty(PropertyName = "groupId")]
         public string GroupId { get; set; }
+        
     }
 }

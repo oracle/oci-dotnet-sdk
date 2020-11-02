@@ -23,16 +23,7 @@ namespace Oci.ResourcemanagerService.Models
     public class CreateJobOperationDetails 
     {
         
-        /// <value>
-        /// Terraform-specific operation to execute.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Operation is required.")]
-        [JsonProperty(PropertyName = "operation")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Job.OperationEnum> Operation { get; set; }
+        
     }
 
     public class CreateJobOperationDetailsModelConverter : JsonConverter

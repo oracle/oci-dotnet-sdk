@@ -23,8 +23,11 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<UnifiedAgentLoggingSource> Sources { get; set; }
-
+        
         [JsonProperty(PropertyName = "destination")]
         public UnifiedAgentLoggingDestination Destination { get; set; }
+        
+        [JsonProperty(PropertyName = "configurationType")]
+        private readonly string configurationType = "LOGGING";
     }
 }
