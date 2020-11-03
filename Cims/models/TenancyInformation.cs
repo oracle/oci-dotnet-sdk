@@ -30,7 +30,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "CustomerSupportKey is required.")]
         [JsonProperty(PropertyName = "customerSupportKey")]
         public string CustomerSupportKey { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "TenancyId is required.")]
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
+        
     }
 }

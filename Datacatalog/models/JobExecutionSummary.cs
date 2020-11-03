@@ -30,52 +30,52 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The unique key of the parent job.
         /// </value>
         [JsonProperty(PropertyName = "jobKey")]
         public string JobKey { get; set; }
-
+        
         /// <value>
         /// Type of the job execution.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
-
+        
         /// <value>
         /// The unique key of the parent execution or null if this job execution has no parent.
         /// </value>
         [JsonProperty(PropertyName = "parentKey")]
         public string ParentKey { get; set; }
-
+        
         /// <value>
         /// The unique key of the triggering external scheduler resource or null if this job execution is not externally triggered.
         /// </value>
         [JsonProperty(PropertyName = "scheduleInstanceKey")]
         public string ScheduleInstanceKey { get; set; }
-
+        
         /// <value>
         /// Status of the job execution, such as running, paused, or completed.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobExecutionState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the job execution was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time that job execution started. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// Time that the job execution ended or null if it hasn't yet completed.
         /// An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
@@ -83,11 +83,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
-
+        
         /// <value>
         /// URI to the job execution instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
     }
 }

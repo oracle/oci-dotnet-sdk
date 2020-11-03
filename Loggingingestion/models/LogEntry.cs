@@ -32,7 +32,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Data is required.")]
         [JsonProperty(PropertyName = "data")]
         public string Data { get; set; }
-
+        
         /// <value>
         /// UUID uniquely representing this logEntry. This is not an OCID related
         /// to any oracle resource.
@@ -44,7 +44,7 @@ namespace Oci.LoggingingestionService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Optional. The timestamp associated with the log entry. An RFC3339-formatted date-time string. 
         /// If unspecified, defaults to PutLogsDetails.defaultlogentrytime.
@@ -52,5 +52,6 @@ namespace Oci.LoggingingestionService.Models
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public System.Nullable<System.DateTime> Time { get; set; }
+        
     }
 }

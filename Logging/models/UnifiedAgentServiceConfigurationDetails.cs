@@ -22,16 +22,7 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentServiceConfigurationDetails 
     {
         
-        /// <value>
-        /// Type of Unified Agent service configuration.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigurationType is required.")]
-        [JsonProperty(PropertyName = "configurationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<UnifiedAgentServiceConfigurationTypes> ConfigurationType { get; set; }
+        
     }
 
     public class UnifiedAgentServiceConfigurationDetailsModelConverter : JsonConverter

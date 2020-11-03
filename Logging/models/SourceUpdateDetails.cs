@@ -26,5 +26,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        
     }
 }

@@ -31,5 +31,8 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "LocalMountPointPath is required.")]
         [JsonProperty(PropertyName = "localMountPointPath")]
         public string LocalMountPointPath { get; set; }
+        
+        [JsonProperty(PropertyName = "mountType")]
+        private readonly string mountType = "SELF_MOUNT";
     }
 }

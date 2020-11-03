@@ -30,7 +30,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "InstanceAgentCommandId is required.")]
         [JsonProperty(PropertyName = "instanceAgentCommandId")]
         public string InstanceAgentCommandId { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the command delivery state.
         ///  * `VISIBLE` - The command is visible to instance.
@@ -80,7 +80,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "deliveryState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DeliveryStateEnum> DeliveryState { get; set; }
-        ///
+                ///
         /// <value>
         /// command execution life cycle state.
         /// * `ACCEPTED` - The command execution has been accepted to run.
@@ -124,7 +124,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The command creation date
         /// </value>
@@ -134,7 +134,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The command last updated at date.
         /// </value>
@@ -144,7 +144,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The large non-consecutive number that Run Command Service assigns to each created command.
         /// </value>
@@ -154,18 +154,19 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "SequenceNumber is required.")]
         [JsonProperty(PropertyName = "sequenceNumber")]
         public System.Nullable<long> SequenceNumber { get; set; }
-
+        
         /// <value>
         /// The user friendly display name of the command.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Content is required.")]
         [JsonProperty(PropertyName = "content")]
         public InstanceAgentCommandExecutionOutputContent Content { get; set; }
+        
     }
 }

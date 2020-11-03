@@ -33,7 +33,7 @@ namespace Oci.EmailService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The recipient email address of the suppression.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.EmailService.Models
         [Required(ErrorMessage = "EmailAddress is required.")]
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "lookupField")]
         public string LookupField { get; set; }
-
+        
         /// <value>
         /// maps to
         /// </value>
         [JsonProperty(PropertyName = "mapsTo")]
         public string MapsTo { get; set; }
+        
     }
 }

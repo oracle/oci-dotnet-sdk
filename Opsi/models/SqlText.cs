@@ -27,7 +27,7 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<float> Version { get; set; }
-
+        
         /// <value>
         /// Unique SQL_ID for a SQL Statement.
         /// 
@@ -38,7 +38,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <value>
         /// Collection timestamp
         /// Example: &quot;2020-05-06T00:00:00.000Z&quot;
@@ -49,7 +49,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeCollected is required.")]
         [JsonProperty(PropertyName = "timeCollected")]
         public System.Nullable<System.DateTime> TimeCollected { get; set; }
-
+        
         /// <value>
         /// SQL command
         /// Example: &quot;SELECT&quot;
@@ -60,21 +60,21 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlCommand is required.")]
         [JsonProperty(PropertyName = "sqlCommand")]
         public string SqlCommand { get; set; }
-
+        
         /// <value>
         /// Exact matching signature
         /// Example: &quot;18067345456756876713&quot;
         /// </value>
         [JsonProperty(PropertyName = "exactMatchingSignature")]
         public string ExactMatchingSignature { get; set; }
-
+        
         /// <value>
         /// Force matching signature
         /// Example: &quot;18067345456756876713&quot;
         /// </value>
         [JsonProperty(PropertyName = "forceMatchingSignature")]
         public string ForceMatchingSignature { get; set; }
-
+        
         /// <value>
         /// Full SQL Text
         /// Example: &quot;SELECT username,profile,default_tablespace,temporary_tablespace FROM dba_users&quot;Disclaimer: SQL text being uploaded explicitly via APIs is not masked. Any sensitive literals contained in the sqlFullText column should be masked prior to ingestion.
@@ -85,5 +85,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlFullText is required.")]
         [JsonProperty(PropertyName = "sqlFullText")]
         public string SqlFullText { get; set; }
+        
     }
 }

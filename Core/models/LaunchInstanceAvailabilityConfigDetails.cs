@@ -47,5 +47,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "recoveryAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RecoveryActionEnum> RecoveryAction { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The value of the header.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

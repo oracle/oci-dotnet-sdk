@@ -26,17 +26,18 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The expression realized after resolving qualifiers . Used in deriving this logical entity
         /// </value>
         [JsonProperty(PropertyName = "realizedExpression")]
         public string RealizedExpression { get; set; }
-
+        
         /// <value>
         /// The list of file paths that belong to the grouping of logical entity or UNMATCHED for which realizedExpression is a selector.
         /// </value>
         [JsonProperty(PropertyName = "filesInLogicalGrouping")]
         public System.Collections.Generic.List<string> FilesInLogicalGrouping { get; set; }
+        
     }
 }

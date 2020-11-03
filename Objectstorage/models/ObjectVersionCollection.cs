@@ -34,12 +34,13 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ObjectVersionSummary> Items { get; set; }
-
+        
         /// <value>
         /// Prefixes that are common to the results returned by the request if the request specified a delimiter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "prefixes")]
         public System.Collections.Generic.List<string> Prefixes { get; set; }
+        
     }
 }

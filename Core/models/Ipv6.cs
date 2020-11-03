@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -49,7 +49,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -61,7 +61,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the IPv6.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The IPv6 address of the `IPv6` object. The address is within the private IPv6 CIDR block
         /// of the VNIC's subnet (see the `ipv6CidrBlock` attribute for the {@link Subnet}
@@ -94,7 +94,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// Whether the IPv6 can be used for internet communication. Allowed by default for an IPv6 in
         /// a public subnet. Never allowed for an IPv6 in a private subnet. If the value is `true`, the
@@ -104,7 +104,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isInternetAccessAllowed")]
         public System.Nullable<bool> IsInternetAccessAllowed { get; set; }
-        ///
+                ///
         /// <value>
         /// The IPv6's current state.
         /// </value>
@@ -130,7 +130,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The IPv6 address to be used for internet communication. The address is within the public
         /// IPv6 CIDR block of the VNIC's subnet (see the `ipv6PublicCidrBlock` attribute for the
@@ -151,7 +151,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "publicIpAddress")]
         public string PublicIpAddress { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.
         /// </value>
@@ -161,7 +161,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The date and time the IPv6 was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -173,7 +173,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VNIC the IPv6 is assigned to.
         /// The VNIC and IPv6 must be in the same subnet.
@@ -185,5 +185,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VnicId is required.")]
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+        
     }
 }

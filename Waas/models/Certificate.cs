@@ -31,7 +31,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the certificate's compartment.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name of the certificate.
         /// </value>
@@ -51,16 +51,16 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         [JsonProperty(PropertyName = "issuedBy")]
         public string IssuedBy { get; set; }
-
+        
         [JsonProperty(PropertyName = "subjectName")]
         public CertificateSubjectName SubjectName { get; set; }
-
+        
         [JsonProperty(PropertyName = "issuerName")]
         public CertificateIssuerName IssuerName { get; set; }
-
+        
         /// <value>
         /// A unique, positive integer assigned by the Certificate Authority (CA). The issuer name and serial number identify a unique certificate.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "SerialNumber is required.")]
         [JsonProperty(PropertyName = "serialNumber")]
         public string SerialNumber { get; set; }
-
+        
         /// <value>
         /// The version of the encoded certificate.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<int> Version { get; set; }
-
+        
         /// <value>
         /// The identifier for the cryptographic algorithm used by the Certificate Authority (CA) to sign this certificate.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "SignatureAlgorithm is required.")]
         [JsonProperty(PropertyName = "signatureAlgorithm")]
         public string SignatureAlgorithm { get; set; }
-
+        
         /// <value>
         /// The date and time the certificate will become valid, expressed in RFC 3339 timestamp format.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "TimeNotValidBefore is required.")]
         [JsonProperty(PropertyName = "timeNotValidBefore")]
         public System.Nullable<System.DateTime> TimeNotValidBefore { get; set; }
-
+        
         /// <value>
         /// The date and time the certificate will expire, expressed in RFC 3339 timestamp format.
         /// </value>
@@ -110,16 +110,16 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "TimeNotValidAfter is required.")]
         [JsonProperty(PropertyName = "timeNotValidAfter")]
         public System.Nullable<System.DateTime> TimeNotValidAfter { get; set; }
-
+        
         [JsonProperty(PropertyName = "publicKeyInfo")]
         public Certificate_publicKeyInfo PublicKeyInfo { get; set; }
-
+        
         /// <value>
         /// Additional attributes associated with users or public keys for managing relationships between Certificate Authorities.
         /// </value>
         [JsonProperty(PropertyName = "extensions")]
         public System.Collections.Generic.List<Certificate_extensions> Extensions { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -128,7 +128,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -137,18 +137,19 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The current lifecycle state of the SSL certificate.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the certificate was created, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

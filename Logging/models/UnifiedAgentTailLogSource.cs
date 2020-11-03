@@ -23,8 +23,11 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "paths")]
         public System.Collections.Generic.List<string> Paths { get; set; }
-
+        
         [JsonProperty(PropertyName = "parser")]
         public UnifiedAgentParser Parser { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "LOG_TAIL";
     }
 }

@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the boot volume.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BootVolumeId is required.")]
         [JsonProperty(PropertyName = "bootVolumeId")]
         public string BootVolumeId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it cannot be changed.
         /// Avoid entering confidential information.
@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the boot volume attachment.
         /// </value>
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance the boot volume is attached to.
         /// </value>
@@ -85,7 +85,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the boot volume attachment.
         /// </value>
@@ -111,7 +111,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the boot volume was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -123,11 +123,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Whether in-transit encryption for the boot volume's paravirtualized attachment is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
     }
 }

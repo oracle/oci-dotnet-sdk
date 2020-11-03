@@ -30,7 +30,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The source service or application emitting the metric.
         /// <br/>
@@ -38,7 +38,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Resource group provided with the posted metric. A resource group is a custom string that can be used as a filter. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
@@ -48,7 +48,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing
         /// the resources monitored by the metric.
@@ -56,7 +56,7 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Qualifiers provided in a metric definition. Available dimensions vary by metric namespace.
         /// Each dimension takes the form of a key-value pair.
@@ -65,5 +65,6 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
+        
     }
 }

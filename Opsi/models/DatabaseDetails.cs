@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-
+        
         /// <value>
         /// The database name. The database name is unique within the tenancy.
         /// </value>
@@ -40,13 +40,13 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseName is required.")]
         [JsonProperty(PropertyName = "databaseName")]
         public string DatabaseName { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the database. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "databaseDisplayName")]
         public string DatabaseDisplayName { get; set; }
-
+        
         /// <value>
         /// Operations Insights internal representation of the database type.
         /// </value>
@@ -56,11 +56,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
         public string DatabaseType { get; set; }
-
+        
         /// <value>
         /// The version of the database.
         /// </value>
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
+        
     }
 }

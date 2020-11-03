@@ -26,35 +26,36 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "folderName")]
         public string FolderName { get; set; }
-
+        
         /// <value>
         /// Name of the entity for this metadata harvest.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
-
+        
         /// <value>
         /// Filter rules with regular expression to specify folder names for this metadata harvest.
         /// </value>
         [JsonProperty(PropertyName = "folderNameFilter")]
         public string FolderNameFilter { get; set; }
-
+        
         /// <value>
         /// Filter rules with regular expression to specify entity names for this metadata harvest.
         /// </value>
         [JsonProperty(PropertyName = "entityNameFilter")]
         public string EntityNameFilter { get; set; }
-
+        
         /// <value>
         /// Specify if sample data to be extracted as part of this harvest.
         /// </value>
         [JsonProperty(PropertyName = "isSampleDataExtracted")]
         public System.Nullable<bool> IsSampleDataExtracted { get; set; }
-
+        
         /// <value>
         /// Specify the sample data size in MB, specified as number of rows, for this metadata harvest.
         /// </value>
         [JsonProperty(PropertyName = "sampleDataSizeInMBs")]
         public System.Nullable<int> SampleDataSizeInMBs { get; set; }
+        
     }
 }

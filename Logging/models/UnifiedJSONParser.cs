@@ -34,8 +34,11 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "timeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TimeTypeEnum> TimeType { get; set; }
-
+        
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "JSON";
     }
 }

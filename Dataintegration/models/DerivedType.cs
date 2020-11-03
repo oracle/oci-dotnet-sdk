@@ -20,5 +20,8 @@ namespace Oci.DataintegrationService.Models
     /// </summary>
     public class DerivedType : BaseType
     {
-            }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DERIVED_TYPE";
+    }
 }

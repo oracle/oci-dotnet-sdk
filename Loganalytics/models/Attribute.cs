@@ -26,13 +26,13 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public System.Object DefaultValue { get; set; }
-
+        
         /// <value>
         /// dynamic value range reference attribute
         /// </value>
         [JsonProperty(PropertyName = "dynamicValueRangeRefAttr")]
         public string DynamicValueRangeRefAttr { get; set; }
-        ///
+                ///
         /// <value>
         /// maximum length
         /// </value>
@@ -68,13 +68,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "maximumLen")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MaximumLenEnum> MaximumLen { get; set; }
-
+        
         /// <value>
         /// name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// populated by
         /// </value>
@@ -92,7 +92,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "populatedBy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PopulatedByEnum> PopulatedBy { get; set; }
-        ///
+                ///
         /// <value>
         /// required in JSON
         /// </value>
@@ -110,19 +110,19 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "requiredInJSON")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RequiredInJSONEnum> RequiredInJSON { get; set; }
-
+        
         /// <value>
         /// schema column
         /// </value>
         [JsonProperty(PropertyName = "schemaColumn")]
         public string SchemaColumn { get; set; }
-
+        
         /// <value>
         /// is string exceed maximum length
         /// </value>
         [JsonProperty(PropertyName = "isStringExceedMaximumLength")]
         public System.Nullable<bool> IsStringExceedMaximumLength { get; set; }
-        ///
+                ///
         /// <value>
         /// usage senario
         /// </value>
@@ -158,7 +158,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "usageSenario")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UsageSenarioEnum> UsageSenario { get; set; }
-        ///
+                ///
         /// <value>
         /// value data type
         /// </value>
@@ -198,7 +198,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "valueDataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ValueDataTypeEnum> ValueDataType { get; set; }
-        ///
+                ///
         /// <value>
         /// value population priority
         /// </value>
@@ -218,5 +218,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "valuePopulationPriority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ValuePopulationPriorityEnum> ValuePopulationPriority { get; set; }
+        
     }
 }

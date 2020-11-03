@@ -52,7 +52,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "code")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CodeEnum> Code { get; set; }
-
+        
         /// <value>
         /// A human-readable error string.
         /// </value>
@@ -62,5 +62,6 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

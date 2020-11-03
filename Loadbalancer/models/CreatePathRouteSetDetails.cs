@@ -36,7 +36,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The set of path route rules.
         /// </value>
@@ -46,5 +46,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "PathRoutes is required.")]
         [JsonProperty(PropertyName = "pathRoutes")]
         public System.Collections.Generic.List<PathRoute> PathRoutes { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// Date and time the password was created, in the format defined by RFC3339.
         /// <br/>
@@ -38,7 +38,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The password's current state. After creating a password, make sure its `lifecycleState` changes from
         /// CREATING to ACTIVE before using it.
@@ -66,5 +66,6 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

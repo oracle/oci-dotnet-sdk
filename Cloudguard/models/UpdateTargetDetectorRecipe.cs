@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TargetDetectorRecipeId is required.")]
         [JsonProperty(PropertyName = "targetDetectorRecipeId")]
         public string TargetDetectorRecipeId { get; set; }
-
+        
         /// <value>
         /// Updates to be applied to Detector Rule associated with the target
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DetectorRules is required.")]
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeDetectorRuleDetails> DetectorRules { get; set; }
+        
     }
 }

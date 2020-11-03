@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ConnectionString is required.")]
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
-
+        
         /// <value>
         /// The Virtual Private Catalog (VPC) users that are used to access the Recovery Appliance.
         /// </value>
@@ -40,5 +40,8 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "VpcUsers is required.")]
         [JsonProperty(PropertyName = "vpcUsers")]
         public System.Collections.Generic.List<string> VpcUsers { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "RECOVERY_APPLIANCE";
     }
 }

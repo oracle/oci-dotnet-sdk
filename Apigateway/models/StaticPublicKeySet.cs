@@ -26,5 +26,8 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<StaticPublicKey> Keys { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "STATIC_KEYS";
     }
 }

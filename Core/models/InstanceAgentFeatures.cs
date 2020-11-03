@@ -27,12 +27,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isMonitoringSupported")]
         public System.Nullable<bool> IsMonitoringSupported { get; set; }
-
+        
         /// <value>
         /// Whether the agent running on the instance can run all the available management plugins
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isManagementSupported")]
         public System.Nullable<bool> IsManagementSupported { get; set; }
+        
     }
 }

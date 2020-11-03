@@ -32,5 +32,8 @@ namespace Oci.ResourcesearchService.Models
         [Required(ErrorMessage = "Query is required.")]
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "Structured";
     }
 }

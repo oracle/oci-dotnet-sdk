@@ -26,31 +26,31 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The display name of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The label associated with the classifier.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-
+        
         /// <value>
         /// The description of the classifier.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The list of issues.
         /// </value>
         [JsonProperty(PropertyName = "issueTypeList")]
         public System.Collections.Generic.List<IssueType> IssueTypeList { get; set; }
-        ///
+                ///
         /// <value>
         /// The scope of the service category or resource.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScopeEnum> Scope { get; set; }
-        ///
+                ///
         /// <value>
         /// The unit to use to measure the service category or resource.
         /// </value>
@@ -92,5 +92,6 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "unit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UnitEnum> Unit { get; set; }
+        
     }
 }

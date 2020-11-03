@@ -33,7 +33,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -41,65 +41,65 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data catalog's OCID.
         /// </value>
         [JsonProperty(PropertyName = "catalogId")]
         public string CatalogId { get; set; }
-
+        
         /// <value>
         /// URI to the job definition instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// Type of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
-
+        
         /// <value>
         /// Lifecycle state of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Specify if sample data to be extracted as part of this harvest.
         /// </value>
         [JsonProperty(PropertyName = "isSampleDataExtracted")]
         public System.Nullable<bool> IsSampleDataExtracted { get; set; }
-
+        
         /// <value>
         /// The date and time the job definition was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The key of the connection resource used in harvest, sampling, profiling jobs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectionKey")]
         public string ConnectionKey { get; set; }
-
+        
         /// <value>
         /// Time that the latest job execution started. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeLatestExecutionStarted")]
         public System.Nullable<System.DateTime> TimeLatestExecutionStarted { get; set; }
-
+        
         /// <value>
         /// Time that the latest job execution ended or null if it hasn't yet completed.
         /// An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
@@ -107,19 +107,20 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLatestExecutionEnded")]
         public System.Nullable<System.DateTime> TimeLatestExecutionEnded { get; set; }
-
+        
         /// <value>
         /// Status of the latest job execution, such as running, paused, or completed.
         /// </value>
         [JsonProperty(PropertyName = "jobExecutionState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobExecutionState> JobExecutionState { get; set; }
-
+        
         /// <value>
         /// Type of job schedule for the latest job executed.
         /// </value>
         [JsonProperty(PropertyName = "scheduleType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobScheduleType> ScheduleType { get; set; }
+        
     }
 }

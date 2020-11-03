@@ -27,16 +27,16 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the stack.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         [JsonProperty(PropertyName = "configSource")]
         public UpdateConfigSourceDetails ConfigSource { get; set; }
-
+        
         /// <value>
         /// Terraform variables associated with this resource.
         /// The maximum number of variables supported is 250.
@@ -45,13 +45,13 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.Dictionary<string, string> Variables { get; set; }
-
+        
         /// <value>
         /// The version of Terraform to use with the stack. Example: 0.12.x
         /// </value>
         [JsonProperty(PropertyName = "terraformVersion")]
         public string TerraformVersion { get; set; }
-
+        
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -59,7 +59,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -67,5 +67,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

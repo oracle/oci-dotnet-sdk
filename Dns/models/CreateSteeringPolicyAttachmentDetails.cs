@@ -34,7 +34,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "SteeringPolicyId is required.")]
         [JsonProperty(PropertyName = "steeringPolicyId")]
         public string SteeringPolicyId { get; set; }
-
+        
         /// <value>
         /// The OCID of the attached zone.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "ZoneId is required.")]
         [JsonProperty(PropertyName = "zoneId")]
         public string ZoneId { get; set; }
-
+        
         /// <value>
         /// The attached domain within the attached zone.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "DomainName is required.")]
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the steering policy attachment.
         /// Does not have to be unique and can be changed.
@@ -63,5 +63,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

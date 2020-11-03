@@ -27,7 +27,7 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The ID of the listing this package belongs to.
         /// </value>
@@ -37,7 +37,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "ListingId is required.")]
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// The package version.
         /// </value>
@@ -47,27 +47,17 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
-        /// <value>
-        /// The specified package's type.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PackageType is required.")]
-        [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<PackageTypeEnum> PackageType { get; set; }
-
+        
+        
         [JsonProperty(PropertyName = "pricing")]
         public PricingModel Pricing { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the package resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The date and time this listing package was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) 
         /// timestamp format.
@@ -76,6 +66,7 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 
     public class ListingPackageModelConverter : JsonConverter

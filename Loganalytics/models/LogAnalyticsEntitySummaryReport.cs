@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ActiveEntitiesCount is required.")]
         [JsonProperty(PropertyName = "activeEntitiesCount")]
         public System.Nullable<int> ActiveEntitiesCount { get; set; }
-
+        
         /// <value>
         /// Entities with log collection enabled
         /// 
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "EntitiesWithHasLogsCollectedCount is required.")]
         [JsonProperty(PropertyName = "entitiesWithHasLogsCollectedCount")]
         public System.Nullable<int> EntitiesWithHasLogsCollectedCount { get; set; }
-
+        
         /// <value>
         /// Entities with management agent
         /// 
@@ -54,7 +54,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "EntitiesWithManagementAgentCount is required.")]
         [JsonProperty(PropertyName = "entitiesWithManagementAgentCount")]
         public System.Nullable<int> EntitiesWithManagementAgentCount { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
@@ -64,5 +64,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

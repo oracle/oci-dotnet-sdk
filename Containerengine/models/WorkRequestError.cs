@@ -30,7 +30,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable error string.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the error occurred.
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

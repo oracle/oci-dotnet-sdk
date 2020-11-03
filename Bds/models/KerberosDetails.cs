@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "PrincipalName is required.")]
         [JsonProperty(PropertyName = "principalName")]
         public string PrincipalName { get; set; }
-
+        
         /// <value>
         /// Location of the keytab file
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "KeytabFile is required.")]
         [JsonProperty(PropertyName = "keytabFile")]
         public string KeytabFile { get; set; }
+        
     }
 }

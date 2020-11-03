@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -49,14 +49,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the volume backup. Does not have to be unique and it's changeable.
         /// Avoid entering confidential information.
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The date and time the volume backup will expire and be automatically deleted.
         /// Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). This parameter will always be present for backups that
@@ -79,7 +79,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "expirationTime")]
         public System.Nullable<System.DateTime> ExpirationTime { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -88,7 +88,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume backup.
         /// </value>
@@ -98,7 +98,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the Key Management key which is the master encryption key for the volume backup.
         /// For more information about the Key Management service and encryption keys, see
@@ -108,7 +108,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of a volume backup.
         /// </value>
@@ -138,14 +138,14 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The size of the volume, in GBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
-
+        
         /// <value>
         /// The size of the volume in MBs. The value must be a multiple of 1024.
         /// This field is deprecated. Please use sizeInGBs.
@@ -153,7 +153,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies whether the backup was created manually, or via scheduled backup policy.
         /// </value>
@@ -171,13 +171,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
-
+        
         /// <value>
         /// The OCID of the source volume backup.
         /// </value>
         [JsonProperty(PropertyName = "sourceVolumeBackupId")]
         public string SourceVolumeBackupId { get; set; }
-
+        
         /// <value>
         /// The date and time the volume backup was created. This is the time the actual point-in-time image
         /// of the volume data was taken. Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -189,14 +189,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the request to create the volume backup was received. Format defined by [RFC3339]https://tools.ietf.org/html/rfc3339.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRequestReceived")]
         public System.Nullable<System.DateTime> TimeRequestReceived { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of a volume backup.
         /// </value>
@@ -218,7 +218,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The size used by the backup, in GBs. It is typically smaller than sizeInGBs, depending on the space
         /// consumed on the volume and whether the backup is full or incremental.
@@ -226,7 +226,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInGBs")]
         public System.Nullable<long> UniqueSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The size used by the backup, in MBs. It is typically smaller than sizeInMBs, depending on the space
         /// consumed on the volume and whether the backup is full or incremental.
@@ -235,11 +235,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInMbs")]
         public System.Nullable<long> UniqueSizeInMbs { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume.
         /// </value>
         [JsonProperty(PropertyName = "volumeId")]
         public string VolumeId { get; set; }
+        
     }
 }

@@ -26,5 +26,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

@@ -25,11 +25,12 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "answerCondition")]
         public string AnswerCondition { get; set; }
-
+        
         /// <value>
         /// Keeps the answer only if the value is `true`.
         /// </value>
         [JsonProperty(PropertyName = "shouldKeep")]
         public System.Nullable<bool> ShouldKeep { get; set; }
+        
     }
 }

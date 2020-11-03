@@ -23,7 +23,7 @@ namespace Oci.DatacatalogService.Models
         
         [JsonProperty(PropertyName = "connectionDetail")]
         public UpdateConnectionDetails ConnectionDetail { get; set; }
-
+        
         /// <value>
         /// Information used in updating connection credentials.
         /// </value>
@@ -33,5 +33,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "CredentialPayload is required.")]
         [JsonProperty(PropertyName = "credentialPayload")]
         public System.Byte[] CredentialPayload { get; set; }
+        
     }
 }

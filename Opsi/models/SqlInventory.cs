@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TotalSqls is required.")]
         [JsonProperty(PropertyName = "totalSqls")]
         public System.Nullable<long> TotalSqls { get; set; }
-
+        
         /// <value>
         /// Total number of Databases. Example `400`
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TotalDatabases is required.")]
         [JsonProperty(PropertyName = "totalDatabases")]
         public System.Nullable<int> TotalDatabases { get; set; }
-
+        
         /// <value>
         /// Total number of sqls analyzed by the query. Example `120`
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlsAnalyzed is required.")]
         [JsonProperty(PropertyName = "sqlsAnalyzed")]
         public System.Nullable<long> SqlsAnalyzed { get; set; }
+        
     }
 }

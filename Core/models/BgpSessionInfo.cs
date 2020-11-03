@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "oracleInterfaceIp")]
         public string OracleInterfaceIp { get; set; }
-
+        
         /// <value>
         /// The IP address for the CPE end of the inside tunnel interface.
         /// <br/>
@@ -54,14 +54,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerInterfaceIp")]
         public string CustomerInterfaceIp { get; set; }
-
+        
         /// <value>
         /// The Oracle BGP ASN.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "oracleBgpAsn")]
         public string OracleBgpAsn { get; set; }
-
+        
         /// <value>
         /// If the tunnel's `routing` attribute is set to `BGP`
         /// (see {@link IPSecConnectionTunnel}), this ASN
@@ -74,7 +74,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public string CustomerBgpAsn { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the BGP session.
         /// 
@@ -94,5 +94,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bgpState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BgpStateEnum> BgpState { get; set; }
+        
     }
 }

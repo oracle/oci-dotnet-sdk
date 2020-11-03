@@ -23,8 +23,11 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "delimiter")]
         public string Delimiter { get; set; }
-
+        
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<string> Keys { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "TSV";
     }
 }

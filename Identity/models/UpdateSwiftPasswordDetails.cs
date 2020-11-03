@@ -24,5 +24,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

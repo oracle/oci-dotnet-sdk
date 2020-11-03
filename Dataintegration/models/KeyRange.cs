@@ -23,11 +23,12 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "key")]
         public ShapeField Key { get; set; }
-
+        
         /// <value>
         /// The key range.
         /// </value>
         [JsonProperty(PropertyName = "range")]
         public System.Collections.Generic.List<string> Range { get; set; }
+        
     }
 }

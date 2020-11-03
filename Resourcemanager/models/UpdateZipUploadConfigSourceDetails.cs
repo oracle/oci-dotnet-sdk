@@ -23,5 +23,8 @@ namespace Oci.ResourcemanagerService.Models
         
         [JsonProperty(PropertyName = "zipFileBase64Encoded")]
         public string ZipFileBase64Encoded { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceType")]
+        private readonly string configSourceType = "ZIP_UPLOAD";
     }
 }

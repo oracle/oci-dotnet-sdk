@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "chapSecret")]
         public string ChapSecret { get; set; }
-
+        
         /// <value>
         /// The volume's system-generated Challenge-Handshake-Authentication-Protocol (CHAP) user name. See [RFC 1994](https://tools.ietf.org/html/rfc1994) for more on CHAP.
         /// <br/>
@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "chapUsername")]
         public string ChapUsername { get; set; }
-
+        
         /// <value>
         /// The volume's iSCSI IP address.
         /// <br/>
@@ -49,7 +49,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Ipv4 is required.")]
         [JsonProperty(PropertyName = "ipv4")]
         public string Ipv4 { get; set; }
-
+        
         /// <value>
         /// The target volume's iSCSI Qualified Name in the format defined by [RFC 3720](https://tools.ietf.org/html/rfc3720#page-32).
         /// <br/>
@@ -61,7 +61,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Iqn is required.")]
         [JsonProperty(PropertyName = "iqn")]
         public string Iqn { get; set; }
-
+        
         /// <value>
         /// The volume's iSCSI port, usually port 860 or 3260.
         /// <br/>
@@ -73,5 +73,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
+        
+        [JsonProperty(PropertyName = "attachmentType")]
+        private readonly string attachmentType = "iscsi";
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Expression is required.")]
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// Time zone, by default UTC.
         /// </value>
@@ -40,5 +40,8 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeZone is required.")]
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "CRON";
     }
 }

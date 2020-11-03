@@ -32,5 +32,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
         public string Condition { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "logRule";
     }
 }

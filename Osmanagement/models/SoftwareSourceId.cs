@@ -26,7 +26,7 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// software source identifier
         /// </value>
@@ -36,5 +36,6 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
     }
 }

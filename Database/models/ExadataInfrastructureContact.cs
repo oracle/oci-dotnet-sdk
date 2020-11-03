@@ -30,13 +30,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The phone number for the Exadata Infrastructure contact.
         /// </value>
         [JsonProperty(PropertyName = "phoneNumber")]
         public string PhoneNumber { get; set; }
-
+        
         /// <value>
         /// The email for the Exadata Infrastructure contact.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Email is required.")]
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
-
+        
         /// <value>
         /// True, if this Exadata Infrastructure contact is a primary contact. False, if this Exadata Infrastructure is a secondary contact.
         /// </value>
@@ -56,5 +56,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "IsPrimary is required.")]
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
+        
     }
 }

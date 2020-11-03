@@ -33,13 +33,18 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
+        /// The target of the object lifecycle policy rule. The values of target can be either \"objects\",
+        /// \"multipart-uploads\" or \"previous-object-versions\". This field when declared as \"objects\" is used to specify
+        /// archive or delete rule for objects. This field when declared as \"multipart-uploads\" is used to specify
+        /// the abort (only) rule for uncommitted multipart-uploads. This field when declared as \"previous-object-versions\"
+        /// is used to specify archive or delete rule for previous versions of existing objects.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "target")]
         public string Target { get; set; }
-
+        
         /// <value>
         /// The action of the object lifecycle policy rule. Rules using the action 'ARCHIVE' move objects into the
         /// [Archive Storage tier](https://docs.cloud.oracle.com/Content/Archive/Concepts/archivestorageoverview.htm). Rules using the action
@@ -54,7 +59,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
         public string Action { get; set; }
-
+        
         /// <value>
         /// Specifies the age of objects to apply the rule to. The timeAmount is interpreted in units defined by the
         /// timeUnit parameter, and is calculated in relation to each object's Last-Modified time.
@@ -66,7 +71,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeAmount is required.")]
         [JsonProperty(PropertyName = "timeAmount")]
         public System.Nullable<long> TimeAmount { get; set; }
-        ///
+                ///
         /// <value>
         /// The unit that should be used to interpret timeAmount.  Days are defined as starting and ending at midnight UTC.
         /// Years are defined as 365.2425 days long and likewise round up to the next midnight UTC.
@@ -92,7 +97,7 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "timeUnit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TimeUnitEnum> TimeUnit { get; set; }
-
+        
         /// <value>
         /// A Boolean that determines whether this rule is currently enabled.
         /// </value>
@@ -102,8 +107,9 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         [JsonProperty(PropertyName = "objectNameFilter")]
         public ObjectNameFilter ObjectNameFilter { get; set; }
+        
     }
 }

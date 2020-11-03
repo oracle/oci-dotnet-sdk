@@ -30,7 +30,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Display name for saved search.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// String boolean (\"true\" or \"false\") to indicate Out Of the Box saved search.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "IsOobSavedSearch is required.")]
         [JsonProperty(PropertyName = "isOobSavedSearch")]
         public System.Nullable<bool> IsOobSavedSearch { get; set; }
-
+        
         /// <value>
         /// Id for application (LA, APM, etc.) that owners this saved search.  Each owner has a unique Id.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "ProviderId is required.")]
         [JsonProperty(PropertyName = "providerId")]
         public string ProviderId { get; set; }
-
+        
         /// <value>
         /// The ocid of the compartment that owns the saved search.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Description.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Json for internationalization.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Nls is required.")]
         [JsonProperty(PropertyName = "nls")]
         public System.Object Nls { get; set; }
-
+        
         /// <value>
         /// How to show the saved search.
         /// </value>
@@ -101,7 +101,7 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SavedSearchTypes> Type { get; set; }
-
+        
         /// <value>
         /// Json to contain options for UI.
         /// </value>
@@ -111,7 +111,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "UiConfig is required.")]
         [JsonProperty(PropertyName = "uiConfig")]
         public System.Object UiConfig { get; set; }
-
+        
         /// <value>
         /// Array of Json to contain options for source of data.
         /// </value>
@@ -121,7 +121,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DataConfig is required.")]
         [JsonProperty(PropertyName = "dataConfig")]
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
-
+        
         /// <value>
         /// Created by which user.
         /// </value>
@@ -131,7 +131,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "CreatedBy is required.")]
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
-
+        
         /// <value>
         /// Updated by which user.
         /// </value>
@@ -141,7 +141,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "UpdatedBy is required.")]
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }
-
+        
         /// <value>
         /// Screenshot.
         /// </value>
@@ -151,7 +151,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "ScreenImage is required.")]
         [JsonProperty(PropertyName = "screenImage")]
         public string ScreenImage { get; set; }
-
+        
         /// <value>
         /// Version of the metadata.
         /// </value>
@@ -161,7 +161,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "MetadataVersion is required.")]
         [JsonProperty(PropertyName = "metadataVersion")]
         public string MetadataVersion { get; set; }
-
+        
         /// <value>
         /// Template.
         /// </value>
@@ -171,7 +171,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "WidgetTemplate is required.")]
         [JsonProperty(PropertyName = "widgetTemplate")]
         public string WidgetTemplate { get; set; }
-
+        
         /// <value>
         /// View Model
         /// </value>
@@ -181,7 +181,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "WidgetVM is required.")]
         [JsonProperty(PropertyName = "widgetVM")]
         public string WidgetVM { get; set; }
-
+        
         /// <value>
         /// Current state of saved search.
         /// </value>
@@ -192,19 +192,20 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

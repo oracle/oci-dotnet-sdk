@@ -26,29 +26,30 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "aggregatorKey")]
         public string AggregatorKey { get; set; }
-
+        
         /// <value>
         /// Labels are keywords or labels that you can add to data assets, dataflows etc. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
-
+        
         /// <value>
         /// The registry version.
         /// </value>
         [JsonProperty(PropertyName = "registryVersion")]
         public System.Nullable<int> RegistryVersion { get; set; }
-
+        
         /// <value>
         /// The identifying key for the object.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Specifies whether this object is a favorite or not.
         /// </value>
         [JsonProperty(PropertyName = "isFavorite")]
         public System.Nullable<bool> IsFavorite { get; set; }
+        
     }
 }

@@ -29,5 +29,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyCount is required.")]
         [JsonProperty(PropertyName = "keyCount")]
         public System.Nullable<int> KeyCount { get; set; }
-
+        
         /// <value>
         /// The number of key versions in this vault that persist on a hardware security module (HSM), across all compartments, excluding key versions in a `DELETED` state.
         /// </value>
@@ -38,17 +38,18 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyVersionCount is required.")]
         [JsonProperty(PropertyName = "keyVersionCount")]
         public System.Nullable<int> KeyVersionCount { get; set; }
-
+        
         /// <value>
         /// The number of keys in this vault that persist on the server, across all compartments, excluding keys in a `DELETED` state.
         /// </value>
         [JsonProperty(PropertyName = "softwareKeyCount")]
         public System.Nullable<int> SoftwareKeyCount { get; set; }
-
+        
         /// <value>
         /// The number of key versions in this vault that persist on the server, across all compartments, excluding key versions in a `DELETED` state.
         /// </value>
         [JsonProperty(PropertyName = "softwareKeyVersionCount")]
         public System.Nullable<int> SoftwareKeyVersionCount { get; set; }
+        
     }
 }

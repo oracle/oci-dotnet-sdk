@@ -24,13 +24,13 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeObserved")]
         public System.Nullable<System.DateTime> TimeObserved { get; set; }
-
+        
         /// <value>
         /// The number of seconds the data covers.
         /// </value>
         [JsonProperty(PropertyName = "timeRangeInSeconds")]
         public System.Nullable<int> TimeRangeInSeconds { get; set; }
-        ///
+                ///
         /// <value>
         /// The specific Web Application Firewall feature that blocked the requests, such as JavaScript Challenge or Access Control.
         /// </value>
@@ -60,11 +60,12 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "wafFeature")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WafFeatureEnum> WafFeature { get; set; }
-
+        
         /// <value>
         /// The count of blocked requests.
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

@@ -44,7 +44,6 @@ namespace Oci.Examples
                 SearchDetails = new FreeTextSearchDetails
                 {
                     Text = text,
-                    Type = "FreeText",
                     MatchingContextType = SearchDetails.MatchingContextTypeEnum.Highlights
                 }
             };
@@ -63,8 +62,7 @@ namespace Oci.Examples
                 SearchDetails = new StructuredSearchDetails
                 {
                     MatchingContextType = SearchDetails.MatchingContextTypeEnum.Highlights,
-                    Query = query,
-                    Type = "Structured"
+                    Query = query
                 }
             };
             var searchResourcesResponse = await client.SearchResources(searchResourcesRequest);

@@ -31,7 +31,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A descriptive name for the ESXi host. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -39,7 +39,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the SDDC that the
         /// ESXi host belongs to.
@@ -51,7 +51,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "SddcId is required.")]
         [JsonProperty(PropertyName = "sddcId")]
         public string SddcId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that
         /// contains the SDDC.
@@ -59,7 +59,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// In terms of implementation, an ESXi host is a Compute instance that
         /// is configured with the chosen bundle of VMware software. The `computeInstanceId`
@@ -68,7 +68,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "computeInstanceId")]
         public string ComputeInstanceId { get; set; }
-
+        
         /// <value>
         /// The date and time the ESXi host was created, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -77,7 +77,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the ESXi host was updated, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -85,14 +85,14 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the ESXi host.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -105,7 +105,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -118,5 +118,6 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

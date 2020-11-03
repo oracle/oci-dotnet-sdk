@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "LogGroupId is required.")]
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// Internal identifier used to uniquely identify the agent upload request
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "UniqueId is required.")]
         [JsonProperty(PropertyName = "uniqueId")]
         public string UniqueId { get; set; }
-
+        
         /// <value>
         /// Metadata associated with the upload used during processing
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "MetaProperties is required.")]
         [JsonProperty(PropertyName = "metaProperties")]
         public string MetaProperties { get; set; }
-
+        
         /// <value>
         /// The time when this upload is created. An RFC3339 formatted datetime string
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

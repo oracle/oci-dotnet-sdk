@@ -45,17 +45,7 @@ namespace Oci.IdentityService.Models
             Default
         };
 
-        /// <value>
-        /// Specifies the type of validation: a static value (no validation) or a list. 
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ValidatorType is required.")]
-        [JsonProperty(PropertyName = "validatorType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ValidatorTypeEnum> ValidatorType { get; set; }
+        
     }
 
     public class BaseTagDefinitionValidatorModelConverter : JsonConverter

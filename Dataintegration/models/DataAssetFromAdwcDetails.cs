@@ -26,20 +26,23 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// Array of service names that are available for selection in the serviceName property.
         /// </value>
         [JsonProperty(PropertyName = "serviceNames")]
         public System.Collections.Generic.List<string> ServiceNames { get; set; }
-
+        
         /// <value>
         /// The Autonomous Data Warehouse driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public ConnectionFromAdwcDetails DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_ADWC_DATA_ASSET";
     }
 }

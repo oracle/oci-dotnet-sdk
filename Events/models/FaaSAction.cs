@@ -27,5 +27,8 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
+        
+        [JsonProperty(PropertyName = "actionType")]
+        private readonly string actionType = "FAAS";
     }
 }

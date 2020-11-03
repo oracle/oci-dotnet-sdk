@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-
+        
         /// <value>
         /// SQL Text
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlText is required.")]
         [JsonProperty(PropertyName = "sqlText")]
         public string SqlText { get; set; }
+        
     }
 }

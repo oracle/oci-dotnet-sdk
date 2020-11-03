@@ -27,18 +27,7 @@ namespace Oci.CoreService.Models
     public class DhcpOption 
     {
         
-        /// <value>
-        /// The specific DHCP option. Either `DomainNameServer`
-        /// (for {@link DhcpDnsOption}) or
-        /// `SearchDomain` (for {@link DhcpSearchDomainOption}).
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        
     }
 
     public class DhcpOptionModelConverter : JsonConverter

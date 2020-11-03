@@ -32,5 +32,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "PublicKey is required.")]
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }
+        
     }
 }

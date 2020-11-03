@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "baseImageId")]
         public string BaseImageId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the instance you want to use as the basis for the image.
         /// 
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Whether instances launched with this image can be used to create new images.
         /// For example, you cannot create an image of an Oracle Database instance.
@@ -59,7 +59,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CreateImageAllowed is required.")]
         [JsonProperty(PropertyName = "createImageAllowed")]
         public System.Nullable<bool> CreateImageAllowed { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the image. It does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -79,7 +79,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -88,7 +88,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the image.
         /// </value>
@@ -98,7 +98,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the configuration mode for launching virtual machine (VM) instances. The configuration modes are:
         /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for Oracle-provided images.
@@ -130,10 +130,10 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "launchMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
-
+        
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "PROVISIONING")]
@@ -157,7 +157,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The image's operating system.
         /// <br/>
@@ -169,7 +169,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "OperatingSystem is required.")]
         [JsonProperty(PropertyName = "operatingSystem")]
         public string OperatingSystem { get; set; }
-
+        
         /// <value>
         /// The image's operating system version.
         /// <br/>
@@ -181,10 +181,10 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "OperatingSystemVersion is required.")]
         [JsonProperty(PropertyName = "operatingSystemVersion")]
         public string OperatingSystemVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "agentFeatures")]
         public InstanceAgentFeatures AgentFeatures { get; set; }
-
+        
         /// <value>
         /// The boot volume size for an instance launched from this image, (1 MB = 1048576 bytes).
         /// Note this is not the same as the size of the image when it was exported or the actual size of the image.
@@ -193,7 +193,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
-
+        
         /// <value>
         /// The date and time the image was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -205,5 +205,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

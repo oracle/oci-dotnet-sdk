@@ -36,19 +36,7 @@ namespace Oci.KeymanagementService.Models
             PreAuthenticatedRequestUri
         };
 
-        /// <value>
-        /// 'Backup location destination:
-        /// BUCKET - Uploading or downloading backup via object store bucket
-        /// PRE_AUTHENTICATED_REQUEST_URI - Uploading or downloading backup via a PreAuthenticated object store URI'
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Destination is required.")]
-        [JsonProperty(PropertyName = "destination")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<DestinationEnum> Destination { get; set; }
+        
     }
 
     public class BackupLocationModelConverter : JsonConverter

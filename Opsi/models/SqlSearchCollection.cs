@@ -28,14 +28,14 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <value>
         /// SQL Statement Text
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sqlText")]
         public string SqlText { get; set; }
-
+        
         /// <value>
         /// The start timestamp that was passed into the request.
         /// </value>
@@ -45,7 +45,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -55,7 +55,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-
+        
         /// <value>
         /// List of Databases executing the sql.
         /// </value>
@@ -65,5 +65,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<SqlSearchSummary> Items { get; set; }
+        
     }
 }

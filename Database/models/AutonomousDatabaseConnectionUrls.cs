@@ -28,17 +28,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "sqlDevWebUrl")]
         public string SqlDevWebUrl { get; set; }
-
+        
         /// <value>
         /// Oracle Application Express (APEX) URL.
         /// </value>
         [JsonProperty(PropertyName = "apexUrl")]
         public string ApexUrl { get; set; }
-
+        
         /// <value>
         /// Oracle Machine Learning user management URL.
         /// </value>
         [JsonProperty(PropertyName = "machineLearningUserManagementUrl")]
         public string MachineLearningUserManagementUrl { get; set; }
+        
     }
 }

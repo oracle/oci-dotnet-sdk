@@ -31,7 +31,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "listType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConfigurationListItemType> ListType { get; set; }
-
+        
         /// <value>
         /// type of the managed list
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ManagedListType is required.")]
         [JsonProperty(PropertyName = "managedListType")]
         public string ManagedListType { get; set; }
-
+        
         /// <value>
         /// configuration value
         /// </value>
@@ -51,5 +51,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

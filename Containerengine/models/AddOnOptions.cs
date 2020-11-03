@@ -26,11 +26,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "isKubernetesDashboardEnabled")]
         public System.Nullable<bool> IsKubernetesDashboardEnabled { get; set; }
-
+        
         /// <value>
         /// Whether or not to enable the Tiller add-on.
         /// </value>
         [JsonProperty(PropertyName = "isTillerEnabled")]
         public System.Nullable<bool> IsTillerEnabled { get; set; }
+        
     }
 }

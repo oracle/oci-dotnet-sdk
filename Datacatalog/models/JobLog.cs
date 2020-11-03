@@ -31,56 +31,57 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The unique key of the parent job execution for which the log resource was created.
         /// </value>
         [JsonProperty(PropertyName = "jobExecutionKey")]
         public string JobExecutionKey { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the log record for this job. Usually the executor of the job instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
         public string CreatedById { get; set; }
-
+        
         /// <value>
         /// OCID of the user who created the log record for this job. Usually the executor of the job instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// Job log update time. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The date and time the job log was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Severity level for this log.
         /// </value>
         [JsonProperty(PropertyName = "severity")]
         public string Severity { get; set; }
-
+        
         /// <value>
         /// Message for this job log.
         /// </value>
         [JsonProperty(PropertyName = "logMessage")]
         public string LogMessage { get; set; }
-
+        
         /// <value>
         /// URI to the job log instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
     }
 }

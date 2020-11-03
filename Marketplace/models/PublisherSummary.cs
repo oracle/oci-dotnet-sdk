@@ -26,17 +26,18 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name of the publisher.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A description of the publisher.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

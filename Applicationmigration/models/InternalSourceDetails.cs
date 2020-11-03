@@ -31,5 +31,8 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "AccountName is required.")]
         [JsonProperty(PropertyName = "accountName")]
         public string AccountName { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "INTERNAL_COMPUTE";
     }
 }

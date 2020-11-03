@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bandwidthInMbps")]
         public System.Nullable<int> BandwidthInMbps { get; set; }
-
+        
         /// <value>
         /// The name of the bandwidth shape.
         /// <br/>
@@ -41,5 +41,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

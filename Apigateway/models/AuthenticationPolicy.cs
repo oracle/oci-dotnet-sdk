@@ -29,7 +29,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAnonymousAccessAllowed")]
         public System.Nullable<bool> IsAnonymousAccessAllowed { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of the authentication policy to use.
         /// </value>
@@ -41,16 +41,7 @@ namespace Oci.ApigatewayService.Models
             JwtAuthentication
         };
 
-        /// <value>
-        /// Type of the authentication policy to use.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 
     public class AuthenticationPolicyModelConverter : JsonConverter

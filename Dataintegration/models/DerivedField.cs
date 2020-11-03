@@ -23,17 +23,20 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "expr")]
         public Expression Expr { get; set; }
-
+        
         /// <value>
         /// The type of the field.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Labels are keywords or labels that you can add to data assets, dataflows and so on. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DERIVED_FIELD";
     }
 }

@@ -26,36 +26,37 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "canUseConsolePassword")]
         public System.Nullable<bool> CanUseConsolePassword { get; set; }
-
+        
         /// <value>
         /// Indicates if the user can use API keys.
         /// </value>
         [JsonProperty(PropertyName = "canUseApiKeys")]
         public System.Nullable<bool> CanUseApiKeys { get; set; }
-
+        
         /// <value>
         /// Indicates if the user can use SWIFT passwords / auth tokens.
         /// </value>
         [JsonProperty(PropertyName = "canUseAuthTokens")]
         public System.Nullable<bool> CanUseAuthTokens { get; set; }
-
+        
         /// <value>
         /// Indicates if the user can use SMTP passwords.
         /// </value>
         [JsonProperty(PropertyName = "canUseSmtpCredentials")]
         public System.Nullable<bool> CanUseSmtpCredentials { get; set; }
-
+        
         /// <value>
         /// Indicates if the user can use SigV4 symmetric keys.
         /// </value>
         [JsonProperty(PropertyName = "canUseCustomerSecretKeys")]
         public System.Nullable<bool> CanUseCustomerSecretKeys { get; set; }
-
+        
         /// <value>
         /// Indicates if the user can use OAuth2 credentials and tokens.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "canUseOAuth2ClientCredentials")]
         public System.Nullable<bool> CanUseOAuth2ClientCredentials { get; set; }
+        
     }
 }

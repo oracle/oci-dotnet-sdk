@@ -20,5 +20,8 @@ namespace Oci.DataintegrationService.Models
     /// </summary>
     public class FlowPort : TypedObject
     {
-            }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "FLOW_PORT";
+    }
 }

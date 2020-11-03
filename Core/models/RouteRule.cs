@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// Conceptually, this is the range of IP addresses used for matching when routing
         /// traffic. Required if you provide a `destinationType`.
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of destination for the rule. Required if you provide a `destination`.
         /// <br/>
@@ -79,7 +79,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "destinationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
-
+        
         /// <value>
         /// The OCID for the route rule's target. For information about the type of
         /// targets you can specify, see
@@ -92,12 +92,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "NetworkEntityId is required.")]
         [JsonProperty(PropertyName = "networkEntityId")]
         public string NetworkEntityId { get; set; }
-
+        
         /// <value>
         /// An optional description of your choice for the rule.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

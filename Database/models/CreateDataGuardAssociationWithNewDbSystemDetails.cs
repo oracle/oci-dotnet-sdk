@@ -29,13 +29,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The name of the availability domain that the standby database DB system will be located in. For example- \"Uocm:PHX-AD-1\".
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The virtual machine DB system shape to launch for the standby database in the Data Guard association. The shape determines the number of CPU cores and the amount of memory available for the DB system.
         /// Only virtual machine shapes are valid options. If you do not supply this parameter, the default shape is the shape of the primary DB system.
@@ -45,7 +45,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the DB system is associated with.
         /// **Subnet Restrictions:**
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -67,18 +67,21 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that the backup network of this DB system belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm). Applicable only to Exadata systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupNetworkNsgIds")]
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
-
+        
         /// <value>
         /// The hostname for the DB node.
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+        
+        [JsonProperty(PropertyName = "creationType")]
+        private readonly string creationType = "NewDbSystem";
     }
 }

@@ -26,5 +26,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public System.Nullable<bool> DefaultValue { get; set; }
+        
+        [JsonProperty(PropertyName = "descriptorType")]
+        private readonly string descriptorType = "boolean";
     }
 }

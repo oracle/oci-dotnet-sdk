@@ -58,7 +58,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "resourceAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResourceActionEnum> ResourceAction { get; set; }
-
+        
         /// <value>
         /// The resource type that the work request affects.
         /// </value>
@@ -68,7 +68,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-
+        
         /// <value>
         /// The identifier of the Digital Assistant instance that is the subject of the request.
         /// </value>
@@ -78,7 +78,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "ResourceId is required.")]
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the work request. The `SUCCEEDED`, `FAILED`, AND `CANCELED` states
         /// correspond to the action being performed.
@@ -112,7 +112,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// Short message providing more detail for the current status. For example, if an operation fails
         /// this may include information about the reason for the failure and a possible resolution.
@@ -120,11 +120,12 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "statusMessage")]
         public string StatusMessage { get; set; }
-
+        
         /// <value>
         /// The URI path that the user can do a GET on to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "resourceUri")]
         public string ResourceUri { get; set; }
+        
     }
 }

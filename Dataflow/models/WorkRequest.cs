@@ -32,7 +32,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of a work request.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The operation related to this work request.
         /// 
@@ -55,7 +55,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "operation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestOperation> Operation { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// 
@@ -66,7 +66,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// 
@@ -77,7 +77,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// The status of the work request.
         /// 
@@ -89,7 +89,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -97,7 +97,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the request was started, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -105,7 +105,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the object was finished, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
@@ -113,5 +113,6 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

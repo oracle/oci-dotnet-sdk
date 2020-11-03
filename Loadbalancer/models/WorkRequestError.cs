@@ -36,7 +36,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "errorCode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ErrorCodeEnum> ErrorCode { get; set; }
-
+        
         /// <value>
         /// A human-readable error string.
         /// </value>
@@ -46,5 +46,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

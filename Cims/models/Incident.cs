@@ -30,36 +30,37 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "contactList")]
         public ContactList ContactList { get; set; }
-
+        
         [JsonProperty(PropertyName = "tenancyInformation")]
         public TenancyInformation TenancyInformation { get; set; }
-
+        
         [JsonProperty(PropertyName = "ticket")]
         public Ticket Ticket { get; set; }
-
+        
         [JsonProperty(PropertyName = "incidentType")]
         public IncidentType IncidentType { get; set; }
-
+        
         /// <value>
         /// The kind of support ticket, such as a technical support request.
         /// </value>
         [JsonProperty(PropertyName = "problemType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
-
+        
         /// <value>
         /// The incident referrer. This value is often the URL that the customer used when creating the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "referrer")]
         public string Referrer { get; set; }
+        
     }
 }

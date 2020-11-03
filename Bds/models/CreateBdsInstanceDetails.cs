@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Name of the BDS instance
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Version of the Hadoop distribution
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "clusterVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BdsInstance.ClusterVersionEnum> ClusterVersion { get; set; }
-
+        
         /// <value>
         /// The SSH public key used to authenticate the cluster connection.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterPublicKey is required.")]
         [JsonProperty(PropertyName = "clusterPublicKey")]
         public string ClusterPublicKey { get; set; }
-
+        
         /// <value>
         /// Base-64 encoded password for Cloudera Manager admin user
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether or not the cluster is HA
         /// </value>
@@ -81,7 +81,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IsHighAvailability is required.")]
         [JsonProperty(PropertyName = "isHighAvailability")]
         public System.Nullable<bool> IsHighAvailability { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether or not the cluster should be setup as secure.
         /// </value>
@@ -91,13 +91,13 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IsSecure is required.")]
         [JsonProperty(PropertyName = "isSecure")]
         public System.Nullable<bool> IsSecure { get; set; }
-
+        
         /// <value>
         /// Additional configuration of customer's network.
         /// </value>
         [JsonProperty(PropertyName = "networkConfig")]
         public NetworkConfig NetworkConfig { get; set; }
-
+        
         /// <value>
         /// The list of nodes in the BDS instance
         /// </value>
@@ -107,19 +107,20 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Nodes is required.")]
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<CreateNodeDetails> Nodes { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

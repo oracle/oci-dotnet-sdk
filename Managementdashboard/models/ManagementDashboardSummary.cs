@@ -30,7 +30,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DashboardId is required.")]
         [JsonProperty(PropertyName = "dashboardId")]
         public string DashboardId { get; set; }
-
+        
         /// <value>
         /// Display name for dashboard.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Dashboard's description.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The ocid of the compartment that owns the dashboard.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// String boolean (\"true\" or \"false\").  OOB (Out of the Box) dashboards are only provided by Oracle.  They cannot be modified by non-Oracle.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "IsOobDashboard is required.")]
         [JsonProperty(PropertyName = "isOobDashboard")]
         public System.Nullable<bool> IsOobDashboard { get; set; }
-
+        
         /// <value>
         /// Created by which user.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "CreatedBy is required.")]
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
-
+        
         /// <value>
         /// Time created.
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Updated by which user.
         /// </value>
@@ -100,7 +100,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "UpdatedBy is required.")]
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }
-
+        
         /// <value>
         /// Time updated.
         /// </value>
@@ -110,7 +110,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Version of the metadata.
         /// </value>
@@ -120,7 +120,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "MetadataVersion is required.")]
         [JsonProperty(PropertyName = "metadataVersion")]
         public string MetadataVersion { get; set; }
-
+        
         /// <value>
         /// screen image.
         /// </value>
@@ -130,7 +130,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "ScreenImage is required.")]
         [JsonProperty(PropertyName = "screenImage")]
         public string ScreenImage { get; set; }
-
+        
         /// <value>
         /// Json for internationalization.
         /// </value>
@@ -140,7 +140,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Nls is required.")]
         [JsonProperty(PropertyName = "nls")]
         public System.Object Nls { get; set; }
-
+        
         /// <value>
         /// NORMAL means single dashboard, SET means dashboard set.
         /// </value>
@@ -150,7 +150,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// State of dashboard.
         /// </value>
@@ -161,7 +161,7 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
@@ -172,7 +172,7 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
@@ -183,5 +183,6 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

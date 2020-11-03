@@ -30,5 +30,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeGroupBackupId is required.")]
         [JsonProperty(PropertyName = "volumeGroupBackupId")]
         public string VolumeGroupBackupId { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "volumeGroupBackupId";
     }
 }

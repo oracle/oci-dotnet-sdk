@@ -30,14 +30,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "principalName")]
         public string PrincipalName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the principal.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "principalId")]
         public string PrincipalId { get; set; }
-
+        
         /// <value>
         /// The type of authentication used.
         /// <br/>
@@ -45,14 +45,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "authType")]
         public string AuthType { get; set; }
-
+        
         /// <value>
         /// The name of the user or service. This value is the friendly name associated with `callerId`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "callerName")]
         public string CallerName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the caller. The caller that made a 
         /// request on behalf of the prinicpal.
@@ -60,14 +60,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "callerId")]
         public string CallerId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the tenant.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tenantId")]
         public string TenantId { get; set; }
-
+        
         /// <value>
         /// The IP address of the source of the request.
         /// <br/>
@@ -75,7 +75,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The credential ID of the user. This value is extracted from the HTTP 'Authorization' request
         /// header. It consists of the tenantId, userId, and user fingerprint, all delimited by a slash (/).
@@ -83,7 +83,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "credentials")]
         public string Credentials { get; set; }
-
+        
         /// <value>
         /// The user agent of the client that made the request.
         /// <br/>
@@ -91,12 +91,13 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "userAgent")]
         public string UserAgent { get; set; }
-
+        
         /// <value>
         /// This value identifies any Console session associated with this request.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "consoleSessionId")]
         public string ConsoleSessionId { get; set; }
+        
     }
 }

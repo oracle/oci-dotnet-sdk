@@ -26,5 +26,6 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "groupList")]
         public System.Collections.Generic.List<string> GroupList { get; set; }
+        
     }
 }

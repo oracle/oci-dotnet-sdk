@@ -32,5 +32,8 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "BackupId is required.")]
         [JsonProperty(PropertyName = "backupId")]
         public string BackupId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "BACKUP";
     }
 }

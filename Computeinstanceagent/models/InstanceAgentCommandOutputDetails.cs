@@ -37,18 +37,7 @@ namespace Oci.ComputeinstanceagentService.Models
             ObjectStorageTuple
         };
 
-        /// <value>
-        /// The output type of the command. Use `OBJECT_STORAGE_URI` when specifying the Object Storage URL.
-        /// Use `OBJECT_STORAGE_TUPLE` when specifying the namespace, bucket name, and object name.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OutputType is required.")]
-        [JsonProperty(PropertyName = "outputType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<OutputTypeEnum> OutputType { get; set; }
+        
     }
 
     public class InstanceAgentCommandOutputDetailsModelConverter : JsonConverter

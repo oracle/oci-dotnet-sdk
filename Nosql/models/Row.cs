@@ -26,7 +26,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public System.Collections.Generic.Dictionary<string, System.Object> Value { get; set; }
-
+        
         /// <value>
         /// The expiration time of the row. A zero value indicates that
         /// the row does not expire. An RFC3339 formatted datetime
@@ -35,8 +35,9 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfExpiration")]
         public System.Nullable<System.DateTime> TimeOfExpiration { get; set; }
-
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
+        
     }
 }

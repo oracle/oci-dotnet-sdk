@@ -28,12 +28,15 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataItems")]
         public System.Collections.Generic.List<System.Object> DataItems { get; set; }
-
+        
         /// <value>
         /// Data points filtered by query string. May not contain data points for each timestamp due to filtering.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "filteredDataItems")]
         public System.Collections.Generic.List<System.Object> FilteredDataItems { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "CHART_DATA_COLUMN";
     }
 }

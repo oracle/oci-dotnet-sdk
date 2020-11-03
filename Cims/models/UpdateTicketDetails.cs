@@ -33,5 +33,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Resource is required.")]
         [JsonProperty(PropertyName = "resource")]
         public System.Object Resource { get; set; }
+        
     }
 }

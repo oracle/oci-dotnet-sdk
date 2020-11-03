@@ -26,23 +26,24 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// Name of the custom property
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The custom property value
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// Namespace name of the custom property
         /// </value>
         [JsonProperty(PropertyName = "namespaceName")]
         public string NamespaceName { get; set; }
+        
     }
 }

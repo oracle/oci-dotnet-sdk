@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the reporting database.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-        ///
+                ///
         /// <value>
         /// The role of the reporting database in this Data Guard association.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Data Guard association.
         /// </value>
@@ -92,14 +92,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState, if available.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system containing the associated
         /// peer database.
@@ -111,26 +111,26 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "PeerDbSystemId is required.")]
         [JsonProperty(PropertyName = "peerDbSystemId")]
         public string PeerDbSystemId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Home containing the associated peer database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerDbHomeId")]
         public string PeerDbHomeId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the associated peer database.
         /// </value>
         [JsonProperty(PropertyName = "peerDatabaseId")]
         public string PeerDatabaseId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer database's Data Guard association.
         /// </value>
         [JsonProperty(PropertyName = "peerDataGuardAssociationId")]
         public string PeerDataGuardAssociationId { get; set; }
-        ///
+                ///
         /// <value>
         /// The role of the peer database in this Data Guard association.
         /// </value>
@@ -154,7 +154,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "peerRole")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeerRoleEnum> PeerRole { get; set; }
-
+        
         /// <value>
         /// The lag time between updates to the primary database and application of the redo data on the standby database,
         /// as computed by the reporting database.
@@ -163,7 +163,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "applyLag")]
         public string ApplyLag { get; set; }
-
+        
         /// <value>
         /// The rate at which redo logs are synced between the associated databases.
         /// <br/>
@@ -171,7 +171,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "applyRate")]
         public string ApplyRate { get; set; }
-        ///
+                ///
         /// <value>
         /// The protection mode of this Data Guard association. For more information, see
         /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
@@ -201,7 +201,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
-        ///
+                ///
         /// <value>
         /// The redo transport type used by this Data Guard association.  For more information, see
         /// [Redo Transport Services](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-redo-transport-services.htm#SBYDB00400)
@@ -227,11 +227,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "transportType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TransportTypeEnum> TransportType { get; set; }
-
+        
         /// <value>
         /// The date and time the Data Guard association was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

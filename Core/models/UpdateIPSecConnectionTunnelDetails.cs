@@ -26,7 +26,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of routing to use for this tunnel (either BGP dynamic routing or static routing).
         /// 
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "routing")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoutingEnum> Routing { get; set; }
-        ///
+                ///
         /// <value>
         /// Internet Key Exchange protocol version.
         /// 
@@ -66,12 +66,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "ikeVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IkeVersionEnum> IkeVersion { get; set; }
-
+        
         /// <value>
         /// Information for establishing a BGP session for the IPSec tunnel.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpSessionConfig")]
         public UpdateIPSecTunnelBgpSessionDetails BgpSessionConfig { get; set; }
+        
     }
 }

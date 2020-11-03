@@ -30,7 +30,7 @@ namespace Oci.LoggingsearchService.Models
         [Required(ErrorMessage = "FieldName is required.")]
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-        ///
+                ///
         /// <value>
         /// Field type -
         /// * `STRING`: A sequence of characters.
@@ -66,5 +66,6 @@ namespace Oci.LoggingsearchService.Models
         [JsonProperty(PropertyName = "fieldType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FieldTypeEnum> FieldType { get; set; }
+        
     }
 }

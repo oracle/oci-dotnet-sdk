@@ -26,38 +26,39 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Object Id { get; set; }
-
+        
         [JsonProperty(PropertyName = "parser")]
         public LogAnalyticsParser Parser { get; set; }
-
+        
         /// <value>
         /// agent version
         /// </value>
         [JsonProperty(PropertyName = "agentVersion")]
         public string AgentVersion { get; set; }
-
+        
         /// <value>
         /// is in use flag
         /// </value>
         [JsonProperty(PropertyName = "isInUse")]
         public System.Nullable<long> IsInUse { get; set; }
-
+        
         /// <value>
         /// operating system
         /// </value>
         [JsonProperty(PropertyName = "operatingSystem")]
         public string OperatingSystem { get; set; }
-
+        
         /// <value>
         /// parser Id
         /// </value>
         [JsonProperty(PropertyName = "parserId")]
         public System.Nullable<long> ParserId { get; set; }
-
+        
         /// <value>
         /// version
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
     }
 }

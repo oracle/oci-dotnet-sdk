@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-        ///
+                ///
         /// <value>
         /// Defines the type of resource metric (CPU, STORAGE)
         /// 
@@ -64,7 +64,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "resourceMetric")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResourceMetricEnum> ResourceMetric { get; set; }
-
+        
         /// <value>
         /// Displays usage unit ( CORES, GB)
         /// 
@@ -76,7 +76,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "usageUnit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UsageUnit> UsageUnit { get; set; }
-
+        
         /// <value>
         /// Collection of Resource Statistics items
         /// </value>
@@ -86,5 +86,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResourceStatisticsAggregation> Items { get; set; }
+        
     }
 }

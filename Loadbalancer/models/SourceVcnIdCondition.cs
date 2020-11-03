@@ -38,5 +38,8 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "AttributeValue is required.")]
         [JsonProperty(PropertyName = "attributeValue")]
         public string AttributeValue { get; set; }
+        
+        [JsonProperty(PropertyName = "attributeName")]
+        private readonly string attributeName = "SOURCE_VCN_ID";
     }
 }

@@ -26,5 +26,8 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "MYSQL_CONNECTION";
     }
 }

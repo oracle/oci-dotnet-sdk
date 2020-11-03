@@ -27,30 +27,31 @@ namespace Oci.ApplicationmigrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The type of application
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MigrationTypes> Type { get; set; }
-
+        
         /// <value>
         /// Unique identifier (OCID) for the Source to which the application belongs
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
-
+        
         /// <value>
         /// The version of the application server
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// The current application running state
         /// </value>
         [JsonProperty(PropertyName = "state")]
         public string State { get; set; }
+        
     }
 }

@@ -37,7 +37,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Summary is required.")]
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
-
+        
         /// <value>
         /// Timestamp for this alarm history entry. Format defined by RFC3339.
         /// <br/>
@@ -49,7 +49,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// Timestamp for the transition of the alarm state. For example, the time when the alarm transitioned from OK to Firing.
         /// Available for state transition entries only. Note: A three-minute lag for this value accounts for any late-arriving metrics.
@@ -58,5 +58,6 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "timestampTriggered")]
         public System.Nullable<System.DateTime> TimestampTriggered { get; set; }
+        
     }
 }

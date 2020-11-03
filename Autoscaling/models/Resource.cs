@@ -25,16 +25,7 @@ namespace Oci.AutoscalingService.Models
     public class Resource 
     {
         
-        /// <value>
-        /// The type of resource.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource that is managed by the autoscaling configuration.
         /// 
@@ -45,6 +36,7 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
     }
 
     public class ResourceModelConverter : JsonConverter

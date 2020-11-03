@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "LoadBalancerId is required.")]
         [JsonProperty(PropertyName = "loadBalancerId")]
         public string LoadBalancerId { get; set; }
-
+        
         /// <value>
         /// The name of the backend set on the load balancer to add instances to.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "BackendSetName is required.")]
         [JsonProperty(PropertyName = "backendSetName")]
         public string BackendSetName { get; set; }
-
+        
         /// <value>
         /// The port value to use when creating the backend set.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// Indicates which VNIC on each instance in the pool should be used to associate with the load balancer. Possible values are \"PrimaryVnic\" or the displayName of one of the secondary VNICs on the instance configuration that is associated with the instance pool.
         /// </value>
@@ -61,5 +61,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VnicSelection is required.")]
         [JsonProperty(PropertyName = "vnicSelection")]
         public string VnicSelection { get; set; }
+        
     }
 }

@@ -26,35 +26,36 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// parameter internal name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// is mandatory flag
         /// </value>
         [JsonProperty(PropertyName = "isMandatory")]
         public System.Nullable<bool> IsMandatory { get; set; }
-
+        
         /// <value>
         /// is repeatable flag
         /// </value>
         [JsonProperty(PropertyName = "isRepeatable")]
         public System.Nullable<bool> IsRepeatable { get; set; }
-
+        
         /// <value>
         /// plugin internal name
         /// </value>
         [JsonProperty(PropertyName = "pluginName")]
         public string PluginName { get; set; }
-
+        
         /// <value>
         /// parameter type
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
+        
     }
 }

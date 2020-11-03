@@ -30,5 +30,6 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Validations is required.")]
         [JsonProperty(PropertyName = "validations")]
         public System.Collections.Generic.List<ApiValidationDetails> Validations { get; set; }
+        
     }
 }

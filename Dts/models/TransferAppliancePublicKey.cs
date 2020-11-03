@@ -21,5 +21,6 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }
+        
     }
 }

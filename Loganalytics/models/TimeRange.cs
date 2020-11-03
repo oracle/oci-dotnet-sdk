@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeStart is required.")]
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
-
+        
         /// <value>
         /// Time for query to stop matching results to. End Time must be greater than or equal to start time otherwise it will result in error.
         /// 
@@ -43,12 +43,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeEnd is required.")]
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
-
+        
         /// <value>
         /// Time zone for query.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
+        
     }
 }

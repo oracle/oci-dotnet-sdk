@@ -30,7 +30,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Partition is required.")]
         [JsonProperty(PropertyName = "partition")]
         public string Partition { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of cursor, which determines the starting point from which the stream will be consumed:
         /// <br/>
@@ -72,18 +72,19 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The offset to consume from if the cursor type is `AT_OFFSET` or `AFTER_OFFSET`.
         /// </value>
         [JsonProperty(PropertyName = "offset")]
         public System.Nullable<long> Offset { get; set; }
-
+        
         /// <value>
         /// The time to consume from if the cursor type is `AT_TIME`, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public System.Nullable<System.DateTime> Time { get; set; }
+        
     }
 }

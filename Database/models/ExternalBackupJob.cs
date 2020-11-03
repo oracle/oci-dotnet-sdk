@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "BackupId is required.")]
         [JsonProperty(PropertyName = "backupId")]
         public string BackupId { get; set; }
-
+        
         /// <value>
         /// An indicator for the provisioning state of the resource. If `TRUE`, the resource is still being provisioned.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Provisioning is required.")]
         [JsonProperty(PropertyName = "provisioning")]
         public System.Nullable<bool> Provisioning { get; set; }
-
+        
         /// <value>
         /// The Swift path to use as a destination for the standalone backup.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SwiftPath is required.")]
         [JsonProperty(PropertyName = "swiftPath")]
         public string SwiftPath { get; set; }
-
+        
         /// <value>
         /// The name of the Swift compartment bucket where the backup should be stored.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-
+        
         /// <value>
         /// The tag for RMAN to apply to the backup.
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Tag is required.")]
         [JsonProperty(PropertyName = "tag")]
         public string Tag { get; set; }
-
+        
         /// <value>
         /// The Swift user name to use for transferring the standalone backup to the designated Swift compartment bucket.
         /// </value>
@@ -81,7 +81,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "UserName is required.")]
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
-
+        
         /// <value>
         /// The auth token to use for access to the Swift compartment bucket that will store the standalone backup.
         /// For information about auth tokens, see [Working with Auth Tokens](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm#two).
@@ -89,5 +89,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "swiftPassword")]
         public string SwiftPassword { get; set; }
+        
     }
 }

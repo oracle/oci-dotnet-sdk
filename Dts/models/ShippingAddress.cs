@@ -21,38 +21,39 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "addressee")]
         public string Addressee { get; set; }
-
+        
         [JsonProperty(PropertyName = "careOf")]
         public string CareOf { get; set; }
-
+        
         [JsonProperty(PropertyName = "address1")]
         public string Address1 { get; set; }
-
+        
         [JsonProperty(PropertyName = "address2")]
         public string Address2 { get; set; }
-
+        
         [JsonProperty(PropertyName = "address3")]
         public string Address3 { get; set; }
-
+        
         [JsonProperty(PropertyName = "address4")]
         public string Address4 { get; set; }
-
+        
         [JsonProperty(PropertyName = "cityOrLocality")]
         public string CityOrLocality { get; set; }
-
+        
         [JsonProperty(PropertyName = "stateOrRegion")]
         public string StateOrRegion { get; set; }
-
+        
         [JsonProperty(PropertyName = "zipcode")]
         public string Zipcode { get; set; }
-
+        
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
+        
         [JsonProperty(PropertyName = "phoneNumber")]
         public string PhoneNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
+        
     }
 }

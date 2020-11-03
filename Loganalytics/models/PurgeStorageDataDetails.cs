@@ -31,13 +31,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// if true, purge child compartments data
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
-
+        
         /// <value>
         /// the end of the time interval
         /// </value>
@@ -47,18 +47,19 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeDataEnded is required.")]
         [JsonProperty(PropertyName = "timeDataEnded")]
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
-
+        
         /// <value>
         /// the solr data filter query, '*' means all
         /// </value>
         [JsonProperty(PropertyName = "purgeQueryString")]
         public string PurgeQueryString { get; set; }
-
+        
         /// <value>
         /// the type of the log data to be purged
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
+        
     }
 }

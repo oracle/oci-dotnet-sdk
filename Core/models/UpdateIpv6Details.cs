@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Whether the IPv6 can be used for internet communication. Allowed by default for an IPv6 in
         /// a public subnet. Never allowed for an IPv6 in a private subnet. If the value is `true`, the
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isInternetAccessAllowed")]
         public System.Nullable<bool> IsInternetAccessAllowed { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VNIC to reassign the IPv6 to.
         /// The VNIC must be in the same subnet as the current VNIC.
@@ -65,5 +65,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+        
     }
 }

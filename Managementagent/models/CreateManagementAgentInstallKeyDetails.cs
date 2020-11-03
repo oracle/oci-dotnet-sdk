@@ -30,19 +30,19 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Total number of install for this keys
         /// </value>
         [JsonProperty(PropertyName = "allowedKeyInstallCount")]
         public System.Nullable<int> AllowedKeyInstallCount { get; set; }
-
+        
         /// <value>
         /// date after which key would expire after creation
         /// </value>
         [JsonProperty(PropertyName = "timeExpires")]
         public System.Nullable<System.DateTime> TimeExpires { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

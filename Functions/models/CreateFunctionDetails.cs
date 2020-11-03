@@ -32,7 +32,7 @@ namespace Oci.FunctionsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the application this function belongs to.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.FunctionsService.Models
         [Required(ErrorMessage = "ApplicationId is required.")]
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
-
+        
         /// <value>
         /// The qualified name of the Docker image to use in the function, including the image tag.
         /// The image should be in the OCI Registry that is in the same region as the function itself.
@@ -54,7 +54,7 @@ namespace Oci.FunctionsService.Models
         [Required(ErrorMessage = "Image is required.")]
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
-
+        
         /// <value>
         /// The image digest for the version of the image that will be pulled when invoking this function.
         /// If no value is specified, the digest currently associated with the image in the OCI Registry will be used.
@@ -62,7 +62,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageDigest")]
         public string ImageDigest { get; set; }
-
+        
         /// <value>
         /// Maximum usable memory for the function (MiB).
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.FunctionsService.Models
         [Required(ErrorMessage = "MemoryInMBs is required.")]
         [JsonProperty(PropertyName = "memoryInMBs")]
         public System.Nullable<long> MemoryInMBs { get; set; }
-
+        
         /// <value>
         /// Function configuration. These values are passed on to the function as environment variables, this overrides application configuration values.
         /// Keys must be ASCII strings consisting solely of letters, digits, and the '_' (underscore) character, and must not begin with a digit. Values should be limited to printable unicode characters.
@@ -81,13 +81,13 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "config")]
         public System.Collections.Generic.Dictionary<string, string> Config { get; set; }
-
+        
         /// <value>
         /// Timeout for executions of the function. Value in seconds.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -96,7 +96,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -104,5 +104,6 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

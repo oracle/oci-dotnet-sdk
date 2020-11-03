@@ -27,25 +27,25 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "high")]
         public string High { get; set; }
-
+        
         /// <value>
         /// The Medium database service provides a lower level of resources to each SQL statement potentially resulting a lower level of performance, but supports more concurrent SQL statements.
         /// </value>
         [JsonProperty(PropertyName = "medium")]
         public string Medium { get; set; }
-
+        
         /// <value>
         /// The Low database service provides the least level of resources to each SQL statement, but supports the most number of concurrent SQL statements.
         /// </value>
         [JsonProperty(PropertyName = "low")]
         public string Low { get; set; }
-
+        
         /// <value>
         /// The database service provides the least level of resources to each SQL statement, but supports the most number of concurrent SQL statements.
         /// </value>
         [JsonProperty(PropertyName = "dedicated")]
         public string Dedicated { get; set; }
-
+        
         /// <value>
         /// Returns all connection strings that can be used to connect to the Autonomous Database.
         /// For more information, please see [Predefined Database Service Names for Autonomous Transaction Processing](https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE)
@@ -53,5 +53,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "allConnectionStrings")]
         public System.Collections.Generic.Dictionary<string, string> AllConnectionStrings { get; set; }
+        
     }
 }

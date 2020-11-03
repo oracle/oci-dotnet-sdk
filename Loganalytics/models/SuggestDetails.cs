@@ -31,14 +31,14 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Flag to search all child compartments of the compartment Id specified in the compartmentId query parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
-
+        
         /// <value>
         /// Query seeking suggestions for.
         /// 
@@ -49,7 +49,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "QueryString is required.")]
         [JsonProperty(PropertyName = "queryString")]
         public string QueryString { get; set; }
-
+        
         /// <value>
         /// Default subsystem to qualify fields with in the queryString if not specified.
         /// 
@@ -61,5 +61,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
+        
     }
 }

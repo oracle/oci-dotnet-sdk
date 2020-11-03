@@ -23,5 +23,8 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "messageKey")]
         public string MessageKey { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "NONE";
     }
 }

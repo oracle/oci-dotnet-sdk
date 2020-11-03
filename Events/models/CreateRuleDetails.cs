@@ -32,7 +32,7 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A string that describes the details of the rule. It does not have to be unique, and you can change it. Avoid entering
         /// confidential information.
@@ -40,7 +40,7 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Whether or not this rule is currently enabled.
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// A filter that specifies the event that will trigger actions associated with this rule. A few 
         /// important things to remember about filters:
@@ -84,7 +84,7 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
         public string Condition { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to which this rule belongs.
         /// 
@@ -95,14 +95,14 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Actions is required.")]
         [JsonProperty(PropertyName = "actions")]
         public ActionDetailsList Actions { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. Exists for cross-compatibility only.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -111,7 +111,7 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -119,5 +119,6 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vendor")]
         public string Vendor { get; set; }
-
+        
         /// <value>
         /// The platform or software version of the CPE device.
         /// </value>
         [JsonProperty(PropertyName = "platformSoftwareVersion")]
         public string PlatformSoftwareVersion { get; set; }
+        
     }
 }

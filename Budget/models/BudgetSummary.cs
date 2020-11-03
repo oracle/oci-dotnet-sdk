@@ -30,7 +30,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// This is DEPRECATED. For backwards compatability, the property will be populated when
         /// targetType is \"COMPARTMENT\" AND targets contains EXACT ONE target compartment ocid.
@@ -49,7 +49,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "targetCompartmentId")]
         public string TargetCompartmentId { get; set; }
-
+        
         /// <value>
         /// The display name of the budget.
         /// </value>
@@ -59,13 +59,13 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The description of the budget.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The amount of the budget expressed in the currency of the customer's rate card.
         /// 
@@ -76,7 +76,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "Amount is required.")]
         [JsonProperty(PropertyName = "amount")]
         public System.Nullable<decimal> Amount { get; set; }
-
+        
         /// <value>
         /// The reset period for the budget.
         /// 
@@ -88,7 +88,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "resetPeriod")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResetPeriod> ResetPeriod { get; set; }
-
+        
         /// <value>
         /// The type of target on which the budget is applied.
         /// 
@@ -96,7 +96,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "targetType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TargetType> TargetType { get; set; }
-
+        
         /// <value>
         /// The list of targets on which the budget is applied.
         ///   If targetType is \"COMPARTMENT\", targets contains list of compartment OCIDs.
@@ -105,7 +105,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "targets")]
         public System.Collections.Generic.List<string> Targets { get; set; }
-
+        
         /// <value>
         /// The current state of the budget.
         /// </value>
@@ -116,7 +116,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Total number of alert rules in the budget
         /// </value>
@@ -126,31 +126,31 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "AlertRuleCount is required.")]
         [JsonProperty(PropertyName = "alertRuleCount")]
         public System.Nullable<int> AlertRuleCount { get; set; }
-
+        
         /// <value>
         /// Version of the budget. Starts from 1 and increments by 1.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<int> Version { get; set; }
-
+        
         /// <value>
         /// The actual spend in currency for the current budget cycle
         /// </value>
         [JsonProperty(PropertyName = "actualSpend")]
         public System.Nullable<decimal> ActualSpend { get; set; }
-
+        
         /// <value>
         /// The forecasted spend in currency by the end of the current budget cycle
         /// </value>
         [JsonProperty(PropertyName = "forecastedSpend")]
         public System.Nullable<decimal> ForecastedSpend { get; set; }
-
+        
         /// <value>
         /// Time budget spend was last computed
         /// </value>
         [JsonProperty(PropertyName = "timeSpendComputed")]
         public System.Nullable<System.DateTime> TimeSpendComputed { get; set; }
-
+        
         /// <value>
         /// Time budget was created
         /// </value>
@@ -160,7 +160,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time budget was updated
         /// </value>
@@ -170,7 +170,7 @@ namespace Oci.BudgetService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -179,7 +179,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -188,5 +188,6 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -23,5 +23,8 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "filterCondition")]
         public Expression FilterCondition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "FILTER_OPERATOR";
     }
 }

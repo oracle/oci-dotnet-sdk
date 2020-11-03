@@ -27,45 +27,45 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A URL for fetching the probe results.
         /// </value>
         [JsonProperty(PropertyName = "resultsUrl")]
         public string ResultsUrl { get; set; }
-
+        
         /// <value>
         /// The region where updates must be made and where results must be fetched from.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "homeRegion")]
         public string HomeRegion { get; set; }
-
+        
         /// <value>
         /// The RFC 3339-formatted creation date and time of the probe.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A list of targets (hostnames or IP addresses) of the probe.
         /// </value>
         [JsonProperty(PropertyName = "targets")]
         public System.Collections.Generic.List<string> Targets { get; set; }
-
+        
         /// <value>
         /// A list of names of vantage points from which to execute the probe.
         /// </value>
         [JsonProperty(PropertyName = "vantagePointNames")]
         public System.Collections.Generic.List<string> VantagePointNames { get; set; }
-
+        
         /// <value>
         /// The port on which to probe endpoints. If unspecified, probes will use the
         /// default port of their protocol.
@@ -73,7 +73,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The probe timeout in seconds. Valid values: 10, 20, 30, and 60.
         /// The probe timeout must be less than or equal to `intervalInSeconds` for monitors.
@@ -81,21 +81,21 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
-
+        
         [JsonProperty(PropertyName = "protocol")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HttpProbeProtocol> Protocol { get; set; }
-
+        
         [JsonProperty(PropertyName = "method")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HttpProbeMethod> Method { get; set; }
-
+        
         /// <value>
         /// The optional URL path to probe, including query parameters.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// A dictionary of HTTP request headers.
         /// <br/>
@@ -104,5 +104,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.Dictionary<string, string> Headers { get; set; }
+        
     }
 }

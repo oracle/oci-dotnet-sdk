@@ -20,5 +20,8 @@ namespace Oci.DataintegrationService.Models
     /// </summary>
     public class Projection : Operator
     {
-            }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "PROJECTION_OPERATOR";
+    }
 }

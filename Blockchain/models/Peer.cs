@@ -30,7 +30,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "PeerKey is required.")]
         [JsonProperty(PropertyName = "peerKey")]
         public string PeerKey { get; set; }
-
+        
         /// <value>
         /// Peer role
         /// </value>
@@ -41,16 +41,16 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeerRole.RoleEnum> Role { get; set; }
-
+        
         /// <value>
         /// peer alias
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
-
+        
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
-
+        
         /// <value>
         /// Host on which the Peer exists
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "Host is required.")]
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// Availability Domain of peer
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "ad")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AvailabilityDomain.AdsEnum> Ad { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the peer.
         /// </value>
@@ -91,5 +91,6 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

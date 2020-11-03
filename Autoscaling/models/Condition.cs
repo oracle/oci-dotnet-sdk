@@ -28,25 +28,26 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
         public Action Action { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// ID of the condition that is assigned after creation.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Metric is required.")]
         [JsonProperty(PropertyName = "metric")]
         public Metric Metric { get; set; }
+        
     }
 }

@@ -28,47 +28,50 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "classifyFieldNames")]
         public System.Collections.Generic.List<string> ClassifyFieldNames { get; set; }
-
+        
         /// <value>
         /// Count of nulls found in each of the fields specified in the classify command in the query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyFieldNullCount")]
         public System.Collections.Generic.List<long> ClassifyFieldNullCount { get; set; }
-
+        
         /// <value>
         /// Count of anomalies for each timeseries datapoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyAnomalyIntervalCounts")]
         public System.Collections.Generic.List<long> ClassifyAnomalyIntervalCounts { get; set; }
-
+        
         /// <value>
         /// Column descriptors for the classify result.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyColumns")]
         public System.Collections.Generic.List<AbstractColumn> ClassifyColumns { get; set; }
-
+        
         /// <value>
         /// Results of the classify command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyResult")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> ClassifyResult { get; set; }
-
+        
         /// <value>
         /// Column descriptors of fields with strong correlation with the classify fields.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyCorrelateColumns")]
         public System.Collections.Generic.List<AbstractColumn> ClassifyCorrelateColumns { get; set; }
-
+        
         /// <value>
         /// Correlation results of the classify command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "classifyCorrelateResult")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> ClassifyCorrelateResult { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "CLASSIFY_COLUMN";
     }
 }

@@ -31,19 +31,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// The date and time when the preview version availability begins.
         /// </value>
         [JsonProperty(PropertyName = "timePreviewBegin")]
         public System.Nullable<System.DateTime> TimePreviewBegin { get; set; }
-
+        
         /// <value>
         /// The date and time when the preview version availability ends.
         /// </value>
         [JsonProperty(PropertyName = "timePreviewEnd")]
         public System.Nullable<System.DateTime> TimePreviewEnd { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database workload type. The following values are valid:
         /// <br/>
@@ -73,11 +73,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbWorkload")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
-
+        
         /// <value>
         /// A URL that points to a detailed description of the preview version.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }
+        
     }
 }

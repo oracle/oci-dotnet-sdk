@@ -33,5 +33,6 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "shutdownType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InnoDbShutdownMode> ShutdownType { get; set; }
+        
     }
 }

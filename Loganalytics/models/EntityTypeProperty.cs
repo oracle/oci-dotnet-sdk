@@ -32,12 +32,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Description for the log analytics entity type property.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

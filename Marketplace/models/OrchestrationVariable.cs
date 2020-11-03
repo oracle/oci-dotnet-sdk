@@ -26,36 +26,37 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The variable's default value.
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
-
+        
         /// <value>
         /// A description of the variable.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data type of the variable.
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OrchestrationVariableTypeEnum> DataType { get; set; }
-
+        
         /// <value>
         /// Whether the variable is mandatory.
         /// </value>
         [JsonProperty(PropertyName = "isMandatory")]
         public System.Nullable<bool> IsMandatory { get; set; }
-
+        
         /// <value>
         /// A brief textual description that helps to explain the variable.
         /// </value>
         [JsonProperty(PropertyName = "hintMessage")]
         public string HintMessage { get; set; }
+        
     }
 }

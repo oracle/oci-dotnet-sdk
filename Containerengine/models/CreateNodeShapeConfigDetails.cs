@@ -28,5 +28,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
+        
     }
 }

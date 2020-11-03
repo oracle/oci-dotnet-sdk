@@ -31,14 +31,14 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "DatabaseDetails is required.")]
         [JsonProperty(PropertyName = "databaseDetails")]
         public DatabaseDetails DatabaseDetails { get; set; }
-
+        
         /// <value>
         /// SQL belongs to one or more categories based on the insights.
         /// 
@@ -49,8 +49,9 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public System.Collections.Generic.List<string> Category { get; set; }
-
+        
         [JsonProperty(PropertyName = "statistics")]
         public SqlStatistics Statistics { get; set; }
+        
     }
 }

@@ -33,7 +33,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -41,86 +41,87 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of a data entity.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Unique key of the parent data asset.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
-
+        
         /// <value>
         /// Key of the associated folder.
         /// </value>
         [JsonProperty(PropertyName = "folderKey")]
         public string FolderKey { get; set; }
-
+        
         /// <value>
         /// Name of the associated folder. This name is harvested from the source data asset when the parent folder for the entiy is harvested.
         /// </value>
         [JsonProperty(PropertyName = "folderName")]
         public string FolderName { get; set; }
-
+        
         /// <value>
         /// Unique external key of this object in the source system.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
-
+        
         /// <value>
         /// Key of the associated pattern if this is a logical entity.
         /// </value>
         [JsonProperty(PropertyName = "patternKey")]
         public string PatternKey { get; set; }
-
+        
         /// <value>
         /// The expression realized after resolving qualifiers . Used in deriving this logical entity
         /// </value>
         [JsonProperty(PropertyName = "realizedExpression")]
         public string RealizedExpression { get; set; }
-
+        
         /// <value>
         /// Full path of the data entity.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The date and time the data entity was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The last time that any change was made to the data entity. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// OCID of the user who updated this object in the data catalog.
         /// </value>
         [JsonProperty(PropertyName = "updatedById")]
         public string UpdatedById { get; set; }
-
+        
         /// <value>
         /// URI to the data entity instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// State of the data entity.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
     }
 }

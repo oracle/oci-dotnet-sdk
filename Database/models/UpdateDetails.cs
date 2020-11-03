@@ -27,7 +27,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "updateId")]
         public string UpdateId { get; set; }
-        ///
+                ///
         /// <value>
         /// The update action.
         /// </value>
@@ -47,5 +47,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "updateAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateActionEnum> UpdateAction { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment to contain the console connection.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the database node.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbNodeId is required.")]
         [JsonProperty(PropertyName = "dbNodeId")]
         public string DbNodeId { get; set; }
-
+        
         /// <value>
         /// The SSH connection string for the console connection.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ConnectionString is required.")]
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
-
+        
         /// <value>
         /// The SSH public key fingerprint for the console connection.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Fingerprint is required.")]
         [JsonProperty(PropertyName = "fingerprint")]
         public string Fingerprint { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the console connection.
         /// </value>
@@ -100,5 +100,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

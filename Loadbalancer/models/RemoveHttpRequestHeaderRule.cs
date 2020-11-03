@@ -39,5 +39,8 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Header is required.")]
         [JsonProperty(PropertyName = "header")]
         public string Header { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "REMOVE_HTTP_REQUEST_HEADER";
     }
 }

@@ -27,7 +27,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "associatedData")]
         public System.Collections.Generic.Dictionary<string, string> AssociatedData { get; set; }
-
+        
         /// <value>
         /// The OCID of the key to encrypt with.
         /// </value>
@@ -37,7 +37,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// Information that provides context for audit logging. You can provide this additional
         /// data as key-value pairs to include in the audit logs when audit logging is enabled.
@@ -45,7 +45,7 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "loggingContext")]
         public System.Collections.Generic.Dictionary<string, string> LoggingContext { get; set; }
-
+        
         /// <value>
         /// The plaintext data to encrypt.
         /// </value>
@@ -55,5 +55,6 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Plaintext is required.")]
         [JsonProperty(PropertyName = "plaintext")]
         public string Plaintext { get; set; }
+        
     }
 }

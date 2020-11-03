@@ -26,29 +26,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "additionalInfo")]
         public System.Collections.Generic.Dictionary<string, string> AdditionalInfo { get; set; }
-
+        
         /// <value>
         /// entries
         /// </value>
         [JsonProperty(PropertyName = "entries")]
         public System.Collections.Generic.List<AbstractParserTestResultLogEntry> Entries { get; set; }
-
+        
         /// <value>
         /// example content
         /// </value>
         [JsonProperty(PropertyName = "exampleContent")]
         public string ExampleContent { get; set; }
-
+        
         /// <value>
         /// lines
         /// </value>
         [JsonProperty(PropertyName = "lines")]
         public System.Collections.Generic.List<AbstractParserTestResultLogLine> Lines { get; set; }
-
+        
         /// <value>
         /// named capture groups
         /// </value>
         [JsonProperty(PropertyName = "namedCaptureGroups")]
         public System.Collections.Generic.List<string> NamedCaptureGroups { get; set; }
+        
     }
 }

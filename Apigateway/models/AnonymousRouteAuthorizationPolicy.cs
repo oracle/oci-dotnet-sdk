@@ -22,5 +22,8 @@ namespace Oci.ApigatewayService.Models
     /// </summary>
     public class AnonymousRouteAuthorizationPolicy : RouteAuthorizationPolicy
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "ANONYMOUS";
+    }
 }

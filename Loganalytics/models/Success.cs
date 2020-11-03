@@ -30,5 +30,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

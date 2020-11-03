@@ -21,5 +21,8 @@ namespace Oci.AnnouncementsService.Models
     /// </summary>
     public class AnnouncementSummary : BaseAnnouncement
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "AnnouncementSummary";
+    }
 }

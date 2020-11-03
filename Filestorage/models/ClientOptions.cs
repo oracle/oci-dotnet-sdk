@@ -41,7 +41,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
-
+        
         /// <value>
         /// If `true`, clients accessing the file system through this
         /// export must connect from a privileged source port. If
@@ -50,7 +50,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "requirePrivilegedSourcePort")]
         public System.Nullable<bool> RequirePrivilegedSourcePort { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of access to grant clients using the file system
         /// through this export. If unspecified defaults to `READ_ONLY`.
@@ -72,7 +72,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "access")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AccessEnum> Access { get; set; }
-        ///
+                ///
         /// <value>
         /// Used when clients accessing the file system through this export
         /// have their UID and GID remapped to 'anonymousUid' and
@@ -104,7 +104,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "identitySquash")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IdentitySquashEnum> IdentitySquash { get; set; }
-
+        
         /// <value>
         /// UID value to remap to when squashing a client UID (see
         /// identitySquash for more details.) If unspecified, defaults
@@ -113,7 +113,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "anonymousUid")]
         public System.Nullable<long> AnonymousUid { get; set; }
-
+        
         /// <value>
         /// GID value to remap to when squashing a client GID (see
         /// identitySquash for more details.) If unspecified defaults
@@ -122,5 +122,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "anonymousGid")]
         public System.Nullable<long> AnonymousGid { get; set; }
+        
     }
 }

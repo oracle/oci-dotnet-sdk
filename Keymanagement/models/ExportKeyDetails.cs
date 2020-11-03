@@ -30,14 +30,14 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// The OCID of the specific key version to export. If not specified, the service exports the current key version.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyVersionId")]
         public string KeyVersionId { get; set; }
-        ///
+                ///
         /// <value>
         /// The encryption algorithm to use to encrypt exportable key material from a software-backed key. Specifying `RSA_OAEP_AES_SHA256` 
         /// invokes the RSA AES key wrap mechanism, which generates a temporary AES key. The temporary AES key is wrapped by the RSA public 
@@ -71,7 +71,7 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
-
+        
         /// <value>
         /// The PEM format of the 2048-bit, 3072-bit, or 4096-bit RSA wrapping key in your possession that you want to use to encrypt the key.
         /// 
@@ -82,7 +82,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "PublicKey is required.")]
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }
-
+        
         /// <value>
         /// Information that provides context for audit logging. You can provide this additional
         /// data as key-value pairs to include in the audit logs when audit logging is enabled.
@@ -90,5 +90,6 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "loggingContext")]
         public System.Collections.Generic.Dictionary<string, string> LoggingContext { get; set; }
+        
     }
 }

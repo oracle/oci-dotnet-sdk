@@ -44,7 +44,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Autonomous Exadata Infrastructure.
         /// </value>
@@ -64,7 +64,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The name of the availability domain that the Autonomous Exadata Infrastructure is located in.
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the Autonomous Exadata Infrastructure is associated with.
         /// <br/>
@@ -92,7 +92,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -101,7 +101,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The shape of the Autonomous Exadata Infrastructure. The shape determines resources to allocate to the Autonomous Exadata Infrastructure (CPU cores, memory and storage).
         /// </value>
@@ -111,7 +111,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The host name for the Autonomous Exadata Infrastructure node.
         /// </value>
@@ -121,7 +121,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// The domain name for the Autonomous Exadata Infrastructure.
         /// </value>
@@ -131,7 +131,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Domain is required.")]
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the Autonomous Exadata Infrastructure.
         /// </value>
@@ -163,13 +163,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycle state of the Autonomous Exadata Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to all databases in the Autonomous Exadata Infrastructure. The default is BRING_YOUR_OWN_LICENSE.
         /// 
@@ -189,32 +189,32 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// The date and time the Autonomous Exadata Infrastructure was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "MaintenanceWindow is required.")]
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "lastMaintenanceRunId")]
         public string LastMaintenanceRunId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the next maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "nextMaintenanceRunId")]
         public string NextMaintenanceRunId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -223,7 +223,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -231,5 +231,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

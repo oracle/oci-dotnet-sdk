@@ -26,79 +26,79 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "aggregationField")]
         public string AggregationField { get; set; }
-
+        
         /// <value>
         /// bucket metadata
         /// </value>
         [JsonProperty(PropertyName = "bucketMetadata")]
         public string BucketMetadata { get; set; }
-
+        
         /// <value>
         /// clock period
         /// </value>
         [JsonProperty(PropertyName = "clockPeriod")]
         public string ClockPeriod { get; set; }
-
+        
         /// <value>
         /// description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// edit version
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
-
+        
         /// <value>
         /// field name
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// field value array
         /// </value>
         [JsonProperty(PropertyName = "fieldValues")]
         public System.Collections.Generic.List<string> FieldValues { get; set; }
-
+        
         /// <value>
         /// grouping fields
         /// </value>
         [JsonProperty(PropertyName = "groupingField")]
         public string GroupingField { get; set; }
-
+        
         /// <value>
         /// is enabled flag
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// metric display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// metric Id
         /// </value>
         [JsonProperty(PropertyName = "metricReference")]
         public System.Nullable<long> MetricReference { get; set; }
-
+        
         /// <value>
         /// name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// metric type
         /// </value>
@@ -124,13 +124,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "metricType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MetricTypeEnum> MetricType { get; set; }
-
+        
         /// <value>
         /// is metric source map enabled flag
         /// </value>
         [JsonProperty(PropertyName = "isMetricSourceEnabled")]
         public System.Nullable<bool> IsMetricSourceEnabled { get; set; }
-        ///
+                ///
         /// <value>
         /// operator
         /// </value>
@@ -152,35 +152,36 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
-
+        
         /// <value>
         /// sources
         /// </value>
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<LogAnalyticsSource> Sources { get; set; }
-
+        
         /// <value>
         /// entity type
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// last updated date
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// unit type
         /// </value>
         [JsonProperty(PropertyName = "unitType")]
         public string UnitType { get; set; }
-
+        
         /// <value>
         /// user customized
         /// </value>
         [JsonProperty(PropertyName = "isUserCustomized")]
         public System.Nullable<bool> IsUserCustomized { get; set; }
+        
     }
 }

@@ -26,31 +26,31 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The name of reference object.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The identifier of reference object.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The identifier path of reference object.
         /// </value>
         [JsonProperty(PropertyName = "identifierPath")]
         public string IdentifierPath { get; set; }
-
+        
         /// <value>
         /// The description of reference object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of the reference object.
         /// </value>
@@ -76,23 +76,24 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The new reference object to use instead of the original reference. For example, this can be a data asset reference.
         /// </value>
         [JsonProperty(PropertyName = "targetObject")]
         public System.Object TargetObject { get; set; }
-
+        
         /// <value>
         /// The aggregator key of the child reference object. For example, this can be a data asset key.
         /// </value>
         [JsonProperty(PropertyName = "aggregatorKey")]
         public string AggregatorKey { get; set; }
-
+        
         /// <value>
         /// List of published objects where this is used.
         /// </value>
         [JsonProperty(PropertyName = "usedBy")]
         public System.Collections.Generic.List<ReferenceUsedBy> UsedBy { get; set; }
+        
     }
 }

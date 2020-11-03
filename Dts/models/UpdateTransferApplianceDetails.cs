@@ -36,8 +36,9 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
+        
     }
 }

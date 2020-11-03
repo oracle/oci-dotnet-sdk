@@ -26,5 +26,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "savedSearchId")]
         public string SavedSearchId { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "STREAM";
     }
 }

@@ -28,14 +28,14 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;foo-value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the key. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -47,7 +47,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope.
         /// Exists for cross-compatibility only.
@@ -55,21 +55,21 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "KeyShape is required.")]
         [JsonProperty(PropertyName = "keyShape")]
         public KeyShape KeyShape { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "WrappedImportKey is required.")]
         [JsonProperty(PropertyName = "wrappedImportKey")]
         public WrappedImportKey WrappedImportKey { get; set; }
-        ///
+                ///
         /// <value>
         /// The key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed.
         /// A protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are performed inside
@@ -97,5 +97,6 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+        
     }
 }

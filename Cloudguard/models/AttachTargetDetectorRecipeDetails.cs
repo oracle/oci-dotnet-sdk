@@ -30,5 +30,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DetectorRecipeId is required.")]
         [JsonProperty(PropertyName = "detectorRecipeId")]
         public string DetectorRecipeId { get; set; }
+        
     }
 }

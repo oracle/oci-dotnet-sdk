@@ -27,7 +27,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseDetails is required.")]
         [JsonProperty(PropertyName = "databaseDetails")]
         public DatabaseDetails DatabaseDetails { get; set; }
-
+        
         /// <value>
         /// SQL performance statistics for a given database
         /// 
@@ -38,5 +38,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Statistics is required.")]
         [JsonProperty(PropertyName = "statistics")]
         public System.Collections.Generic.List<SqlStatisticsTimeSeries> Statistics { get; set; }
+        
     }
 }

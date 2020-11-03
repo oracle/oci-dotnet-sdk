@@ -48,7 +48,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "exportOptions")]
         public System.Collections.Generic.List<ClientOptions> ExportOptions { get; set; }
-
+        
         /// <value>
         /// The OCID of this export's export set.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "ExportSetId is required.")]
         [JsonProperty(PropertyName = "exportSetId")]
         public string ExportSetId { get; set; }
-
+        
         /// <value>
         /// The OCID of this export's file system.
         /// </value>
@@ -68,7 +68,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "FileSystemId is required.")]
         [JsonProperty(PropertyName = "fileSystemId")]
         public string FileSystemId { get; set; }
-
+        
         /// <value>
         /// Path used to access the associated file system.
         /// <br/>
@@ -82,5 +82,6 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// DetectorRecipe Identifier Name
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// DetectorRecipe Description
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Owner of DetectorRecipe
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "owner")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OwnerType> Owner { get; set; }
-
+        
         /// <value>
         /// Unique identifier for Detector Recipe of which this is an extension
         /// </value>
@@ -81,37 +81,38 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DetectorRecipeId is required.")]
         [JsonProperty(PropertyName = "detectorRecipeId")]
         public string DetectorRecipeId { get; set; }
-
+        
         /// <value>
         /// Type of detector
         /// </value>
         [JsonProperty(PropertyName = "detector")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
-
+        
         /// <value>
         /// The current state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the target detector recipe was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the target detector recipe was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

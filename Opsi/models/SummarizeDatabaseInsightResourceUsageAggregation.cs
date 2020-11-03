@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-        ///
+                ///
         /// <value>
         /// Defines the type of resource metric (CPU, STORAGE)
         /// 
@@ -64,7 +64,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "resourceMetric")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResourceMetricEnum> ResourceMetric { get; set; }
-
+        
         /// <value>
         /// Displays usage unit (CORES, GB)
         /// 
@@ -76,7 +76,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "usageUnit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UsageUnit> UsageUnit { get; set; }
-
+        
         /// <value>
         /// Total amount used of the resource metric type (CPU, STORAGE).
         /// 
@@ -87,7 +87,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Usage is required.")]
         [JsonProperty(PropertyName = "usage")]
         public System.Double Usage { get; set; }
-
+        
         /// <value>
         /// The maximum allocated amount of the resource metric type  (CPU, STORAGE).
         /// 
@@ -98,7 +98,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public System.Double Capacity { get; set; }
-
+        
         /// <value>
         /// Percentage change in resource usage during the current period calculated using linear regression functions
         /// </value>
@@ -108,5 +108,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "UsageChangePercent is required.")]
         [JsonProperty(PropertyName = "usageChangePercent")]
         public System.Double UsageChangePercent { get; set; }
+        
     }
 }

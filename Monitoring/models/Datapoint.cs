@@ -33,7 +33,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// Numeric value of the metric.
         /// <br/>
@@ -45,7 +45,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Double Value { get; set; }
-
+        
         /// <value>
         /// The number of occurrences of the associated value in the set of data.
         /// <br/>
@@ -54,5 +54,6 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

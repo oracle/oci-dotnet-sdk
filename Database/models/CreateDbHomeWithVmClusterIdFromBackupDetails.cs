@@ -31,12 +31,15 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "VmClusterId is required.")]
         [JsonProperty(PropertyName = "vmClusterId")]
         public string VmClusterId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Database is required.")]
         [JsonProperty(PropertyName = "database")]
         public CreateDatabaseFromBackupDetails Database { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "VM_CLUSTER_BACKUP";
     }
 }

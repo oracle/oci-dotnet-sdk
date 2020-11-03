@@ -31,13 +31,13 @@ namespace Oci.SecretsService.Models
         [Required(ErrorMessage = "SecretId is required.")]
         [JsonProperty(PropertyName = "secretId")]
         public string SecretId { get; set; }
-
+        
         /// <value>
         /// The time when the secret bundle was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The version number of the secret.
         /// </value>
@@ -47,28 +47,28 @@ namespace Oci.SecretsService.Models
         [Required(ErrorMessage = "VersionNumber is required.")]
         [JsonProperty(PropertyName = "versionNumber")]
         public System.Nullable<long> VersionNumber { get; set; }
-
+        
         /// <value>
         /// The version name of the secret bundle, as provided when the secret was created or last rotated.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "versionName")]
         public string VersionName { get; set; }
-
+        
         /// <value>
         /// An optional property indicating when to delete the secret version, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]
         public System.Nullable<System.DateTime> TimeOfDeletion { get; set; }
-
+        
         /// <value>
         /// An optional property indicating when the secret version will expire, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeOfExpiry")]
         public System.Nullable<System.DateTime> TimeOfExpiry { get; set; }
-        ///
+                ///
         ///
         public enum StagesEnum {
             [EnumMember(Value = "CURRENT")]
@@ -88,5 +88,6 @@ namespace Oci.SecretsService.Models
         /// </value>
         [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<StagesEnum> Stages { get; set; }
+        
     }
 }

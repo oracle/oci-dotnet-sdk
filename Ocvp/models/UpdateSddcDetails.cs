@@ -35,7 +35,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The version of bundled VMware software that the Oracle Cloud VMware Solution will
         /// install on any new ESXi hosts that you add to this SDDC in the future.
@@ -46,7 +46,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vmwareSoftwareVersion")]
         public string VmwareSoftwareVersion { get; set; }
-
+        
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for
         /// the default user on each ESXi host, only when adding new ESXi hosts to this SDDC.
@@ -56,7 +56,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "sshAuthorizedKeys")]
         public string SshAuthorizedKeys { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the vSphere component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -64,7 +64,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vsphereVlanId")]
         public string VsphereVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the vMotion component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -72,7 +72,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vmotionVlanId")]
         public string VmotionVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the vSAN component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -80,7 +80,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vsanVlanId")]
         public string VsanVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the NSX VTEP component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -88,7 +88,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxVTepVlanId")]
         public string NsxVTepVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the NSX Edge VTEP component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -96,7 +96,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeVTepVlanId")]
         public string NsxEdgeVTepVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the NSX Edge Uplink 1 component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -104,7 +104,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplink1VlanId")]
         public string NsxEdgeUplink1VlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the NSX Edge Uplink 2 component of the VMware environment when adding new ESXi hosts to the SDDC.
@@ -112,14 +112,14 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
         public string NsxEdgeUplink2VlanId { get; set; }
-
+        
         /// <value>
         /// This id is editable only when hcxEnabled is true
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxVlanId")]
         public string HcxVlanId { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -128,7 +128,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -137,5 +137,6 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

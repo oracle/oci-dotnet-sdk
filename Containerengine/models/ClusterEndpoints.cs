@@ -26,5 +26,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "kubernetes")]
         public string Kubernetes { get; set; }
+        
     }
 }

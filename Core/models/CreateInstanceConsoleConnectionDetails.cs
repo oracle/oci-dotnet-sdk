@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance to create the console connection to.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-
+        
         /// <value>
         /// The SSH public key used to authenticate the console connection.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PublicKey is required.")]
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }
+        
     }
 }

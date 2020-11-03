@@ -31,16 +31,7 @@ namespace Oci.DatabaseService.Models
             OracleKeyVault
         };
 
-        /// <value>
-        /// The type of key store.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 
     public class KeyStoreTypeDetailsModelConverter : JsonConverter

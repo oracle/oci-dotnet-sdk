@@ -30,5 +30,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "EntityTypes is required.")]
         [JsonProperty(PropertyName = "entityTypes")]
         public System.Collections.Generic.List<OutOfBoxEntityTypeDetails> EntityTypes { get; set; }
+        
     }
 }

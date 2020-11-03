@@ -30,7 +30,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyVersionId is required.")]
         [JsonProperty(PropertyName = "keyVersionId")]
         public string KeyVersionId { get; set; }
-
+        
         /// <value>
         /// The OCID of the master encryption key associated with this key version.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// The date and time this key version was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// 
@@ -51,7 +51,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The OCID of the vault that contains this key version.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
-
+        
         /// <value>
         /// The base64-encoded exported key material, which is encrypted by using the public RSA wrapping key specified in the export request.
         /// 
@@ -72,7 +72,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "EncryptedKey is required.")]
         [JsonProperty(PropertyName = "encryptedKey")]
         public string EncryptedKey { get; set; }
-        ///
+                ///
         /// <value>
         /// The encryption algorithm to use to encrypt exportable key material from a key that persists on the server (as opposed to a key that 
         /// persists on a hardware security module and, therefore, cannot be exported). Specifying `RSA_OAEP_AES_SHA256` invokes the RSA AES key 
@@ -108,5 +108,6 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
+        
     }
 }

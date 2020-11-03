@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bandwidthShapeName")]
         public string BandwidthShapeName { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment to contain the virtual circuit.
         /// 
@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Create a `CrossConnectMapping` for each cross-connect or cross-connect
         /// group this virtual circuit will run on.
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "crossConnectMappings")]
         public System.Collections.Generic.List<CrossConnectMapping> CrossConnectMappings { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `customerAsn`.
         /// If you specify values for both, the request will be rejected.
@@ -55,7 +55,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public System.Nullable<int> CustomerBgpAsn { get; set; }
-
+        
         /// <value>
         /// Your BGP ASN (either public or private). Provide this value only if
         /// there's a BGP session that goes from your edge router to Oracle.
@@ -66,7 +66,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerAsn")]
         public System.Nullable<long> CustomerAsn { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -75,14 +75,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// For private virtual circuits only. The OCID of the {@link Drg}
         /// that this virtual circuit uses.
@@ -99,7 +99,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "gatewayId")]
         public string GatewayId { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `providerServiceId`.
         /// To get a list of the provider names, see
@@ -108,7 +108,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "providerName")]
         public string ProviderName { get; set; }
-
+        
         /// <value>
         /// The OCID of the service offered by the provider (if you're connecting
         /// via a provider). To get a list of the available service offerings, see
@@ -117,14 +117,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "providerServiceId")]
         public string ProviderServiceId { get; set; }
-
+        
         /// <value>
         /// The service key name offered by the provider (if the customer is connecting via a provider).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceKeyName")]
         public string ProviderServiceKeyName { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `providerServiceId`.
         /// To get a list of the provider names, see
@@ -133,7 +133,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "providerServiceName")]
         public string ProviderServiceName { get; set; }
-
+        
         /// <value>
         /// For a public virtual circuit. The public IP prefixes (CIDRs) the customer wants to
         /// advertise across the connection.
@@ -141,7 +141,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "publicPrefixes")]
         public System.Collections.Generic.List<CreateVirtualCircuitPublicPrefixDetails> PublicPrefixes { get; set; }
-
+        
         /// <value>
         /// The Oracle Cloud Infrastructure region where this virtual
         /// circuit is located.
@@ -149,7 +149,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of IP addresses used in this virtual circuit. PRIVATE
         /// means [RFC 1918](https://tools.ietf.org/html/rfc1918) addresses
@@ -177,5 +177,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Latitude is required.")]
         [JsonProperty(PropertyName = "latitude")]
         public System.Double Latitude { get; set; }
-
+        
         /// <value>
         /// Longitude
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Longitude is required.")]
         [JsonProperty(PropertyName = "longitude")]
         public System.Double Longitude { get; set; }
+        
     }
 }

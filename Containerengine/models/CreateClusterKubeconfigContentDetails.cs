@@ -27,12 +27,13 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "tokenVersion")]
         public string TokenVersion { get; set; }
-
+        
         /// <value>
         /// Deprecated. This field is no longer used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "expiration")]
         public System.Nullable<int> Expiration { get; set; }
+        
     }
 }

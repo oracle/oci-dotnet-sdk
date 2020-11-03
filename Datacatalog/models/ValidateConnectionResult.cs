@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The status returned from the connection validation.
         /// </value>
@@ -37,5 +37,6 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConnectionResult> Status { get; set; }
+        
     }
 }

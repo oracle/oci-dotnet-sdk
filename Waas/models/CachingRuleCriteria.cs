@@ -64,7 +64,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "condition")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConditionEnum> Condition { get; set; }
-
+        
         /// <value>
         /// The value of the caching rule criteria.
         /// </value>
@@ -74,5 +74,6 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

@@ -36,7 +36,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the log level used to control logging output of execution logs.
         /// Enabling logging at a given level also enables logging at all higher levels.
@@ -60,5 +60,6 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "logLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LogLevelEnum> LogLevel { get; set; }
+        
     }
 }

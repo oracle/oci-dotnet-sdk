@@ -32,7 +32,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Exadata infrastructure. The name does not need to be unique.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The shape of the Exadata infrastructure. The shape determines the amount of CPU, storage, and memory resources allocated to the instance.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The time zone of the Exadata infrastructure. For details, see [Exadata Infrastructure Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// 
@@ -65,7 +65,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeZone is required.")]
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
-
+        
         /// <value>
         /// The IP address for the first control plane server.
         /// </value>
@@ -75,7 +75,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudControlPlaneServer1 is required.")]
         [JsonProperty(PropertyName = "cloudControlPlaneServer1")]
         public string CloudControlPlaneServer1 { get; set; }
-
+        
         /// <value>
         /// The IP address for the second control plane server.
         /// </value>
@@ -85,7 +85,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudControlPlaneServer2 is required.")]
         [JsonProperty(PropertyName = "cloudControlPlaneServer2")]
         public string CloudControlPlaneServer2 { get; set; }
-
+        
         /// <value>
         /// The netmask for the control plane network.
         /// </value>
@@ -95,7 +95,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Netmask is required.")]
         [JsonProperty(PropertyName = "netmask")]
         public string Netmask { get; set; }
-
+        
         /// <value>
         /// The gateway for the control plane network.
         /// </value>
@@ -105,7 +105,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Gateway is required.")]
         [JsonProperty(PropertyName = "gateway")]
         public string Gateway { get; set; }
-
+        
         /// <value>
         /// The CIDR block for the Exadata administration network.
         /// </value>
@@ -115,7 +115,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AdminNetworkCIDR is required.")]
         [JsonProperty(PropertyName = "adminNetworkCIDR")]
         public string AdminNetworkCIDR { get; set; }
-
+        
         /// <value>
         /// The CIDR block for the Exadata InfiniBand interconnect.
         /// </value>
@@ -125,7 +125,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "InfiniBandNetworkCIDR is required.")]
         [JsonProperty(PropertyName = "infiniBandNetworkCIDR")]
         public string InfiniBandNetworkCIDR { get; set; }
-
+        
         /// <value>
         /// The corporate network proxy for access to the control plane network. Oracle recommends using an HTTPS proxy when possible
         /// for enhanced security.
@@ -133,13 +133,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "corporateProxy")]
         public string CorporateProxy { get; set; }
-
+        
         /// <value>
         /// The list of contacts for the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
-
+        
         /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.
         /// </value>
@@ -149,7 +149,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DnsServer is required.")]
         [JsonProperty(PropertyName = "dnsServer")]
         public System.Collections.Generic.List<string> DnsServer { get; set; }
-
+        
         /// <value>
         /// The list of NTP server IP addresses. Maximum of 3 allowed.
         /// </value>
@@ -159,7 +159,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "NtpServer is required.")]
         [JsonProperty(PropertyName = "ntpServer")]
         public System.Collections.Generic.List<string> NtpServer { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -168,7 +168,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -176,5 +176,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -26,41 +26,42 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A display name for the accepted agreement.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the compartment where the agreement was accepted.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the listing associated with the agreement.
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// The package version associated with the agreement.
         /// </value>
         [JsonProperty(PropertyName = "packageVersion")]
         public string PackageVersion { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the terms of use agreement itself.
         /// </value>
         [JsonProperty(PropertyName = "agreementId")]
         public string AgreementId { get; set; }
-
+        
         /// <value>
         /// The time the agreement was accepted.
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
+        
     }
 }

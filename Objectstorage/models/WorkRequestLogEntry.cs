@@ -24,7 +24,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the log message was written, as described in
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339).
@@ -32,5 +32,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

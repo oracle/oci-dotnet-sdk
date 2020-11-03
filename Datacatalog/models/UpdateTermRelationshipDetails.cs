@@ -28,11 +28,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the term relationship usually defined at the time of creation.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

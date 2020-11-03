@@ -30,21 +30,21 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DimensionsMap is required.")]
         [JsonProperty(PropertyName = "dimensionsMap")]
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "PoliticalLocation is required.")]
         [JsonProperty(PropertyName = "politicalLocation")]
         public PoliticalLocation PoliticalLocation { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "GeographicalLocation is required.")]
         [JsonProperty(PropertyName = "geographicalLocation")]
         public GeographicalLocation GeographicalLocation { get; set; }
-
+        
         /// <value>
         /// The number of occurences with given dimension/s
         /// </value>
@@ -54,5 +54,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Count is required.")]
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

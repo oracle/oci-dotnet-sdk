@@ -28,33 +28,36 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Url is required.")]
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
-
+        
         /// <value>
         /// Defines a timeout for establishing a connection with a proxied server.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectTimeoutInSeconds")]
         public System.Nullable<float> ConnectTimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Defines a timeout for reading a response from the proxied server.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "readTimeoutInSeconds")]
         public System.Nullable<float> ReadTimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Defines a timeout for transmitting a request to the proxied server.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sendTimeoutInSeconds")]
         public System.Nullable<float> SendTimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Defines whether or not to uphold SSL verification.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isSslVerifyDisabled")]
         public System.Nullable<bool> IsSslVerifyDisabled { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "HTTP_BACKEND";
     }
 }

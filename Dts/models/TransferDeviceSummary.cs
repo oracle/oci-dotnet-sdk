@@ -21,13 +21,13 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "serialNumber")]
         public string SerialNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "iscsiIQN")]
         public string IscsiIQN { get; set; }
-
+        
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "PREPARING")]
@@ -55,14 +55,15 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "attachedTransferPackageLabel")]
         public string AttachedTransferPackageLabel { get; set; }
-
+        
         [JsonProperty(PropertyName = "creationTime")]
         public System.Nullable<System.DateTime> CreationTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "uploadStatusLogUri")]
         public string UploadStatusLogUri { get; set; }
+        
     }
 }

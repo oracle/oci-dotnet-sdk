@@ -32,5 +32,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "StreamId is required.")]
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "streaming";
     }
 }

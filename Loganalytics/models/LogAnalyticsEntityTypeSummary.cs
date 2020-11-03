@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Internal name for the log analytics entity type.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalName is required.")]
         [JsonProperty(PropertyName = "internalName")]
         public string InternalName { get; set; }
-
+        
         /// <value>
         /// Log analytics entity type category. Category will be used for grouping and filtering.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-
+        
         /// <value>
         /// Nature of log analytics entity type.
         /// 
@@ -66,7 +66,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "cloudType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EntityCloudType> CloudType { get; set; }
-
+        
         /// <value>
         /// The current state of the log analytics entity
         /// 
@@ -78,7 +78,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EntityLifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Time the log analytics entity type was created. An RFC3339 formatted datetime string.
         /// 
@@ -89,7 +89,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Time the log analytics entity type was updated. An RFC3339 formatted datetime string.
         /// 
@@ -100,5 +100,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

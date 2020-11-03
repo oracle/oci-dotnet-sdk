@@ -28,11 +28,12 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "domainLookupDuration")]
         public System.Double DomainLookupDuration { get; set; }
-
+        
         /// <value>
         /// The addresses returned by DNS resolution.
         /// </value>
         [JsonProperty(PropertyName = "addresses")]
         public System.Collections.Generic.List<string> Addresses { get; set; }
+        
     }
 }

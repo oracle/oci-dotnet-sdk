@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Autonomous Database.
         /// </value>
@@ -97,13 +97,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The database name.
         /// </value>
@@ -113,14 +113,14 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isFreeTier")]
         public System.Nullable<bool> IsFreeTier { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -128,21 +128,21 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
-
+        
         /// <value>
         /// The date and time the Always Free database will be stopped because of inactivity. If this time is reached without any database activity, the database will automatically be put into the STOPPED state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeReclamationOfFreeAutonomousDatabase")]
         public System.Nullable<System.DateTime> TimeReclamationOfFreeAutonomousDatabase { get; set; }
-
+        
         /// <value>
         /// The date and time the Always Free database will be automatically deleted because of inactivity. If the database is in the STOPPED state and without activity until this time, it will be deleted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeDeletionOfFreeAutonomousDatabase")]
         public System.Nullable<System.DateTime> TimeDeletionOfFreeAutonomousDatabase { get; set; }
-
+        
         /// <value>
         /// The number of OCPU cores to be made available to the database.
         /// </value>
@@ -152,7 +152,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The quantity of data in the database, in terabytes.
         /// </value>
@@ -162,7 +162,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DataStorageSizeInTBs is required.")]
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
-        ///
+                ///
         /// <value>
         /// The infrastructure type this resource belongs to.
         /// </value>
@@ -180,47 +180,47 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "infrastructureType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
-
+        
         /// <value>
         /// True if the database uses [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDedicated")]
         public System.Nullable<bool> IsDedicated { get; set; }
-
+        
         /// <value>
         /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "autonomousContainerDatabaseId")]
         public string AutonomousContainerDatabaseId { get; set; }
-
+        
         /// <value>
         /// The date and time the Autonomous Database was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Autonomous Database. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The URL of the Service Console for the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "serviceConsoleUrl")]
         public string ServiceConsoleUrl { get; set; }
-
+        
         /// <value>
         /// The connection string used to connect to the Autonomous Database. The username for the Service Console is ADMIN. Use the password you entered when creating the Autonomous Database for the password value.
         /// </value>
         [JsonProperty(PropertyName = "connectionStrings")]
         public AutonomousDatabaseConnectionStrings ConnectionStrings { get; set; }
-
+        
         [JsonProperty(PropertyName = "connectionUrls")]
         public AutonomousDatabaseConnectionUrls ConnectionUrls { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
@@ -242,13 +242,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// The amount of storage that has been used, in terabytes.
         /// </value>
         [JsonProperty(PropertyName = "usedDataStorageSizeInTBs")]
         public System.Nullable<int> UsedDataStorageSizeInTBs { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -257,7 +257,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -265,7 +265,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the resource is associated with.
         /// <br/>
@@ -281,7 +281,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -290,37 +290,37 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The private endpoint for the resource.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpoint")]
         public string PrivateEndpoint { get; set; }
-
+        
         /// <value>
         /// The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointLabel")]
         public string PrivateEndpointLabel { get; set; }
-
+        
         /// <value>
         /// The private endpoint Ip address for the resource.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointIp")]
         public string PrivateEndpointIp { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Database version for Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-
+        
         /// <value>
         /// Indicates if the Autonomous Database version is a preview version.
         /// </value>
         [JsonProperty(PropertyName = "isPreview")]
         public System.Nullable<bool> IsPreview { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database workload type. The following values are valid:
         /// <br/>
@@ -350,7 +350,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbWorkload")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
-
+        
         /// <value>
         /// The client IP access control list (ACL). This feature is available for databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI) only.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance. This is an array of CIDR (Classless Inter-Domain Routing) notations for a subnet or VCN OCID.
@@ -361,14 +361,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
-
+        
         /// <value>
         /// Indicates if auto scaling is enabled for the Autonomous Database CPU core count.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
-        ///
+                ///
         /// <value>
         /// Status of the Data Safe registration for this Autonomous Database.
         /// </value>
@@ -392,7 +392,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dataSafeStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataSafeStatusEnum> DataSafeStatus { get; set; }
-        ///
+                ///
         /// <value>
         /// Status of the Operations Insights for this Autonomous Database.
         /// </value>
@@ -418,43 +418,43 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "operationsInsightsStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationsInsightsStatusEnum> OperationsInsightsStatus { get; set; }
-
+        
         /// <value>
         /// The date and time when maintenance will begin.
         /// </value>
         [JsonProperty(PropertyName = "timeMaintenanceBegin")]
         public System.Nullable<System.DateTime> TimeMaintenanceBegin { get; set; }
-
+        
         /// <value>
         /// The date and time when maintenance will end.
         /// </value>
         [JsonProperty(PropertyName = "timeMaintenanceEnd")]
         public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
-
+        
         /// <value>
         /// Indicates whether the Autonomous Database is a refreshable clone.
         /// </value>
         [JsonProperty(PropertyName = "isRefreshableClone")]
         public System.Nullable<bool> IsRefreshableClone { get; set; }
-
+        
         /// <value>
         /// The date and time when last refresh happened.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastRefresh")]
         public System.Nullable<System.DateTime> TimeOfLastRefresh { get; set; }
-
+        
         /// <value>
         /// The refresh point timestamp (UTC). The refresh point is the time to which the database was most recently refreshed. Data created after the refresh point is not included in the refresh.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastRefreshPoint")]
         public System.Nullable<System.DateTime> TimeOfLastRefreshPoint { get; set; }
-
+        
         /// <value>
         /// The date and time of next refresh.
         /// </value>
         [JsonProperty(PropertyName = "timeOfNextRefresh")]
         public System.Nullable<System.DateTime> TimeOfNextRefresh { get; set; }
-        ///
+                ///
         /// <value>
         /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
         /// </value>
@@ -472,7 +472,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "openMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
-        ///
+                ///
         /// <value>
         /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
         /// </value>
@@ -490,7 +490,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "refreshableStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RefreshableStatusEnum> RefreshableStatus { get; set; }
-        ///
+                ///
         /// <value>
         /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
         /// </value>
@@ -508,13 +508,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "refreshableMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that was cloned to create the current Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
         /// </value>
@@ -532,34 +532,34 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "permissionLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PermissionLevelEnum> PermissionLevel { get; set; }
-
+        
         /// <value>
         /// The timestamp of the last switchover operation for the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastSwitchover")]
         public System.Nullable<System.DateTime> TimeOfLastSwitchover { get; set; }
-
+        
         /// <value>
         /// The timestamp of the last failover operation.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastFailover")]
         public System.Nullable<System.DateTime> TimeOfLastFailover { get; set; }
-
+        
         /// <value>
         /// Indicates whether the Autonomous Database has Data Guard enabled.
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
-
+        
         /// <value>
         /// Indicates the number of seconds of data loss for a Data Guard failover.
         /// </value>
         [JsonProperty(PropertyName = "failedDataRecoveryInSeconds")]
         public System.Nullable<int> FailedDataRecoveryInSeconds { get; set; }
-
+        
         [JsonProperty(PropertyName = "standbyDb")]
         public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
-        ///
+                ///
         /// <value>
         /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
         /// </value>
@@ -579,23 +579,24 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
-
+        
         /// <value>
         /// List of Oracle Database versions available for a database upgrade. If there are no version upgrades available, this list is empty.
         /// </value>
         [JsonProperty(PropertyName = "availableUpgradeVersions")]
         public System.Collections.Generic.List<string> AvailableUpgradeVersions { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreId")]
         public string KeyStoreId { get; set; }
-
+        
         /// <value>
         /// The wallet name for Oracle Key Vault.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
+        
     }
 }

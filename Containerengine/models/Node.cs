@@ -26,61 +26,61 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name of the node.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes this node is running.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         /// <value>
         /// The name of the availability domain in which this node is placed.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet in which this node is placed.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the node pool to which this node belongs.
         /// </value>
         [JsonProperty(PropertyName = "nodePoolId")]
         public string NodePoolId { get; set; }
-
+        
         /// <value>
         /// The fault domain of this node.
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The private IP address of this node.
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
-
+        
         /// <value>
         /// The public IP address of this node.
         /// </value>
         [JsonProperty(PropertyName = "publicIp")]
         public string PublicIp { get; set; }
-
+        
         /// <value>
         /// An error that may be associated with the node.
         /// </value>
         [JsonProperty(PropertyName = "nodeError")]
         public NodeError NodeError { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of the node.
         /// </value>
@@ -108,11 +108,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Details about the state of the node.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

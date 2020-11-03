@@ -26,11 +26,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "token")]
         public string Token { get; set; }
-
+        
         /// <value>
         /// The login URL that allows the OCI Console to access the Autonomous Transaction Processing Service Console.
         /// </value>
         [JsonProperty(PropertyName = "loginUrl")]
         public string LoginUrl { get; set; }
+        
     }
 }

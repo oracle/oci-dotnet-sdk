@@ -23,56 +23,57 @@ namespace Oci.LoganalyticsService.Models
         
         [JsonProperty(PropertyName = "field")]
         public LogAnalyticsField Field { get; set; }
-
+        
         /// <value>
         /// parser field map Id
         /// </value>
         [JsonProperty(PropertyName = "parserFieldId")]
         public System.Nullable<long> ParserFieldId { get; set; }
-
+        
         /// <value>
         /// field expression
         /// </value>
         [JsonProperty(PropertyName = "parserFieldExpression")]
         public string ParserFieldExpression { get; set; }
-
+        
         /// <value>
         /// field internal name
         /// </value>
         [JsonProperty(PropertyName = "parserFieldName")]
         public string ParserFieldName { get; set; }
-
+        
         /// <value>
         /// internal name
         /// </value>
         [JsonProperty(PropertyName = "storageFieldName")]
         public string StorageFieldName { get; set; }
-
+        
         /// <value>
         /// integrator name
         /// </value>
         [JsonProperty(PropertyName = "parserFieldIntegratorName")]
         public string ParserFieldIntegratorName { get; set; }
-
+        
         /// <value>
         /// parser internal name
         /// </value>
         [JsonProperty(PropertyName = "parserName")]
         public string ParserName { get; set; }
-
+        
         /// <value>
         /// sequence
         /// </value>
         [JsonProperty(PropertyName = "parserFieldSequence")]
         public System.Nullable<long> ParserFieldSequence { get; set; }
-
+        
         [JsonProperty(PropertyName = "parser")]
         public LogAnalyticsParser Parser { get; set; }
-
+        
         /// <value>
         /// structured column information
         /// </value>
         [JsonProperty(PropertyName = "structuredColumnInfo")]
         public string StructuredColumnInfo { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "RateInRequestsPerSecond is required.")]
         [JsonProperty(PropertyName = "rateInRequestsPerSecond")]
         public System.Nullable<int> RateInRequestsPerSecond { get; set; }
-        ///
+                ///
         /// <value>
         /// The key used to group requests together.
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "rateKey")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RateKeyEnum> RateKey { get; set; }
+        
     }
 }

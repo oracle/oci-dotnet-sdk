@@ -30,11 +30,14 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "Text is required.")]
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
-
+        
         /// <value>
         /// Sha256 checksum value of the text content
         /// </value>
         [JsonProperty(PropertyName = "textSha256")]
         public string TextSha256 { get; set; }
+        
+        [JsonProperty(PropertyName = "outputType")]
+        private readonly string outputType = "TEXT";
     }
 }

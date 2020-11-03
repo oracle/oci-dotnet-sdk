@@ -22,12 +22,7 @@ namespace Oci.CoreService.Models
     public class VolumeGroupSourceDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        
     }
 
     public class VolumeGroupSourceDetailsModelConverter : JsonConverter

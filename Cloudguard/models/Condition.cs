@@ -33,16 +33,7 @@ namespace Oci.CloudguardService.Models
             Simple
         };
 
-        /// <value>
-        /// Type of condition object
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Kind is required.")]
-        [JsonProperty(PropertyName = "kind")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<KindEnum> Kind { get; set; }
+        
     }
 
     public class ConditionModelConverter : JsonConverter

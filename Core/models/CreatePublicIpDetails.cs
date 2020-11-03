@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        ///
+                ///
         /// <value>
         /// Defines when the public IP is deleted and released back to the Oracle Cloud
         /// Infrastructure public IP pool. For more information, see
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifetime")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
-
+        
         /// <value>
         /// The OCID of the private IP to assign the public IP to.
         /// <br/>
@@ -98,11 +98,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIpId")]
         public string PrivateIpId { get; set; }
-
+        
         /// <value>
         /// OCID of the pool object created by the current tenancy
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]
         public string PublicIpPoolId { get; set; }
+        
     }
 }

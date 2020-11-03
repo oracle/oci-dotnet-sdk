@@ -24,11 +24,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// value
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

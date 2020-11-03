@@ -31,17 +31,7 @@ namespace Oci.CoreService.Models
     public class ExportImageDetails 
     {
         
-        /// <value>
-        /// The destination type. Use `objectStorageTuple` when specifying the namespace, bucket name, and object name.
-        /// Use `objectStorageUri` when specifying the Object Storage URL.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DestinationType is required.")]
-        [JsonProperty(PropertyName = "destinationType")]
-        public string DestinationType { get; set; }
+        
     }
 
     public class ExportImageDetailsModelConverter : JsonConverter

@@ -32,7 +32,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "cases")]
         public System.Collections.Generic.List<SteeringPolicyFilterRuleCase> Cases { get; set; }
-
+        
         /// <value>
         /// Defines a default set of answer conditions and values that are applied to an answer when
         /// `cases` is not defined for the rule, or a matching case does not have any matching
@@ -42,5 +42,8 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultAnswerData")]
         public System.Collections.Generic.List<SteeringPolicyFilterAnswerData> DefaultAnswerData { get; set; }
+        
+        [JsonProperty(PropertyName = "ruleType")]
+        private readonly string ruleType = "FILTER";
     }
 }

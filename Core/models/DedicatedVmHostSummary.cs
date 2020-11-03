@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the dedicated VM host.
         /// 
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The shape of the dedicated VM host. The shape determines the number of CPUs and
         /// other resources available for VMs.
@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DedicatedVmHostShape is required.")]
         [JsonProperty(PropertyName = "dedicatedVmHostShape")]
         public string DedicatedVmHostShape { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The fault domain for the dedicated VM host's assigned instances. For more information, see Fault Domains.
         /// <br/>
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the dedicated VM host.
         /// 
@@ -93,7 +93,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the dedicated VM host.
         /// 
@@ -125,7 +125,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the dedicated VM host was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -137,7 +137,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The current available OCPUs of the dedicated VM host.
         /// 
@@ -148,7 +148,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "RemainingOcpus is required.")]
         [JsonProperty(PropertyName = "remainingOcpus")]
         public System.Nullable<float> RemainingOcpus { get; set; }
-
+        
         /// <value>
         /// The current total OCPUs of the dedicated VM host.
         /// 
@@ -159,5 +159,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TotalOcpus is required.")]
         [JsonProperty(PropertyName = "totalOcpus")]
         public System.Nullable<float> TotalOcpus { get; set; }
+        
     }
 }

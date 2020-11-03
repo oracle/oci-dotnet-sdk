@@ -32,7 +32,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "IpAddressProp is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddressProp { get; set; }
-
+        
         /// <value>
         /// Whether the IP address is public or private.
         /// <br/>
@@ -43,5 +43,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPublic")]
         public System.Nullable<bool> IsPublic { get; set; }
+        
     }
 }

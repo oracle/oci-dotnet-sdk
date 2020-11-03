@@ -31,23 +31,13 @@ namespace Oci.VaultService.Models
             Base64
         };
 
-        /// <value>
-        /// The base64-encoded content of the secret.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ContentType is required.")]
-        [JsonProperty(PropertyName = "contentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ContentTypeEnum> ContentType { get; set; }
-
+        
         /// <value>
         /// Names should be unique within a secret. Valid characters are uppercase or lowercase letters, numbers, hyphens, underscores, and periods.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The rotation state of the secret content. The default is `CURRENT`, meaning that the secret is currently in use. A secret version
         /// that you mark as `PENDING` is staged and available for use, but you don't yet want to rotate it into current, active use. For example,
@@ -75,6 +65,7 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "stage")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StageEnum> Stage { get; set; }
+        
     }
 
     public class SecretContentDetailsModelConverter : JsonConverter

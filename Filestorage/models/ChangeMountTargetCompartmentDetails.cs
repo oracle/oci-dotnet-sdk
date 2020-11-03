@@ -31,5 +31,6 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

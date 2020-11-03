@@ -23,8 +23,11 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "formatFirstline")]
         public string FormatFirstline { get; set; }
-
+        
         [JsonProperty(PropertyName = "format")]
         public System.Collections.Generic.List<string> Format { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "MULTILINE";
     }
 }

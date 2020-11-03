@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "assignedEntityId")]
         public string AssignedEntityId { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of entity the public IP is assigned to, or in the process of being
         /// assigned to.
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "assignedEntityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AssignedEntityTypeEnum> AssignedEntityType { get; set; }
-
+        
         /// <value>
         /// The public IP's availability domain. This property is set only for ephemeral public IPs
         /// that are assigned to a private IP (that is, when the `scope` of the public IP is set to
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the public IP. For an ephemeral public IP, this is
         /// the compartment of its assigned entity (which can be a private IP or a regional entity such
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
         /// entering confidential information.
@@ -99,7 +99,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -108,13 +108,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The public IP's Oracle ID (OCID).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The public IP address of the `publicIp` object.
         /// <br/>
@@ -122,7 +122,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-        ///
+                ///
         /// <value>
         /// The public IP's current state.
         /// </value>
@@ -152,7 +152,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// Defines when the public IP is deleted and released back to Oracle's public IP pool.
         /// <br/>
@@ -198,7 +198,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifetime")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use `assignedEntityId` instead.
         /// <br/>
@@ -211,7 +211,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIpId")]
         public string PrivateIpId { get; set; }
-        ///
+                ///
         /// <value>
         /// Whether the public IP is regional or specific to a particular availability domain.
         /// <br/>
@@ -249,7 +249,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ScopeEnum> Scope { get; set; }
-
+        
         /// <value>
         /// The date and time the public IP was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -257,11 +257,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// OCID of the pool object created by the current tenancy
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]
         public string PublicIpPoolId { get; set; }
+        
     }
 }

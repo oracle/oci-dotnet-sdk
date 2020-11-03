@@ -33,20 +33,20 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Ticket is required.")]
         [JsonProperty(PropertyName = "ticket")]
         public CreateTicketDetails Ticket { get; set; }
-
+        
         /// <value>
         /// The Customer Support Identifier number for the support account.
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
-
+        
         /// <value>
         /// The kind of support ticket, such as a technical issue request.
         /// </value>
@@ -57,17 +57,18 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "problemType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
-
+        
         /// <value>
         /// The list of contacts.
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<Contact> Contacts { get; set; }
-
+        
         /// <value>
         /// The incident referrer. This value is often the URL that the customer used when creating the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "referrer")]
         public string Referrer { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbSystemId is required.")]
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <value>
         /// A valid Oracle Database version. To get a list of supported versions, use the {@link #listDbVersions(ListDbVersionsRequest) listDbVersions} operation.
         /// </value>
@@ -41,8 +41,11 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbVersion is required.")]
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "database")]
         public CreateDatabaseDetails Database { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "NONE";
     }
 }

@@ -40,7 +40,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The availability domain the ESXi hosts are running in.
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "ComputeAvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "computeAvailabilityDomain")]
         public string ComputeAvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// A descriptive name for the SDDC. It must be unique, start with a letter, and contain only letters, digits,
         /// whitespaces, dashes and underscores.
@@ -65,7 +65,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A prefix used in the name of each ESXi host and Compute instance in the SDDC.
         /// If this isn't set, the SDDC's `displayName` is used as the prefix.
@@ -76,7 +76,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "instanceDisplayNamePrefix")]
         public string InstanceDisplayNamePrefix { get; set; }
-
+        
         /// <value>
         /// In general, this is a specific version of bundled VMware software supported by
         /// Oracle Cloud VMware Solution (see
@@ -100,7 +100,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VmwareSoftwareVersion is required.")]
         [JsonProperty(PropertyName = "vmwareSoftwareVersion")]
         public string VmwareSoftwareVersion { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that
         /// contains the SDDC.
@@ -112,7 +112,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The number of ESXi hosts in the SDDC.
         /// </value>
@@ -122,7 +122,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "EsxiHostsCount is required.")]
         [JsonProperty(PropertyName = "esxiHostsCount")]
         public System.Nullable<int> EsxiHostsCount { get; set; }
-
+        
         /// <value>
         /// FQDN for vCenter
         /// <br/>
@@ -134,7 +134,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VcenterFqdn is required.")]
         [JsonProperty(PropertyName = "vcenterFqdn")]
         public string VcenterFqdn { get; set; }
-
+        
         /// <value>
         /// FQDN for NSX Manager
         /// <br/>
@@ -146,7 +146,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxManagerFqdn is required.")]
         [JsonProperty(PropertyName = "nsxManagerFqdn")]
         public string NsxManagerFqdn { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `PrivateIp` object that is
         /// the virtual IP (VIP) for vCenter. For information about `PrivateIp` objects, see the
@@ -159,7 +159,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VcenterPrivateIpId is required.")]
         [JsonProperty(PropertyName = "vcenterPrivateIpId")]
         public string VcenterPrivateIpId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `PrivateIp` object that is
         /// the virtual IP (VIP) for NSX Manager. For information about `PrivateIp` objects, see the
@@ -172,7 +172,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxManagerPrivateIpId is required.")]
         [JsonProperty(PropertyName = "nsxManagerPrivateIpId")]
         public string NsxManagerPrivateIpId { get; set; }
-
+        
         /// <value>
         /// The SDDC includes an administrator username and initial password for vCenter. Make sure
         /// to change this initial vCenter password to a different value.
@@ -180,7 +180,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vcenterInitialPassword")]
         public string VcenterInitialPassword { get; set; }
-
+        
         /// <value>
         /// The SDDC includes an administrator username and initial password for NSX Manager. Make sure
         /// to change this initial NSX Manager password to a different value.
@@ -188,7 +188,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxManagerInitialPassword")]
         public string NsxManagerInitialPassword { get; set; }
-
+        
         /// <value>
         /// The SDDC includes an administrator username and initial password for vCenter. You can
         /// change this initial username to a different value in vCenter.
@@ -196,7 +196,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vcenterUsername")]
         public string VcenterUsername { get; set; }
-
+        
         /// <value>
         /// The SDDC includes an administrator username and initial password for NSX Manager. You
         /// can change this initial username to a different value in NSX Manager.
@@ -204,7 +204,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxManagerUsername")]
         public string NsxManagerUsername { get; set; }
-
+        
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for
         /// the default user on each ESXi host. Use a newline character to separate multiple keys.
@@ -227,7 +227,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "SshAuthorizedKeys is required.")]
         [JsonProperty(PropertyName = "sshAuthorizedKeys")]
         public string SshAuthorizedKeys { get; set; }
-
+        
         /// <value>
         /// The CIDR block for the IP addresses that VMware VMs in the SDDC use to run application
         /// workloads.
@@ -235,7 +235,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "workloadNetworkCidr")]
         public string WorkloadNetworkCidr { get; set; }
-
+        
         /// <value>
         /// The VMware NSX overlay workload segment to host your application. Connect to workload
         /// portgroup in vCenter to access this overlay segment.
@@ -243,7 +243,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxOverlaySegmentName")]
         public string NsxOverlaySegmentName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `PrivateIp` object that is
         /// the virtual IP (VIP) for the NSX Edge Uplink. Use this OCID as the route target for
@@ -253,7 +253,7 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplinkIpId")]
         public string NsxEdgeUplinkIpId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management subnet used
         /// to provision the SDDC.
@@ -265,7 +265,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "ProvisioningSubnetId is required.")]
         [JsonProperty(PropertyName = "provisioningSubnetId")]
         public string ProvisioningSubnetId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the vSphere component of the VMware environment.
@@ -288,7 +288,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VsphereVlanId is required.")]
         [JsonProperty(PropertyName = "vsphereVlanId")]
         public string VsphereVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the vMotion component of the VMware environment.
@@ -311,7 +311,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VmotionVlanId is required.")]
         [JsonProperty(PropertyName = "vmotionVlanId")]
         public string VmotionVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the vSAN component of the VMware environment.
@@ -334,7 +334,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "VsanVlanId is required.")]
         [JsonProperty(PropertyName = "vsanVlanId")]
         public string VsanVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the NSX VTEP component of the VMware environment.
@@ -357,7 +357,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxVTepVlanId is required.")]
         [JsonProperty(PropertyName = "nsxVTepVlanId")]
         public string NsxVTepVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the NSX Edge VTEP component of the VMware environment.
@@ -380,7 +380,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxEdgeVTepVlanId is required.")]
         [JsonProperty(PropertyName = "nsxEdgeVTepVlanId")]
         public string NsxEdgeVTepVlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the NSX Edge Uplink 1 component of the VMware environment.
@@ -403,7 +403,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxEdgeUplink1VlanId is required.")]
         [JsonProperty(PropertyName = "nsxEdgeUplink1VlanId")]
         public string NsxEdgeUplink1VlanId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
         /// for the NSX Edge Uplink 2 component of the VMware environment.
@@ -426,47 +426,47 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "NsxEdgeUplink2VlanId is required.")]
         [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
         public string NsxEdgeUplink2VlanId { get; set; }
-
+        
         /// <value>
         /// HCX Private IP
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxPrivateIpId")]
         public string HcxPrivateIpId { get; set; }
-
+        
         /// <value>
         /// HCX Fully Qualified Domain Name
         /// </value>
         [JsonProperty(PropertyName = "hcxFqdn")]
         public string HcxFqdn { get; set; }
-
+        
         /// <value>
         /// HCX initial password
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxInitialPassword")]
         public string HcxInitialPassword { get; set; }
-
+        
         /// <value>
         /// HCX vlan id
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxVlanId")]
         public string HcxVlanId { get; set; }
-
+        
         /// <value>
         /// HCX enabled or not
         /// </value>
         [JsonProperty(PropertyName = "isHcxEnabled")]
         public System.Nullable<bool> IsHcxEnabled { get; set; }
-
+        
         /// <value>
         /// HCX on-premise license key
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxOnPremKey")]
         public string HcxOnPremKey { get; set; }
-
+        
         /// <value>
         /// The date and time the SDDC was created, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -479,7 +479,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the SDDC was updated, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -487,14 +487,14 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the SDDC.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -507,7 +507,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -520,5 +520,6 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

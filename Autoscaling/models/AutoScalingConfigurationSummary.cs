@@ -32,14 +32,14 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the autoscaling configuration.
         /// </value>
@@ -49,7 +49,7 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The minimum period of time to wait between scaling actions. The cooldown period gives the system time to stabilize
         /// before rescaling. The minimum value is 300 seconds, which is also the default.
@@ -57,20 +57,20 @@ namespace Oci.AutoscalingService.Models
         /// </value>
         [JsonProperty(PropertyName = "coolDownInSeconds")]
         public System.Nullable<int> CoolDownInSeconds { get; set; }
-
+        
         /// <value>
         /// Whether the autoscaling configuration is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Resource is required.")]
         [JsonProperty(PropertyName = "resource")]
         public Resource Resource { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -79,7 +79,7 @@ namespace Oci.AutoscalingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -88,7 +88,7 @@ namespace Oci.AutoscalingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The date and time the AutoScalingConfiguration was created, in the format defined by RFC3339.
         /// <br/>
@@ -100,5 +100,6 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

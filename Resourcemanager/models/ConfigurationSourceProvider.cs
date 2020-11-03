@@ -30,25 +30,25 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where the configuration source provider is located.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Human-readable display name for the configuration source provider.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the configuration source provider.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The date and time when the configuration source provider was created.
         /// Format is defined by RFC3339.
@@ -56,7 +56,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the configuration source provider.
         /// For more information about configuration source provider lifecycle states in Resource Manager, see
@@ -78,7 +78,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of configuration source provider. The `GITLAB_ACCESS_TOKEN` type corresponds to Git.
         /// 
@@ -89,18 +89,7 @@ namespace Oci.ResourcemanagerService.Models
             GitlabAccessToken
         };
 
-        /// <value>
-        /// The type of configuration source provider. The `GITLAB_ACCESS_TOKEN` type corresponds to Git.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigSourceProviderType is required.")]
-        [JsonProperty(PropertyName = "configSourceProviderType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ConfigSourceProviderTypeEnum> ConfigSourceProviderType { get; set; }
-
+        
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -108,7 +97,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -116,6 +105,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 
     public class ConfigurationSourceProviderModelConverter : JsonConverter

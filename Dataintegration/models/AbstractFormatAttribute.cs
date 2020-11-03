@@ -35,16 +35,7 @@ namespace Oci.DataintegrationService.Models
             AvroFormat
         };
 
-        /// <value>
-        /// The type of the format attribute.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
     }
 
     public class AbstractFormatAttributeModelConverter : JsonConverter

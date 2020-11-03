@@ -29,5 +29,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

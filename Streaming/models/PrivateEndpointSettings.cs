@@ -28,7 +28,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The private IP associated with the stream pool in the associated subnetId.
         /// The stream pool's FQDN resolves to that IP and should be used - instead of the private IP - in order to not trigger any TLS issues.
@@ -36,11 +36,12 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointIp")]
         public string PrivateEndpointIp { get; set; }
-
+        
         /// <value>
         /// The optional list of network security groups that are associated with the private endpoint of the stream pool.
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
     }
 }

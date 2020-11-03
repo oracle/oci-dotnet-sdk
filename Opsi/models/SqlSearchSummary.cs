@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The database name. The database name is unique within the tenancy.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseName is required.")]
         [JsonProperty(PropertyName = "databaseName")]
         public string DatabaseName { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the database. The name does not have to be unique.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseDisplayName is required.")]
         [JsonProperty(PropertyName = "databaseDisplayName")]
         public string DatabaseDisplayName { get; set; }
-
+        
         /// <value>
         /// Operations Insights internal representation of the database type.
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
         public string DatabaseType { get; set; }
-
+        
         /// <value>
         /// The version of the database.
         /// </value>
@@ -80,5 +80,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseVersion is required.")]
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
+        
     }
 }

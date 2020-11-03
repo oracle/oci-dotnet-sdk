@@ -31,18 +31,19 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Log analytics entity type category. Category will be used for grouping and filtering.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-
+        
         /// <value>
         /// Log analytics entity type property definition.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<EntityTypeProperty> Properties { get; set; }
+        
     }
 }

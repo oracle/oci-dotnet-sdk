@@ -37,12 +37,13 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "metricType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MetricTypeEnum> MetricType { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Threshold is required.")]
         [JsonProperty(PropertyName = "threshold")]
         public Threshold Threshold { get; set; }
+        
     }
 }

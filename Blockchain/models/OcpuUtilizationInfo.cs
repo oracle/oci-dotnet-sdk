@@ -26,17 +26,18 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// Number of OCPU utilized
         /// </value>
         [JsonProperty(PropertyName = "ocpuUtilizationNumber")]
         public System.Nullable<float> OcpuUtilizationNumber { get; set; }
-
+        
         /// <value>
         /// Number of total OCPU capacity on the host
         /// </value>
         [JsonProperty(PropertyName = "ocpuCapacityNumber")]
         public System.Nullable<float> OcpuCapacityNumber { get; set; }
+        
     }
 }

@@ -30,5 +30,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ParsedResponse is required.")]
         [JsonProperty(PropertyName = "parsedResponse")]
         public System.Collections.Generic.List<ParsedContent> ParsedResponse { get; set; }
+        
     }
 }

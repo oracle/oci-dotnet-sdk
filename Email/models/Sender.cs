@@ -26,19 +26,19 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Email address of the sender.
         /// </value>
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
-
+        
         /// <value>
         /// The unique OCID of the sender.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Value of the SPF field. For more information about SPF, please see
         /// [SPF Authentication](https://docs.us-phoenix-1.oraclecloud.com/Content/Email/Concepts/overview.htm#components).
@@ -46,7 +46,7 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "isSpf")]
         public System.Nullable<bool> IsSpf { get; set; }
-        ///
+                ///
         /// <value>
         /// The sender's current lifecycle state.
         /// </value>
@@ -68,7 +68,7 @@ namespace Oci.EmailService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the approved sender was added in \"YYYY-MM-ddThh:mmZ\"
         /// format with a Z offset, as defined by RFC 3339.
@@ -76,7 +76,7 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -84,7 +84,7 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -92,5 +92,6 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

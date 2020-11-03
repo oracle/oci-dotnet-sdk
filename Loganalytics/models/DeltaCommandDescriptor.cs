@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "step")]
         public System.Nullable<int> Step { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "DELTA";
     }
 }

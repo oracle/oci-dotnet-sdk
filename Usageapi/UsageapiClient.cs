@@ -60,7 +60,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the list of config for UI dropdown list
+        /// Returns the configurations list for the UI drop-down list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -99,7 +99,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the usage for the given account
+        /// Returns usage for the given account.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

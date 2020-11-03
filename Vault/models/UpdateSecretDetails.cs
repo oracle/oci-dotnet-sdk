@@ -29,7 +29,7 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "currentVersionNumber")]
         public System.Nullable<long> CurrentVersionNumber { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -37,13 +37,13 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A brief description of the secret. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -51,7 +51,7 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Additional metadata that you can use to provide context about how to use the secret or during rotation or
         /// other administrative tasks. For example, for a secret that you use to connect to a database, the additional
@@ -60,14 +60,15 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> Metadata { get; set; }
-
+        
         [JsonProperty(PropertyName = "secretContent")]
         public SecretContentDetails SecretContent { get; set; }
-
+        
         /// <value>
         /// A list of rules to control how the secret is used and managed.
         /// </value>
         [JsonProperty(PropertyName = "secretRules")]
         public System.Collections.Generic.List<SecretRule> SecretRules { get; set; }
+        
     }
 }

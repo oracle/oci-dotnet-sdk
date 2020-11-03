@@ -29,23 +29,23 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         [JsonProperty(PropertyName = "version")]
         public PatchDetails Version { get; set; }
-
+        
         /// <value>
         /// The public key portion of the key pair to use for SSH access to the DB system. Multiple public keys can be provided. The length of the combined keys cannot exceed 40,000 characters.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKeys")]
         public System.Collections.Generic.List<string> SshPublicKeys { get; set; }
-
+        
         /// <value>
         /// The size, in gigabytes, to scale the attached storage up to for this virtual machine DB system. This value must be greater than current storage size. Note that the resulting total storage size attached will be greater than the amount requested to allow for REDO/RECO space and software volume. Applies only to virtual machine DB systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -62,7 +62,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The shape of the DB system. The shape determines resources allocated to the DB system.
         /// - For virtual machine shapes, the number of CPU cores and memory
@@ -72,7 +72,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -81,14 +81,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that the backup network of this DB system belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm). Applicable only to Exadata systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupNetworkNsgIds")]
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle Database license model that applies to all databases on the DB system. The default is LICENSE_INCLUDED.
         /// 
@@ -108,8 +108,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         [JsonProperty(PropertyName = "maintenanceWindowDetails")]
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
+        
     }
 }

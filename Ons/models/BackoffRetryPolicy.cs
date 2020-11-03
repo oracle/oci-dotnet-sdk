@@ -32,7 +32,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "MaxRetryDuration is required.")]
         [JsonProperty(PropertyName = "maxRetryDuration")]
         public System.Nullable<int> MaxRetryDuration { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of delivery policy.
         /// 
@@ -54,5 +54,6 @@ namespace Oci.OnsService.Models
         [JsonProperty(PropertyName = "policyType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PolicyTypeEnum> PolicyType { get; set; }
+        
     }
 }

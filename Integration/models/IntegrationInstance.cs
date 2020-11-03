@@ -30,7 +30,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Integration Instance Identifier, can be renamed.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// Standard or Enterprise type
         /// </value>
@@ -72,19 +72,19 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "integrationInstanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IntegrationInstanceTypeEnum> IntegrationInstanceType { get; set; }
-
+        
         /// <value>
         /// The time the the IntegrationInstance was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the IntegrationInstance was updated. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the integration instance.
         /// </value>
@@ -112,13 +112,13 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// An message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "stateMessage")]
         public string StateMessage { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name,
         /// type or scope. Exists for cross-compatibility only.
@@ -126,7 +126,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to
         /// namespaces.
@@ -134,7 +134,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Bring your own license.
         /// </value>
@@ -144,7 +144,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "IsByol is required.")]
         [JsonProperty(PropertyName = "isByol")]
         public System.Nullable<bool> IsByol { get; set; }
-
+        
         /// <value>
         /// The Integration Instance URL.
         /// </value>
@@ -154,7 +154,7 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "InstanceUrl is required.")]
         [JsonProperty(PropertyName = "instanceUrl")]
         public string InstanceUrl { get; set; }
-
+        
         /// <value>
         /// The number of configured message packs (if any)
         /// </value>
@@ -164,13 +164,13 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "MessagePacks is required.")]
         [JsonProperty(PropertyName = "messagePacks")]
         public System.Nullable<int> MessagePacks { get; set; }
-
+        
         /// <value>
         /// The file server is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
-        ///
+                ///
         /// <value>
         /// The entitlement used for billing purposes.
         /// </value>
@@ -190,5 +190,6 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "consumptionModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "UserStatusAnnouncementId is required.")]
         [JsonProperty(PropertyName = "userStatusAnnouncementId")]
         public string UserStatusAnnouncementId { get; set; }
-
+        
         /// <value>
         /// The OCID of the user that this status is associated with.
         /// </value>
@@ -41,12 +41,13 @@ namespace Oci.AnnouncementsService.Models
         [Required(ErrorMessage = "UserId is required.")]
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// The date and time the announcement was acknowledged, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-01-01T17:43:01.389+0000
         /// </value>
         [JsonProperty(PropertyName = "timeAcknowledged")]
         public System.Nullable<System.DateTime> TimeAcknowledged { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "VolumeAttachmentId is required.")]
         [JsonProperty(PropertyName = "volumeAttachmentId")]
         public string VolumeAttachmentId { get; set; }
-
+        
         /// <value>
         /// The size of the volume in GBs.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "VolumeSizeInGBs is required.")]
         [JsonProperty(PropertyName = "volumeSizeInGBs")]
         public System.Nullable<long> VolumeSizeInGBs { get; set; }
+        
     }
 }

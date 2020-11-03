@@ -28,26 +28,29 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxBuckets")]
         public System.Nullable<int> MaxBuckets { get; set; }
-
+        
         /// <value>
         /// Size of each numeric range if specified. Data type should match numeric field data type specified in the query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "span")]
         public System.Nullable<decimal> Span { get; set; }
-
+        
         /// <value>
         /// List of the specified numeric ranges.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ranges")]
         public System.Collections.Generic.List<BucketRange> Ranges { get; set; }
-
+        
         /// <value>
         /// Default value to use in place of null if a result does not fit into any of the specified / calculated ranges.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "BUCKET";
     }
 }

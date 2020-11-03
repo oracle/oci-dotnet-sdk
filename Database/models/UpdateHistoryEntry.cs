@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the maintenance update.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "UpdateId is required.")]
         [JsonProperty(PropertyName = "updateId")]
         public string UpdateId { get; set; }
-        ///
+                ///
         /// <value>
         /// The update action.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "updateAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateActionEnum> UpdateAction { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of cloud VM cluster maintenance update.
         /// </value>
@@ -80,7 +80,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "updateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypeEnum> UpdateType { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the maintenance update operation.
         /// </value>
@@ -104,14 +104,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Descriptive text providing additional details about the lifecycle state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The date and time when the maintenance update action started.
         /// </value>
@@ -121,11 +121,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time when the maintenance update action completed.
         /// </value>
         [JsonProperty(PropertyName = "timeCompleted")]
         public System.Nullable<System.DateTime> TimeCompleted { get; set; }
+        
     }
 }

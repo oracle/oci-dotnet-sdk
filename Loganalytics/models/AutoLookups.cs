@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "canonicalLink")]
         public string CanonicalLink { get; set; }
-
+        
         /// <value>
         /// total count
         /// </value>
         [JsonProperty(PropertyName = "totalCount")]
         public System.Nullable<long> TotalCount { get; set; }
+        
     }
 }

@@ -28,7 +28,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The organization on whose infrastructure this vantage point resides.
         /// Provider names are not unique, as Oracle Cloud Infrastructure maintains
@@ -37,16 +37,16 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "providerName")]
         public string ProviderName { get; set; }
-
+        
         /// <value>
         /// The unique, permanent name for the vantage point.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         [JsonProperty(PropertyName = "geo")]
         public Geolocation Geo { get; set; }
-
+        
         /// <value>
         /// An array of objects that describe how traffic to this vantage point is
         /// routed, including which prefixes and ASNs connect it to the internet.
@@ -62,5 +62,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "routing")]
         public System.Collections.Generic.List<Routing> Routing { get; set; }
+        
     }
 }

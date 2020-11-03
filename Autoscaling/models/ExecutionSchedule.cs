@@ -23,16 +23,7 @@ namespace Oci.AutoscalingService.Models
     public class ExecutionSchedule 
     {
         
-        /// <value>
-        /// The type of ExecutionSchedule.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the time zone the schedule is in.
         /// </value>
@@ -52,6 +43,7 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "timezone")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TimezoneEnum> Timezone { get; set; }
+        
     }
 
     public class ExecutionScheduleModelConverter : JsonConverter

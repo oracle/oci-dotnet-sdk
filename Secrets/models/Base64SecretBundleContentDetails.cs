@@ -26,5 +26,8 @@ namespace Oci.SecretsService.Models
         /// </value>
         [JsonProperty(PropertyName = "content")]
         public string Content { get; set; }
+        
+        [JsonProperty(PropertyName = "contentType")]
+        private readonly string contentType = "BASE64";
     }
 }

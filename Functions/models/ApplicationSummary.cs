@@ -26,23 +26,27 @@ namespace Oci.FunctionsService.Models
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the application.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The display name of the application. The display name is unique within the compartment containing the application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The current state of the application.
         /// 
@@ -50,14 +54,14 @@ namespace Oci.FunctionsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Application.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s of the subnets in which to run functions in the application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -66,7 +70,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -74,7 +78,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The time the application was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
         /// timestamp format.
@@ -83,7 +87,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the application was updated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
         /// timestamp format.
@@ -91,5 +95,6 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

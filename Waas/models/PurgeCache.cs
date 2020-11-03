@@ -26,5 +26,6 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<string> Resources { get; set; }
+        
     }
 }

@@ -34,19 +34,19 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description of the tenancy.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The region key for the tenancy's home region. For the full list of supported regions, see
         /// [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm).
@@ -55,13 +55,13 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "homeRegionKey")]
         public string HomeRegionKey { get; set; }
-
+        
         /// <value>
         /// Url which refers to the UPI IDCS compatibility layer endpoint configured for this Tenant's home region.
         /// </value>
         [JsonProperty(PropertyName = "upiIdcsCompatibilityLayerEndpoint")]
         public string UpiIdcsCompatibilityLayerEndpoint { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -69,7 +69,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -77,5 +77,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

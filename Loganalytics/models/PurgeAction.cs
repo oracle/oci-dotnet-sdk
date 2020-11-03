@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "QueryString is required.")]
         [JsonProperty(PropertyName = "queryString")]
         public string QueryString { get; set; }
-
+        
         /// <value>
         /// the type of the log data to be purged
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
-
+        
         /// <value>
         /// The duration of data to be retained, which is used to
         /// calculate the timeDataEnded when the task fires.
@@ -57,7 +57,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "PurgeDuration is required.")]
         [JsonProperty(PropertyName = "purgeDuration")]
         public string PurgeDuration { get; set; }
-
+        
         /// <value>
         /// the compartment OCID under which the data will be purged
         /// </value>
@@ -67,11 +67,14 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "PurgeCompartmentId is required.")]
         [JsonProperty(PropertyName = "purgeCompartmentId")]
         public string PurgeCompartmentId { get; set; }
-
+        
         /// <value>
         /// if true, purge child compartments data
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "PURGE";
     }
 }

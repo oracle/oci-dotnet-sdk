@@ -33,7 +33,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// A description of the software in the bundle.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

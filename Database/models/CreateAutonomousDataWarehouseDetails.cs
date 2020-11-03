@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy.
         /// </value>
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbName is required.")]
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The number of CPU Cores to be made available to the database.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// Size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed.
         /// 
@@ -64,7 +64,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DataStorageSizeInTBs is required.")]
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
-
+        
         /// <value>
         /// The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
         /// </value>
@@ -74,13 +74,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the Autonomous Data Warehouse. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Data Warehouse. The default is BRING_YOUR_OWN_LICENSE.
         /// 
@@ -100,7 +100,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -109,7 +109,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -117,5 +117,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

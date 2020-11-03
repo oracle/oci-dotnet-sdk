@@ -42,8 +42,9 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "target")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TargetEnum> Target { get; set; }
-
+        
         [JsonProperty(PropertyName = "exclusions")]
         public System.Collections.Generic.List<string> Exclusions { get; set; }
+        
     }
 }

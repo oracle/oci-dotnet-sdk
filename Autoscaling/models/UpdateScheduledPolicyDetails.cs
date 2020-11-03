@@ -21,5 +21,8 @@ namespace Oci.AutoscalingService.Models
         
         [JsonProperty(PropertyName = "executionSchedule")]
         public ExecutionSchedule ExecutionSchedule { get; set; }
+        
+        [JsonProperty(PropertyName = "policyType")]
+        private readonly string policyType = "scheduled";
     }
 }

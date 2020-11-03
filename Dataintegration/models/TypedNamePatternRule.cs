@@ -26,25 +26,25 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "types")]
         public System.Collections.Generic.List<System.Object> Types { get; set; }
-
+        
         /// <value>
         /// Specifies whether to skip remaining rules when a match is found.
         /// </value>
         [JsonProperty(PropertyName = "isSkipRemainingRulesOnMatch")]
         public System.Nullable<bool> IsSkipRemainingRulesOnMatch { get; set; }
-
+        
         /// <value>
         /// Reference to a typed object. This can be either a key value to an object within the document, a shall referenced to a `TypedObject`, or a full `TypedObject` definition.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Object Scope { get; set; }
-
+        
         /// <value>
         /// Specifies whether to cascade or not.
         /// </value>
         [JsonProperty(PropertyName = "isCascade")]
         public System.Nullable<bool> IsCascade { get; set; }
-        ///
+                ///
         /// <value>
         /// The pattern matching strategy.
         /// </value>
@@ -64,13 +64,13 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "matchingStrategy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MatchingStrategyEnum> MatchingStrategy { get; set; }
-
+        
         /// <value>
         /// Specifies if the rule is case sensitive.
         /// </value>
         [JsonProperty(PropertyName = "isCaseSensitive")]
         public System.Nullable<bool> IsCaseSensitive { get; set; }
-        ///
+                ///
         /// <value>
         /// The rule type.
         /// </value>
@@ -88,17 +88,20 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "ruleType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RuleTypeEnum> RuleType { get; set; }
-
+        
         /// <value>
         /// The rule pattern.
         /// </value>
         [JsonProperty(PropertyName = "pattern")]
         public string Pattern { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "names")]
         public System.Collections.Generic.List<string> Names { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "TYPED_NAME_PATTERN_RULE";
     }
 }

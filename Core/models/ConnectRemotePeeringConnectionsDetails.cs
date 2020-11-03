@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PeerId is required.")]
         [JsonProperty(PropertyName = "peerId")]
         public string PeerId { get; set; }
-
+        
         /// <value>
         /// The name of the region that contains the RPC you want to peer with.
         /// <br/>
@@ -42,5 +42,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PeerRegionName is required.")]
         [JsonProperty(PropertyName = "peerRegionName")]
         public string PeerRegionName { get; set; }
+        
     }
 }

@@ -55,58 +55,49 @@ namespace Oci.LoggingService.Models
             MultilineGrok
         };
 
-        /// <value>
-        /// Type of fluent parser.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ParserType is required.")]
-        [JsonProperty(PropertyName = "parserType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ParserTypeEnum> ParserType { get; set; }
-
+        
         /// <value>
         /// Specify time field for the event time. If the event doesn't have this field, the current time is used.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeKey")]
         public string FieldTimeKey { get; set; }
-
+        
         /// <value>
         /// Specify types for converting a field into another type.
         /// </value>
         [JsonProperty(PropertyName = "types")]
         public System.Collections.Generic.Dictionary<string, string> Types { get; set; }
-
+        
         /// <value>
         /// Specify the null value pattern.
         /// </value>
         [JsonProperty(PropertyName = "nullValuePattern")]
         public string NullValuePattern { get; set; }
-
+        
         /// <value>
         /// If true, an empty string field is replaced with nil.
         /// </value>
         [JsonProperty(PropertyName = "isNullEmptyString")]
         public System.Nullable<bool> IsNullEmptyString { get; set; }
-
+        
         /// <value>
         /// If true, use Fluent::EventTime.now(current time) as a timestamp when time_key is specified.
         /// </value>
         [JsonProperty(PropertyName = "isEstimateCurrentEvent")]
         public System.Nullable<bool> IsEstimateCurrentEvent { get; set; }
-
+        
         /// <value>
         /// If true, keep time field in the record.
         /// </value>
         [JsonProperty(PropertyName = "isKeepTimeKey")]
         public System.Nullable<bool> IsKeepTimeKey { get; set; }
-
+        
         /// <value>
         /// Specify the timeout for parse processing. This is mainly for detecting an incorrect regexp pattern.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMilliseconds")]
         public System.Nullable<int> TimeoutInMilliseconds { get; set; }
+        
     }
 
     public class UnifiedAgentParserModelConverter : JsonConverter

@@ -31,7 +31,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The time the log message was written. An RFC3339 formatted datetime string
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

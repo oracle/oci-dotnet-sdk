@@ -32,7 +32,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment in which to create the mount target.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -51,7 +51,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The hostname for the mount target's IP address, used for
         /// DNS resolution. The value is the hostname portion of the private IP
@@ -68,7 +68,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// A private IP address of your choice. Must be an available IP address within
         /// the subnet's CIDR. If you don't specify a value, Oracle automatically
@@ -78,7 +78,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet in which to create the mount target.
         /// 
@@ -89,7 +89,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// A list of Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with this mount target.
         /// A maximum of 5 is allowed.
@@ -99,7 +99,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.
@@ -108,7 +108,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -116,5 +116,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

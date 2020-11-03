@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Data Warehouse backup.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AutonomousDataWarehouseId is required.")]
         [JsonProperty(PropertyName = "autonomousDataWarehouseId")]
         public string AutonomousDataWarehouseId { get; set; }
+        
     }
 }

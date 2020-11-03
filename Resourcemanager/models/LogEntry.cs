@@ -36,7 +36,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the severity level of the log entry.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "level")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LevelEnum> Level { get; set; }
-
+        
         /// <value>
         /// The date and time of the log entry.
         /// Format is defined by RFC3339.
@@ -70,11 +70,12 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-
+        
         /// <value>
         /// The log entry value.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

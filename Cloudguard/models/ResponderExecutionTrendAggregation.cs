@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DimensionsMap is required.")]
         [JsonProperty(PropertyName = "dimensionsMap")]
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
-
+        
         /// <value>
         /// Start Time in epoch seconds
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "StartTimestamp is required.")]
         [JsonProperty(PropertyName = "startTimestamp")]
         public System.Nullable<decimal> StartTimestamp { get; set; }
-
+        
         /// <value>
         /// Duration
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DurationInSeconds is required.")]
         [JsonProperty(PropertyName = "durationInSeconds")]
         public System.Nullable<int> DurationInSeconds { get; set; }
-
+        
         /// <value>
         /// The number of remediations for a given time.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Count is required.")]
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

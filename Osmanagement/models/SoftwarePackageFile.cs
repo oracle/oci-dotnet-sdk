@@ -26,13 +26,13 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// type of the file
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// The date and time of the last modification to this file, as described
         /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -40,23 +40,24 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }
-
+        
         /// <value>
         /// checksum of the file
         /// </value>
         [JsonProperty(PropertyName = "checksum")]
         public string Checksum { get; set; }
-
+        
         /// <value>
         /// type of the checksum
         /// </value>
         [JsonProperty(PropertyName = "checksumType")]
         public string ChecksumType { get; set; }
-
+        
         /// <value>
         /// size of the file in bytes
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
         public System.Nullable<long> SizeInBytes { get; set; }
+        
     }
 }

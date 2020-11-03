@@ -26,41 +26,42 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "commonFieldName")]
         public string CommonFieldName { get; set; }
-
+        
         /// <value>
         /// default match value
         /// </value>
         [JsonProperty(PropertyName = "defaultMatchValue")]
         public string DefaultMatchValue { get; set; }
-
+        
         /// <value>
         /// display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// is common field
         /// </value>
         [JsonProperty(PropertyName = "isCommonField")]
         public System.Nullable<bool> IsCommonField { get; set; }
-
+        
         /// <value>
         /// match operator
         /// </value>
         [JsonProperty(PropertyName = "matchOperator")]
         public string MatchOperator { get; set; }
-
+        
         /// <value>
         /// name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// position
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<long> Position { get; set; }
+        
     }
 }

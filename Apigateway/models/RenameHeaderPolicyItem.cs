@@ -33,7 +33,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "From is required.")]
         [JsonProperty(PropertyName = "from")]
         public string From { get; set; }
-
+        
         /// <value>
         /// The new name of the header.  This name must be unique across transformation policies.
         /// 
@@ -44,5 +44,6 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "To is required.")]
         [JsonProperty(PropertyName = "to")]
         public string To { get; set; }
+        
     }
 }

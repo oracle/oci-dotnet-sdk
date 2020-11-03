@@ -37,7 +37,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Text is required.")]
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
-
+        
         /// <value>
         /// SQL counts for a given insight. For example insight text `2 of 10 SQLs have degrading response time` will have values as [2,10]\"
         /// 
@@ -48,7 +48,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Values is required.")]
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<int> Values { get; set; }
-
+        
         /// <value>
         /// Insight category. It would be one of the following
         /// DEGRADING,
@@ -82,5 +82,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
+        
     }
 }

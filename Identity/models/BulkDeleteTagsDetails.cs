@@ -30,5 +30,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagDefinitionIds is required.")]
         [JsonProperty(PropertyName = "tagDefinitionIds")]
         public System.Collections.Generic.List<string> TagDefinitionIds { get; set; }
+        
     }
 }

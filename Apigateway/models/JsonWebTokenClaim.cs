@@ -30,7 +30,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The list of acceptable values for a given claim.
         /// If this value is \"null\" or empty and \"isRequired\" set to \"true\", then
@@ -39,7 +39,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
-
+        
         /// <value>
         /// Whether the claim is required to be present in the JWT or not. If set
         /// to \"false\", the claim values will be matched only if the claim is
@@ -48,5 +48,6 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
+        
     }
 }

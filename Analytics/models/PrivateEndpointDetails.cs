@@ -32,7 +32,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The subnet OCID for the private endpoint.
         /// 
@@ -43,5 +43,8 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        [JsonProperty(PropertyName = "networkEndpointType")]
+        private readonly string networkEndpointType = "PRIVATE";
     }
 }

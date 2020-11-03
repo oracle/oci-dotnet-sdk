@@ -34,7 +34,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Object is required.")]
         [JsonProperty(PropertyName = "object")]
         public string Object { get; set; }
-
+        
         /// <value>
         /// The optional Content-Type header that defines the standard MIME type format of the object to upload.
         /// Specifying values for this header has no effect on Object Storage behavior. Programs that read the object
@@ -44,7 +44,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "contentType")]
         public string ContentType { get; set; }
-
+        
         /// <value>
         /// The optional Content-Language header that defines the content language of the object to upload. Specifying
         /// values for this header has no effect on Object Storage behavior. Programs that read the object determine what
@@ -54,7 +54,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "contentLanguage")]
         public string ContentLanguage { get; set; }
-
+        
         /// <value>
         /// The optional Content-Encoding header that defines the content encodings that were applied to the object to
         /// upload. Specifying values for this header has no effect on Object Storage behavior. Programs that read the
@@ -65,7 +65,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "contentEncoding")]
         public string ContentEncoding { get; set; }
-
+        
         /// <value>
         /// The optional Content-Disposition header that defines presentational information for the object to be
         /// returned in GetObject and HeadObject responses. Specifying values for this header has no effect on Object
@@ -75,7 +75,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "contentDisposition")]
         public string ContentDisposition { get; set; }
-
+        
         /// <value>
         /// The optional Cache-Control header that defines the caching behavior value to be returned in GetObject and
         /// HeadObject responses. Specifying values for this header has no effect on Object Storage behavior. Programs
@@ -85,7 +85,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "cacheControl")]
         public string CacheControl { get; set; }
-
+        
         /// <value>
         /// Arbitrary string keys and values for the user-defined metadata for the object.
         /// Keys must be in \"opc-meta-*\" format. Avoid entering confidential information.
@@ -93,5 +93,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
     }
 }

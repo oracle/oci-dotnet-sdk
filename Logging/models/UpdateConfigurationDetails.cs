@@ -27,8 +27,9 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public SourceUpdateDetails Source { get; set; }
-
+        
         [JsonProperty(PropertyName = "archiving")]
         public Archiving Archiving { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.LoggingsearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "resultCount")]
         public System.Nullable<int> ResultCount { get; set; }
-
+        
         /// <value>
         /// Total number of field schema information.
         /// </value>
         [JsonProperty(PropertyName = "fieldCount")]
         public System.Nullable<int> FieldCount { get; set; }
+        
     }
 }

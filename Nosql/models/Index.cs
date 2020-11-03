@@ -26,31 +26,31 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the table to which this index belongs.
         /// </value>
         [JsonProperty(PropertyName = "tableName")]
         public string TableName { get; set; }
-
+        
         /// <value>
         /// the OCID of the table to which this index belongs.
         /// </value>
         [JsonProperty(PropertyName = "tableId")]
         public string TableId { get; set; }
-
+        
         /// <value>
         /// A set of keys for a secondary index.
         /// </value>
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<IndexKey> Keys { get; set; }
-        ///
+                ///
         /// <value>
         /// The state of an index.
         /// </value>
@@ -76,12 +76,13 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

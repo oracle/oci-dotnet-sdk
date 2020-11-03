@@ -26,5 +26,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sharedSecret")]
         public string SharedSecret { get; set; }
+        
     }
 }

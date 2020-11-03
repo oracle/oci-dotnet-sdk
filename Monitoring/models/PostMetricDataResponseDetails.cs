@@ -31,7 +31,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "FailedMetricsCount is required.")]
         [JsonProperty(PropertyName = "failedMetricsCount")]
         public System.Nullable<int> FailedMetricsCount { get; set; }
-
+        
         /// <value>
         /// A list of records identifying metric objects that failed input validation
         /// and the reasons for the failures.
@@ -39,5 +39,6 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "failedMetrics")]
         public System.Collections.Generic.List<FailedMetricRecord> FailedMetrics { get; set; }
+        
     }
 }

@@ -24,5 +24,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "transferApplianceObjects")]
         public System.Collections.Generic.List<TransferApplianceSummary> TransferApplianceObjects { get; set; }
+        
     }
 }

@@ -35,7 +35,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeAmount is required.")]
         [JsonProperty(PropertyName = "timeAmount")]
         public System.Nullable<long> TimeAmount { get; set; }
-        ///
+                ///
         /// <value>
         /// The unit that should be used to interpret timeAmount.
         /// </value>
@@ -57,5 +57,6 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "timeUnit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TimeUnitEnum> TimeUnit { get; set; }
+        
     }
 }

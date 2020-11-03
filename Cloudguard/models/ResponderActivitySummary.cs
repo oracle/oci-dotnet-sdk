@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// problemId for which Responder activity is associated to.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ProblemId is required.")]
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
-
+        
         /// <value>
         /// Id of the responder rule for the problem
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderRuleId is required.")]
         [JsonProperty(PropertyName = "responderRuleId")]
         public string ResponderRuleId { get; set; }
-
+        
         /// <value>
         /// responder rule type for performing the operation
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "responderType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResponderType> ResponderType { get; set; }
-
+        
         /// <value>
         /// responder rule name
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderRuleName is required.")]
         [JsonProperty(PropertyName = "responderRuleName")]
         public string ResponderRuleName { get; set; }
-
+        
         /// <value>
         /// Responder activity types
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "responderActivityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResponderActivityType> ResponderActivityType { get; set; }
-
+        
         /// <value>
         /// the responder execution status
         /// </value>
@@ -93,7 +93,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "responderExecutionStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResponderExecutionStates> ResponderExecutionStatus { get; set; }
-
+        
         /// <value>
         /// responder activity starting time
         /// </value>
@@ -103,7 +103,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// additional message related to this operation
         /// </value>
@@ -113,5 +113,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
+        
     }
 }

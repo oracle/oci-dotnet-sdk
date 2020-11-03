@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database that has a relationship with the peer Autonomous Database.
         /// 
@@ -44,7 +44,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AutonomousDatabaseId is required.")]
         [JsonProperty(PropertyName = "autonomousDatabaseId")]
         public string AutonomousDatabaseId { get; set; }
-        ///
+                ///
         /// <value>
         /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
         /// </value>
@@ -68,7 +68,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Autonomous Data Guard.
         /// </value>
@@ -98,14 +98,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState, if available.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
         /// </value>
@@ -129,14 +129,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "peerRole")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeerRoleEnum> PeerRole { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer Autonomous Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousDatabaseId")]
         public string PeerAutonomousDatabaseId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Autonomous Data Guard.
         /// </value>
@@ -162,7 +162,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "peerAutonomousDatabaseLifeCycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PeerAutonomousDatabaseLifeCycleStateEnum> PeerAutonomousDatabaseLifeCycleState { get; set; }
-        ///
+                ///
         /// <value>
         /// The protection mode of this Data Guard association. For more information, see
         /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
@@ -186,7 +186,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
-
+        
         /// <value>
         /// The lag time between updates to the primary database and application of the redo data on the standby database,
         /// as computed by the reporting database.
@@ -195,7 +195,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "applyLag")]
         public string ApplyLag { get; set; }
-
+        
         /// <value>
         /// The rate at which redo logs are synced between the associated databases.
         /// <br/>
@@ -203,17 +203,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "applyRate")]
         public string ApplyRate { get; set; }
-
+        
         /// <value>
         /// The date and time the Data Guard association was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time when the last role change action happened.
         /// </value>
         [JsonProperty(PropertyName = "timeLastRoleChanged")]
         public System.Nullable<System.DateTime> TimeLastRoleChanged { get; set; }
+        
     }
 }

@@ -20,5 +20,8 @@ namespace Oci.DataintegrationService.Models
     /// </summary>
     public class Distinct : Operator
     {
-            }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DISTINCT_OPERATOR";
+    }
 }

@@ -23,5 +23,8 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "channels")]
         public System.Collections.Generic.List<string> Channels { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "WINDOWS_EVENT_LOG";
     }
 }

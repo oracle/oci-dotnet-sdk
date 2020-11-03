@@ -30,5 +30,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
     }
 }

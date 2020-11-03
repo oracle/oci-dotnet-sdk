@@ -31,7 +31,7 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
-
+        
         /// <value>
         /// status of current work request.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationStatus> Status { get; set; }
-
+        
         /// <value>
         /// The id of the work request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The ocid of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
@@ -66,25 +66,25 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Description of the type of work.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A progress or error message, if there is any.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -96,12 +96,13 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
+        
     }
 }

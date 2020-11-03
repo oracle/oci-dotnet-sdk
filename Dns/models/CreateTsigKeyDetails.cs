@@ -37,7 +37,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Algorithm is required.")]
         [JsonProperty(PropertyName = "algorithm")]
         public string Algorithm { get; set; }
-
+        
         /// <value>
         /// A globally unique domain name identifying the key for a given pair of hosts.
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the TSIG key.
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A base64 string encoding the binary shared secret.
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Secret is required.")]
         [JsonProperty(PropertyName = "secret")]
         public string Secret { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -77,7 +77,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -87,5 +87,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

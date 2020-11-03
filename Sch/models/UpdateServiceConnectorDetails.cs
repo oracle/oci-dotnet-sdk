@@ -29,39 +29,40 @@ namespace Oci.SchService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The description of the resource. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         [JsonProperty(PropertyName = "source")]
         public SourceDetails Source { get; set; }
-
+        
         /// <value>
         /// The list of the tasks.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tasks")]
         public System.Collections.Generic.List<TaskDetails> Tasks { get; set; }
-
+        
         [JsonProperty(PropertyName = "target")]
         public TargetDetails Target { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

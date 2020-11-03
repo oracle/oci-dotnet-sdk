@@ -26,7 +26,7 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "condition")]
         public string Condition { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of join.
         /// </value>
@@ -48,5 +48,8 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "policy")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PolicyEnum> Policy { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "JOIN";
     }
 }

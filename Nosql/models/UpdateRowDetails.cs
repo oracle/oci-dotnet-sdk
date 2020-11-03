@@ -31,7 +31,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The map of values from a row.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Collections.Generic.Dictionary<string, System.Object> Value { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies a condition for the put operation.
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "option")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OptionEnum> Option { get; set; }
-
+        
         /// <value>
         /// If true, and the put fails due to an option setting, then
         /// the existing row will be returned.
@@ -67,26 +67,26 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "isGetReturnRow")]
         public System.Nullable<bool> IsGetReturnRow { get; set; }
-
+        
         /// <value>
         /// Timeout setting for the put.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMs")]
         public System.Nullable<int> TimeoutInMs { get; set; }
-
+        
         /// <value>
         /// Time-to-live for the row, in days.
         /// </value>
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
-
+        
         /// <value>
         /// If true, set time-to-live for this row to the table's default.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isTtlUseTableDefault")]
         public System.Nullable<bool> IsTtlUseTableDefault { get; set; }
-
+        
         /// <value>
         /// Sets the number of generated identity values that are
         /// requested from the server during a put. If present and greater than 0,
@@ -95,7 +95,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "identityCacheSize")]
         public System.Nullable<int> IdentityCacheSize { get; set; }
-
+        
         /// <value>
         /// If present and true, the presented row value must exactly
         /// match the table's schema.  Otherwise, rows with missing
@@ -104,5 +104,6 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "isExactMatch")]
         public System.Nullable<bool> IsExactMatch { get; set; }
+        
     }
 }

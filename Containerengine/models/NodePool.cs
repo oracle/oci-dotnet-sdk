@@ -26,109 +26,110 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment in which the node pool exists.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the cluster to which this node pool is attached.
         /// </value>
         [JsonProperty(PropertyName = "clusterId")]
         public string ClusterId { get; set; }
-
+        
         /// <value>
         /// The name of the node pool.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes running on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to each underlying OCI instance in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "nodeMetadata")]
         public System.Collections.Generic.Dictionary<string, string> NodeMetadata { get; set; }
-
+        
         /// <value>
         /// Deprecated. see `nodeSource`. The OCID of the image running on the nodes in the node pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeImageId")]
         public string NodeImageId { get; set; }
-
+        
         /// <value>
         /// Deprecated. see `nodeSource`. The name of the image running on the nodes in the node pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeImageName")]
         public string NodeImageName { get; set; }
-
+        
         /// <value>
         /// The shape configuration of the nodes.
         /// </value>
         [JsonProperty(PropertyName = "nodeShapeConfig")]
         public NodeShapeConfig NodeShapeConfig { get; set; }
-
+        
         /// <value>
         /// Deprecated. see `nodeSourceDetails`. Source running on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeSource")]
         public NodeSourceOption NodeSource { get; set; }
-
+        
         /// <value>
         /// Source running on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeSourceDetails")]
         public NodeSourceDetails NodeSourceDetails { get; set; }
-
+        
         /// <value>
         /// The name of the node shape of the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeShape")]
         public string NodeShape { get; set; }
-
+        
         /// <value>
         /// A list of key/value pairs to add to nodes after they join the Kubernetes cluster.
         /// </value>
         [JsonProperty(PropertyName = "initialNodeLabels")]
         public System.Collections.Generic.List<KeyValue> InitialNodeLabels { get; set; }
-
+        
         /// <value>
         /// The SSH public key on each node in the node pool on launch.
         /// </value>
         [JsonProperty(PropertyName = "sshPublicKey")]
         public string SshPublicKey { get; set; }
-
+        
         /// <value>
         /// The number of nodes in each subnet.
         /// </value>
         [JsonProperty(PropertyName = "quantityPerSubnet")]
         public System.Nullable<int> QuantityPerSubnet { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the subnets in which to place nodes for this node pool.
         /// </value>
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
-
+        
         /// <value>
         /// The nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<Node> Nodes { get; set; }
-
+        
         /// <value>
         /// The configuration of nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "nodeConfigDetails")]
         public NodePoolNodeConfigDetails NodeConfigDetails { get; set; }
+        
     }
 }

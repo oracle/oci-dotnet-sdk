@@ -41,11 +41,12 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The time to consume from if type is AT_TIME.
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public System.Nullable<System.DateTime> Time { get; set; }
+        
     }
 }

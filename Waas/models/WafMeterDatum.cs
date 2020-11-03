@@ -24,59 +24,60 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeObserved")]
         public System.Nullable<System.DateTime> TimeObserved { get; set; }
-
+        
         /// <value>
         /// The number of seconds this data covers.
         /// </value>
         [JsonProperty(PropertyName = "timeRangeInSeconds")]
         public System.Nullable<int> TimeRangeInSeconds { get; set; }
-
+        
         /// <value>
         /// The tenancy OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
-
+        
         /// <value>
         /// The compartment OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The policy OCID of the data.
         /// </value>
         [JsonProperty(PropertyName = "waasPolicyId")]
         public string WaasPolicyId { get; set; }
-
+        
         /// <value>
         /// True if origin (endpoint) is an OCI resource. False if external.
         /// </value>
         [JsonProperty(PropertyName = "isOciOrigin")]
         public System.Nullable<bool> IsOciOrigin { get; set; }
-
+        
         /// <value>
         /// True if bot manager is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isBotEnabled")]
         public System.Nullable<bool> IsBotEnabled { get; set; }
-
+        
         /// <value>
         /// The number of incoming requests.
         /// </value>
         [JsonProperty(PropertyName = "requestCount")]
         public System.Nullable<int> RequestCount { get; set; }
-
+        
         /// <value>
         /// Traffic in bytes.
         /// </value>
         [JsonProperty(PropertyName = "trafficInBytes")]
         public System.Nullable<int> TrafficInBytes { get; set; }
-
+        
         /// <value>
         /// The tag slug for the specified `waasPolicyId`.
         /// </value>
         [JsonProperty(PropertyName = "tagSlug")]
         public System.Byte[] TagSlug { get; set; }
+        
     }
 }

@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxValues")]
         public System.Nullable<int> MaxValues { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "FIELD_SUMMARY";
     }
 }

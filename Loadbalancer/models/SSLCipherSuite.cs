@@ -208,7 +208,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A list of SSL ciphers the load balancer must support for HTTPS or SSL connections.
         /// <br/>
@@ -323,5 +323,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Ciphers is required.")]
         [JsonProperty(PropertyName = "ciphers")]
         public System.Collections.Generic.List<string> Ciphers { get; set; }
+        
     }
 }

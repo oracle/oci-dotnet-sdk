@@ -26,11 +26,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "field")]
         public string Field { get; set; }
-
+        
         /// <value>
         /// Array of values that the search results needs to be filtered by.
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
+        
     }
 }

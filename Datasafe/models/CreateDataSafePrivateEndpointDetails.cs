@@ -30,7 +30,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the VCN.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet.
         /// </value>
@@ -60,26 +60,26 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The private IP address of the private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointIp")]
         public string PrivateEndpointIp { get; set; }
-
+        
         /// <value>
         /// The description of the private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCIDs of the network security groups that the private endpoint belongs to.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
@@ -87,7 +87,7 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
@@ -95,5 +95,6 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

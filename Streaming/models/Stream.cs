@@ -32,7 +32,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the stream.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The number of partitions in the stream.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Partitions is required.")]
         [JsonProperty(PropertyName = "partitions")]
         public System.Nullable<int> Partitions { get; set; }
-
+        
         /// <value>
         /// The retention period of the stream, in hours. This property is read-only.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "RetentionInHours is required.")]
         [JsonProperty(PropertyName = "retentionInHours")]
         public System.Nullable<int> RetentionInHours { get; set; }
-
+        
         /// <value>
         /// The OCID of the stream.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the stream pool that contains the stream.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "StreamPoolId is required.")]
         [JsonProperty(PropertyName = "streamPoolId")]
         public string StreamPoolId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the stream.
         /// </value>
@@ -112,13 +112,13 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Any additional details about the current state of the stream.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStateDetails")]
         public string LifecycleStateDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the stream was created, expressed in in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
         /// <br/>
@@ -130,7 +130,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The endpoint to use when creating the StreamClient to consume or publish messages in the stream.
         /// If the associated stream pool is private, the endpoint is also private and can only be accessed from inside the stream pool's associated subnet.
@@ -142,7 +142,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "MessagesEndpoint is required.")]
         [JsonProperty(PropertyName = "messagesEndpoint")]
         public string MessagesEndpoint { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. Exists for cross-compatibility only.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -151,7 +151,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -159,5 +159,6 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

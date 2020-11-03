@@ -31,5 +31,8 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
+        
+        [JsonProperty(PropertyName = "validatorType")]
+        private readonly string validatorType = "ENUM";
     }
 }

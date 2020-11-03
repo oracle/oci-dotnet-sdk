@@ -34,7 +34,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Header is required.")]
         [JsonProperty(PropertyName = "header")]
         public string Header { get; set; }
-
+        
         /// <value>
         /// A header field value that conforms to RFC 7230.
         /// <br/>
@@ -46,5 +46,8 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "ADD_HTTP_RESPONSE_HEADER";
     }
 }

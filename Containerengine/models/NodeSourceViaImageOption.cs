@@ -27,5 +27,8 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "IMAGE";
     }
 }

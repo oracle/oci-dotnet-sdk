@@ -47,14 +47,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current `lifecycleState`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-        ///
+                ///
         /// <value>
         /// The current value for the IORM objective.
         /// The default is `AUTO`.
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "objective")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectiveEnum> Objective { get; set; }
-
+        
         /// <value>
         /// An array of IORM settings for all the database in
         /// the Exadata DB system.
@@ -90,5 +90,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbPlans")]
         public System.Collections.Generic.List<DbIormConfig> DbPlans { get; set; }
+        
     }
 }

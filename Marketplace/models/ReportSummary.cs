@@ -30,7 +30,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "ReportType is required.")]
         [JsonProperty(PropertyName = "reportType")]
         public string ReportType { get; set; }
-
+        
         /// <value>
         /// The date of the report.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Date is required.")]
         [JsonProperty(PropertyName = "date")]
         public System.Nullable<System.DateTime> Date { get; set; }
-
+        
         /// <value>
         /// The columns in the report.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Columns is required.")]
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<string> Columns { get; set; }
-
+        
         /// <value>
         /// The contents of the report in comma-separated values (CSV) file format.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Content is required.")]
         [JsonProperty(PropertyName = "content")]
         public string Content { get; set; }
+        
     }
 }

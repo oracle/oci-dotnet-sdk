@@ -26,29 +26,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
-
+        
         /// <value>
         /// description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// is active flag
         /// </value>
         [JsonProperty(PropertyName = "isActive")]
         public System.Nullable<bool> IsActive { get; set; }
-
+        
         /// <value>
         /// parameter name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// source Id
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
+        
     }
 }

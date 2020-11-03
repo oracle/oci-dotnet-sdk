@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Reference is required.")]
         [JsonProperty(PropertyName = "reference")]
         public string Reference { get; set; }
-
+        
         /// <value>
         /// Name of the file
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// Processing status of the file.
         /// </value>
@@ -60,77 +60,78 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// Number of estimated chunks for this file. A chunk is a portion of the log file used for the processing.
         /// </value>
         [JsonProperty(PropertyName = "totalChunks")]
         public System.Nullable<decimal> TotalChunks { get; set; }
-
+        
         /// <value>
         /// Number of chunks processed
         /// </value>
         [JsonProperty(PropertyName = "chunksConsumed")]
         public System.Nullable<decimal> ChunksConsumed { get; set; }
-
+        
         /// <value>
         /// Number of chunks processed successfully
         /// </value>
         [JsonProperty(PropertyName = "chunksSuccess")]
         public System.Nullable<decimal> ChunksSuccess { get; set; }
-
+        
         /// <value>
         /// Number of chunks failed processing
         /// </value>
         [JsonProperty(PropertyName = "chunksFail")]
         public System.Nullable<decimal> ChunksFail { get; set; }
-
+        
         /// <value>
         /// The time when this file processing started
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// Name of the log source used for processing this file
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
-
+        
         /// <value>
         /// Name of the entity type
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// Name of the entity associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
-
+        
         /// <value>
         /// Log namespace associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "logNamespace")]
         public string LogNamespace { get; set; }
-
+        
         /// <value>
         /// Log group OCID associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// Log group name associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "logGroupName")]
         public string LogGroupName { get; set; }
-
+        
         /// <value>
         /// The details about upload processing failure
         /// </value>
         [JsonProperty(PropertyName = "failureDetails")]
         public string FailureDetails { get; set; }
+        
     }
 }

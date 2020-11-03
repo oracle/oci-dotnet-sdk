@@ -39,7 +39,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// The bucket in which the in-progress multipart upload is stored.
         /// </value>
@@ -49,7 +49,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Bucket is required.")]
         [JsonProperty(PropertyName = "bucket")]
         public string Bucket { get; set; }
-
+        
         /// <value>
         /// The object name of the in-progress multipart upload.
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Object is required.")]
         [JsonProperty(PropertyName = "object")]
         public string Object { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the in-progress multipart upload.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "UploadId is required.")]
         [JsonProperty(PropertyName = "uploadId")]
         public string UploadId { get; set; }
-
+        
         /// <value>
         /// The date and time the upload was created, as described in [RFC 2616](https://tools.ietf.org/html/rfc2616#section-14.29).
         /// </value>
@@ -79,5 +79,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

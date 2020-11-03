@@ -30,13 +30,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Data catalog identifier, which can be renamed.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Compartment identifier.
         /// </value>
@@ -46,31 +46,31 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The time the data catalog was created. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the data catalog was updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The REST front endpoint URL to the data catalog instance.
         /// </value>
         [JsonProperty(PropertyName = "serviceApiUrl")]
         public string ServiceApiUrl { get; set; }
-
+        
         /// <value>
         /// The console front endpoint URL to the data catalog instance.
         /// </value>
         [JsonProperty(PropertyName = "serviceConsoleUrl")]
         public string ServiceConsoleUrl { get; set; }
-
+        
         /// <value>
         /// The number of data objects added to the data catalog.
         /// Please see the data catalog documentation for further information on how this is calculated.
@@ -78,14 +78,14 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "numberOfObjects")]
         public System.Nullable<int> NumberOfObjects { get; set; }
-
+        
         /// <value>
         /// The current state of the data catalog resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// An message describing the current state in more detail. 
         /// For example, it can be used to provide actionable information for a resource in 'Failed' state.
@@ -93,25 +93,26 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The list of private reverse connection endpoints attached to the catalog
         /// </value>
         [JsonProperty(PropertyName = "attachedCatalogPrivateEndpoints")]
         public System.Collections.Generic.List<string> AttachedCatalogPrivateEndpoints { get; set; }
+        
     }
 }

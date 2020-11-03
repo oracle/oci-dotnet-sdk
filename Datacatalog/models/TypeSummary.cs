@@ -32,42 +32,43 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The immutable name of the type.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description of the type.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data catalog's OCID.
         /// </value>
         [JsonProperty(PropertyName = "catalogId")]
         public string CatalogId { get; set; }
-
+        
         /// <value>
         /// Indicates the category this type belongs to. For instance, data assets, connections.
         /// </value>
         [JsonProperty(PropertyName = "typeCategory")]
         public string TypeCategory { get; set; }
-
+        
         /// <value>
         /// URI to the type instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// State of the folder.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
     }
 }

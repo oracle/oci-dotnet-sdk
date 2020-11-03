@@ -26,8 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
-
+        
         [JsonProperty(PropertyName = "attribute")]
         public ShapeField Attribute { get; set; }
+        
     }
 }

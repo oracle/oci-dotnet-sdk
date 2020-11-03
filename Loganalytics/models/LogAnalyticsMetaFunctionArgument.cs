@@ -26,77 +26,78 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isOverrideOutputFields")]
         public System.Nullable<bool> IsOverrideOutputFields { get; set; }
-
+        
         /// <value>
         /// argument display name
         /// </value>
         [JsonProperty(PropertyName = "argumentDisplayName")]
         public string ArgumentDisplayName { get; set; }
-
+        
         /// <value>
         /// argument example
         /// </value>
         [JsonProperty(PropertyName = "argumentExample")]
         public string ArgumentExample { get; set; }
-
+        
         /// <value>
         /// argument service
         /// </value>
         [JsonProperty(PropertyName = "argumentService")]
         public string ArgumentService { get; set; }
-
+        
         /// <value>
         /// argument data type
         /// </value>
         [JsonProperty(PropertyName = "argumentDataType")]
         public string ArgumentDataType { get; set; }
-
+        
         /// <value>
         /// argument description
         /// </value>
         [JsonProperty(PropertyName = "argumentDescription")]
         public string ArgumentDescription { get; set; }
-
+        
         /// <value>
         /// argument name
         /// </value>
         [JsonProperty(PropertyName = "argumentName")]
         public string ArgumentName { get; set; }
-
+        
         /// <value>
         /// argument order
         /// </value>
         [JsonProperty(PropertyName = "argumentOrder")]
         public System.Nullable<long> ArgumentOrder { get; set; }
-
+        
         /// <value>
         /// argument type
         /// </value>
         [JsonProperty(PropertyName = "argumentType")]
         public System.Nullable<long> ArgumentType { get; set; }
-
+        
         /// <value>
         /// meta function id
         /// </value>
         [JsonProperty(PropertyName = "argumentId")]
         public System.Nullable<long> ArgumentId { get; set; }
-
+        
         /// <value>
         /// column
         /// </value>
         [JsonProperty(PropertyName = "argumentLookupColumn")]
         public string ArgumentLookupColumn { get; set; }
-
+        
         /// <value>
         /// column position
         /// </value>
         [JsonProperty(PropertyName = "argumentLookupColumnPosition")]
         public System.Nullable<long> ArgumentLookupColumnPosition { get; set; }
-
+        
         /// <value>
         /// value
         /// </value>
         [JsonProperty(PropertyName = "argumentValue")]
         public string ArgumentValue { get; set; }
+        
     }
 }

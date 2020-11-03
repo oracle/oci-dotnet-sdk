@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Max is required.")]
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<int> Max { get; set; }
-
+        
         /// <value>
         /// The minimum port number. Must not be greater than the maximum port number.
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Min is required.")]
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<int> Min { get; set; }
+        
     }
 }

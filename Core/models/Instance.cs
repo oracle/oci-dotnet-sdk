@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the instance.
         /// </value>
@@ -53,14 +53,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of dedicated VM host.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dedicatedVmHostId")]
         public string DedicatedVmHostId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -78,7 +78,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Additional metadata key/value pairs that you provide. They serve the same purpose and functionality
         /// as fields in the `metadata` object.
@@ -89,7 +89,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> ExtendedMetadata { get; set; }
-
+        
         /// <value>
         /// The name of the fault domain the instance is running in.
         /// <br/>
@@ -105,7 +105,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -114,7 +114,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance.
         /// </value>
@@ -124,14 +124,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use `sourceDetails` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// When a bare metal or virtual machine
         /// instance boots, the iPXE firmware that runs on the instance is
@@ -159,7 +159,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipxeScript")]
         public string IpxeScript { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the configuration mode for launching virtual machine (VM) instances. The configuration modes are:
         /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for Oracle-provided images.
@@ -191,24 +191,24 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "launchMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
-
+        
         /// <value>
         /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any default values.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
-
+        
         [JsonProperty(PropertyName = "instanceOptions")]
         public InstanceOptions InstanceOptions { get; set; }
-
+        
         /// <value>
         /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public InstanceAvailabilityConfig AvailabilityConfig { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the instance.
         /// </value>
@@ -244,13 +244,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Custom metadata that you provide.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
-
+        
         /// <value>
         /// The region that contains the availability domain the instance is running in.
         /// <br/>
@@ -266,7 +266,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Region is required.")]
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-
+        
         /// <value>
         /// The shape of the instance. The shape determines the number of CPUs and the amount of memory
         /// allocated to the instance. You can enumerate all available shapes by calling
@@ -279,23 +279,23 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         [JsonProperty(PropertyName = "shapeConfig")]
         public InstanceShapeConfig ShapeConfig { get; set; }
-
+        
         /// <value>
         /// Details for creating an instance
         /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceSourceDetails SourceDetails { get; set; }
-
+        
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
-
+        
         /// <value>
         /// The date and time the instance was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -307,10 +307,10 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         [JsonProperty(PropertyName = "agentConfig")]
         public InstanceAgentConfig AgentConfig { get; set; }
-
+        
         /// <value>
         /// The date and time the instance is expected to be stopped / started,  in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// After that time if instance hasn't been rebooted, Oracle will reboot the instance within 24 hours of the due time.
@@ -319,5 +319,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeMaintenanceRebootDue")]
         public System.Nullable<System.DateTime> TimeMaintenanceRebootDue { get; set; }
+        
     }
 }

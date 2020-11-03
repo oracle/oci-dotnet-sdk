@@ -23,7 +23,7 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "formatAttribute")]
         public AbstractFormatAttribute FormatAttribute { get; set; }
-        ///
+                ///
         /// <value>
         /// type
         /// </value>
@@ -49,5 +49,6 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

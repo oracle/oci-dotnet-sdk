@@ -35,17 +35,7 @@ namespace Oci.ResourcemanagerService.Models
             GitConfigSource
         };
 
-        /// <value>
-        /// The type of configuration source to use for the Terraform configuration.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigSourceRecordType is required.")]
-        [JsonProperty(PropertyName = "configSourceRecordType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ConfigSourceRecordTypeEnum> ConfigSourceRecordType { get; set; }
+        
     }
 
     public class ConfigSourceRecordModelConverter : JsonConverter

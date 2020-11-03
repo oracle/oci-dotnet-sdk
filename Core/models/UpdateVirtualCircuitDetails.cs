@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bandwidthShapeName")]
         public string BandwidthShapeName { get; set; }
-
+        
         /// <value>
         /// An array of mappings, each containing properties for a cross-connect or
         /// cross-connect group associated with this virtual circuit.
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "crossConnectMappings")]
         public System.Collections.Generic.List<CrossConnectMapping> CrossConnectMappings { get; set; }
-
+        
         /// <value>
         /// Deprecated. Instead use `customerAsn`.
         /// If you specify values for both, the request will be rejected.
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public System.Nullable<int> CustomerBgpAsn { get; set; }
-
+        
         /// <value>
         /// The BGP ASN of the network at the other end of the BGP
         /// session from Oracle.
@@ -66,7 +66,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerAsn")]
         public System.Nullable<long> CustomerAsn { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique.
         /// Avoid entering confidential information.
@@ -85,7 +85,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -94,7 +94,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the {@link Drg}
         /// that this private virtual circuit uses.
@@ -104,7 +104,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "gatewayId")]
         public string GatewayId { get; set; }
-        ///
+                ///
         /// <value>
         /// The provider's state in relation to this virtual circuit. Relevant only
         /// if the customer is using FastConnect via a provider.  ACTIVE
@@ -136,14 +136,14 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "providerState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProviderStateEnum> ProviderState { get; set; }
-
+        
         /// <value>
         /// The service key name offered by the provider (if the customer is connecting via a provider).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceKeyName")]
         public string ProviderServiceKeyName { get; set; }
-
+        
         /// <value>
         /// Provider-supplied reference information about this virtual circuit.
         /// Relevant only if the customer is using FastConnect via a provider.
@@ -153,5 +153,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "referenceComment")]
         public string ReferenceComment { get; set; }
+        
     }
 }

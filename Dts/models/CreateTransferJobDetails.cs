@@ -21,13 +21,13 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "uploadBucketName")]
         public string UploadBucketName { get; set; }
-
+        
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         ///
         public enum DeviceTypeEnum {
             [EnumMember(Value = "DISK")]
@@ -39,7 +39,7 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "deviceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DeviceTypeEnum> DeviceType { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -48,7 +48,7 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -57,5 +57,6 @@ namespace Oci.DtsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

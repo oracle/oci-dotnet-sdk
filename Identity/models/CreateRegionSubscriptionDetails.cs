@@ -31,5 +31,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "RegionKey is required.")]
         [JsonProperty(PropertyName = "regionKey")]
         public string RegionKey { get; set; }
+        
     }
 }

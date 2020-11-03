@@ -27,13 +27,13 @@ namespace Oci.AutoscalingService.Models
         /// </value>
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<int> Max { get; set; }
-
+        
         /// <value>
         /// The minimum number of instances the instance pool is allowed to decrease to (scale in).
         /// </value>
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<int> Min { get; set; }
-
+        
         /// <value>
         /// The initial number of instances to launch in the instance pool immediately after autoscaling is
         /// enabled. After autoscaling retrieves performance metrics, the number of instances is automatically adjusted from this
@@ -42,5 +42,6 @@ namespace Oci.AutoscalingService.Models
         /// </value>
         [JsonProperty(PropertyName = "initial")]
         public System.Nullable<int> Initial { get; set; }
+        
     }
 }

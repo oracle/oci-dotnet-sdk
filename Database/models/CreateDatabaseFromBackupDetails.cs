@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "BackupId is required.")]
         [JsonProperty(PropertyName = "backupId")]
         public string BackupId { get; set; }
-
+        
         /// <value>
         /// The password to open the TDE wallet.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "BackupTDEPassword is required.")]
         [JsonProperty(PropertyName = "backupTDEPassword")]
         public string BackupTDEPassword { get; set; }
-
+        
         /// <value>
         /// A strong password for SYS, SYSTEM, PDB Admin and TDE Wallet. The password must be at least nine characters and contain at least two uppercase, two lowercase, two numbers, and two special characters. The special characters must be _, \\#, or -.
         /// </value>
@@ -48,17 +48,18 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// The `DB_UNIQUE_NAME` of the Oracle Database being backed up.
         /// </value>
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }
-
+        
         /// <value>
         /// The display name of the database to be created from the backup. It must begin with an alphabetic character and can contain a maximum of eight alphanumeric characters. Special characters are not permitted.
         /// </value>
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
+        
     }
 }

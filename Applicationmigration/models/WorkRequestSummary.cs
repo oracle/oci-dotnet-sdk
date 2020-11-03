@@ -31,7 +31,7 @@ namespace Oci.ApplicationmigrationService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
-
+        
         /// <value>
         /// The status of the work request.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.ApplicationmigrationService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationStatus> Status { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing
         /// this work request.
@@ -64,7 +64,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The percentage complete of the operation tracked by this work request.
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was created, in the format defined by RFC3339.
         /// </value>
@@ -84,7 +84,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request transitioned from `ACCEPTED` to `IN_PROGRESS`, in
         /// the format defined by RFC3339.
@@ -92,7 +92,7 @@ namespace Oci.ApplicationmigrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request reached a terminal state, either `FAILED` or `SUCCEEDED`.
         /// Format is defined by RFC3339.
@@ -100,5 +100,6 @@ namespace Oci.ApplicationmigrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

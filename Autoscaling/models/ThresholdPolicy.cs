@@ -27,5 +27,8 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Rules is required.")]
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<Condition> Rules { get; set; }
+        
+        [JsonProperty(PropertyName = "policyType")]
+        private readonly string policyType = "threshold";
     }
 }

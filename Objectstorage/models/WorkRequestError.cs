@@ -26,17 +26,18 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable description of the issue that produced the error.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The time the error occurred.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

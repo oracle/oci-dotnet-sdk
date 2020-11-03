@@ -23,10 +23,10 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
-
+        
         [JsonProperty(PropertyName = "rfc5424TimeFormat")]
         public string Rfc5424TimeFormat { get; set; }
-        ///
+                ///
         ///
         public enum MessageFormatEnum {
             [EnumMember(Value = "RFC3164")]
@@ -40,13 +40,13 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "messageFormat")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
-
+        
         [JsonProperty(PropertyName = "isWithPriority")]
         public System.Nullable<bool> IsWithPriority { get; set; }
-
+        
         [JsonProperty(PropertyName = "isSupportColonlessIdent")]
         public System.Nullable<bool> IsSupportColonlessIdent { get; set; }
-        ///
+                ///
         ///
         public enum SyslogParserTypeEnum {
             [EnumMember(Value = "STRING")]
@@ -58,5 +58,8 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "syslogParserType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SyslogParserTypeEnum> SyslogParserType { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "SYSLOG";
     }
 }

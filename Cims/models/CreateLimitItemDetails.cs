@@ -26,19 +26,19 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "currentLimit")]
         public System.Nullable<int> CurrentLimit { get; set; }
-
+        
         /// <value>
         /// The current usage of the resource.
         /// </value>
         [JsonProperty(PropertyName = "currentUsage")]
         public System.Nullable<int> CurrentUsage { get; set; }
-
+        
         /// <value>
         /// Reserved for future use.
         /// </value>
         [JsonProperty(PropertyName = "requestedLimit")]
         public System.Nullable<int> RequestedLimit { get; set; }
-        ///
+                ///
         /// <value>
         /// The current status of the request.
         /// </value>
@@ -58,5 +58,8 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "limitStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LimitStatusEnum> LimitStatus { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "limit";
     }
 }

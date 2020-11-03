@@ -30,7 +30,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "MaxReadUnits is required.")]
         [JsonProperty(PropertyName = "maxReadUnits")]
         public System.Nullable<int> MaxReadUnits { get; set; }
-
+        
         /// <value>
         /// Maximum sustained write throughput limit for the table.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "MaxWriteUnits is required.")]
         [JsonProperty(PropertyName = "maxWriteUnits")]
         public System.Nullable<int> MaxWriteUnits { get; set; }
-
+        
         /// <value>
         /// Maximum size of storage used by the table.
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "MaxStorageInGBs is required.")]
         [JsonProperty(PropertyName = "maxStorageInGBs")]
         public System.Nullable<int> MaxStorageInGBs { get; set; }
+        
     }
 }

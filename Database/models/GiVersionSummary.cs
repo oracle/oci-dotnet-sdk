@@ -33,5 +33,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
     }
 }

@@ -38,14 +38,17 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dtType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DtTypeEnum> DtType { get; set; }
-
+        
         /// <value>
         /// The data type system name.
         /// </value>
         [JsonProperty(PropertyName = "typeSystemName")]
         public string TypeSystemName { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DATA_TYPE";
     }
 }

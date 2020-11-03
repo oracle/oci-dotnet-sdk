@@ -70,7 +70,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "protocol")]
         public string Protocol { get; set; }
-
+        
         /// <value>
         /// The valid domain name (hostname) or IP address to use in the redirect URI.
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// The communication port to use in the redirect URI.
         /// <br/>
@@ -106,7 +106,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The HTTP URI path to use in the redirect URI.
         /// <br/>
@@ -142,7 +142,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// The query string to use in the redirect URI.
         /// <br/>
@@ -182,5 +182,6 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
+        
     }
 }

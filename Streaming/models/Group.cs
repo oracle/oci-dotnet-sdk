@@ -31,7 +31,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "StreamId is required.")]
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
-
+        
         /// <value>
         /// The name of the consumer group.
         /// </value>
@@ -41,11 +41,12 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "GroupName is required.")]
         [JsonProperty(PropertyName = "groupName")]
         public string GroupName { get; set; }
-
+        
         /// <value>
         /// An array of the partition reservations of a group.
         /// </value>
         [JsonProperty(PropertyName = "reservations")]
         public System.Collections.Generic.List<PartitionReservation> Reservations { get; set; }
+        
     }
 }

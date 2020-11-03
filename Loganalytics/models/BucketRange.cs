@@ -28,19 +28,20 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "lower")]
         public System.Nullable<decimal> Lower { get; set; }
-
+        
         /// <value>
         /// Upper bound of the bucket range specified in the querystring for the numeric field referenced in tbe bucket command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "upper")]
         public System.Nullable<decimal> Upper { get; set; }
-
+        
         /// <value>
         /// Optional alias of the bucket range if specified in the querystring.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
+        
     }
 }

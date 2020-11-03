@@ -33,5 +33,8 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "AllowedScope is required.")]
         [JsonProperty(PropertyName = "allowedScope")]
         public System.Collections.Generic.List<string> AllowedScope { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "ANY_OF";
     }
 }

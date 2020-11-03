@@ -26,7 +26,7 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment where the application is created in the Oracle Cloud Infrastructure Data Flow Service.
         /// </value>
@@ -36,7 +36,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "ApplicationCompartmentId is required.")]
         [JsonProperty(PropertyName = "applicationCompartmentId")]
         public string ApplicationCompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the application.
         /// </value>
@@ -46,17 +46,18 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The details of the data flow or the application.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         [JsonProperty(PropertyName = "resourceConfiguration")]
         public ResourceConfiguration ResourceConfiguration { get; set; }
-
+        
         [JsonProperty(PropertyName = "configurationDetails")]
         public ConfigurationDetails ConfigurationDetails { get; set; }
+        
     }
 }

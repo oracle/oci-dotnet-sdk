@@ -27,5 +27,6 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "OcpuAllocationParam is required.")]
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
+        
     }
 }

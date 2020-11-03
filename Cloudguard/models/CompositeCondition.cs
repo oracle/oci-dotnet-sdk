@@ -23,7 +23,7 @@ namespace Oci.CloudguardService.Models
         
         [JsonProperty(PropertyName = "leftOperand")]
         public Condition LeftOperand { get; set; }
-        ///
+                ///
         ///
         public enum CompositeOperatorEnum {
             [EnumMember(Value = "AND")]
@@ -35,8 +35,11 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "compositeOperator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CompositeOperatorEnum> CompositeOperator { get; set; }
-
+        
         [JsonProperty(PropertyName = "rightOperand")]
         public Condition RightOperand { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "COMPOSITE";
     }
 }

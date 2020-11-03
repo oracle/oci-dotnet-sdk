@@ -26,19 +26,19 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The user-provided name of the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of the backup destination.
         /// </value>
@@ -56,32 +56,32 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// List of databases associated with the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "associatedDatabases")]
         public System.Collections.Generic.List<AssociatedDatabaseDetails> AssociatedDatabases { get; set; }
-
+        
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the connection string for connecting to the Recovery Appliance.
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
-
+        
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the Virtual Private Catalog (VPC) users that are used to access the Recovery Appliance.
         /// </value>
         [JsonProperty(PropertyName = "vpcUsers")]
         public System.Collections.Generic.List<string> VpcUsers { get; set; }
-
+        
         /// <value>
         /// The local directory path on each VM cluster node where the NFS server location is mounted. The local directory path and the NFS server location must each be the same across all of the VM cluster nodes. Ensure that the NFS mount is maintained continuously on all of the VM cluster nodes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "localMountPointPath")]
         public string LocalMountPointPath { get; set; }
-        ///
+                ///
         /// <value>
         /// NFS Mount type for backup destination.
         /// </value>
@@ -99,19 +99,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "nfsMountType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NfsMountTypeEnum> NfsMountType { get; set; }
-
+        
         /// <value>
         /// Host names or IP addresses for NFS Auto mount.
         /// </value>
         [JsonProperty(PropertyName = "nfsServer")]
         public System.Collections.Generic.List<string> NfsServer { get; set; }
-
+        
         /// <value>
         /// Specifies the directory on which to mount the file system
         /// </value>
         [JsonProperty(PropertyName = "nfsServerExport")]
         public string NfsServerExport { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the backup destination.
         /// </value>
@@ -131,13 +131,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the backup destination was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// A descriptive text associated with the lifecycleState.
         /// Typically contains additional displayable text
@@ -145,7 +145,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -154,7 +154,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -162,5 +162,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

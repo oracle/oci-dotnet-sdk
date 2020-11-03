@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// A configuration
+    /// A configuration.
     /// </summary>
     public class Configuration 
     {
         
         /// <value>
-        /// The key of the config
+        /// The configuration key.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,11 +30,12 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
-        /// The value of the config
+        /// The configuration value.
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
+        
     }
 }

@@ -28,25 +28,25 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Unique identifier ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)) for the compartment where the stack is located.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Human-readable name of the stack.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the stack.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The date and time at which the stack was created.
         /// Format is defined by RFC3339.
@@ -54,7 +54,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current lifecycle state of the stack.
         /// For more information about stack lifecycle states in Resource Manager, see
@@ -84,10 +84,10 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "configSource")]
         public ConfigSource ConfigSource { get; set; }
-
+        
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.
@@ -96,13 +96,13 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.Dictionary<string, string> Variables { get; set; }
-
+        
         /// <value>
         /// The version of Terraform specified for the stack. Example: 0.12.x
         /// </value>
         [JsonProperty(PropertyName = "terraformVersion")]
         public string TerraformVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// Drift status of the stack.
         /// Drift refers to differences between the actual (current) state of the stack and the expected (defined) state of the stack.
@@ -126,7 +126,7 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "stackDriftStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StackDriftStatusEnum> StackDriftStatus { get; set; }
-
+        
         /// <value>
         /// The date and time when the drift detection was last executed.
         /// Format is defined by RFC3339.
@@ -134,7 +134,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeDriftLastChecked")]
         public System.Nullable<System.DateTime> TimeDriftLastChecked { get; set; }
-
+        
         /// <value>
         /// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -142,7 +142,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -150,5 +150,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

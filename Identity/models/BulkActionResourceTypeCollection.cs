@@ -31,5 +31,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<BulkActionResourceType> Items { get; set; }
+        
     }
 }

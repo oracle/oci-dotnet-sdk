@@ -30,5 +30,6 @@ namespace Oci.LoggingsearchService.Models
         [Required(ErrorMessage = "Data is required.")]
         [JsonProperty(PropertyName = "data")]
         public System.Object Data { get; set; }
+        
     }
 }

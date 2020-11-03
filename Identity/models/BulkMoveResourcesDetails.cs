@@ -29,7 +29,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<BulkActionResource> Resources { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the destination compartment
         /// into which to move the resources.
@@ -41,5 +41,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TargetCompartmentId is required.")]
         [JsonProperty(PropertyName = "targetCompartmentId")]
         public string TargetCompartmentId { get; set; }
+        
     }
 }

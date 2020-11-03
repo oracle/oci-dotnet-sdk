@@ -30,7 +30,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin Name
         /// </value>
@@ -40,37 +40,37 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin Version
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<int> Version { get; set; }
-
+        
         /// <value>
         /// Supported Platform Types
         /// </value>
         [JsonProperty(PropertyName = "supportedPlatformTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<PlatformTypes> SupportedPlatformTypes { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin Display Name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Management Agent Plugin description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A flag to indicate whether a given plugin can be deployed from Agent Console UI or not.
         /// </value>
         [JsonProperty(PropertyName = "isConsoleDeployable")]
         public System.Nullable<bool> IsConsoleDeployable { get; set; }
-
+        
         /// <value>
         /// The current state of Management Agent Plugin
         /// </value>
@@ -81,5 +81,6 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
     }
 }

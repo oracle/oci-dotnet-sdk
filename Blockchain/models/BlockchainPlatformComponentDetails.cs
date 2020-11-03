@@ -26,11 +26,12 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "osns")]
         public System.Collections.Generic.List<Osn> Osns { get; set; }
-
+        
         /// <value>
         /// List of Peers
         /// </value>
         [JsonProperty(PropertyName = "peers")]
         public System.Collections.Generic.List<Peer> Peers { get; set; }
+        
     }
 }

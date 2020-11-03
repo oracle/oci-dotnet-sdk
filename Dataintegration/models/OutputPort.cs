@@ -40,11 +40,14 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "portType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PortTypeEnum> PortType { get; set; }
-
+        
         /// <value>
         /// An array of fields.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<TypedObject> Fields { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "OUTPUT_PORT";
     }
 }

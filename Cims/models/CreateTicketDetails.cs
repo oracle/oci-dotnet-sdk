@@ -47,13 +47,13 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
-
+        
         /// <value>
         /// The list of resources.
         /// </value>
         [JsonProperty(PropertyName = "resourceList")]
         public System.Collections.Generic.List<CreateResourceDetails> ResourceList { get; set; }
-
+        
         /// <value>
         /// The title of the support ticket.
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Title is required.")]
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
-
+        
         /// <value>
         /// The description of the support ticket.
         /// </value>
@@ -73,11 +73,12 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The context from where the ticket is getting created.
         /// </value>
         [JsonProperty(PropertyName = "contextualData")]
         public ContextualData ContextualData { get; set; }
+        
     }
 }

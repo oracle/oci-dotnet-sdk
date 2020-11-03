@@ -27,11 +27,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "atp")]
         public System.Nullable<float> Atp { get; set; }
-
+        
         /// <value>
         /// The total number of OCPU cores in use for Autonomous Data Warehouse databases in the infrastructure instance.
         /// </value>
         [JsonProperty(PropertyName = "adw")]
         public System.Nullable<float> Adw { get; set; }
+        
     }
 }

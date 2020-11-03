@@ -26,13 +26,13 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceTypeKey")]
         public string ResourceTypeKey { get; set; }
-
+        
         /// <value>
         /// The display name of the resource.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The label associated with the resource.
         /// </value>
@@ -42,17 +42,18 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Label is required.")]
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-
+        
         /// <value>
         /// The description of the resource.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The service category list.
         /// </value>
         [JsonProperty(PropertyName = "serviceCategoryList")]
         public System.Collections.Generic.List<ServiceCategory> ServiceCategoryList { get; set; }
+        
     }
 }

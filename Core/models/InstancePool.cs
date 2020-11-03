@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the instance
         /// pool.
@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -54,13 +54,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The user-friendly name. Does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance configuration associated
         /// with the instance pool.
@@ -81,7 +81,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceConfigurationId is required.")]
         [JsonProperty(PropertyName = "instanceConfigurationId")]
         public string InstanceConfigurationId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the instance pool.
         /// </value>
@@ -115,7 +115,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The placement configurations for the instance pool.
         /// </value>
@@ -125,7 +125,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PlacementConfigurations is required.")]
         [JsonProperty(PropertyName = "placementConfigurations")]
         public System.Collections.Generic.List<InstancePoolPlacementConfiguration> PlacementConfigurations { get; set; }
-
+        
         /// <value>
         /// The number of instances that should be in the instance pool.
         /// </value>
@@ -135,7 +135,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Size is required.")]
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
-
+        
         /// <value>
         /// The date and time the instance pool was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2016-08-25T21:10:29.600Z
@@ -146,12 +146,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The load balancers attached to the instance pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "loadBalancers")]
         public System.Collections.Generic.List<InstancePoolLoadBalancerAttachment> LoadBalancers { get; set; }
+        
     }
 }

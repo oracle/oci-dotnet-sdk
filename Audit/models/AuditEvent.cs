@@ -33,7 +33,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "eventType")]
         public string EventType { get; set; }
-
+        
         /// <value>
         /// The version of the CloudEvents specification. The structure of the envelope follows the 
         /// [CloudEvents](https://github.com/cloudevents/spec) industry standard format hosted by the
@@ -45,7 +45,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "cloudEventsVersion")]
         public string CloudEventsVersion { get; set; }
-
+        
         /// <value>
         /// The version of the event type. This version applies to the payload of the event, not the envelope.
         /// Use `cloudEventsVersion` to determine the version of the envelope.
@@ -54,7 +54,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "eventTypeVersion")]
         public string EventTypeVersion { get; set; }
-
+        
         /// <value>
         /// The source of the event.
         /// <br/>
@@ -62,14 +62,14 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
-
+        
         /// <value>
         /// The GUID of the event.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "eventId")]
         public string EventId { get; set; }
-
+        
         /// <value>
         /// The time the event occurred, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// <br/>
@@ -77,7 +77,7 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "eventTime")]
         public System.Nullable<System.DateTime> EventTime { get; set; }
-
+        
         /// <value>
         /// The content type of the data contained in `data`.
         /// <br/>
@@ -85,8 +85,9 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "contentType")]
         public string ContentType { get; set; }
-
+        
         [JsonProperty(PropertyName = "data")]
         public Data Data { get; set; }
+        
     }
 }

@@ -138,5 +138,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Ciphers is required.")]
         [JsonProperty(PropertyName = "ciphers")]
         public System.Collections.Generic.List<string> Ciphers { get; set; }
+        
     }
 }

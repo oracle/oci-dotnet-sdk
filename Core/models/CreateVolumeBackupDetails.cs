@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the volume backup. Does not have to be unique and it's changeable.
         /// Avoid entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of backup to create. If omitted, defaults to INCREMENTAL.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume that needs to be backed up.
         /// </value>
@@ -72,5 +72,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeId is required.")]
         [JsonProperty(PropertyName = "volumeId")]
         public string VolumeId { get; set; }
+        
     }
 }

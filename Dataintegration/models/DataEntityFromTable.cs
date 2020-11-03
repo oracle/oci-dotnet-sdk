@@ -26,52 +26,52 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The version of the object that is used to track changes in the object instance.
         /// </value>
         [JsonProperty(PropertyName = "objectVersion")]
         public System.Nullable<int> ObjectVersion { get; set; }
-
+        
         /// <value>
         /// The external key for the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
-
+        
         [JsonProperty(PropertyName = "shape")]
         public Shape Shape { get; set; }
-
+        
         /// <value>
         /// The shape ID.
         /// </value>
         [JsonProperty(PropertyName = "shapeId")]
         public string ShapeId { get; set; }
-
+        
         [JsonProperty(PropertyName = "types")]
         public TypeLibrary Types { get; set; }
-        ///
+                ///
         /// <value>
         /// The entity type.
         /// </value>
@@ -97,41 +97,44 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "entityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EntityTypeEnum> EntityType { get; set; }
-
+        
         /// <value>
         /// Specifies other type label.
         /// </value>
         [JsonProperty(PropertyName = "otherTypeLabel")]
         public string OtherTypeLabel { get; set; }
-
+        
         /// <value>
         /// An array of unique keys.
         /// </value>
         [JsonProperty(PropertyName = "uniqueKeys")]
         public System.Collections.Generic.List<UniqueKey> UniqueKeys { get; set; }
-
+        
         /// <value>
         /// An array of foreign keys.
         /// </value>
         [JsonProperty(PropertyName = "foreignKeys")]
         public System.Collections.Generic.List<ForeignKey> ForeignKeys { get; set; }
-
+        
         /// <value>
         /// The resource name.
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "TABLE_ENTITY";
     }
 }

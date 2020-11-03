@@ -38,5 +38,6 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
+        
     }
 }

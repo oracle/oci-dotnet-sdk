@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The port speed in Gbps.
         /// <br/>
@@ -45,5 +45,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PortSpeedInGbps is required.")]
         [JsonProperty(PropertyName = "portSpeedInGbps")]
         public System.Nullable<int> PortSpeedInGbps { get; set; }
+        
     }
 }

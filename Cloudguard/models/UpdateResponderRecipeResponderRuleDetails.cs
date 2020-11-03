@@ -27,5 +27,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Details is required.")]
         [JsonProperty(PropertyName = "details")]
         public UpdateResponderRuleDetails Details { get; set; }
+        
     }
 }

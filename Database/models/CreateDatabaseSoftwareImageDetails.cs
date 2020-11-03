@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The database version with which the database software image is to be built.
         /// </value>
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DatabaseVersion is required.")]
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the database software image. The name does not have to be unique.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// To what shape the image is meant for.
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "imageShapeFamily")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ImageShapeFamilyEnum> ImageShapeFamily { get; set; }
-        ///
+                ///
         /// <value>
         /// List of the Fault Domains in which this DB system is provisioned.
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "imageType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ImageTypeEnum> ImageType { get; set; }
-
+        
         /// <value>
         /// The PSU or PBP or Release Updates. To get a list of supported versions, use the {@link #listDbVersions(ListDbVersionsRequest) listDbVersions} operation.
         /// </value>
@@ -99,19 +99,19 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "PatchSet is required.")]
         [JsonProperty(PropertyName = "patchSet")]
         public string PatchSet { get; set; }
-
+        
         /// <value>
         /// List of one-off patches for Database Homes.
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageOneOffPatches")]
         public System.Collections.Generic.List<string> DatabaseSoftwareImageOneOffPatches { get; set; }
-
+        
         /// <value>
         /// output from lsinventory which will get passed as a string
         /// </value>
         [JsonProperty(PropertyName = "lsInventory")]
         public string LsInventory { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -120,7 +120,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -128,5 +128,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

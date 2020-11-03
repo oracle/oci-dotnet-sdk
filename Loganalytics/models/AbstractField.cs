@@ -39,32 +39,21 @@ namespace Oci.LoganalyticsService.Models
             Sort
         };
 
-        /// <value>
-        /// Field type classification.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
-        [JsonProperty(PropertyName = "name")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NameEnum> Name { get; set; }
-
+        
         /// <value>
         /// Field display name - will be alias if field is renamed by queryStrng.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Field denoting if this is a declaration of the field in the queryString.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDeclared")]
         public System.Nullable<bool> IsDeclared { get; set; }
-
+        
         /// <value>
         /// Same as displayName unless field renamed in which case this will hold the original display names for the field
         /// across all renames.
@@ -72,14 +61,14 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "originalDisplayNames")]
         public System.Collections.Generic.List<string> OriginalDisplayNames { get; set; }
-
+        
         /// <value>
         /// Internal identifier for the field.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "internalName")]
         public string InternalName { get; set; }
-
+        
         /// <value>
         /// Field denoting field data type.
         /// 
@@ -87,34 +76,35 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ValueType> ValueType { get; set; }
-
+        
         /// <value>
         /// Identifies if this field can be used as a grouping field in any grouping command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isGroupable")]
         public System.Nullable<bool> IsGroupable { get; set; }
-
+        
         /// <value>
         /// Identifies if this field format is a duration.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDuration")]
         public System.Nullable<bool> IsDuration { get; set; }
-
+        
         /// <value>
         /// Alias of field if renamed by queryStrng.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
-
+        
         /// <value>
         /// Query used to derive this field if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "filterQueryString")]
         public string FilterQueryString { get; set; }
+        
     }
 
     public class AbstractFieldModelConverter : JsonConverter

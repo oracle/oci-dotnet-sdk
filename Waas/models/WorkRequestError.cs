@@ -26,17 +26,18 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// The error message.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the work request error happened, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

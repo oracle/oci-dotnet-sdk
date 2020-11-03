@@ -31,7 +31,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// Unified schema logging source type.
         /// </value>
@@ -43,16 +43,7 @@ namespace Oci.LoggingService.Models
             WindowsEventLog
         };
 
-        /// <value>
-        /// Unified schema logging source type.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceTypeEnum> SourceType { get; set; }
+        
     }
 
     public class UnifiedAgentLoggingSourceModelConverter : JsonConverter

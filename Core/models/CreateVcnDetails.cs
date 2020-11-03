@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment to contain the VCN.
         /// </value>
@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// If you enable IPv6 for the VCN (see `isIpv6Enabled`), you may optionally provide an IPv6
         /// /48 CIDR block from the supported ranges (see [IPv6 Addresses](https://docs.cloud.oracle.com/Content/Network/Concepts/ipv6.htm).
@@ -64,7 +64,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipv6CidrBlock")]
         public string Ipv6CidrBlock { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -73,13 +73,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// A DNS label for the VCN, used in conjunction with the VNIC's hostname and
         /// subnet's DNS label to form a fully qualified domain name (FQDN) for each VNIC
@@ -99,7 +99,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "dnsLabel")]
         public string DnsLabel { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -108,7 +108,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Whether IPv6 is enabled for the VCN. Default is `false`. You cannot change this later.
         /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/Content/Network/Concepts/ipv6.htm).
@@ -117,5 +117,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isIpv6Enabled")]
         public System.Nullable<bool> IsIpv6Enabled { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "FieldName is required.")]
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// Field values that will be used to filter the query scope. Please note all values should reflect the fields data type otherwise the query is subject to fail.
         /// 
@@ -43,5 +43,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Values is required.")]
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<System.Object> Values { get; set; }
+        
     }
 }

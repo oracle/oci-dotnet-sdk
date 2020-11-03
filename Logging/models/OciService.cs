@@ -30,7 +30,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Service is required.")]
         [JsonProperty(PropertyName = "service")]
         public string Service { get; set; }
-
+        
         /// <value>
         /// The unique identifier of the resource emitting the log.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Resource is required.")]
         [JsonProperty(PropertyName = "resource")]
         public string Resource { get; set; }
-
+        
         /// <value>
         /// Log object category.
         /// </value>
@@ -50,11 +50,14 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-
+        
         /// <value>
         /// Log category parameters are stored here.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "OCISERVICE";
     }
 }

@@ -35,49 +35,40 @@ namespace Oci.DataintegrationService.Models
             InputLink
         };
 
-        /// <value>
-        /// The model type of the object.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
-
+        
         /// <value>
         /// The key of the object.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Key of FlowPort reference
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public string Port { get; set; }
+        
     }
 
     public class FlowPortLinkModelConverter : JsonConverter

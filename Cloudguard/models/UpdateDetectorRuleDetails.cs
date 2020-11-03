@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// The Risk Level
         /// </value>
@@ -41,20 +41,21 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
-
+        
         /// <value>
         /// Configuration details
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<DetectorConfiguration> Configurations { get; set; }
-
+        
         [JsonProperty(PropertyName = "condition")]
         public Condition Condition { get; set; }
-
+        
         /// <value>
         /// user defined labels for a detector rule
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
+        
     }
 }

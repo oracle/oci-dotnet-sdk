@@ -26,23 +26,24 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "reportType")]
         public string ReportType { get; set; }
-
+        
         /// <value>
         /// The name of the report.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A description of the report.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The columns in the report.
         /// </value>
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<string> Columns { get; set; }
+        
     }
 }

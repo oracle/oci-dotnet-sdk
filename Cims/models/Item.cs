@@ -31,27 +31,23 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "ItemKey is required.")]
         [JsonProperty(PropertyName = "itemKey")]
         public string ItemKey { get; set; }
-
+        
         /// <value>
         /// The display name of the item.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
-        /// <value>
-        /// The type of the support request.
-        /// </value>
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
-
+        
+        
         [JsonProperty(PropertyName = "category")]
         public Category Category { get; set; }
-
+        
         [JsonProperty(PropertyName = "subCategory")]
         public SubCategory SubCategory { get; set; }
-
+        
         [JsonProperty(PropertyName = "issueType")]
         public IssueType IssueType { get; set; }
+        
     }
 
     public class ItemModelConverter : JsonConverter

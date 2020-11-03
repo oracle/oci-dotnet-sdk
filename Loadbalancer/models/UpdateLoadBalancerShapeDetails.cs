@@ -35,5 +35,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "ShapeName is required.")]
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
+        
     }
 }

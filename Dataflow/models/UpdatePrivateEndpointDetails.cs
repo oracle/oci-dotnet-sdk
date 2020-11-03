@@ -28,28 +28,28 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly description. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// An array of DNS zone names.
         /// Example: [ &quot;app.examplecorp.com&quot;, &quot;app.examplecorp2.com&quot; ]
         /// </value>
         [JsonProperty(PropertyName = "dnsZones")]
         public System.Collections.Generic.List<string> DnsZones { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -57,7 +57,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The maximum number of hosts to be accessed through the private endpoint. This value is used
         /// to calculate the relevant CIDR block and should be a multiple of 256.  If the value is not a
@@ -67,12 +67,13 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxHostCount")]
         public System.Nullable<int> MaxHostCount { get; set; }
-
+        
         /// <value>
         /// An array of network security group OCIDs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
     }
 }

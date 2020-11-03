@@ -26,5 +26,6 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "fetchSize")]
         public System.Nullable<int> FetchSize { get; set; }
+        
     }
 }

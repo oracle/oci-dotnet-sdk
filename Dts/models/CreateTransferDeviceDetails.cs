@@ -21,8 +21,9 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "serialNumber")]
         public string SerialNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "iscsiIQN")]
         public string IscsiIQN { get; set; }
+        
     }
 }

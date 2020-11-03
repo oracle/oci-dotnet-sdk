@@ -26,29 +26,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "matchedLogEntryEndIndex")]
         public System.Nullable<int> MatchedLogEntryEndIndex { get; set; }
-
+        
         /// <value>
         /// regexScore
         /// </value>
         [JsonProperty(PropertyName = "regexScore")]
         public System.Nullable<int> RegexScore { get; set; }
-
+        
         /// <value>
         /// regexStepsInfo
         /// </value>
         [JsonProperty(PropertyName = "regexStepsInfo")]
         public System.Collections.Generic.List<StepInfo> RegexStepsInfo { get; set; }
-
+        
         /// <value>
         /// stepCount
         /// </value>
         [JsonProperty(PropertyName = "stepCount")]
         public System.Nullable<int> StepCount { get; set; }
-
+        
         /// <value>
         /// subRegexesMatchInfo
         /// </value>
         [JsonProperty(PropertyName = "subRegexesMatchInfo")]
         public System.Collections.Generic.Dictionary<string, MatchInfo> SubRegexesMatchInfo { get; set; }
+        
     }
 }

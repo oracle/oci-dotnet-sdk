@@ -32,5 +32,8 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "FunctionId is required.")]
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "ORACLE_FUNCTIONS_BACKEND";
     }
 }

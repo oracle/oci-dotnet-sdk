@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DimensionsMap is required.")]
         [JsonProperty(PropertyName = "dimensionsMap")]
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
-
+        
         /// <value>
         /// The number of occurences with given dimension(s)
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Count is required.")]
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

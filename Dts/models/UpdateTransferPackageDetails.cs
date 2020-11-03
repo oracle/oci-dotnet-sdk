@@ -21,13 +21,13 @@ namespace Oci.DtsService.Models
         
         [JsonProperty(PropertyName = "originalPackageDeliveryTrackingNumber")]
         public string OriginalPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "returnPackageDeliveryTrackingNumber")]
         public string ReturnPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "packageDeliveryVendor")]
         public string PackageDeliveryVendor { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "SHIPPING")]
@@ -39,5 +39,6 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

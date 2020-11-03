@@ -26,5 +26,6 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "conditionGroups")]
         public System.Collections.Generic.List<ConditionGroup> ConditionGroups { get; set; }
+        
     }
 }

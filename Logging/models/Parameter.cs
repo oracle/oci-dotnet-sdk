@@ -30,7 +30,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// Parameter type. One of integer, string, boolean.
         /// </value>
@@ -54,11 +54,12 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// Java regex pattern to validate a parameter value.
         /// </value>
         [JsonProperty(PropertyName = "pattern")]
         public string Pattern { get; set; }
+        
     }
 }

@@ -20,5 +20,8 @@ namespace Oci.LoggingService.Models
     /// </summary>
     public class UnifiedAgentApacheErrorParser : UnifiedAgentParser
     {
-            }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "APACHE_ERROR";
+    }
 }

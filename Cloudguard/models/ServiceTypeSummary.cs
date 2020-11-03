@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// List of Resource
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResourceTypes is required.")]
         [JsonProperty(PropertyName = "resourceTypes")]
         public System.Collections.Generic.List<ResourceTypeSummary> ResourceTypes { get; set; }
+        
     }
 }

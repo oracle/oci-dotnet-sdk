@@ -46,23 +46,24 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// The resource type the work request affects.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// The OCID of the resource the work request affects.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path on which the user can issue a GET request to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
+        
     }
 }

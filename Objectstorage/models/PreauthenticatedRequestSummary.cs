@@ -31,7 +31,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The user-provided name of the pre-authenticated request.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The name of object that is being granted access to by the pre-authenticated request. This can be null and if it is,
         /// the pre-authenticated request grants access to the entire bucket.
@@ -49,7 +49,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
-        ///
+                ///
         /// <value>
         /// The operation that can be performed on this resource.
         /// </value>
@@ -75,7 +75,7 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "accessType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AccessTypeEnum> AccessType { get; set; }
-
+        
         /// <value>
         /// The expiration date for the pre-authenticated request as per [RFC 3339](https://tools.ietf.org/html/rfc3339). After this date the pre-authenticated request will no longer be valid.
         /// 
@@ -86,7 +86,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeExpires is required.")]
         [JsonProperty(PropertyName = "timeExpires")]
         public System.Nullable<System.DateTime> TimeExpires { get; set; }
-
+        
         /// <value>
         /// The date when the pre-authenticated request was created as per [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// 
@@ -97,5 +97,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

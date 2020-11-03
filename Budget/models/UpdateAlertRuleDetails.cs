@@ -26,7 +26,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Type of alert. Valid values are ACTUAL (the alert will trigger based on actual usage) or
         /// FORECAST (the alert will trigger based on predicted usage).
@@ -35,7 +35,7 @@ namespace Oci.BudgetService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AlertType> Type { get; set; }
-
+        
         /// <value>
         /// The threshold for triggering the alert expressed as a whole number or decimal value.
         /// If thresholdType is ABSOLUTE, threshold can have at most 12 digits before the decimal point and up to 2 digits after the decimal point.
@@ -44,32 +44,32 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "threshold")]
         public System.Nullable<decimal> Threshold { get; set; }
-
+        
         /// <value>
         /// The type of threshold.
         /// </value>
         [JsonProperty(PropertyName = "thresholdType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ThresholdType> ThresholdType { get; set; }
-
+        
         /// <value>
         /// The audience that will receive the alert when it triggers. If you need to clear out this value, please pass in an empty string instead of null.
         /// </value>
         [JsonProperty(PropertyName = "recipients")]
         public string Recipients { get; set; }
-
+        
         /// <value>
         /// The description of the alert rule
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The message to be delivered to the recipients when alert is triggered
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -78,7 +78,7 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -87,5 +87,6 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

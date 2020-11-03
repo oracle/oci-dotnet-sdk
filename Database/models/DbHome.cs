@@ -28,7 +28,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-provided name for the Database Home. The name does not need to be unique.
         /// </value>
@@ -48,13 +48,13 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last patch history. This value is updated as soon as a patch operation is started.
         /// </value>
         [JsonProperty(PropertyName = "lastPatchHistoryEntryId")]
         public string LastPatchHistoryEntryId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Database Home.
         /// </value>
@@ -84,19 +84,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB system.
         /// </value>
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "vmClusterId")]
         public string VmClusterId { get; set; }
-
+        
         /// <value>
         /// The Oracle Database version.
         /// </value>
@@ -106,7 +106,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbVersion is required.")]
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
-
+        
         /// <value>
         /// The location of the Oracle Database Home.
         /// </value>
@@ -116,25 +116,25 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DbHomeLocation is required.")]
         [JsonProperty(PropertyName = "dbHomeLocation")]
         public string DbHomeLocation { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the Database Home was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// List of one-off patches for Database Homes.
         /// </value>
         [JsonProperty(PropertyName = "oneOffPatches")]
         public System.Collections.Generic.List<string> OneOffPatches { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -143,7 +143,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -151,11 +151,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
+        
     }
 }

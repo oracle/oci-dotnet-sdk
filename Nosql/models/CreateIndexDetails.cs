@@ -30,7 +30,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the table's compartment.  Required
         /// if the tableNameOrId path parameter is a table name.
@@ -41,7 +41,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A set of keys for a secondary index.
         /// </value>
@@ -51,7 +51,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Keys is required.")]
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<IndexKey> Keys { get; set; }
-
+        
         /// <value>
         /// If true, the operation completes successfully even when the
         /// index exists.  Otherwise, an attempt to create an index
@@ -60,5 +60,6 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "isIfNotExists")]
         public System.Nullable<bool> IsIfNotExists { get; set; }
+        
     }
 }

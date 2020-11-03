@@ -28,7 +28,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "asLabel")]
         public string AsLabel { get; set; }
-
+        
         /// <value>
         /// The Autonomous System Number (ASN) identifying the organization
         /// responsible for routing packets to `prefix`.
@@ -36,7 +36,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "asn")]
         public System.Nullable<int> Asn { get; set; }
-
+        
         /// <value>
         /// An IP prefix (CIDR syntax) that is less specific than
         /// `address`, through which `address` is routed.
@@ -44,7 +44,7 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
-
+        
         /// <value>
         /// An integer between 0 and 100 used to select between multiple
         /// origin ASNs when routing to `prefix`. Most prefixes have
@@ -53,5 +53,6 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "weight")]
         public System.Nullable<int> Weight { get; set; }
+        
     }
 }

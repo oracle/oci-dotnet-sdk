@@ -46,7 +46,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy containing the group.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name you assign to the group during creation. The name must be unique across all groups in
         /// the tenancy and cannot be changed.
@@ -68,7 +68,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description you assign to the group. Does not have to be unique, and it's changeable.
         /// </value>
@@ -78,7 +78,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Date and time the group was created, in the format defined by RFC3339.
         /// <br/>
@@ -90,7 +90,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The group's current state. After creating a group, make sure its `lifecycleState` changes from CREATING to
         /// ACTIVE before using it.
@@ -122,13 +122,13 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The detailed status of INACTIVE lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -136,7 +136,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -144,5 +144,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

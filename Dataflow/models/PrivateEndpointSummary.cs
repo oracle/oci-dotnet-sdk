@@ -32,7 +32,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
@@ -43,7 +43,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique. Avoid entering confidential information.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// An array of DNS zone names.
         /// Example: [ &quot;app.examplecorp.com&quot;, &quot;app.examplecorp2.com&quot; ]
@@ -65,7 +65,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DnsZones is required.")]
         [JsonProperty(PropertyName = "dnsZones")]
         public System.Collections.Generic.List<string> DnsZones { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -77,7 +77,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of a private endpoint.
         /// 
@@ -88,7 +88,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The current state of this private endpoint.
         /// 
@@ -100,7 +100,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PrivateEndpointLifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The maximum number of hosts to be accessed through the private endpoint. This value is used
         /// to calculate the relevant CIDR block and should be a multiple of 256.  If the value is not a
@@ -110,14 +110,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxHostCount")]
         public System.Nullable<int> MaxHostCount { get; set; }
-
+        
         /// <value>
         /// An array of network security group OCIDs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The OCID of the user who created the resource.
         /// 
@@ -128,7 +128,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "OwnerPrincipalId is required.")]
         [JsonProperty(PropertyName = "ownerPrincipalId")]
         public string OwnerPrincipalId { get; set; }
-
+        
         /// <value>
         /// The username of the user who created the resource.  If the username of the owner does not exist,
         /// `null` will be returned and the caller should refer to the ownerPrincipalId value instead.
@@ -136,7 +136,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "ownerUserName")]
         public string OwnerUserName { get; set; }
-
+        
         /// <value>
         /// The OCID of a subnet.
         /// 
@@ -147,7 +147,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The date and time a application was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -158,7 +158,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time a application was updated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -169,5 +169,6 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

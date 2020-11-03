@@ -32,7 +32,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// The way in which this resource was affected by the operation that spawned the
         /// work request.
@@ -45,7 +45,7 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypes> ActionType { get; set; }
-
+        
         /// <value>
         /// An [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) or other unique identifier
         /// for the resource.
@@ -57,12 +57,13 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that you can use for a GET request to access the resource metadata.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
+        
     }
 }

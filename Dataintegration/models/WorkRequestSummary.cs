@@ -46,7 +46,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of this work request.
         /// </value>
@@ -76,7 +76,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The ID of the work request.
         /// </value>
@@ -86,7 +86,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains this work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources that are not in the same compartment, then the system picks a primary
@@ -99,7 +99,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// </value>
@@ -109,7 +109,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// The completed percentage of the operation tracked by this work request.
         /// </value>
@@ -119,7 +119,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time this work request was accepted, in the timestamp format defined by
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
@@ -131,19 +131,20 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request transitioned from `ACCEPTED` to `IN_PROGRESS`, in the timestamp format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request reached a terminal state, either `FAILED` or `SUCCEEDED`, in the timestamp format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

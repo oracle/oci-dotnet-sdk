@@ -29,14 +29,14 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// A unique identifier for the record within its zone.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "recordHash")]
         public string RecordHash { get; set; }
-
+        
         /// <value>
         /// A Boolean flag indicating whether or not parts of the record
         /// are unable to be explicitly managed.
@@ -44,7 +44,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isProtected")]
         public System.Nullable<bool> IsProtected { get; set; }
-
+        
         /// <value>
         /// The record's data, as whitespace-delimited tokens in
         /// type-specific presentation format. All RDATA is normalized and the
@@ -54,7 +54,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "rdata")]
         public string Rdata { get; set; }
-
+        
         /// <value>
         /// The latest version of the record's zone in which its RRSet differs
         /// from the preceding version.
@@ -62,7 +62,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "rrsetVersion")]
         public string RrsetVersion { get; set; }
-
+        
         /// <value>
         /// The canonical name for the record's type, such as A or CNAME. For more
         /// information, see [Resource Record (RR) TYPEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4).
@@ -70,11 +70,12 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "rtype")]
         public string Rtype { get; set; }
-
+        
         /// <value>
         /// The Time To Live for the record, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
+        
     }
 }

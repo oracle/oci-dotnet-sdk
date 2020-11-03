@@ -30,13 +30,13 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "InstanceAgentCommandId is required.")]
         [JsonProperty(PropertyName = "instanceAgentCommandId")]
         public string InstanceAgentCommandId { get; set; }
-
+        
         /// <value>
         /// The user friendly display name of the command.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment the command is created in.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The command creation date
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The command last updated at date.
         /// </value>
@@ -66,11 +66,12 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Set to true, if the command has been canceled.
         /// </value>
         [JsonProperty(PropertyName = "isCanceled")]
         public System.Nullable<bool> IsCanceled { get; set; }
+        
     }
 }

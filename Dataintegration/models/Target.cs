@@ -23,25 +23,25 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "entity")]
         public DataEntity Entity { get; set; }
-
+        
         /// <value>
         /// Specifies the read access.
         /// </value>
         [JsonProperty(PropertyName = "isReadAccess")]
         public System.Nullable<bool> IsReadAccess { get; set; }
-
+        
         /// <value>
         /// Specifies the copy fields.
         /// </value>
         [JsonProperty(PropertyName = "isCopyFields")]
         public System.Nullable<bool> IsCopyFields { get; set; }
-
+        
         /// <value>
         /// Specifies if this uses a predefined shape.
         /// </value>
         [JsonProperty(PropertyName = "isPredefinedShape")]
         public System.Nullable<bool> IsPredefinedShape { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the data property.
         /// </value>
@@ -67,8 +67,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dataProperty")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataPropertyEnum> DataProperty { get; set; }
-
+        
         [JsonProperty(PropertyName = "writeOperationConfig")]
         public WriteOperationConfig WriteOperationConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "TARGET_OPERATOR";
     }
 }

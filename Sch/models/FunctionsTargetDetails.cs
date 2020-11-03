@@ -32,5 +32,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "FunctionId is required.")]
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "functions";
     }
 }

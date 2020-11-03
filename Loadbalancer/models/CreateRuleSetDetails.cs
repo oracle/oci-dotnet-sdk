@@ -33,7 +33,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// An array of rules that compose the rule set.
         /// </value>
@@ -43,5 +43,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<Rule> Items { get; set; }
+        
     }
 }

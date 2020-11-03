@@ -26,26 +26,29 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "inputPorts")]
         public System.Collections.Generic.List<InputPort> InputPorts { get; set; }
-
+        
         /// <value>
         /// An array of output ports.
         /// </value>
         [JsonProperty(PropertyName = "outputPorts")]
         public System.Collections.Generic.List<OutputPort> OutputPorts { get; set; }
-
+        
         /// <value>
         /// An array of parameters.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<Parameter> Parameters { get; set; }
-
+        
         [JsonProperty(PropertyName = "opConfigValues")]
         public ConfigValues OpConfigValues { get; set; }
-
+        
         [JsonProperty(PropertyName = "configProviderDelegate")]
         public ConfigProvider ConfigProviderDelegate { get; set; }
-
+        
         [JsonProperty(PropertyName = "dataFlow")]
         public DataFlow DataFlow { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "INTEGRATION_TASK";
     }
 }

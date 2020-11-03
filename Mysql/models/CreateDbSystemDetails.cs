@@ -27,13 +27,13 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// User-provided data about the DB System.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>
@@ -43,21 +43,21 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The Availability Domain where the primary instance should be located.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the Fault Domain the DB System is located in.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the Configuration to be used for this DB System.
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "ConfigurationId is required.")]
         [JsonProperty(PropertyName = "configurationId")]
         public string ConfigurationId { get; set; }
-
+        
         /// <value>
         /// The name of the shape. The shape determines the resources allocated
         /// - CPU cores and memory for VM shapes; CPU cores, memory and storage
@@ -81,13 +81,13 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "ShapeName is required.")]
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
-
+        
         /// <value>
         /// The specific MySQL version identifier.
         /// </value>
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the DB System is associated with.
         /// 
@@ -98,7 +98,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The username for the administrative user.
         /// </value>
@@ -108,7 +108,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "AdminUsername is required.")]
         [JsonProperty(PropertyName = "adminUsername")]
         public string AdminUsername { get; set; }
-
+        
         /// <value>
         /// The password for the administrative user. The password must be
         /// between 8 and 32 characters long, and must contain at least 1
@@ -122,7 +122,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
-
+        
         /// <value>
         /// Initial size of the data volume in GBs that will be created and attached.
         /// Keep in mind that this only specifies the size of the database data volume,
@@ -131,7 +131,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The hostname for the primary endpoint of the DB System. Used for DNS.
         /// <br/>
@@ -143,7 +143,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// The IP address the DB System is configured to listen on.
         /// A private IP address of your choice to assign to the primary endpoint of the DB System.
@@ -154,41 +154,42 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The port for primary endpoint of the DB System to listen on.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The TCP network port on which X Plugin listens for connections. This is the X Plugin equivalent of port.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "portX")]
         public System.Nullable<int> PortX { get; set; }
-
+        
         [JsonProperty(PropertyName = "backupPolicy")]
         public CreateBackupPolicyDetails BackupPolicy { get; set; }
-
+        
         [JsonProperty(PropertyName = "source")]
         public CreateDbSystemSourceDetails Source { get; set; }
-
+        
         [JsonProperty(PropertyName = "maintenance")]
         public CreateMaintenanceDetails Maintenance { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

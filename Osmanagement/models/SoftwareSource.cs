@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// OCID for the Compartment
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// User friendly name for the software source
         /// </value>
@@ -50,13 +50,13 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Information specified by the user about the software source
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Type of the Software Source
         /// </value>
@@ -66,14 +66,14 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "RepoType is required.")]
         [JsonProperty(PropertyName = "repoType")]
         public string RepoType { get; set; }
-
+        
         /// <value>
         /// The architecture type supported by the Software Source
         /// </value>
         [JsonProperty(PropertyName = "archType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ArchTypes> ArchType { get; set; }
-
+        
         /// <value>
         /// URL for the repostiory
         /// </value>
@@ -83,62 +83,62 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Url is required.")]
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
-
+        
         /// <value>
         /// OCID for the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
-
+        
         /// <value>
         /// Display name the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentName")]
         public string ParentName { get; set; }
-
+        
         /// <value>
         /// The yum repository checksum type used by this software source
         /// </value>
         [JsonProperty(PropertyName = "checksumType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ChecksumTypes> ChecksumType { get; set; }
-
+        
         /// <value>
         /// Name of the person maintaining this software source
         /// </value>
         [JsonProperty(PropertyName = "maintainerName")]
         public string MaintainerName { get; set; }
-
+        
         /// <value>
         /// Email address of the person maintaining this software source
         /// </value>
         [JsonProperty(PropertyName = "maintainerEmail")]
         public string MaintainerEmail { get; set; }
-
+        
         /// <value>
         /// Phone number of the person maintaining this software source
         /// </value>
         [JsonProperty(PropertyName = "maintainerPhone")]
         public string MaintainerPhone { get; set; }
-
+        
         /// <value>
         /// URL of the GPG key for this software source
         /// </value>
         [JsonProperty(PropertyName = "gpgKeyUrl")]
         public string GpgKeyUrl { get; set; }
-
+        
         /// <value>
         /// ID of the GPG key for this software source
         /// </value>
         [JsonProperty(PropertyName = "gpgKeyId")]
         public string GpgKeyId { get; set; }
-
+        
         /// <value>
         /// Fingerprint of the GPG key for this software source
         /// </value>
         [JsonProperty(PropertyName = "gpgKeyFingerprint")]
         public string GpgKeyFingerprint { get; set; }
-        ///
+                ///
         /// <value>
         /// status of the software source.
         /// </value>
@@ -160,38 +160,39 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The current state of the Software Source.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Number of packages
         /// </value>
         [JsonProperty(PropertyName = "packages")]
         public System.Nullable<int> Packages { get; set; }
-
+        
         /// <value>
         /// list of the Managed Instances associated with this Software Sources
         /// </value>
         [JsonProperty(PropertyName = "associatedManagedInstances")]
         public System.Collections.Generic.List<Id> AssociatedManagedInstances { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Reference is required.")]
         [JsonProperty(PropertyName = "reference")]
         public string Reference { get; set; }
-
+        
         /// <value>
         /// The name of the upload container
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The time when this upload container is created. An RFC3339 formatted datetime string
         /// </value>
@@ -51,29 +51,30 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The latest time when this upload container is modified. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// This time represents the earliest time of the log entry in this container. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeEarliestLogEntry")]
         public System.Nullable<System.DateTime> TimeEarliestLogEntry { get; set; }
-
+        
         /// <value>
         /// This time represents the latest time of the log entry in this container. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeLatestLogEntry")]
         public System.Nullable<System.DateTime> TimeLatestLogEntry { get; set; }
-
+        
         /// <value>
         /// Warnings summary.
         /// </value>
         [JsonProperty(PropertyName = "warningsCount")]
         public System.Nullable<int> WarningsCount { get; set; }
+        
     }
 }

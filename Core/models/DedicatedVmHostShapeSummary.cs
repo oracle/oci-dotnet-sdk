@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the dedicated vm host shape. You can enumerate all available shapes by calling
         /// {@link DedicatedVmHostShapes}.
@@ -40,5 +40,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DedicatedVmHostShape is required.")]
         [JsonProperty(PropertyName = "dedicatedVmHostShape")]
         public string DedicatedVmHostShape { get; set; }
+        
     }
 }

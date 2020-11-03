@@ -38,25 +38,25 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
-
+        
         /// <value>
         /// The key's value.
         /// </value>
         [JsonProperty(PropertyName = "keyValue")]
         public string KeyValue { get; set; }
-
+        
         /// <value>
         /// The key's fingerprint (e.g., 12:34:56:78:90:ab:cd:ef:12:34:56:78:90:ab:cd:ef).
         /// </value>
         [JsonProperty(PropertyName = "fingerprint")]
         public string Fingerprint { get; set; }
-
+        
         /// <value>
         /// The OCID of the user the key belongs to.
         /// </value>
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// Date and time the `ApiKey` object was created, in the format defined by RFC3339.
         /// <br/>
@@ -64,7 +64,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The API key's current state. After creating an `ApiKey` object, make sure its `lifecycleState` changes from
         /// CREATING to ACTIVE before using it.
@@ -92,11 +92,12 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The detailed status of INACTIVE lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
+        
     }
 }

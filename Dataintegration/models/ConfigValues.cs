@@ -26,8 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "configParamValues")]
         public System.Collections.Generic.Dictionary<string, ConfigParameterValue> ConfigParamValues { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
+        
     }
 }

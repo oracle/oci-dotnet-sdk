@@ -46,29 +46,30 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// The resource type the work request affects.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// The resource type identifier.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that you can use for a GET request to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
-
+        
         /// <value>
         /// The metadata of the resource.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
     }
 }

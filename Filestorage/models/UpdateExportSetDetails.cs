@@ -29,7 +29,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Controls the maximum `tbytes`, `fbytes`, and `abytes`
         /// values reported by `NFS FSSTAT` calls through any associated
@@ -44,7 +44,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxFsStatBytes")]
         public System.Nullable<long> MaxFsStatBytes { get; set; }
-
+        
         /// <value>
         /// Controls the maximum `ffiles`, `ffiles`, and `afiles`
         /// values reported by `NFS FSSTAT` calls through any associated
@@ -59,5 +59,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxFsStatFiles")]
         public System.Nullable<long> MaxFsStatFiles { get; set; }
+        
     }
 }

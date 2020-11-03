@@ -27,5 +27,6 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]
         public System.Nullable<System.DateTime> TimeOfDeletion { get; set; }
+        
     }
 }

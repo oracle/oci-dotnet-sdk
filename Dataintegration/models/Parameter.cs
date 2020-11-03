@@ -23,31 +23,31 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "type")]
         public BaseType Type { get; set; }
-
+        
         /// <value>
         /// The default value of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public System.Object DefaultValue { get; set; }
-
+        
         /// <value>
         /// The default value of the parameter which can be an object in DIS, such as a data entity.
         /// </value>
         [JsonProperty(PropertyName = "rootObjectDefaultValue")]
         public System.Object RootObjectDefaultValue { get; set; }
-
+        
         /// <value>
         /// Specifies whether the parameter is input value.
         /// </value>
         [JsonProperty(PropertyName = "isInput")]
         public System.Nullable<bool> IsInput { get; set; }
-
+        
         /// <value>
         /// Specifies whether the parameter is output value.
         /// </value>
         [JsonProperty(PropertyName = "isOutput")]
         public System.Nullable<bool> IsOutput { get; set; }
-        ///
+                ///
         /// <value>
         /// The output aggregation type.
         /// </value>
@@ -69,11 +69,14 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "outputAggregationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OutputAggregationTypeEnum> OutputAggregationType { get; set; }
-
+        
         /// <value>
         /// The type of value the parameter was created for.
         /// </value>
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "PARAMETER";
     }
 }

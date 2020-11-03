@@ -26,23 +26,24 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The phone number of the contact.
         /// </value>
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
-
+        
         /// <value>
         /// The email of the contact.
         /// </value>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
-
+        
         /// <value>
         /// The email subject line to use when contacting support.
         /// </value>
         [JsonProperty(PropertyName = "subject")]
         public string Subject { get; set; }
+        
     }
 }

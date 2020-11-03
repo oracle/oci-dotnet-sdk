@@ -33,7 +33,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "AttributeValue is required.")]
         [JsonProperty(PropertyName = "attributeValue")]
         public string AttributeValue { get; set; }
-        ///
+                ///
         /// <value>
         /// A string that specifies how to compare the PathMatchCondition object's `attributeValue` string to the
         /// incoming URI.
@@ -85,5 +85,8 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
+        
+        [JsonProperty(PropertyName = "attributeName")]
+        private readonly string attributeName = "PATH";
     }
 }

@@ -26,17 +26,18 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "batchSize")]
         public System.Nullable<int> BatchSize { get; set; }
-
+        
         /// <value>
         /// Specifies whether to truncate.
         /// </value>
         [JsonProperty(PropertyName = "isTruncate")]
         public System.Nullable<bool> IsTruncate { get; set; }
-
+        
         /// <value>
         /// Specifies the isolation level.
         /// </value>
         [JsonProperty(PropertyName = "isolationLevel")]
         public string IsolationLevel { get; set; }
+        
     }
 }

@@ -26,11 +26,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The date and time the log entry occurred.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public string Timestamp { get; set; }
+        
     }
 }

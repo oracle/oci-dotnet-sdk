@@ -28,7 +28,7 @@ namespace Oci.DtsService.Models
         [Required(ErrorMessage = "Label is required.")]
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "REQUESTED")]
@@ -76,44 +76,45 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "transferJobId")]
         public string TransferJobId { get; set; }
-
+        
         [JsonProperty(PropertyName = "serialNumber")]
         public string SerialNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "creationTime")]
         public System.Nullable<System.DateTime> CreationTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "customerReceivedTime")]
         public System.Nullable<System.DateTime> CustomerReceivedTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "customerReturnedTime")]
         public System.Nullable<System.DateTime> CustomerReturnedTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "nextBillingTime")]
         public System.Nullable<System.DateTime> NextBillingTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "deliverySecurityTieId")]
         public string DeliverySecurityTieId { get; set; }
-
+        
         [JsonProperty(PropertyName = "returnSecurityTieId")]
         public string ReturnSecurityTieId { get; set; }
-
+        
         [JsonProperty(PropertyName = "applianceDeliveryTrackingNumber")]
         public string ApplianceDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "applianceReturnDeliveryTrackingNumber")]
         public string ApplianceReturnDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "applianceDeliveryVendor")]
         public string ApplianceDeliveryVendor { get; set; }
-
+        
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
-
+        
         [JsonProperty(PropertyName = "uploadStatusLogUri")]
         public string UploadStatusLogUri { get; set; }
+        
     }
 }

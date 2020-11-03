@@ -26,11 +26,12 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "issueTypeKey")]
         public string IssueTypeKey { get; set; }
-
+        
         /// <value>
         /// The label for the issue type. For example, `Instance Performance`.
         /// </value>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
+        
     }
 }

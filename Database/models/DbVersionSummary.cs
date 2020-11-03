@@ -33,23 +33,24 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// True if this version of the Oracle Database software is the latest version for a release.
         /// </value>
         [JsonProperty(PropertyName = "isLatestForMajorVersion")]
         public System.Nullable<bool> IsLatestForMajorVersion { get; set; }
-
+        
         /// <value>
         /// True if this version of the Oracle Database software supports pluggable databases.
         /// </value>
         [JsonProperty(PropertyName = "supportsPdb")]
         public System.Nullable<bool> SupportsPdb { get; set; }
-
+        
         /// <value>
         /// True if this version of the Oracle Database software is the preview version.
         /// </value>
         [JsonProperty(PropertyName = "isPreviewDbVersion")]
         public System.Nullable<bool> IsPreviewDbVersion { get; set; }
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public System.Byte[] Key { get; set; }
-
+        
         /// <value>
         /// The message, expressed as a byte array up to 1 MiB in size.
         /// </value>
@@ -37,5 +37,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Byte[] Value { get; set; }
+        
     }
 }

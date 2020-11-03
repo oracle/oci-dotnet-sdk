@@ -32,7 +32,7 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Failures is required.")]
         [JsonProperty(PropertyName = "failures")]
         public System.Nullable<int> Failures { get; set; }
-
+        
         /// <value>
         /// An array of items representing the result of each message.
         /// The order is guaranteed to be the same as in the `PutMessagesDetails` object.
@@ -46,5 +46,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "Entries is required.")]
         [JsonProperty(PropertyName = "entries")]
         public System.Collections.Generic.List<PutMessagesResultEntry> Entries { get; set; }
+        
     }
 }

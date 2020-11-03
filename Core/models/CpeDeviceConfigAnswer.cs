@@ -32,11 +32,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The answer to the question.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

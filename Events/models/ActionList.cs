@@ -32,5 +32,6 @@ namespace Oci.EventsService.Models
         [Required(ErrorMessage = "Actions is required.")]
         [JsonProperty(PropertyName = "actions")]
         public System.Collections.Generic.List<Action> Actions { get; set; }
+        
     }
 }

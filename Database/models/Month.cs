@@ -62,5 +62,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "name")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NameEnum> Name { get; set; }
+        
     }
 }

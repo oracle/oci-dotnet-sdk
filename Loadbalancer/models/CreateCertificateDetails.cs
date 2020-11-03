@@ -32,7 +32,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "passphrase")]
         public string Passphrase { get; set; }
-
+        
         /// <value>
         /// The SSL private key for your certificate, in PEM format.
         /// <br/>
@@ -40,7 +40,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateKey")]
         public string PrivateKey { get; set; }
-
+        
         /// <value>
         /// The public certificate, in PEM format, that you received from your SSL certificate provider.
         /// <br/>
@@ -48,7 +48,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "publicCertificate")]
         public string PublicCertificate { get; set; }
-
+        
         /// <value>
         /// The Certificate Authority certificate, or any interim certificate, that you received from your SSL certificate provider.
         /// <br/>
@@ -56,7 +56,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "caCertificate")]
         public string CaCertificate { get; set; }
-
+        
         /// <value>
         /// A friendly name for the certificate bundle. It must be unique and it cannot be changed.
         /// Valid certificate bundle names include only alphanumeric characters, dashes, and underscores.
@@ -70,5 +70,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CertificateName is required.")]
         [JsonProperty(PropertyName = "certificateName")]
         public string CertificateName { get; set; }
+        
     }
 }

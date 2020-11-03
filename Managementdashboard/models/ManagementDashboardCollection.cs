@@ -30,5 +30,6 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ManagementDashboardSummary> Items { get; set; }
+        
     }
 }

@@ -38,7 +38,7 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the specified work request.
         /// </value>
@@ -64,13 +64,13 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The id of the work request.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request. Work
         /// requests are scoped to the same compartment as the resource the work request affects.
@@ -82,16 +82,16 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Percentage of the work request completed.
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339).
@@ -99,7 +99,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was started, as described in
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339).
@@ -107,7 +107,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was finished, as described in
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339).
@@ -115,5 +115,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

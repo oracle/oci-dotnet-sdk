@@ -26,23 +26,24 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "bootstrapServers")]
         public string BootstrapServers { get; set; }
-
+        
         /// <value>
         /// Enable auto creation of topic on the server.
         /// </value>
         [JsonProperty(PropertyName = "autoCreateTopicsEnable")]
         public System.Nullable<bool> AutoCreateTopicsEnable { get; set; }
-
+        
         /// <value>
         /// The number of hours to keep a log file before deleting it (in hours).
         /// </value>
         [JsonProperty(PropertyName = "logRetentionHours")]
         public System.Nullable<int> LogRetentionHours { get; set; }
-
+        
         /// <value>
         /// The default number of log partitions per topic.
         /// </value>
         [JsonProperty(PropertyName = "numPartitions")]
         public System.Nullable<int> NumPartitions { get; set; }
+        
     }
 }

@@ -32,19 +32,20 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the log group.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the log.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logId")]
         public string LogId { get; set; }
+        
     }
 }

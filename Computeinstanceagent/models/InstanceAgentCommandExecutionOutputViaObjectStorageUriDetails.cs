@@ -30,5 +30,8 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "OutputUri is required.")]
         [JsonProperty(PropertyName = "outputUri")]
         public string OutputUri { get; set; }
+        
+        [JsonProperty(PropertyName = "outputType")]
+        private readonly string outputType = "OBJECT_STORAGE_URI";
     }
 }

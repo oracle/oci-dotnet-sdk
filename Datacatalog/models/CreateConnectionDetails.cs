@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -38,7 +38,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The key of the object type. Type key's can be found via the '/types' endpoint.
         /// </value>
@@ -48,13 +48,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "TypeKey is required.")]
         [JsonProperty(PropertyName = "typeKey")]
         public string TypeKey { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the connection type. Each connection type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -71,7 +71,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Properties is required.")]
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the encrypted values for sensitive properties which are specific to the
         /// connection type. Each connection type definition defines it's set of required and optional properties.
@@ -84,7 +84,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "encProperties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> EncProperties { get; set; }
-
+        
         /// <value>
         /// Indicates whether this connection is the default connection. The first connection of a data asset defaults
         /// to being the default, subsequent connections default to not being the default. If a default connection already
@@ -94,5 +94,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }
+        
     }
 }

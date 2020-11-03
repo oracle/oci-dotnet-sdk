@@ -32,42 +32,43 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the term.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Indicates whether a term may contain child terms.
         /// </value>
         [JsonProperty(PropertyName = "isAllowedToHaveChildTerms")]
         public System.Nullable<bool> IsAllowedToHaveChildTerms { get; set; }
-
+        
         /// <value>
         /// The terms parent term key. Will be null if the term has no parent term.
         /// </value>
         [JsonProperty(PropertyName = "parentTermKey")]
         public string ParentTermKey { get; set; }
-
+        
         /// <value>
         /// OCID of the user who is the owner of this business terminology.
         /// </value>
         [JsonProperty(PropertyName = "owner")]
         public string Owner { get; set; }
-
+        
         /// <value>
         /// Status of the approval process workflow for this business term in the glossary.
         /// </value>
         [JsonProperty(PropertyName = "workflowStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TermWorkflowStatus> WorkflowStatus { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
+        
     }
 }

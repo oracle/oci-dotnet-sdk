@@ -28,26 +28,29 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public AbstractField Time { get; set; }
-
+        
         /// <value>
         /// Option to control the size of buckets in the histogram e.g 8hrs  - each bar other than first and last should represent 8hr time span. Will be adjusted to a larger span if time range is very large.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "span")]
         public string Span { get; set; }
-
+        
         /// <value>
         /// Group by fields if specified in the query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "groupByFields")]
         public System.Collections.Generic.List<AbstractField> GroupByFields { get; set; }
-
+        
         /// <value>
         /// Statistical functions specified in the query string. Atleast 1 is required for a TIMESTATS command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "functions")]
         public System.Collections.Generic.List<FunctionField> Functions { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "TIME_STATS";
     }
 }

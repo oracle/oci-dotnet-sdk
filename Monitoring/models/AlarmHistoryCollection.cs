@@ -32,7 +32,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "AlarmId is required.")]
         [JsonProperty(PropertyName = "alarmId")]
         public string AlarmId { get; set; }
-
+        
         /// <value>
         /// Whether the alarm is enabled.
         /// <br/>
@@ -44,7 +44,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// The set of history entries retrieved for the alarm.
         /// 
@@ -55,5 +55,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Entries is required.")]
         [JsonProperty(PropertyName = "entries")]
         public System.Collections.Generic.List<AlarmHistoryEntry> Entries { get; set; }
+        
     }
 }

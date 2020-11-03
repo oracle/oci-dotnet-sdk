@@ -33,7 +33,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The region to use for creating the stack. The new stack will include definitions for
         /// supported resource types in this region.
@@ -45,7 +45,7 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Region is required.")]
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
-
+        
         /// <value>
         /// Filter for [services to use with Resource Discovery](https://www.terraform.io/docs/providers/oci/guides/resource_discovery.html#services).
         /// For example, \"database\" limits resource discovery to resource types within the Database service.
@@ -55,5 +55,8 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "servicesToDiscover")]
         public System.Collections.Generic.List<string> ServicesToDiscover { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceType")]
+        private readonly string configSourceType = "COMPARTMENT_CONFIG_SOURCE";
     }
 }

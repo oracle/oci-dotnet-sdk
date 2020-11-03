@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-        ///
+                ///
         /// <value>
         /// The Autonomous Database workload type. The following values are valid:
         /// <br/>
@@ -61,24 +61,25 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbWorkload")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
-
+        
         /// <value>
         /// True if the database uses [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDedicated")]
         public System.Nullable<bool> IsDedicated { get; set; }
-
+        
         /// <value>
         /// A URL that points to a detailed description of the Autonomous Database version.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }
-
+        
         /// <value>
         /// True if this version of the Oracle Database software can be used for Always-Free Autonomous Databases.
         /// </value>
         [JsonProperty(PropertyName = "isFreeTierEnabled")]
         public System.Nullable<bool> IsFreeTierEnabled { get; set; }
+        
     }
 }

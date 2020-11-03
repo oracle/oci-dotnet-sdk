@@ -30,7 +30,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// User specified name for the retention rule.
         /// </value>
@@ -40,10 +40,10 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         [JsonProperty(PropertyName = "duration")]
         public Duration Duration { get; set; }
-
+        
         /// <value>
         /// The entity tag (ETag) for the retention rule.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Etag is required.")]
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
-
+        
         /// <value>
         /// The date and time as per [RFC 3339](https://tools.ietf.org/html/rfc3339) after which this rule becomes locked.
         /// and can only be deleted by deleting the bucket.
@@ -61,7 +61,7 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeRuleLocked")]
         public System.Nullable<System.DateTime> TimeRuleLocked { get; set; }
-
+        
         /// <value>
         /// The date and time that the retention rule was created as per [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time that the retention rule was modified as per [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
@@ -81,5 +81,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "TimeModified is required.")]
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }
+        
     }
 }

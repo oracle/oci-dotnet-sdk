@@ -41,7 +41,7 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// To scale out (increase the number of instances), provide a positive value. To scale in (decrease the number of
         /// instances), provide a negative value.
@@ -53,5 +53,6 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public System.Nullable<int> Value { get; set; }
+        
     }
 }

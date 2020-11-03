@@ -31,8 +31,9 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "ad")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AvailabilityDomain.AdsEnum> Ad { get; set; }
-
+        
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
+        
     }
 }

@@ -27,5 +27,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "shouldRotate")]
         public System.Nullable<bool> ShouldRotate { get; set; }
+        
     }
 }

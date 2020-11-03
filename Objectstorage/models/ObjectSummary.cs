@@ -34,35 +34,36 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Size of the object in bytes.
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<long> Size { get; set; }
-
+        
         /// <value>
         /// Base64-encoded MD5 hash of the object data.
         /// </value>
         [JsonProperty(PropertyName = "md5")]
         public string Md5 { get; set; }
-
+        
         /// <value>
         /// The date and time the object was created, as described in [RFC 2616](https://tools.ietf.org/html/rfc2616#section-14.29).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The current entity tag (ETag) for the object.
         /// </value>
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
-
+        
         /// <value>
         /// The date and time the object was modified, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616), section 14.29.
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }
+        
     }
 }

@@ -30,13 +30,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A description of the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -44,49 +44,50 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The unique key of the parent data asset.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
-
+        
         /// <value>
         /// The key of the object type. Type key's can be found via the '/types' endpoint.
         /// </value>
         [JsonProperty(PropertyName = "typeKey")]
         public string TypeKey { get; set; }
-
+        
         /// <value>
         /// URI to the connection instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// Unique external key for this object as defined in the source systems.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
-
+        
         /// <value>
         /// The current state of the connection.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Indicates whether this connection is the default connection.
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }
-
+        
         /// <value>
         /// The date and time the connection was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

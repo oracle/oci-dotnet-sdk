@@ -24,5 +24,8 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeId")]
         public string BootVolumeId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceType")]
+        private readonly string sourceType = "bootVolume";
     }
 }

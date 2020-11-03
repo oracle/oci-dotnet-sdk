@@ -31,7 +31,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "ServiceInstanceUser is required.")]
         [JsonProperty(PropertyName = "serviceInstanceUser")]
         public string ServiceInstanceUser { get; set; }
-
+        
         /// <value>
         /// The OIC instance admin password
         /// </value>
@@ -41,5 +41,8 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "ServiceInstancePassword is required.")]
         [JsonProperty(PropertyName = "serviceInstancePassword")]
         public string ServiceInstancePassword { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "OIC";
     }
 }

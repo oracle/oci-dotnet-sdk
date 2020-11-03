@@ -23,26 +23,29 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "entity")]
         public DataEntity Entity { get; set; }
-
+        
         /// <value>
         /// Specifies the read access.
         /// </value>
         [JsonProperty(PropertyName = "isReadAccess")]
         public System.Nullable<bool> IsReadAccess { get; set; }
-
+        
         /// <value>
         /// Specifies the copy fields.
         /// </value>
         [JsonProperty(PropertyName = "isCopyFields")]
         public System.Nullable<bool> IsCopyFields { get; set; }
-
+        
         /// <value>
         /// Specifies if this uses a predefined shape.
         /// </value>
         [JsonProperty(PropertyName = "isPredefinedShape")]
         public System.Nullable<bool> IsPredefinedShape { get; set; }
-
+        
         [JsonProperty(PropertyName = "readOperationConfig")]
         public ReadOperationConfig ReadOperationConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SOURCE_OPERATOR";
     }
 }

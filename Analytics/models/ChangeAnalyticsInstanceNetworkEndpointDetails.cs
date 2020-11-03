@@ -28,5 +28,6 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "NetworkEndpointDetails is required.")]
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
     }
 }

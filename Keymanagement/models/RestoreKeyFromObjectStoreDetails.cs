@@ -21,5 +21,6 @@ namespace Oci.KeymanagementService.Models
         
         [JsonProperty(PropertyName = "backupLocation")]
         public BackupLocation BackupLocation { get; set; }
+        
     }
 }

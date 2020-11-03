@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The hostname for the VNIC's primary private IP. Used for DNS. The value is the hostname
         /// portion of the primary private IP's fully qualified domain name (FQDN)
@@ -63,7 +63,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// A list of the OCIDs of the network security groups (NSGs) to add the VNIC to. Setting this as
         /// an empty array removes the VNIC from all network security groups.
@@ -78,7 +78,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// Whether the source/destination check is disabled on the VNIC.
         /// Defaults to `false`, which means the check is performed. For information about why you would
@@ -92,5 +92,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]
         public System.Nullable<bool> SkipSourceDestCheck { get; set; }
+        
     }
 }

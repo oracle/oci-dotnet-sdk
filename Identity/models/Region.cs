@@ -36,7 +36,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The name of the region. See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
         /// for the full list of supported region names.
@@ -45,5 +45,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

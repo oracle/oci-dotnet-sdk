@@ -36,17 +36,7 @@ namespace Oci.SchService.Models
             LogRule
         };
 
-        /// <value>
-        /// The type descriminator.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Kind is required.")]
-        [JsonProperty(PropertyName = "kind")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<KindEnum> Kind { get; set; }
+        
     }
 
     public class TaskDetailsModelConverter : JsonConverter

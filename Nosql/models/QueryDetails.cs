@@ -34,7 +34,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A NoSQL SQL query statement; or a Base64-encoded prepared statement.
         /// 
@@ -45,13 +45,13 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Statement is required.")]
         [JsonProperty(PropertyName = "statement")]
         public string Statement { get; set; }
-
+        
         /// <value>
         /// If true, the statement is a prepared statement.
         /// </value>
         [JsonProperty(PropertyName = "isPrepared")]
         public System.Nullable<bool> IsPrepared { get; set; }
-        ///
+                ///
         /// <value>
         /// Consistency requirement for a read operation.
         /// </value>
@@ -69,24 +69,25 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "consistency")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConsistencyEnum> Consistency { get; set; }
-
+        
         /// <value>
         /// A limit on the total amount of data read during this operation, in KB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxReadInKBs")]
         public System.Nullable<int> MaxReadInKBs { get; set; }
-
+        
         /// <value>
         /// A map of prepared statement variables to values.
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.Dictionary<string, System.Object> Variables { get; set; }
-
+        
         /// <value>
         /// Timeout setting for the query.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMs")]
         public System.Nullable<int> TimeoutInMs { get; set; }
+        
     }
 }

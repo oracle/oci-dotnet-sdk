@@ -26,13 +26,13 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// compartment id
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// operation type
         /// </value>
@@ -50,37 +50,37 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-
+        
         /// <value>
         /// list of log group summary objects
         /// </value>
         [JsonProperty(PropertyName = "payload")]
         public System.Collections.Generic.List<LogAnalyticsConfigWorkRequestPayload> Payload { get; set; }
-
+        
         /// <value>
         /// percentage complete
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<long> PercentComplete { get; set; }
-
+        
         /// <value>
         /// when the work request was started
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// when the work request was accepted
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// when the work request finished
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-        ///
+                ///
         /// <value>
         /// status
         /// </value>
@@ -102,5 +102,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

@@ -32,25 +32,25 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The immutable name of the type.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description of the type.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data catalog's OCID.
         /// </value>
         [JsonProperty(PropertyName = "catalogId")]
         public string CatalogId { get; set; }
-
+        
         /// <value>
         /// A map of arrays which defines the type specific properties, both required and optional. The map keys are
         /// category names and the values are arrays contiaing all property details. Every property is contained inside
@@ -59,54 +59,55 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<PropertyDefinition>> Properties { get; set; }
-
+        
         /// <value>
         /// The current state of the type.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Indicates whether the type is internal, making it unavailable for use by metadata elements.
         /// </value>
         [JsonProperty(PropertyName = "isInternal")]
         public System.Nullable<bool> IsInternal { get; set; }
-
+        
         /// <value>
         /// Indicates whether the type can be used for tagging metadata elements.
         /// </value>
         [JsonProperty(PropertyName = "isTag")]
         public System.Nullable<bool> IsTag { get; set; }
-
+        
         /// <value>
         /// Indicates whether the type is approved for use as a classifying object.
         /// </value>
         [JsonProperty(PropertyName = "isApproved")]
         public System.Nullable<bool> IsApproved { get; set; }
-
+        
         /// <value>
         /// Indicates the category this type belongs to. For instance, data assets, connections.
         /// </value>
         [JsonProperty(PropertyName = "typeCategory")]
         public string TypeCategory { get; set; }
-
+        
         /// <value>
         /// Mapping type equivalence in the external system.
         /// </value>
         [JsonProperty(PropertyName = "externalTypeName")]
         public string ExternalTypeName { get; set; }
-
+        
         /// <value>
         /// URI to the type instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// Custom properties associated with this Type.
         /// </value>
         [JsonProperty(PropertyName = "customProperties")]
         public System.Collections.Generic.List<CustomPropertySummary> CustomProperties { get; set; }
+        
     }
 }

@@ -26,5 +26,6 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<WorkRequestLogEntry> Items { get; set; }
+        
     }
 }

@@ -26,17 +26,18 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeObserved")]
         public System.Nullable<System.DateTime> TimeObserved { get; set; }
-
+        
         /// <value>
         /// The number of seconds this data covers.
         /// </value>
         [JsonProperty(PropertyName = "timeRangeInSeconds")]
         public System.Nullable<int> TimeRangeInSeconds { get; set; }
-
+        
         /// <value>
         /// The total number of requests received in this time period.
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
+        
     }
 }

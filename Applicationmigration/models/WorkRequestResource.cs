@@ -51,7 +51,7 @@ namespace Oci.ApplicationmigrationService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// The resource type the work request affects.
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// An [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) or other unique identifier for the resource.
         /// 
@@ -72,11 +72,12 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that you can use for a GET request to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
+        
     }
 }

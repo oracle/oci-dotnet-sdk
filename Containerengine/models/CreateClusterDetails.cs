@@ -30,7 +30,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment in which to create the cluster.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the virtual cloud network (VCN) in which to create the cluster.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The version of Kubernetes to install into the cluster masters.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "KubernetesVersion is required.")]
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
-
+        
         /// <value>
         /// The OCID of the KMS key to be used as the master encryption key for Kubernetes secret encryption.
         /// When used, `kubernetesVersion` must be at least `v1.13.0`.
@@ -68,11 +68,12 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-
+        
         /// <value>
         /// Optional attributes for the cluster.
         /// </value>
         [JsonProperty(PropertyName = "options")]
         public ClusterCreateOptions Options { get; set; }
+        
     }
 }

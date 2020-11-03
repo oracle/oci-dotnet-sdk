@@ -26,38 +26,39 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The model type reference.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
-
+        
         /// <value>
         /// The type reference.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         [JsonProperty(PropertyName = "configValues")]
         public ConfigValues ConfigValues { get; set; }
-
+        
         /// <value>
         /// The position of the attribute.
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
-
+        
         /// <value>
         /// The default value.
         /// </value>
         [JsonProperty(PropertyName = "defaultValueString")]
         public string DefaultValueString { get; set; }
-
+        
         /// <value>
         /// Specifies whether the field is mandatory.
         /// </value>
         [JsonProperty(PropertyName = "isMandatory")]
         public System.Nullable<bool> IsMandatory { get; set; }
+        
     }
 }

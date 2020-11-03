@@ -23,5 +23,8 @@ namespace Oci.IdentityService.Models
     /// </summary>
     public class DefaultTagDefinitionValidator : BaseTagDefinitionValidator
     {
-            }
+        
+        [JsonProperty(PropertyName = "validatorType")]
+        private readonly string validatorType = "DEFAULT";
+    }
 }

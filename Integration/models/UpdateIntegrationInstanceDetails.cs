@@ -26,7 +26,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// Standard or Enterprise type
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "integrationInstanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IntegrationInstanceTypeEnum> IntegrationInstanceType { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name,
         /// type or scope. Exists for cross-compatibility only.
@@ -52,7 +52,7 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to
         /// namespaces.
@@ -60,23 +60,24 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Bring your own license.
         /// </value>
         [JsonProperty(PropertyName = "isByol")]
         public System.Nullable<bool> IsByol { get; set; }
-
+        
         /// <value>
         /// The number of configured message packs
         /// </value>
         [JsonProperty(PropertyName = "messagePacks")]
         public System.Nullable<int> MessagePacks { get; set; }
-
+        
         /// <value>
         /// The file server is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
+        
     }
 }

@@ -30,5 +30,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<PublicIpPoolSummary> Items { get; set; }
+        
     }
 }

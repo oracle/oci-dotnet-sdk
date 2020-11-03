@@ -20,5 +20,8 @@ namespace Oci.AutoscalingService.Models
     /// </summary>
     public class InstancePoolResource : Resource
     {
-            }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "instancePool";
+    }
 }

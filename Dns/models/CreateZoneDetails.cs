@@ -43,7 +43,7 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "zoneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ZoneTypeEnum> ZoneType { get; set; }
-
+        
         /// <value>
         /// External master servers for the zone. `externalMasters` becomes a
         /// required parameter when the `zoneType` value is `SECONDARY`.
@@ -51,5 +51,8 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "externalMasters")]
         public System.Collections.Generic.List<ExternalMaster> ExternalMasters { get; set; }
+        
+        [JsonProperty(PropertyName = "migrationSource")]
+        private readonly string migrationSource = "NONE";
     }
 }

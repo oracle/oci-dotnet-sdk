@@ -27,11 +27,12 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string VersionProp { get; set; }
-
+        
         /// <value>
         /// A link to a page describing the version.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 }

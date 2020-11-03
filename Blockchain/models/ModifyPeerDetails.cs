@@ -30,12 +30,13 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "PeerName is required.")]
         [JsonProperty(PropertyName = "peerName")]
         public string PeerName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "OcpuAllocationParam is required.")]
         [JsonProperty(PropertyName = "ocpuAllocationParam")]
         public OcpuAllocationNumberParam OcpuAllocationParam { get; set; }
+        
     }
 }

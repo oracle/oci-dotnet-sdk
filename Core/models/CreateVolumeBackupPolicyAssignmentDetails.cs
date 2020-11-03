@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AssetId is required.")]
         [JsonProperty(PropertyName = "assetId")]
         public string AssetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume backup policy to assign to the volume.
         /// </value>
@@ -38,5 +38,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PolicyId is required.")]
         [JsonProperty(PropertyName = "policyId")]
         public string PolicyId { get; set; }
+        
     }
 }

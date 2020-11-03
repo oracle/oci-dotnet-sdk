@@ -30,7 +30,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "actionResult")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestActionResult> ActionResult { get; set; }
-
+        
         /// <value>
         /// The type of the resource the work request is affecting.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "resourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestResourceType> ResourceType { get; set; }
-
+        
         /// <value>
         /// The OCID of the resource the work request is affecting.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI of the affected resource.
         /// 
@@ -63,12 +63,13 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "ResourceUri is required.")]
         [JsonProperty(PropertyName = "resourceUri")]
         public string ResourceUri { get; set; }
-
+        
         /// <value>
         /// Additional metadata of the resource.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
     }
 }

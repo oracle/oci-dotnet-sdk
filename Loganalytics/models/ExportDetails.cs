@@ -31,14 +31,14 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Flag to search all child compartments of the compartment Id specified in the compartmentId query parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
-
+        
         /// <value>
         /// Query to perform.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "QueryString is required.")]
         [JsonProperty(PropertyName = "queryString")]
         public string QueryString { get; set; }
-
+        
         /// <value>
         /// Default subsystem to qualify fields with in the queryString if not specified.
         /// 
@@ -60,14 +60,14 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
-
+        
         /// <value>
         /// List of filters to be applied when the query executes. More than one filter per field is not permitted. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeFilters")]
         public System.Collections.Generic.List<ScopeFilter> ScopeFilters { get; set; }
-
+        
         /// <value>
         /// Maximum number of results retrieved from data source.  Note a maximum value will be enforced; if the export results can be streamed, the maximum will be 50000000, otherwise 10000; that is, if not streamed, actualMaxTotalCountUsed = Math.min(maxTotalCount, 10000).
         /// <br/>
@@ -82,22 +82,22 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxTotalCount")]
         public System.Nullable<int> MaxTotalCount { get; set; }
-
+        
         [JsonProperty(PropertyName = "timeFilter")]
         public TimeRange TimeFilter { get; set; }
-
+        
         /// <value>
         /// Amount of time, in seconds, allowed for a query to execute. If this time expires before the query is complete, any partial results will be returned.
         /// </value>
         [JsonProperty(PropertyName = "queryTimeoutInSeconds")]
         public System.Nullable<int> QueryTimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Include columns in response
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeColumns")]
         public System.Nullable<bool> ShouldIncludeColumns { get; set; }
-        ///
+                ///
         /// <value>
         /// Specifies the format for the returned results.
         /// </value>
@@ -115,18 +115,19 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "outputFormat")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OutputFormatEnum> OutputFormat { get; set; }
-
+        
         /// <value>
         /// Localize results, including header columns, List-Of-Values and timestamp values.
         /// </value>
         [JsonProperty(PropertyName = "shouldLocalize")]
         public System.Nullable<bool> ShouldLocalize { get; set; }
-
+        
         /// <value>
         /// Controls if query should ignore pre-calculated results if available and only use raw data.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldUseAcceleration")]
         public System.Nullable<bool> ShouldUseAcceleration { get; set; }
+        
     }
 }

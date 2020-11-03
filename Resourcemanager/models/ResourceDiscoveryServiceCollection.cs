@@ -31,5 +31,6 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResourceDiscoveryServiceSummary> Items { get; set; }
+        
     }
 }

@@ -26,14 +26,17 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Labels are keywords or labels that you can add to data assets, dataflows etc. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
-
+        
         [JsonProperty(PropertyName = "nativeShapeField")]
         public NativeShapeField NativeShapeField { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SHAPE_FIELD";
     }
 }

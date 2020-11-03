@@ -35,16 +35,7 @@ namespace Oci.DataintegrationService.Models
             UniqueKey
         };
 
-        /// <value>
-        /// The key type.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
     }
 
     public class KeyModelConverter : JsonConverter

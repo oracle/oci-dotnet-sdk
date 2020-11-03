@@ -44,5 +44,6 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "storageManagement")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageManagementEnum> StorageManagement { get; set; }
+        
     }
 }

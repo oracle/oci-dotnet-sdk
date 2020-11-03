@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-        ///
+                ///
         /// <value>
         /// The tunnel's current state.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the IPSec connection was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -61,7 +61,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// When the state of the tunnel last changed, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -69,5 +69,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStateModified")]
         public System.Nullable<System.DateTime> TimeStateModified { get; set; }
+        
     }
 }

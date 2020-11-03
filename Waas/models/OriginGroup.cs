@@ -24,5 +24,6 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "origins")]
         public System.Collections.Generic.List<OriginGroup_origins> Origins { get; set; }
+        
     }
 }

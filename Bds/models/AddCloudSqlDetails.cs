@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The size of block volume in GB that needs to be attached to a given node.
         /// All the necessary details needed for attachment are managed by service itself.
@@ -38,7 +38,7 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
-
+        
         /// <value>
         /// Base-64 encoded password for Cloudera Manager admin user
         /// </value>
@@ -48,5 +48,6 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
     }
 }

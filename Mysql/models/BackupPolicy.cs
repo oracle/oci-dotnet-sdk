@@ -30,7 +30,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// The start of a 30-minute window of time in which daily, automated backups occur.
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "WindowStartTime is required.")]
         [JsonProperty(PropertyName = "windowStartTime")]
         public string WindowStartTime { get; set; }
-
+        
         /// <value>
         /// The number of days automated backups are retained.
         /// 
@@ -63,7 +63,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "RetentionInDays is required.")]
         [JsonProperty(PropertyName = "retentionInDays")]
         public System.Nullable<int> RetentionInDays { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// <br/>
@@ -73,7 +73,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// <br/>
@@ -83,5 +83,6 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

@@ -48,7 +48,7 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the work request.
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The OCID of the work request.
         /// </value>
@@ -84,7 +84,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the work request.  
         /// 
@@ -95,7 +95,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources that are affected by this work request.
         /// </value>
@@ -105,7 +105,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Progress of the request in percentage.
         /// </value>
@@ -115,7 +115,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time the work request was created, in the format defined by RFC3339.
         /// 
@@ -126,19 +126,20 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request transitioned from ACCEPTED to IN_PROGRESS, in the format defined by RFC3339.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the work request reached a terminal state, either FAILED or SUCCEEDED. Format is defined by RFC3339.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

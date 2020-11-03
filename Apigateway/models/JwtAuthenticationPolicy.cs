@@ -28,13 +28,13 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "tokenHeader")]
         public string TokenHeader { get; set; }
-
+        
         /// <value>
         /// The name of the query parameter containing the authentication token.
         /// </value>
         [JsonProperty(PropertyName = "tokenQueryParam")]
         public string TokenQueryParam { get; set; }
-
+        
         /// <value>
         /// The authentication scheme that is to be used when authenticating
         /// the token. This must to be provided if \"tokenHeader\" is specified.
@@ -42,7 +42,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "tokenAuthScheme")]
         public string TokenAuthScheme { get; set; }
-
+        
         /// <value>
         /// A list of parties that could have issued the token.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Issuers is required.")]
         [JsonProperty(PropertyName = "issuers")]
         public System.Collections.Generic.List<string> Issuers { get; set; }
-
+        
         /// <value>
         /// The list of intended recipients for the token.
         /// </value>
@@ -62,13 +62,13 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Audiences is required.")]
         [JsonProperty(PropertyName = "audiences")]
         public System.Collections.Generic.List<string> Audiences { get; set; }
-
+        
         /// <value>
         /// A list of claims which should be validated to consider the token valid.
         /// </value>
         [JsonProperty(PropertyName = "verifyClaims")]
         public System.Collections.Generic.List<JsonWebTokenClaim> VerifyClaims { get; set; }
-
+        
         /// <value>
         /// The maximum expected time difference between the system clocks
         /// of the token issuer and the API Gateway.
@@ -76,12 +76,15 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxClockSkewInSeconds")]
         public System.Nullable<float> MaxClockSkewInSeconds { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "PublicKeys is required.")]
         [JsonProperty(PropertyName = "publicKeys")]
         public PublicKeySet PublicKeys { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "JWT_AUTHENTICATION";
     }
 }

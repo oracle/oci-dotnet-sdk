@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// collection of Service type
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ServiceTypes is required.")]
         [JsonProperty(PropertyName = "serviceTypes")]
         public System.Collections.Generic.List<ServiceTypeSummary> ServiceTypes { get; set; }
+        
     }
 }

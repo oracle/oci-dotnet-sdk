@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the volume group backup. Does not have to be unique and it's changeable. Avoid entering confidential information.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -67,7 +67,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume group backup.
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of a volume group backup.
         /// </value>
@@ -109,21 +109,21 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The aggregate size of the volume group backup, in MBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
-
+        
         /// <value>
         /// The aggregate size of the volume group backup, in GBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
-
+        
         /// <value>
         /// The date and time the volume group backup was created. This is the time the actual point-in-time image
         /// of the volume group data was taken. Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -135,14 +135,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the request to create the volume group backup was received. Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRequestReceived")]
         public System.Nullable<System.DateTime> TimeRequestReceived { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of backup.
         /// </value>
@@ -164,7 +164,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The aggregate size used by the volume group backup, in MBs. 
         /// It is typically smaller than sizeInMBs, depending on the space
@@ -173,7 +173,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInMbs")]
         public System.Nullable<long> UniqueSizeInMbs { get; set; }
-
+        
         /// <value>
         /// The aggregate size used by the volume group backup, in GBs. 
         /// It is typically smaller than sizeInGBs, depending on the space
@@ -182,7 +182,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInGbs")]
         public System.Nullable<long> UniqueSizeInGbs { get; set; }
-
+        
         /// <value>
         /// OCIDs for the volume backups in this volume group backup.
         /// </value>
@@ -192,11 +192,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeBackupIds is required.")]
         [JsonProperty(PropertyName = "volumeBackupIds")]
         public System.Collections.Generic.List<string> VolumeBackupIds { get; set; }
-
+        
         /// <value>
         /// The OCID of the source volume group.
         /// </value>
         [JsonProperty(PropertyName = "volumeGroupId")]
         public string VolumeGroupId { get; set; }
+        
     }
 }

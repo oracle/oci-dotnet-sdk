@@ -37,29 +37,21 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
-        /// <value>
-        /// The type of autoscaling policy.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PolicyType is required.")]
-        [JsonProperty(PropertyName = "policyType")]
-        public string PolicyType { get; set; }
-
+        
+        
         /// <value>
         /// Boolean field indicating whether this policy is enabled or not.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
+        
     }
 
     public class CreateAutoScalingPolicyDetailsModelConverter : JsonConverter

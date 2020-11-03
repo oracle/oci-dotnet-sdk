@@ -32,13 +32,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The key of the data asset type. This can be obtained via the '/types' endpoint.
         /// </value>
@@ -48,13 +48,13 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "TypeKey is required.")]
         [JsonProperty(PropertyName = "typeKey")]
         public string TypeKey { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the data asset type. Each data asset type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -67,5 +67,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

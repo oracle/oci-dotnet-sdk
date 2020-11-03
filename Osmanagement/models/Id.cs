@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "IdProp is required.")]
         [JsonProperty(PropertyName = "id")]
         public string IdProp { get; set; }
-
+        
         /// <value>
         /// User friendly name
         /// </value>
@@ -40,5 +40,6 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

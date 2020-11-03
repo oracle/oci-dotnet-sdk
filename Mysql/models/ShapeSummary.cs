@@ -34,7 +34,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The number of CPU Cores the Instance provides. These are \"OCPU\"s.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The amount of RAM the Instance provides. This is an IEC base-2 number.
         /// </value>
@@ -54,5 +54,6 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "MemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "memorySizeInGBs")]
         public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
     }
 }

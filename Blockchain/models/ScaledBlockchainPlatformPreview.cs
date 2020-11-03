@@ -30,7 +30,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Platform Instance Display name, can be renamed
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -50,13 +50,13 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Platform Instance Description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Type of compute shape - one of Standard, (Enterprise) Small, Medium, Large or Extra Large
         /// </value>
@@ -66,53 +66,54 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "ComputeShape is required.")]
         [JsonProperty(PropertyName = "computeShape")]
         public string ComputeShape { get; set; }
-
+        
         /// <value>
         /// Storage size in TBs
         /// </value>
         [JsonProperty(PropertyName = "storageSizeInTBs")]
         public System.Double StorageSizeInTBs { get; set; }
-
+        
         /// <value>
         /// Storage size in TBs post scaling
         /// </value>
         [JsonProperty(PropertyName = "storageSizeInTBsPostScaling")]
         public System.Double StorageSizeInTBsPostScaling { get; set; }
-
+        
         [JsonProperty(PropertyName = "componentDetails")]
         public BlockchainPlatformComponentDetails ComponentDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "replicas")]
         public ReplicaDetails Replicas { get; set; }
-
+        
         [JsonProperty(PropertyName = "componentDetailsPostScaling")]
         public BlockchainPlatformComponentDetails ComponentDetailsPostScaling { get; set; }
-
+        
         [JsonProperty(PropertyName = "replicasPostScaling")]
         public ReplicaDetails ReplicasPostScaling { get; set; }
-
+        
         /// <value>
         /// List of OcpuUtilization for all hosts
         /// </value>
         [JsonProperty(PropertyName = "hostOcpuUtilizationInfo")]
         public System.Collections.Generic.List<OcpuUtilizationInfo> HostOcpuUtilizationInfo { get; set; }
-
+        
         /// <value>
         /// List of OcpuUtilization for all hosts after scaling
         /// </value>
         [JsonProperty(PropertyName = "hostOcpuUtilizationInfoPostScaling")]
         public System.Collections.Generic.List<OcpuUtilizationInfo> HostOcpuUtilizationInfoPostScaling { get; set; }
-
+        
         /// <value>
         /// Number of new VMs that would be created
         /// </value>
         [JsonProperty(PropertyName = "newVmCount")]
         public System.Nullable<int> NewVmCount { get; set; }
-
+        
         [JsonProperty(PropertyName = "meteringPreview")]
         public ScaledPlatformMeteringPreview MeteringPreview { get; set; }
-
+        
         [JsonProperty(PropertyName = "scalePayload")]
         public ScaleBlockchainPlatformDetails ScalePayload { get; set; }
+        
     }
 }

@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
-
+        
         /// <value>
         /// Description of the Oracle service or services covered by this `Service` object.
         /// <br/>
@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The `Service` object's [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Name of the `Service` object. This name can change and is not guaranteed to be unique.
         /// <br/>
@@ -80,5 +80,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

@@ -44,13 +44,13 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The time to consume from if type is AT_TIME.
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public System.Nullable<System.DateTime> Time { get; set; }
-
+        
         /// <value>
         /// Name of the consumer group.
         /// </value>
@@ -60,19 +60,19 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "GroupName is required.")]
         [JsonProperty(PropertyName = "groupName")]
         public string GroupName { get; set; }
-
+        
         /// <value>
         /// A unique identifier for the instance joining the consumer group. If an instanceName is not provided, a UUID will be generated and used.
         /// </value>
         [JsonProperty(PropertyName = "instanceName")]
         public string InstanceName { get; set; }
-
+        
         /// <value>
         /// The amount of a consumer instance inactivity time, before partition reservations are released.
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMs")]
         public System.Nullable<int> TimeoutInMs { get; set; }
-
+        
         /// <value>
         /// When using consumer-groups, the default commit-on-get behaviour can be overriden by setting this value to false.
         /// If disabled, a consumer must manually commit their cursors.
@@ -80,5 +80,6 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "commitOnGet")]
         public System.Nullable<bool> CommitOnGet { get; set; }
+        
     }
 }

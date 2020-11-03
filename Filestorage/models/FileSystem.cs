@@ -41,7 +41,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The number of bytes consumed by the file system, including
         /// any snapshots. This number reflects the metered size of the file
@@ -55,7 +55,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "MeteredBytes is required.")]
         [JsonProperty(PropertyName = "meteredBytes")]
         public System.Nullable<long> MeteredBytes { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the file system.
         /// </value>
@@ -65,7 +65,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
@@ -78,7 +78,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the file system.
         /// </value>
@@ -88,7 +88,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the file system.
         /// </value>
@@ -114,7 +114,7 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the file system was created, expressed in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
@@ -127,7 +127,7 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.
@@ -136,7 +136,7 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -144,12 +144,13 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the KMS key which is the master encryption key for the file system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
     }
 }

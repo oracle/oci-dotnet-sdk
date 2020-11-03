@@ -32,7 +32,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The runId associated with the log.
         /// 
@@ -43,14 +43,14 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "RunId is required.")]
         [JsonProperty(PropertyName = "runId")]
         public string RunId { get; set; }
-
+        
         /// <value>
         /// The size of the object in bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
         public System.Nullable<long> SizeInBytes { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the log such as driver and executor.
         /// 
@@ -76,14 +76,14 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "source")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SourceEnum> Source { get; set; }
-
+        
         /// <value>
         /// The date and time the object was created, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616), section 14.29.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of log such as stdout and stderr.
         /// 
@@ -107,5 +107,6 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 }

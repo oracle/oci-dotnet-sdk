@@ -23,11 +23,14 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "fromLink")]
         public OutputLink FromLink { get; set; }
-
+        
         [JsonProperty(PropertyName = "fieldMap")]
         public FieldMap FieldMap { get; set; }
-
+        
         [JsonProperty(PropertyName = "condition")]
         public Expression Condition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "CONDITIONAL_INPUT_LINK";
     }
 }

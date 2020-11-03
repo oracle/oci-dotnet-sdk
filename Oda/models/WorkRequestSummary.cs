@@ -30,7 +30,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The identifier of the compartment that contains the work request.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The identifier of the Digital Assistant instance to which this work request pertains.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "OdaInstanceId is required.")]
         [JsonProperty(PropertyName = "odaInstanceId")]
         public string OdaInstanceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of the operation that's associated with the work request.
         /// </value>
@@ -92,7 +92,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "requestAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RequestActionEnum> RequestAction { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of current work request.
         /// </value>
@@ -122,7 +122,7 @@ namespace Oci.OdaService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The resources that this work request affects.
         /// </value>
@@ -132,5 +132,6 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
+        
     }
 }

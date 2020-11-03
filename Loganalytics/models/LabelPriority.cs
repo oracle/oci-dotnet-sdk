@@ -43,5 +43,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
+        
     }
 }

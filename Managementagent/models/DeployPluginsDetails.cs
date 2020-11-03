@@ -30,7 +30,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "PluginIds is required.")]
         [JsonProperty(PropertyName = "pluginIds")]
         public System.Collections.Generic.List<string> PluginIds { get; set; }
-
+        
         /// <value>
         /// Management Agent Compartment Identifier
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "AgentCompartmentId is required.")]
         [JsonProperty(PropertyName = "agentCompartmentId")]
         public string AgentCompartmentId { get; set; }
-
+        
         /// <value>
         /// List of Agent identifiers
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.ManagementagentService.Models
         [Required(ErrorMessage = "AgentIds is required.")]
         [JsonProperty(PropertyName = "agentIds")]
         public System.Collections.Generic.List<string> AgentIds { get; set; }
+        
     }
 }

@@ -33,7 +33,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "capacityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CapacityType> CapacityType { get; set; }
-
+        
         /// <value>
         /// The capacity value selected (OLPU count, number of users, ...etc...). This parameter affects the
         /// number of CPUs, amount of memory or other resources allocated to the instance.
@@ -45,5 +45,6 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "CapacityValue is required.")]
         [JsonProperty(PropertyName = "capacityValue")]
         public System.Nullable<int> CapacityValue { get; set; }
+        
     }
 }

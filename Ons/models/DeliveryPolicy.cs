@@ -24,5 +24,6 @@ namespace Oci.OnsService.Models
         
         [JsonProperty(PropertyName = "backoffRetryPolicy")]
         public BackoffRetryPolicy BackoffRetryPolicy { get; set; }
+        
     }
 }

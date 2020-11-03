@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Description of the oauth credential to help user differentiate them.
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Allowed scopes for the given oauth credential.
         /// </value>
@@ -48,5 +48,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Scopes is required.")]
         [JsonProperty(PropertyName = "scopes")]
         public System.Collections.Generic.List<FullyQualifiedScope> Scopes { get; set; }
+        
     }
 }

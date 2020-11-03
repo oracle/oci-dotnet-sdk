@@ -32,13 +32,13 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// When the work request started.
         /// </value>
@@ -48,27 +48,27 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// When the work request was accepted. Should match timeStarted in all cases.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// When the work request finished execution.
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-
+        
         /// <value>
         /// Percentage progress completion of the query.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<int> PercentComplete { get; set; }
-
+        
         /// <value>
         /// Work request status.
         /// 
@@ -76,5 +76,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
+        
     }
 }

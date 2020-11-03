@@ -26,7 +26,7 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        ///
+                ///
         /// <value>
         /// The status of the object.
         /// </value>
@@ -42,38 +42,39 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// The type of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The version of the object that is used to track changes in the object instance.
         /// </value>
         [JsonProperty(PropertyName = "objectVersion")]
         public System.Nullable<int> ObjectVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 }

@@ -41,17 +41,7 @@ namespace Oci.DataintegrationService.Models
             GenericJdbcConnection
         };
 
-        /// <value>
-        /// The type of the connection.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
-
+        
         /// <value>
         /// Generated key that can be used in API calls to identify connection. On scenarios where reference to the connection is needed, a value can be passed in create.
         /// </value>
@@ -61,34 +51,34 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// User-defined description for the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// The version of the object that is used to track changes in the object instance.
         /// </value>
@@ -98,21 +88,22 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "ObjectVersion is required.")]
         [JsonProperty(PropertyName = "objectVersion")]
         public System.Nullable<int> ObjectVersion { get; set; }
-
+        
         /// <value>
         /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The properties for the connection.
         /// </value>
         [JsonProperty(PropertyName = "connectionProperties")]
         public System.Collections.Generic.List<ConnectionProperty> ConnectionProperties { get; set; }
-
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 
     public class UpdateConnectionDetailsModelConverter : JsonConverter

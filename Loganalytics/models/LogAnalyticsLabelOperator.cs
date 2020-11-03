@@ -26,11 +26,12 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// operator internal name
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

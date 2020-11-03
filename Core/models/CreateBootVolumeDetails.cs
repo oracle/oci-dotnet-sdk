@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// If provided, specifies the ID of the boot volume backup policy to assign to the newly
         /// created boot volume. If omitted, no policy will be assigned.
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupPolicyId")]
         public string BackupPolicyId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment that contains the boot volume.
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -74,7 +74,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The OCID of the Key Management key to assign as the master encryption key
         /// for the boot volume.
@@ -82,13 +82,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-
+        
         /// <value>
         /// The size of the volume in GBs.
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
-
+        
         /// <value>
         /// The number of volume performance units (VPUs) that will be applied to this volume per GB,
         /// representing the Block Volume service's elastic performance options.
@@ -103,7 +103,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
-
+        
         /// <value>
         /// Specifies the boot volume source details for a new boot volume. The volume source is either another boot volume in the same availability domain or a boot volume backup.
         /// This is a mandatory field for a boot volume.
@@ -115,12 +115,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "SourceDetails is required.")]
         [JsonProperty(PropertyName = "sourceDetails")]
         public BootVolumeSourceDetails SourceDetails { get; set; }
-
+        
         /// <value>
         /// Specifies whether the auto-tune performance is enabled for this boot volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
+        
     }
 }

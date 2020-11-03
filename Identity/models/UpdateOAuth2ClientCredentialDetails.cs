@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Allowed scopes for the given oauth credential.
         /// </value>
@@ -38,11 +38,12 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Scopes is required.")]
         [JsonProperty(PropertyName = "scopes")]
         public System.Collections.Generic.List<FullyQualifiedScope> Scopes { get; set; }
-
+        
         /// <value>
         /// Indicate if the password to be reset or not in the update.
         /// </value>
         [JsonProperty(PropertyName = "isResetPassword")]
         public System.Nullable<bool> IsResetPassword { get; set; }
+        
     }
 }

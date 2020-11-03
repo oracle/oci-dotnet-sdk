@@ -34,13 +34,7 @@ namespace Oci.LoadbalancerService.Models
             Path
         };
 
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AttributeName is required.")]
-        [JsonProperty(PropertyName = "attributeName")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<AttributeNameEnum> AttributeName { get; set; }
+        
     }
 
     public class RuleConditionModelConverter : JsonConverter

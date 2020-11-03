@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-        ///
+                ///
         /// <value>
         /// Defines the type of resource metric (CPU, STORAGE)
         /// 
@@ -65,7 +65,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "resourceMetric")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResourceMetricEnum> ResourceMetric { get; set; }
-
+        
         /// <value>
         /// Identifies the units of the current resource metric (CORES, GB).
         /// 
@@ -77,7 +77,7 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "usageUnit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UsageUnit> UsageUnit { get; set; }
-
+        
         /// <value>
         /// Time duration in milliseconds between data points (one hour or one day).
         /// 
@@ -88,7 +88,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ItemDurationInMs is required.")]
         [JsonProperty(PropertyName = "itemDurationInMs")]
         public System.Nullable<long> ItemDurationInMs { get; set; }
-
+        
         /// <value>
         /// Capacity Data with time interval
         /// 
@@ -99,5 +99,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CapacityData is required.")]
         [JsonProperty(PropertyName = "capacityData")]
         public System.Collections.Generic.List<ResourceCapacityTrendAggregation> CapacityData { get; set; }
+        
     }
 }

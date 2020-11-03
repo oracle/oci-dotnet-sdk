@@ -39,11 +39,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The date and time the wallet was last rotated.
         /// </value>
         [JsonProperty(PropertyName = "timeRotated")]
         public System.Nullable<System.DateTime> TimeRotated { get; set; }
+        
     }
 }

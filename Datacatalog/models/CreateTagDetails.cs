@@ -28,11 +28,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Unique key of the related term or null in the case of a free form tag.
         /// </value>
         [JsonProperty(PropertyName = "termKey")]
         public string TermKey { get; set; }
+        
     }
 }

@@ -26,7 +26,7 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "ticketNumber")]
         public string TicketNumber { get; set; }
-        ///
+                ///
         /// <value>
         /// The severity assigned to the ticket.
         /// </value>
@@ -50,13 +50,13 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
-
+        
         /// <value>
         /// The list of resources associated with the ticket.
         /// </value>
         [JsonProperty(PropertyName = "resourceList")]
         public System.Collections.Generic.List<Resource> ResourceList { get; set; }
-
+        
         /// <value>
         /// The title of the ticket.
         /// </value>
@@ -66,7 +66,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Title is required.")]
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
-
+        
         /// <value>
         /// The description of the issue addressed in the ticket.
         /// </value>
@@ -76,31 +76,32 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The time when the ticket was created, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<int> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time when the ticket was updated, in milliseconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<int> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the ticket.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current `lifecycleState`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleDetails> LifecycleDetails { get; set; }
+        
     }
 }

@@ -28,7 +28,7 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyMaterial is required.")]
         [JsonProperty(PropertyName = "keyMaterial")]
         public string KeyMaterial { get; set; }
-        ///
+                ///
         /// <value>
         /// The wrapping mechanism to use during key import.
         /// </value>
@@ -48,5 +48,6 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "wrappingAlgorithm")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WrappingAlgorithmEnum> WrappingAlgorithm { get; set; }
+        
     }
 }

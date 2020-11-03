@@ -27,5 +27,8 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
+        
+        [JsonProperty(PropertyName = "actionType")]
+        private readonly string actionType = "OSS";
     }
 }

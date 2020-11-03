@@ -30,5 +30,6 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "StorageSizeInTBs is required.")]
         [JsonProperty(PropertyName = "storageSizeInTBs")]
         public System.Nullable<int> StorageSizeInTBs { get; set; }
+        
     }
 }

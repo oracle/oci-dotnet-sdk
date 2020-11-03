@@ -26,11 +26,12 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         [JsonProperty(PropertyName = "address")]
         public string Address { get; set; }
-
+        
         /// <value>
         /// The port.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
+        
     }
 }

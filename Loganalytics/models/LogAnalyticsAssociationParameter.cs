@@ -26,37 +26,37 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
-
+        
         /// <value>
         /// entity type
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// entity guid
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
-
+        
         /// <value>
         /// source name
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
-
+        
         /// <value>
         /// source display name
         /// </value>
         [JsonProperty(PropertyName = "sourceDisplayName")]
         public string SourceDisplayName { get; set; }
-
+        
         /// <value>
         /// source type
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         public string SourceType { get; set; }
-        ///
+                ///
         /// <value>
         /// status
         /// </value>
@@ -74,17 +74,18 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// missingProperties
         /// </value>
         [JsonProperty(PropertyName = "missingProperties")]
         public System.Collections.Generic.List<string> MissingProperties { get; set; }
-
+        
         /// <value>
         /// requiredProperties
         /// </value>
         [JsonProperty(PropertyName = "requiredProperties")]
         public System.Collections.Generic.List<string> RequiredProperties { get; set; }
+        
     }
 }

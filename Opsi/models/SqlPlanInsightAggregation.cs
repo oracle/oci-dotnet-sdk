@@ -30,7 +30,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "PlanHash is required.")]
         [JsonProperty(PropertyName = "planHash")]
         public System.Nullable<long> PlanHash { get; set; }
-
+        
         /// <value>
         /// IO Time in seconds
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "IoTimeInSec is required.")]
         [JsonProperty(PropertyName = "ioTimeInSec")]
         public System.Double IoTimeInSec { get; set; }
-
+        
         /// <value>
         /// CPU Time in seconds
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CpuTimeInSec is required.")]
         [JsonProperty(PropertyName = "cpuTimeInSec")]
         public System.Double CpuTimeInSec { get; set; }
-
+        
         /// <value>
         /// Inefficient Wait Time in seconds
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "InefficientWaitTimeInSec is required.")]
         [JsonProperty(PropertyName = "inefficientWaitTimeInSec")]
         public System.Double InefficientWaitTimeInSec { get; set; }
-
+        
         /// <value>
         /// Total number of executions
         /// </value>
@@ -70,5 +70,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ExecutionsCount is required.")]
         [JsonProperty(PropertyName = "executionsCount")]
         public System.Nullable<long> ExecutionsCount { get; set; }
+        
     }
 }

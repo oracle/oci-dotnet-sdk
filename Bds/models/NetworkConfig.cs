@@ -26,11 +26,12 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isNatGatewayRequired")]
         public System.Nullable<bool> IsNatGatewayRequired { get; set; }
-
+        
         /// <value>
         /// The CIDR IP address block of the VCN.
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
     }
 }

@@ -36,7 +36,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the namespace that contains the tag definition.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagNamespaceId is required.")]
         [JsonProperty(PropertyName = "tagNamespaceId")]
         public string TagNamespaceId { get; set; }
-
+        
         /// <value>
         /// The name of the tag namespace that contains the tag definition.
         /// 
@@ -57,7 +57,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagNamespaceName is required.")]
         [JsonProperty(PropertyName = "tagNamespaceName")]
         public string TagNamespaceName { get; set; }
-
+        
         /// <value>
         /// The OCID of the tag definition.
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The name assigned to the tag during creation. This is the tag key definition.
         /// The name must be unique within the tag namespace and cannot be changed.
@@ -79,7 +79,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description you assign to the tag.
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -98,7 +98,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -107,7 +107,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Indicates whether the tag is retired.
         /// See [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
@@ -119,7 +119,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IsRetired is required.")]
         [JsonProperty(PropertyName = "isRetired")]
         public System.Nullable<bool> IsRetired { get; set; }
-        ///
+                ///
         /// <value>
         /// The tag's current state. After creating a tag, make sure its `lifecycleState` is ACTIVE before using it. After retiring a tag, make sure its `lifecycleState` is INACTIVE before using it. If you delete a tag, you cannot delete another tag until the deleted tag's `lifecycleState` changes from DELETING to DELETED.
         /// </value>
@@ -141,7 +141,7 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Date and time the tag was created, in the format defined by RFC3339.
         /// <br/>
@@ -153,15 +153,16 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Indicates whether the tag is enabled for cost tracking.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isCostTracking")]
         public System.Nullable<bool> IsCostTracking { get; set; }
-
+        
         [JsonProperty(PropertyName = "validator")]
         public BaseTagDefinitionValidator Validator { get; set; }
+        
     }
 }

@@ -26,7 +26,7 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "msg")]
         public string Msg { get; set; }
-        ///
+                ///
         /// <value>
         /// Severity of the issue.
         /// </value>
@@ -46,11 +46,12 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
-
+        
         /// <value>
         /// Position of the issue in the specification file (line, column).
         /// </value>
         [JsonProperty(PropertyName = "src")]
         public System.Collections.Generic.List<System.Collections.Generic.List<decimal>> Src { get; set; }
+        
     }
 }

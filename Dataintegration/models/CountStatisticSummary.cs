@@ -48,11 +48,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "objectType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectTypeEnum> ObjectType { get; set; }
-
+        
         /// <value>
         /// The value for the count statistic object.
         /// </value>
         [JsonProperty(PropertyName = "objectCount")]
         public System.Nullable<long> ObjectCount { get; set; }
+        
     }
 }

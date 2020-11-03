@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "NamespaceName is required.")]
         [JsonProperty(PropertyName = "namespaceName")]
         public string NamespaceName { get; set; }
-
+        
         /// <value>
         /// Tenancy ID
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// if tenancy is onboarded to logging analytics
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "IsOnboarded is required.")]
         [JsonProperty(PropertyName = "isOnboarded")]
         public System.Nullable<bool> IsOnboarded { get; set; }
+        
     }
 }

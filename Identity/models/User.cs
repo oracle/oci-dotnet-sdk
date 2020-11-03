@@ -50,7 +50,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy containing the user.
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name you assign to the user during creation. This is the user's login for the Console.
         /// The name must be unique across all users in the tenancy and cannot be changed.
@@ -72,7 +72,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description you assign to the user. Does not have to be unique, and it's changeable.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The email address you assign to the user.
         /// The email address must be unique across all users in the tenancy.
@@ -90,25 +90,25 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
-
+        
         /// <value>
         /// Whether the email address has been validated.
         /// </value>
         [JsonProperty(PropertyName = "emailVerified")]
         public System.Nullable<bool> EmailVerified { get; set; }
-
+        
         /// <value>
         /// The OCID of the `IdentityProvider` this user belongs to.
         /// </value>
         [JsonProperty(PropertyName = "identityProviderId")]
         public string IdentityProviderId { get; set; }
-
+        
         /// <value>
         /// Identifier of the user in the identity provider
         /// </value>
         [JsonProperty(PropertyName = "externalIdentifier")]
         public string ExternalIdentifier { get; set; }
-
+        
         /// <value>
         /// Date and time the user was created, in the format defined by RFC3339.
         /// <br/>
@@ -120,7 +120,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The user's current state. After creating a user, make sure its `lifecycleState` changes from CREATING to
         /// ACTIVE before using it.
@@ -152,7 +152,7 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Returned only if the user's `lifecycleState` is INACTIVE. A 16-bit value showing the reason why the user
         /// is inactive:
@@ -164,7 +164,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -173,7 +173,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -181,10 +181,10 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "capabilities")]
         public UserCapabilities Capabilities { get; set; }
-
+        
         /// <value>
         /// Flag indicates if MFA has been activated for the user.
         /// </value>
@@ -194,5 +194,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IsMfaActivated is required.")]
         [JsonProperty(PropertyName = "isMfaActivated")]
         public System.Nullable<bool> IsMfaActivated { get; set; }
+        
     }
 }

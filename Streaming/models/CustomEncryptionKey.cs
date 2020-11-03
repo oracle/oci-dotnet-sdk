@@ -26,7 +26,7 @@ namespace Oci.StreamingService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
-        ///
+                ///
         /// <value>
         /// Life cycle State of the custom key
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.StreamingService.Models
         [JsonProperty(PropertyName = "keyState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<KeyStateEnum> KeyState { get; set; }
+        
     }
 }

@@ -28,40 +28,43 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeShift")]
         public string TimeShift { get; set; }
-
+        
         /// <value>
         /// Start time to apply to base line query if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<long> TimeStart { get; set; }
-
+        
         /// <value>
         /// End time to apply to base line query if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<long> TimeEnd { get; set; }
-
+        
         /// <value>
         /// Option to calculate trends of each cluster if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeTrends")]
         public System.Nullable<bool> ShouldIncludeTrends { get; set; }
-
+        
         /// <value>
         /// Option to control the size of buckets in the histogram e.g 8hrs  - each bar other than first and last should represent 8hr time span. Will be adjusted to a larger span if time range is very large.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "span")]
         public string Span { get; set; }
-
+        
         /// <value>
         /// Query to use to compute base line to compare top level query results against to identify differences if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "baselineQuery")]
         public string BaselineQuery { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "CLUSTER_COMPARE";
     }
 }

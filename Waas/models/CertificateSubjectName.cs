@@ -26,41 +26,42 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
-
+        
         /// <value>
         /// The province where the organization is located.
         /// </value>
         [JsonProperty(PropertyName = "stateProvince")]
         public string StateProvince { get; set; }
-
+        
         /// <value>
         /// The city in which the organization is located.
         /// </value>
         [JsonProperty(PropertyName = "locality")]
         public string Locality { get; set; }
-
+        
         /// <value>
         /// The organization name.
         /// </value>
         [JsonProperty(PropertyName = "organization")]
         public string Organization { get; set; }
-
+        
         /// <value>
         /// The field to differentiate between divisions within an organization.
         /// </value>
         [JsonProperty(PropertyName = "organizationalUnit")]
         public string OrganizationalUnit { get; set; }
-
+        
         /// <value>
         /// The fully qualified domain name used for DNS lookups of the server.
         /// </value>
         [JsonProperty(PropertyName = "commonName")]
         public string CommonName { get; set; }
-
+        
         /// <value>
         /// The email address of the server's administrator.
         /// </value>
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
+        
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the DB System. It does not have to be unique.
         /// </value>
@@ -41,13 +41,13 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// User-provided data about the DB System.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment the DB System belongs in.
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet the DB System is associated with.
         /// 
@@ -68,21 +68,21 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The Availability Domain where the primary DB System should be located.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The name of the Fault Domain the DB System is located in.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
-
+        
         /// <value>
         /// The shape of the primary instances of the DB System. The shape
         /// determines resources allocated to a DB System - CPU cores
@@ -93,7 +93,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
-
+        
         /// <value>
         /// Name of the MySQL Version in use for the DB System.
         /// </value>
@@ -103,19 +103,19 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "MysqlVersion is required.")]
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "backupPolicy")]
         public BackupPolicy BackupPolicy { get; set; }
-
+        
         [JsonProperty(PropertyName = "source")]
         public DbSystemSource Source { get; set; }
-
+        
         /// <value>
         /// The OCID of the Configuration to be used for Instances in this DB System.
         /// </value>
         [JsonProperty(PropertyName = "configurationId")]
         public string ConfigurationId { get; set; }
-
+        
         /// <value>
         /// Initial size of the data volume in GiBs that will be created and attached.
         /// 
@@ -126,7 +126,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "DataStorageSizeInGBs is required.")]
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// The hostname for the primary endpoint of the DB System. Used for DNS.
         /// The value is the hostname portion of the primary private IP's fully qualified domain name (FQDN)
@@ -136,7 +136,7 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
-
+        
         /// <value>
         /// The IP address the DB System is configured to listen on. A private
         /// IP address of the primary endpoint of the DB System. Must be an
@@ -146,27 +146,27 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// The port for primary endpoint of the DB System to listen on.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The network port on which X Plugin listens for TCP/IP connections. This is the X Plugin equivalent of port.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "portX")]
         public System.Nullable<int> PortX { get; set; }
-
+        
         /// <value>
         /// The network endpoints available for this DB System.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "endpoints")]
         public System.Collections.Generic.List<DbSystemEndpoint> Endpoints { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the DB System.
         /// </value>
@@ -198,20 +198,20 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Maintenance is required.")]
         [JsonProperty(PropertyName = "maintenance")]
         public MaintenanceDetails Maintenance { get; set; }
-
+        
         /// <value>
         /// The date and time the DB System was created.
         /// </value>
@@ -221,7 +221,7 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the DB System was last updated.
         /// </value>
@@ -231,19 +231,20 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

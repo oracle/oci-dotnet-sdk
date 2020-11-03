@@ -32,5 +32,6 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ServiceConnectorSummary> Items { get; set; }
+        
     }
 }

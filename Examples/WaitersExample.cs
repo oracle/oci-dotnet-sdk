@@ -68,20 +68,17 @@ namespace Oci.Examples
             var addHttpRequestHeaderRule = new AddHttpRequestHeaderRule
             {
                 Header = "someRequestHeader",
-                Value = "/example/1",
-                Action = AddHttpRequestHeaderRule.ActionEnum.AddHttpRequestHeader
+                Value = "/example/1"
             };
             var extendHttpRequestHeaderValueRule = new ExtendHttpRequestHeaderValueRule
             {
                 Header = "someRequestHeader",
                 Suffix = "Some-static-suffix-value",
-                Prefix = "Some-static-prefix-value",
-                Action = ExtendHttpRequestHeaderValueRule.ActionEnum.ExtendHttpRequestHeaderValue
+                Prefix = "Some-static-prefix-value"
             };
             var removeHttpResponseHeaderRule = new RemoveHttpResponseHeaderRule
             {
-                Header = "someResponseHeader",
-                Action = RemoveHttpResponseHeaderRule.ActionEnum.RemoveHttpRequestHeader
+                Header = "someResponseHeader"
             };
 
             rules.Add(addHttpRequestHeaderRule);

@@ -30,7 +30,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ScheduledTaskId is required.")]
         [JsonProperty(PropertyName = "scheduledTaskId")]
         public string ScheduledTaskId { get; set; }
-
+        
         /// <value>
         /// Response time in ms.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "ResponseTimeInMs is required.")]
         [JsonProperty(PropertyName = "responseTimeInMs")]
         public System.Nullable<long> ResponseTimeInMs { get; set; }
-
+        
         /// <value>
         /// Total match count.
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TotalMatchedCount is required.")]
         [JsonProperty(PropertyName = "totalMatchedCount")]
         public System.Nullable<long> TotalMatchedCount { get; set; }
-
+        
         /// <value>
         /// Total count.
         /// </value>
@@ -60,17 +60,18 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TotalCount is required.")]
         [JsonProperty(PropertyName = "totalCount")]
         public System.Nullable<int> TotalCount { get; set; }
-
+        
         /// <value>
         /// Acceleration result columns, included if requested (shouldIncludeResults).
         /// </value>
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<ResultColumn> Columns { get; set; }
-
+        
         /// <value>
         /// Acceleration result values, included if requested (shouldIncludeResults).
         /// </value>
         [JsonProperty(PropertyName = "results")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> Results { get; set; }
+        
     }
 }

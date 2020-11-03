@@ -32,7 +32,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The namespace of the metric.
         /// <br/>
@@ -44,7 +44,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "MetricNamespace is required.")]
         [JsonProperty(PropertyName = "metricNamespace")]
         public string MetricNamespace { get; set; }
-
+        
         /// <value>
         /// The name of the metric.
         /// <br/>
@@ -56,5 +56,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Metric is required.")]
         [JsonProperty(PropertyName = "metric")]
         public string Metric { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "monitoring";
     }
 }

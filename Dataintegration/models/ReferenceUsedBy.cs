@@ -26,17 +26,18 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The name of an published object.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The name path of the published object.
         /// </value>
         [JsonProperty(PropertyName = "namePath")]
         public string NamePath { get; set; }
+        
     }
 }

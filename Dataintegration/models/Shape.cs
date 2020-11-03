@@ -23,5 +23,8 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "type")]
         public BaseType Type { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SHAPE";
     }
 }

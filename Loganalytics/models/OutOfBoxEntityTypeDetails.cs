@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Internal name for the log analytics entity type.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalName is required.")]
         [JsonProperty(PropertyName = "internalName")]
         public string InternalName { get; set; }
-
+        
         /// <value>
         /// Log analytics entity type category. Category will be used for grouping and filtering.
         /// 
@@ -53,7 +53,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-        ///
+                ///
         /// <value>
         /// Log analytics entity type group. Supported values: ClOUD, NON_CLOUD.
         /// 
@@ -77,11 +77,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "cloudType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloudTypeEnum> CloudType { get; set; }
-
+        
         /// <value>
         /// A Single Entity Type Property Definition
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<EntityTypeProperty> Properties { get; set; }
+        
     }
 }

@@ -24,7 +24,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the DRG.
         /// </value>
@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DrgId is required.")]
         [JsonProperty(PropertyName = "drgId")]
         public string DrgId { get; set; }
-
+        
         /// <value>
         /// The OCID of the route table the DRG attachment will use.
         /// <br/>
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-
+        
         /// <value>
         /// The OCID of the VCN.
         /// </value>
@@ -60,5 +60,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
+        
     }
 }

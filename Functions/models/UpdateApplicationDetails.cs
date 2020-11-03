@@ -30,7 +30,17 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "config")]
         public System.Collections.Generic.Dictionary<string, string> Config { get; set; }
-
+        
+        /// <value>
+        /// A syslog URL to which to send all function logs. Supports tcp, udp, and tcp+tls.
+        /// The syslog URL must be reachable from all of the subnets configured for the application.
+        /// Note: If you enable the OCI Logging service for this application, the syslogUrl value is ignored. Function logs are sent to the OCI Logging service, and not to the syslog URL.
+        /// <br/>
+        /// Example: tcp://logserver.myserver:1234
+        /// </value>
+        [JsonProperty(PropertyName = "syslogUrl")]
+        public string SyslogUrl { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -39,7 +49,7 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -47,5 +57,6 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

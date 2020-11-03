@@ -30,5 +30,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ActivationFile is required.")]
         [JsonProperty(PropertyName = "activationFile")]
         public System.Byte[] ActivationFile { get; set; }
+        
     }
 }

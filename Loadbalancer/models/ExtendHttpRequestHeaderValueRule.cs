@@ -46,7 +46,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Header is required.")]
         [JsonProperty(PropertyName = "header")]
         public string Header { get; set; }
-
+        
         /// <value>
         /// A string to prepend to the header value. The resulting header value must conform to RFC 7230.
         /// <br/>
@@ -54,7 +54,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
-
+        
         /// <value>
         /// A string to append to the header value. The resulting header value must conform to RFC 7230.
         /// <br/>
@@ -62,5 +62,8 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "suffix")]
         public string Suffix { get; set; }
+        
+        [JsonProperty(PropertyName = "action")]
+        private readonly string action = "EXTEND_HTTP_REQUEST_HEADER_VALUE";
     }
 }

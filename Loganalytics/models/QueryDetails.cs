@@ -32,21 +32,21 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Flag to search all child compartments of the compartment Id specified in the compartmentId query parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
-
+        
         /// <value>
         /// Saved search OCID for this query if known, used to track usage of saved search queryString.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "savedSearchId")]
         public string SavedSearchId { get; set; }
-
+        
         /// <value>
         /// Query to perform.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "QueryString is required.")]
         [JsonProperty(PropertyName = "queryString")]
         public string QueryString { get; set; }
-
+        
         /// <value>
         /// Default subsystem to qualify fields with in the queryString if not specified.
         /// 
@@ -68,67 +68,68 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "subSystem")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
-
+        
         /// <value>
         /// Maximum number of results to count.  Note a maximum of 2001 will be enforced; that is, actualMaxTotalCountUsed = Math.min(maxTotalCount, 2001).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxTotalCount")]
         public System.Nullable<int> MaxTotalCount { get; set; }
-
+        
         [JsonProperty(PropertyName = "timeFilter")]
         public TimeRange TimeFilter { get; set; }
-
+        
         /// <value>
         /// List of filters to be applied when the query executes. More than one filter per field is not permitted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeFilters")]
         public System.Collections.Generic.List<ScopeFilter> ScopeFilters { get; set; }
-
+        
         /// <value>
         /// Amount of time, in seconds, allowed for a query to execute. If this time expires before the query is complete, any partial results will be returned.
         /// </value>
         [JsonProperty(PropertyName = "queryTimeoutInSeconds")]
         public System.Nullable<int> QueryTimeoutInSeconds { get; set; }
-
+        
         /// <value>
         /// Option to run the query asynchronously. This will lead to a LogAnalyticsQueryJobWorkRequest being submitted and the {workRequestId} will be returned to fetch the results.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldRunAsync")]
         public System.Nullable<bool> ShouldRunAsync { get; set; }
-
+        
         /// <value>
         /// Execution mode for the query if running asynchronously  (shouldRunAsync is true).
         /// </value>
         [JsonProperty(PropertyName = "asyncMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobMode> AsyncMode { get; set; }
-
+        
         /// <value>
         /// Include the total number of results from the query. Note, this value will always be equal to or less than maxTotalCount.
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeTotalCount")]
         public System.Nullable<bool> ShouldIncludeTotalCount { get; set; }
-
+        
         /// <value>
         /// Include columns in response
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeColumns")]
         public System.Nullable<bool> ShouldIncludeColumns { get; set; }
-
+        
         /// <value>
         /// Include fields in response
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeFields")]
         public System.Nullable<bool> ShouldIncludeFields { get; set; }
-
+        
         /// <value>
         /// Controls if query should ignore pre-calculated results if available and only use raw data.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldUseAcceleration")]
         public System.Nullable<bool> ShouldUseAcceleration { get; set; }
+        
     }
 }

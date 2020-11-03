@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// OCID for the Compartment
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// User friendly name for the software source
         /// </value>
@@ -50,17 +50,18 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// OCID for the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
-
+        
         /// <value>
         /// Display name of the parent software source, if there is one
         /// </value>
         [JsonProperty(PropertyName = "parentName")]
         public string ParentName { get; set; }
+        
     }
 }

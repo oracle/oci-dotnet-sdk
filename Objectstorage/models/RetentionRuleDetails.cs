@@ -26,10 +26,10 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         [JsonProperty(PropertyName = "duration")]
         public Duration Duration { get; set; }
-
+        
         /// <value>
         /// The date and time as per [RFC 3339](https://tools.ietf.org/html/rfc3339) after which this rule is locked
         /// and can only be deleted by deleting the bucket. Once a rule is locked, only increases in the duration are
@@ -39,5 +39,6 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeRuleLocked")]
         public System.Nullable<System.DateTime> TimeRuleLocked { get; set; }
+        
     }
 }

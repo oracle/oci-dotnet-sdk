@@ -35,25 +35,25 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stack that is associated with the job.
         /// </value>
         [JsonProperty(PropertyName = "stackId")]
         public string StackId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which the job's associated stack resides.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The job's display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of job executing.
         /// </value>
@@ -75,13 +75,13 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "operation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationEnum> Operation { get; set; }
-
+        
         [JsonProperty(PropertyName = "jobOperationDetails")]
         public JobOperationDetails JobOperationDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "applyJobPlanResolution")]
         public ApplyJobPlanResolution ApplyJobPlanResolution { get; set; }
-
+        
         /// <value>
         /// Deprecated. Use the property `executionPlanJobId` in `jobOperationDetails` instead.
         /// The plan job [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that was used (if this was an apply job and was not auto-approved).
@@ -89,7 +89,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "resolvedPlanJobId")]
         public string ResolvedPlanJobId { get; set; }
-
+        
         /// <value>
         /// The date and time when the job was created.
         /// Format is defined by RFC3339.
@@ -97,7 +97,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time when the job stopped running, irrespective of whether the job ran successfully.
         /// Format is defined by RFC3339.
@@ -105,7 +105,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
-        ///
+                ///
         /// <value>
         /// Current state of the specified job.
         /// For more information about job lifecycle states in Resource Manager, see
@@ -137,10 +137,10 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "failureDetails")]
         public FailureDetails FailureDetails { get; set; }
-
+        
         /// <value>
         /// File path to the directory from which Terraform runs.
         /// If not specified, the root directory is used.
@@ -149,7 +149,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
         public string WorkingDirectory { get; set; }
-
+        
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.
@@ -158,10 +158,10 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.Dictionary<string, string> Variables { get; set; }
-
+        
         [JsonProperty(PropertyName = "configSource")]
         public ConfigSourceRecord ConfigSource { get; set; }
-
+        
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -169,7 +169,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -177,5 +177,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

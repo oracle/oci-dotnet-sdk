@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment the VNIC attachment is in, which is the same
         /// compartment the instance is in.
@@ -49,7 +49,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique.
         /// Avoid entering confidential information.
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the VNIC attachment.
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the instance.
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the VNIC attachment.
         /// </value>
@@ -103,7 +103,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Which physical network interface card (NIC) the VNIC uses.
         /// Certain bare metal instance shapes have two active physical NICs (0 and 1). If
@@ -114,13 +114,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nicIndex")]
         public System.Nullable<int> NicIndex { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet to create the VNIC in.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the VLAN to create the VNIC in. Creating the VNIC in a VLAN (instead
         /// of a subnet) is possible only if you are an Oracle Cloud VMware Solution customer.
@@ -131,7 +131,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
-
+        
         /// <value>
         /// The date and time the VNIC attachment was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -143,7 +143,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The Oracle-assigned VLAN tag of the attached VNIC. Available after the
         /// attachment process is complete.
@@ -156,11 +156,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vlanTag")]
         public System.Nullable<int> VlanTag { get; set; }
-
+        
         /// <value>
         /// The OCID of the VNIC. Available after the attachment process is complete.
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+        
     }
 }

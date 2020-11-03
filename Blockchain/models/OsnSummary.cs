@@ -26,12 +26,13 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "osnKey")]
         public string OsnKey { get; set; }
-
+        
         /// <value>
         /// The current state of the OSN.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Osn.LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

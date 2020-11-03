@@ -26,18 +26,19 @@ namespace Oci.LoggingsearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "results")]
         public System.Collections.Generic.List<SearchResult> Results { get; set; }
-
+        
         /// <value>
         /// List of log field schema information.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<FieldInfo> Fields { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Summary is required.")]
         [JsonProperty(PropertyName = "summary")]
         public SearchResultSummary Summary { get; set; }
+        
     }
 }

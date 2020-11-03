@@ -26,19 +26,19 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "steeringPolicyId")]
         public string SteeringPolicyId { get; set; }
-
+        
         /// <value>
         /// The OCID of the attached zone.
         /// </value>
         [JsonProperty(PropertyName = "zoneId")]
         public string ZoneId { get; set; }
-
+        
         /// <value>
         /// The attached domain within the attached zone.
         /// </value>
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the steering policy attachment.
         /// Does not have to be unique and can be changed.
@@ -47,7 +47,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The record types covered by the attachment at the domain. The set of record types is
         /// determined by aggregating the record types from the answers defined in the steering
@@ -56,25 +56,25 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "rtypes")]
         public System.Collections.Generic.List<string> Rtypes { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the steering policy attachment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
-
+        
         /// <value>
         /// The OCID of the resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The date and time the resource was created, expressed in RFC 3339 timestamp format.
         /// <br/>
@@ -82,7 +82,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the resource.
         /// </value>
@@ -102,5 +102,6 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

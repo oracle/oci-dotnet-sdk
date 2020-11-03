@@ -30,7 +30,7 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "InstanceAgentCommandId is required.")]
         [JsonProperty(PropertyName = "instanceAgentCommandId")]
         public string InstanceAgentCommandId { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment the command is created in.
         /// </value>
@@ -40,36 +40,37 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// created at time of command.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// updated time of command.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Whether the command has been canceled.
         /// </value>
         [JsonProperty(PropertyName = "isCanceled")]
         public System.Nullable<bool> IsCanceled { get; set; }
-
+        
         /// <value>
         /// The last command time.
         /// </value>
         [JsonProperty(PropertyName = "executionTimeOutInSeconds")]
         public System.Nullable<int> ExecutionTimeOutInSeconds { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Content is required.")]
         [JsonProperty(PropertyName = "content")]
         public InstanceAgentCommandContent Content { get; set; }
+        
     }
 }

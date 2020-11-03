@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// OCID for the Erratum.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// OCID for the Compartment.
         /// </value>
@@ -50,36 +50,37 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Summary description of the erratum.
         /// </value>
         [JsonProperty(PropertyName = "synopsis")]
         public string Synopsis { get; set; }
-
+        
         /// <value>
         /// date the erratum was issued
         /// </value>
         [JsonProperty(PropertyName = "issued")]
         public string Issued { get; set; }
-
+        
         /// <value>
         /// most recent date the erratum was updated
         /// </value>
         [JsonProperty(PropertyName = "updated")]
         public string Updated { get; set; }
-
+        
         /// <value>
         /// Type of the erratum.
         /// </value>
         [JsonProperty(PropertyName = "advisoryType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateTypes> AdvisoryType { get; set; }
-
+        
         /// <value>
         /// list of CVEs applicable to this erratum
         /// </value>
         [JsonProperty(PropertyName = "relatedCves")]
         public System.Collections.Generic.List<string> RelatedCves { get; set; }
+        
     }
 }

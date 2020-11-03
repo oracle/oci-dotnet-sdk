@@ -30,7 +30,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The content URL of the agreement.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "ContentUrl is required.")]
         [JsonProperty(PropertyName = "contentUrl")]
         public string ContentUrl { get; set; }
-
+        
         /// <value>
         /// A time-based signature that can be used to accept an agreement or remove a
         /// previously accepted agreement from the list that Marketplace checks before a deployment.
@@ -52,13 +52,13 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Signature is required.")]
         [JsonProperty(PropertyName = "signature")]
         public string Signature { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        ///
+                ///
         /// <value>
         /// Who authored the agreement.
         /// </value>
@@ -76,11 +76,12 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "author")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AuthorEnum> Author { get; set; }
-
+        
         /// <value>
         /// Textual prompt to read and accept the agreement.
         /// </value>
         [JsonProperty(PropertyName = "prompt")]
         public string Prompt { get; set; }
+        
     }
 }

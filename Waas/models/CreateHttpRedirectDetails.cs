@@ -31,13 +31,13 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name of the HTTP Redirect. The name can be changed and does not need to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The domain from which traffic will be redirected.
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Domain is required.")]
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The redirect target object including all the redirect data.
         /// </value>
@@ -57,13 +57,13 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Target is required.")]
         [JsonProperty(PropertyName = "target")]
         public HttpRedirectTarget Target { get; set; }
-
+        
         /// <value>
         /// The response code returned for the redirect to the client. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.4).
         /// </value>
         [JsonProperty(PropertyName = "responseCode")]
         public System.Nullable<int> ResponseCode { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -72,7 +72,7 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -81,5 +81,6 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

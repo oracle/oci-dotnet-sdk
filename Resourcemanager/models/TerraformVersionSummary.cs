@@ -27,5 +27,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
     }
 }

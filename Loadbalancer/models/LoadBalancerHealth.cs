@@ -88,7 +88,7 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// A list of backend sets that are currently in the `WARNING` health state. The list identifies each backend set by the
         /// friendly name you assigned when you created it.
@@ -101,7 +101,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "WarningStateBackendSetNames is required.")]
         [JsonProperty(PropertyName = "warningStateBackendSetNames")]
         public System.Collections.Generic.List<string> WarningStateBackendSetNames { get; set; }
-
+        
         /// <value>
         /// A list of backend sets that are currently in the `CRITICAL` health state. The list identifies each backend set by the
         /// friendly name you assigned when you created it.
@@ -114,7 +114,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "CriticalStateBackendSetNames is required.")]
         [JsonProperty(PropertyName = "criticalStateBackendSetNames")]
         public System.Collections.Generic.List<string> CriticalStateBackendSetNames { get; set; }
-
+        
         /// <value>
         /// A list of backend sets that are currently in the `UNKNOWN` health state. The list identifies each backend set by the
         /// friendly name you assigned when you created it.
@@ -127,7 +127,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "UnknownStateBackendSetNames is required.")]
         [JsonProperty(PropertyName = "unknownStateBackendSetNames")]
         public System.Collections.Generic.List<string> UnknownStateBackendSetNames { get; set; }
-
+        
         /// <value>
         /// The total number of backend sets associated with this load balancer.
         /// <br/>
@@ -139,5 +139,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "TotalBackendSetCount is required.")]
         [JsonProperty(PropertyName = "totalBackendSetCount")]
         public System.Nullable<int> TotalBackendSetCount { get; set; }
+        
     }
 }

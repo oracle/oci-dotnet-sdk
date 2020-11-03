@@ -39,7 +39,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "RegionKey is required.")]
         [JsonProperty(PropertyName = "regionKey")]
         public string RegionKey { get; set; }
-
+        
         /// <value>
         /// The region's name. See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
         /// for the full list of supported region names.
@@ -52,7 +52,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "RegionName is required.")]
         [JsonProperty(PropertyName = "regionName")]
         public string RegionName { get; set; }
-        ///
+                ///
         /// <value>
         /// The region subscription status.
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-
+        
         /// <value>
         /// Indicates if the region is the home region or not.
         /// </value>
@@ -84,5 +84,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IsHomeRegion is required.")]
         [JsonProperty(PropertyName = "isHomeRegion")]
         public System.Nullable<bool> IsHomeRegion { get; set; }
+        
     }
 }

@@ -26,20 +26,23 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
-
+        
         /// <value>
         /// Array of service names that are available for selection in the serviceName property.
         /// </value>
         [JsonProperty(PropertyName = "serviceNames")]
         public System.Collections.Generic.List<string> ServiceNames { get; set; }
-
+        
         /// <value>
         /// The Autonomous Transaction Processing driver class.
         /// </value>
         [JsonProperty(PropertyName = "driverClass")]
         public string DriverClass { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public ConnectionSummaryFromAtp DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_ATP_DATA_ASSET";
     }
 }

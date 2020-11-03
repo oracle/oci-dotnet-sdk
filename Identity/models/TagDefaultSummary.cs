@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment. The tag default will apply to all new resources that are created in the compartment.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The OCID of the tag namespace that contains the tag definition.
         /// 
@@ -53,7 +53,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagNamespaceId is required.")]
         [JsonProperty(PropertyName = "tagNamespaceId")]
         public string TagNamespaceId { get; set; }
-
+        
         /// <value>
         /// The OCID of the tag definition. The tag default will always assign a default value for this tag definition.
         /// 
@@ -64,7 +64,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagDefinitionId is required.")]
         [JsonProperty(PropertyName = "tagDefinitionId")]
         public string TagDefinitionId { get; set; }
-
+        
         /// <value>
         /// The name used in the tag definition. This field is informational in the context of the tag default.
         /// 
@@ -75,7 +75,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TagDefinitionName is required.")]
         [JsonProperty(PropertyName = "tagDefinitionName")]
         public string TagDefinitionName { get; set; }
-
+        
         /// <value>
         /// The default value for the tag definition. This will be applied to all new resources created in the compartment.
         /// 
@@ -86,7 +86,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// Date and time the `TagDefault` object was created, in the format defined by RFC3339.
         /// <br/>
@@ -98,7 +98,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The tag default's current state. After creating a `TagDefault`, make sure its `lifecycleState` is ACTIVE before using it.
         /// 
@@ -116,7 +116,7 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// If you specify that a value is required, a value is set during resource creation (either by 
         /// the user creating the resource or another tag defualt). If no value is set, resource 
@@ -133,5 +133,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IsRequired is required.")]
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
+        
     }
 }

@@ -29,7 +29,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the steering policy. Does not have to be unique and can be changed.
         /// Avoid entering confidential information.
@@ -37,7 +37,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The Time To Live (TTL) for responses from the steering policy, in seconds.
         /// If not specified during creation, a value of 30 seconds will be used.
@@ -45,7 +45,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
-
+        
         /// <value>
         /// The OCID of the health check monitor providing health data about the answers of the
         /// steering policy. A steering policy answer with `rdata` matching a monitored endpoint
@@ -60,7 +60,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "healthCheckMonitorId")]
         public string HealthCheckMonitorId { get; set; }
-        ///
+                ///
         /// <value>
         /// A set of predefined rules based on the desired purpose of the steering policy. Each
         /// template utilizes Traffic Management's rules in a different order to produce the desired
@@ -96,7 +96,7 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "template")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TemplateEnum> Template { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -106,7 +106,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -116,19 +116,19 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
-
+        
         /// <value>
         /// The OCID of the resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The date and time the resource was created, expressed in RFC 3339 timestamp format.
         /// <br/>
@@ -136,7 +136,7 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the resource.
         /// </value>
@@ -158,5 +158,6 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

@@ -32,28 +32,28 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly description. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. It does not have to be unique. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// An array of DNS zone names.
         /// Example: [ &quot;app.examplecorp.com&quot;, &quot;app.examplecorp2.com&quot; ]
@@ -64,7 +64,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DnsZones is required.")]
         [JsonProperty(PropertyName = "dnsZones")]
         public System.Collections.Generic.List<string> DnsZones { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -72,7 +72,7 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The maximum number of hosts to be accessed through the private endpoint. This value is used
         /// to calculate the relevant CIDR block and should be a multiple of 256.  If the value is not a
@@ -82,14 +82,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxHostCount")]
         public System.Nullable<int> MaxHostCount { get; set; }
-
+        
         /// <value>
         /// An array of network security group OCIDs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// The OCID of a subnet.
         /// 
@@ -100,5 +100,6 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
     }
 }

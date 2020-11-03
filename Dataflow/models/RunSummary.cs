@@ -32,7 +32,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "ApplicationId is required.")]
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
-
+        
         /// <value>
         /// The OCID of a compartment.
         /// 
@@ -43,21 +43,21 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The data read by the run in bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataReadInBytes")]
         public System.Nullable<long> DataReadInBytes { get; set; }
-
+        
         /// <value>
         /// The data written by the run in bytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataWrittenInBytes")]
         public System.Nullable<long> DataWrittenInBytes { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
@@ -68,14 +68,14 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. This name is not necessarily unique.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -87,7 +87,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The ID of a run.
         /// 
@@ -98,7 +98,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The Spark language.
         /// 
@@ -110,14 +110,14 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ApplicationLanguage> Language { get; set; }
-
+        
         /// <value>
         /// The detailed messages about the lifecycle state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The current state of this run.
         /// 
@@ -129,7 +129,7 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RunLifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Unique Oracle assigned identifier for the request.
         /// If you need to contact Oracle about a particular request, please provide the request ID.
@@ -137,14 +137,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "opcRequestId")]
         public string OpcRequestId { get; set; }
-
+        
         /// <value>
         /// The OCID of the user who created the resource.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ownerPrincipalId")]
         public string OwnerPrincipalId { get; set; }
-
+        
         /// <value>
         /// The username of the user who created the resource.  If the username of the owner does not exist,
         /// `null` will be returned and the caller should refer to the ownerPrincipalId value instead.
@@ -152,21 +152,21 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "ownerUserName")]
         public string OwnerUserName { get; set; }
-
+        
         /// <value>
         /// The duration of the run in milliseconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "runDurationInMilliseconds")]
         public System.Nullable<long> RunDurationInMilliseconds { get; set; }
-
+        
         /// <value>
         /// The total number of oCPU requested by the run.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalOCpu")]
         public System.Nullable<int> TotalOCpu { get; set; }
-
+        
         /// <value>
         /// The date and time a application was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -177,7 +177,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time a application was updated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
@@ -188,5 +188,6 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

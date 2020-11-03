@@ -28,7 +28,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "ObjectName is required.")]
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
-
+        
         /// <value>
         /// The number of hours for which this object will be restored.
         /// By default objects will be restored for 24 hours. You can instead configure the duration using the hours parameter.
@@ -36,12 +36,13 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "hours")]
         public System.Nullable<int> Hours { get; set; }
-
+        
         /// <value>
         /// The versionId of the object to restore. Current object version is used by default.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "versionId")]
         public string VersionId { get; set; }
+        
     }
 }

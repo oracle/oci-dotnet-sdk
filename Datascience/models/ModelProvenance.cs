@@ -26,30 +26,31 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "repositoryUrl")]
         public string RepositoryUrl { get; set; }
-
+        
         /// <value>
         /// For model reproducibility purposes. Branch of the git repository associated with model training.
         /// </value>
         [JsonProperty(PropertyName = "gitBranch")]
         public string GitBranch { get; set; }
-
+        
         /// <value>
         /// For model reproducibility purposes. Commit ID of the git repository associated with model training.
         /// </value>
         [JsonProperty(PropertyName = "gitCommit")]
         public string GitCommit { get; set; }
-
+        
         /// <value>
         /// For model reproducibility purposes. Path to model artifacts.
         /// </value>
         [JsonProperty(PropertyName = "scriptDir")]
         public string ScriptDir { get; set; }
-
+        
         /// <value>
         /// For model reproducibility purposes. Path to the python script or notebook in which the model was trained.\"
         /// 
         /// </value>
         [JsonProperty(PropertyName = "trainingScript")]
         public string TrainingScript { get; set; }
+        
     }
 }

@@ -26,25 +26,26 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A set of keys for a secondary index.
         /// </value>
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<IndexKey> Keys { get; set; }
-
+        
         /// <value>
         /// The state of an index.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Index.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

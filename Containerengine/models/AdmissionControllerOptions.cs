@@ -26,5 +26,6 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPodSecurityPolicyEnabled")]
         public System.Nullable<bool> IsPodSecurityPolicyEnabled { get; set; }
+        
     }
 }

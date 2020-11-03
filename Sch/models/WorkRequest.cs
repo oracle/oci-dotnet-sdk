@@ -41,7 +41,7 @@ namespace Oci.SchService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationType> OperationType { get; set; }
-
+        
         /// <value>
         /// Status of current work request.
         /// 
@@ -53,7 +53,7 @@ namespace Oci.SchService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationStatus> Status { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
         /// 
@@ -64,7 +64,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment
         /// containing the work request.
@@ -76,7 +76,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources affected by this work request.
         /// 
@@ -87,7 +87,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// Percentage of the request completed.
         /// 
@@ -98,7 +98,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "PercentComplete is required.")]
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
-
+        
         /// <value>
         /// The date and time when the request was created.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -110,7 +110,7 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The date and time when the request was started.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -118,7 +118,7 @@ namespace Oci.SchService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time when the object finished.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -126,5 +126,6 @@ namespace Oci.SchService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

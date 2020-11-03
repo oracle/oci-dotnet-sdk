@@ -31,7 +31,7 @@ namespace Oci.LoggingsearchService.Models
         [Required(ErrorMessage = "TimeStart is required.")]
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
-
+        
         /// <value>
         /// End filter log's date and time, in the format defined by RFC3339.
         /// 
@@ -42,7 +42,7 @@ namespace Oci.LoggingsearchService.Models
         [Required(ErrorMessage = "TimeEnd is required.")]
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
-
+        
         /// <value>
         /// Query corresponding to the search operation. This query is parsed and validated before execution and
         /// should follow the specification. For more information on the query language specification, see
@@ -55,12 +55,13 @@ namespace Oci.LoggingsearchService.Models
         [Required(ErrorMessage = "SearchQuery is required.")]
         [JsonProperty(PropertyName = "searchQuery")]
         public string SearchQuery { get; set; }
-
+        
         /// <value>
         /// Whether to return field schema information for the log stream specified in searchQuery.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isReturnFieldInfo")]
         public System.Nullable<bool> IsReturnFieldInfo { get; set; }
+        
     }
 }

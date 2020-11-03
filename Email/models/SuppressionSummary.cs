@@ -26,19 +26,19 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The email address of the suppression.
         /// </value>
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
-
+        
         /// <value>
         /// The unique OCID of the suppression.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The reason that the email address was suppressed.
         /// </value>
@@ -64,7 +64,7 @@ namespace Oci.EmailService.Models
         [JsonProperty(PropertyName = "reason")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ReasonEnum> Reason { get; set; }
-
+        
         /// <value>
         /// The date and time a recipient's email address was added to the
         /// suppression list, in \"YYYY-MM-ddThh:mmZ\" format with a Z offset, as
@@ -73,5 +73,6 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ServiceId is required.")]
         [JsonProperty(PropertyName = "serviceId")]
         public string ServiceId { get; set; }
-
+        
         /// <value>
         /// The name of the service.
         /// </value>
@@ -39,5 +39,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
+        
     }
 }

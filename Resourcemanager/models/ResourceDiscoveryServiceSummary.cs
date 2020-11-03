@@ -27,7 +27,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        ///
+                ///
         /// <value>
         /// The scope of the service as used with Resource Discovery.
         /// This property determines the type of compartment OCID required: root compartment (`TENANCY`) or not (`COMPARTMENT`).
@@ -51,5 +51,6 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "discoveryScope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DiscoveryScopeEnum> DiscoveryScope { get; set; }
+        
     }
 }

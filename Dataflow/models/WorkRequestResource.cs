@@ -51,14 +51,14 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// The id of a work request resource object.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Nullable<long> Id { get; set; }
-
+        
         /// <value>
         /// The id of the releated resource. See resourceType to identity the specific type of resource.
         /// 
@@ -69,7 +69,7 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "ResourceId is required.")]
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
-
+        
         /// <value>
         /// The type of resource.  See resourceId for the id of the specific resource.
         /// 
@@ -80,19 +80,20 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-
+        
         /// <value>
         /// The URI path that the user can use to get access to the resource metadata
         /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceUri")]
         public string ResourceUri { get; set; }
-
+        
         /// <value>
         /// The OCID of a work request.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "workRequestid")]
         public string WorkRequestid { get; set; }
+        
     }
 }

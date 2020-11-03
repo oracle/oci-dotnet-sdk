@@ -30,7 +30,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The list of access rule criteria. The rule would be applied only for the requests that matched all the listed conditions.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Criteria is required.")]
         [JsonProperty(PropertyName = "criteria")]
         public System.Collections.Generic.List<AccessRuleCriteria> Criteria { get; set; }
-        ///
+                ///
         /// <value>
         /// The action to take when the access criteria are met for a rule. If unspecified, defaults to `ALLOW`.
         /// <br/>
@@ -98,7 +98,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
-        ///
+                ///
         /// <value>
         /// The method used to block requests if `action` is set to `BLOCK` and the access criteria are met. If unspecified, defaults to `SET_RESPONSE_CODE`.
         /// </value>
@@ -116,31 +116,31 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "blockAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BlockActionEnum> BlockAction { get; set; }
-
+        
         /// <value>
         /// The response status code to return when `action` is set to `BLOCK`, `blockAction` is set to `SET_RESPONSE_CODE`, and the access criteria are met. If unspecified, defaults to `403`. The list of available response codes: `200`, `201`, `202`, `204`, `206`, `300`, `301`, `302`, `303`, `304`, `307`, `400`, `401`, `403`, `404`, `405`, `408`, `409`, `411`, `412`, `413`, `414`, `415`, `416`, `422`, `444`, `499`, `500`, `501`, `502`, `503`, `504`, `507`.
         /// </value>
         [JsonProperty(PropertyName = "blockResponseCode")]
         public System.Nullable<int> BlockResponseCode { get; set; }
-
+        
         /// <value>
         /// The message to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the access criteria are met. If unspecified, defaults to 'Access to the website is blocked.'
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageMessage")]
         public string BlockErrorPageMessage { get; set; }
-
+        
         /// <value>
         /// The error code to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the access criteria are met. If unspecified, defaults to 'Access rules'.
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageCode")]
         public string BlockErrorPageCode { get; set; }
-
+        
         /// <value>
         /// The description text to show on the error page when `action` is set to `BLOCK`, `blockAction` is set to `SHOW_ERROR_PAGE`, and the access criteria are met. If unspecified, defaults to 'Access blocked by website owner. Please contact support.'
         /// </value>
         [JsonProperty(PropertyName = "blockErrorPageDescription")]
         public string BlockErrorPageDescription { get; set; }
-        ///
+                ///
         ///
         public enum BypassChallengesEnum {
             [EnumMember(Value = "JS_CHALLENGE")]
@@ -166,13 +166,13 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "bypassChallenges", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<BypassChallengesEnum> BypassChallenges { get; set; }
-
+        
         /// <value>
         /// The target to which the request should be redirected, represented as a URI reference. Required when `action` is `REDIRECT`.
         /// </value>
         [JsonProperty(PropertyName = "redirectUrl")]
         public string RedirectUrl { get; set; }
-        ///
+                ///
         /// <value>
         /// The response status code to return when `action` is set to `REDIRECT`.
         /// <br/>
@@ -198,35 +198,36 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "redirectResponseCode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RedirectResponseCodeEnum> RedirectResponseCode { get; set; }
-
+        
         /// <value>
         /// The title used when showing a CAPTCHA challenge when `action` is set to `SHOW_CAPTCHA` and the request is challenged.
         /// </value>
         [JsonProperty(PropertyName = "captchaTitle")]
         public string CaptchaTitle { get; set; }
-
+        
         /// <value>
         /// The text to show in the header when showing a CAPTCHA challenge when `action` is set to `SHOW_CAPTCHA` and the request is challenged.
         /// </value>
         [JsonProperty(PropertyName = "captchaHeader")]
         public string CaptchaHeader { get; set; }
-
+        
         /// <value>
         /// The text to show in the footer when showing a CAPTCHA challenge when `action` is set to `SHOW_CAPTCHA` and the request is challenged.
         /// </value>
         [JsonProperty(PropertyName = "captchaFooter")]
         public string CaptchaFooter { get; set; }
-
+        
         /// <value>
         /// The text to show on the label of the CAPTCHA challenge submit button when `action` is set to `SHOW_CAPTCHA` and the request is challenged.
         /// </value>
         [JsonProperty(PropertyName = "captchaSubmitLabel")]
         public string CaptchaSubmitLabel { get; set; }
-
+        
         /// <value>
         /// An object that represents an action to apply to an HTTP response headers if all rule criteria will be matched regardless of `action` value.
         /// </value>
         [JsonProperty(PropertyName = "responseHeaderManipulation")]
         public System.Collections.Generic.List<HeaderManipulationAction> ResponseHeaderManipulation { get; set; }
+        
     }
 }

@@ -34,7 +34,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
         public string Protocol { get; set; }
-
+        
         /// <value>
         /// The path against which to run the health check.
         /// <br/>
@@ -42,7 +42,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "urlPath")]
         public string UrlPath { get; set; }
-
+        
         /// <value>
         /// The backend server port against which to run the health check. If the port is not specified, the load balancer uses the
         /// port information from the `Backend` object.
@@ -55,7 +55,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-
+        
         /// <value>
         /// The status code a healthy backend server should return. If you configure the health check policy to use the HTTP protocol,
         /// you can use common HTTP status codes such as \"200\".
@@ -68,7 +68,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "ReturnCode is required.")]
         [JsonProperty(PropertyName = "returnCode")]
         public System.Nullable<int> ReturnCode { get; set; }
-
+        
         /// <value>
         /// The number of retries to attempt before a backend server is considered \"unhealthy\". This number also applies
         /// when recovering a server to the \"healthy\" state. Defaults to 3.
@@ -77,7 +77,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "retries")]
         public System.Nullable<int> Retries { get; set; }
-
+        
         /// <value>
         /// The maximum time, in milliseconds, to wait for a reply to a health check. A health check is successful only if a reply
         /// returns within this timeout period. Defaults to 3000 (3 seconds).
@@ -86,7 +86,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeoutInMillis")]
         public System.Nullable<int> TimeoutInMillis { get; set; }
-
+        
         /// <value>
         /// The interval between health checks, in milliseconds. The default is 10000 (10 seconds).
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "intervalInMillis")]
         public System.Nullable<int> IntervalInMillis { get; set; }
-
+        
         /// <value>
         /// A regular expression for parsing the response body from the backend server.
         /// <br/>
@@ -106,5 +106,6 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "ResponseBodyRegex is required.")]
         [JsonProperty(PropertyName = "responseBodyRegex")]
         public string ResponseBodyRegex { get; set; }
+        
     }
 }

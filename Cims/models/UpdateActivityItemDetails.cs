@@ -29,7 +29,7 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "comments")]
         public string Comments { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of activity occurring.
         /// </value>
@@ -51,5 +51,8 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "activityType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActivityTypeEnum> ActivityType { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "activity";
     }
 }

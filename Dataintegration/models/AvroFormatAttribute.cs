@@ -26,5 +26,8 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "compression")]
         public string Compression { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "AVRO_FORMAT";
     }
 }

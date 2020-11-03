@@ -27,43 +27,44 @@ namespace Oci.ApplicationmigrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The name of the group to which this field belongs, if any.
         /// </value>
         [JsonProperty(PropertyName = "group")]
         public string Group { get; set; }
-
+        
         /// <value>
         /// The configuration field type
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// The value of the field
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// Help text to guide the customer in setting the configuration value
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Indicates whether or not the field is required (defaults to true)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
-
+        
         /// <value>
         /// Indicates whether or not the field may be modified (defaults to true)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMutable")]
         public System.Nullable<bool> IsMutable { get; set; }
+        
     }
 }

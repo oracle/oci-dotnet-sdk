@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The status returned from the pattern validation.
         /// </value>
@@ -36,17 +36,18 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// The expression used in the pattern validation.
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         /// <value>
         /// Collection of logical entities derived from the expression applied to a list of file paths.
         /// </value>
         [JsonProperty(PropertyName = "derivedLogicalEntities")]
         public System.Collections.Generic.List<DerivedLogicalEntities> DerivedLogicalEntities { get; set; }
+        
     }
 }

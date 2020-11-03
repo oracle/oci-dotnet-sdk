@@ -32,19 +32,19 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of a folder.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The list of customized properties along with the values for this object
         /// </value>
         [JsonProperty(PropertyName = "customPropertyMembers")]
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the properties which are specific to the folder type. Each folder type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
@@ -57,13 +57,13 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
-
+        
         /// <value>
         /// The key of the containing folder or null if there isn't a parent folder.
         /// </value>
         [JsonProperty(PropertyName = "parentFolderKey")]
         public string ParentFolderKey { get; set; }
-
+        
         /// <value>
         /// Last modified timestamp of this object in the external system.
         /// </value>
@@ -73,18 +73,19 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "TimeExternal is required.")]
         [JsonProperty(PropertyName = "timeExternal")]
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
-
+        
         /// <value>
         /// The job key of the harvest process that updated the folder definition from the source system.
         /// </value>
         [JsonProperty(PropertyName = "lastJobKey")]
         public string LastJobKey { get; set; }
-
+        
         /// <value>
         /// Folder harvesting status.
         /// </value>
         [JsonProperty(PropertyName = "harvestStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
+        
     }
 }

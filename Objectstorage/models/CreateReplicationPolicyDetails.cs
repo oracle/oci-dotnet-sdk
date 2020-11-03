@@ -30,7 +30,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The destination region to replicate to, for example \"us-ashburn-1\".
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationRegionName is required.")]
         [JsonProperty(PropertyName = "destinationRegionName")]
         public string DestinationRegionName { get; set; }
-
+        
         /// <value>
         /// The bucket to replicate to in the destination region. Replication policy creation does not automatically
         /// create a destination bucket. Create the destination bucket before creating the policy.
@@ -52,5 +52,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "DestinationBucketName is required.")]
         [JsonProperty(PropertyName = "destinationBucketName")]
         public string DestinationBucketName { get; set; }
+        
     }
 }

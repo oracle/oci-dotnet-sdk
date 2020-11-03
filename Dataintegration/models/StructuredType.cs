@@ -23,7 +23,7 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "schema")]
         public BaseType Schema { get; set; }
-        ///
+                ///
         /// <value>
         /// The data type.
         /// </value>
@@ -41,14 +41,15 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dtType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DtTypeEnum> DtType { get; set; }
-
+        
         /// <value>
         /// The data type system name.
         /// </value>
         [JsonProperty(PropertyName = "typeSystemName")]
         public string TypeSystemName { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
     }
 }

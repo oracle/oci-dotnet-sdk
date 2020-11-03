@@ -26,23 +26,24 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// source Id
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
-
+        
         /// <value>
         /// label name
         /// </value>
         [JsonProperty(PropertyName = "labelName")]
         public string LabelName { get; set; }
+        
     }
 }

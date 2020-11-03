@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "IdpGroupName is required.")]
         [JsonProperty(PropertyName = "idpGroupName")]
         public string IdpGroupName { get; set; }
-
+        
         /// <value>
         /// The OCID of the IAM Service {@link Group}
         /// you want to map to the IdP group.
@@ -40,5 +40,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "GroupId is required.")]
         [JsonProperty(PropertyName = "groupId")]
         public string GroupId { get; set; }
+        
     }
 }

@@ -26,8 +26,9 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> Items { get; set; }
-
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
+        
     }
 }

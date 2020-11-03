@@ -24,11 +24,12 @@ namespace Oci.WaasService.Models
         /// </value>
         [JsonProperty(PropertyName = "origin")]
         public string Origin { get; set; }
-
+        
         /// <value>
         /// The weight of the origin used in load balancing. Origins with higher weights will receive larger proportions of client requests.
         /// </value>
         [JsonProperty(PropertyName = "weight")]
         public System.Nullable<int> Weight { get; set; }
+        
     }
 }

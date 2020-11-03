@@ -26,45 +26,45 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet for customer connected databases.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The IP of the custom DNS.
         /// </value>
         [JsonProperty(PropertyName = "dnsServerIp")]
         public string DnsServerIp { get; set; }
-
+        
         /// <value>
         /// The DNS zone of the custom DNS to use to resolve names.
         /// </value>
         [JsonProperty(PropertyName = "dnsServerZone")]
         public string DnsServerZone { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user defined description for the workspace.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name for the workspace. Does not have to be unique, and can be modified. Avoid entering confidential information.
         /// </value>
@@ -74,7 +74,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the workspace.
         /// </value>
@@ -84,11 +84,12 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Specifies whether the private network connection is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "isPrivateNetworkEnabled")]
         public System.Nullable<bool> IsPrivateNetworkEnabled { get; set; }
+        
     }
 }

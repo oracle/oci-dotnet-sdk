@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "oracleInterfaceIp")]
         public string OracleInterfaceIp { get; set; }
-
+        
         /// <value>
         /// The IP address for the CPE end of the inside tunnel interface.
         /// <br/>
@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerInterfaceIp")]
         public string CustomerInterfaceIp { get; set; }
-
+        
         /// <value>
         /// The BGP ASN of the network on the CPE end of the BGP session. Can be a 2-byte or 4-byte ASN.
         /// Uses \"asplain\" format.
@@ -70,5 +70,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public string CustomerBgpAsn { get; set; }
+        
     }
 }

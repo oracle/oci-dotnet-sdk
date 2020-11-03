@@ -30,7 +30,7 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier.
         /// </value>
@@ -40,13 +40,13 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Human-friendly table name, also immutable.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The time the the table was created. An RFC3339 formatted
         /// datetime string.
@@ -54,7 +54,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the the table's metadata was last updated. An
         /// RFC3339 formatted datetime string.
@@ -62,24 +62,39 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         [JsonProperty(PropertyName = "tableLimits")]
         public TableLimits TableLimits { get; set; }
-
+        
         /// <value>
         /// The state of a table.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Table.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
+        /// <value>
+        /// True if this table can be reclaimed after an idle period.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoReclaimable")]
+        public System.Nullable<bool> IsAutoReclaimable { get; set; }
+        
+        /// <value>
+        /// If lifecycleState is INACTIVE, indicates when
+        /// this table will be automatically removed.
+        /// An RFC3339 formatted datetime string.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfExpiration")]
+        public System.Nullable<System.DateTime> TimeOfExpiration { get; set; }
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined
         /// name, type or scope. Exists for cross-compatibility only.
@@ -87,12 +102,23 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and
         /// scoped to a namespace.  Example: {&quot;foo-namespace&quot;:{&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Read-only system tag. These predefined keys are scoped to
+        /// namespaces.  At present the only supported namespace is
+        /// `\"orcl-cloud\"`; and the only key in that namespace is
+        /// `\"free-tier-retained\"`.
+        /// Example: {&quot;orcl-cloud&quot;&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

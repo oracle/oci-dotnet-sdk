@@ -38,5 +38,6 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "WindowStartTime is required.")]
         [JsonProperty(PropertyName = "windowStartTime")]
         public string WindowStartTime { get; set; }
+        
     }
 }

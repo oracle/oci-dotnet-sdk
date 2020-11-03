@@ -43,7 +43,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the tenancy containing the `IdentityProvider`.
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name you assign to the `IdentityProvider` during creation. The name
         /// must be unique across all `IdentityProvider` objects in the tenancy and
@@ -68,7 +68,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The description you assign to the `IdentityProvider` during creation. Does
         /// not have to be unique, and it's changeable.
@@ -80,7 +80,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The identity provider service or product.
         /// Supported identity providers are Oracle Identity Cloud Service (IDCS) and Microsoft
@@ -98,7 +98,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "ProductType is required.")]
         [JsonProperty(PropertyName = "productType")]
         public string ProductType { get; set; }
-
+        
         /// <value>
         /// Date and time the `IdentityProvider` was created, in the format defined by RFC3339.
         /// <br/>
@@ -110,7 +110,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state. After creating an `IdentityProvider`, make sure its
         /// `lifecycleState` changes from CREATING to ACTIVE before using it.
@@ -142,25 +142,14 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// The detailed status of INACTIVE lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "inactiveStatus")]
         public System.Nullable<long> InactiveStatus { get; set; }
-
-        /// <value>
-        /// The protocol used for federation. Allowed value: `SAML2`.
-        /// <br/>
-        /// Example: SAML2
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Protocol is required.")]
-        [JsonProperty(PropertyName = "protocol")]
-        public string Protocol { get; set; }
-
+        
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -168,7 +157,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -176,6 +165,7 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 
     public class IdentityProviderModelConverter : JsonConverter

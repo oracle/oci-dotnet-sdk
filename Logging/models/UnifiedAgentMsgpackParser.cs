@@ -20,5 +20,8 @@ namespace Oci.LoggingService.Models
     /// </summary>
     public class UnifiedAgentMsgpackParser : UnifiedAgentParser
     {
-            }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "MSGPACK";
+    }
 }

@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 6.1.0 - 2020-11-03
+### Added
+- Support for calling Oracle Cloud Infrastructure services in the uk-cardiff-1 region
+- Support for the Organizations service
+- Support for the Optimizer service
+- Support for tenancy ID and name on responses in the Usage service
+- Support for object versioning in object lifecycle management in the Object Storage service
+- Support for specifying a syslog URL for applications in the Functions service
+- Support for creation of always-free NoSQL database tables in the NoSQL Database service
+
 ## 6.0.0 - 2020-10-27
 ### Added
 - Support for the Compute Instance Agent service
@@ -112,7 +122,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for cleaning up uncommitted multipart uploads in the Object Storage service
 - Support for additional list API filters in the Data Catalog service
 - Updated default list of retryable errors
- 
+
 ### Breaking Changes
 - Some unusable region enums were removed from the Support Management service
 - Updated default retry delay strategy from fixed delay to exponential delay.

@@ -28,19 +28,22 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeNulls")]
         public System.Nullable<bool> ShouldIncludeNulls { get; set; }
-
+        
         /// <value>
         /// Option to calculate trends of each group if specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldIncludeTrends")]
         public System.Nullable<bool> ShouldIncludeTrends { get; set; }
-
+        
         /// <value>
         /// Option to control the size of buckets in the histogram e.g 8hrs  - each bar other than first and last should represent 8hr time span. Will be adjusted to a larger span if time range is very large.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "span")]
         public string Span { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "LINK";
     }
 }

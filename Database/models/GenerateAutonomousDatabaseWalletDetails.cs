@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "generateType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GenerateTypeEnum> GenerateType { get; set; }
-
+        
         /// <value>
         /// The password to encrypt the keys inside the wallet. The password must be at least 8 characters long and must include at least 1 letter and either 1 numeric character or 1 special character.
         /// </value>
@@ -63,5 +63,6 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
+        
     }
 }

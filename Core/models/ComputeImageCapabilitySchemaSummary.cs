@@ -30,14 +30,14 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the compartment containing the compute global image capability schema
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The name of the compute global image capability schema version
         /// 
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ComputeGlobalImageCapabilitySchemaVersionName is required.")]
         [JsonProperty(PropertyName = "computeGlobalImageCapabilitySchemaVersionName")]
         public string ComputeGlobalImageCapabilitySchemaVersionName { get; set; }
-
+        
         /// <value>
         /// The OCID of the image associated with this compute image capability schema
         /// 
@@ -59,7 +59,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ImageId is required.")]
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
-
+        
         /// <value>
         /// A user-friendly name for the compute image capability schema.
         /// 
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The date and time the compute image capability schema was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -100,5 +100,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
     }
 }

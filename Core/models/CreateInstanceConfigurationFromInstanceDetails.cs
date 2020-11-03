@@ -33,5 +33,8 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "INSTANCE";
     }
 }

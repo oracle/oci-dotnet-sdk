@@ -25,7 +25,7 @@ namespace Oci.DtsService.Models
         [Required(ErrorMessage = "Label is required.")]
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-        ///
+                ///
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "PREPARING")]
@@ -51,29 +51,30 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         [JsonProperty(PropertyName = "transferJobId")]
         public string TransferJobId { get; set; }
-
+        
         [JsonProperty(PropertyName = "creationTime")]
         public System.Nullable<System.DateTime> CreationTime { get; set; }
-
+        
         [JsonProperty(PropertyName = "originalPackageDeliveryTrackingNumber")]
         public string OriginalPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "returnPackageDeliveryTrackingNumber")]
         public string ReturnPackageDeliveryTrackingNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "packageDeliveryVendor")]
         public string PackageDeliveryVendor { get; set; }
-
+        
         [JsonProperty(PropertyName = "transferSiteShippingAddress")]
         public string TransferSiteShippingAddress { get; set; }
-
+        
         /// <value>
         /// Transfer Devices attached to this Transfer Package
         /// </value>
         [JsonProperty(PropertyName = "attachedTransferDeviceLabels")]
         public System.Collections.Generic.List<string> AttachedTransferDeviceLabels { get; set; }
+        
     }
 }

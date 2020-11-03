@@ -26,5 +26,6 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "bindings")]
         public System.Collections.Generic.Dictionary<string, ParameterValue> Bindings { get; set; }
+        
     }
 }

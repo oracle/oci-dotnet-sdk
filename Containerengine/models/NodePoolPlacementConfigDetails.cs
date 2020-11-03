@@ -31,7 +31,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The OCID of the subnet in which to place nodes.
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
     }
 }

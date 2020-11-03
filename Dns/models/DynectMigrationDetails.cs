@@ -32,7 +32,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "CustomerName is required.")]
         [JsonProperty(PropertyName = "customerName")]
         public string CustomerName { get; set; }
-
+        
         /// <value>
         /// DynECT API username to perform the migration with.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Username is required.")]
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
-
+        
         /// <value>
         /// DynECT API password for the provided username.
         /// 
@@ -54,12 +54,13 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
-
+        
         /// <value>
         /// A map of fully-qualified domain names (FQDNs) to an array of `MigrationReplacement` objects.        
         /// 
         /// </value>
         [JsonProperty(PropertyName = "httpRedirectReplacements")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<MigrationReplacement>> HttpRedirectReplacements { get; set; }
+        
     }
 }

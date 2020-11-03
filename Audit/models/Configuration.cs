@@ -30,5 +30,6 @@ namespace Oci.AuditService.Models
         /// </value>
         [JsonProperty(PropertyName = "retentionPeriodDays")]
         public System.Nullable<int> RetentionPeriodDays { get; set; }
+        
     }
 }

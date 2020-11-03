@@ -26,53 +26,54 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "createdParserNames")]
         public System.Collections.Generic.List<string> CreatedParserNames { get; set; }
-
+        
         /// <value>
         /// updatedParserNames
         /// </value>
         [JsonProperty(PropertyName = "updatedParserNames")]
         public System.Collections.Generic.List<string> UpdatedParserNames { get; set; }
-
+        
         /// <value>
         /// createdSourceNames
         /// </value>
         [JsonProperty(PropertyName = "createdSourceNames")]
         public System.Collections.Generic.List<string> CreatedSourceNames { get; set; }
-
+        
         /// <value>
         /// updatedSourceNames
         /// </value>
         [JsonProperty(PropertyName = "updatedSourceNames")]
         public System.Collections.Generic.List<string> UpdatedSourceNames { get; set; }
-
+        
         /// <value>
         /// createdFieldDisplayNames
         /// </value>
         [JsonProperty(PropertyName = "createdFieldDisplayNames")]
         public System.Collections.Generic.List<string> CreatedFieldDisplayNames { get; set; }
-
+        
         /// <value>
         /// updatedFieldDisplayNames
         /// </value>
         [JsonProperty(PropertyName = "updatedFieldDisplayNames")]
         public System.Collections.Generic.List<string> UpdatedFieldDisplayNames { get; set; }
-
+        
         /// <value>
         /// conflictParserNames
         /// </value>
         [JsonProperty(PropertyName = "conflictParserNames")]
         public System.Collections.Generic.List<string> ConflictParserNames { get; set; }
-
+        
         /// <value>
         /// conflictSourceNames
         /// </value>
         [JsonProperty(PropertyName = "conflictSourceNames")]
         public System.Collections.Generic.List<string> ConflictSourceNames { get; set; }
-
+        
         /// <value>
         /// conflictFieldDisplayNames
         /// </value>
         [JsonProperty(PropertyName = "conflictFieldDisplayNames")]
         public System.Collections.Generic.List<string> ConflictFieldDisplayNames { get; set; }
+        
     }
 }

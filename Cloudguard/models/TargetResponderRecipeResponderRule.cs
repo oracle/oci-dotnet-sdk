@@ -30,32 +30,32 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderRuleId is required.")]
         [JsonProperty(PropertyName = "responderRuleId")]
         public string ResponderRuleId { get; set; }
-
+        
         /// <value>
         /// ResponderRule Display Name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// ResponderRule Description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Type of Responder
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ResponderType> Type { get; set; }
-
+        
         /// <value>
         /// List of Policy
         /// </value>
         [JsonProperty(PropertyName = "policies")]
         public System.Collections.Generic.List<string> Policies { get; set; }
-        ///
+                ///
         ///
         public enum SupportedModesEnum {
             [EnumMember(Value = "AUTOACTION")]
@@ -69,10 +69,10 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "supportedModes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<SupportedModesEnum> SupportedModes { get; set; }
-
+        
         [JsonProperty(PropertyName = "details")]
         public ResponderRuleDetails Details { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -82,30 +82,31 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The date and time the target responder recipe rule was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the target responder recipe rule was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the ResponderRule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

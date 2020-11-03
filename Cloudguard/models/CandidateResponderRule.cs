@@ -26,17 +26,18 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The display name of the Responder rule
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Preferred state
         /// </value>
         [JsonProperty(PropertyName = "isPreferred")]
         public System.Nullable<bool> IsPreferred { get; set; }
+        
     }
 }

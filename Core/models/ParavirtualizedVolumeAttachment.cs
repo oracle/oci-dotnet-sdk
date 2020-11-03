@@ -20,5 +20,8 @@ namespace Oci.CoreService.Models
     /// </summary>
     public class ParavirtualizedVolumeAttachment : VolumeAttachment
     {
-            }
+        
+        [JsonProperty(PropertyName = "attachmentType")]
+        private readonly string attachmentType = "paravirtualized";
+    }
 }

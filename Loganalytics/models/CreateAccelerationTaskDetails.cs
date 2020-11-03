@@ -33,5 +33,8 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "SavedSearchId is required.")]
         [JsonProperty(PropertyName = "savedSearchId")]
         public string SavedSearchId { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "ACCELERATION";
     }
 }

@@ -35,49 +35,49 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "ShapeProp is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string ShapeProp { get; set; }
-
+        
         /// <value>
         /// A short description of the shape's processor (CPU).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "processorDescription")]
         public string ProcessorDescription { get; set; }
-
+        
         /// <value>
         /// The default number of OCPUs available for this shape.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
-
+        
         /// <value>
         /// The default amount of memory available for this shape, in gigabytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<float> MemoryInGBs { get; set; }
-
+        
         /// <value>
         /// The networking bandwidth available for this shape, in gigabits per second.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "networkingBandwidthInGbps")]
         public System.Nullable<float> NetworkingBandwidthInGbps { get; set; }
-
+        
         /// <value>
         /// The maximum number of VNIC attachments available for this shape.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxVnicAttachments")]
         public System.Nullable<int> MaxVnicAttachments { get; set; }
-
+        
         /// <value>
         /// The number of GPUs available for this shape.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "gpus")]
         public System.Nullable<int> Gpus { get; set; }
-
+        
         /// <value>
         /// A short description of the graphics processing unit (GPU) available for this shape.
         /// <br/>
@@ -86,14 +86,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "gpuDescription")]
         public string GpuDescription { get; set; }
-
+        
         /// <value>
         /// The number of local disks available for this shape.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "localDisks")]
         public System.Nullable<int> LocalDisks { get; set; }
-
+        
         /// <value>
         /// The aggregate size of the local disks available for this shape, in gigabytes.
         /// <br/>
@@ -102,7 +102,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "localDisksTotalSizeInGBs")]
         public System.Nullable<float> LocalDisksTotalSizeInGBs { get; set; }
-
+        
         /// <value>
         /// A short description of the local disks available for this shape.
         /// <br/>
@@ -111,17 +111,18 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "localDiskDescription")]
         public string LocalDiskDescription { get; set; }
-
+        
         [JsonProperty(PropertyName = "ocpuOptions")]
         public ShapeOcpuOptions OcpuOptions { get; set; }
-
+        
         [JsonProperty(PropertyName = "memoryOptions")]
         public ShapeMemoryOptions MemoryOptions { get; set; }
-
+        
         [JsonProperty(PropertyName = "networkingBandwidthOptions")]
         public ShapeNetworkingBandwidthOptions NetworkingBandwidthOptions { get; set; }
-
+        
         [JsonProperty(PropertyName = "maxVnicAttachmentOptions")]
         public ShapeMaxVnicAttachmentOptions MaxVnicAttachmentOptions { get; set; }
+        
     }
 }

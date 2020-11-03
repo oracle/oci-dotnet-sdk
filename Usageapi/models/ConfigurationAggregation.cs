@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The available configurations
+    /// The available configurations.
     /// </summary>
     public class ConfigurationAggregation 
     {
         
         /// <value>
-        /// The list of available configurations
+        /// The list of available configurations.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,5 +30,6 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<Configuration> Items { get; set; }
+        
     }
 }

@@ -46,29 +46,30 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the Virtual Private Catalog (VPC) user that is used to access the Recovery Appliance.
         /// </value>
         [JsonProperty(PropertyName = "vpcUser")]
         public string VpcUser { get; set; }
-
+        
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the password for the VPC user that is used to access the Recovery Appliance.
         /// </value>
         [JsonProperty(PropertyName = "vpcPassword")]
         public string VpcPassword { get; set; }
-
+        
         /// <value>
         /// Proxy URL to connect to object store.
         /// </value>
         [JsonProperty(PropertyName = "internetProxy")]
         public string InternetProxy { get; set; }
+        
     }
 }

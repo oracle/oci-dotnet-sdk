@@ -26,7 +26,7 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the compartment where the agreement will be accepted.
         /// </value>
@@ -36,7 +36,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The unique identifier for the listing associated with the agreement.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "ListingId is required.")]
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// The package version associated with the agreement.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "PackageVersion is required.")]
         [JsonProperty(PropertyName = "packageVersion")]
         public string PackageVersion { get; set; }
-
+        
         /// <value>
         /// The agreement to accept.
         /// </value>
@@ -66,7 +66,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "AgreementId is required.")]
         [JsonProperty(PropertyName = "agreementId")]
         public string AgreementId { get; set; }
-
+        
         /// <value>
         /// A signature generated for the listing package agreements that you can retrieve
         /// with [GetAgreement](https://docs.cloud.oracle.com/api/#/en/marketplace/20181001/Agreement/GetAgreement).
@@ -78,7 +78,7 @@ namespace Oci.MarketplaceService.Models
         [Required(ErrorMessage = "Signature is required.")]
         [JsonProperty(PropertyName = "signature")]
         public string Signature { get; set; }
-
+        
         /// <value>
         /// The defined tags associated with this resource, if any. Each key is predefined and scoped to namespaces.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -86,7 +86,7 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
@@ -94,5 +94,6 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
     }
 }

@@ -23,7 +23,7 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "field")]
         public ShapeField Field { get; set; }
-        ///
+                ///
         /// <value>
         /// The sort order.
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "order")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OrderEnum> Order { get; set; }
+        
     }
 }

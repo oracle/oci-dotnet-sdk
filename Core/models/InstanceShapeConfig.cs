@@ -29,42 +29,42 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
-
+        
         /// <value>
         /// The total amount of memory available to the instance, in gigabytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<float> MemoryInGBs { get; set; }
-
+        
         /// <value>
         /// A short description of the instance's processor (CPU).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "processorDescription")]
         public string ProcessorDescription { get; set; }
-
+        
         /// <value>
         /// The networking bandwidth available to the instance, in gigabits per second.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "networkingBandwidthInGbps")]
         public System.Nullable<float> NetworkingBandwidthInGbps { get; set; }
-
+        
         /// <value>
         /// The maximum number of VNIC attachments for the instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxVnicAttachments")]
         public System.Nullable<int> MaxVnicAttachments { get; set; }
-
+        
         /// <value>
         /// The number of GPUs available to the instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "gpus")]
         public System.Nullable<int> Gpus { get; set; }
-
+        
         /// <value>
         /// A short description of the instance's graphics processing unit (GPU).
         /// <br/>
@@ -73,14 +73,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "gpuDescription")]
         public string GpuDescription { get; set; }
-
+        
         /// <value>
         /// The number of local disks available to the instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "localDisks")]
         public System.Nullable<int> LocalDisks { get; set; }
-
+        
         /// <value>
         /// The aggregate size of all local disks, in gigabytes.
         /// <br/>
@@ -89,7 +89,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "localDisksTotalSizeInGBs")]
         public System.Nullable<float> LocalDisksTotalSizeInGBs { get; set; }
-
+        
         /// <value>
         /// A short description of the local disks available to this instance.
         /// <br/>
@@ -98,5 +98,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "localDiskDescription")]
         public string LocalDiskDescription { get; set; }
+        
     }
 }

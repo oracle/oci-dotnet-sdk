@@ -26,11 +26,14 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
-
+        
         /// <value>
         /// The password for the connection.
         /// </value>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_ATP_CONNECTION";
     }
 }

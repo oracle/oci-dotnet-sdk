@@ -27,5 +27,8 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "ExecutionSchedule is required.")]
         [JsonProperty(PropertyName = "executionSchedule")]
         public ExecutionSchedule ExecutionSchedule { get; set; }
+        
+        [JsonProperty(PropertyName = "policyType")]
+        private readonly string policyType = "scheduled";
     }
 }

@@ -28,5 +28,8 @@ namespace Oci.VaultService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEnforcedOnDeletedSecretVersions")]
         public System.Nullable<bool> IsEnforcedOnDeletedSecretVersions { get; set; }
+        
+        [JsonProperty(PropertyName = "ruleType")]
+        private readonly string ruleType = "SECRET_REUSE_RULE";
     }
 }

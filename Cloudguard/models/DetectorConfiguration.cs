@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ConfigKey is required.")]
         [JsonProperty(PropertyName = "configKey")]
         public string ConfigKey { get; set; }
-
+        
         /// <value>
         /// configuration name
         /// </value>
@@ -40,23 +40,24 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// configuration value
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// configuration data type
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
-
+        
         /// <value>
         /// List of configuration values
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<ConfigValue> Values { get; set; }
+        
     }
 }

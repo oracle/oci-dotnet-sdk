@@ -26,7 +26,7 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "isSuccess")]
         public System.Nullable<bool> IsSuccess { get; set; }
-
+        
         /// <value>
         /// The version string associated with the existing row.
         /// Returned if the delete fails due to options setting in the
@@ -35,14 +35,15 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "existingVersion")]
         public string ExistingVersion { get; set; }
-
+        
         /// <value>
         /// The map of values from a row.
         /// </value>
         [JsonProperty(PropertyName = "existingValue")]
         public System.Collections.Generic.Dictionary<string, System.Object> ExistingValue { get; set; }
-
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
+        
     }
 }

@@ -32,5 +32,8 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "LogSources is required.")]
         [JsonProperty(PropertyName = "logSources")]
         public System.Collections.Generic.List<LogSource> LogSources { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "logging";
     }
 }

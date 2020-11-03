@@ -32,5 +32,8 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "TfStateBase64Encoded is required.")]
         [JsonProperty(PropertyName = "tfStateBase64Encoded")]
         public System.Byte[] TfStateBase64Encoded { get; set; }
+        
+        [JsonProperty(PropertyName = "operation")]
+        private readonly string operation = "IMPORT_TF_STATE";
     }
 }

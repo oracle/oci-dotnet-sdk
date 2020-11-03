@@ -32,7 +32,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "MetricData is required.")]
         [JsonProperty(PropertyName = "metricData")]
         public System.Collections.Generic.List<MetricDataDetails> MetricData { get; set; }
-        ///
+                ///
         /// <value>
         /// Batch atomicity behavior. Requires either partial or full pass of input validation for
         /// metric objects in PostMetricData requests. The default value of NON_ATOMIC requires a
@@ -64,5 +64,6 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "batchAtomicity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BatchAtomicityEnum> BatchAtomicity { get; set; }
+        
     }
 }

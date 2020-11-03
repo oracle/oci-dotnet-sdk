@@ -27,11 +27,12 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "rel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LinkEnum> Rel { get; set; }
-
+        
         /// <value>
         /// The anchor tag.
         /// </value>
         [JsonProperty(PropertyName = "href")]
         public string Href { get; set; }
+        
     }
 }

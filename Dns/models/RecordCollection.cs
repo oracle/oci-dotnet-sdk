@@ -23,5 +23,6 @@ namespace Oci.DnsService.Models
         
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<Record> Items { get; set; }
+        
     }
 }

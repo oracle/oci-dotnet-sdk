@@ -31,14 +31,14 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// A notebook session instance is provided with a block storage volume. This specifies the size of the volume in GBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "blockStorageSizeInGBs")]
         public System.Nullable<int> BlockStorageSizeInGBs { get; set; }
-
+        
         /// <value>
         /// A notebook session instance is provided with a VNIC for network access.  This specifies the [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the subnet to create a VNIC in.  The subnet should be in a VCN with a NAT gateway for egress to the internet.
         /// 
@@ -49,5 +49,6 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
     }
 }

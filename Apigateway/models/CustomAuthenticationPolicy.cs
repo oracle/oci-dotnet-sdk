@@ -33,17 +33,20 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "FunctionId is required.")]
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
-
+        
         /// <value>
         /// The name of the header containing the authentication token.
         /// </value>
         [JsonProperty(PropertyName = "tokenHeader")]
         public string TokenHeader { get; set; }
-
+        
         /// <value>
         /// The name of the query parameter containing the authentication token.
         /// </value>
         [JsonProperty(PropertyName = "tokenQueryParam")]
         public string TokenQueryParam { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "CUSTOM_AUTHENTICATION";
     }
 }

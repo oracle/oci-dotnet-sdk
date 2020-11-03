@@ -23,14 +23,15 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "requestPolicies")]
         public ApiSpecificationRequestPolicies RequestPolicies { get; set; }
-
+        
         [JsonProperty(PropertyName = "loggingPolicies")]
         public ApiSpecificationLoggingPolicies LoggingPolicies { get; set; }
-
+        
         /// <value>
         /// A list of routes that this API exposes.
         /// </value>
         [JsonProperty(PropertyName = "routes")]
         public System.Collections.Generic.List<ApiSpecificationRoute> Routes { get; set; }
+        
     }
 }

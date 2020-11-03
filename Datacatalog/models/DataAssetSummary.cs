@@ -33,7 +33,7 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// A user-friendly display name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
@@ -41,50 +41,51 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Detailed description of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The data catalog's OCID.
         /// </value>
         [JsonProperty(PropertyName = "catalogId")]
         public string CatalogId { get; set; }
-
+        
         /// <value>
         /// External URI that can be used to reference the object. Format will differ based on the type of object.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
-
+        
         /// <value>
         /// URI to the data asset instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// The date and time the data asset was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-03-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The key of the object type. Type keys's can be found via the '/types' endpoint.
         /// </value>
         [JsonProperty(PropertyName = "typeKey")]
         public string TypeKey { get; set; }
-
+        
         /// <value>
         /// State of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
     }
 }

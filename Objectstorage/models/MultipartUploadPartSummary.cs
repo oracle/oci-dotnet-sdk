@@ -35,7 +35,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Etag is required.")]
         [JsonProperty(PropertyName = "etag")]
         public string Etag { get; set; }
-
+        
         /// <value>
         /// The MD5 hash of the bytes of the part.
         /// </value>
@@ -45,7 +45,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Md5 is required.")]
         [JsonProperty(PropertyName = "md5")]
         public string Md5 { get; set; }
-
+        
         /// <value>
         /// The size of the part in bytes.
         /// </value>
@@ -55,7 +55,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "Size is required.")]
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<long> Size { get; set; }
-
+        
         /// <value>
         /// The part number for this part.
         /// </value>
@@ -65,5 +65,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "PartNumber is required.")]
         [JsonProperty(PropertyName = "partNumber")]
         public System.Nullable<int> PartNumber { get; set; }
+        
     }
 }

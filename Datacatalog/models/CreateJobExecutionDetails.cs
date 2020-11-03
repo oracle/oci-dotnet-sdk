@@ -26,26 +26,26 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "subType")]
         public string SubType { get; set; }
-
+        
         /// <value>
         /// Type of the job execution.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
-
+        
         /// <value>
         /// The unique key of the parent execution or null if this job execution has no parent.
         /// </value>
         [JsonProperty(PropertyName = "parentKey")]
         public string ParentKey { get; set; }
-
+        
         /// <value>
         /// Time that job execution started. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// Time that the job execution ended or null if it hasn't yet completed.
         /// An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
@@ -53,60 +53,60 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
-
+        
         /// <value>
         /// Status of the job execution, such as running, paused, or completed.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobExecutionState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Error code returned from the job execution or null if job is still running or didn't return an error.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "errorCode")]
         public string ErrorCode { get; set; }
-
+        
         /// <value>
         /// Error message returned from the job execution or null if job is still running or didn't return an error.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
-
+        
         /// <value>
         /// The unique key of the triggering external scheduler resource or null if this job execution is not externally triggered.
         /// </value>
         [JsonProperty(PropertyName = "scheduleInstanceKey")]
         public string ScheduleInstanceKey { get; set; }
-
+        
         /// <value>
         /// Process identifier related to the job execution if the job is an external job.
         /// </value>
         [JsonProperty(PropertyName = "processKey")]
         public string ProcessKey { get; set; }
-
+        
         /// <value>
         /// If the job is an external process, then a URL of the job for accessing this resource and its status.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalUrl")]
         public string ExternalUrl { get; set; }
-
+        
         /// <value>
         /// An identifier used for log message correlation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "eventKey")]
         public string EventKey { get; set; }
-
+        
         /// <value>
         /// The key of the associated data entity resource.
         /// </value>
         [JsonProperty(PropertyName = "dataEntityKey")]
         public string DataEntityKey { get; set; }
-
+        
         /// <value>
         /// A map of maps that contains the execution context properties which are specific to a job execution. Each job
         /// execution may define it's set of required and optional properties. The map keys are category names and the
@@ -116,5 +116,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

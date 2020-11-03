@@ -26,12 +26,13 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerKey")]
         public string PeerKey { get; set; }
-
+        
         /// <value>
         /// The current state of the peer.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Peer.LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

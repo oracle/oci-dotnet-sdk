@@ -31,7 +31,7 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "name")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConditionOperatorName> Name { get; set; }
-
+        
         /// <value>
         /// display name of the operator
         /// </value>
@@ -41,5 +41,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
     }
 }

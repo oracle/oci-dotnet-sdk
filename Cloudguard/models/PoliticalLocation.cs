@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "City is required.")]
         [JsonProperty(PropertyName = "city")]
         public string City { get; set; }
-
+        
         /// <value>
         /// State
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "State is required.")]
         [JsonProperty(PropertyName = "state")]
         public string State { get; set; }
-
+        
         /// <value>
         /// Country
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Country is required.")]
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
+        
     }
 }

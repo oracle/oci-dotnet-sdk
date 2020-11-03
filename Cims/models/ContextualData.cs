@@ -28,7 +28,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "ClientId is required.")]
         [JsonProperty(PropertyName = "clientId")]
         public string ClientId { get; set; }
-
+        
         /// <value>
         /// The schema name
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "SchemaName is required.")]
         [JsonProperty(PropertyName = "schemaName")]
         public string SchemaName { get; set; }
-
+        
         /// <value>
         /// The schema version
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "SchemaVersion is required.")]
         [JsonProperty(PropertyName = "schemaVersion")]
         public string SchemaVersion { get; set; }
-
+        
         /// <value>
         /// The context data payload
         /// </value>
@@ -58,5 +58,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Payload is required.")]
         [JsonProperty(PropertyName = "payload")]
         public string Payload { get; set; }
+        
     }
 }

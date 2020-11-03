@@ -26,20 +26,23 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
-
+        
         /// <value>
         /// The OCI tenancy OCID.
         /// </value>
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
-
+        
         /// <value>
         /// The namespace for the specified Oracle Object storage resource. You can find the namespace under Object Storage Settings in the Console.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public ConnectionSummaryFromObjectStorage DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_OBJECT_STORAGE_DATA_ASSET";
     }
 }

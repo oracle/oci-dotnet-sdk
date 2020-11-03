@@ -26,29 +26,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "chunksProcessed")]
         public System.Nullable<long> ChunksProcessed { get; set; }
-
+        
         /// <value>
         /// failure details
         /// </value>
         [JsonProperty(PropertyName = "failureDetails")]
         public string FailureDetails { get; set; }
-
+        
         /// <value>
         /// filename
         /// </value>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }
-
+        
         /// <value>
         /// status
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// total chunks
         /// </value>
         [JsonProperty(PropertyName = "totalChunks")]
         public System.Nullable<long> TotalChunks { get; set; }
+        
     }
 }

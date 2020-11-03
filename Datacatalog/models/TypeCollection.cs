@@ -27,7 +27,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }
-
+        
         /// <value>
         /// Collection of types.
         /// </value>
@@ -37,5 +37,6 @@ namespace Oci.DatacatalogService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<TypeSummary> Items { get; set; }
+        
     }
 }

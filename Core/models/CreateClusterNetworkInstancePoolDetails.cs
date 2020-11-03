@@ -29,14 +29,14 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// A user-friendly name. Does not have to be unique. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance configuration
         /// associated with the instance pool.
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "InstanceConfigurationId is required.")]
         [JsonProperty(PropertyName = "instanceConfigurationId")]
         public string InstanceConfigurationId { get; set; }
-
+        
         /// <value>
         /// The number of instances that should be in the instance pool.
         /// <br/>
@@ -74,5 +74,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Size is required.")]
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
+        
     }
 }

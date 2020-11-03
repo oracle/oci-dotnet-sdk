@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The dimension use for filtering.
+    /// The dimension used for filtering. availabe dimension are \"service\", \"skuName\", \"skuPartNumber\", \"unit\", \"compartmentName\", \"compartmentPath\", \"compartmentId\", \"platform\", \"region\", \"logicalAd\", \"resourceId\", \"tenantId\", \"tenantName\"
     /// Example: [{value: &quot;COMPUTE&quot;, key: &quot;service&quot;}]
     /// </summary>
     public class Dimension 
     {
         
         /// <value>
-        /// The key of the dimension.
+        /// The dimension key.
         /// </value>
         /// <remarks>
         /// Required
@@ -31,9 +31,9 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "Key is required.")]
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
-        /// The value of the dimension.
+        /// The dimension value.
         /// </value>
         /// <remarks>
         /// Required
@@ -41,5 +41,6 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
+        
     }
 }

@@ -35,14 +35,14 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Uri is required.")]
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
-
+        
         /// <value>
         /// Defines whether or not to uphold SSL verification.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isSslVerifyDisabled")]
         public System.Nullable<bool> IsSslVerifyDisabled { get; set; }
-
+        
         /// <value>
         /// The duration for which the JWKS should be cached before it is
         /// fetched again.
@@ -50,5 +50,8 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxCacheDurationInHours")]
         public System.Nullable<int> MaxCacheDurationInHours { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "REMOTE_JWKS";
     }
 }

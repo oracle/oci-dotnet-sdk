@@ -26,5 +26,6 @@ namespace Oci.CimsService.Models
         
         [JsonProperty(PropertyName = "item")]
         public UpdateItemDetails Item { get; set; }
+        
     }
 }

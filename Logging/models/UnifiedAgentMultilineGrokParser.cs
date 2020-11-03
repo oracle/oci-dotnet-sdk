@@ -23,14 +23,17 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "grokNameKey")]
         public string GrokNameKey { get; set; }
-
+        
         [JsonProperty(PropertyName = "grokFailureKey")]
         public string GrokFailureKey { get; set; }
-
+        
         [JsonProperty(PropertyName = "multiLineStartRegexp")]
         public string MultiLineStartRegexp { get; set; }
-
+        
         [JsonProperty(PropertyName = "patterns")]
         public System.Collections.Generic.List<GrokPattern> Patterns { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "MULTILINE_GROK";
     }
 }

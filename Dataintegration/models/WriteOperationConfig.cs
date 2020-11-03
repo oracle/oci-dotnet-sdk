@@ -26,31 +26,31 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The object's model version.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         /// <value>
         /// An array of operations.
         /// </value>
         [JsonProperty(PropertyName = "operations")]
         public System.Collections.Generic.List<PushDownOperation> Operations { get; set; }
-
+        
         [JsonProperty(PropertyName = "dataFormat")]
         public DataFormat DataFormat { get; set; }
-
+        
         [JsonProperty(PropertyName = "partitionConfig")]
         public PartitionConfig PartitionConfig { get; set; }
-
+        
         [JsonProperty(PropertyName = "writeAttribute")]
         public AbstractWriteAttribute WriteAttribute { get; set; }
-        ///
+                ///
         /// <value>
         /// The mode for the write operation.
         /// </value>
@@ -72,14 +72,17 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "writeMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WriteModeEnum> WriteMode { get; set; }
-
+        
         [JsonProperty(PropertyName = "mergeKey")]
         public UniqueKey MergeKey { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "WRITE_OPERATION_CONFIG";
     }
 }

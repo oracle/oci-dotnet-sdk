@@ -26,18 +26,21 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         [JsonProperty(PropertyName = "resourceLink")]
         public string ResourceLink { get; set; }
-
+        
         /// <value>
         /// List of variables for the orchestration resource.
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.List<OrchestrationVariable> Variables { get; set; }
-
+        
         /// <value>
         /// The regions where you can deploy this listing package. (Some packages have restrictions that limit their deployment to United States regions only.)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<Region> Regions { get; set; }
+        
+        [JsonProperty(PropertyName = "packageType")]
+        private readonly string packageType = "ORCHESTRATION";
     }
 }

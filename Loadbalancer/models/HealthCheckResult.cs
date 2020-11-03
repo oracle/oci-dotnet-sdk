@@ -32,7 +32,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The IP address of the health check status report provider. This identifier helps you differentiate same-subnet
         /// load balancers that report health check status.
@@ -45,7 +45,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "SourceIpAddress is required.")]
         [JsonProperty(PropertyName = "sourceIpAddress")]
         public string SourceIpAddress { get; set; }
-
+        
         /// <value>
         /// The date and time the data was retrieved, in the format defined by RFC3339.
         /// <br/>
@@ -57,7 +57,7 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
-        ///
+                ///
         /// <value>
         /// The result of the most recent health check.
         /// 
@@ -93,5 +93,6 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "healthCheckStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HealthCheckStatusEnum> HealthCheckStatus { get; set; }
+        
     }
 }

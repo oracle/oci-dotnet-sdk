@@ -28,5 +28,8 @@ namespace Oci.EventsService.Models
         /// </value>
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "actionType")]
+        private readonly string actionType = "ONS";
     }
 }

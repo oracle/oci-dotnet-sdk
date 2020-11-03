@@ -26,20 +26,23 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-
+        
         /// <value>
         /// The generic JDBC port number.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public string Port { get; set; }
-
+        
         /// <value>
         /// The data asset type for the generic JDBC data asset.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetType")]
         public string DataAssetType { get; set; }
-
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public CreateConnectionFromJdbc DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "GENERIC_JDBC_DATA_ASSET";
     }
 }

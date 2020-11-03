@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The resource-type. To get the list of supported resource-types use
         /// {@link #listBulkActionResourceTypes(ListBulkActionResourceTypesRequest) listBulkActionResourceTypes}.
@@ -43,7 +43,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-
+        
         /// <value>
         /// Additional information that helps to identity the resource for bulk action.
         /// <br/>
@@ -75,5 +75,6 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
     }
 }

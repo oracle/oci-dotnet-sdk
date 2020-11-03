@@ -30,5 +30,6 @@ namespace Oci.StreamingService.Models
         [Required(ErrorMessage = "KmsKeyId is required.")]
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
     }
 }

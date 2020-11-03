@@ -30,13 +30,13 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "TenantId is required.")]
         [JsonProperty(PropertyName = "tenantId")]
         public string TenantId { get; set; }
-
+        
         /// <value>
         /// Apollo project namespace, if any.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
-
+        
         /// <value>
         /// Service ID as set in Service Principal.
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "ServicePrincipalName is required.")]
         [JsonProperty(PropertyName = "servicePrincipalName")]
         public string ServicePrincipalName { get; set; }
-
+        
         /// <value>
         /// Service endpoint.
         /// </value>
@@ -56,7 +56,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Endpoint is required.")]
         [JsonProperty(PropertyName = "endpoint")]
         public string Endpoint { get; set; }
-
+        
         /// <value>
         /// User-friendly service name.
         /// </value>
@@ -66,13 +66,13 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Service ID.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Type of resource that a service provides.
         /// </value>
@@ -82,5 +82,6 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "ResourceTypes is required.")]
         [JsonProperty(PropertyName = "resourceTypes")]
         public System.Collections.Generic.List<ResourceType> ResourceTypes { get; set; }
+        
     }
 }

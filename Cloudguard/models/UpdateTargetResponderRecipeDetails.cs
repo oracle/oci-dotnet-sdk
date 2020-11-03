@@ -30,5 +30,6 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ResponderRules is required.")]
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeResponderRuleDetails> ResponderRules { get; set; }
+        
     }
 }

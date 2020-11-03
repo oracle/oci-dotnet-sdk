@@ -30,7 +30,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// Platform Instance Display name, can be renamed
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Compartment Identifier
         /// </value>
@@ -50,37 +50,37 @@ namespace Oci.BlockchainService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Platform Instance Description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Bring your own license
         /// </value>
         [JsonProperty(PropertyName = "isByol")]
         public System.Nullable<bool> IsByol { get; set; }
-
+        
         /// <value>
         /// The time the the Platform Instance was created. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time the Platform Instance was updated. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The version of the Platform Instance.
         /// </value>
         [JsonProperty(PropertyName = "serviceVersion")]
         public string ServiceVersion { get; set; }
-        ///
+                ///
         /// <value>
         /// Role of platform - founder or participant
         /// </value>
@@ -102,7 +102,7 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "platformRole")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PlatformRoleEnum> PlatformRole { get; set; }
-        ///
+                ///
         /// <value>
         /// Type of compute shape - one of Standard, (Enterprise) Small, Medium, Large or Extra Large
         /// </value>
@@ -132,13 +132,13 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "computeShape")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ComputeShapeEnum> ComputeShape { get; set; }
-
+        
         /// <value>
         /// Service endpoint URL, valid post-provisioning
         /// </value>
         [JsonProperty(PropertyName = "serviceEndpoint")]
         public string ServiceEndpoint { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the Platform Instance.
         /// </value>
@@ -168,61 +168,62 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// An message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// Storage size in TBs
         /// </value>
         [JsonProperty(PropertyName = "storageSizeInTBs")]
         public System.Double StorageSizeInTBs { get; set; }
-
+        
         /// <value>
         /// Storage used in TBs
         /// </value>
         [JsonProperty(PropertyName = "storageUsedInTBs")]
         public System.Double StorageUsedInTBs { get; set; }
-
+        
         /// <value>
         /// True for multi-AD blockchain plaforms, false for single-AD
         /// </value>
         [JsonProperty(PropertyName = "isMultiAD")]
         public System.Nullable<bool> IsMultiAD { get; set; }
-
+        
         /// <value>
         /// Number of total OCPUs allocated to the platform cluster
         /// </value>
         [JsonProperty(PropertyName = "totalOcpuCapacity")]
         public System.Nullable<int> TotalOcpuCapacity { get; set; }
-
+        
         [JsonProperty(PropertyName = "componentDetails")]
         public BlockchainPlatformComponentDetails ComponentDetails { get; set; }
-
+        
         [JsonProperty(PropertyName = "replicas")]
         public ReplicaDetails Replicas { get; set; }
-
+        
         /// <value>
         /// List of OcpuUtilization for all hosts
         /// </value>
         [JsonProperty(PropertyName = "hostOcpuUtilizationInfo")]
         public System.Collections.Generic.List<OcpuUtilizationInfo> HostOcpuUtilizationInfo { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

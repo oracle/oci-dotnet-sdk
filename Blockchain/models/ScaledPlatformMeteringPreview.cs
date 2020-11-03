@@ -26,29 +26,30 @@ namespace Oci.BlockchainService.Models
         /// </value>
         [JsonProperty(PropertyName = "totalOcpuAllocation")]
         public System.Nullable<float> TotalOcpuAllocation { get; set; }
-
+        
         /// <value>
         /// Number of total OCPU allocation for the blockchain platform after Scaling
         /// </value>
         [JsonProperty(PropertyName = "totalOcpuAllocationPostScaling")]
         public System.Nullable<float> TotalOcpuAllocationPostScaling { get; set; }
-
+        
         /// <value>
         /// Current Storage metered units in TBs
         /// </value>
         [JsonProperty(PropertyName = "storageMeteredUnits")]
         public System.Double StorageMeteredUnits { get; set; }
-
+        
         /// <value>
         /// Extra Storage units required in TBs
         /// </value>
         [JsonProperty(PropertyName = "extraStorageMeteredUnits")]
         public System.Double ExtraStorageMeteredUnits { get; set; }
-
+        
         /// <value>
         /// Total Post Scaling Storage metered units in TBs
         /// </value>
         [JsonProperty(PropertyName = "storageMeteredUnitsPostScaling")]
         public System.Double StorageMeteredUnitsPostScaling { get; set; }
+        
     }
 }

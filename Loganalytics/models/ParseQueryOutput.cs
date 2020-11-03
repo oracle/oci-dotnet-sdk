@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "DisplayQueryString is required.")]
         [JsonProperty(PropertyName = "displayQueryString")]
         public string DisplayQueryString { get; set; }
-
+        
         /// <value>
         /// Internal string formatted by query builder of user specified query string.
         /// 
@@ -43,26 +43,27 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "InternalQueryString is required.")]
         [JsonProperty(PropertyName = "internalQueryString")]
         public string InternalQueryString { get; set; }
-
+        
         /// <value>
         /// List of columns returned by the specified query string as result output.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<AbstractColumn> Columns { get; set; }
-
+        
         /// <value>
         /// Operation response time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "responseTimeInMs")]
         public System.Nullable<long> ResponseTimeInMs { get; set; }
-
+        
         /// <value>
         /// List of querylanguage command descriptors, describing the specfied query string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "commands")]
         public System.Collections.Generic.List<AbstractCommandDescriptor> Commands { get; set; }
+        
     }
 }

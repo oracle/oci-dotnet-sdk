@@ -29,19 +29,19 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Email address of the suppression.
         /// </value>
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
-
+        
         /// <value>
         /// The unique ID of the suppression.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        ///
+                ///
         /// <value>
         /// The reason that the email address was suppressed. For more information on the types of bounces, see [Suppression List](https://docs.us-phoenix-1.oraclecloud.com/Content/Email/Concepts/overview.htm#components).
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.EmailService.Models
         [JsonProperty(PropertyName = "reason")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ReasonEnum> Reason { get; set; }
-
+        
         /// <value>
         /// The date and time the suppression was added in \"YYYY-MM-ddThh:mmZ\"
         /// format with a Z offset, as defined by RFC 3339.
@@ -75,5 +75,6 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

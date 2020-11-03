@@ -30,7 +30,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Unique identifier for the package. NOTE - This is not an OCID
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Type of the package
         /// </value>
@@ -50,7 +50,7 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// Version of the package
         /// </value>
@@ -60,23 +60,24 @@ namespace Oci.OsmanagementService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
-
+        
         /// <value>
         /// the architecture for which this software was built
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
         public string Architecture { get; set; }
-
+        
         /// <value>
         /// checksum of the package
         /// </value>
         [JsonProperty(PropertyName = "checksum")]
         public string Checksum { get; set; }
-
+        
         /// <value>
         /// type of the checksum
         /// </value>
         [JsonProperty(PropertyName = "checksumType")]
         public string ChecksumType { get; set; }
+        
     }
 }

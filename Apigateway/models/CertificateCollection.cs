@@ -30,5 +30,6 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<CertificateSummary> Items { get; set; }
+        
     }
 }

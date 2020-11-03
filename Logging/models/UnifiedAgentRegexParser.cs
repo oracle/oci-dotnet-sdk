@@ -23,8 +23,11 @@ namespace Oci.LoggingService.Models
         
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
-
+        
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "REGEXP";
     }
 }

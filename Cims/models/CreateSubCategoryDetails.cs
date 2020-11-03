@@ -29,5 +29,6 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "subCategoryKey")]
         public string SubCategoryKey { get; set; }
+        
     }
 }

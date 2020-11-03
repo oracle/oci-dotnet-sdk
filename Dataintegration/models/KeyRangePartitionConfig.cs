@@ -26,8 +26,11 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "partitionNumber")]
         public System.Nullable<int> PartitionNumber { get; set; }
-
+        
         [JsonProperty(PropertyName = "keyRange")]
         public KeyRange KeyRange { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "KEYRANGEPARTITIONCONFIG";
     }
 }

@@ -32,19 +32,19 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Human-readable name of the application.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// Description of the application.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Unique identifier (OCID) of the application source.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "SourceId is required.")]
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
-
+        
         /// <value>
         /// Name of the application being migrated from the source.
         /// </value>
@@ -64,40 +64,41 @@ namespace Oci.ApplicationmigrationService.Models
         [Required(ErrorMessage = "ApplicationName is required.")]
         [JsonProperty(PropertyName = "applicationName")]
         public string ApplicationName { get; set; }
-
+        
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "DiscoveryDetails is required.")]
         [JsonProperty(PropertyName = "discoveryDetails")]
         public DiscoveryDetails DiscoveryDetails { get; set; }
-
+        
         /// <value>
         /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the CreateMigration operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceConfig")]
         public System.Collections.Generic.Dictionary<string, ConfigurationField> ServiceConfig { get; set; }
-
+        
         /// <value>
         /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the CreateMigration operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "applicationConfig")]
         public System.Collections.Generic.Dictionary<string, ConfigurationField> ApplicationConfig { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

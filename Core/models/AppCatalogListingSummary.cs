@@ -26,23 +26,24 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "listingId")]
         public string ListingId { get; set; }
-
+        
         /// <value>
         /// The display name of the listing.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The short summary for the listing.
         /// </value>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
-
+        
         /// <value>
         /// The name of the publisher who published this listing.
         /// </value>
         [JsonProperty(PropertyName = "publisherName")]
         public string PublisherName { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human-readable error string of the upstream error.
         /// </value>
@@ -40,17 +40,18 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The status of the HTTP response encountered in the upstream error.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// Unique Oracle-assigned identifier for the upstream request. If you need to contact Oracle about a particular upstream request, please provide the request ID.
         /// </value>
         [JsonProperty(PropertyName = "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
     }
 }

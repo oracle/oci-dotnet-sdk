@@ -32,7 +32,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "TopicId is required.")]
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment for the subscription.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The protocol used for the subscription.
         /// <br/>
@@ -65,7 +65,7 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
         public string Protocol { get; set; }
-
+        
         /// <value>
         /// A locator that corresponds to the subscription protocol.
         /// For example, an email address for a subscription that uses the `EMAIL` protocol, or a URL for a subscription that uses an HTTP-based protocol.
@@ -83,13 +83,13 @@ namespace Oci.OnsService.Models
         [Required(ErrorMessage = "Endpoint is required.")]
         [JsonProperty(PropertyName = "endpoint")]
         public string Endpoint { get; set; }
-
+        
         /// <value>
         /// Metadata for the subscription.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         public string Metadata { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -97,7 +97,7 @@ namespace Oci.OnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -105,5 +105,6 @@ namespace Oci.OnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
     }
 }

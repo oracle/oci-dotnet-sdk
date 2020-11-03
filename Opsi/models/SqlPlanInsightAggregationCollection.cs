@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [JsonProperty(PropertyName = "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DatabaseId is required.")]
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
-
+        
         /// <value>
         /// The start timestamp that was passed into the request.
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalStart is required.")]
         [JsonProperty(PropertyName = "timeIntervalStart")]
         public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
-
+        
         /// <value>
         /// The end timestamp that was passed into the request.
         /// </value>
@@ -62,7 +62,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
-
+        
         /// <value>
         /// List of SQL plan insights.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Insights is required.")]
         [JsonProperty(PropertyName = "insights")]
         public System.Collections.Generic.List<SqlPlanInsights> Insights { get; set; }
-
+        
         /// <value>
         /// List of SQL plan statistics.
         /// </value>
@@ -82,5 +82,6 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<SqlPlanInsightAggregation> Items { get; set; }
+        
     }
 }

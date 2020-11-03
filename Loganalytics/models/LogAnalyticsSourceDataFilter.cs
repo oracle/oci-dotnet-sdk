@@ -26,79 +26,79 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// edit version
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
-
+        
         /// <value>
         /// enabled
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// field internal name
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// hash type
         /// </value>
         [JsonProperty(PropertyName = "hashType")]
         public System.Nullable<int> HashType { get; set; }
-
+        
         /// <value>
         /// filter Id
         /// </value>
         [JsonProperty(PropertyName = "dataFilterId")]
         public System.Nullable<long> DataFilterId { get; set; }
-
+        
         /// <value>
         /// is system flag
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
-
+        
         /// <value>
         /// regular expression match
         /// </value>
         [JsonProperty(PropertyName = "matchRegularExpression")]
         public string MatchRegularExpression { get; set; }
-
+        
         /// <value>
         /// order
         /// </value>
         [JsonProperty(PropertyName = "order")]
         public System.Nullable<long> Order { get; set; }
-
+        
         /// <value>
         /// path
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
-
+        
         /// <value>
         /// replacement string
         /// </value>
         [JsonProperty(PropertyName = "replacementString")]
         public string ReplacementString { get; set; }
-
+        
         /// <value>
         /// source Id
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
-        ///
+                ///
         /// <value>
         /// filterType
         /// </value>
@@ -120,5 +120,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "filterType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<FilterTypeEnum> FilterType { get; set; }
+        
     }
 }

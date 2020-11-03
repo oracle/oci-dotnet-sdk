@@ -30,25 +30,25 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// DetectorTemplate Identifier, can be renamed
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// DetectorTemplate Identifier, can be renamed
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// Recommendation for DetectorRecipeDetectorRule
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
-
+        
         /// <value>
         /// possible type of detectors
         /// </value>
@@ -59,19 +59,19 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "detector")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
-
+        
         /// <value>
         /// service type of the configuration to which the rule is applied
         /// </value>
         [JsonProperty(PropertyName = "serviceType")]
         public string ServiceType { get; set; }
-
+        
         /// <value>
         /// resource type of the configuration to which the rule is applied
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
-        ///
+                ///
         ///
         public enum ManagedListTypesEnum {
             [EnumMember(Value = "CIDR_BLOCK")]
@@ -103,39 +103,40 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
-
+        
         /// <value>
         /// List of CandidateResponderRule related to this rule
         /// </value>
         [JsonProperty(PropertyName = "candidateResponderRules")]
         public System.Collections.Generic.List<CandidateResponderRule> CandidateResponderRules { get; set; }
-
+        
         [JsonProperty(PropertyName = "detectorDetails")]
         public DetectorDetails DetectorDetails { get; set; }
-
+        
         /// <value>
         /// The date and time the detector recipe rule was created. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The date and time the detector recipe rule was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// The current state of the detector recipe rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
     }
 }

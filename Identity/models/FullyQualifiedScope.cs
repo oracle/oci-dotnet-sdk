@@ -28,7 +28,7 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Audience is required.")]
         [JsonProperty(PropertyName = "audience")]
         public string Audience { get; set; }
-
+        
         /// <value>
         /// Allowed permission scope for the given context.
         /// </value>
@@ -38,5 +38,6 @@ namespace Oci.IdentityService.Models
         [Required(ErrorMessage = "Scope is required.")]
         [JsonProperty(PropertyName = "scope")]
         public string Scope { get; set; }
+        
     }
 }

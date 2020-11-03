@@ -27,5 +27,6 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "Ticket is required.")]
         [JsonProperty(PropertyName = "ticket")]
         public UpdateTicketDetails Ticket { get; set; }
+        
     }
 }

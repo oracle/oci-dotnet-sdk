@@ -26,11 +26,12 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "low")]
         public System.Collections.Generic.List<string> Low { get; set; }
-
+        
         /// <value>
         /// List of db ids with high usage
         /// </value>
         [JsonProperty(PropertyName = "high")]
         public System.Collections.Generic.List<string> High { get; set; }
+        
     }
 }

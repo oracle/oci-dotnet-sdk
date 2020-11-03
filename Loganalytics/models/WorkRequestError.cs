@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Code is required.")]
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
-
+        
         /// <value>
         /// A human readable description of the issue encountered.
         /// </value>
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// The time the error occured. An RFC3339 formatted datetime string.
         /// </value>
@@ -52,5 +52,6 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
+        
     }
 }

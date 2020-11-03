@@ -26,11 +26,12 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "readUnitsConsumed")]
         public System.Nullable<int> ReadUnitsConsumed { get; set; }
-
+        
         /// <value>
         /// Write Units consumed by this operation.
         /// </value>
         [JsonProperty(PropertyName = "writeUnitsConsumed")]
         public System.Nullable<int> WriteUnitsConsumed { get; set; }
+        
     }
 }

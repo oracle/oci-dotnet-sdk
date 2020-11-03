@@ -26,41 +26,42 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The type of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
         public string ModelType { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         [JsonProperty(PropertyName = "configProvider")]
         public CreateConfigProvider ConfigProvider { get; set; }
-
+        
         /// <value>
         /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 }

@@ -26,56 +26,57 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "baseFieldName")]
         public string BaseFieldName { get; set; }
-
+        
         /// <value>
         /// id
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Nullable<long> Id { get; set; }
-
+        
         [JsonProperty(PropertyName = "matchResult")]
         public RegexMatchResult MatchResult { get; set; }
-
+        
         /// <value>
         /// parsedFieldCount
         /// </value>
         [JsonProperty(PropertyName = "parsedFieldCount")]
         public System.Nullable<int> ParsedFieldCount { get; set; }
-
+        
         /// <value>
         /// parsedFields
         /// </value>
         [JsonProperty(PropertyName = "parsedFields")]
         public System.Collections.Generic.Dictionary<string, string> ParsedFields { get; set; }
-
+        
         /// <value>
         /// regex
         /// </value>
         [JsonProperty(PropertyName = "regex")]
         public string Regex { get; set; }
-
+        
         /// <value>
         /// status
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
-
+        
         /// <value>
         /// statusDescription
         /// </value>
         [JsonProperty(PropertyName = "statusDescription")]
         public string StatusDescription { get; set; }
-
+        
         /// <value>
         /// isValidRegexSyntax
         /// </value>
         [JsonProperty(PropertyName = "isValidRegexSyntax")]
         public System.Nullable<bool> IsValidRegexSyntax { get; set; }
-
+        
         /// <value>
         /// violations
         /// </value>
         [JsonProperty(PropertyName = "violations")]
         public System.Collections.Generic.List<Violation> Violations { get; set; }
+        
     }
 }

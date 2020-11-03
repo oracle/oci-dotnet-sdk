@@ -48,7 +48,7 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// The list of query parameters.
         /// 
@@ -59,5 +59,6 @@ namespace Oci.ApigatewayService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<FilterQueryParameterPolicyItem> Items { get; set; }
+        
     }
 }

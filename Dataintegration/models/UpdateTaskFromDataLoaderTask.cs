@@ -23,5 +23,8 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "dataFlow")]
         public DataFlow DataFlow { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DATA_LOADER_TASK";
     }
 }

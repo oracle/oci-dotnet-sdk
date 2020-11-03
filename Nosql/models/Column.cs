@@ -26,23 +26,24 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// The column type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-
+        
         /// <value>
         /// The column nullable flag.
         /// </value>
         [JsonProperty(PropertyName = "isNullable")]
         public System.Nullable<bool> IsNullable { get; set; }
-
+        
         /// <value>
         /// The column default value.
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
+        
     }
 }

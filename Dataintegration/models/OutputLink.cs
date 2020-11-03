@@ -26,5 +26,8 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "toLinks")]
         public System.Collections.Generic.List<string> ToLinks { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "OUTPUT_LINK";
     }
 }

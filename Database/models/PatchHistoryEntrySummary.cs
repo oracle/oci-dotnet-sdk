@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the patch.
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "PatchId is required.")]
         [JsonProperty(PropertyName = "patchId")]
         public string PatchId { get; set; }
-        ///
+                ///
         /// <value>
         /// The action being performed or was completed.
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the action.
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A descriptive text associated with the lifecycleState.
         /// Typically contains additional displayable text.
@@ -90,7 +90,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The date and time when the patch action started.
         /// </value>
@@ -100,11 +100,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time when the patch action completed
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
+        
     }
 }

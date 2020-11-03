@@ -30,23 +30,24 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// The number of allowed requests per second from one IP address. If unspecified, defaults to `1`.
         /// </value>
         [JsonProperty(PropertyName = "allowedRatePerAddress")]
         public System.Nullable<int> AllowedRatePerAddress { get; set; }
-
+        
         /// <value>
         /// The maximum number of requests allowed to be queued before subsequent requests are dropped. If unspecified, defaults to `10`.
         /// </value>
         [JsonProperty(PropertyName = "maxDelayedCountPerAddress")]
         public System.Nullable<int> MaxDelayedCountPerAddress { get; set; }
-
+        
         /// <value>
         /// The response status code returned when a request is blocked. If unspecified, defaults to `503`. The list of available response codes: `200`, `201`, `202`, `204`, `206`, `300`, `301`, `302`, `303`, `304`, `307`, `400`, `401`, `403`, `404`, `405`, `408`, `409`, `411`, `412`, `413`, `414`, `415`, `416`, `422`, `444`, `499`, `500`, `501`, `502`, `503`, `504`, `507`.
         /// </value>
         [JsonProperty(PropertyName = "blockResponseCode")]
         public System.Nullable<int> BlockResponseCode { get; set; }
+        
     }
 }

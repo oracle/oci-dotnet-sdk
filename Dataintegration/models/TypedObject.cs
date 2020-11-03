@@ -53,52 +53,43 @@ namespace Oci.DataintegrationService.Models
             Parameter
         };
 
-        /// <value>
-        /// The type of the types object.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelType is required.")]
-        [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
-
+        
         /// <value>
         /// The key of the object.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-
+        
         /// <value>
         /// The model version of an object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
-
+        
         [JsonProperty(PropertyName = "parentRef")]
         public ParentReference ParentRef { get; set; }
-
+        
         [JsonProperty(PropertyName = "configValues")]
         public ConfigValues ConfigValues { get; set; }
-
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
-
+        
         /// <value>
         /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// Detailed description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
     }
 
     public class TypedObjectModelConverter : JsonConverter

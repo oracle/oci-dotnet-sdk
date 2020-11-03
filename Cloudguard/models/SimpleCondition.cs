@@ -26,25 +26,28 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameter")]
         public string Parameter { get; set; }
-
+        
         /// <value>
         /// type of operator
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorType> Operator { get; set; }
-
+        
         /// <value>
         /// type of operator
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// type of value
         /// </value>
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConditionValueType> ValueType { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "SIMPLE";
     }
 }

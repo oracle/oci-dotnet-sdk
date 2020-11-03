@@ -106,7 +106,7 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "condition")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConditionEnum> Condition { get; set; }
-
+        
         /// <value>
         /// The criteria value.
         /// </value>
@@ -116,11 +116,12 @@ namespace Oci.WaasService.Models
         [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-
+        
         /// <value>
         /// When enabled, the condition will be matched with case-sensitive rules.
         /// </value>
         [JsonProperty(PropertyName = "isCaseSensitive")]
         public System.Nullable<bool> IsCaseSensitive { get; set; }
+        
     }
 }

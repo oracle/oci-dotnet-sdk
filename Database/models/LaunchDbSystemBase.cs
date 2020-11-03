@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// A Fault Domain is a grouping of hardware and infrastructure within an availability domain.
         /// Fault Domains let you distribute your instances so that they are not on the same physical
@@ -56,13 +56,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "faultDomains")]
         public System.Collections.Generic.List<string> FaultDomains { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the DB system. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-
+        
         /// <value>
         /// The availability domain where the DB system is located.
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the DB system is associated with.
         /// <br/>
@@ -91,7 +91,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup network subnet the DB system is associated with. Applicable only to Exadata DB systems.
         /// <br/>
@@ -100,7 +100,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupSubnetId")]
         public string BackupSubnetId { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
@@ -109,14 +109,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
-
+        
         /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that the backup network of this DB system belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm). Applicable only to Exadata systems.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupNetworkNsgIds")]
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
-
+        
         /// <value>
         /// The shape of the DB system. The shape determines resources allocated to the DB system.
         /// - For virtual machine shapes, the number of CPU cores and memory
@@ -131,23 +131,23 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The time zone to use for the DB system. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
-
+        
         [JsonProperty(PropertyName = "dbSystemOptions")]
         public DbSystemOptions DbSystemOptions { get; set; }
-
+        
         /// <value>
         /// If true, Sparse Diskgroup is configured for Exadata dbsystem. If False, Sparse diskgroup is not configured.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sparseDiskgroup")]
         public System.Nullable<bool> SparseDiskgroup { get; set; }
-
+        
         /// <value>
         /// The public key portion of the key pair to use for SSH access to the DB system. Multiple public keys can be provided. The length of the combined keys cannot exceed 40,000 characters.
         /// </value>
@@ -157,7 +157,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "SshPublicKeys is required.")]
         [JsonProperty(PropertyName = "sshPublicKeys")]
         public System.Collections.Generic.List<string> SshPublicKeys { get; set; }
-
+        
         /// <value>
         /// The hostname for the DB system. The hostname must begin with an alphabetic character, and
         /// can contain alphanumeric characters and hyphens (-). The maximum length of the hostname is 16 characters for bare metal and virtual machine DB systems, and 12 characters for Exadata DB systems.
@@ -174,7 +174,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
-
+        
         /// <value>
         /// A domain name used for the DB system. If the Oracle-provided Internet and VCN
         /// Resolver is enabled for the specified subnet, the domain name for the subnet is used
@@ -183,7 +183,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
-
+        
         /// <value>
         /// The number of CPU cores to enable for a bare metal or Exadata DB system. The valid values depend on the specified shape:
         /// <br/>
@@ -207,14 +207,14 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
-
+        
         /// <value>
         /// The cluster name for Exadata and 2-node RAC virtual machine DB systems. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "clusterName")]
         public string ClusterName { get; set; }
-
+        
         /// <value>
         /// The percentage assigned to DATA storage (user data and database files).
         /// The remaining percentage is assigned to RECO storage (database redo logs, archive logs, and recovery manager backups).
@@ -223,21 +223,21 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStoragePercentage")]
         public System.Nullable<int> DataStoragePercentage { get; set; }
-
+        
         /// <value>
         /// Size (in GB) of the initial data volume that will be created and attached to a virtual machine DB system. You can scale up storage after provisioning, as needed. Note that the total storage size attached will be more than the amount you specify to allow for REDO/RECO space and software volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "initialDataStorageSizeInGB")]
         public System.Nullable<int> InitialDataStorageSizeInGB { get; set; }
-
+        
         /// <value>
         /// The number of nodes to launch for a 2-node RAC virtual machine DB system. Specify either 1 or 2.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeCount")]
         public System.Nullable<int> NodeCount { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -246,7 +246,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -254,7 +254,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-        ///
+                ///
         /// <value>
         /// The source of the database:
         /// Use `NONE` for creating a new database. Use `DB_BACKUP` for creating a new database by restoring from a backup. Use `DATABASE` for creating
@@ -273,16 +273,7 @@ namespace Oci.DatabaseService.Models
             DbSystem
         };
 
-        /// <value>
-        /// The source of the database:
-        /// Use `NONE` for creating a new database. Use `DB_BACKUP` for creating a new database by restoring from a backup. Use `DATABASE` for creating
-        /// a new database from an existing database, including archive redo log data. The default is `NONE`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<SourceEnum> Source { get; set; }
-
+        
         /// <value>
         /// A private IP address of your choice. Must be an available IP address within the subnet's CIDR.
         /// If you don't specify a value, Oracle automatically assigns a private IP address from the subnet.
@@ -290,6 +281,7 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
+        
     }
 
     public class LaunchDbSystemBaseModelConverter : JsonConverter

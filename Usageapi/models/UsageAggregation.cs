@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The usage of the account (tenant)
+    /// The account (tenant) usage.
     /// </summary>
     public class UsageAggregation 
     {
@@ -26,7 +26,7 @@ namespace Oci.UsageapiService.Models
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }
-
+        
         /// <value>
         /// A list of usage items.
         /// </value>
@@ -36,5 +36,6 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<UsageSummary> Items { get; set; }
+        
     }
 }

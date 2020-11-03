@@ -32,17 +32,20 @@ namespace Oci.ResourcemanagerService.Models
         [Required(ErrorMessage = "ConfigurationSourceProviderId is required.")]
         [JsonProperty(PropertyName = "configurationSourceProviderId")]
         public string ConfigurationSourceProviderId { get; set; }
-
+        
         /// <value>
         /// The URL of the Git repository for the configuration source.
         /// </value>
         [JsonProperty(PropertyName = "repositoryUrl")]
         public string RepositoryUrl { get; set; }
-
+        
         /// <value>
         /// The name of the branch in the Git repository for the configuration source.
         /// </value>
         [JsonProperty(PropertyName = "branchName")]
         public string BranchName { get; set; }
+        
+        [JsonProperty(PropertyName = "configSourceType")]
+        private readonly string configSourceType = "GIT_CONFIG_SOURCE";
     }
 }

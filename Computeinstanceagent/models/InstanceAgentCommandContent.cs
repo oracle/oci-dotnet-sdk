@@ -27,8 +27,9 @@ namespace Oci.ComputeinstanceagentService.Models
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public InstanceAgentCommandSourceDetails Source { get; set; }
-
+        
         [JsonProperty(PropertyName = "output")]
         public InstanceAgentCommandOutputDetails Output { get; set; }
+        
     }
 }

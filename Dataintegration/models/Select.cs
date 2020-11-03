@@ -26,11 +26,14 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isDistinct")]
         public System.Nullable<bool> IsDistinct { get; set; }
-
+        
         /// <value>
         /// An array of selected columns.
         /// </value>
         [JsonProperty(PropertyName = "selectColumns")]
         public System.Collections.Generic.List<ShapeField> SelectColumns { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "SELECT";
     }
 }

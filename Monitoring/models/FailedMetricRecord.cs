@@ -32,7 +32,7 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "Message is required.")]
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
-
+        
         /// <value>
         /// Identifier of a metric object that failed input validation.
         /// 
@@ -43,5 +43,6 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "MetricData is required.")]
         [JsonProperty(PropertyName = "metricData")]
         public MetricDataDetails MetricData { get; set; }
+        
     }
 }

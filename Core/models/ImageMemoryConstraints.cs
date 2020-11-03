@@ -26,11 +26,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "minInGBs")]
         public System.Nullable<int> MinInGBs { get; set; }
-
+        
         /// <value>
         /// The maximum amount of memory, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "maxInGBs")]
         public System.Nullable<int> MaxInGBs { get; set; }
+        
     }
 }

@@ -28,19 +28,20 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
-
+        
         /// <value>
         /// The relative priority of this database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "share")]
         public System.Nullable<int> Share { get; set; }
-
+        
         /// <value>
         /// The flash cache limit for this database. This value is internally configured based on the share value assigned to the database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "flashCacheLimit")]
         public string FlashCacheLimit { get; set; }
+        
     }
 }

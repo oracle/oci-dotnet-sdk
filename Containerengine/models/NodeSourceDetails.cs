@@ -22,18 +22,7 @@ namespace Oci.ContainerengineService.Models
     public class NodeSourceDetails 
     {
         
-        /// <value>
-        /// The source type for the node.
-        /// Use `IMAGE` when specifying an OCID of an image.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceType is required.")]
-        [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NodeSourceType> SourceType { get; set; }
+        
     }
 
     public class NodeSourceDetailsModelConverter : JsonConverter

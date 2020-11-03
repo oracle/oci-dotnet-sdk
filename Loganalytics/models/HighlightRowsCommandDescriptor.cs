@@ -28,5 +28,8 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "keywords")]
         public System.Collections.Generic.List<string> Keywords { get; set; }
+        
+        [JsonProperty(PropertyName = "name")]
+        private readonly string name = "HIGHLIGHT_ROWS";
     }
 }

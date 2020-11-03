@@ -30,7 +30,7 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
-
+        
         /// <value>
         /// The size of block volume in GB that needs to be attached to a given node.
         /// All the necessary details needed for attachment are managed by service itself.
@@ -38,7 +38,7 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
-
+        
         /// <value>
         /// Boolean flag specifying whether or not are Kerberos principals mapped
         /// to database users.
@@ -46,7 +46,7 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isKerberosMappedToDatabaseUsers")]
         public System.Nullable<bool> IsKerberosMappedToDatabaseUsers { get; set; }
-
+        
         /// <value>
         /// IP address of the Cloud SQL node
         /// </value>
@@ -56,11 +56,12 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-
+        
         /// <value>
         /// Details about Kerberos principals
         /// </value>
         [JsonProperty(PropertyName = "kerberosDetails")]
         public System.Collections.Generic.List<KerberosDetails> KerberosDetails { get; set; }
+        
     }
 }

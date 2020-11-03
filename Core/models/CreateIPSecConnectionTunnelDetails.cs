@@ -26,7 +26,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of routing to use for this tunnel (either BGP dynamic routing or static routing).
         /// 
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "routing")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RoutingEnum> Routing { get; set; }
-        ///
+                ///
         /// <value>
         /// Internet Key Exchange protocol version.
         /// 
@@ -66,7 +66,7 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "ikeVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IkeVersionEnum> IkeVersion { get; set; }
-
+        
         /// <value>
         /// The shared secret (pre-shared key) to use for the IPSec tunnel. Only numbers, letters, and
         /// spaces are allowed. If you don't provide a value,
@@ -76,7 +76,7 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sharedSecret")]
         public string SharedSecret { get; set; }
-
+        
         /// <value>
         /// Information for establishing a BGP session for the IPSec tunnel. Required if the tunnel uses
         /// BGP dynamic routing.
@@ -88,5 +88,6 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bgpSessionConfig")]
         public CreateIPSecTunnelBgpSessionDetails BgpSessionConfig { get; set; }
+        
     }
 }

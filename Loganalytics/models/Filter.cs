@@ -28,14 +28,14 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// Field values that will be inserted into the query string for the specified fieldName. Please note all values should reflect the fields data type otherwise the insert is subject to fail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<System.Object> Values { get; set; }
-        ///
+                ///
         /// <value>
         /// Operator to apply when editing the query string.
         /// 
@@ -91,5 +91,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
+        
     }
 }

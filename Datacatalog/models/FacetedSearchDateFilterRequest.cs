@@ -26,7 +26,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -34,7 +34,7 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeAfter")]
         public System.Nullable<System.DateTime> TimeAfter { get; set; }
-
+        
         /// <value>
         /// The date and time the request was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
@@ -42,5 +42,6 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeBefore")]
         public System.Nullable<System.DateTime> TimeBefore { get; set; }
+        
     }
 }

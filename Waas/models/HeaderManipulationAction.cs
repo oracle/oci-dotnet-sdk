@@ -32,13 +32,7 @@ namespace Oci.WaasService.Models
             RemoveHttpResponseHeader
         };
 
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Action is required.")]
-        [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ActionEnum> Action { get; set; }
+        
     }
 
     public class HeaderManipulationActionModelConverter : JsonConverter

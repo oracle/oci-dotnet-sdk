@@ -32,5 +32,8 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "Expression is required.")]
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "cron";
     }
 }

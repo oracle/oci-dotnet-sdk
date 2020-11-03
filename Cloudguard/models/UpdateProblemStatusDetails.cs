@@ -31,11 +31,12 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> Status { get; set; }
-
+        
         /// <value>
         /// User Comments
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
+        
     }
 }

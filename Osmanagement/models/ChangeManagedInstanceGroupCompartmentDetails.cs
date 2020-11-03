@@ -28,5 +28,6 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
     }
 }

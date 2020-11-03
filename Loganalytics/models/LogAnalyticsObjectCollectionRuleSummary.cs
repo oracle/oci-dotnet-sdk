@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// A unique name to the rule. The name must be unique, within the tenancy, and cannot be changed.
         /// </value>
@@ -41,7 +41,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-
+        
         /// <value>
         /// A unique name given to the rule. The name must be unique within the tenancy, and cannot be modified.
         /// Avoid entering confidential information.
@@ -49,7 +49,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to which this rule belongs.
         /// </value>
@@ -59,7 +59,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// Object Storage namespace.
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "OsNamespace is required.")]
         [JsonProperty(PropertyName = "osNamespace")]
         public string OsNamespace { get; set; }
-
+        
         /// <value>
         /// Name of the Object Storage bucket.
         /// </value>
@@ -79,7 +79,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "OsBucketName is required.")]
         [JsonProperty(PropertyName = "osBucketName")]
         public string OsBucketName { get; set; }
-
+        
         /// <value>
         /// The type of collection.
         /// Accepted values are: LIVE.
@@ -94,7 +94,7 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "collectionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectCollectionRuleCollectionTypes> CollectionType { get; set; }
-
+        
         /// <value>
         /// The current state of the rule.
         /// 
@@ -106,13 +106,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LogAnalyticsObjectCollectionRule.LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// A detailed status of the life cycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The time when this rule was created. An RFC3339 formatted datetime string.
         /// </value>
@@ -122,7 +122,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-
+        
         /// <value>
         /// The time when this rule was last updated. An RFC3339 formatted datetime string.
         /// </value>
@@ -132,19 +132,20 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
     }
 }

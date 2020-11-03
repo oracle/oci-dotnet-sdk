@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AssetId is required.")]
         [JsonProperty(PropertyName = "assetId")]
         public string AssetId { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume backup policy assignment.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The OCID of the volume backup policy that has been assigned to the volume.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PolicyId is required.")]
         [JsonProperty(PropertyName = "policyId")]
         public string PolicyId { get; set; }
-
+        
         /// <value>
         /// The date and time the volume backup policy was assigned to the volume. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
@@ -65,5 +65,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

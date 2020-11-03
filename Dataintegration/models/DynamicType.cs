@@ -23,8 +23,11 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "typeHandler")]
         public DynamicTypeHandler TypeHandler { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "DYNAMIC_TYPE";
     }
 }

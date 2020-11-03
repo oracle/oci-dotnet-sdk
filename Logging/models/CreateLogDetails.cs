@@ -32,7 +32,7 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The logType that the log object is for, whether custom or service.
         /// </value>
@@ -54,13 +54,13 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "logType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LogTypeEnum> LogType { get; set; }
-
+        
         /// <value>
         /// Whether or not this resource is currently enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -69,7 +69,7 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
@@ -77,14 +77,15 @@ namespace Oci.LoggingService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-
+        
         [JsonProperty(PropertyName = "configuration")]
         public Configuration Configuration { get; set; }
-
+        
         /// <value>
         /// Log retention duration in 30-day increments (30, 60, 90 and so on).
         /// </value>
         [JsonProperty(PropertyName = "retentionDuration")]
         public System.Nullable<int> RetentionDuration { get; set; }
+        
     }
 }

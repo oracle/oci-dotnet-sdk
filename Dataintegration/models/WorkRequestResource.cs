@@ -30,7 +30,7 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
-        ///
+                ///
         /// <value>
         /// The way in which this resource is affected by the work tracked in the work request.
         /// A resource being created, updated, or deleted will remain in the `IN_PROGRESS` state until
@@ -72,7 +72,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "actionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
-
+        
         /// <value>
         /// The OCID or other unique identifier of the resource the work request affects.
         /// </value>
@@ -82,11 +82,12 @@ namespace Oci.DataintegrationService.Models
         [Required(ErrorMessage = "Identifier is required.")]
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
-
+        
         /// <value>
         /// The URI path that is used in a GET request to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
+        
     }
 }

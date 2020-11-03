@@ -27,5 +27,6 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ConfigurationSourceProviderSummary> Items { get; set; }
+        
     }
 }

@@ -33,16 +33,7 @@ namespace Oci.ApigatewayService.Models
             RemoteJwks
         };
 
-        /// <value>
-        /// Type of the public key set.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
+        
     }
 
     public class PublicKeySetModelConverter : JsonConverter

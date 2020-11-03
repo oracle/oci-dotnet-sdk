@@ -30,24 +30,25 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "matchType")]
         public string MatchType { get; set; }
-
+        
         /// <value>
         /// Match Value.
         /// </value>
         [JsonProperty(PropertyName = "matchValue")]
         public string MatchValue { get; set; }
-
+        
         /// <value>
         /// Property to override. Accepted values are: logSourceName, charEncoding.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "propertyName")]
         public string PropertyName { get; set; }
-
+        
         /// <value>
         /// Value.
         /// </value>
         [JsonProperty(PropertyName = "propertyValue")]
         public string PropertyValue { get; set; }
+        
     }
 }

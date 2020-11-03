@@ -30,5 +30,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "PeerId is required.")]
         [JsonProperty(PropertyName = "peerId")]
         public string PeerId { get; set; }
+        
     }
 }

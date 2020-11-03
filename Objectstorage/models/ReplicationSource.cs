@@ -30,7 +30,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "PolicyName is required.")]
         [JsonProperty(PropertyName = "policyName")]
         public string PolicyName { get; set; }
-
+        
         /// <value>
         /// The source region replicating data from, for example \"us-ashburn-1\".
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "SourceRegionName is required.")]
         [JsonProperty(PropertyName = "sourceRegionName")]
         public string SourceRegionName { get; set; }
-
+        
         /// <value>
         /// The source bucket replicating data from.
         /// </value>
@@ -50,5 +50,6 @@ namespace Oci.ObjectstorageService.Models
         [Required(ErrorMessage = "SourceBucketName is required.")]
         [JsonProperty(PropertyName = "sourceBucketName")]
         public string SourceBucketName { get; set; }
+        
     }
 }

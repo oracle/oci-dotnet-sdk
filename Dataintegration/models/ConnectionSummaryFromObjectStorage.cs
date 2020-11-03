@@ -26,23 +26,26 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }
-
+        
         /// <value>
         /// The OCI user OCID for the user to connect to.
         /// </value>
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
-
+        
         /// <value>
         /// The fingerprint for the user.
         /// </value>
         [JsonProperty(PropertyName = "fingerPrint")]
         public string FingerPrint { get; set; }
-
+        
         /// <value>
         /// The passphrase for the connection.
         /// </value>
         [JsonProperty(PropertyName = "passPhrase")]
         public string PassPhrase { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_OBJECT_STORAGE_CONNECTION";
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The operation performed by the work request.
         /// 
@@ -43,7 +43,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestOperationType> OperationType { get; set; }
-
+        
         /// <value>
         /// The current status of the work request.
         /// 
@@ -55,7 +55,7 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
-
+        
         /// <value>
         /// The compartment OCID of this work request.
         /// 
@@ -66,7 +66,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The resources this work request affects.
         /// 
@@ -77,7 +77,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "Resources is required.")]
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
-
+        
         /// <value>
         /// The time the work request was accepted, in the format defined by RFC3339.
         /// <br/>
@@ -89,7 +89,7 @@ namespace Oci.AnalyticsService.Models
         [Required(ErrorMessage = "TimeAccepted is required.")]
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
-
+        
         /// <value>
         /// The time the work request was started, in the format defined by RFC3339.
         /// <br/>
@@ -97,7 +97,7 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The time the work request was finished, in the format defined by RFC3339.
         /// <br/>
@@ -105,5 +105,6 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

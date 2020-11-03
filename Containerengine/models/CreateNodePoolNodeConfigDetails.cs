@@ -31,7 +31,7 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "Size is required.")]
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
-
+        
         /// <value>
         /// The placement configurations for the node pool. Provide one placement
         /// configuration for each availability domain in which you intend to launch a node.
@@ -47,5 +47,6 @@ namespace Oci.ContainerengineService.Models
         [Required(ErrorMessage = "PlacementConfigs is required.")]
         [JsonProperty(PropertyName = "placementConfigs")]
         public System.Collections.Generic.List<NodePoolPlacementConfigDetails> PlacementConfigs { get; set; }
+        
     }
 }

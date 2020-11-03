@@ -23,14 +23,17 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "parentType")]
         public CompositeType ParentType { get; set; }
-
+        
         /// <value>
         /// An array of elements.
         /// </value>
         [JsonProperty(PropertyName = "elements")]
         public System.Collections.Generic.List<TypedObject> Elements { get; set; }
-
+        
         [JsonProperty(PropertyName = "configDefinition")]
         public ConfigDefinition ConfigDefinition { get; set; }
+        
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "COMPOSITE_TYPE";
     }
 }

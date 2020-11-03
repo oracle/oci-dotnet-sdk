@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database.
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "AutonomousDatabaseId is required.")]
         [JsonProperty(PropertyName = "autonomousDatabaseId")]
         public string AutonomousDatabaseId { get; set; }
-
+        
         /// <value>
         /// The user-friendly name for the backup. The name does not have to be unique.
         /// </value>
@@ -64,7 +64,7 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        ///
+                ///
         /// <value>
         /// The type of backup.
         /// </value>
@@ -86,7 +86,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-
+        
         /// <value>
         /// Indicates whether the backup is user-initiated or automatic.
         /// </value>
@@ -96,32 +96,32 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "IsAutomatic is required.")]
         [JsonProperty(PropertyName = "isAutomatic")]
         public System.Nullable<bool> IsAutomatic { get; set; }
-
+        
         /// <value>
         /// The date and time the backup started.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
-
+        
         /// <value>
         /// The date and time the backup completed.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
-
+        
         /// <value>
         /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
-
+        
         /// <value>
         /// The size of the database in terabytes at the time the backup was taken.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSizeInTBs")]
         public System.Nullable<decimal> DatabaseSizeInTBs { get; set; }
-        ///
+                ///
         /// <value>
         /// The current state of the backup.
         /// </value>
@@ -149,23 +149,24 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-
+        
         /// <value>
         /// Indicates whether the backup can be used to restore the associated Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "isRestorable")]
         public System.Nullable<bool> IsRestorable { get; set; }
-
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreId")]
         public string KeyStoreId { get; set; }
-
+        
         /// <value>
         /// The wallet name for Oracle Key Vault.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
+        
     }
 }

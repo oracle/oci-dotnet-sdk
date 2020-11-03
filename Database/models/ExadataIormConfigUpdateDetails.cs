@@ -49,7 +49,7 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "objective")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ObjectiveEnum> Objective { get; set; }
-
+        
         /// <value>
         /// Array of IORM Setting for all the database in
         /// this Exadata DB System
@@ -57,5 +57,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbPlans")]
         public System.Collections.Generic.List<DbIormConfigUpdateDetail> DbPlans { get; set; }
+        
     }
 }
