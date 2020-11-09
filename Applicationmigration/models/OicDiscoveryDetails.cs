@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies the credentials to access the source OIC instance
+    /// Credentials to access the Oracle Integration application in the source environment. Application Migration connects to the
+    /// application in the source environment with the supplied credentials.
     /// 
     /// </summary>
     public class OicDiscoveryDetails : DiscoveryDetails
     {
         
         /// <value>
-        /// The OIC instance admin user
+        /// Application administrator username to access the Oracle Integration Classic instance in the source environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +34,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string ServiceInstanceUser { get; set; }
         
         /// <value>
-        /// The OIC instance admin password
+        /// Password for this user.
         /// </value>
         /// <remarks>
         /// Required

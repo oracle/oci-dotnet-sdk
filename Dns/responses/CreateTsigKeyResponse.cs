@@ -26,6 +26,14 @@ namespace Oci.DnsService.Responses
 
 
         /// <value>
+        /// The full URI of the resource related to the request.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Location")]
+        public string Location { get; set; }
+
+
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to
         /// contact Oracle about a particular request, please provide the request
         /// ID.
@@ -33,6 +41,15 @@ namespace Oci.DnsService.Responses
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+
+
+        /// <value>
+        /// Unique Oracle-assigned identifier for the asynchronous request.
+        /// You can use this to query status of the asynchronous operation.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
 
         /// <value>
         /// The returned TsigKey instance.

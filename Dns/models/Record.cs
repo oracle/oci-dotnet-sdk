@@ -64,8 +64,7 @@ namespace Oci.DnsService.Models
         public string RrsetVersion { get; set; }
         
         /// <value>
-        /// The canonical name for the record's type, such as A or CNAME. For more
-        /// information, see [Resource Record (RR) TYPEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4).
+        /// The type of DNS record, such as A or CNAME. For more information, see [Resource Record (RR) TYPEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rtype")]

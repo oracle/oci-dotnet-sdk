@@ -66,7 +66,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The percentage complete of the operation tracked by this work request.
+        /// The percentage completion of the operation tracked by this work request.
         /// </value>
         /// <remarks>
         /// Required

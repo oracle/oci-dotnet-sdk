@@ -107,6 +107,13 @@ namespace Oci.LoadbalancerService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IpModeEnum> IpMode { get; set; }
         
+        /// <value>
+        /// An array of reserved Ips.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "reservedIps")]
+        public System.Collections.Generic.List<ReservedIP> ReservedIps { get; set; }
+        
         [JsonProperty(PropertyName = "listeners")]
         public System.Collections.Generic.Dictionary<string, ListenerDetails> Listeners { get; set; }
         

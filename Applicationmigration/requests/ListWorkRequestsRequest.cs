@@ -17,7 +17,7 @@ namespace Oci.ApplicationmigrationService.Requests
     {
         
         /// <value>
-        /// The compartment OCID on which to filter.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a compartment. Retrieves details of objects in the specified compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.ApplicationmigrationService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for a resource. Retrieves details of the specified resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
         public string ResourceId { get; set; }

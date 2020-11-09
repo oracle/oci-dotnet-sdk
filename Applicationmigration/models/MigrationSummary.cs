@@ -16,27 +16,27 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// An application being migrated from a source environment to OCI.
+    /// Details about the migration. Each migration moves a single application from a specified source to Oracle Cloud Infrastructure.
     /// 
     /// </summary>
     public class MigrationSummary 
     {
         
         /// <value>
-        /// Unique identifier (OCID) for the application
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the migration.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// Unique idenfifier (OCID) for the compartment where the Source is located.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the migration.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Human-readable name of the migration.
+        /// User-friendly name of the migration.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -48,19 +48,19 @@ namespace Oci.ApplicationmigrationService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The date and time at which the migration was created.
+        /// The date and time at which the migration was created, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Unique identifier (OCID) of the source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
         
         /// <value>
-        /// Name of the application being migrated from the source.
+        /// Name of the application which is being migrated from the source environment.
         /// </value>
         [JsonProperty(PropertyName = "applicationName")]
         public string ApplicationName { get; set; }
@@ -73,35 +73,35 @@ namespace Oci.ApplicationmigrationService.Models
         public System.Nullable<MigrationTypes> ApplicationType { get; set; }
         
         /// <value>
-        /// The current state of the Migration
+        /// The current state of the migration.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
-        /// Details about the current lifecycle state
+        /// Details about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The current state of the overall Migration process
+        /// The current state of the overall migration process.
         /// </value>
         [JsonProperty(PropertyName = "migrationState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MigrationStates> MigrationState { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

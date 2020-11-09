@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Information required to migrate an application. Populated by the service as the source application is introspected
+    /// Provide configuration information about the application in the target environment. Application Migration migrates the application to
+    /// the target environment only after you provide this information. The information that you must provide varies depending on the type of
+    /// application that you are migrating.
     /// 
     /// </summary>
     public class ConfigurationField 
     {
         
         /// <value>
-        /// The name of the configuration field
+        /// The name of the configuration field.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -35,32 +37,32 @@ namespace Oci.ApplicationmigrationService.Models
         public string Group { get; set; }
         
         /// <value>
-        /// The configuration field type
+        /// The type of the configuration field.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// The value of the field
+        /// The value of the field.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// Help text to guide the customer in setting the configuration value
+        /// Help text to guide the user in setting the configuration value.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Indicates whether or not the field is required (defaults to true)
+        /// Indicates whether or not the field is required (defaults to `true`).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
         
         /// <value>
-        /// Indicates whether or not the field may be modified (defaults to true)
+        /// Indicates whether or not the field may be modified (defaults to `true`).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMutable")]

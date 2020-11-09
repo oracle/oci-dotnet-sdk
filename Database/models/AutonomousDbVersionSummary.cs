@@ -81,5 +81,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isFreeTierEnabled")]
         public System.Nullable<bool> IsFreeTierEnabled { get; set; }
         
+        /// <value>
+        /// True if this version of the Oracle Database software has payments enabled.
+        /// </value>
+        [JsonProperty(PropertyName = "isPaidEnabled")]
+        public System.Nullable<bool> IsPaidEnabled { get; set; }
+        
+        /// <value>
+        /// True if this version of the Oracle Database software's default is free.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultForFree")]
+        public System.Nullable<bool> IsDefaultForFree { get; set; }
+        
+        /// <value>
+        /// True if this version of the Oracle Database software's default is paid.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultForPaid")]
+        public System.Nullable<bool> IsDefaultForPaid { get; set; }
+        
     }
 }

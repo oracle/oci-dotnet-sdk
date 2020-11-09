@@ -53,7 +53,7 @@ namespace Oci.ApplicationmigrationService.Models
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
         
         /// <value>
-        /// The resource type the work request affects.
+        /// The resource type that the work request affects, source or migration.
         /// </value>
         /// <remarks>
         /// Required

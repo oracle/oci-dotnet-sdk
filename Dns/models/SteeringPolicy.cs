@@ -27,6 +27,10 @@ namespace Oci.DnsService.Models
         /// <value>
         /// The OCID of the compartment containing the steering policy.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -35,6 +39,10 @@ namespace Oci.DnsService.Models
         /// Avoid entering confidential information.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -43,6 +51,10 @@ namespace Oci.DnsService.Models
         /// If not specified during creation, a value of 30 seconds will be used.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Ttl is required.")]
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
         
@@ -93,6 +105,10 @@ namespace Oci.DnsService.Models
         /// 
         /// **Example: ** The FAILOVER template determines answers by filtering the policy's answersusing the FILTER rule first, then the following rules in succession: HEALTH, PRIORITY,and LIMIT. This gives the domain dynamic failover capability.It is **strongly recommended** to use a template other than CUSTOM when creatinga steering policy.All templates require the rule order to begin with an unconditional FILTER rule that keepsanswers contingent upon answer.isDisabled != true, except for CUSTOM. A definedHEALTH rule must follow the FILTER rule if the policy references a healthCheckMonitorId.The last rule of a template must must be a LIMIT rule. For more information about templatesand code examples, see [Traffic Management API Guide](https://docs.cloud.oracle.com/iaas/Content/TrafficManagement/Concepts/trafficmanagementapi.htm).**Template Types*** FAILOVER - Uses health check information on your endpoints to determine which DNS answersto serve. If an endpoint fails a health check, the answer for that endpoint will be removedfrom the list of available answers until the endpoint is detected as healthy.* LOAD_BALANCE - Distributes web traffic to specified endpoints based on defined weights.* ROUTE_BY_GEO - Answers DNS queries based on the query's geographic location. For a list of geographiclocations to route by, see [Traffic Management Geographic Locations](https://docs.cloud.oracle.com/iaas/Content/TrafficManagement/Reference/trafficmanagementgeo.htm).* ROUTE_BY_ASN - Answers DNS queries based on the query's originating ASN.* ROUTE_BY_IP - Answers DNS queries based on the query's IP address.* CUSTOM - Allows a customized configuration of rules.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Template is required.")]
         [JsonProperty(PropertyName = "template")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TemplateEnum> Template { get; set; }
@@ -104,6 +120,10 @@ namespace Oci.DnsService.Models
         /// 
         /// **Example: ** {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
@@ -114,6 +134,10 @@ namespace Oci.DnsService.Models
         /// 
         /// **Example: ** {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
@@ -121,6 +145,10 @@ namespace Oci.DnsService.Models
         /// The set of all answers that can potentially issue from the steering policy.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Answers is required.")]
         [JsonProperty(PropertyName = "answers")]
         public System.Collections.Generic.List<SteeringPolicyAnswer> Answers { get; set; }
         
@@ -134,18 +162,30 @@ namespace Oci.DnsService.Models
         /// response.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Rules is required.")]
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<SteeringPolicyRule> Rules { get; set; }
         
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Self is required.")]
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
         
         /// <value>
         /// The OCID of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
@@ -154,6 +194,10 @@ namespace Oci.DnsService.Models
         /// <br/>
         /// **Example: ** 2016-07-22T17:23:59:60Z
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
                 ///
@@ -175,6 +219,10 @@ namespace Oci.DnsService.Models
         /// <value>
         /// The current state of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }

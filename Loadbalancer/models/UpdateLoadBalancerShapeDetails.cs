@@ -15,19 +15,19 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.LoadbalancerService.Models
 {
-    /// <summary>
-    /// The configuration details for update a load balancer to a different shape.
-    /// 
-    /// </summary>
+    
     public class UpdateLoadBalancerShapeDetails 
     {
         
         /// <value>
-        /// A template that determines the total pre-provisioned bandwidth (ingress plus egress).
-        /// To get a list of available shapes, use the {@link #listShapes(ListShapesRequest) listShapes}
-        /// operation.
+        /// The new shape name for the load balancer.
         /// <br/>
-        /// Example: 100Mbps
+        /// Allowed values are :
+        ///   *  10Mbps
+        ///   *  100Mbps
+        ///   *  400Mbps
+        ///   *  8000Mbps
+        /// 
         /// </value>
         /// <remarks>
         /// Required

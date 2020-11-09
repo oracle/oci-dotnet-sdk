@@ -16,14 +16,23 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// An application being migrated from a source environment to OCI.
+    /// While creating a migration, specify the source and the application that you want migrate.
+    /// Each migration moves a single application from a specified source to a specified Oracle Cloud Infrastructure tenancy.
+    /// If required, provide the credentials of the application administrator in the source environment.
+    /// Application Migration uses this information to access the application, as well as discover application artifacts,
+    /// such as the complete domain configuration along with data sources and other dependencies.
+    /// <br/>
+    /// You must also assign a name and provide a description for the migration.
+    /// This helps you to identify the appropriate source environment when you have multiple sources defined.
+    /// <br/>
+    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateMigrationDetails 
     {
         
         /// <value>
-        /// Unique idenfifier (OCID) for the compartment where the Source is located.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the source.
         /// 
         /// </value>
         /// <remarks>
@@ -34,19 +43,19 @@ namespace Oci.ApplicationmigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Human-readable name of the application.
+        /// User-friendly name of the application. This will be the name of the migrated application in Oracle Cloud Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the application.
+        /// Description of the application that you are migrating.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Unique identifier (OCID) of the application source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +65,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string SourceId { get; set; }
         
         /// <value>
-        /// Name of the application being migrated from the source.
+        /// Name of the application that you want to migrate from the source environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,29 +82,42 @@ namespace Oci.ApplicationmigrationService.Models
         public DiscoveryDetails DiscoveryDetails { get; set; }
         
         /// <value>
-        /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the CreateMigration operation.
+        /// The pre-existing database type to be used in this migration. Currently, Application migration only supports Oracle Cloud
+        /// Infrastrure databases and this option is currently available only for `JAVA_CLOUD_SERVICE` and `WEBLOGIC_CLOUD_SERVICE` target instance types.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "preCreatedTargetDatabaseType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TargetDatabaseTypes> PreCreatedTargetDatabaseType { get; set; }
+        
+        /// <value>
+        /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided
+        /// to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the 
+        /// CreateMigration operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceConfig")]
         public System.Collections.Generic.Dictionary<string, ConfigurationField> ServiceConfig { get; set; }
         
         /// <value>
-        /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the CreateMigration operation.
+        /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided
+        /// to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the 
+        /// CreateMigration operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "applicationConfig")]
         public System.Collections.Generic.Dictionary<string, ConfigurationField> ApplicationConfig { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

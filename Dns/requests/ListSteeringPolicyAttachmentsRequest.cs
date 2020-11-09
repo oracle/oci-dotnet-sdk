@@ -141,5 +141,12 @@ namespace Oci.DnsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        /// <value>
+        /// Specifies to operate only on resources that have a matching DNS scope.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scope")]
+        public System.Nullable<Scope> Scope { get; set; }
     }
 }

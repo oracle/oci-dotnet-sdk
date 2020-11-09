@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies configuration specific to the source environment.
+    /// Details about the Oracle Cloud Infrastructure - Classic account, the source environment from which you want to migrate the application.
     /// 
     /// </summary>
     public class InternalSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// The tradition cloud account name
+        /// The identity domain ID of your traditional Oracle Cloud Infrastructure - Classic account.
         /// </value>
         /// <remarks>
         /// Required

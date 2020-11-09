@@ -25,7 +25,8 @@ namespace Oci.DnsService.Models
     {
                 ///
         /// <value>
-        /// The type of the zone. Must be either `PRIMARY` or `SECONDARY`.
+        /// The type of the zone. Must be either `PRIMARY` or `SECONDARY`. `SECONDARY` is only supported for GLOBAL
+        /// zones.
         /// 
         /// </value>
         ///
@@ -37,12 +38,27 @@ namespace Oci.DnsService.Models
         };
 
         /// <value>
-        /// The type of the zone. Must be either `PRIMARY` or `SECONDARY`.
+        /// The type of the zone. Must be either `PRIMARY` or `SECONDARY`. `SECONDARY` is only supported for GLOBAL
+        /// zones.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "zoneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ZoneTypeEnum> ZoneType { get; set; }
+        
+        /// <value>
+        /// This value will be null for zones in the global DNS.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "viewId")]
+        public string ViewId { get; set; }
+        
+        /// <value>
+        /// The scope of the zone.
+        /// </value>
+        [JsonProperty(PropertyName = "scope")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Scope> Scope { get; set; }
         
         /// <value>
         /// External master servers for the zone. `externalMasters` becomes a

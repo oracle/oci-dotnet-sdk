@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies the credentials to access the source Oracle Cloud Infrastructure - Classic environment.
+    /// Credentials to access Oracle Cloud Infrastructure - Classic, which is the source environment from which you want to migrate the application.
     /// 
     /// </summary>
     public class InternalAuthorizationDetails : AuthorizationDetails

@@ -153,5 +153,18 @@ namespace Oci.DnsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        /// <value>
+        /// Specifies to operate only on resources that have a matching DNS scope.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scope")]
+        public System.Nullable<Scope> Scope { get; set; }
+        
+        /// <value>
+        /// The OCID of the view the resource is associated with.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "viewId")]
+        public string ViewId { get; set; }
     }
 }

@@ -35,10 +35,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// A valid Oracle Database version. To get a list of supported versions, use the {@link #listDbVersions(ListDbVersionsRequest) listDbVersions} operation.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DbVersion is required.")]
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
         

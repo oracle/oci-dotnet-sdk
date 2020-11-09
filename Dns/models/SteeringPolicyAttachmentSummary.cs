@@ -24,18 +24,30 @@ namespace Oci.DnsService.Models
         /// <value>
         /// The OCID of the attached steering policy.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SteeringPolicyId is required.")]
         [JsonProperty(PropertyName = "steeringPolicyId")]
         public string SteeringPolicyId { get; set; }
         
         /// <value>
         /// The OCID of the attached zone.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ZoneId is required.")]
         [JsonProperty(PropertyName = "zoneId")]
         public string ZoneId { get; set; }
         
         /// <value>
         /// The attached domain within the attached zone.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DomainName is required.")]
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; set; }
         
@@ -45,6 +57,10 @@ namespace Oci.DnsService.Models
         /// Avoid entering confidential information.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -54,24 +70,40 @@ namespace Oci.DnsService.Models
         /// policy.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Rtypes is required.")]
         [JsonProperty(PropertyName = "rtypes")]
         public System.Collections.Generic.List<string> Rtypes { get; set; }
         
         /// <value>
         /// The OCID of the compartment containing the steering policy attachment.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Self is required.")]
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
         
         /// <value>
         /// The OCID of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
@@ -80,6 +112,10 @@ namespace Oci.DnsService.Models
         /// <br/>
         /// **Example: ** 2016-07-22T17:23:59:60Z
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
                 ///
@@ -99,6 +135,10 @@ namespace Oci.DnsService.Models
         /// <value>
         /// The current state of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }

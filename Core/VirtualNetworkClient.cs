@@ -147,6 +147,50 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Add a CIDR to a VCN. The new CIDR must maintain the following rules -
+        /// &lt;br/&gt;
+        /// a. The CIDR provided is valid
+        /// b. The new CIDR range should not overlap with any existing CIDRs
+        /// c. The new CIDR should not exceed the max limit of CIDRs per VCNs
+        /// d. The new CIDR range does not overlap with any peered VCNs
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<AddVcnCidrResponse> AddVcnCidr(AddVcnCidrRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called addVcnCidr");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vcns/{vcnId}/actions/addCidr".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddVcnCidrResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddVcnCidr failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// initiate route advertisements for the Byoip Range prefix.
         /// the prefix must be in PROVISIONED state
         /// 
@@ -2310,10 +2354,17 @@ namespace Oci.CoreService
         /// Creates a new virtual cloud network (VCN). For more information, see
         /// [VCNs and Subnets](https://docs.cloud.oracle.com/Content/Network/Tasks/managingVCNs.htm).
         /// &lt;br/&gt;
-        /// For the VCN you must specify a single, contiguous IPv4 CIDR block. Oracle recommends using one of the
-        /// private IP address ranges specified in [RFC 1918](https://tools.ietf.org/html/rfc1918) (10.0.0.0/8,
-        /// 172.16/12, and 192.168/16). Example: 172.16.0.0/16. The CIDR block can range from /16 to /30, and it
-        /// must not overlap with your on-premises network. You can&#39;t change the size of the VCN after creation.
+        /// To create the VCN, you may specify a list of IPv4 CIDR blocks. The CIDRs must maintain
+        /// the following rules -
+        /// &lt;br/&gt;
+        /// a. The list of CIDRs provided are valid
+        /// b. There is no overlap between different CIDRs
+        /// c. The list of CIDRs does not exceed the max limit of CIDRs per VCN
+        /// &lt;br/&gt;
+        /// Oracle recommends using one of the private IP address ranges specified in [RFC 1918]
+        /// (https://tools.ietf.org/html/rfc1918) (10.0.0.0/8, 172.16/12, and 192.168/16). Example:
+        /// 172.16.0.0/16. The CIDR blocks can range from /16 to /30, and they must not overlap with
+        /// your on-premises network.
         /// &lt;br/&gt;
         /// For the purposes of access control, you must provide the OCID of the compartment where you want the VCN to
         /// reside. Consult an Oracle Cloud Infrastructure administrator in your organization if you&#39;re not sure which
@@ -5166,6 +5217,44 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Get the associated DNS resolver information with a vcn
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetVcnDnsResolverAssociationResponse> GetVcnDnsResolverAssociation(GetVcnDnsResolverAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getVcnDnsResolverAssociation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vcns/{vcnId}/dnsResolverAssociation".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetVcnDnsResolverAssociationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetVcnDnsResolverAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets the specified virtual circuit&#39;s information.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6814,6 +6903,52 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Update a CIDR from a VCN. The new CIDR must maintain the following rules -
+        /// &lt;br/&gt;
+        /// a. The CIDR provided is valid
+        /// b. The new CIDR range should not overlap with any existing CIDRs
+        /// c. The new CIDR should not exceed the max limit of CIDRs per VCNs
+        /// d. The new CIDR range does not overlap with any peered VCNs
+        /// e. The new CIDR should overlap with any existing route rule within a VCN
+        /// f. All existing subnet CIDRs are subsets of the updated CIDR ranges
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ModifyVcnCidrResponse> ModifyVcnCidr(ModifyVcnCidrRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called modifyVcnCidr");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vcns/{vcnId}/actions/modifyCidr".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ModifyVcnCidrResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ModifyVcnCidr failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Removes one or more security rules from the specified network security group.
         /// 
         /// </summary>
@@ -6887,6 +7022,46 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"RemovePublicIpPoolCapacity failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Remove a CIDR from a VCN. The CIDR being removed should not have
+        /// any resources allocated from it.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<RemoveVcnCidrResponse> RemoveVcnCidr(RemoveVcnCidrRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called removeVcnCidr");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vcns/{vcnId}/actions/removeCidr".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemoveVcnCidrResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveVcnCidr failed with error: {e.Message}");
                 throw;
             }
         }

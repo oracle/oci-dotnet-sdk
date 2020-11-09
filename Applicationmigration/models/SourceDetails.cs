@@ -16,7 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Base model for different source environment types
+    /// Specify one of the following values depending for the 'type' attribute based on the application that you want to migrate.
+    /// <br/>
+    /// Specify `OCIC` if you want to migrate Oracle Java Cloud Service, Oracle Analytics Cloud - Classic, Oracle Integration, and Oracle
+    /// SOA Cloud Service applications from Oracle Cloud Infrastructure - Classic.
+    /// <br/>
+    /// Specify `INTERNAL_COMPUTE` if you have a traditional Oracle Cloud Infrastructure - Classic account and you want to migrate Oracle
+    /// Process Cloud Service or Oracle Integration Cloud Service applications.
+    /// 
     /// </summary>
     [JsonConverter(typeof(SourceDetailsModelConverter))]
     public class SourceDetails 

@@ -26,6 +26,12 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
+        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
+        
+        /// <value>
         /// A strong password for the `SYS`, `SYSTEM`, and `PDB Admin` users to apply during standby creation.
         /// <br/>
         /// The password must contain no fewer than nine characters and include:

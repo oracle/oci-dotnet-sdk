@@ -54,6 +54,21 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "MemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "memorySizeInGBs")]
         public System.Nullable<int> MemorySizeInGBs { get; set; }
+                ///
+        ///
+        public enum IsSupportedForEnum {
+            [EnumMember(Value = "DBSYSTEM")]
+            Dbsystem,
+            [EnumMember(Value = "ANALYTICSCLUSTER")]
+            Analyticscluster
+        };
+
+        /// <value>
+        /// What service features the shape is supported for.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSupportedFor", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<IsSupportedForEnum> IsSupportedFor { get; set; }
         
     }
 }

@@ -20,15 +20,25 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The CIDR IP address block of the VCN.
+        /// Deprecated. Instead use 'cidrBlocks'. It is an error to set both cidrBlock and
+        /// cidrBlocks.
         /// Example: 10.0.0.0/16
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
+        /// <value>
+        /// List of IPv4 CIDR blocks associated with the VCN. The CIDRs must maintain the following
+        /// rules -
+        /// <br/>
+        /// a. The list of CIDRs provided are valid
+        /// b. There is no overlap between different CIDRs
+        /// c. The number of CIDRs should not exceed the max limit of CIDRs per VCN
+        /// d. It is an error to set both cidrBlock and cidrBlocks.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cidrBlocks")]
+        public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
         /// The OCID of the compartment to contain the VCN.

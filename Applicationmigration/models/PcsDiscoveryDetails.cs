@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies the credentials to access the source PCS instance
+    /// Credentials to access the Oracle Process Cloud Service application in the source environment. Application Migration connects to the
+    /// application in the source environment with the supplied credentials.
     /// 
     /// </summary>
     public class PcsDiscoveryDetails : DiscoveryDetails
     {
         
         /// <value>
-        /// The PCS instance admin user
+        /// Application administrator username to access the Oracle Process Cloud Service application in the source environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +34,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string ServiceInstanceUser { get; set; }
         
         /// <value>
-        /// The PCS instance admin password
+        /// Password for this user.
         /// </value>
         /// <remarks>
         /// Required

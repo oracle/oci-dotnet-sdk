@@ -94,6 +94,19 @@ namespace Oci.DnsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "rtype")]
         public string Rtype { get; set; }
         
+        /// <value>
+        /// Specifies to operate only on resources that have a matching DNS scope.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scope")]
+        public System.Nullable<Scope> Scope { get; set; }
+        
+        /// <value>
+        /// The OCID of the view the resource is associated with.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "viewId")]
+        public string ViewId { get; set; }
+        
         ///
         /// <value>
         /// The field by which to sort records.
