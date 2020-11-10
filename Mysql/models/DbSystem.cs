@@ -70,6 +70,16 @@ namespace Oci.MysqlService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// If the DB System has an Analytics Cluster attached.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAnalyticsClusterAttached")]
+        public System.Nullable<bool> IsAnalyticsClusterAttached { get; set; }
+        
+        [JsonProperty(PropertyName = "analyticsCluster")]
+        public AnalyticsClusterSummary AnalyticsCluster { get; set; }
+        
+        /// <value>
         /// The Availability Domain where the primary DB System should be located.
         /// 
         /// </value>

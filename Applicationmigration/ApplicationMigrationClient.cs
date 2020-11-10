@@ -66,7 +66,11 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Cancels the specified work request
+        /// Cancels the specified work request. When you cancel a work request, it causes the in-progress task to be canceled.
+        /// For example, if the create migration work request is in the accepted or in progress state for a long time, you can cancel the work request.
+        /// &lt;br/&gt;
+        /// When you cancel a work request, the state of the work request changes to cancelling, and then to the cancelled state.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -104,7 +108,9 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Moves a Migration into a different compartment.
+        /// Moves the specified migration into a different compartment within the same tenancy. For information about moving resources between compartments,
+        /// see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -142,7 +148,9 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Moves a Source into a different compartment.
+        /// Moves the specified source into a different compartment within the same tenancy. For information about moving resources
+        /// between compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -180,8 +188,27 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Creates an application migration in the specified compartment.
-        /// Specify the compartment using the compartment ID.
+        /// Creates a migration. A migration represents the end-to-end workflow of moving an application from a source environment to Oracle Cloud
+        /// Infrastructure. Each migration moves a single application to Oracle Cloud Infrastructure. For more information,
+        /// see [Manage Migrations](https://docs.cloud.oracle.com/iaas/application-migration/manage_migrations.htm).
+        /// &lt;br/&gt;
+        /// When you create a migration, provide the required information to let Application Migration access the source environment.
+        /// Application Migration uses this information to access the application in the source environment and discover application artifacts.
+        /// &lt;br/&gt;
+        /// All Oracle Cloud Infrastructure resources, including migrations, get an Oracle-assigned, unique ID called an Oracle Cloud Identifier (OCID).
+        /// When you create a resource, you can find its OCID in the response. You can also retrieve a resource&#39;s OCID by using a List API operation on
+        /// that resource type, or by viewing the resource in the Console. For more information, see Resource Identifiers.
+        /// &lt;br/&gt;
+        /// After you send your request, a migration is created in the compartment that contains the source. The new migration&#39;s lifecycle state 
+        /// will temporarily be &lt;code&gt;CREATING&lt;/code&gt; and the state of the migration will be &lt;code&gt;DISCOVERING_APPLICATION&lt;/code&gt;. During this phase, 
+        /// Application Migration sets the template for the &lt;code&gt;serviceConfig&lt;/code&gt; and &lt;code&gt;applicationConfig&lt;/code&gt; fields of the migration. 
+        /// When this operation is complete, the state of the migration changes to &lt;code&gt;MISSING_CONFIG_VALUES&lt;/code&gt;.
+        /// Next, you&#39;ll need to update the migration to provide configuration values. Before updating the 
+        /// migration, ensure that its state has changed to &lt;code&gt;MISSING_CONFIG_VALUES&lt;/code&gt;.
+        /// &lt;br/&gt;
+        /// To track the progress of this operation, you can monitor the status of the Create Migration and Discover Application work requests
+        /// by using the &lt;code&gt;{@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}&lt;/code&gt; REST API operation on the work request or by viewing the status of the work request in
+        /// the console.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -220,8 +247,23 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Creates a migration source in the specified compartment.
-        /// Specify the compartment using the compartment ID.
+        /// Creates a source in the specified compartment. In Application Migration, a source refers to the environment from which the application 
+        /// is being migrated. For more information, see [Manage Sources](https://docs.cloud.oracle.com/iaas/application-migration/manage_sources.htm).
+        /// &lt;br/&gt;
+        /// All Oracle Cloud Infrastructure resources, including sources, get an Oracle-assigned, unique ID called an Oracle Cloud Identifier (OCID).
+        /// When you create a resource, you can find its OCID in the response. You can also retrieve a resource&#39;s OCID by using a List API operation
+        /// on that resource type, or by viewing the resource in the Console.
+        /// &lt;br/&gt;
+        /// After you send your request, a source is created in the specified compartment. The new source&#39;s lifecycle state will temporarily be 
+        /// &lt;code&gt;CREATING&lt;/code&gt;. Application Migration connects to the source environment with the authentication credentials that you have provided. 
+        /// If the connection is established, the status of the source changes to &lt;code&gt;ACTIVE&lt;/code&gt; and Application Migration fetches the list of
+        /// applications that are available for migration in the source environment. 
+        /// &lt;br/&gt;
+        /// To track the progress of the operation, you can monitor the status of the Create Source work request by using the
+        /// &lt;code&gt;{@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}&lt;/code&gt; REST API operation on the work request or by viewing the status of the work request in the console.
+        /// &lt;br/&gt;
+        /// Ensure that the state of the source has changed to &lt;code&gt;ACTIVE&lt;/code&gt;, before you retrieve the list of applications from 
+        /// the source environment using the &lt;code&gt;{@link #listSourceApplications(ListSourceApplicationsRequest) listSourceApplications}&lt;/code&gt; REST API call.        
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -260,7 +302,12 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Deletes the specified Application object.
+        /// Deletes the specified migration. 
+        /// &lt;br/&gt;
+        /// If you have migrated the application or for any other reason if you no longer require a migration, then you can delete the
+        /// relevant migration. You can delete a migration, irrespective of its state. If any work request is being processed for the migration
+        /// that you want to delete, then the associated work requests are cancelled and then the migration is deleted.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -298,7 +345,12 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Deletes the specified Source object.
+        /// Deletes the specified source. 
+        /// &lt;br/&gt;
+        /// Before deleting a source, you must delete all the migrations associated with the source.
+        /// If you have migrated all the required applications in a source or for any other reason you no longer require a source, then you can
+        /// delete the relevant source.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -336,7 +388,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Gets an application migration using the ID.
+        /// Retrieves details of the specified migration.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -374,7 +426,8 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Gets a migration source using the source ID.
+        /// Retrieves details of the specified source. Specify the OCID of the source for which you want to retrieve details.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -412,7 +465,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Gets the details of a work request.
+        /// Gets the details of the specified work request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -450,7 +503,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Returns a list of migrations in a given compartment.
+        /// Retrieves details of all the migrations that are available in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -489,7 +542,9 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Returns a list of applications running in the source environment. This list is generated dynamically by interrogating the source and changes as applications are started or stopped in that environment.
+        /// Retrieves details of all the applications associated with the specified source.
+        /// This list is generated dynamically by interrogating the source and the list changes as applications are started or
+        /// stopped in the source environment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -528,7 +583,10 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Returns a list of migration sources in a specified compartment.
+        /// Retrieves details of all the sources that are available in the specified compartment and match the specified query criteria.
+        /// If you don&#39;t specify any query criteria, then details of all the sources are displayed.
+        /// To filter the retrieved results, you can pass one or more of the following query parameters, by appending them to the URI
+        /// as shown in the following example.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -567,7 +625,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Gets the errors for a work request.
+        /// Retrieves details of the errors encountered while executing an operation that is tracked by the specified work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -606,7 +664,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Gets the logs for a work request.
+        /// Retrieves logs for the specified work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -645,7 +703,7 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Lists the work requests in a compartment or for a specified resource.
+        /// Retrieves details of all the work requests and match the specified query criteria. To filter the retrieved results, you can pass one or more of the following query parameters, by appending them to the URI as shown in the following example.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -684,7 +742,17 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Validates target configuration and migrates a PaaS application running in a Source environment into the customers Oracle Cloud Infrastructure tenancy. This an optional action and only required if automatic start of migration was not selected when creating the migration.
+        /// Starts migrating the specified application to Oracle Cloud Infrastructure.
+        /// &lt;br/&gt;
+        /// Before sending this request, ensure that you have provided configuration details to update the migration and the state of the migration 
+        /// is &lt;code&gt;READY&lt;/code&gt;.
+        /// &lt;br/&gt;
+        /// After you send this request, the migration&#39;s state will temporarily be &lt;code&gt;MIGRATING&lt;/code&gt;. 
+        /// &lt;br/&gt;
+        /// To track the progress of the operation, you can monitor the status of the Migrate Application work request by using the
+        /// &lt;code&gt;{@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}&lt;/code&gt; REST API operation on the work request or by viewing the status of the work request in the console.
+        /// When this work request is processed successfully, Application Migration creates the required resources in the target environment
+        /// and the state of the migration changes to &lt;code&gt;MIGRATION_SUCCEEDED&lt;/code&gt;.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -723,7 +791,36 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Update the configuration for an application migration.
+        /// Updates the configuration details for the specified migration.
+        /// &lt;br/&gt;
+        /// When you create a migration, Application Migration sets the template for the &lt;code&gt;serviceConfig&lt;/code&gt; and &lt;code&gt;applicationConfig&lt;/code&gt;
+        /// attributes of the migration. 
+        /// When you update the migration, you must provide values for these fields to specify configuration information for the application in the
+        /// target environment.
+        /// &lt;br/&gt;
+        /// 
+        /// &lt;br/&gt;
+        /// Before updating the migration, complete the following tasks:
+        /// &lt;ol&gt;
+        /// &lt;li&gt;Identify the migration that you want to update and ensure that the migration is in the &lt;code&gt;MISSING_CONFIG_VALUES&lt;/code&gt; state.&lt;/li&gt;
+        /// &lt;li&gt;Get details of the migration using the &lt;code&gt;GetMigration&lt;/code&gt; command. This returns the  template for the &lt;code&gt;serviceConfig&lt;/code&gt;
+        /// and &lt;code&gt;applicationConfig&lt;/code&gt; attributes of the migration.&lt;/li&gt;
+        /// &lt;li&gt;You must fill out the required details for the &lt;code&gt;serviceConfig&lt;/code&gt; and &lt;code&gt;applicationConfig&lt;/code&gt; attributes.
+        /// The &lt;code&gt;isRequired&lt;/code&gt; attribute of a configuration property indicates whether it is mandatory to provide a value.&lt;/li&gt;
+        /// &lt;li&gt;You can provide values for the optional configuration properties or you can delete the optional properties for which you do not
+        /// provide values. Note that you cannot add any property that is not present in the template.&lt;/li&gt;
+        /// &lt;/ol&gt;
+        /// &lt;br/&gt;
+        /// To update the migration, pass the configuration values in the request body. The information that you must provide depends on the type 
+        /// of application that you are migrating. For reference information about configuration fields, see
+        /// [Provide Configuration Information](https://docs.cloud.oracle.com/iaas/application-migration/manage_migrations.htm#provide_configuration_details).
+        /// &lt;br/&gt;
+        /// To track the progress of the operation, you can monitor the status of the Update Migration work request by using the
+        /// &lt;code&gt;{@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}&lt;/code&gt; REST API operation on the work request or by viewing the status of the work request in the console.
+        /// &lt;br/&gt;
+        /// When the migration has been updated, the state of the migration changes to &lt;code&gt;READY&lt;/code&gt;. After updating the migration,
+        /// you can start the migration whenever you are ready.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -761,7 +858,11 @@ namespace Oci.ApplicationmigrationService
         }
 
         /// <summary>
-        /// Update source details.
+        /// You can update the authorization details to access the source environment from which you want to migrate applications to Oracle Cloud
+        /// Infrastructure. You can also update the description and tags of a source.
+        /// &lt;br/&gt;
+        /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

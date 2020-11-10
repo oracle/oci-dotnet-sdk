@@ -16,39 +16,40 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// An application running in the source environment that is available for export.
+    /// The properties that define an application, that is running in the source environment and which can be migrated to Oracle
+    /// Cloud Infrastructure.
     /// 
     /// </summary>
     public class SourceApplicationSummary 
     {
         
         /// <value>
-        /// The name of the application
+        /// The name of the application.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// The type of application
+        /// The type of the application.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MigrationTypes> Type { get; set; }
         
         /// <value>
-        /// Unique identifier (OCID) for the Source to which the application belongs
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source to which the application belongs.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
         
         /// <value>
-        /// The version of the application server
+        /// The version of the application.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// The current application running state
+        /// The current state of the application.
         /// </value>
         [JsonProperty(PropertyName = "state")]
         public string State { get; set; }

@@ -16,15 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// The Source object. Sources represent external locations from which
-    /// applications may be imported into an OCI tenancy.
+    /// The configuration details for creating a source.
+    /// <br/>
+    /// When you create a source, provide the required information to let Application Migration access the source environment. 
+    /// You must also assign a name and provide a description for the source. This helps you to identify the appropriate source environment when you 
+    /// have multiple sources defined.
+    /// <br/>
+    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateSourceDetails 
     {
         
         /// <value>
-        /// Unique idenfifier (OCID) for the compartment where the Source is located.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the source.
         /// 
         /// </value>
         /// <remarks>
@@ -35,13 +40,13 @@ namespace Oci.ApplicationmigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Human-readable name of the source.
+        /// Name of the source. This helps you to identify the appropriate source environment when you have multiple sources defined.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the source.
+        /// Description of the source. This helps you to identify the appropriate source environment when you have multiple sources defined.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -57,15 +62,15 @@ namespace Oci.ApplicationmigrationService.Models
         public AuthorizationDetails AuthorizationDetails { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

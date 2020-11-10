@@ -35,6 +35,26 @@ namespace Oci.MysqlService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
+        ///
+        /// <value>
+        /// Return shapes that are supported by the service feature.
+        /// 
+        /// </value>
+        ///
+        public enum IsSupportedForEnum {
+            [EnumMember(Value = "DBSYSTEM")]
+            Dbsystem,
+            [EnumMember(Value = "ANALYTICSCLUSTER")]
+            Analyticscluster
+        };
+
+        /// <value>
+        /// Return shapes that are supported by the service feature.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSupportedFor")]
+        public System.Collections.Generic.List<IsSupportedForEnum> IsSupportedFor { get; set; }
+        
         /// <value>
         /// The name of the Availability Domain.
         /// </value>

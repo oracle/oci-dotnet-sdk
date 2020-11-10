@@ -75,7 +75,7 @@ namespace Oci.ApplicationmigrationService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// The amount of work done relative to the total amount of work.
+        /// The percentage completion of the operation relative to the total amount of work that is tracked by this work request.
         /// </value>
         /// <remarks>
         /// Required

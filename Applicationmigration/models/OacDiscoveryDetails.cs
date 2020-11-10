@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies the credentials to access the source OAC instance
+    /// Details about the Oracle Analytics Cloud - Classic application in the source environment.
     /// 
     /// </summary>
     public class OacDiscoveryDetails : DiscoveryDetails
     {
         
         /// <value>
-        /// The OAC instance admin user
+        /// This field is currently not supported. You must enter a value, such as <code>unused</code>. However, the value that you enter is ignored.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string ServiceInstanceUser { get; set; }
         
         /// <value>
-        /// The OAC instance admin password
+        /// This field is currently not supported. You must enter a value, such as <code>unused</code>. However, the value that you enter is ignored.
         /// </value>
         /// <remarks>
         /// Required

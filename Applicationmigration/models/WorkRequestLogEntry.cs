@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// A log message from executing an operation that is tracked by a work request.
+    /// A log message about the execution of an operation that is tracked by a work request.
     /// </summary>
     public class WorkRequestLogEntry 
     {
         
         /// <value>
-        /// A human-readable log message.
+        /// A user-friendly log message.
         /// </value>
         /// <remarks>
         /// Required

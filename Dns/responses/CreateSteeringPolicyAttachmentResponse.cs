@@ -16,16 +16,6 @@ namespace Oci.DnsService.Responses
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to
-        /// contact Oracle about a particular request, please provide the request
-        /// ID.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
-        public string OpcRequestId { get; set; }
-
-
-        /// <value>
         /// The current version of the resource, ending with a
         /// representation-specific suffix. This value may be used in If-Match
         /// and If-None-Match headers for later requests of the same resource.
@@ -33,6 +23,24 @@ namespace Oci.DnsService.Responses
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ETag")]
         public string ETag { get; set; }
+
+
+        /// <value>
+        /// The full URI of the resource related to the request.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Location")]
+        public string Location { get; set; }
+
+
+        /// <value>
+        /// Unique Oracle-assigned identifier for the request. If you need to
+        /// contact Oracle about a particular request, please provide the request
+        /// ID.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
 
         /// <value>
         /// The returned SteeringPolicyAttachment instance.

@@ -66,6 +66,46 @@ namespace Oci.DnsService
         }
 
         /// <summary>
+        /// Moves a resolver into a different compartment along with its protected default view and any endpoints.
+        /// Zones in the default view are not moved.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ChangeResolverCompartmentResponse> ChangeResolverCompartment(ChangeResolverCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeResolverCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeResolverCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeResolverCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves a steering policy into a different compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -142,8 +182,49 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Moves a zone into a different compartment.
+        /// Moves a view into a different compartment. Protected views cannot have their compartment changed.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ChangeViewCompartmentResponse> ChangeViewCompartment(ChangeViewCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeViewCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views/{viewId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeViewCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeViewCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves a zone into a different compartment. Protected zones cannot have their compartment changed.
+        /// &lt;br/&gt;
         /// **Note:** All SteeringPolicyAttachment objects associated with this zone will also be moved into the provided compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -176,6 +257,45 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"ChangeZoneCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new resolver endpoint.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateResolverEndpointResponse> CreateResolverEndpoint(CreateResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createResolverEndpoint");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/endpoints".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateResolverEndpointResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateResolverEndpoint failed with error: {e.Message}");
                 throw;
             }
         }
@@ -305,9 +425,48 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Creates a new zone in the specified compartment. The &#x60;compartmentId&#x60;
-        /// query parameter is required if the &#x60;Content-Type&#x60; header for the
-        /// request is &#x60;text/dns&#x60;.
+        /// Creates a new view in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<CreateViewResponse> CreateView(CreateViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createView");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateViewResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateView failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new zone in the specified compartment. If the &#x60;Content-Type&#x60; header for the request is &#x60;text/dns&#x60;, the
+        /// &#x60;compartmentId&#x60; query parameter is required. Additionally, for &#x60;text/dns&#x60;, the &#x60;scope&#x60; and &#x60;viewId&#x60; query
+        /// parameters are required to create a private zone.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -418,6 +577,47 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"DeleteRRSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified resolver endpoint. Note that attempting to delete a resolver endpoint in the
+        /// DELETED lifecycle state will result in a 404 to be consistent with other operations of the API.
+        /// Resolver endpoints may not be deleted if they are referenced by a resolver rule.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteResolverEndpointResponse> DeleteResolverEndpoint(DeleteResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteResolverEndpoint");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/endpoints/{resolverEndpointName}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteResolverEndpointResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteResolverEndpoint failed with error: {e.Message}");
                 throw;
             }
         }
@@ -544,8 +744,52 @@ namespace Oci.DnsService
         }
 
         /// <summary>
+        /// Deletes the specified view. Note that attempting to delete a
+        /// view in the DELETED lifecycleState will result in a 404 to be
+        /// consistent with other operations of the API. Views can not be
+        /// deleted if they are referenced by non-deleted zones or resolvers.
+        /// Protected views cannot be deleted.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteViewResponse> DeleteView(DeleteViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteView");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views/{viewId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteViewResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteView failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes the specified zone and all its steering policy attachments.
-        /// A &#x60;204&#x60; response indicates that zone has been successfully deleted.
+        /// A &#x60;204&#x60; response indicates that the zone has been successfully deleted.
+        /// Protected zones cannot be deleted.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -660,6 +904,87 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"GetRRSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get information about a specific resolver. Note that attempting to get a
+        /// resolver in the DELETED lifecycleState will result in a 404 to be
+        /// consistent with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetResolverResponse> GetResolver(GetResolverRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getResolver");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetResolverResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetResolver failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get information about a specific resolver endpoint. Note that attempting to get a resolver endpoint
+        /// in the DELETED lifecycle state will result in a 404 to be consistent with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetResolverEndpointResponse> GetResolverEndpoint(GetResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getResolverEndpoint");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/endpoints/{resolverEndpointName}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetResolverEndpointResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetResolverEndpoint failed with error: {e.Message}");
                 throw;
             }
         }
@@ -782,6 +1107,47 @@ namespace Oci.DnsService
         }
 
         /// <summary>
+        /// Get information about a specific view. Note that attempting to get a
+        /// view in the DELETED lifecycleState will result in a 404 to be
+        /// consistent with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetViewResponse> GetView(GetViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getView");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views/{viewId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetViewResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetView failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets information about the specified zone, including its creation date,
         /// zone type, and serial.
         /// 
@@ -858,6 +1224,92 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"GetZoneRecords failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of all endpoints within a resolver. The collection can be filtered by name or lifecycle state.
+        /// It can be sorted on creation time or name both in ASC or DESC order. Note that when no lifecycleState
+        /// query parameter is provided that the collection does not include resolver endpoints in the DELETED
+        /// lifecycle state to be consistent with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListResolverEndpointsResponse> ListResolverEndpoints(ListResolverEndpointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listResolverEndpoints");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/endpoints".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListResolverEndpointsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListResolverEndpoints failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of all resolvers within a compartment. The collection can
+        /// be filtered by display name, id, or lifecycle state. It can be sorted
+        /// on creation time or displayName both in ASC or DESC order. Note that
+        /// when no lifecycleState query parameter is provided that the collection
+        /// does not include resolvers in the DELETED lifecycleState to be consistent
+        /// with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListResolversResponse> ListResolvers(ListResolversRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listResolvers");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListResolversResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListResolvers failed with error: {e.Message}");
                 throw;
             }
         }
@@ -980,8 +1432,52 @@ namespace Oci.DnsService
         }
 
         /// <summary>
+        /// Gets a list of all views within a compartment. The collection can
+        /// be filtered by display name, id, or lifecycle state. It can be sorted
+        /// on creation time or displayName both in ASC or DESC order. Note that
+        /// when no lifecycleState query parameter is provided that the collection
+        /// does not include views in the DELETED lifecycleState to be consistent
+        /// with other operations of the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListViewsResponse> ListViews(ListViewsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listViews");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListViewsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListViews failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of all zones in the specified compartment. The collection
-        /// can be filtered by name, time created, and zone type.
+        /// can be filtered by name, time created, scope, associated view, and zone type.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1224,6 +1720,84 @@ namespace Oci.DnsService
         }
 
         /// <summary>
+        /// Updates the specified resolver with your new information.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateResolverResponse> UpdateResolver(UpdateResolverRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateResolver");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateResolverResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateResolver failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the specified resolver endpoint with your new information.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateResolverEndpointResponse> UpdateResolverEndpoint(UpdateResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateResolverEndpoint");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/resolvers/{resolverId}/endpoints/{resolverEndpointName}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateResolverEndpointResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateResolverEndpoint failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the configuration of the specified steering policy.
         /// 
         /// </summary>
@@ -1336,6 +1910,45 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"UpdateTsigKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the specified view with your new information.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateViewResponse> UpdateView(UpdateViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateView");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/views/{viewId}".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateViewResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateView failed with error: {e.Message}");
                 throw;
             }
         }

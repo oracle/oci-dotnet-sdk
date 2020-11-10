@@ -28,18 +28,30 @@ namespace Oci.DnsService.Models
         /// hmac-sha512. For more information on these algorithms, see [RFC 4635](https://tools.ietf.org/html/rfc4635#section-2).
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Algorithm is required.")]
         [JsonProperty(PropertyName = "algorithm")]
         public string Algorithm { get; set; }
         
         /// <value>
         /// A globally unique domain name identifying the key for a given pair of hosts.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
         /// The OCID of the compartment containing the TSIG key.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -50,6 +62,10 @@ namespace Oci.DnsService.Models
         /// 
         /// **Example: ** {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FreeformTags is required.")]
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
@@ -60,18 +76,30 @@ namespace Oci.DnsService.Models
         /// 
         /// **Example: ** {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
         /// The OCID of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Self is required.")]
         [JsonProperty(PropertyName = "self")]
         public string Self { get; set; }
         
@@ -80,6 +108,10 @@ namespace Oci.DnsService.Models
         /// <br/>
         /// **Example: ** 2016-07-22T17:23:59:60Z
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
                 ///
@@ -97,6 +129,10 @@ namespace Oci.DnsService.Models
         /// <value>
         /// The current state of the resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }

@@ -32,7 +32,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// A human-readable error string.
+        /// A user-friendly error string.
         /// </value>
         /// <remarks>
         /// Required

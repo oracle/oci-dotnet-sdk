@@ -156,7 +156,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]
-            Terminated
+            Terminated,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>

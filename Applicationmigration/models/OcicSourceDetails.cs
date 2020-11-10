@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies configuration specific to the source environment.
+    /// Details about the Oracle Cloud Infrastructure Classic account, the source environment from which you want to migrate the application.
     /// 
     /// </summary>
     public class OcicSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// The Oracle Cloud Infrastructure - Classic region name (e.g. us2-z11 or uscom-central-1)
+        /// The Oracle Cloud Infrastructure - Classic region from which you want to migrate your applications. For example, uscom-east-1 or uscom-central-1.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,12 @@ namespace Oci.ApplicationmigrationService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// The compute account id
+        /// If you are using a Oracle Cloud Infrastructure - Classic account with Identity Cloud Service (IDCS), enter the service instance ID.
+        /// For example, if Compute-567890123 is the account name of your Oracle Cloud Infrastructure Classic Compute service entitlement,
+        /// then enter 567890123.
+        /// <br/>
+        /// If you are using a traditional Oracle Cloud Infrastructure - Classic account, enter your identity domain ID.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Base model for different application discovery requirements
+    /// Base model for different application discovery requirements.
     /// </summary>
     [JsonConverter(typeof(DiscoveryDetailsModelConverter))]
     public class DiscoveryDetails 

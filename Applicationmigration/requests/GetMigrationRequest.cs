@@ -17,7 +17,7 @@ namespace Oci.ApplicationmigrationService.Requests
     {
         
         /// <value>
-        /// The application OCID
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the migration.
         /// </value>
         /// <remarks>
         /// Required

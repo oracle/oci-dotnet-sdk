@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Specifies the credentials to access the source JCS instance
+    /// Credentials to access the Oracle Java Cloud Service application in the source environment. When you create and update a migration,
+    /// Application Migration connects to the application in the source environment with the supplied credentials and exports the domain
+    /// configuration.
     /// 
     /// </summary>
     public class JcsDiscoveryDetails : DiscoveryDetails
     {
         
         /// <value>
-        /// The JCS instance weblogic admin user
+        /// WebLogic administrator username for the Oracle Java Cloud Service application in the source environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +35,7 @@ namespace Oci.ApplicationmigrationService.Models
         public string WeblogicUser { get; set; }
         
         /// <value>
-        /// The JCS instance weblogic admin password
+        /// The password of the WebLogic administrator for the Oracle Java Cloud Service application in the source environment.
         /// </value>
         /// <remarks>
         /// Required

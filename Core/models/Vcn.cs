@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The CIDR IP address block of the VCN.
+        /// Deprecated. The first CIDR IP address from cidrBlocks.
         /// <br/>
         /// Example: 172.16.0.0/16
         /// </value>
@@ -41,6 +41,17 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
+        /// <value>
+        /// The list of IPv4 CIDR blocks the VCN will use.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CidrBlocks is required.")]
+        [JsonProperty(PropertyName = "cidrBlocks")]
+        public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
         /// The OCID of the compartment containing the VCN.
@@ -162,7 +173,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]
-            Terminated
+            Terminated,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>

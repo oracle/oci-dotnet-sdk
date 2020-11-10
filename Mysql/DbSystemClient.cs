@@ -66,6 +66,45 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Adds an Analytics Cluster to the DB System.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<AddAnalyticsClusterResponse> AddAnalyticsCluster(AddAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called addAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster/actions/add".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddAnalyticsCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates and launches a DB System.
         /// 
         /// </summary>
@@ -100,6 +139,46 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"CreateDbSystem failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the Analytics Cluster including terminating, detaching, removing, finalizing and
+        /// otherwise deleting all related resources.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<DeleteAnalyticsClusterResponse> DeleteAnalyticsCluster(DeleteAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("Delete");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteAnalyticsCluster failed with error: {e.Message}");
                 throw;
             }
         }
@@ -140,6 +219,123 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"DeleteDbSystem failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Sends a request to estimate the memory footprints of user tables when loaded to Analytics Cluster memory.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GenerateAnalyticsClusterMemoryEstimateResponse> GenerateAnalyticsClusterMemoryEstimate(GenerateAnalyticsClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called generateAnalyticsClusterMemoryEstimate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsClusterMemoryEstimate/actions/generate".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GenerateAnalyticsClusterMemoryEstimateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateAnalyticsClusterMemoryEstimate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about the Analytics Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetAnalyticsClusterResponse> GetAnalyticsCluster(GetAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetAnalyticsCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the most recent Analytics Cluster memory estimate that can be used to determine a suitable
+        /// Analytics Cluster size.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<GetAnalyticsClusterMemoryEstimateResponse> GetAnalyticsClusterMemoryEstimate(GetAnalyticsClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getAnalyticsClusterMemoryEstimate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsClusterMemoryEstimate".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetAnalyticsClusterMemoryEstimateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetAnalyticsClusterMemoryEstimate failed with error: {e.Message}");
                 throw;
             }
         }
@@ -223,6 +419,44 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Restarts the Analytics Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<RestartAnalyticsClusterResponse> RestartAnalyticsCluster(RestartAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called restartAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster/actions/restart".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RestartAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RestartAnalyticsCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Restarts the specified DB System.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -256,6 +490,44 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"RestartDbSystem failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Starts the Analytics Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<StartAnalyticsClusterResponse> StartAnalyticsCluster(StartAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called startAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster/actions/start".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StartAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StartAnalyticsCluster failed with error: {e.Message}");
                 throw;
             }
         }
@@ -299,6 +571,44 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Stops the Analytics Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<StopAnalyticsClusterResponse> StopAnalyticsCluster(StopAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called stopAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster/actions/stop".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StopAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StopAnalyticsCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Stops the specified DB System.
         /// &lt;br/&gt;
         /// A stopped DB System is not billed.
@@ -335,6 +645,45 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"StopDbSystem failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the Analytics Cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<UpdateAnalyticsClusterResponse> UpdateAnalyticsCluster(UpdateAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateAnalyticsCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/analyticsCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("Put");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateAnalyticsClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateAnalyticsCluster failed with error: {e.Message}");
                 throw;
             }
         }

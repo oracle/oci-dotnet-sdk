@@ -16,7 +16,9 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Base model for different source authorization methods
+    /// Details of the source environment from which you want to migrate applications to Oracle Cloud Infrastructure. It also contains access
+    /// credentials.
+    /// 
     /// </summary>
     [JsonConverter(typeof(AuthorizationDetailsModelConverter))]
     public class AuthorizationDetails 

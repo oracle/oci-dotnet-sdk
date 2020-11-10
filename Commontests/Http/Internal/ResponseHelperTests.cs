@@ -10,8 +10,10 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.Serialization;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Oci.Common.Model;
 using Xunit;
 
@@ -188,6 +190,40 @@ namespace Oci.Common.Http.Internal
             }
         }
 
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void TestEnumRefInHeader()
+        {
+            var content = new StringContent("");
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var dummyResponse = new HttpResponseMessage()
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = content
+            };
+            dummyResponse.Headers.Add("lifecycleState", "CREATING");
+            var result = Converter.FromHttpResponseMessage<TestEnumRef>(dummyResponse);
+            Assert.Equal(EnumRef.LifecycleStateEnum.Creating, result.LifecycleState);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void TestTopLevelEnumInHeader()
+        {
+            var content = new StringContent("");
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var dummyResponse = new HttpResponseMessage()
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = content
+            };
+            dummyResponse.Headers.Add("option", "OPTION1");
+            var result = Converter.FromHttpResponseMessage<TestTopLevelEnum>(dummyResponse);
+            Assert.Equal(TopLevelEnum.Option1, result.Option);
+        }
+
         private class TestObject
         {
             [JsonProperty("testName")]
@@ -213,6 +249,39 @@ namespace Oci.Common.Http.Internal
         {
             [JsonProperty("dictionaryValue")]
             public Dictionary<string, Dictionary<string, Object>> DictionaryValue { get; set; }
+        }
+
+        public class EnumRef
+        {
+            public enum LifecycleStateEnum
+            {
+                [EnumMember(Value = "CREATING")]
+                Creating,
+                [EnumMember(Value = "ACTIVE")]
+                Active,
+                [EnumMember(Value = "FAILED")]
+                Failed
+            }
+        }
+
+        public class TestEnumRef : Oci.Common.IOciResponse
+        {
+            [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "lifecycleState")]
+            public System.Nullable<EnumRef.LifecycleStateEnum> LifecycleState { get; set; }
+        }
+
+        public enum TopLevelEnum
+        {
+            [EnumMember(Value = "OPTION1")]
+            Option1,
+            [EnumMember(Value = "OPTION2")]
+            Option2
+        }
+
+        public class TestTopLevelEnum : Oci.Common.IOciResponse
+        {
+            [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "option")]
+            public System.Nullable<TopLevelEnum> Option { get; set; }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Oci.ApplicationmigrationService.Requests
     {
         
         /// <value>
-        /// The source OCID
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the source.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.ApplicationmigrationService.Requests
         public string SourceId { get; set; }
         
         /// <value>
-        /// The compartment OCID on which to filter.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a compartment. Retrieves details of objects in the specified compartment.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Provides the updated compartment OCID
+    /// Moves the resource to the specified compartment.
     /// </summary>
     public class ChangeCompartmentDetails 
     {
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
-        /// into which the resource should be moved.
+        /// to move the resource to.
         /// 
         /// </value>
         /// <remarks>

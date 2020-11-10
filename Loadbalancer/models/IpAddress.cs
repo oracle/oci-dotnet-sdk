@@ -44,5 +44,8 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "isPublic")]
         public System.Nullable<bool> IsPublic { get; set; }
         
+        [JsonProperty(PropertyName = "reservedIp")]
+        public ReservedIP ReservedIp { get; set; }
+        
     }
 }

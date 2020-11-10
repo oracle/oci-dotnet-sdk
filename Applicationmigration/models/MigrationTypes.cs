@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.ApplicationmigrationService.Models
 {
   /// <summary>
-  /// The type of application service to be migrated.
+  /// The type of application to be migrated.
   /// </summary>
   public enum MigrationTypes {
       [EnumMember(Value = "JCS")]

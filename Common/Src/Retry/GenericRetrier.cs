@@ -4,7 +4,6 @@
  */
 
 using System;
-using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -63,7 +62,7 @@ namespace Oci.Common.Retry
                     // A new copy of the request message needs to be created because it is disposed each time it is sent, and
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
-                    var newRequestMessage = await CloneHttpRequestMessage(requestMessage).ConfigureAwait(false);
+                    var newRequestMessage = CloneHttpRequestMessage(requestMessage);
                     return await asyncHttpCall.Invoke(newRequestMessage, cancellationToken).ConfigureAwait(false);
                 });
         }
@@ -99,27 +98,26 @@ namespace Oci.Common.Retry
         /// <summary>Make a copy of HttpRequestMessage.</summary>
         /// <param name="request">The source HttpRequestMessage</param>
         /// <returns>A cloned copy of HttpRequestMessage with exactly the same headers and content.</returns>
-        private async Task<HttpRequestMessage> CloneHttpRequestMessage(HttpRequestMessage request)
+        private HttpRequestMessage CloneHttpRequestMessage(HttpRequestMessage request)
         {
             var clone = new HttpRequestMessage(request.Method, request.RequestUri);
+
             if (request.Content != null)
             {
-                var ms = new MemoryStream();
-                await request.Content.CopyToAsync(ms).ConfigureAwait(false);
-                ms.Position = 0;
-                clone.Content = new StreamContent(ms);
-                if (request.Content.Headers != null)
-                {
-                    foreach (var header in request.Content.Headers)
-                    {
-                        clone.Content.Headers.Add(header.Key, header.Value);
-                    }
-                }
+                clone.Content = request.Content;
             }
 
             foreach (var header in request.Headers)
             {
                 clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
+            }
+
+            if (request.Properties != null)
+            {
+                foreach (var kvp in request.Properties)
+                {
+                    clone.Properties.Add(kvp.Key, kvp.Value);
+                }
             }
 
             return clone;
