@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Field must be a valid enterprise logging out-of-the-box field.
+        /// Field must be a valid logging-analytics out-of-the-box field.
         /// 
         /// </value>
         /// <remarks>

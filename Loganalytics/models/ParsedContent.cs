@@ -40,13 +40,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.List<ParsedField> ParsedFieldValues { get; set; }
         
         /// <value>
-        /// Log Content
+        /// Sample log entries picked up from the given file for validation
         /// </value>
         [JsonProperty(PropertyName = "logContent")]
         public string LogContent { get; set; }
         
         /// <value>
-        /// Sample Size
+        /// Sample Size taken for validation
         /// </value>
         [JsonProperty(PropertyName = "sampleSize")]
         public System.Nullable<int> SampleSize { get; set; }

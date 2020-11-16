@@ -13,20 +13,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoganalyticsService.Models
+namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Upload is a container that can be used to optionally put all the relevant and related agent upload based log files.
+    /// The list of resource types that support bulk editing of tags.
     /// 
     /// </summary>
-    public class AgentUpload 
+    public class BulkEditTagsResourceTypeCollection 
     {
         
         /// <value>
-        /// The name of the upload container
+        /// The collection of resource types that support bulk editing of tags.
         /// </value>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<BulkEditTagsResourceType> Items { get; set; }
         
     }
 }

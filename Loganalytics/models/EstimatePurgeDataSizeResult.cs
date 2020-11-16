@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// purge data size in bytes
+        /// This is the size of data to be purged in bytes
         /// </value>
         /// <remarks>
         /// Required

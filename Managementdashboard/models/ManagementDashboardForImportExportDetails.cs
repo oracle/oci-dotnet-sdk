@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Properties for a dashboard, including dashboard id, and saved searches, for import purposes.
+    /// Properties of a dashboard, including dashboard ID and saved searches, for import purposes.
     /// </summary>
     public class ManagementDashboardForImportExportDetails 
     {
         
         /// <value>
-        /// Dashboard Id. Must be providied if OOB, otherwise must not be provided.
+        /// ID of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DashboardId { get; set; }
         
         /// <value>
-        /// Provider Id.
+        /// ID of the service (for example log-analytics) that owns the dashboard. Each service has a unique ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderId { get; set; }
         
         /// <value>
-        /// Provider name.
+        /// Name of the service (for example, Logging Analytics) that owns the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderName { get; set; }
         
         /// <value>
-        /// Provider version.
+        /// Version of the service that owns the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderVersion { get; set; }
         
         /// <value>
-        /// Dashboard tiles array
+        /// Array of dashboard tiles.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<ManagementDashboardTileDetails> Tiles { get; set; }
         
         /// <value>
-        /// Display name for dashboard.
+        /// Display name of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Dashboard's description.
+        /// Description of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +92,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that owns the dashboard.
+        /// OCID of the compartment in which the dashboard resides.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,7 +102,7 @@ namespace Oci.ManagementdashboardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\"). OOB (Out of the Box) dashboards are only provided by Oracle.  They cannot be modified by non-Oracle.
+        /// Determines whether the dashboard is an Out-of-the-Box (OOB) dashboard. Note that OOB dashboards are only provided by Oracle and cannot be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -112,7 +112,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsOobDashboard { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  When false, dashboard is not shown in dashboard home.
+        /// Determines whether the dashboard will be displayed in Dashboard Home.
         /// </value>
         /// <remarks>
         /// Required
@@ -132,7 +132,7 @@ namespace Oci.ManagementdashboardService.Models
         public string MetadataVersion { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  When false, dashboard is not automatically refreshed in intervals.
+        /// Determines whether the description of the dashboard is displayed.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsShowDescription { get; set; }
         
         /// <value>
-        /// screen image.
+        /// Screen image of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -152,7 +152,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ScreenImage { get; set; }
         
         /// <value>
-        /// Json for internationalization.
+        /// JSON that contains internationalization options.
         /// </value>
         /// <remarks>
         /// Required
@@ -162,7 +162,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// Json to contain options for UI.
+        /// JSON that contains user interface options.
         /// </value>
         /// <remarks>
         /// Required
@@ -172,7 +172,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of Json to contain options for source of data.
+        /// Array of JSON that contain data source options.
         /// </value>
         /// <remarks>
         /// Required
@@ -182,7 +182,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
         
         /// <value>
-        /// NORMAL means single dashboard, SET means dashboard set.
+        /// Type of dashboard. NORMAL denotes a single dashboard and SET denotes a dashboard set.
         /// </value>
         /// <remarks>
         /// Required
@@ -192,7 +192,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").
+        /// Determines whether the dashboard is set as favorite.
         /// </value>
         /// <remarks>
         /// Required
@@ -202,7 +202,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsFavorite { get; set; }
         
         /// <value>
-        /// Array of saved searches.
+        /// Array of saved searches in the dashboard.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// List of logs for the specified work request if any.
+    /// This is a list of logs for the work request.
     /// 
     /// </summary>
     public class WorkRequestLogCollection 
     {
         
         /// <value>
-        /// List of logs for the specified work request if any.
+        /// This is an array of logs for the work request.
         /// 
         /// </value>
         /// <remarks>

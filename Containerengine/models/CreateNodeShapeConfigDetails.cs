@@ -29,5 +29,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
         
+        /// <value>
+        /// The total amount of memory available to each node, in gigabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryInGBs")]
+        public System.Nullable<float> MemoryInGBs { get; set; }
+        
     }
 }

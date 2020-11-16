@@ -22,7 +22,7 @@ namespace Oci.ManagementdashboardService.Models
     {
         
         /// <value>
-        /// Array of dashboards
+        /// Array of dashboards.
         /// </value>
         /// <remarks>
         /// Required

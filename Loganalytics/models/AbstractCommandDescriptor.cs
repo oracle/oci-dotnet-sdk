@@ -51,8 +51,8 @@ namespace Oci.LoganalyticsService.Models
             Cluster,
             [EnumMember(Value = "CLUSTER_DETAILS")]
             ClusterDetails,
-            [EnumMember(Value = "CUSLTER_SPLIT")]
-            CuslterSplit,
+            [EnumMember(Value = "CLUSTER_SPLIT")]
+            ClusterSplit,
             [EnumMember(Value = "EVAL")]
             Eval,
             [EnumMember(Value = "EXTRACT")]

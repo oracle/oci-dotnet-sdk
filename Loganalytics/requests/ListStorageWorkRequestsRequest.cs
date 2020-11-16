@@ -27,7 +27,7 @@ namespace Oci.LoganalyticsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -77,7 +77,8 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending. If no value is specified timeAccepted is default.
+        /// This is the query parameter of which field to sort by. Only one sort order may be provided. Default order for timeAccepted
+        /// is descending. If no value is specified timeAccepted is default.
         /// 
         /// </value>
         ///
@@ -91,44 +92,45 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending. If no value is specified timeAccepted is default.
+        /// This is the query parameter of which field to sort by. Only one sort order may be provided. Default order for timeAccepted
+        /// is descending. If no value is specified timeAccepted is default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// storage operation type
+        /// The is the work request type query parameter
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
         public System.Nullable<StorageOperationType> OperationType { get; set; }
         
         /// <value>
-        /// storage operation status
+        /// The is the work request status query parameter
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
         
         /// <value>
-        /// storage operation started time
+        /// The is the query parameter of when the processing of work request was started
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// storage operation time finished
+        /// The is the query parameter of when the processing of work request was finished
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
         /// <value>
-        /// policy name e.g. purge policy
+        /// This is the query parameter of purge policy name
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "policyName")]
         public string PolicyName { get; set; }
         
         /// <value>
-        /// policy ID e.g. purge policy ID
+        /// This is the query parameter of purge policy ID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "policyId")]
         public string PolicyId { get; set; }

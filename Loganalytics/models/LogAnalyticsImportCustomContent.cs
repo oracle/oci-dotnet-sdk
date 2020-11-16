@@ -39,9 +39,6 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "fieldNames")]
         public System.Collections.Generic.List<string> FieldNames { get; set; }
         
-        /// <value>
-        /// changeList
-        /// </value>
         [JsonProperty(PropertyName = "changeList")]
         public LogAnalyticsImportCustomChangeList ChangeList { get; set; }
         

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// List of work request summaries.
+    /// This is a list of work request summaries.
     /// 
     /// </summary>
     public class StorageWorkRequestCollection 
     {
         
         /// <value>
-        /// List of work request summaries.
+        /// This is an array of work request summaries.
         /// 
         /// </value>
         /// <remarks>

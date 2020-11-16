@@ -63,7 +63,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Move the dashboard from existing compartment to a new compartment.
+        /// Moves the dashboard from the existing compartment to a new compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -102,7 +102,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Move the saved search from existing compartment to a new compartment.
+        /// Moves the saved search from the existing compartment to a new compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -219,7 +219,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Deletes a Dashboard by id.
+        /// Deletes a Dashboard by ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -257,7 +257,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Deletes a saved search by Id
+        /// Deletes a saved search by ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -333,7 +333,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Get a Dashboard and its saved searches by id.  Deleted or unauthorized saved searches are marked by tile&#39;s state property.
+        /// Gets a dashboard and its saved searches by ID.  Deleted or unauthorized saved searches are marked by tile&#39;s state property.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -371,7 +371,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Get a saved search by Id.
+        /// Gets a saved search by ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -409,7 +409,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Import an array of dashboards and their saved searches.
+        /// Imports an array of dashboards and their saved searches.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -448,7 +448,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Gets list of dashboards and their saved searches for compartment with pagination.  Returned properties are a summary.
+        /// Gets the list of dashboards and their saved searches in a compartment with pagination.  Returned properties are the summary.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -486,7 +486,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Gets list of saved searches with pagination.  Returned properties are a summary.
+        /// Gets the list of saved searches in a compartment with pagination.  Returned properties are the summary.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -524,7 +524,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Updates an existing dashboard identified by id path parameter.  Limit for number of saved searches in a dashboard is 20.
+        /// Updates an existing dashboard identified by ID path parameter.  CompartmentId can be modified only by the changeCompartment API. Limit for number of saved searches in a dashboard is 20.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -563,7 +563,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Update an existing saved search.  Id cannot be updated.
+        /// Updates an existing saved search identified by ID path parameter.  CompartmentId can be modified only by the changeCompartment API.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

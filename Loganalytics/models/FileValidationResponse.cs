@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Input File
+        /// Input File Name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         public string InputFile { get; set; }
         
         /// <value>
-        /// Object Location
+        /// Object Location where file content is available.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         public string ObjectLocation { get; set; }
         
         /// <value>
-        /// Files
+        /// List of files inside the given archive file and their corresponding status information.
         /// </value>
         [JsonProperty(PropertyName = "files")]
         public System.Collections.Generic.List<UploadFileStatus> Files { get; set; }

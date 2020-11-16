@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.LoganalyticsService.Models
 {
-    
+    /// <summary>
+    /// log header values
+    /// </summary>
     public class ExtractLogHeaderResults 
     {
         

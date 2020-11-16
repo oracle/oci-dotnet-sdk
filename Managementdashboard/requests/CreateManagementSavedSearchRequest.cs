@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// Json metadata for the saved search.
+        /// JSON metadata for the saved search.
         /// </value>
         /// <remarks>
         /// Required

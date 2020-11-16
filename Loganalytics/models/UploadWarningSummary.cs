@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         public string Reference { get; set; }
         
         /// <value>
-        /// Status
+        /// Status of the upload. Ex - Failed
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }

@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Query to update.
+        /// Query to apply edits to.
         /// </value>
         /// <remarks>
         /// Required

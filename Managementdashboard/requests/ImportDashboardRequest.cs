@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// Json metadata for dashboards and their saved searches to import.
+        /// JSON metadata for importing dashboards and their saved searches.
         /// </value>
         /// <remarks>
         /// Required

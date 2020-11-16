@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.LoganalyticsService.Models
 {
-    
+    /// <summary>
+    /// results of source validation
+    /// </summary>
     public class SourceValidateResults 
     {
         

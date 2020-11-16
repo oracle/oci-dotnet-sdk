@@ -60,7 +60,7 @@ namespace Oci.ContainerengineService.Requests
         /// A work request status to filter on. Can have multiple parameters of this name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
-        public System.Collections.Generic.List<WorkRequestStatus> Status { get; set; }
+        public System.Collections.Generic.List<string> Status { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.

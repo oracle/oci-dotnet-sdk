@@ -37,7 +37,7 @@ namespace Oci.LoganalyticsService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>

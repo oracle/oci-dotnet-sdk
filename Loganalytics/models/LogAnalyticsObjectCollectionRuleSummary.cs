@@ -82,9 +82,7 @@ namespace Oci.LoganalyticsService.Models
         
         /// <value>
         /// The type of collection.
-        /// Accepted values are: LIVE.
-        /// Collection type LIVE indicates to enable log collection from the time of this rule creation,
-        /// and continue until the rule exists.
+        /// Supported collection types: LIVE, HISTORIC, HISTORIC_LIVE
         /// 
         /// </value>
         /// <remarks>

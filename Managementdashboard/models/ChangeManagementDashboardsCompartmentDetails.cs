@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Compartment to move the dashboard to.
+    /// Compartment to which the dashboard is being moved.
     /// </summary>
     public class ChangeManagementDashboardsCompartmentDetails 
     {
         
         /// <value>
-        /// Compartment Identifier
+        /// OCID of the compartment to which the dashboard is being moved.
         /// </value>
         /// <remarks>
         /// Required

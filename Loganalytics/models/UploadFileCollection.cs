@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of UploadFileSummary objects.
+        /// List of UploadFileSummary objects.
         /// </value>
         /// <remarks>
         /// Required

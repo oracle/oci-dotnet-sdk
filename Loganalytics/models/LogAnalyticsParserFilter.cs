@@ -25,7 +25,7 @@ namespace Oci.LoganalyticsService.Models
         /// id
         /// </value>
         [JsonProperty(PropertyName = "id")]
-        public System.Object Id { get; set; }
+        public string Id { get; set; }
         
         [JsonProperty(PropertyName = "parser")]
         public LogAnalyticsParser Parser { get; set; }

@@ -16,61 +16,61 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Properties for a dashboard.  Dashboard id must not be provided.
+    /// Properties of a dashboard.  Dashboard ID must not be provided.
     /// </summary>
     public class UpdateManagementDashboardDetails 
     {
         
         /// <value>
-        /// Provider Id.
+        /// ID of the service (for example, log-analytics) that owns the dashboard. Each service has a unique ID.
         /// </value>
         [JsonProperty(PropertyName = "providerId")]
         public string ProviderId { get; set; }
         
         /// <value>
-        /// Provider name.
+        /// Name of the service (for example, Logging Analytics) that owns the dashboard.
         /// </value>
         [JsonProperty(PropertyName = "providerName")]
         public string ProviderName { get; set; }
         
         /// <value>
-        /// Provider version.
+        /// Version of the service that owns the dashboard.
         /// </value>
         [JsonProperty(PropertyName = "providerVersion")]
         public string ProviderVersion { get; set; }
         
         /// <value>
-        /// Dashboard tiles array.
+        /// Array of dashboard tiles.
         /// </value>
         [JsonProperty(PropertyName = "tiles")]
         public System.Collections.Generic.List<ManagementDashboardTileDetails> Tiles { get; set; }
         
         /// <value>
-        /// Display name for dashboard.
+        /// Display name of the dashboard.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Dashboard's description.
+        /// Description of the dashboard.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that owns the dashboard.
+        /// OCID of the compartment in which the dashboard resides.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  OOB (Out of the Box) dashboards are only provided by Oracle.  They cannot be modified by non-Oracle.
+        /// Determines whether the dashboard is an Out-of-the-Box (OOB) dashboard. Note that OOB dashboards are only provided by Oracle and cannot be modified.
         /// </value>
         [JsonProperty(PropertyName = "isOobDashboard")]
         public System.Nullable<bool> IsOobDashboard { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  When false, dashboard is not shown in dashboard home.
+        /// Determines whether the dashboard will be displayed in Dashboard Home.
         /// </value>
         [JsonProperty(PropertyName = "isShowInHome")]
         public System.Nullable<bool> IsShowInHome { get; set; }
@@ -82,43 +82,43 @@ namespace Oci.ManagementdashboardService.Models
         public string MetadataVersion { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  Whether to show the dashboard description.
+        /// Determines whether the description of the dashboard is displayed.
         /// </value>
         [JsonProperty(PropertyName = "isShowDescription")]
         public System.Nullable<bool> IsShowDescription { get; set; }
         
         /// <value>
-        /// Screen image.
+        /// Screen image of the dashboard.
         /// </value>
         [JsonProperty(PropertyName = "screenImage")]
         public string ScreenImage { get; set; }
         
         /// <value>
-        /// Json for internationalization.
+        /// JSON that contains internationalization options.
         /// </value>
         [JsonProperty(PropertyName = "nls")]
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// Json to contain options for UI.
+        /// JSON that contains user interface options.
         /// </value>
         [JsonProperty(PropertyName = "uiConfig")]
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of Json to contain options for source of data.
+        /// Array of JSON that contain data source options.
         /// </value>
         [JsonProperty(PropertyName = "dataConfig")]
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
         
         /// <value>
-        /// NORMAL meaning single dashboard, or SET meaning dashboard set.
+        /// Type of dashboard. NORMAL denotes a single dashboard and SET denotes a dashboard set.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").
+        /// Determines whether the dashboard is set as favorite.
         /// </value>
         [JsonProperty(PropertyName = "isFavorite")]
         public System.Nullable<bool> IsFavorite { get; set; }

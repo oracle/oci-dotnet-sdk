@@ -39,7 +39,13 @@ namespace Oci.IdentityService.Models
         ///
         public enum OperationTypeEnum {
             [EnumMember(Value = "DELETE_TAG_DEFINITION")]
-            DeleteTagDefinition
+            DeleteTagDefinition,
+            [EnumMember(Value = "DELETE_NON_EMPTY_TAG_NAMESPACE")]
+            DeleteNonEmptyTagNamespace,
+            [EnumMember(Value = "BULK_DELETE_TAG_DEFINITION")]
+            BulkDeleteTagDefinition,
+            [EnumMember(Value = "BULK_EDIT_OF_TAGS")]
+            BulkEditOfTags
         };
 
         /// <value>
@@ -72,6 +78,8 @@ namespace Oci.IdentityService.Models
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
             Succeeded,
+            [EnumMember(Value = "PARTIALLY_SUCCEEDED")]
+            PartiallySucceeded,
             [EnumMember(Value = "CANCELING")]
             Canceling,
             [EnumMember(Value = "CANCELED")]

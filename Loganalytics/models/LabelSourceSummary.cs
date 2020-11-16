@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.LoganalyticsService.Models
 {
-    
+    /// <summary>
+    /// source summary
+    /// </summary>
     public class LabelSourceSummary 
     {
         

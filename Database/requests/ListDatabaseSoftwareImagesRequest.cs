@@ -99,5 +99,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "imageShapeFamily")]
         public System.Nullable<DatabaseSoftwareImageSummary.ImageShapeFamilyEnum> ImageShapeFamily { get; set; }
+        
+        /// <value>
+        /// If provided, filters the results to the set of database versions which are supported for Upgrade.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isUpgradeSupported")]
+        public System.Nullable<bool> IsUpgradeSupported { get; set; }
     }
 }

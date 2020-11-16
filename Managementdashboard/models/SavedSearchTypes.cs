@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.ManagementdashboardService.Models
 {
   /// <summary>
-  /// How to show the saved search.
+  /// Determines how the saved search is displayed in a dashboard.
   /// </summary>
   public enum SavedSearchTypes {
       [EnumMember(Value = "SEARCH_SHOW_IN_DASHBOARD")]

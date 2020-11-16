@@ -56,7 +56,9 @@ namespace Oci.IdentityService.Models
             [EnumMember(Value = "RELATED")]
             Related,
             [EnumMember(Value = "IN_PROGRESS")]
-            InProgress
+            InProgress,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>

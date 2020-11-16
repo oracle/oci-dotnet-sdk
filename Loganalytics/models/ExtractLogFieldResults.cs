@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.LoganalyticsService.Models
 {
-    
+    /// <summary>
+    /// log field path values
+    /// </summary>
     public class ExtractLogFieldResults 
     {
         

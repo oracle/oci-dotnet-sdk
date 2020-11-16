@@ -147,8 +147,8 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Assembles tag defaults in the specified compartment and any parent compartments to determine
-        /// the tags to apply. Tag defaults from parent compartments do not override tag defaults 
-        /// referencing the same tag in a compartment lower down the hierarchy. This set of tag defaults 
+        /// the tags to apply. Tag defaults from parent compartments do not override tag defaults
+        /// referencing the same tag in a compartment lower down the hierarchy. This set of tag defaults
         /// includes all tag defaults from the current compartment back to the root compartment.
         /// 
         /// </summary>
@@ -232,18 +232,18 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified tag key definitions. This operation triggers a process that removes the
-        /// tags from all resources in your tenancy. 
+        /// tags from all resources in your tenancy. The tag key definitions must be within the same tag namespace.
         /// &lt;br/&gt;
         /// The following actions happen immediately:
         /// \u00A0
-        ///   * If the tag is a cost-tracking tag, the tag no longer counts against your   
+        ///   * If the tag is a cost-tracking tag, the tag no longer counts against your
         ///   10 cost-tracking tags limit, even if you do not disable the tag before running this operation.
-        ///   * If the tag is used with dynamic groups, the rules that contain the tag are no longer 
-        ///   evaluated against the tag. 
+        ///   * If the tag is used with dynamic groups, the rules that contain the tag are no longer
+        ///   evaluated against the tag.
         /// &lt;br/&gt;
         /// After you start this operation, the state of the tag changes to DELETING, and tag removal
         /// from resources begins. This process can take up to 48 hours depending on the number of resources that
-        /// are tagged and the regions in which those resources reside. 
+        /// are tagged and the regions in which those resources reside.
         /// &lt;br/&gt;
         /// When all tags have been removed, the state changes to DELETED. You cannot restore a deleted tag. After the tag state
         /// changes to DELETED, you can use the same tag name again.
@@ -251,7 +251,7 @@ namespace Oci.IdentityService
         /// After you start this operation, you cannot start either the {@link #deleteTag(DeleteTagRequest) deleteTag} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes.
         /// &lt;br/&gt;
         /// In order to delete tags, you must first retire the tags. Use {@link #updateTag(UpdateTagRequest) updateTag}
-        /// to retire a tag. 
+        /// to retire a tag.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -290,10 +290,62 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Edits the specified list of tag key definitions for the selected resources. 
+        /// This operation triggers a process that edits the tags on all selected resources. The possible actions are:
+        /// &lt;br/&gt;
+        ///   * Add a defined tag when the tag does not already exist on the resource.
+        ///   * Update the value for a defined tag when the tag is present on the resource.
+        ///   * Add a defined tag when it does not already exist on the resource or update the value for a defined tag when the tag is present on the resource.
+        ///   * Remove a defined tag from a resource. The tag is removed from the resource regardless of the tag value.
+        /// &lt;br/&gt;
+        /// See {@link #bulkEditOperationDetails(BulkEditOperationDetailsRequest) bulkEditOperationDetails} for more information.
+        /// &lt;br/&gt;
+        /// The edits can include a combination of operations and tag sets. 
+        /// However, multiple operations cannot apply to one key definition in the same request.
+        /// For example, if one request adds &#x60;tag set-1&#x60; to a resource and sets a tag value to &#x60;tag set-2&#x60;, 
+        /// &#x60;tag set-1&#x60; and &#x60;tag set-2&#x60; cannot have any common tag definitions.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<BulkEditTagsResponse> BulkEditTags(BulkEditTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called bulkEditTags");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tags/actions/bulkEdit".Trim('/')));
+            HttpMethod method = new HttpMethod("Post");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<BulkEditTagsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"BulkEditTags failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves multiple resources from one compartment to another. All resources must be in the same compartment.
         /// This API can only be invoked from the tenancy&#39;s [home region](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingregions.htm#Home).
         /// To move resources, you must have the appropriate permissions to move the resource in both the source and target
-        /// compartments. This operation creates a {@link WorkRequest}. 
+        /// compartments. This operation creates a {@link WorkRequest}.
         /// Use the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} API to monitor the status of the bulk action.
         /// 
         /// </summary>
@@ -333,19 +385,19 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Deletes the specified tag namespace. This operation triggers a process that removes all of the tags 
+        /// Deletes the specified tag namespace. This operation triggers a process that removes all of the tags
         /// defined in the specified tag namespace from all resources in your tenancy and then deletes the tag namespace.
         /// &lt;br/&gt;
-        /// After you start the delete operation: 
+        /// After you start the delete operation:
         /// &lt;br/&gt;
-        ///   * New tag key definitions cannot be created under the namespace. 
+        ///   * New tag key definitions cannot be created under the namespace.
         ///   * The state of the tag namespace changes to DELETING.
-        ///   * Tag removal from the resources begins. 
+        ///   * Tag removal from the resources begins.
         /// &lt;br/&gt;
-        /// This process can take up to 48 hours depending on the number of tag definitions in the namespace, the number of resources 
+        /// This process can take up to 48 hours depending on the number of tag definitions in the namespace, the number of resources
         /// that are tagged, and the locations of the regions in which those resources reside.
         /// &lt;br/&gt;
-        /// After all tags are removed, the state changes to DELETED. You cannot restore a deleted tag namespace. After the deleted tag namespace 
+        /// After all tags are removed, the state changes to DELETED. You cannot restore a deleted tag namespace. After the deleted tag namespace
         /// changes its state to DELETED, you can use the name of the deleted tag namespace again.
         /// &lt;br/&gt;
         /// After you start this operation, you cannot start either the {@link #deleteTag(DeleteTagRequest) deleteTag} or the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} operation until this process completes.
@@ -540,7 +592,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new secret key for the specified user. Secret keys are used for authentication with the Object Storage Service&#39;s Amazon S3
-        /// compatible API. For information, see
+        /// compatible API. The secret key consists of an Access Key/Secret Key pair. For information, see
         /// [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm).
         /// &lt;br/&gt;
         /// You must specify a *description* for the secret key (although it can be an empty string). It does not
@@ -857,7 +909,7 @@ namespace Oci.IdentityService
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
         /// &lt;br/&gt;
-        /// After your network resource is created, you can use it in policy to restrict access to only requests made from an allowed 
+        /// After your network resource is created, you can use it in policy to restrict access to only requests made from an allowed
         /// IP address specified in your network source. For more information, see [Managing Network Sources](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingnetworksources.htm).
         /// 
         /// </summary>
@@ -1173,7 +1225,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new tag in the specified tag namespace.
         /// &lt;br/&gt;
-        /// The tag requires either the OCID or the name of the tag namespace that will contain this 
+        /// The tag requires either the OCID or the name of the tag namespace that will contain this
         /// tag definition.
         /// &lt;br/&gt;
         /// You must specify a *name* for the tag, which must be unique across all tags in the tag namespace
@@ -1184,13 +1236,13 @@ namespace Oci.IdentityService
         /// The tag must have a *description*. It does not have to be unique, and you can change it with
         /// {@link #updateTag(UpdateTagRequest) updateTag}.
         /// &lt;br/&gt;
-        /// The tag must have a value type, which is specified with a validator. Tags can use either a 
+        /// The tag must have a value type, which is specified with a validator. Tags can use either a
         /// static value or a list of possible values. Static values are entered by a user applying the tag
-        /// to a resource. Lists are created by you and the user must apply a value from the list. Lists 
-        /// are validiated. 
+        /// to a resource. Lists are created by you and the user must apply a value from the list. Lists
+        /// are validiated.
         /// &lt;br/&gt;
-        /// * If no &#x60;validator&#x60; is set, the user applying the tag to a resource can type in a static 
-        /// value or leave the tag value empty. 
+        /// * If no &#x60;validator&#x60; is set, the user applying the tag to a resource can type in a static
+        /// value or leave the tag value empty.
         /// * If a &#x60;validator&#x60; is set, the user applying the tag to a resource must select from a list
         /// of values that you supply with {@link #enumTagDefinitionValidator(EnumTagDefinitionValidatorRequest) enumTagDefinitionValidator}.
         /// 
@@ -1233,8 +1285,8 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new tag default in the specified compartment for the specified tag definition.
         /// &lt;br/&gt;
-        /// If you specify that a value is required, a value is set during resource creation (either by 
-        /// the user creating the resource or another tag defualt). If no value is set, resource creation 
+        /// If you specify that a value is required, a value is set during resource creation (either by
+        /// the user creating the resource or another tag defualt). If no value is set, resource creation
         /// is blocked.
         /// &lt;br/&gt;
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;true\&quot;, the value is set during resource creation.
@@ -1955,14 +2007,14 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Deletes the specified tag definition. This operation triggers a process that removes the
-        /// tag from all resources in your tenancy. 
+        /// tag from all resources in your tenancy.
         /// &lt;br/&gt;
         /// These things happen immediately:
         /// \u00A0
-        ///   * If the tag was a cost-tracking tag, it no longer counts against your 10 cost-tracking 
+        ///   * If the tag was a cost-tracking tag, it no longer counts against your 10 cost-tracking
         ///   tags limit, whether you first disabled it or not.
-        ///   * If the tag was used with dynamic groups, none of the rules that contain the tag will 
-        ///   be evaluated against the tag. 
+        ///   * If the tag was used with dynamic groups, none of the rules that contain the tag will
+        ///   be evaluated against the tag.
         /// &lt;br/&gt;
         /// When you start the delete operation, the state of the tag changes to DELETING and tag removal
         /// from resources begins. This can take up to 48 hours depending on the number of resources that
@@ -1971,10 +2023,10 @@ namespace Oci.IdentityService
         /// When all tags have been removed, the state changes to DELETED. You cannot restore a deleted tag. Once the deleted tag
         /// changes its state to DELETED, you can use the same tag name again.
         /// &lt;br/&gt;
-        /// After you start this operation, you cannot start either the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes. 
+        /// After you start this operation, you cannot start either the {@link #bulkDeleteTags(BulkDeleteTagsRequest) bulkDeleteTags} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes.
         /// &lt;br/&gt;
         /// To delete a tag, you must first retire it. Use {@link #updateTag(UpdateTagRequest) updateTag}
-        /// to retire a tag. 
+        /// to retire a tag.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2052,11 +2104,11 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Deletes the specified tag namespace. Only an empty tag namespace can be deleted with this operation. To use this operation 
-        /// to delete a tag namespace that contains tag definitions, first delete all of its tag definitions. 
+        /// Deletes the specified tag namespace. Only an empty tag namespace can be deleted with this operation. To use this operation
+        /// to delete a tag namespace that contains tag definitions, first delete all of its tag definitions.
         /// &lt;br/&gt;
         /// Use {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} to delete a tag namespace along with all of
-        /// the tag definitions contained within that namespace. 
+        /// the tag definitions contained within that namespace.
         /// &lt;br/&gt;
         /// Use {@link #deleteTag(DeleteTagRequest) deleteTag} to delete a tag definition.
         /// 
@@ -3049,6 +3101,45 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"ListBulkActionResourceTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the resource types that support bulk tag editing.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        public async Task<ListBulkEditTagsResourceTypesResponse> ListBulkEditTagsResourceTypes(ListBulkEditTagsResourceTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listBulkEditTagsResourceTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tags/bulkEditResourceTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("Get");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListBulkEditTagsResourceTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListBulkEditTagsResourceTypes failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4117,12 +4208,12 @@ namespace Oci.IdentityService
         /// <summary>
         /// Move the compartment to a different parent compartment in the same tenancy. When you move a
         /// compartment, all its contents (subcompartments and resources) are moved with it. Note that
-        /// the &#x60;CompartmentId&#x60; that you specify in the path is the compartment that you want to move. 
+        /// the &#x60;CompartmentId&#x60; that you specify in the path is the compartment that you want to move.
         /// &lt;br/&gt;
         /// **IMPORTANT**: After you move a compartment to a new parent compartment, the access policies of
         /// the new parent take effect and the policies of the previous parent no longer apply. Ensure that you
         /// are aware of the implications for the compartment contents before you move it. For more
-        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcompartments.htm#MoveCompartment).         
+        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcompartments.htm#MoveCompartment).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4784,13 +4875,13 @@ namespace Oci.IdentityService
         /// <summary>
         /// Updates the specified tag definition.
         /// &lt;br/&gt;
-        /// Setting &#x60;validator&#x60; determines the value type. Tags can use either a static value or a 
-        /// list of possible values. Static values are entered by a user applying the tag to a resource. 
+        /// Setting &#x60;validator&#x60; determines the value type. Tags can use either a static value or a
+        /// list of possible values. Static values are entered by a user applying the tag to a resource.
         /// Lists are created by you and the user must apply a value from the list. On update, any values
-        /// in a list that were previously set do not change, but new values must pass validation. Values 
-        /// already applied to a resource do not change. 
+        /// in a list that were previously set do not change, but new values must pass validation. Values
+        /// already applied to a resource do not change.
         /// &lt;br/&gt;
-        /// You cannot remove list values that appear in a TagDefault. To remove a list value that 
+        /// You cannot remove list values that appear in a TagDefault. To remove a list value that
         /// appears in a TagDefault, first update the TagDefault to use a different value.
         /// 
         /// </summary>
@@ -4830,8 +4921,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Updates the specified tag default. If you specify that a value is required, a value is set 
-        /// during resource creation (either by the user creating the resource or another tag defualt). 
+        /// Updates the specified tag default. If you specify that a value is required, a value is set
+        /// during resource creation (either by the user creating the resource or another tag defualt).
         /// If no value is set, resource creation is blocked.
         /// &lt;br/&gt;
         /// * If the &#x60;isRequired&#x60; flag is set to \&quot;true\&quot;, the value is set during resource creation.

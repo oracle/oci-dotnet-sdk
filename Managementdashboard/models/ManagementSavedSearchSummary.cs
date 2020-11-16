@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Summary of properties of a saved search.
+    /// Summary of the properties of a saved search.
     /// </summary>
     public class ManagementSavedSearchSummary 
     {
         
         /// <value>
-        /// id for saved search.  Must be provided if OOB, otherwise must not be provided.
+        /// ID of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name for saved search.
+        /// Display name of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\") to indicate Out Of the Box saved search.
+        /// Determines whether the saved search is an Out-of-the-Box (OOB) saved search. Note that OOB saved searches are only provided by Oracle and cannot be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsOobSavedSearch { get; set; }
         
         /// <value>
-        /// Id for application (LA, APM, etc.) that owners this saved search.  Each owner has a unique Id.
+        /// ID of the service (for example log-analytics) that owns the saved search. Each service has a unique ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderId { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that owns the saved search.
+        /// OCID of the compartment in which the saved search resides.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.ManagementdashboardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Description.
+        /// Description of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Json for internationalization.
+        /// JSON that contains internationalization options.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +92,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// How to show the saved search.
+        /// Determines how the saved search is displayed in a dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -103,7 +103,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<SavedSearchTypes> Type { get; set; }
         
         /// <value>
-        /// Json to contain options for UI.
+        /// JSON that contains user interface options.
         /// </value>
         /// <remarks>
         /// Required
@@ -113,7 +113,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of Json to contain options for source of data.
+        /// Array of JSON that contain data source options.
         /// </value>
         /// <remarks>
         /// Required
@@ -123,7 +123,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
         
         /// <value>
-        /// Created by which user.
+        /// User who created the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -133,7 +133,7 @@ namespace Oci.ManagementdashboardService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// Updated by which user.
+        /// User who updated the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -143,7 +143,27 @@ namespace Oci.ManagementdashboardService.Models
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// Screenshot.
+        /// Date and time the saved search was created.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// Date and time the saved search was updated.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Screen image of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -163,7 +183,7 @@ namespace Oci.ManagementdashboardService.Models
         public string MetadataVersion { get; set; }
         
         /// <value>
-        /// Template.
+        /// Reference to the HTML file of the widget.
         /// </value>
         /// <remarks>
         /// Required
@@ -173,7 +193,7 @@ namespace Oci.ManagementdashboardService.Models
         public string WidgetTemplate { get; set; }
         
         /// <value>
-        /// View Model
+        /// Reference to the view model of the widget.
         /// </value>
         /// <remarks>
         /// Required
@@ -183,7 +203,7 @@ namespace Oci.ManagementdashboardService.Models
         public string WidgetVM { get; set; }
         
         /// <value>
-        /// Current state of saved search.
+        /// Current lifecycle state of the saved search.
         /// </value>
         /// <remarks>
         /// Required
