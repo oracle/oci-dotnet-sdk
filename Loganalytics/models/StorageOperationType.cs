@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.LoganalyticsService.Models
 {
   /// <summary>
-  /// Asynchronous operation name for a storage work Request
+  /// These are the asynchronous operation name for a storage work Request
     /// 
   /// </summary>
   public enum StorageOperationType {

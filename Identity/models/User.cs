@@ -195,5 +195,39 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "isMfaActivated")]
         public System.Nullable<bool> IsMfaActivated { get; set; }
         
+        /// <value>
+        /// The date and time of when the user most recently logged in the
+        /// format defined by RFC3339 (ex. `2016-08-25T21:10:29.600Z`).
+        /// If there is no login history, this field is null.
+        /// <br/>
+        /// For illustrative purposes, suppose we have a user who has logged in
+        /// at July 1st, 2020 at 1200 PST and logged out 30 minutes later.
+        /// They then login again on July 2nd, 2020 at 1500 PST.
+        /// <br/>
+        /// Their previousSuccessfulLoginTime would be `2020-07-01:19:00.000Z`.
+        /// <br/>
+        /// Their lastSuccessfulLoginTime would be `2020-07-02:22:00.000Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lastSuccessfulLoginTime")]
+        public System.Nullable<System.DateTime> LastSuccessfulLoginTime { get; set; }
+        
+        /// <value>
+        /// The date and time of when the user most recently logged in the
+        /// format defined by RFC3339 (ex. `2016-08-25T21:10:29.600Z`).
+        /// If there is no login history, this field is null.
+        /// <br/>
+        /// For illustrative purposes, suppose we have a user who has logged in
+        /// at July 1st, 2020 at 1200 PST and logged out 30 minutes later.
+        /// They then login again on July 2nd, 2020 at 1500 PST.
+        /// <br/>
+        /// Their previousSuccessfulLoginTime would be `2020-07-01:19:00.000Z`.
+        /// <br/>
+        /// Their lastSuccessfulLoginTime would be `2020-07-02:22:00.000Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "previousSuccessfulLoginTime")]
+        public System.Nullable<System.DateTime> PreviousSuccessfulLoginTime { get; set; }
+        
     }
 }

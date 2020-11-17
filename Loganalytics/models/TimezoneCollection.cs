@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Set of supported timezones.
+    /// List of supported timezones.
     /// </summary>
     public class TimezoneCollection 
     {
         
         /// <value>
-        /// timezones.
+        /// List of supported timezones.
         /// </value>
         /// <remarks>
         /// Required

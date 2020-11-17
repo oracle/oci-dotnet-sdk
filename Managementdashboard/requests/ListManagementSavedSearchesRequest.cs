@@ -45,7 +45,7 @@ namespace Oci.ManagementdashboardService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// The page token representing the page on which to start retrieving results. This is usually retrieved from a previous list call.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
@@ -58,7 +58,7 @@ namespace Oci.ManagementdashboardService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is the default.
         /// 
         /// </value>
         ///
@@ -70,7 +70,7 @@ namespace Oci.ManagementdashboardService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is the default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

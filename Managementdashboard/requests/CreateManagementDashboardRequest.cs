@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// Json metadata for creating a new dashboard.
+        /// JSON metadata for creating a new dashboard.
         /// </value>
         /// <remarks>
         /// Required

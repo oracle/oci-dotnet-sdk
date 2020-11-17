@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.LoganalyticsService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// orderBy
+        /// sort by field
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public string SortBy { get; set; }

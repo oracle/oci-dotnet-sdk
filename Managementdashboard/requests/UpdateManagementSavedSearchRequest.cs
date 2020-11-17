@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// unique saved search identifier
+        /// A unique saved search identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.ManagementdashboardService.Requests
         public string ManagementSavedSearchId { get; set; }
         
         /// <value>
-        /// Json metadata for changed properties in existing saved search.
+        /// JSON metadata for changed saved search properties.
         /// </value>
         /// <remarks>
         /// Required

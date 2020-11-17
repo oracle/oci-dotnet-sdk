@@ -13,23 +13,27 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoganalyticsService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Entity Types Definition
+    /// Details of Database Software Image for upgrading a database.
+    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
-    public class RegisterEntityTypesDetails 
+    public class DatabaseUpgradeWithDatabaseSoftwareImageDetails : DatabaseUpgradeSourceBase
     {
         
         /// <value>
-        /// New Entity Type Create Definition
+        /// the database software id used for upgrading the database.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "EntityTypes is required.")]
-        [JsonProperty(PropertyName = "entityTypes")]
-        public System.Collections.Generic.List<OutOfBoxEntityTypeDetails> EntityTypes { get; set; }
+        [Required(ErrorMessage = "DatabaseSoftwareImageId is required.")]
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
         
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "DB_SOFTWARE_IMAGE";
     }
 }

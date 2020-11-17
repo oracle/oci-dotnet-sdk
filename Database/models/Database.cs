@@ -121,6 +121,8 @@ namespace Oci.DatabaseService.Models
             Updating,
             [EnumMember(Value = "BACKUP_IN_PROGRESS")]
             BackupInProgress,
+            [EnumMember(Value = "UPGRADING")]
+            Upgrading,
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]

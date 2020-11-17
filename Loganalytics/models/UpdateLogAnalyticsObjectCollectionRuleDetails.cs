@@ -31,19 +31,19 @@ namespace Oci.LoganalyticsService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Log Analytics Log group OCID to associate the processed logs with.
+        /// Logging Analytics Log group OCID to associate the processed logs with.
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
         
         /// <value>
-        /// Name of the Log Analytics Source to use for the processing.
+        /// Name of the Logging Analytics Source to use for the processing.
         /// </value>
         [JsonProperty(PropertyName = "logSourceName")]
         public string LogSourceName { get; set; }
         
         /// <value>
-        /// Log Analytics entity OCID. Associates the processed logs with the given entity (optional).
+        /// Logging Analytics entity OCID. Associates the processed logs with the given entity (optional).
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }

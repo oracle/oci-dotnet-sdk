@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Storage usage of a tenancy in Logan Analytics application
+    /// This is the storage usage information of a tenancy in Logan Analytics application
     /// </summary>
     public class StorageUsage 
     {
         
         /// <value>
-        /// number of bytes
+        /// This is the number of bytes of active data (non-archived)
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<long> ActiveDataSizeInBytes { get; set; }
         
         /// <value>
-        /// number of bytes archived in object store
+        /// This is the number of bytes of archived data in object storage
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<long> ArchivedDataSizeInBytes { get; set; }
         
         /// <value>
-        /// number of bytes recalled from archived data in object store
+        /// This is the number of bytes of recalled data from archived in object store
         /// </value>
         /// <remarks>
         /// Required

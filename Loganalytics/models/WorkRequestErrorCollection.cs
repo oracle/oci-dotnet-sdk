@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// List of errors for the specified work request if any.
+    /// This is a list of errors for the work request.
     /// 
     /// </summary>
     public class WorkRequestErrorCollection 
     {
         
         /// <value>
-        /// List of errors for the specified work request if any.
+        /// This is an array of errors for the work request.
         /// 
         /// </value>
         /// <remarks>

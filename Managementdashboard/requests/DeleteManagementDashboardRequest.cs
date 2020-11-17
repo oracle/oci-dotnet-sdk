@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// unique dashboard identifier
+        /// A unique dashboard identifier.
         /// </value>
         /// <remarks>
         /// Required

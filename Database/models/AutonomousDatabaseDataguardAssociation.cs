@@ -205,6 +205,21 @@ namespace Oci.DatabaseService.Models
         public string ApplyRate { get; set; }
         
         /// <value>
+        /// The approximate number of seconds of redo data not yet available on the standby Autonomous Container Database,
+        /// as computed by the reporting database.
+        /// <br/>
+        /// Example: 7 seconds
+        /// </value>
+        [JsonProperty(PropertyName = "transportLag")]
+        public string TransportLag { get; set; }
+        
+        /// <value>
+        /// The date and time of the last update to the apply lag, apply rate, and transport lag values.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastSynced")]
+        public System.Nullable<System.DateTime> TimeLastSynced { get; set; }
+        
+        /// <value>
         /// The date and time the Data Guard association was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

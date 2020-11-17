@@ -13,23 +13,27 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoganalyticsService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Query (search) Resource for authorization usage
+    /// Details of Database Home for upgrading a database.
+    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+    /// 
     /// </summary>
-    public class Query 
+    public class DatabaseUpgradeWithDbHomeDetails : DatabaseUpgradeSourceBase
     {
         
         /// <value>
-        /// Tenancy ID
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Home.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
+        [Required(ErrorMessage = "DbHomeId is required.")]
+        [JsonProperty(PropertyName = "dbHomeId")]
+        public string DbHomeId { get; set; }
         
+        [JsonProperty(PropertyName = "source")]
+        private readonly string source = "DB_HOME";
     }
 }

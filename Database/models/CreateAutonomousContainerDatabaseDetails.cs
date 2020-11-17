@@ -99,6 +99,24 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer Autonomous VM cluster for Autonomous Data Guard. Required to enable Data Guard.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "peerAutonomousVmClusterId")]
+        public string PeerAutonomousVmClusterId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where the standby Autonomous Container Database
+        /// will be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "peerAutonomousContainerDatabaseCompartmentId")]
+        public string PeerAutonomousContainerDatabaseCompartmentId { get; set; }
+        
+        [JsonProperty(PropertyName = "peerAutonomousContainerDatabaseBackupConfig")]
+        public PeerAutonomousContainerDatabaseBackupConfig PeerAutonomousContainerDatabaseBackupConfig { get; set; }
+        
+        /// <value>
         /// The OCID of the Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "autonomousVmClusterId")]

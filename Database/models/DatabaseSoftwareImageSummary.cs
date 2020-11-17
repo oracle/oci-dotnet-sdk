@@ -214,5 +214,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lsInventory")]
         public string LsInventory { get; set; }
         
+        /// <value>
+        /// True if this Database software image is supported for Upgrade.
+        /// </value>
+        [JsonProperty(PropertyName = "isUpgradeSupported")]
+        public System.Nullable<bool> IsUpgradeSupported { get; set; }
+        
     }
 }

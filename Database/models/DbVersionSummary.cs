@@ -52,5 +52,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isPreviewDbVersion")]
         public System.Nullable<bool> IsPreviewDbVersion { get; set; }
         
+        /// <value>
+        /// True if this version of the Oracle Database software is supported for Upgrade.
+        /// </value>
+        [JsonProperty(PropertyName = "isUpgradeSupported")]
+        public System.Nullable<bool> IsUpgradeSupported { get; set; }
+        
     }
 }

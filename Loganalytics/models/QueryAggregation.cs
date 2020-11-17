@@ -44,7 +44,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<bool> ArePartialResults { get; set; }
         
         /// <value>
-        /// Explanation of why results may be partial. Only set if isPartialResults is true.
+        /// Explanation of why results may be partial. Only set if arePartialResults is true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partialResultReason")]

@@ -53,8 +53,8 @@ namespace Oci.IdentityService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// If you specify that a value is required, a value is set during resource creation (either by 
-        /// the user creating the resource or another tag defualt). If no value is set, resource 
+        /// If you specify that a value is required, a value is set during resource creation (either by
+        /// the user creating the resource or another tag defualt). If no value is set, resource
         /// creation is blocked.
         /// <br/>
         /// * If the `isRequired` flag is set to \"true\", the value is set during resource creation.

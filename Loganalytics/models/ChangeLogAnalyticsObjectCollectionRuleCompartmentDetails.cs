@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Log Analytics Object Storage based collection rule compartment to be updated to.
+    /// The new compartment this Object Collection Rule will be moved to.
     /// 
     /// </summary>
     public class ChangeLogAnalyticsObjectCollectionRuleCompartmentDetails 

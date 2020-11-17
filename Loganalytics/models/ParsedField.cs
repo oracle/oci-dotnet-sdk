@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Log Content
+        /// Sample log entries picked up from the given file for validation
         /// </value>
         [JsonProperty(PropertyName = "logContent")]
         public string LogContent { get; set; }

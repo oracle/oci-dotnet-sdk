@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -38,7 +38,7 @@ namespace Oci.LoganalyticsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only log analytics entities whose displayName matches the entire display name given.
+        /// A filter to return only log analytics log groups whose displayName matches the entire display name given.
         /// The match is case-insensitive.
         /// 
         /// </value>

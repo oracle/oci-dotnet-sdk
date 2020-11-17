@@ -58,5 +58,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "storageManagement")]
         public System.Nullable<DbSystemOptions.StorageManagementEnum> StorageManagement { get; set; }
+        
+        /// <value>
+        /// If provided, filters the results to the set of database versions which are supported for Upgrade.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isUpgradeSupported")]
+        public System.Nullable<bool> IsUpgradeSupported { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// unique saved search identifier
+        /// A unique saved search identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.ManagementdashboardService.Requests
         public string ManagementSavedSearchId { get; set; }
         
         /// <value>
-        /// Compartment id to move the saved search to.
+        /// ID of the saved search that is being moved.
         /// </value>
         /// <remarks>
         /// Required

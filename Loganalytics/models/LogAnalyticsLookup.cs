@@ -81,15 +81,9 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lookupDisplayName")]
         public string LookupDisplayName { get; set; }
         
-        /// <value>
-        /// sources using
-        /// </value>
         [JsonProperty(PropertyName = "referringSources")]
         public AutoLookups ReferringSources { get; set; }
         
-        /// <value>
-        /// status summary
-        /// </value>
         [JsonProperty(PropertyName = "statusSummary")]
         public StatusSummary StatusSummary { get; set; }
         

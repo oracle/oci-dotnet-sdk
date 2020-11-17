@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// List of NamespaceSummary: there is at most one item.
+    /// This is a list of NamespaceSummary: there is at most one item in the list.
     /// 
     /// </summary>
     public class NamespaceCollection 
     {
         
         /// <value>
-        /// List of NamespaceSummary: there is at most one item.
+        /// There is at most one item in the items array.
         /// 
         /// </value>
         /// <remarks>

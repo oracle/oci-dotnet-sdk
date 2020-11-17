@@ -17,15 +17,15 @@ namespace Oci.IdentityService.Models
 {
     /// <summary>
     /// Validates a definedTag value. Each validator performs validation steps in addition to the standard
-    /// validation for definedTag values. For more information, see 
+    /// validation for definedTag values. For more information, see
     /// [Limits on Tags](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Limits).
     /// <br/>
-    /// If you define a validator after a value has been set for a defined tag, then any updates that 
-    /// attempt to change the value must pass the additional validation defined by the current rule. 
+    /// If you define a validator after a value has been set for a defined tag, then any updates that
+    /// attempt to change the value must pass the additional validation defined by the current rule.
     /// Previously set values (even those that would fail the current validation) are not updated. You can
     /// still update other attributes to resources that contain a non-valid defined tag.
     /// <br/>
-    /// To clear the validator call UpdateTag with 
+    /// To clear the validator call UpdateTag with
     /// [DefaultTagDefinitionValidator](https://docs.cloud.oracle.com/api/#/en/identity/latest/datatypes/DefaultTagDefinitionValidator).
     /// 
     /// </summary>
@@ -34,7 +34,7 @@ namespace Oci.IdentityService.Models
     {
                 ///
         /// <value>
-        /// Specifies the type of validation: a static value (no validation) or a list. 
+        /// Specifies the type of validation: a static value (no validation) or a list.
         /// 
         /// </value>
         ///

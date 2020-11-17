@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Summary of properties for a dashboard.
+    /// Summary of the properties of a dashboard.
     /// </summary>
     public class ManagementDashboardSummary 
     {
         
         /// <value>
-        /// Dashboard Id. Must be providied if OOB, otherwise must not be provided.
+        /// ID of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DashboardId { get; set; }
         
         /// <value>
-        /// Display name for dashboard.
+        /// Display name of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Dashboard's description.
+        /// Description of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that owns the dashboard.
+        /// OCID of the compartment in which the dashboard resides.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.ManagementdashboardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// String boolean (\"true\" or \"false\").  OOB (Out of the Box) dashboards are only provided by Oracle.  They cannot be modified by non-Oracle.
+        /// Determines whether the dashboard is an Out-of-the-Box (OOB) dashboard. Note that OOB dashboards are only provided by Oracle and cannot be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsOobDashboard { get; set; }
         
         /// <value>
-        /// Created by which user.
+        /// User who created the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.ManagementdashboardService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// Time created.
+        /// Date and time the dashboard was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +92,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Updated by which user.
+        /// User who updated the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,7 +102,7 @@ namespace Oci.ManagementdashboardService.Models
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// Time updated.
+        /// Date and time the dashboard was updated.
         /// </value>
         /// <remarks>
         /// Required
@@ -122,7 +122,7 @@ namespace Oci.ManagementdashboardService.Models
         public string MetadataVersion { get; set; }
         
         /// <value>
-        /// screen image.
+        /// Screen image of the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -132,7 +132,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ScreenImage { get; set; }
         
         /// <value>
-        /// Json for internationalization.
+        /// JSON that contains internationalization options.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// NORMAL means single dashboard, SET means dashboard set.
+        /// Type of dashboard. NORMAL denotes a single dashboard and SET denotes a dashboard set.
         /// </value>
         /// <remarks>
         /// Required
@@ -152,7 +152,7 @@ namespace Oci.ManagementdashboardService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// State of dashboard.
+        /// Current lifecycle state of the dashboard.
         /// </value>
         /// <remarks>
         /// Required

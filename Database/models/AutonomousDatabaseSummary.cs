@@ -145,6 +145,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeDeletionOfFreeAutonomousDatabase")]
         public System.Nullable<System.DateTime> TimeDeletionOfFreeAutonomousDatabase { get; set; }
         
+        [JsonProperty(PropertyName = "backupConfig")]
+        public AutonomousDatabaseBackupConfig BackupConfig { get; set; }
+        
         /// <value>
         /// The number of OCPU cores to be made available to the database.
         /// </value>

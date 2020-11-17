@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Storage configuration and status of a tenancy in Logan Analytics application
+    /// This is the storage configuration and status of a tenancy in Logan Analytics application
     /// </summary>
     public class Storage 
     {
         
         /// <value>
-        /// if old data can be archived for a tenancy
+        /// This indicates if old data can be archived for a tenancy
         /// </value>
         /// <remarks>
         /// Required

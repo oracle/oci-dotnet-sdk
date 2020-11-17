@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 7.0.0 - 2020-11-17
+### Added
+
+- Support for specifying memory for AMD E3 shapes during node pool creation and update in the Container Engine for Kubernetes service
+- Support for upgrading a database on a VM database system in the Database service
+- Support for listing autonomous database clones in the Database service
+- Support for Data Guard with autonomous container databases on Exadata Cloud at Customer in the Database service
+- Support for getting the last login time of a user in the Identity service
+- Support to bulk editing tags on resources in the Identity service
+- Property Id in CreateManagementSavedSearchDetails model is changed from required to optional in the Management Dashboard service
+
+### Breaking Changes
+- The base type of parameter Status in ListWorkRequests request is changed from WorkRequestStatus enum to string in the Container Engine for Kubernetes service
+- Some models are removed from the Log Analytics service: AgentUpload, Attribute, CreateNamespaceDetails, FieldMap, GenerateAgentObjectNameDetails, LogAnalytics, LogAnalyticsCollectionWarning, LogAnalyticsSummary, OutOfBoxEntityTypeDetails, Query, QueryWorkRequestResource, RegisterEntityTypesDetails, ServiceTenancy, SortOrders, StringListDetails
+- The property ErrorDetails is removed from DeleteAssociationsResponse in the Log Analytics service
+- Enum value is changed from CuslterSplit to ClusterSplit in the Log Analytics service
+- The type of property Id in LogAnalyticsParserFilter model is changed from Object to string in the Log Analytics service
+
 ## 6.2.0 - 2020-11-10
 ### Added
 - Support for uploading large objects using UploadManager.

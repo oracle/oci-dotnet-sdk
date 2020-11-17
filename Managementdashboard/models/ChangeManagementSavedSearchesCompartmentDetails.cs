@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Details required for changing the compartment of saved search.
+    /// Compartment to which the saved search is being moved.
     /// </summary>
     public class ChangeManagementSavedSearchesCompartmentDetails 
     {
         
         /// <value>
-        /// Compartment Identifier
+        /// OCID of the compartment to which the saved search is being moved.
         /// </value>
         /// <remarks>
         /// Required

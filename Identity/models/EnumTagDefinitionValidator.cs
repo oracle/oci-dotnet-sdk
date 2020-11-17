@@ -18,8 +18,8 @@ namespace Oci.IdentityService.Models
     /// <summary>
     /// Used to validate the value set for a defined tag and contains the list of allowable `values`.
     /// <br/>
-    /// You must specify at least one valid value in the `values` array. You can't have blank or 
-    /// or empty strings (`\"\"`). Duplicate values are not allowed. 
+    /// You must specify at least one valid value in the `values` array. You can't have blank or
+    /// or empty strings (`\"\"`). Duplicate values are not allowed.
     /// 
     /// </summary>
     public class EnumTagDefinitionValidator : BaseTagDefinitionValidator

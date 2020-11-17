@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// A log message from the execution of a work request.
+    /// This is a log message from the execution of a work request.
     /// </summary>
     public class WorkRequestLog 
     {
         
         /// <value>
-        /// Human-readable log message.
+        /// This is a human-readable log message.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string
+        /// This is the time the log message was written. An RFC3339 formatted datetime string
         /// </value>
         /// <remarks>
         /// Required

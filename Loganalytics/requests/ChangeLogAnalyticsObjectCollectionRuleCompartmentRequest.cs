@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -28,7 +28,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// The log analytics os collection rule [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
+        /// The Logging Analytics Object Collection Rule [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.LoganalyticsService.Requests
         public string LogAnalyticsObjectCollectionRuleId { get; set; }
         
         /// <value>
-        /// Log Analytics Object Storage based collection rule compartment to be updated to.
+        /// The new compartment this Object Collection Rule will be moved to.
         /// </value>
         /// <remarks>
         /// Required

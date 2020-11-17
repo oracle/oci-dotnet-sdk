@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// unique dashboard identifier
+        /// A unique dashboard identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -27,7 +27,7 @@ namespace Oci.ManagementdashboardService.Requests
         public string ManagementDashboardId { get; set; }
         
         /// <value>
-        /// Json Metadata for changed dashboard properties.
+        /// JSON metadata for changed dashboard properties.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Work request details to recall archived data
+    /// This is the input used to recall archived data
     /// 
     /// </summary>
     public class RecallArchivedDataDetails 
     {
         
         /// <value>
-        /// the compartment OCID for permission checking
+        /// This is the compartment OCID for permission checking
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.LoganalyticsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// the end of the time interval
+        /// This is the end of the time interval
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
         
         /// <value>
-        /// the start of the time interval
+        /// This is the start of the time interval
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeDataStarted { get; set; }
         
         /// <value>
-        /// the type of the log data to be purged
+        /// This is the type of the log data to be recalled
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]

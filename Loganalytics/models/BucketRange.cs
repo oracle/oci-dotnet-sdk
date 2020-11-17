@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Represents querylanguage bucket command input arguments in parse endpoint output.
+    /// Represents querylanguage bucket command input arguments in parse output.
     /// 
     /// </summary>
     public class BucketRange 

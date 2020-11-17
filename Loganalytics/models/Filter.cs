@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Field filter references when inserting filter into the query string. Field must be a valid enterprise logging out-of-the-box field, virtual field calculated in the query or a user defined field.
+        /// Field filter references when inserting filter into the query string. Field must be a valid logging analytics out-of-the-box field, virtual field calculated in the query or a user defined field.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]

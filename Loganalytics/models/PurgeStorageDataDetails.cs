@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Work request details to purge old data
+    /// This is the input used to purge data
     /// 
     /// </summary>
     public class PurgeStorageDataDetails 
     {
         
         /// <value>
-        /// the compartment OCID under which the data will be purged and required permission will be checked
+        /// This is the compartment OCID under which the data will be purged and required permission will be checked
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.LoganalyticsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// if true, purge child compartments data
+        /// If true, purge child compartments data
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
-        /// the end of the time interval
+        /// This is the end of the purge time interval
         /// </value>
         /// <remarks>
         /// Required
@@ -49,13 +49,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
         
         /// <value>
-        /// the solr data filter query, '*' means all
+        /// This is the solr query used to filter data, '*' means all
         /// </value>
         [JsonProperty(PropertyName = "purgeQueryString")]
         public string PurgeQueryString { get; set; }
         
         /// <value>
-        /// the type of the log data to be purged
+        /// This is the type of the log data to be purged
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(StringEnumConverter))]

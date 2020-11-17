@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Storage work request details.
+    /// This shows the storage work request details.
     /// 
     /// </summary>
     public class StorageWorkRequest 
     {
         
         /// <value>
-        /// Unique OCID identifier to reference this storage work Request with.
+        /// This is the OCID of the storage work Request.
         /// 
         /// </value>
         /// <remarks>
@@ -76,7 +76,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<int> PercentComplete { get; set; }
         
         /// <value>
-        /// Work request status.
+        /// This is the work request status.
         /// 
         /// </value>
         /// <remarks>
@@ -88,13 +88,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<WorkRequestStatus> Status { get; set; }
         
         /// <value>
-        /// the start of the time interval
+        /// This is the start of the time interval
         /// </value>
         [JsonProperty(PropertyName = "timeDataStarted")]
         public System.Nullable<System.DateTime> TimeDataStarted { get; set; }
         
         /// <value>
-        /// the end of the time interval
+        /// This is the end of the time interval
         /// </value>
         /// <remarks>
         /// Required
@@ -104,13 +104,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
         
         /// <value>
-        /// the solr data filter query, '*' means all
+        /// This is the solr query used to filter data for purge, '*' means all
         /// </value>
         [JsonProperty(PropertyName = "purgeQueryString")]
         public string PurgeQueryString { get; set; }
         
         /// <value>
-        /// the type of the log data to be purged
+        /// Thie is the type of data to be purged
         /// </value>
         /// <remarks>
         /// Required
@@ -121,43 +121,43 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<StorageDataType> DataType { get; set; }
         
         /// <value>
-        /// more detailed status if applicable
+        /// This provides more detailed status if applicable
         /// </value>
         [JsonProperty(PropertyName = "statusDetails")]
         public string StatusDetails { get; set; }
         
         /// <value>
-        /// more detailed info about this operation if applicable
+        /// This provides more detailed info about the work request if applicable
         /// </value>
         [JsonProperty(PropertyName = "operationDetails")]
         public string OperationDetails { get; set; }
         
         /// <value>
-        /// policy name if applicable (e.g. purge policy)
+        /// This is the policy name if applicable (e.g. purge policy)
         /// </value>
         [JsonProperty(PropertyName = "policyName")]
         public string PolicyName { get; set; }
         
         /// <value>
-        /// purge policy ID
+        /// This is the purge policy ID if applicable
         /// </value>
         [JsonProperty(PropertyName = "policyId")]
         public string PolicyId { get; set; }
         
         /// <value>
-        /// storage usage in bytes if applicable
+        /// This is the data usage in bytes if applicable
         /// </value>
         [JsonProperty(PropertyName = "storageUsageInBytes")]
         public System.Nullable<long> StorageUsageInBytes { get; set; }
         
         /// <value>
-        /// if true, purge child compartments data, only applicable to purge request
+        /// If true, purge child compartments data, only applicable to purge request
         /// </value>
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
-        /// Asynchronous storage request name.
+        /// This is the type of the work request.
         /// 
         /// </value>
         /// <remarks>

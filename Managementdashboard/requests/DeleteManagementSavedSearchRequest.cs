@@ -17,7 +17,7 @@ namespace Oci.ManagementdashboardService.Requests
     {
         
         /// <value>
-        /// unique saved search identifier
+        /// A unique saved search identifier.
         /// </value>
         /// <remarks>
         /// Required

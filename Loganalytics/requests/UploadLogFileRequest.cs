@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -62,7 +62,7 @@ namespace Oci.LoganalyticsService.Requests
         
         /// <value>
         /// The log group OCID to which the log data in this upload will be mapped to.
-        ///   Example: ocid1.loganalyticsloggroup.oc1..aaaaaaaad3q4sosi5i7z7onw2kgbwyk1581620537198
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +96,7 @@ namespace Oci.LoganalyticsService.Requests
         public string Timezone { get; set; }
         
         /// <value>
-        /// character Encoding
+        /// Character Encoding
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "charEncoding")]
         public string CharEncoding { get; set; }
@@ -128,7 +128,7 @@ namespace Oci.LoganalyticsService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The base-64 encoded MD5 hash of the body. If the Content-MD5 header is present, Log Analytics performs an integrity check
+        /// The base-64 encoded MD5 hash of the body. If the Content-MD5 header is present, Logging Analytics performs an integrity check
         /// on the body of the HTTP request by computing the MD5 hash for the body and comparing it to the MD5 hash supplied in the header.
         /// If the two hashes do not match, the log data is rejected and an HTTP-400 Unmatched Content MD5 error is returned with the message:
         /// <br/>
@@ -139,7 +139,7 @@ namespace Oci.LoganalyticsService.Requests
         public string ContentMd5 { get; set; }
         
         /// <value>
-        /// The content type of the log data. Defaults to 'application/octet-stream' if not overridden during the UploadLogFile call.
+        /// The content type of the log data.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-type")]
         public string ContentType { get; set; }

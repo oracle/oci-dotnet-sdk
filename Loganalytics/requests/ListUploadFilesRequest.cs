@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -96,14 +96,14 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Search string
+        /// Search string used to filtering uploads based on file name, log group name and log source name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "searchStr")]
         public string SearchStr { get; set; }
         
         ///
         /// <value>
-        /// Status
+        /// Upload Status.
         /// </value>
         ///
         public enum StatusEnum {
@@ -116,7 +116,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Status
+        /// Upload Status.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Collections.Generic.List<StatusEnum> Status { get; set; }

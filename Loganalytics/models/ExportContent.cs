@@ -27,6 +27,9 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "fieldNames")]
         public System.Collections.Generic.List<string> FieldNames { get; set; }
         
+        /// <value>
+        /// parserNames
+        /// </value>
         [JsonProperty(PropertyName = "parserNames")]
         public System.Collections.Generic.List<string> ParserNames { get; set; }
         

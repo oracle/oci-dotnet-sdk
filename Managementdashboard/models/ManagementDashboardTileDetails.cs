@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ManagementdashboardService.Models
 {
     /// <summary>
-    /// Properties of dashboard tile representing a saved search.
+    /// Properties of the dashboard tile representing a saved search.  
+    /// Tiles are laid out in a twelve column grid system with (0,0) at upper left corner.
+    /// 
     /// </summary>
     public class ManagementDashboardTileDetails 
     {
         
         /// <value>
-        /// Display name for saved search.
+        /// Display name of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +34,7 @@ namespace Oci.ManagementdashboardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Id of saved search.
+        /// ID of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +44,7 @@ namespace Oci.ManagementdashboardService.Models
         public string SavedSearchId { get; set; }
         
         /// <value>
-        /// Row, Y position
+        /// Tile's row number.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +54,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<int> Row { get; set; }
         
         /// <value>
-        /// Column, X position
+        /// Tile's column number.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +64,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<int> Column { get; set; }
         
         /// <value>
-        /// Height position
+        /// The number of rows the tile occupies.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +74,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<int> Height { get; set; }
         
         /// <value>
-        /// Width position
+        /// The number of columns the tile occupies.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +84,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<int> Width { get; set; }
         
         /// <value>
-        /// Json for internationalization.
+        /// JSON that contains internationalization options.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +94,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// Json to contain options for UI.
+        /// JSON that contains user interface options.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,7 +104,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of Json to contain options for source of data.
+        /// Array of JSON that contain data source options.
         /// </value>
         /// <remarks>
         /// Required
@@ -112,7 +114,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<System.Object> DataConfig { get; set; }
                 ///
         /// <value>
-        /// State of saved search.
+        /// Current state of the saved search.
         /// </value>
         ///
         public enum StateEnum {
@@ -125,7 +127,7 @@ namespace Oci.ManagementdashboardService.Models
         };
 
         /// <value>
-        /// State of saved search.
+        /// Current state of the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -136,7 +138,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<StateEnum> State { get; set; }
         
         /// <value>
-        /// Drill down configuration
+        /// Drill-down configuration to define the destination of a drill-down action.
         /// </value>
         /// <remarks>
         /// Required

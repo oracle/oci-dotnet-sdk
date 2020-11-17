@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Namespace of a tenancy in Logan Analytics application
+    /// This is the namespace details of a tenancy in Logan Analytics application
     /// </summary>
     public class Namespace 
     {
         
         /// <value>
-        /// namespace name
+        /// This is the namespace name of a tenancy
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Models
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Tenancy ID
+        /// The is the tenancy ID
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// if tenancy is onboarded to logging analytics
+        /// This indicates if the tenancy is onboarded to Logging Analytics
         /// </value>
         /// <remarks>
         /// Required

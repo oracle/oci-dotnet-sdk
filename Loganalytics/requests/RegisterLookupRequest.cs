@@ -17,7 +17,7 @@ namespace Oci.LoganalyticsService.Requests
     {
         
         /// <value>
-        /// The Log Analytics namespace used for the request.
+        /// The Logging Analytics namespace used for the request.
         /// 
         /// </value>
         /// <remarks>
@@ -74,7 +74,7 @@ namespace Oci.LoganalyticsService.Requests
         public string Description { get; set; }
         
         /// <value>
-        /// character Encoding
+        /// Character Encoding
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "charEncoding")]
         public string CharEncoding { get; set; }

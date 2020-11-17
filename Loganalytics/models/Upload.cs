@@ -71,7 +71,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeLatestLogEntry { get; set; }
         
         /// <value>
-        /// Warnings summary.
+        /// Number of warnings associated to the upload.
         /// </value>
         [JsonProperty(PropertyName = "warningsCount")]
         public System.Nullable<int> WarningsCount { get; set; }
