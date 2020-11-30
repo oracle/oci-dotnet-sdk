@@ -13,6 +13,9 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/oda/StartOdaInstance.cs.html">here</a> to see an example of how to use StartOdaInstance request.
+    /// </example>
     public class StartOdaInstanceRequest : Oci.Common.IOciRequest
     {
         

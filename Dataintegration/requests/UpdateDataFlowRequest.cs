@@ -13,6 +13,9 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dataintegration/UpdateDataFlow.cs.html">here</a> to see an example of how to use UpdateDataFlow request.
+    /// </example>
     public class UpdateDataFlowRequest : Oci.Common.IOciRequest
     {
         

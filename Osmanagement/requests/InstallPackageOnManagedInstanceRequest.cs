@@ -13,6 +13,9 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/osmanagement/InstallPackageOnManagedInstance.cs.html">here</a> to see an example of how to use InstallPackageOnManagedInstance request.
+    /// </example>
     public class InstallPackageOnManagedInstanceRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.DtsService.Models;
 
 namespace Oci.DtsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DetachDevicesFromTransferPackage.cs.html">here</a> to see an example of how to use DetachDevicesFromTransferPackage request.
+    /// </example>
     public class DetachDevicesFromTransferPackageRequest : Oci.Common.IOciRequest
     {
         

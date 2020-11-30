@@ -13,6 +13,9 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/UpdateApi.cs.html">here</a> to see an example of how to use UpdateApi request.
+    /// </example>
     public class UpdateApiRequest : Oci.Common.IOciRequest
     {
         

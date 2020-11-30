@@ -13,6 +13,9 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/identity/UploadApiKey.cs.html">here</a> to see an example of how to use UploadApiKey request.
+    /// </example>
     public class UploadApiKeyRequest : Oci.Common.IOciRequest
     {
         

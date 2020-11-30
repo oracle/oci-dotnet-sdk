@@ -63,6 +63,9 @@ namespace Oci.MysqlService.Models
                 case "BACKUP":
                     obj = new DbSystemSourceFromBackup();
                     break;
+                case "NONE":
+                    obj = new DbSystemSourceFromNone();
+                    break;
                 case "IMPORTURL":
                     obj = new DbSystemSourceImportFromUrl();
                     break;

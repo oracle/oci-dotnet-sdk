@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetIPSecConnectionTunnel.cs.html">here</a> to see an example of how to use GetIPSecConnectionTunnel request.
+    /// </example>
     public class GetIPSecConnectionTunnelRequest : Oci.Common.IOciRequest
     {
         

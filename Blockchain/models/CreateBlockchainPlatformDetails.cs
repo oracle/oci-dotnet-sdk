@@ -59,7 +59,7 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<BlockchainPlatform.PlatformRoleEnum> PlatformRole { get; set; }
         
         /// <value>
-        /// Type of compute shape - one of Standard, (Enterprise) Small, Medium, Large or Extra Large
+        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<bool> IsByol { get; set; }
         
         /// <value>
-        /// IDCS access token
+        /// IDCS access token with Identity Domain Administrator role
         /// </value>
         [JsonProperty(PropertyName = "idcsAccessToken")]
         public string IdcsAccessToken { get; set; }

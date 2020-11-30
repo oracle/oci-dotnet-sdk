@@ -13,6 +13,9 @@ using Oci.LoggingingestionService.Models;
 
 namespace Oci.LoggingingestionService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loggingingestion/PutLogs.cs.html">here</a> to see an example of how to use PutLogs request.
+    /// </example>
     public class PutLogsRequest : Oci.Common.IOciRequest
     {
         

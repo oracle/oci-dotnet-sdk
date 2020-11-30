@@ -13,6 +13,9 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/ChangeDetectorRecipeCompartment.cs.html">here</a> to see an example of how to use ChangeDetectorRecipeCompartment request.
+    /// </example>
     public class ChangeDetectorRecipeCompartmentRequest : Oci.Common.IOciRequest
     {
         

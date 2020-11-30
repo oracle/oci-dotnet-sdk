@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetImageShapeCompatibilityEntry.cs.html">here</a> to see an example of how to use GetImageShapeCompatibilityEntry request.
+    /// </example>
     public class GetImageShapeCompatibilityEntryRequest : Oci.Common.IOciRequest
     {
         

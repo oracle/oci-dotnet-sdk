@@ -13,6 +13,9 @@ using Oci.BlockchainService.Models;
 
 namespace Oci.BlockchainService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/blockchain/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors request.
+    /// </example>
     public class ListWorkRequestErrorsRequest : Oci.Common.IOciRequest
     {
         

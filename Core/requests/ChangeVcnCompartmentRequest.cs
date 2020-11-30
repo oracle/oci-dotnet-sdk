@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeVcnCompartment.cs.html">here</a> to see an example of how to use ChangeVcnCompartment request.
+    /// </example>
     public class ChangeVcnCompartmentRequest : Oci.Common.IOciRequest
     {
         

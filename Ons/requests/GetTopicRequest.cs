@@ -13,6 +13,9 @@ using Oci.OnsService.Models;
 
 namespace Oci.OnsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ons/GetTopic.cs.html">here</a> to see an example of how to use GetTopic request.
+    /// </example>
     public class GetTopicRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs request.
+    /// </example>
     public class ListWorkRequestLogsRequest : Oci.Common.IOciRequest
     {
         
@@ -33,7 +36,7 @@ namespace Oci.DatasafeService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The beginning page from which the results start retrieving.
+        /// For list pagination. The page token representing the page at which to start retrieving results. It is usually retrieved from a previous \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }

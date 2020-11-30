@@ -13,6 +13,9 @@ using Oci.MysqlService.Models;
 
 namespace Oci.MysqlService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/mysql/ListBackups.cs.html">here</a> to see an example of how to use ListBackups request.
+    /// </example>
     public class ListBackupsRequest : Oci.Common.IOciRequest
     {
         
@@ -58,6 +61,12 @@ namespace Oci.MysqlService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// Backup creationType
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationType")]
+        public System.Nullable<Backup.CreationTypeEnum> CreationType { get; set; }
         
         ///
         /// <value>

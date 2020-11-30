@@ -125,6 +125,13 @@ namespace Oci.ManagementagentService.Models
         public System.Nullable<System.DateTime> TimeLastHeartbeat { get; set; }
         
         /// <value>
+        /// The current availability status of managementAgent
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AvailabilityStatus> AvailabilityStatus { get; set; }
+        
+        /// <value>
         /// The current state of managementAgent
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

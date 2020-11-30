@@ -13,6 +13,9 @@ using Oci.DtsService.Models;
 
 namespace Oci.DtsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/UpdateApplianceExportJob.cs.html">here</a> to see an example of how to use UpdateApplianceExportJob request.
+    /// </example>
     public class UpdateApplianceExportJobRequest : Oci.Common.IOciRequest
     {
         

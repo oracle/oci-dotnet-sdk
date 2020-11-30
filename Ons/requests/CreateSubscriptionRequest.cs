@@ -13,6 +13,9 @@ using Oci.OnsService.Models;
 
 namespace Oci.OnsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ons/CreateSubscription.cs.html">here</a> to see an example of how to use CreateSubscription request.
+    /// </example>
     public class CreateSubscriptionRequest : Oci.Common.IOciRequest
     {
         

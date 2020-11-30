@@ -13,6 +13,9 @@ using Oci.FunctionsService.Models;
 
 namespace Oci.FunctionsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ListApplications.cs.html">here</a> to see an example of how to use ListApplications request.
+    /// </example>
     public class ListApplicationsRequest : Oci.Common.IOciRequest
     {
         

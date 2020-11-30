@@ -13,6 +13,9 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/ListWhitelists.cs.html">here</a> to see an example of how to use ListWhitelists request.
+    /// </example>
     public class ListWhitelistsRequest : Oci.Common.IOciRequest
     {
         

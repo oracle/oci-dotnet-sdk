@@ -13,6 +13,9 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/filestorage/ListFileSystems.cs.html">here</a> to see an example of how to use ListFileSystems request.
+    /// </example>
     public class ListFileSystemsRequest : Oci.Common.IOciRequest
     {
         

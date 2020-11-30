@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListInstanceDevices.cs.html">here</a> to see an example of how to use ListInstanceDevices request.
+    /// </example>
     public class ListInstanceDevicesRequest : Oci.Common.IOciRequest
     {
         

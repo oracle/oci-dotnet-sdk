@@ -13,6 +13,9 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/ChangeCertificateCompartment.cs.html">here</a> to see an example of how to use ChangeCertificateCompartment request.
+    /// </example>
     public class ChangeCertificateCompartmentRequest : Oci.Common.IOciRequest
     {
         

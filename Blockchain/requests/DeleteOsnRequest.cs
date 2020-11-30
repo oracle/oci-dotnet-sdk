@@ -13,6 +13,9 @@ using Oci.BlockchainService.Models;
 
 namespace Oci.BlockchainService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/blockchain/DeleteOsn.cs.html">here</a> to see an example of how to use DeleteOsn request.
+    /// </example>
     public class DeleteOsnRequest : Oci.Common.IOciRequest
     {
         

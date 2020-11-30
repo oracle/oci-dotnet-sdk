@@ -13,6 +13,9 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/UpdateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use UpdateDataSafePrivateEndpoint request.
+    /// </example>
     public class UpdateDataSafePrivateEndpointRequest : Oci.Common.IOciRequest
     {
         
@@ -37,10 +40,10 @@ namespace Oci.DatasafeService.Requests
         public UpdateDataSafePrivateEndpointDetails UpdateDataSafePrivateEndpointDetails { get; set; }
         
         /// <value>
-        /// For optimistic concurrency control. In the PUT or DELETE call 
-        /// for a resource, set the if-match parameter to the value of the 
+        /// For optimistic concurrency control. In the PUT or DELETE call
+        /// for a resource, set the if-match parameter to the value of the
         /// etag from a previous GET or POST response for that resource.
-        /// The resource will be updated or deleted only if the etag you 
+        /// The resource will be updated or deleted only if the etag you
         /// provide matches the resource's current etag value.
         /// 
         /// </value>

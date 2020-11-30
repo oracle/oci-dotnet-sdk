@@ -13,6 +13,9 @@ using Oci.BudgetService.Models;
 
 namespace Oci.BudgetService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/budget/ListBudgets.cs.html">here</a> to see an example of how to use ListBudgets request.
+    /// </example>
     public class ListBudgetsRequest : Oci.Common.IOciRequest
     {
         

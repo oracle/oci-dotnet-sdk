@@ -13,6 +13,9 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/osmanagement/UpdateScheduledJob.cs.html">here</a> to see an example of how to use UpdateScheduledJob request.
+    /// </example>
     public class UpdateScheduledJobRequest : Oci.Common.IOciRequest
     {
         

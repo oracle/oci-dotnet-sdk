@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
+using Oci.Common.Utils;
 
 namespace Oci.Common.Http.Internal
 {
@@ -50,7 +51,7 @@ namespace Oci.Common.Http.Internal
         {
             using var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true);
             using var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None };
-            var js = JsonSerializer.Create(new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+            var js = JsonSerializer.Create(new JsonSerializerSettings { ContractResolver = new CustomResolver(), NullValueHandling = NullValueHandling.Ignore });
             js.Serialize(jtw, value);
             jtw.Flush();
             stream.Seek(0, SeekOrigin.Begin);

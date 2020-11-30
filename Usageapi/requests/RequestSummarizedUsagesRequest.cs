@@ -13,6 +13,9 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/usageapi/RequestSummarizedUsages.cs.html">here</a> to see an example of how to use RequestSummarizedUsages request.
+    /// </example>
     public class RequestSummarizedUsagesRequest : Oci.Common.IOciRequest
     {
         

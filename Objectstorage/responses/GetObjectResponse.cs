@@ -159,7 +159,9 @@ namespace Oci.ObjectstorageService.Responses
 
 
         /// <value>
-        /// Time after which object is no longer cacheable, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616#section-14.21).
+        /// The date and time after which the object is no longer cached by a browser, proxy, or other caching entity. See
+        /// [RFC 2616](https://tools.ietf.org/rfc/rfc2616#section-14.21).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "expires")]
         public System.Nullable<System.DateTime> Expires { get; set; }

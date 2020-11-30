@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeKmsKey.cs.html">here</a> to see an example of how to use GetVolumeKmsKey request.
+    /// </example>
     public class GetVolumeKmsKeyRequest : Oci.Common.IOciRequest
     {
         

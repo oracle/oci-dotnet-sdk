@@ -13,6 +13,9 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/keymanagement/RestoreKeyFromObjectStore.cs.html">here</a> to see an example of how to use RestoreKeyFromObjectStore request.
+    /// </example>
     public class RestoreKeyFromObjectStoreRequest : Oci.Common.IOciRequest
     {
         

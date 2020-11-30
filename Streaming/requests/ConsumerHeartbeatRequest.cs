@@ -13,6 +13,9 @@ using Oci.StreamingService.Models;
 
 namespace Oci.StreamingService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ConsumerHeartbeat.cs.html">here</a> to see an example of how to use ConsumerHeartbeat request.
+    /// </example>
     public class ConsumerHeartbeatRequest : Oci.Common.IOciRequest
     {
         

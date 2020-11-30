@@ -177,6 +177,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
         
+        [JsonProperty(PropertyName = "dbSystemSnapshot")]
+        public DbSystemSnapshot DbSystemSnapshot { get; set; }
+        
         /// <value>
         /// The size of the backup in base-2 (IEC) gibibytes. (GiB).
         /// </value>
@@ -209,14 +212,14 @@ namespace Oci.MysqlService.Models
         public string ShapeName { get; set; }
         
         /// <value>
-        /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

@@ -13,6 +13,9 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/GetApiContent.cs.html">here</a> to see an example of how to use GetApiContent request.
+    /// </example>
     public class GetApiContentRequest : Oci.Common.IOciRequest
     {
         

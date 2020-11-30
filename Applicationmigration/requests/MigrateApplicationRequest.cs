@@ -13,6 +13,9 @@ using Oci.ApplicationmigrationService.Models;
 
 namespace Oci.ApplicationmigrationService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/applicationmigration/MigrateApplication.cs.html">here</a> to see an example of how to use MigrateApplication request.
+    /// </example>
     public class MigrateApplicationRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementagent/DeleteManagementAgent.cs.html">here</a> to see an example of how to use DeleteManagementAgent request.
+    /// </example>
     public class DeleteManagementAgentRequest : Oci.Common.IOciRequest
     {
         

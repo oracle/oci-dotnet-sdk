@@ -13,6 +13,9 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/ListConfigurationSourceProviders.cs.html">here</a> to see an example of how to use ListConfigurationSourceProviders request.
+    /// </example>
     public class ListConfigurationSourceProvidersRequest : Oci.Common.IOciRequest
     {
         

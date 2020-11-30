@@ -48,6 +48,9 @@ namespace Oci.MysqlService.Models
         
         /// <value>
         /// Simple key-value pair applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
+        /// Tags defined here will be copied verbatim as tags on the Backup resource created by this BackupPolicy.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

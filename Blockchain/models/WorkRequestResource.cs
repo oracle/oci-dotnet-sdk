@@ -83,5 +83,11 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
         
+        /// <value>
+        /// Collection of SubType information for a work request resource\u00A9
+        /// </value>
+        [JsonProperty(PropertyName = "subTypeDetails")]
+        public System.Collections.Generic.List<WorkRequestResourceSubTypeDetail> SubTypeDetails { get; set; }
+        
     }
 }

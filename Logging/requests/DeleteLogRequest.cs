@@ -13,6 +13,9 @@ using Oci.LoggingService.Models;
 
 namespace Oci.LoggingService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/logging/DeleteLog.cs.html">here</a> to see an example of how to use DeleteLog request.
+    /// </example>
     public class DeleteLogRequest : Oci.Common.IOciRequest
     {
         

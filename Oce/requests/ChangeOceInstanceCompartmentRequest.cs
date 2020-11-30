@@ -13,6 +13,9 @@ using Oci.OceService.Models;
 
 namespace Oci.OceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/oce/ChangeOceInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeOceInstanceCompartment request.
+    /// </example>
     public class ChangeOceInstanceCompartmentRequest : Oci.Common.IOciRequest
     {
         

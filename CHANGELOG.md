@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 8.0.0 - 2020-12-01
+### Added
+- Support for calling Oracle Cloud Infrastructure services in the sa-santiago-1 region
+- Support for peer and OSN resources, as well as retry tokens, in the Blockchain Platform service
+- Support for getting the availability status of management agents in the Management Agent service
+- Support for the on-prem-connector resource type in the Data Safe service
+- Support for service channels in the MySQL Database service
+- Support for getting the creation type of backups, and for filtering backups by creation type in the MySQL Database service
+- Fixed Delete request issue when used in .NET Framework applications
+- Send DateTime values in request body in RFC3339 format
+- Add link to sample code for each API method and request class
+
+### Breaking Changes
+- DefinedTags and FreeformTags properties are removed from EnableDataSafeConfigurationDetails model in the Datasafe service
+- CompartmentId parameter is changed from optional to required in ListDataSafePrivateEndpointsRequest in the Datasafe service
+- IsEnabled property is changed from optional to required in EnableDataSafeConfigurationDetails model in the Datasafe service
+
 ## 7.0.0 - 2020-11-17
 ### Added
 

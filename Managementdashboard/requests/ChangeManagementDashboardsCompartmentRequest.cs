@@ -13,6 +13,9 @@ using Oci.ManagementdashboardService.Models;
 
 namespace Oci.ManagementdashboardService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ChangeManagementDashboardsCompartment.cs.html">here</a> to see an example of how to use ChangeManagementDashboardsCompartment request.
+    /// </example>
     public class ChangeManagementDashboardsCompartmentRequest : Oci.Common.IOciRequest
     {
         

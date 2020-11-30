@@ -70,6 +70,8 @@ namespace Oci.MysqlService.Models
             ReadUncommitted,
             [EnumMember(Value = "READ-COMMITED")]
             ReadCommited,
+            [EnumMember(Value = "READ-COMMITTED")]
+            ReadCommitted,
             [EnumMember(Value = "REPEATABLE-READ")]
             RepeatableRead,
             [EnumMember(Value = "SERIALIZABLE")]
@@ -126,7 +128,7 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> MysqlFirewallMode { get; set; }
         
         /// <value>
-        /// (\"mysqlx_enable_hello_notice\")
+        /// (\"mysqlx_enable_hello_notice\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxEnableHelloNotice")]
         public System.Nullable<bool> MysqlxEnableHelloNotice { get; set; }
@@ -144,7 +146,7 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> SqlWarnings { get; set; }
         
         /// <value>
-        /// (\"binlog_expire_logs_seconds\")
+        /// (\"binlog_expire_logs_seconds\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "binlogExpireLogsSeconds")]
         public System.Nullable<int> BinlogExpireLogsSeconds { get; set; }
@@ -186,7 +188,7 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> CteMaxRecursionDepth { get; set; }
         
         /// <value>
-        /// (\"generated_random_password_length\")
+        /// (\"generated_random_password_length\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "generatedRandomPasswordLength")]
         public System.Nullable<int> GeneratedRandomPasswordLength { get; set; }
@@ -246,55 +248,55 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> MaxExecutionTime { get; set; }
         
         /// <value>
-        /// (\"mysqlx_connect_timeout\")
+        /// (\"mysqlx_connect_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxConnectTimeout")]
         public System.Nullable<int> MysqlxConnectTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_document_id_unique_prefix\")
+        /// (\"mysqlx_document_id_unique_prefix\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxDocumentIdUniquePrefix")]
         public System.Nullable<int> MysqlxDocumentIdUniquePrefix { get; set; }
         
         /// <value>
-        /// (\"mysqlx_idle_worker_thread_timeout\")
+        /// (\"mysqlx_idle_worker_thread_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxIdleWorkerThreadTimeout")]
         public System.Nullable<int> MysqlxIdleWorkerThreadTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_interactive_timeout\")
+        /// (\"mysqlx_interactive_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxInteractiveTimeout")]
         public System.Nullable<int> MysqlxInteractiveTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_max_allowed_packet\")
+        /// (\"mysqlx_max_allowed_packet\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxMaxAllowedPacket")]
         public System.Nullable<int> MysqlxMaxAllowedPacket { get; set; }
         
         /// <value>
-        /// (\"mysqlx_min_worker_threads\")
+        /// (\"mysqlx_min_worker_threads\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxMinWorkerThreads")]
         public System.Nullable<int> MysqlxMinWorkerThreads { get; set; }
         
         /// <value>
-        /// (\"mysqlx_read_timeout\")
+        /// (\"mysqlx_read_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxReadTimeout")]
         public System.Nullable<int> MysqlxReadTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_wait_timeout\")
+        /// (\"mysqlx_wait_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxWaitTimeout")]
         public System.Nullable<int> MysqlxWaitTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_write_timeout\")
+        /// (\"mysqlx_write_timeout\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "mysqlxWriteTimeout")]
         public System.Nullable<int> MysqlxWriteTimeout { get; set; }
@@ -306,13 +308,13 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> ParserMaxMemSize { get; set; }
         
         /// <value>
-        /// (\"query_alloc_block_size\")
+        /// (\"query_alloc_block_size\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "queryAllocBlockSize")]
         public System.Nullable<int> QueryAllocBlockSize { get; set; }
         
         /// <value>
-        /// (\"query_prealloc_size\")
+        /// (\"query_prealloc_size\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "queryPreallocSize")]
         public System.Nullable<int> QueryPreallocSize { get; set; }
@@ -355,6 +357,12 @@ namespace Oci.MysqlService.Models
         
         /// <value>
         /// Set the default compression level for the zstd algorithm. (\"mysqlx_zstd_default_compression_level\")
+        /// </value>
+        [JsonProperty(PropertyName = "mysqlxZstdDefaultCompressionLevel")]
+        public System.Nullable<int> MysqlxZstdDefaultCompressionLevel { get; set; }
+        
+        /// <value>
+        /// DEPRECATED -- typo of mysqlx_zstd_default_compression_level. variable will be ignored.
         /// </value>
         [JsonProperty(PropertyName = "mysqlZstdDefaultCompressionLevel")]
         public System.Nullable<int> MysqlZstdDefaultCompressionLevel { get; set; }

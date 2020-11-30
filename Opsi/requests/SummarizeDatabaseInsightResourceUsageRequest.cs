@@ -13,6 +13,9 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/opsi/SummarizeDatabaseInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsage request.
+    /// </example>
     public class SummarizeDatabaseInsightResourceUsageRequest : Oci.Common.IOciRequest
     {
         

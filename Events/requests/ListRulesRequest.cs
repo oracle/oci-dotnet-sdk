@@ -13,6 +13,9 @@ using Oci.EventsService.Models;
 
 namespace Oci.EventsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/events/ListRules.cs.html">here</a> to see an example of how to use ListRules request.
+    /// </example>
     public class ListRulesRequest : Oci.Common.IOciRequest
     {
         

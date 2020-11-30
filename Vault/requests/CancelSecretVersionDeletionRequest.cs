@@ -13,6 +13,9 @@ using Oci.VaultService.Models;
 
 namespace Oci.VaultService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/CancelSecretVersionDeletion.cs.html">here</a> to see an example of how to use CancelSecretVersionDeletion request.
+    /// </example>
     public class CancelSecretVersionDeletionRequest : Oci.Common.IOciRequest
     {
         

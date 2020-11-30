@@ -13,6 +13,9 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/GetJsChallenge.cs.html">here</a> to see an example of how to use GetJsChallenge request.
+    /// </example>
     public class GetJsChallengeRequest : Oci.Common.IOciRequest
     {
         

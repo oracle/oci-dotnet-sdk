@@ -17,12 +17,18 @@ namespace Oci.Common.Utils
         protected override JsonProperty CreateProperty(System.Reflection.MemberInfo member, MemberSerialization memberSerialization)
         {
             JsonProperty property = base.CreateProperty(member, memberSerialization);
-            if (typeof(Stream).IsAssignableFrom(property.PropertyType))
+            // If the property type of Nullable, get the real type inside.
+            var propertyType = property.PropertyType;
+            if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                propertyType = propertyType.GetGenericArguments()[0];
+            }
+            if (typeof(Stream).IsAssignableFrom(propertyType))
             {
                 // Use custom converter for Stream type
                 property.Converter = new StreamJsonConverter();
             }
-            if (typeof(DateTime) == property.PropertyType)
+            if (typeof(DateTime) == propertyType)
             {
                 property.Converter = new DateTimeJsonConverter();
             }

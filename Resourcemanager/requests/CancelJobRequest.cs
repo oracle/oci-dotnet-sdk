@@ -13,6 +13,9 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/CancelJob.cs.html">here</a> to see an example of how to use CancelJob request.
+    /// </example>
     public class CancelJobRequest : Oci.Common.IOciRequest
     {
         

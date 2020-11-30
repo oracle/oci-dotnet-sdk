@@ -13,6 +13,9 @@ using Oci.CimsService.Models;
 
 namespace Oci.CimsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/ValidateUser.cs.html">here</a> to see an example of how to use ValidateUser request.
+    /// </example>
     public class ValidateUserRequest : Oci.Common.IOciRequest
     {
         

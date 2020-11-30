@@ -16,7 +16,15 @@ namespace Oci.DatasafeService.Responses
     {
 
         /// <value>
-        /// The OCID of the work request. Use GetWorkRequest with this OCID to track the status of the request.
+        /// For optimistic concurrency control. For more information, see [ETags for Optimistic Concurrency Control](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#eleven)
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
+
+        /// <value>
+        /// The OCID of the work request. Use {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} with this OCID to track the status of the request.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
@@ -31,6 +39,18 @@ namespace Oci.DatasafeService.Responses
         public string OpcRequestId { get; set; }
 
 
+        /// <value>
+        /// The full URI of the Data Safe private endpoint.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "location")]
+        public string Location { get; set; }
+
+        /// <value>
+        /// The returned DataSafePrivateEndpoint instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public DataSafePrivateEndpoint DataSafePrivateEndpoint { get; set; }
 
     }
 }

@@ -13,6 +13,9 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousVmCluster.cs.html">here</a> to see an example of how to use UpdateAutonomousVmCluster request.
+    /// </example>
     public class UpdateAutonomousVmClusterRequest : Oci.Common.IOciRequest
     {
         

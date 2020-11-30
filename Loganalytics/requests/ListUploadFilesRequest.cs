@@ -13,6 +13,9 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loganalytics/ListUploadFiles.cs.html">here</a> to see an example of how to use ListUploadFiles request.
+    /// </example>
     public class ListUploadFilesRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetRetentionRule.cs.html">here</a> to see an example of how to use GetRetentionRule request.
+    /// </example>
     public class GetRetentionRuleRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/identity/CreateSwiftPassword.cs.html">here</a> to see an example of how to use CreateSwiftPassword request.
+    /// </example>
     public class CreateSwiftPasswordRequest : Oci.Common.IOciRequest
     {
         

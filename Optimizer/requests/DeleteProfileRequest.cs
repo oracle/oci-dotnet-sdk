@@ -13,6 +13,9 @@ using Oci.OptimizerService.Models;
 
 namespace Oci.OptimizerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/optimizer/DeleteProfile.cs.html">here</a> to see an example of how to use DeleteProfile request.
+    /// </example>
     public class DeleteProfileRequest : Oci.Common.IOciRequest
     {
         

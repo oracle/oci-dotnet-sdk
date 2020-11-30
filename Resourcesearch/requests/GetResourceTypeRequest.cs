@@ -13,6 +13,9 @@ using Oci.ResourcesearchService.Models;
 
 namespace Oci.ResourcesearchService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcesearch/GetResourceType.cs.html">here</a> to see an example of how to use GetResourceType request.
+    /// </example>
     public class GetResourceTypeRequest : Oci.Common.IOciRequest
     {
         

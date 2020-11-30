@@ -13,6 +13,9 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GetDataSafeConfiguration.cs.html">here</a> to see an example of how to use GetDataSafeConfiguration request.
+    /// </example>
     public class GetDataSafeConfigurationRequest : Oci.Common.IOciRequest
     {
         

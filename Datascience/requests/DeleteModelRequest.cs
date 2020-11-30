@@ -13,6 +13,9 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datascience/DeleteModel.cs.html">here</a> to see an example of how to use DeleteModel request.
+    /// </example>
     public class DeleteModelRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.FunctionsService.Models;
 
 namespace Oci.FunctionsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication request.
+    /// </example>
     public class UpdateApplicationRequest : Oci.Common.IOciRequest
     {
         
