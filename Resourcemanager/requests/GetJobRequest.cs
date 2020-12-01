@@ -13,6 +13,9 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/GetJob.cs.html">here</a> to see an example of how to use GetJob request.
+    /// </example>
     public class GetJobRequest : Oci.Common.IOciRequest
     {
         

@@ -73,11 +73,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/CancelInstanceAgentCommand.cs.html">here</a> to see an example of how to use CancelInstanceAgentCommand API.</example>
         public async Task<CancelInstanceAgentCommandResponse> CancelInstanceAgentCommand(CancelInstanceAgentCommandRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelInstanceAgentCommand");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommands/{instanceAgentCommandId}".Trim('/')));
-            HttpMethod method = new HttpMethod("Delete");
+            HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -112,11 +113,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/CreateInstanceAgentCommand.cs.html">here</a> to see an example of how to use CreateInstanceAgentCommand API.</example>
         public async Task<CreateInstanceAgentCommandResponse> CreateInstanceAgentCommand(CreateInstanceAgentCommandRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createInstanceAgentCommand");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommands".Trim('/')));
-            HttpMethod method = new HttpMethod("Post");
+            HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -150,11 +152,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/GetInstanceAgentCommand.cs.html">here</a> to see an example of how to use GetInstanceAgentCommand API.</example>
         public async Task<GetInstanceAgentCommandResponse> GetInstanceAgentCommand(GetInstanceAgentCommandRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getInstanceAgentCommand");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommands/{instanceAgentCommandId}".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -188,11 +191,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/GetInstanceAgentCommandExecution.cs.html">here</a> to see an example of how to use GetInstanceAgentCommandExecution API.</example>
         public async Task<GetInstanceAgentCommandExecutionResponse> GetInstanceAgentCommandExecution(GetInstanceAgentCommandExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getInstanceAgentCommandExecution");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommands/{instanceAgentCommandId}/status".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -228,11 +232,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/ListInstanceAgentCommandExecutions.cs.html">here</a> to see an example of how to use ListInstanceAgentCommandExecutions API.</example>
         public async Task<ListInstanceAgentCommandExecutionsResponse> ListInstanceAgentCommandExecutions(ListInstanceAgentCommandExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listInstanceAgentCommandExecutions");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommandExecutions".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -268,11 +273,12 @@ namespace Oci.ComputeinstanceagentService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/ListInstanceAgentCommands.cs.html">here</a> to see an example of how to use ListInstanceAgentCommands API.</example>
         public async Task<ListInstanceAgentCommandsResponse> ListInstanceAgentCommands(ListInstanceAgentCommandsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listInstanceAgentCommands");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instanceAgentCommands".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);

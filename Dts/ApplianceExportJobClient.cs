@@ -72,11 +72,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ChangeApplianceExportJobCompartment.cs.html">here</a> to see an example of how to use ChangeApplianceExportJobCompartment API.</example>
         public async Task<ChangeApplianceExportJobCompartmentResponse> ChangeApplianceExportJobCompartment(ChangeApplianceExportJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeApplianceExportJobCompartment");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs/{applianceExportJobId}/actions/changeCompartment".Trim('/')));
-            HttpMethod method = new HttpMethod("Post");
+            HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -110,11 +111,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateApplianceExportJob.cs.html">here</a> to see an example of how to use CreateApplianceExportJob API.</example>
         public async Task<CreateApplianceExportJobResponse> CreateApplianceExportJob(CreateApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createApplianceExportJob");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs".Trim('/')));
-            HttpMethod method = new HttpMethod("Post");
+            HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -148,11 +150,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DeleteApplianceExportJob.cs.html">here</a> to see an example of how to use DeleteApplianceExportJob API.</example>
         public async Task<DeleteApplianceExportJobResponse> DeleteApplianceExportJob(DeleteApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteApplianceExportJob");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs/{applianceExportJobId}".Trim('/')));
-            HttpMethod method = new HttpMethod("Delete");
+            HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -186,11 +189,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetApplianceExportJob.cs.html">here</a> to see an example of how to use GetApplianceExportJob API.</example>
         public async Task<GetApplianceExportJobResponse> GetApplianceExportJob(GetApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getApplianceExportJob");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs/{applianceExportJobId}".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -224,11 +228,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ListApplianceExportJobs.cs.html">here</a> to see an example of how to use ListApplianceExportJobs API.</example>
         public async Task<ListApplianceExportJobsResponse> ListApplianceExportJobs(ListApplianceExportJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listApplianceExportJobs");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -262,11 +267,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/UpdateApplianceExportJob.cs.html">here</a> to see an example of how to use UpdateApplianceExportJob API.</example>
         public async Task<UpdateApplianceExportJobResponse> UpdateApplianceExportJob(UpdateApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateApplianceExportJob");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/applianceExportJobs/{applianceExportJobId}".Trim('/')));
-            HttpMethod method = new HttpMethod("Put");
+            HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);

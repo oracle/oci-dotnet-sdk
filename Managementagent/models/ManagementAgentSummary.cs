@@ -107,6 +107,19 @@ namespace Oci.ManagementagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The time the Management Agent has last recorded its heartbeat. An RFC3339 formatted datetime string
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastHeartbeat")]
+        public System.Nullable<System.DateTime> TimeLastHeartbeat { get; set; }
+        
+        /// <value>
+        /// The current availability status of managementAgent
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AvailabilityStatus> AvailabilityStatus { get; set; }
+        
+        /// <value>
         /// The current state of managementAgent
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

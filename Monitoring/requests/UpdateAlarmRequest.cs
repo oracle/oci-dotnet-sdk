@@ -13,6 +13,9 @@ using Oci.MonitoringService.Models;
 
 namespace Oci.MonitoringService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/monitoring/UpdateAlarm.cs.html">here</a> to see an example of how to use UpdateAlarm request.
+    /// </example>
     public class UpdateAlarmRequest : Oci.Common.IOciRequest
     {
         

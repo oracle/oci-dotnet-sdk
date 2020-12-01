@@ -13,6 +13,9 @@ using Oci.MarketplaceService.Models;
 
 namespace Oci.MarketplaceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/DeleteAcceptedAgreement.cs.html">here</a> to see an example of how to use DeleteAcceptedAgreement request.
+    /// </example>
     public class DeleteAcceptedAgreementRequest : Oci.Common.IOciRequest
     {
         

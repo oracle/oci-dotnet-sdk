@@ -16,14 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// An error encountered while executing an operation that is tracked by a work request.
+    /// An error related to a work request.
     /// </summary>
     public class WorkRequestError 
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm)
+        /// A machine-usable error code. For a list of common errors, see [API Errors](https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +43,7 @@ namespace Oci.DatasafeService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The date and time the error occurred, in the format defined by RFC3339.
+        /// The date and time the error occurred, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         /// <remarks>
         /// Required

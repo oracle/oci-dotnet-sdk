@@ -13,6 +13,9 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/keymanagement/Decrypt.cs.html">here</a> to see an example of how to use Decrypt request.
+    /// </example>
     public class DecryptRequest : Oci.Common.IOciRequest
     {
         

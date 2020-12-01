@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The information needed to enable Data Safe in the tenancy.
+    /// The details used to enable Data Safe in the tenancy and region.
     /// </summary>
     public class EnableDataSafeConfigurationDetails 
     {
@@ -24,24 +24,12 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Indicates if Data Safe is enabled.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
-        
-        /// <value>
-        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
-        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
-        /// </value>
-        [JsonProperty(PropertyName = "freeformTags")]
-        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        
-        /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
-        /// </value>
-        [JsonProperty(PropertyName = "definedTags")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
     }
 }

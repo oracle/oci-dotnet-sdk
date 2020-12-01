@@ -13,6 +13,9 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/GetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetDetectorRecipeDetectorRule request.
+    /// </example>
     public class GetDetectorRecipeDetectorRuleRequest : Oci.Common.IOciRequest
     {
         

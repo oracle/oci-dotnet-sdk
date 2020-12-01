@@ -13,6 +13,9 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/filestorage/CreateExport.cs.html">here</a> to see an example of how to use CreateExport request.
+    /// </example>
     public class CreateExportRequest : Oci.Common.IOciRequest
     {
         

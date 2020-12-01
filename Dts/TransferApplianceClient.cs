@@ -69,11 +69,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateTransferAppliance.cs.html">here</a> to see an example of how to use CreateTransferAppliance API.</example>
         public async Task<CreateTransferApplianceResponse> CreateTransferAppliance(CreateTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferAppliance");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances".Trim('/')));
-            HttpMethod method = new HttpMethod("Post");
+            HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -107,11 +108,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateTransferApplianceAdminCredentials.cs.html">here</a> to see an example of how to use CreateTransferApplianceAdminCredentials API.</example>
         public async Task<CreateTransferApplianceAdminCredentialsResponse> CreateTransferApplianceAdminCredentials(CreateTransferApplianceAdminCredentialsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferApplianceAdminCredentials");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}/admin_credentials".Trim('/')));
-            HttpMethod method = new HttpMethod("Post");
+            HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -145,11 +147,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DeleteTransferAppliance.cs.html">here</a> to see an example of how to use DeleteTransferAppliance API.</example>
         public async Task<DeleteTransferApplianceResponse> DeleteTransferAppliance(DeleteTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTransferAppliance");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}".Trim('/')));
-            HttpMethod method = new HttpMethod("Delete");
+            HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -183,11 +186,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetTransferAppliance.cs.html">here</a> to see an example of how to use GetTransferAppliance API.</example>
         public async Task<GetTransferApplianceResponse> GetTransferAppliance(GetTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferAppliance");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -221,11 +225,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetTransferApplianceCertificateAuthorityCertificate.cs.html">here</a> to see an example of how to use GetTransferApplianceCertificateAuthorityCertificate API.</example>
         public async Task<GetTransferApplianceCertificateAuthorityCertificateResponse> GetTransferApplianceCertificateAuthorityCertificate(GetTransferApplianceCertificateAuthorityCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferApplianceCertificateAuthorityCertificate");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}/certificate_authority_certificate".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -259,11 +264,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetTransferApplianceEncryptionPassphrase.cs.html">here</a> to see an example of how to use GetTransferApplianceEncryptionPassphrase API.</example>
         public async Task<GetTransferApplianceEncryptionPassphraseResponse> GetTransferApplianceEncryptionPassphrase(GetTransferApplianceEncryptionPassphraseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferApplianceEncryptionPassphrase");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}/encryptionPassphrase".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -297,11 +303,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ListTransferAppliances.cs.html">here</a> to see an example of how to use ListTransferAppliances API.</example>
         public async Task<ListTransferAppliancesResponse> ListTransferAppliances(ListTransferAppliancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTransferAppliances");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances".Trim('/')));
-            HttpMethod method = new HttpMethod("Get");
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -335,11 +342,12 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/UpdateTransferAppliance.cs.html">here</a> to see an example of how to use UpdateTransferAppliance API.</example>
         public async Task<UpdateTransferApplianceResponse> UpdateTransferAppliance(UpdateTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTransferAppliance");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/transferJobs/{id}/transferAppliances/{transferApplianceLabel}".Trim('/')));
-            HttpMethod method = new HttpMethod("Put");
+            HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);

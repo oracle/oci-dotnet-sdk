@@ -61,10 +61,6 @@ namespace Oci.MysqlService.Models
         /// <value>
         /// The OCID of the Configuration to be used for this DB System.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConfigurationId is required.")]
         [JsonProperty(PropertyName = "configurationId")]
         public string ConfigurationId { get; set; }
         

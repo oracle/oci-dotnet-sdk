@@ -13,6 +13,9 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/UpdateProblemStatus.cs.html">here</a> to see an example of how to use UpdateProblemStatus request.
+    /// </example>
     public class UpdateProblemStatusRequest : Oci.Common.IOciRequest
     {
         

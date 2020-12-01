@@ -39,7 +39,9 @@ namespace Oci.BlockchainService.Models
             [EnumMember(Value = "STOP_PLATFORM")]
             StopPlatform,
             [EnumMember(Value = "CUSTOMIZE_PLATFORM")]
-            CustomizePlatform
+            CustomizePlatform,
+            [EnumMember(Value = "SCALE_STORAGE")]
+            ScaleStorage
         };
 
         /// <value>

@@ -13,12 +13,19 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListDataSafePrivateEndpoints.cs.html">here</a> to see an example of how to use ListDataSafePrivateEndpoints request.
+    /// </example>
     public class ListDataSafePrivateEndpointsRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
         /// A filter to return only resources that match the specified compartment OCID.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -30,7 +37,7 @@ namespace Oci.DatasafeService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only the private endpoints that match the specified VCN OCID.
+        /// A filter to return only resources that match the specified VCN OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vcnId")]
         public string VcnId { get; set; }
@@ -48,7 +55,7 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The beginning page from which the results start retrieving.
+        /// For list pagination. The page token representing the page at which to start retrieving results. It is usually retrieved from a previous \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }

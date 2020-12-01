@@ -13,6 +13,9 @@ using Oci.BlockchainService.Models;
 
 namespace Oci.BlockchainService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/blockchain/CreatePeer.cs.html">here</a> to see an example of how to use CreatePeer request.
+    /// </example>
     public class CreatePeerRequest : Oci.Common.IOciRequest
     {
         

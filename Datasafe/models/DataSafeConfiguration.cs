@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// A Data Safe Configuration that allows customer to enable Data Safe in their tenancy.
+    /// A Data Safe configuration for a tenancy and region.
     /// </summary>
     public class DataSafeConfiguration 
     {
@@ -24,6 +24,10 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Indicates if Data Safe is enabled.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
@@ -40,13 +44,13 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The specific time when Data Safe configuration was enabled.
+        /// The date and time Data Safe was enabled, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeEnabled")]
         public System.Nullable<System.DateTime> TimeEnabled { get; set; }
         
         /// <value>
-        /// The current state of Data Safe configuration.
+        /// The current state of Data Safe.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -63,7 +67,7 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

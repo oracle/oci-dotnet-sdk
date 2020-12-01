@@ -13,6 +13,9 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateIpv6.cs.html">here</a> to see an example of how to use UpdateIpv6 request.
+    /// </example>
     public class UpdateIpv6Request : Oci.Common.IOciRequest
     {
         

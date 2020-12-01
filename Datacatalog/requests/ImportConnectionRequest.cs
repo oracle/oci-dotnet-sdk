@@ -13,6 +13,9 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ImportConnection.cs.html">here</a> to see an example of how to use ImportConnection request.
+    /// </example>
     public class ImportConnectionRequest : Oci.Common.IOciRequest
     {
         

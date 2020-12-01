@@ -13,6 +13,9 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/containerengine/UpdateCluster.cs.html">here</a> to see an example of how to use UpdateCluster request.
+    /// </example>
     public class UpdateClusterRequest : Oci.Common.IOciRequest
     {
         

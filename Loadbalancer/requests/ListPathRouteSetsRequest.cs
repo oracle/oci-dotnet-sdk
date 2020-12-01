@@ -13,6 +13,9 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loadbalancer/ListPathRouteSets.cs.html">here</a> to see an example of how to use ListPathRouteSets request.
+    /// </example>
     public class ListPathRouteSetsRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loadbalancer/UpdateLoadBalancer.cs.html">here</a> to see an example of how to use UpdateLoadBalancer request.
+    /// </example>
     public class UpdateLoadBalancerRequest : Oci.Common.IOciRequest
     {
         

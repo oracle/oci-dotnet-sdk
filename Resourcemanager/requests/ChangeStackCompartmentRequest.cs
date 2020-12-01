@@ -13,6 +13,9 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/ChangeStackCompartment.cs.html">here</a> to see an example of how to use ChangeStackCompartment request.
+    /// </example>
     public class ChangeStackCompartmentRequest : Oci.Common.IOciRequest
     {
         

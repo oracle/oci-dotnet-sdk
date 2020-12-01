@@ -13,6 +13,9 @@ using Oci.SchService.Models;
 
 namespace Oci.SchService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/sch/GetServiceConnector.cs.html">here</a> to see an example of how to use GetServiceConnector request.
+    /// </example>
     public class GetServiceConnectorRequest : Oci.Common.IOciRequest
     {
         

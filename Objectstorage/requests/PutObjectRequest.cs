@@ -13,6 +13,9 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/PutObject.cs.html">here</a> to see an example of how to use PutObject request.
+    /// </example>
     public class PutObjectRequest : Oci.Common.IOciRequest
     {
         
@@ -109,7 +112,7 @@ namespace Oci.ObjectstorageService.Requests
         /// The optional Content-Type header that defines the standard MIME type format of the object. Content type defaults to
         /// 'application/octet-stream' if not specified in the PutObject call. Specifying values for this header has no effect
         /// on Object Storage behavior. Programs that read the object determine what to do based on the value provided. For example,
-        /// you could use this header to identify and perform special operations on text only objects. 
+        /// you could use this header to identify and perform special operations on text only objects.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Content-Type")]

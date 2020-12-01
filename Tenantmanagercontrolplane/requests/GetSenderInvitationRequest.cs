@@ -13,6 +13,9 @@ using Oci.TenantmanagercontrolplaneService.Models;
 
 namespace Oci.TenantmanagercontrolplaneService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/GetSenderInvitation.cs.html">here</a> to see an example of how to use GetSenderInvitation request.
+    /// </example>
     public class GetSenderInvitationRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.EmailService.Models;
 
 namespace Oci.EmailService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/email/GetSuppression.cs.html">here</a> to see an example of how to use GetSuppression request.
+    /// </example>
     public class GetSuppressionRequest : Oci.Common.IOciRequest
     {
         

@@ -13,6 +13,9 @@ using Oci.DataflowService.Models;
 
 namespace Oci.DataflowService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dataflow/DeleteApplication.cs.html">here</a> to see an example of how to use DeleteApplication request.
+    /// </example>
     public class DeleteApplicationRequest : Oci.Common.IOciRequest
     {
         

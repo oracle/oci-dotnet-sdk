@@ -13,6 +13,9 @@ using Oci.MonitoringService.Models;
 
 namespace Oci.MonitoringService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/monitoring/SummarizeMetricsData.cs.html">here</a> to see an example of how to use SummarizeMetricsData request.
+    /// </example>
     public class SummarizeMetricsDataRequest : Oci.Common.IOciRequest
     {
         

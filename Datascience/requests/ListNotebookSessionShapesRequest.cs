@@ -13,6 +13,9 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datascience/ListNotebookSessionShapes.cs.html">here</a> to see an example of how to use ListNotebookSessionShapes request.
+    /// </example>
     public class ListNotebookSessionShapesRequest : Oci.Common.IOciRequest
     {
         

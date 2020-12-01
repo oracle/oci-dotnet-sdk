@@ -13,6 +13,9 @@ using Oci.LimitsService.Models;
 
 namespace Oci.LimitsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/limits/GetResourceAvailability.cs.html">here</a> to see an example of how to use GetResourceAvailability request.
+    /// </example>
     public class GetResourceAvailabilityRequest : Oci.Common.IOciRequest
     {
         

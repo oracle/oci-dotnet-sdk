@@ -13,6 +13,9 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/bds/ChangeBdsInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeBdsInstanceCompartment request.
+    /// </example>
     public class ChangeBdsInstanceCompartmentRequest : Oci.Common.IOciRequest
     {
         

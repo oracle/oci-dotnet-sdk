@@ -13,6 +13,9 @@ using Oci.HealthchecksService.Models;
 
 namespace Oci.HealthchecksService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/healthchecks/ListHttpMonitors.cs.html">here</a> to see an example of how to use ListHttpMonitors request.
+    /// </example>
     public class ListHttpMonitorsRequest : Oci.Common.IOciRequest
     {
         

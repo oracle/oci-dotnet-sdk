@@ -13,6 +13,9 @@ using Oci.AutoscalingService.Models;
 
 namespace Oci.AutoscalingService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/autoscaling/UpdateAutoScalingPolicy.cs.html">here</a> to see an example of how to use UpdateAutoScalingPolicy request.
+    /// </example>
     public class UpdateAutoScalingPolicyRequest : Oci.Common.IOciRequest
     {
         

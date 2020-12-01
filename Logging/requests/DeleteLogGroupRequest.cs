@@ -13,6 +13,9 @@ using Oci.LoggingService.Models;
 
 namespace Oci.LoggingService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/logging/DeleteLogGroup.cs.html">here</a> to see an example of how to use DeleteLogGroup request.
+    /// </example>
     public class DeleteLogGroupRequest : Oci.Common.IOciRequest
     {
         

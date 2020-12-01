@@ -17,14 +17,15 @@ namespace Oci.MysqlService.Responses
 
         /// <value>
         /// For optimistic concurrency control. See `if-match`.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
-        /// a specific request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -32,7 +33,8 @@ namespace Oci.MysqlService.Responses
 
 
         /// <value>
-        /// OCID of the WorkRequest associated with this operation.
+        /// Unique Oracle-assigned identifier for the asynchronous request. You can use this to query status of the asynchronous operation.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
         public string OpcWorkRequestId { get; set; }

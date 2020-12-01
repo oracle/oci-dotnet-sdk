@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// A summary of the work request status.
+    /// Summary of a work request.
     /// </summary>
     public class WorkRequestSummary 
     {
@@ -35,7 +35,17 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
             DeletePrivateEndpoint,
             [EnumMember(Value = "CHANGE_PRIVATE_ENDPOINT_COMPARTMENT")]
-            ChangePrivateEndpointCompartment
+            ChangePrivateEndpointCompartment,
+            [EnumMember(Value = "CREATE_ONPREM_CONNECTOR")]
+            CreateOnpremConnector,
+            [EnumMember(Value = "UPDATE_ONPREM_CONNECTOR")]
+            UpdateOnpremConnector,
+            [EnumMember(Value = "DELETE_ONPREM_CONNECTOR")]
+            DeleteOnpremConnector,
+            [EnumMember(Value = "UPDATE_ONPREM_CONNECTOR_WALLET")]
+            UpdateOnpremConnectorWallet,
+            [EnumMember(Value = "CHANGE_ONPREM_CONNECTOR_COMPARTMENT")]
+            ChangeOnpremConnectorCompartment
         };
 
         /// <value>
@@ -50,7 +60,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
                 ///
         /// <value>
-        /// The status of the work request.
+        /// The current status of the work request.
         /// </value>
         ///
         public enum StatusEnum {
@@ -65,7 +75,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// The status of the work request.
+        /// The current status of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,7 +96,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing this work request.
+        /// The OCID of the compartment that contains the work request.
         /// 
         /// </value>
         /// <remarks>
@@ -97,7 +107,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The resources impacted by the work request.
+        /// The resources that are affected by the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +117,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Progress of the request in percentage.
+        /// Progress of the work request in percentage.
         /// </value>
         /// <remarks>
         /// Required
@@ -117,7 +127,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the work request was created, in the format defined by RFC3339.
+        /// The date and time the work request was accepted, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         /// <remarks>
@@ -128,14 +138,14 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the work request transitioned from ACCEPTED to IN_PROGRESS, in the format defined by RFC3339.
+        /// The date and time the work request transitioned from ACCEPTED to IN_PROGRESS, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the work request reached a terminal state, either FAILED or SUCCEEDED, in the format defined by RFC3339.
+        /// The date and time the work request reached a terminal state, either FAILED or SUCCEEDED, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

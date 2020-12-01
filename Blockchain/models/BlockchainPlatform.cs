@@ -82,7 +82,7 @@ namespace Oci.BlockchainService.Models
         public string ServiceVersion { get; set; }
                 ///
         /// <value>
-        /// Role of platform - founder or participant
+        /// Role of platform - FOUNDER or PARTICIPANT
         /// </value>
         ///
         public enum PlatformRoleEnum {
@@ -93,7 +93,7 @@ namespace Oci.BlockchainService.Models
         };
 
         /// <value>
-        /// Role of platform - founder or participant
+        /// Role of platform - FOUNDER or PARTICIPANT
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<PlatformRoleEnum> PlatformRole { get; set; }
                 ///
         /// <value>
-        /// Type of compute shape - one of Standard, (Enterprise) Small, Medium, Large or Extra Large
+        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM
         /// </value>
         ///
         public enum ComputeShapeEnum {
@@ -123,7 +123,7 @@ namespace Oci.BlockchainService.Models
         };
 
         /// <value>
-        /// Type of compute shape - one of Standard, (Enterprise) Small, Medium, Large or Extra Large
+        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM
         /// </value>
         /// <remarks>
         /// Required
@@ -132,6 +132,24 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "computeShape")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ComputeShapeEnum> ComputeShape { get; set; }
+                ///
+        /// <value>
+        /// Type of Platform shape - DEFAULT or CUSTOM
+        /// </value>
+        ///
+        public enum PlatformShapeTypeEnum {
+            [EnumMember(Value = "DEFAULT")]
+            Default,
+            [EnumMember(Value = "CUSTOM")]
+            Custom
+        };
+
+        /// <value>
+        /// Type of Platform shape - DEFAULT or CUSTOM
+        /// </value>
+        [JsonProperty(PropertyName = "platformShapeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PlatformShapeTypeEnum> PlatformShapeType { get; set; }
         
         /// <value>
         /// Service endpoint URL, valid post-provisioning

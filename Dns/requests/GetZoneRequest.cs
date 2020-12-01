@@ -13,6 +13,9 @@ using Oci.DnsService.Models;
 
 namespace Oci.DnsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetZone.cs.html">here</a> to see an example of how to use GetZone request.
+    /// </example>
     public class GetZoneRequest : Oci.Common.IOciRequest
     {
         

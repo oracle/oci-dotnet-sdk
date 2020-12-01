@@ -13,6 +13,9 @@ using Oci.AutoscalingService.Models;
 
 namespace Oci.AutoscalingService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/autoscaling/DeleteAutoScalingPolicy.cs.html">here</a> to see an example of how to use DeleteAutoScalingPolicy request.
+    /// </example>
     public class DeleteAutoScalingPolicyRequest : Oci.Common.IOciRequest
     {
         

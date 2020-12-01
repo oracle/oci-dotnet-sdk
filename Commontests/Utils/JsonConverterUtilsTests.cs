@@ -24,9 +24,23 @@ namespace Oci.Common.Utils
         public void DeserializeDateTime(string content)
         {
             ClassWithDateTime result = JsonConvert.DeserializeObject<ClassWithDateTime>(
-                content, new JsonSerializerSettings { ContractResolver = new CustomResolver() });
+                content, new JsonSerializerSettings { ContractResolver = new CustomResolver(), NullValueHandling = NullValueHandling.Ignore });
 
             logger.Info(result.DateTimeValue);
+        }
+
+        [Theory]
+        [InlineData("11/24/2020 15:05:15Z", "{\"DateTimeValue\":\"2020-11-24T15:05:15.000Z\"}")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void SerializeDateTime(string value, string expectedValue)
+        {
+            var objWithDateTime = new ClassWithDateTime
+            {
+                DateTimeValue = DateTime.Parse(value)
+            };
+            var objJson = JsonConvert.SerializeObject(objWithDateTime, new JsonSerializerSettings { ContractResolver = new CustomResolver(), NullValueHandling = NullValueHandling.Ignore });
+            Assert.Equal(expectedValue, objJson);
         }
     }
 

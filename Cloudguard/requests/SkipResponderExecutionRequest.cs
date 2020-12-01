@@ -13,6 +13,9 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/SkipResponderExecution.cs.html">here</a> to see an example of how to use SkipResponderExecution request.
+    /// </example>
     public class SkipResponderExecutionRequest : Oci.Common.IOciRequest
     {
         

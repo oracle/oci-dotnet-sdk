@@ -13,6 +13,9 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDataWarehouses.cs.html">here</a> to see an example of how to use ListAutonomousDataWarehouses request.
+    /// </example>
     public class ListAutonomousDataWarehousesRequest : Oci.Common.IOciRequest
     {
         

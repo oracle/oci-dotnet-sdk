@@ -16,7 +16,7 @@ namespace Oci.DatasafeService.Responses
     {
 
         /// <value>
-        /// The OCID of the work request. Use GetWorkRequest with this OCID to track the status of the request.
+        /// The OCID of the work request. Use {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} with this OCID to track the status of the request.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]

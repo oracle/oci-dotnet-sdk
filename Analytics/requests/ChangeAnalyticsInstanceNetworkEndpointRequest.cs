@@ -13,6 +13,9 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/analytics/ChangeAnalyticsInstanceNetworkEndpoint.cs.html">here</a> to see an example of how to use ChangeAnalyticsInstanceNetworkEndpoint request.
+    /// </example>
     public class ChangeAnalyticsInstanceNetworkEndpointRequest : Oci.Common.IOciRequest
     {
         

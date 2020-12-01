@@ -16,8 +16,8 @@ namespace Oci.MysqlService.Responses
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
-        /// a specific request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -25,7 +25,10 @@ namespace Oci.MysqlService.Responses
 
 
         /// <value>
-        /// Opaque token representing the next page of results.
+        /// For pagination of a list of items. When paging through a list, if this header appears in the response,
+        /// then a partial list might have been returned. Include this value as the `page` parameter for the
+        /// subsequent GET request to get the next batch of items.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }

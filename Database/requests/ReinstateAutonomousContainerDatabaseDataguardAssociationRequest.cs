@@ -13,6 +13,9 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ReinstateAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use ReinstateAutonomousContainerDatabaseDataguardAssociation request.
+    /// </example>
     public class ReinstateAutonomousContainerDatabaseDataguardAssociationRequest : Oci.Common.IOciRequest
     {
         

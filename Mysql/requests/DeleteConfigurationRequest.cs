@@ -13,6 +13,9 @@ using Oci.MysqlService.Models;
 
 namespace Oci.MysqlService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/mysql/DeleteConfiguration.cs.html">here</a> to see an example of how to use DeleteConfiguration request.
+    /// </example>
     public class DeleteConfigurationRequest : Oci.Common.IOciRequest
     {
         

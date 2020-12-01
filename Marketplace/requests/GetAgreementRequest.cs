@@ -13,6 +13,9 @@ using Oci.MarketplaceService.Models;
 
 namespace Oci.MarketplaceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/GetAgreement.cs.html">here</a> to see an example of how to use GetAgreement request.
+    /// </example>
     public class GetAgreementRequest : Oci.Common.IOciRequest
     {
         

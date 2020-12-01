@@ -13,6 +13,9 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ocvp/UpdateEsxiHost.cs.html">here</a> to see an example of how to use UpdateEsxiHost request.
+    /// </example>
     public class UpdateEsxiHostRequest : Oci.Common.IOciRequest
     {
         

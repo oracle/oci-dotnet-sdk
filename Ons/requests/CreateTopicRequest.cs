@@ -13,6 +13,9 @@ using Oci.OnsService.Models;
 
 namespace Oci.OnsService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ons/CreateTopic.cs.html">here</a> to see an example of how to use CreateTopic request.
+    /// </example>
     public class CreateTopicRequest : Oci.Common.IOciRequest
     {
         

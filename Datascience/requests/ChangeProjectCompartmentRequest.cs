@@ -13,6 +13,9 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datascience/ChangeProjectCompartment.cs.html">here</a> to see an example of how to use ChangeProjectCompartment request.
+    /// </example>
     public class ChangeProjectCompartmentRequest : Oci.Common.IOciRequest
     {
         

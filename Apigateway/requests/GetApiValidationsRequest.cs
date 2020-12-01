@@ -13,6 +13,9 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Requests
 {
+    /// <example>
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/GetApiValidations.cs.html">here</a> to see an example of how to use GetApiValidations request.
+    /// </example>
     public class GetApiValidationsRequest : Oci.Common.IOciRequest
     {
         
