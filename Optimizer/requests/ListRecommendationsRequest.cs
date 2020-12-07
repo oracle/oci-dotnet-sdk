@@ -14,7 +14,7 @@ using Oci.OptimizerService.Models;
 namespace Oci.OptimizerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/optimizer/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations request.
     /// </example>
     public class ListRecommendationsRequest : Oci.Common.IOciRequest
     {

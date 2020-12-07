@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for the create Exadata Cloud@Customer VM cluster operation.
+    /// Details for the create Exadata VM cluster operation. Applies to Exadata Cloud@Customer instances only.
+    /// For details on the create cloud Exadata VM cluster operation used with Exadata Cloud Service instances, see {@link #createCloudVmClusterDetails(CreateCloudVmClusterDetailsRequest) createCloudVmClusterDetails}
     /// 
     /// </summary>
     public class CreateVmClusterDetails 

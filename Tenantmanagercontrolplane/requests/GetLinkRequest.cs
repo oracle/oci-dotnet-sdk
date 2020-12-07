@@ -14,7 +14,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 namespace Oci.TenantmanagercontrolplaneService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/GetLink.cs.html">here</a> to see an example of how to use GetLink request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/GetLink.cs.html">here</a> to see an example of how to use GetLink request.
     /// </example>
     public class GetLinkRequest : Oci.Common.IOciRequest
     {

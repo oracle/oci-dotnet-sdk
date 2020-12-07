@@ -69,7 +69,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateTransferDevice.cs.html">here</a> to see an example of how to use CreateTransferDevice API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateTransferDevice.cs.html">here</a> to see an example of how to use CreateTransferDevice API.</example>
         public async Task<CreateTransferDeviceResponse> CreateTransferDevice(CreateTransferDeviceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferDevice");
@@ -108,7 +108,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DeleteTransferDevice.cs.html">here</a> to see an example of how to use DeleteTransferDevice API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/DeleteTransferDevice.cs.html">here</a> to see an example of how to use DeleteTransferDevice API.</example>
         public async Task<DeleteTransferDeviceResponse> DeleteTransferDevice(DeleteTransferDeviceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTransferDevice");
@@ -147,7 +147,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetTransferDevice.cs.html">here</a> to see an example of how to use GetTransferDevice API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferDevice.cs.html">here</a> to see an example of how to use GetTransferDevice API.</example>
         public async Task<GetTransferDeviceResponse> GetTransferDevice(GetTransferDeviceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferDevice");
@@ -186,7 +186,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ListTransferDevices.cs.html">here</a> to see an example of how to use ListTransferDevices API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ListTransferDevices.cs.html">here</a> to see an example of how to use ListTransferDevices API.</example>
         public async Task<ListTransferDevicesResponse> ListTransferDevices(ListTransferDevicesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTransferDevices");
@@ -225,7 +225,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/UpdateTransferDevice.cs.html">here</a> to see an example of how to use UpdateTransferDevice API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/UpdateTransferDevice.cs.html">here</a> to see an example of how to use UpdateTransferDevice API.</example>
         public async Task<UpdateTransferDeviceResponse> UpdateTransferDevice(UpdateTransferDeviceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTransferDevice");

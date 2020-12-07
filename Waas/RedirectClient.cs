@@ -72,7 +72,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/ChangeHttpRedirectCompartment.cs.html">here</a> to see an example of how to use ChangeHttpRedirectCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ChangeHttpRedirectCompartment.cs.html">here</a> to see an example of how to use ChangeHttpRedirectCompartment API.</example>
         public async Task<ChangeHttpRedirectCompartmentResponse> ChangeHttpRedirectCompartment(ChangeHttpRedirectCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeHttpRedirectCompartment");
@@ -111,7 +111,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/CreateHttpRedirect.cs.html">here</a> to see an example of how to use CreateHttpRedirect API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateHttpRedirect.cs.html">here</a> to see an example of how to use CreateHttpRedirect API.</example>
         public async Task<CreateHttpRedirectResponse> CreateHttpRedirect(CreateHttpRedirectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createHttpRedirect");
@@ -150,7 +150,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/DeleteHttpRedirect.cs.html">here</a> to see an example of how to use DeleteHttpRedirect API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/DeleteHttpRedirect.cs.html">here</a> to see an example of how to use DeleteHttpRedirect API.</example>
         public async Task<DeleteHttpRedirectResponse> DeleteHttpRedirect(DeleteHttpRedirectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteHttpRedirect");
@@ -189,7 +189,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/GetHttpRedirect.cs.html">here</a> to see an example of how to use GetHttpRedirect API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetHttpRedirect.cs.html">here</a> to see an example of how to use GetHttpRedirect API.</example>
         public async Task<GetHttpRedirectResponse> GetHttpRedirect(GetHttpRedirectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getHttpRedirect");
@@ -228,7 +228,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/ListHttpRedirects.cs.html">here</a> to see an example of how to use ListHttpRedirects API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListHttpRedirects.cs.html">here</a> to see an example of how to use ListHttpRedirects API.</example>
         public async Task<ListHttpRedirectsResponse> ListHttpRedirects(ListHttpRedirectsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listHttpRedirects");
@@ -267,7 +267,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/UpdateHttpRedirect.cs.html">here</a> to see an example of how to use UpdateHttpRedirect API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateHttpRedirect.cs.html">here</a> to see an example of how to use UpdateHttpRedirect API.</example>
         public async Task<UpdateHttpRedirectResponse> UpdateHttpRedirect(UpdateHttpRedirectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateHttpRedirect");

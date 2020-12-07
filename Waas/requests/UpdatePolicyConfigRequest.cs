@@ -14,7 +14,7 @@ using Oci.WaasService.Models;
 namespace Oci.WaasService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/waas/UpdatePolicyConfig.cs.html">here</a> to see an example of how to use UpdatePolicyConfig request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdatePolicyConfig.cs.html">here</a> to see an example of how to use UpdatePolicyConfig request.
     /// </example>
     public class UpdatePolicyConfigRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/GetTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipeDetectorRule request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipeDetectorRule request.
     /// </example>
     public class GetTargetDetectorRecipeDetectorRuleRequest : Oci.Common.IOciRequest
     {

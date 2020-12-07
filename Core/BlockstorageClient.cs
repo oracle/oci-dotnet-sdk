@@ -75,7 +75,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeBootVolumeBackupCompartment.cs.html">here</a> to see an example of how to use ChangeBootVolumeBackupCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeBootVolumeBackupCompartment.cs.html">here</a> to see an example of how to use ChangeBootVolumeBackupCompartment API.</example>
         public async Task<ChangeBootVolumeBackupCompartmentResponse> ChangeBootVolumeBackupCompartment(ChangeBootVolumeBackupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeBootVolumeBackupCompartment");
@@ -117,7 +117,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeBootVolumeCompartment.cs.html">here</a> to see an example of how to use ChangeBootVolumeCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeBootVolumeCompartment.cs.html">here</a> to see an example of how to use ChangeBootVolumeCompartment API.</example>
         public async Task<ChangeBootVolumeCompartmentResponse> ChangeBootVolumeCompartment(ChangeBootVolumeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeBootVolumeCompartment");
@@ -159,7 +159,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeVolumeBackupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeBackupCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeVolumeBackupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeBackupCompartment API.</example>
         public async Task<ChangeVolumeBackupCompartmentResponse> ChangeVolumeBackupCompartment(ChangeVolumeBackupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVolumeBackupCompartment");
@@ -201,7 +201,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeVolumeCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeVolumeCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeCompartment API.</example>
         public async Task<ChangeVolumeCompartmentResponse> ChangeVolumeCompartment(ChangeVolumeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVolumeCompartment");
@@ -243,7 +243,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeVolumeGroupBackupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeGroupBackupCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeVolumeGroupBackupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeGroupBackupCompartment API.</example>
         public async Task<ChangeVolumeGroupBackupCompartmentResponse> ChangeVolumeGroupBackupCompartment(ChangeVolumeGroupBackupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVolumeGroupBackupCompartment");
@@ -285,7 +285,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ChangeVolumeGroupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeGroupCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeVolumeGroupCompartment.cs.html">here</a> to see an example of how to use ChangeVolumeGroupCompartment API.</example>
         public async Task<ChangeVolumeGroupCompartmentResponse> ChangeVolumeGroupCompartment(ChangeVolumeGroupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVolumeGroupCompartment");
@@ -326,7 +326,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CopyBootVolumeBackup.cs.html">here</a> to see an example of how to use CopyBootVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CopyBootVolumeBackup.cs.html">here</a> to see an example of how to use CopyBootVolumeBackup API.</example>
         public async Task<CopyBootVolumeBackupResponse> CopyBootVolumeBackup(CopyBootVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called copyBootVolumeBackup");
@@ -367,7 +367,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CopyVolumeBackup.cs.html">here</a> to see an example of how to use CopyVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CopyVolumeBackup.cs.html">here</a> to see an example of how to use CopyVolumeBackup API.</example>
         public async Task<CopyVolumeBackupResponse> CopyVolumeBackup(CopyVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called copyVolumeBackup");
@@ -410,7 +410,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateBootVolume.cs.html">here</a> to see an example of how to use CreateBootVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateBootVolume.cs.html">here</a> to see an example of how to use CreateBootVolume API.</example>
         public async Task<CreateBootVolumeResponse> CreateBootVolume(CreateBootVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBootVolume");
@@ -455,7 +455,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateBootVolumeBackup.cs.html">here</a> to see an example of how to use CreateBootVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateBootVolumeBackup.cs.html">here</a> to see an example of how to use CreateBootVolumeBackup API.</example>
         public async Task<CreateBootVolumeBackupResponse> CreateBootVolumeBackup(CreateBootVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBootVolumeBackup");
@@ -508,7 +508,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolume.cs.html">here</a> to see an example of how to use CreateVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolume.cs.html">here</a> to see an example of how to use CreateVolume API.</example>
         public async Task<CreateVolumeResponse> CreateVolume(CreateVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolume");
@@ -553,7 +553,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeBackup.cs.html">here</a> to see an example of how to use CreateVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeBackup.cs.html">here</a> to see an example of how to use CreateVolumeBackup API.</example>
         public async Task<CreateVolumeBackupResponse> CreateVolumeBackup(CreateVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolumeBackup");
@@ -596,7 +596,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeBackupPolicy.cs.html">here</a> to see an example of how to use CreateVolumeBackupPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeBackupPolicy.cs.html">here</a> to see an example of how to use CreateVolumeBackupPolicy API.</example>
         public async Task<CreateVolumeBackupPolicyResponse> CreateVolumeBackupPolicy(CreateVolumeBackupPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolumeBackupPolicy");
@@ -638,7 +638,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use CreateVolumeBackupPolicyAssignment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use CreateVolumeBackupPolicyAssignment API.</example>
         public async Task<CreateVolumeBackupPolicyAssignmentResponse> CreateVolumeBackupPolicyAssignment(CreateVolumeBackupPolicyAssignmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolumeBackupPolicyAssignment");
@@ -684,7 +684,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeGroup.cs.html">here</a> to see an example of how to use CreateVolumeGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeGroup.cs.html">here</a> to see an example of how to use CreateVolumeGroup API.</example>
         public async Task<CreateVolumeGroupResponse> CreateVolumeGroup(CreateVolumeGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolumeGroup");
@@ -725,7 +725,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeGroupBackup.cs.html">here</a> to see an example of how to use CreateVolumeGroupBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeGroupBackup.cs.html">here</a> to see an example of how to use CreateVolumeGroupBackup API.</example>
         public async Task<CreateVolumeGroupBackupResponse> CreateVolumeGroupBackup(CreateVolumeGroupBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVolumeGroupBackup");
@@ -768,7 +768,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteBootVolume.cs.html">here</a> to see an example of how to use DeleteBootVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteBootVolume.cs.html">here</a> to see an example of how to use DeleteBootVolume API.</example>
         public async Task<DeleteBootVolumeResponse> DeleteBootVolume(DeleteBootVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBootVolume");
@@ -807,7 +807,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteBootVolumeBackup.cs.html">here</a> to see an example of how to use DeleteBootVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteBootVolumeBackup.cs.html">here</a> to see an example of how to use DeleteBootVolumeBackup API.</example>
         public async Task<DeleteBootVolumeBackupResponse> DeleteBootVolumeBackup(DeleteBootVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBootVolumeBackup");
@@ -847,7 +847,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteBootVolumeKmsKey.cs.html">here</a> to see an example of how to use DeleteBootVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteBootVolumeKmsKey.cs.html">here</a> to see an example of how to use DeleteBootVolumeKmsKey API.</example>
         public async Task<DeleteBootVolumeKmsKeyResponse> DeleteBootVolumeKmsKey(DeleteBootVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBootVolumeKmsKey");
@@ -890,7 +890,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolume.cs.html">here</a> to see an example of how to use DeleteVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolume.cs.html">here</a> to see an example of how to use DeleteVolume API.</example>
         public async Task<DeleteVolumeResponse> DeleteVolume(DeleteVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolume");
@@ -929,7 +929,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeBackup.cs.html">here</a> to see an example of how to use DeleteVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeBackup.cs.html">here</a> to see an example of how to use DeleteVolumeBackup API.</example>
         public async Task<DeleteVolumeBackupResponse> DeleteVolumeBackup(DeleteVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeBackup");
@@ -973,7 +973,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeBackupPolicy.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeBackupPolicy.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicy API.</example>
         public async Task<DeleteVolumeBackupPolicyResponse> DeleteVolumeBackupPolicy(DeleteVolumeBackupPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeBackupPolicy");
@@ -1012,7 +1012,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicyAssignment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicyAssignment API.</example>
         public async Task<DeleteVolumeBackupPolicyAssignmentResponse> DeleteVolumeBackupPolicyAssignment(DeleteVolumeBackupPolicyAssignmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeBackupPolicyAssignment");
@@ -1053,7 +1053,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeGroup.cs.html">here</a> to see an example of how to use DeleteVolumeGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeGroup.cs.html">here</a> to see an example of how to use DeleteVolumeGroup API.</example>
         public async Task<DeleteVolumeGroupResponse> DeleteVolumeGroup(DeleteVolumeGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeGroup");
@@ -1092,7 +1092,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeGroupBackup.cs.html">here</a> to see an example of how to use DeleteVolumeGroupBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeGroupBackup.cs.html">here</a> to see an example of how to use DeleteVolumeGroupBackup API.</example>
         public async Task<DeleteVolumeGroupBackupResponse> DeleteVolumeGroupBackup(DeleteVolumeGroupBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeGroupBackup");
@@ -1132,7 +1132,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/DeleteVolumeKmsKey.cs.html">here</a> to see an example of how to use DeleteVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeKmsKey.cs.html">here</a> to see an example of how to use DeleteVolumeKmsKey API.</example>
         public async Task<DeleteVolumeKmsKeyResponse> DeleteVolumeKmsKey(DeleteVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVolumeKmsKey");
@@ -1171,7 +1171,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetBootVolume.cs.html">here</a> to see an example of how to use GetBootVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetBootVolume.cs.html">here</a> to see an example of how to use GetBootVolume API.</example>
         public async Task<GetBootVolumeResponse> GetBootVolume(GetBootVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBootVolume");
@@ -1210,7 +1210,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetBootVolumeBackup.cs.html">here</a> to see an example of how to use GetBootVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetBootVolumeBackup.cs.html">here</a> to see an example of how to use GetBootVolumeBackup API.</example>
         public async Task<GetBootVolumeBackupResponse> GetBootVolumeBackup(GetBootVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBootVolumeBackup");
@@ -1250,7 +1250,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetBootVolumeKmsKey.cs.html">here</a> to see an example of how to use GetBootVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetBootVolumeKmsKey.cs.html">here</a> to see an example of how to use GetBootVolumeKmsKey API.</example>
         public async Task<GetBootVolumeKmsKeyResponse> GetBootVolumeKmsKey(GetBootVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBootVolumeKmsKey");
@@ -1289,7 +1289,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolume.cs.html">here</a> to see an example of how to use GetVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolume.cs.html">here</a> to see an example of how to use GetVolume API.</example>
         public async Task<GetVolumeResponse> GetVolume(GetVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolume");
@@ -1328,7 +1328,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeBackup.cs.html">here</a> to see an example of how to use GetVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeBackup.cs.html">here</a> to see an example of how to use GetVolumeBackup API.</example>
         public async Task<GetVolumeBackupResponse> GetVolumeBackup(GetVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeBackup");
@@ -1367,7 +1367,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeBackupPolicy.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeBackupPolicy.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicy API.</example>
         public async Task<GetVolumeBackupPolicyResponse> GetVolumeBackupPolicy(GetVolumeBackupPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeBackupPolicy");
@@ -1409,7 +1409,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeBackupPolicyAssetAssignment.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicyAssetAssignment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeBackupPolicyAssetAssignment.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicyAssetAssignment API.</example>
         public async Task<GetVolumeBackupPolicyAssetAssignmentResponse> GetVolumeBackupPolicyAssetAssignment(GetVolumeBackupPolicyAssetAssignmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeBackupPolicyAssetAssignment");
@@ -1448,7 +1448,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicyAssignment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use GetVolumeBackupPolicyAssignment API.</example>
         public async Task<GetVolumeBackupPolicyAssignmentResponse> GetVolumeBackupPolicyAssignment(GetVolumeBackupPolicyAssignmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeBackupPolicyAssignment");
@@ -1487,7 +1487,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeGroup.cs.html">here</a> to see an example of how to use GetVolumeGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeGroup.cs.html">here</a> to see an example of how to use GetVolumeGroup API.</example>
         public async Task<GetVolumeGroupResponse> GetVolumeGroup(GetVolumeGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeGroup");
@@ -1526,7 +1526,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeGroupBackup.cs.html">here</a> to see an example of how to use GetVolumeGroupBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeGroupBackup.cs.html">here</a> to see an example of how to use GetVolumeGroupBackup API.</example>
         public async Task<GetVolumeGroupBackupResponse> GetVolumeGroupBackup(GetVolumeGroupBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeGroupBackup");
@@ -1566,7 +1566,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetVolumeKmsKey.cs.html">here</a> to see an example of how to use GetVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeKmsKey.cs.html">here</a> to see an example of how to use GetVolumeKmsKey API.</example>
         public async Task<GetVolumeKmsKeyResponse> GetVolumeKmsKey(GetVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVolumeKmsKey");
@@ -1606,7 +1606,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListBootVolumeBackups.cs.html">here</a> to see an example of how to use ListBootVolumeBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListBootVolumeBackups.cs.html">here</a> to see an example of how to use ListBootVolumeBackups API.</example>
         public async Task<ListBootVolumeBackupsResponse> ListBootVolumeBackups(ListBootVolumeBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBootVolumeBackups");
@@ -1646,7 +1646,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListBootVolumes.cs.html">here</a> to see an example of how to use ListBootVolumes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListBootVolumes.cs.html">here</a> to see an example of how to use ListBootVolumes API.</example>
         public async Task<ListBootVolumesResponse> ListBootVolumes(ListBootVolumesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBootVolumes");
@@ -1689,7 +1689,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListVolumeBackupPolicies.cs.html">here</a> to see an example of how to use ListVolumeBackupPolicies API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumeBackupPolicies.cs.html">here</a> to see an example of how to use ListVolumeBackupPolicies API.</example>
         public async Task<ListVolumeBackupPoliciesResponse> ListVolumeBackupPolicies(ListVolumeBackupPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVolumeBackupPolicies");
@@ -1729,7 +1729,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListVolumeBackups.cs.html">here</a> to see an example of how to use ListVolumeBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumeBackups.cs.html">here</a> to see an example of how to use ListVolumeBackups API.</example>
         public async Task<ListVolumeBackupsResponse> ListVolumeBackups(ListVolumeBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVolumeBackups");
@@ -1770,7 +1770,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListVolumeGroupBackups.cs.html">here</a> to see an example of how to use ListVolumeGroupBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumeGroupBackups.cs.html">here</a> to see an example of how to use ListVolumeGroupBackups API.</example>
         public async Task<ListVolumeGroupBackupsResponse> ListVolumeGroupBackups(ListVolumeGroupBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVolumeGroupBackups");
@@ -1811,7 +1811,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListVolumeGroups.cs.html">here</a> to see an example of how to use ListVolumeGroups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumeGroups.cs.html">here</a> to see an example of how to use ListVolumeGroups API.</example>
         public async Task<ListVolumeGroupsResponse> ListVolumeGroups(ListVolumeGroupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVolumeGroups");
@@ -1851,7 +1851,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListVolumes.cs.html">here</a> to see an example of how to use ListVolumes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumes.cs.html">here</a> to see an example of how to use ListVolumes API.</example>
         public async Task<ListVolumesResponse> ListVolumes(ListVolumesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVolumes");
@@ -1890,7 +1890,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateBootVolume.cs.html">here</a> to see an example of how to use UpdateBootVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateBootVolume.cs.html">here</a> to see an example of how to use UpdateBootVolume API.</example>
         public async Task<UpdateBootVolumeResponse> UpdateBootVolume(UpdateBootVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBootVolume");
@@ -1931,7 +1931,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateBootVolumeBackup.cs.html">here</a> to see an example of how to use UpdateBootVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateBootVolumeBackup.cs.html">here</a> to see an example of how to use UpdateBootVolumeBackup API.</example>
         public async Task<UpdateBootVolumeBackupResponse> UpdateBootVolumeBackup(UpdateBootVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBootVolumeBackup");
@@ -1971,7 +1971,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateBootVolumeKmsKey.cs.html">here</a> to see an example of how to use UpdateBootVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateBootVolumeKmsKey.cs.html">here</a> to see an example of how to use UpdateBootVolumeKmsKey API.</example>
         public async Task<UpdateBootVolumeKmsKeyResponse> UpdateBootVolumeKmsKey(UpdateBootVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBootVolumeKmsKey");
@@ -2012,7 +2012,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolume.cs.html">here</a> to see an example of how to use UpdateVolume API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolume.cs.html">here</a> to see an example of how to use UpdateVolume API.</example>
         public async Task<UpdateVolumeResponse> UpdateVolume(UpdateVolumeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolume");
@@ -2053,7 +2053,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolumeBackup.cs.html">here</a> to see an example of how to use UpdateVolumeBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolumeBackup.cs.html">here</a> to see an example of how to use UpdateVolumeBackup API.</example>
         public async Task<UpdateVolumeBackupResponse> UpdateVolumeBackup(UpdateVolumeBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolumeBackup");
@@ -2097,7 +2097,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolumeBackupPolicy.cs.html">here</a> to see an example of how to use UpdateVolumeBackupPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolumeBackupPolicy.cs.html">here</a> to see an example of how to use UpdateVolumeBackupPolicy API.</example>
         public async Task<UpdateVolumeBackupPolicyResponse> UpdateVolumeBackupPolicy(UpdateVolumeBackupPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolumeBackupPolicy");
@@ -2142,7 +2142,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolumeGroup.cs.html">here</a> to see an example of how to use UpdateVolumeGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolumeGroup.cs.html">here</a> to see an example of how to use UpdateVolumeGroup API.</example>
         public async Task<UpdateVolumeGroupResponse> UpdateVolumeGroup(UpdateVolumeGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolumeGroup");
@@ -2181,7 +2181,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolumeGroupBackup.cs.html">here</a> to see an example of how to use UpdateVolumeGroupBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolumeGroupBackup.cs.html">here</a> to see an example of how to use UpdateVolumeGroupBackup API.</example>
         public async Task<UpdateVolumeGroupBackupResponse> UpdateVolumeGroupBackup(UpdateVolumeGroupBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolumeGroupBackup");
@@ -2221,7 +2221,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/UpdateVolumeKmsKey.cs.html">here</a> to see an example of how to use UpdateVolumeKmsKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateVolumeKmsKey.cs.html">here</a> to see an example of how to use UpdateVolumeKmsKey API.</example>
         public async Task<UpdateVolumeKmsKeyResponse> UpdateVolumeKmsKey(UpdateVolumeKmsKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVolumeKmsKey");

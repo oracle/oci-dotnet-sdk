@@ -410,7 +410,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DataSafeStatusEnum> DataSafeStatus { get; set; }
                 ///
         /// <value>
-        /// Status of the Operations Insights for this Autonomous Database.
+        /// Status of Operations Insights for this Autonomous Database.
         /// </value>
         ///
         public enum OperationsInsightsStatusEnum {
@@ -429,7 +429,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Status of the Operations Insights for this Autonomous Database.
+        /// Status of Operations Insights for this Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "operationsInsightsStatus")]
         [JsonConverter(typeof(StringEnumConverter))]

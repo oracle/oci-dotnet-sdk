@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetStream.cs.html">here</a> to see an example of how to use GetStream request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetStream.cs.html">here</a> to see an example of how to use GetStream request.
     /// </example>
     public class GetStreamRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousContainerDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabaseDataguardAssociations request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousContainerDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabaseDataguardAssociations request.
     /// </example>
     public class ListAutonomousContainerDatabaseDataguardAssociationsRequest : Oci.Common.IOciRequest
     {

@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the Exadata Cloud@Customer infrastructure.
+    /// Details of the Exadata Cloud@Customer infrastructure. Applies to Exadata Cloud@Customer instances only.
+    /// See {@link #cloudExadataInfrastructureSummary(CloudExadataInfrastructureSummaryRequest) cloudExadataInfrastructureSummary} for details of the cloud Exadata infrastructure resource used by Exadata Cloud Service instances.
+    /// 
     /// </summary>
     public class ExadataInfrastructureSummary 
     {
@@ -65,7 +67,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "DISCONNECTED")]
-            Disconnected
+            Disconnected,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress
         };
 
         /// <value>
@@ -232,6 +236,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

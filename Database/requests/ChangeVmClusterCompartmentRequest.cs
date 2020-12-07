@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeVmClusterCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeVmClusterCompartment request.
     /// </example>
     public class ChangeVmClusterCompartmentRequest : Oci.Common.IOciRequest
     {

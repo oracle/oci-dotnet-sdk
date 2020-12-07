@@ -14,7 +14,7 @@ using Oci.ManagementdashboardService.Models;
 namespace Oci.ManagementdashboardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ListManagementSavedSearches.cs.html">here</a> to see an example of how to use ListManagementSavedSearches request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ListManagementSavedSearches.cs.html">here</a> to see an example of how to use ListManagementSavedSearches request.
     /// </example>
     public class ListManagementSavedSearchesRequest : Oci.Common.IOciRequest
     {

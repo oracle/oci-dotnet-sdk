@@ -14,7 +14,7 @@ using Oci.AnnouncementsService.Models;
 namespace Oci.AnnouncementsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/announcementsservice/ListAnnouncements.cs.html">here</a> to see an example of how to use ListAnnouncements request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/announcementsservice/ListAnnouncements.cs.html">here</a> to see an example of how to use ListAnnouncements request.
     /// </example>
     public class ListAnnouncementsRequest : Oci.Common.IOciRequest
     {

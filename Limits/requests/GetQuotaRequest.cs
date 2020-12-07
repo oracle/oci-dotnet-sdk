@@ -14,7 +14,7 @@ using Oci.LimitsService.Models;
 namespace Oci.LimitsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/limits/GetQuota.cs.html">here</a> to see an example of how to use GetQuota request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/limits/GetQuota.cs.html">here</a> to see an example of how to use GetQuota request.
     /// </example>
     public class GetQuotaRequest : Oci.Common.IOciRequest
     {

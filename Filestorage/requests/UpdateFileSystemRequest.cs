@@ -14,7 +14,7 @@ using Oci.FilestorageService.Models;
 namespace Oci.FilestorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/filestorage/UpdateFileSystem.cs.html">here</a> to see an example of how to use UpdateFileSystem request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/filestorage/UpdateFileSystem.cs.html">here</a> to see an example of how to use UpdateFileSystem request.
     /// </example>
     public class UpdateFileSystemRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.EmailService.Models;
 namespace Oci.EmailService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/email/UpdateSender.cs.html">here</a> to see an example of how to use UpdateSender request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/UpdateSender.cs.html">here</a> to see an example of how to use UpdateSender request.
     /// </example>
     public class UpdateSenderRequest : Oci.Common.IOciRequest
     {

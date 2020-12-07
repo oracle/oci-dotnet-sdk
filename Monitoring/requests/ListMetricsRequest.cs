@@ -14,7 +14,7 @@ using Oci.MonitoringService.Models;
 namespace Oci.MonitoringService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/monitoring/ListMetrics.cs.html">here</a> to see an example of how to use ListMetrics request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/ListMetrics.cs.html">here</a> to see an example of how to use ListMetrics request.
     /// </example>
     public class ListMetricsRequest : Oci.Common.IOciRequest
     {

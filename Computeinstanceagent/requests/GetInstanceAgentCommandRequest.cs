@@ -14,7 +14,7 @@ using Oci.ComputeinstanceagentService.Models;
 namespace Oci.ComputeinstanceagentService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/computeinstanceagent/GetInstanceAgentCommand.cs.html">here</a> to see an example of how to use GetInstanceAgentCommand request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/computeinstanceagent/GetInstanceAgentCommand.cs.html">here</a> to see an example of how to use GetInstanceAgentCommand request.
     /// </example>
     public class GetInstanceAgentCommandRequest : Oci.Common.IOciRequest
     {

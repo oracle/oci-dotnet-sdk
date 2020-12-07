@@ -14,7 +14,7 @@ using Oci.HealthchecksService.Models;
 namespace Oci.HealthchecksService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/healthchecks/ListHttpProbeResults.cs.html">here</a> to see an example of how to use ListHttpProbeResults request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListHttpProbeResults.cs.html">here</a> to see an example of how to use ListHttpProbeResults request.
     /// </example>
     public class ListHttpProbeResultsRequest : Oci.Common.IOciRequest
     {

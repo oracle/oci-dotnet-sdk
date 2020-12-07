@@ -14,7 +14,7 @@ using Oci.HealthchecksService.Models;
 namespace Oci.HealthchecksService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/healthchecks/UpdateHttpMonitor.cs.html">here</a> to see an example of how to use UpdateHttpMonitor request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/UpdateHttpMonitor.cs.html">here</a> to see an example of how to use UpdateHttpMonitor request.
     /// </example>
     public class UpdateHttpMonitorRequest : Oci.Common.IOciRequest
     {

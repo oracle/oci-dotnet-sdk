@@ -69,7 +69,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/CreateIncident.cs.html">here</a> to see an example of how to use CreateIncident API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/CreateIncident.cs.html">here</a> to see an example of how to use CreateIncident API.</example>
         public async Task<CreateIncidentResponse> CreateIncident(CreateIncidentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createIncident");
@@ -108,7 +108,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/GetIncident.cs.html">here</a> to see an example of how to use GetIncident API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/GetIncident.cs.html">here</a> to see an example of how to use GetIncident API.</example>
         public async Task<GetIncidentResponse> GetIncident(GetIncidentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getIncident");
@@ -147,7 +147,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/GetStatus.cs.html">here</a> to see an example of how to use GetStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/GetStatus.cs.html">here</a> to see an example of how to use GetStatus API.</example>
         public async Task<GetStatusResponse> GetStatus(GetStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getStatus");
@@ -186,7 +186,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/ListIncidentResourceTypes.cs.html">here</a> to see an example of how to use ListIncidentResourceTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/ListIncidentResourceTypes.cs.html">here</a> to see an example of how to use ListIncidentResourceTypes API.</example>
         public async Task<ListIncidentResourceTypesResponse> ListIncidentResourceTypes(ListIncidentResourceTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listIncidentResourceTypes");
@@ -225,7 +225,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/ListIncidents.cs.html">here</a> to see an example of how to use ListIncidents API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/ListIncidents.cs.html">here</a> to see an example of how to use ListIncidents API.</example>
         public async Task<ListIncidentsResponse> ListIncidents(ListIncidentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listIncidents");
@@ -264,7 +264,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/UpdateIncident.cs.html">here</a> to see an example of how to use UpdateIncident API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/UpdateIncident.cs.html">here</a> to see an example of how to use UpdateIncident API.</example>
         public async Task<UpdateIncidentResponse> UpdateIncident(UpdateIncidentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateIncident");
@@ -303,7 +303,7 @@ namespace Oci.CimsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/ValidateUser.cs.html">here</a> to see an example of how to use ValidateUser API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/ValidateUser.cs.html">here</a> to see an example of how to use ValidateUser API.</example>
         public async Task<ValidateUserResponse> ValidateUser(ValidateUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called validateUser");

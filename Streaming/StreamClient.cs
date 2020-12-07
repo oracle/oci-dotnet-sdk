@@ -62,7 +62,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ConsumerCommit.cs.html">here</a> to see an example of how to use ConsumerCommit API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ConsumerCommit.cs.html">here</a> to see an example of how to use ConsumerCommit API.</example>
         public async Task<ConsumerCommitResponse> ConsumerCommit(ConsumerCommitRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called consumerCommit");
@@ -102,7 +102,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ConsumerHeartbeat.cs.html">here</a> to see an example of how to use ConsumerHeartbeat API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ConsumerHeartbeat.cs.html">here</a> to see an example of how to use ConsumerHeartbeat API.</example>
         public async Task<ConsumerHeartbeatResponse> ConsumerHeartbeat(ConsumerHeartbeatRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called consumerHeartbeat");
@@ -146,7 +146,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateCursor.cs.html">here</a> to see an example of how to use CreateCursor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateCursor.cs.html">here</a> to see an example of how to use CreateCursor API.</example>
         public async Task<CreateCursorResponse> CreateCursor(CreateCursorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCursor");
@@ -186,7 +186,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateGroupCursor.cs.html">here</a> to see an example of how to use CreateGroupCursor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateGroupCursor.cs.html">here</a> to see an example of how to use CreateGroupCursor API.</example>
         public async Task<CreateGroupCursorResponse> CreateGroupCursor(CreateGroupCursorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createGroupCursor");
@@ -226,7 +226,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetGroup.cs.html">here</a> to see an example of how to use GetGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetGroup.cs.html">here</a> to see an example of how to use GetGroup API.</example>
         public async Task<GetGroupResponse> GetGroup(GetGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getGroup");
@@ -268,7 +268,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetMessages.cs.html">here</a> to see an example of how to use GetMessages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetMessages.cs.html">here</a> to see an example of how to use GetMessages API.</example>
         public async Task<GetMessagesResponse> GetMessages(GetMessagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getMessages");
@@ -311,7 +311,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/PutMessages.cs.html">here</a> to see an example of how to use PutMessages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/PutMessages.cs.html">here</a> to see an example of how to use PutMessages API.</example>
         public async Task<PutMessagesResponse> PutMessages(PutMessagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called putMessages");
@@ -352,7 +352,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/UpdateGroup.cs.html">here</a> to see an example of how to use UpdateGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/UpdateGroup.cs.html">here</a> to see an example of how to use UpdateGroup API.</example>
         public async Task<UpdateGroupResponse> UpdateGroup(UpdateGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateGroup");

@@ -93,5 +93,16 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "increaseInInefficientWaitInPct")]
         public System.Nullable<int> IncreaseInInefficientWaitInPct { get; set; }
         
+        /// <value>
+        /// Improved Percent Threshold is used to derive improving SQLs.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ImprovedInPct is required.")]
+        [JsonProperty(PropertyName = "improvedInPct")]
+        public System.Nullable<int> ImprovedInPct { get; set; }
+        
     }
 }

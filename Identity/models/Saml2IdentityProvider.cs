@@ -37,6 +37,13 @@ namespace Oci.IdentityService.Models
         public string MetadataUrl { get; set; }
         
         /// <value>
+        /// The XML that contains the information required for federating Identity with SAML2 Identity Provider.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public string Metadata { get; set; }
+        
+        /// <value>
         /// The identity provider's signing certificate used by the IAM Service
         /// to validate the SAML2 token.
         /// 

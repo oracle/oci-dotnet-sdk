@@ -14,7 +14,7 @@ using Oci.OsmanagementService.Models;
 namespace Oci.OsmanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/osmanagement/AttachManagedInstanceToManagedInstanceGroup.cs.html">here</a> to see an example of how to use AttachManagedInstanceToManagedInstanceGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/AttachManagedInstanceToManagedInstanceGroup.cs.html">here</a> to see an example of how to use AttachManagedInstanceToManagedInstanceGroup request.
     /// </example>
     public class AttachManagedInstanceToManagedInstanceGroupRequest : Oci.Common.IOciRequest
     {

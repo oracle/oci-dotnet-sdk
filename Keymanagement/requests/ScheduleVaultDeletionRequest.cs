@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/keymanagement/ScheduleVaultDeletion.cs.html">here</a> to see an example of how to use ScheduleVaultDeletion request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ScheduleVaultDeletion.cs.html">here</a> to see an example of how to use ScheduleVaultDeletion request.
     /// </example>
     public class ScheduleVaultDeletionRequest : Oci.Common.IOciRequest
     {

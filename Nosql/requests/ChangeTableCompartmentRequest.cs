@@ -14,7 +14,7 @@ using Oci.NosqlService.Models;
 namespace Oci.NosqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/nosql/ChangeTableCompartment.cs.html">here</a> to see an example of how to use ChangeTableCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ChangeTableCompartment.cs.html">here</a> to see an example of how to use ChangeTableCompartment request.
     /// </example>
     public class ChangeTableCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -72,7 +72,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ChangeConnectHarnessCompartment.cs.html">here</a> to see an example of how to use ChangeConnectHarnessCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ChangeConnectHarnessCompartment.cs.html">here</a> to see an example of how to use ChangeConnectHarnessCompartment API.</example>
         public async Task<ChangeConnectHarnessCompartmentResponse> ChangeConnectHarnessCompartment(ChangeConnectHarnessCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeConnectHarnessCompartment");
@@ -114,7 +114,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ChangeStreamCompartment.cs.html">here</a> to see an example of how to use ChangeStreamCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ChangeStreamCompartment.cs.html">here</a> to see an example of how to use ChangeStreamCompartment API.</example>
         public async Task<ChangeStreamCompartmentResponse> ChangeStreamCompartment(ChangeStreamCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeStreamCompartment");
@@ -153,7 +153,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ChangeStreamPoolCompartment.cs.html">here</a> to see an example of how to use ChangeStreamPoolCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ChangeStreamPoolCompartment.cs.html">here</a> to see an example of how to use ChangeStreamPoolCompartment API.</example>
         public async Task<ChangeStreamPoolCompartmentResponse> ChangeStreamPoolCompartment(ChangeStreamPoolCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeStreamPoolCompartment");
@@ -194,7 +194,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateConnectHarness.cs.html">here</a> to see an example of how to use CreateConnectHarness API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateConnectHarness.cs.html">here</a> to see an example of how to use CreateConnectHarness API.</example>
         public async Task<CreateConnectHarnessResponse> CreateConnectHarness(CreateConnectHarnessRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createConnectHarness");
@@ -238,7 +238,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateStream.cs.html">here</a> to see an example of how to use CreateStream API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateStream.cs.html">here</a> to see an example of how to use CreateStream API.</example>
         public async Task<CreateStreamResponse> CreateStream(CreateStreamRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createStream");
@@ -280,7 +280,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateStreamPool.cs.html">here</a> to see an example of how to use CreateStreamPool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateStreamPool.cs.html">here</a> to see an example of how to use CreateStreamPool API.</example>
         public async Task<CreateStreamPoolResponse> CreateStreamPool(CreateStreamPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createStreamPool");
@@ -324,7 +324,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/DeleteConnectHarness.cs.html">here</a> to see an example of how to use DeleteConnectHarness API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/DeleteConnectHarness.cs.html">here</a> to see an example of how to use DeleteConnectHarness API.</example>
         public async Task<DeleteConnectHarnessResponse> DeleteConnectHarness(DeleteConnectHarnessRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteConnectHarness");
@@ -368,7 +368,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/DeleteStream.cs.html">here</a> to see an example of how to use DeleteStream API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/DeleteStream.cs.html">here</a> to see an example of how to use DeleteStream API.</example>
         public async Task<DeleteStreamResponse> DeleteStream(DeleteStreamRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteStream");
@@ -409,7 +409,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/DeleteStreamPool.cs.html">here</a> to see an example of how to use DeleteStreamPool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/DeleteStreamPool.cs.html">here</a> to see an example of how to use DeleteStreamPool API.</example>
         public async Task<DeleteStreamPoolResponse> DeleteStreamPool(DeleteStreamPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteStreamPool");
@@ -448,7 +448,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetConnectHarness.cs.html">here</a> to see an example of how to use GetConnectHarness API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetConnectHarness.cs.html">here</a> to see an example of how to use GetConnectHarness API.</example>
         public async Task<GetConnectHarnessResponse> GetConnectHarness(GetConnectHarnessRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConnectHarness");
@@ -487,7 +487,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetStream.cs.html">here</a> to see an example of how to use GetStream API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetStream.cs.html">here</a> to see an example of how to use GetStream API.</example>
         public async Task<GetStreamResponse> GetStream(GetStreamRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getStream");
@@ -526,7 +526,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/GetStreamPool.cs.html">here</a> to see an example of how to use GetStreamPool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/GetStreamPool.cs.html">here</a> to see an example of how to use GetStreamPool API.</example>
         public async Task<GetStreamPoolResponse> GetStreamPool(GetStreamPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getStreamPool");
@@ -565,7 +565,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ListConnectHarnesses.cs.html">here</a> to see an example of how to use ListConnectHarnesses API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ListConnectHarnesses.cs.html">here</a> to see an example of how to use ListConnectHarnesses API.</example>
         public async Task<ListConnectHarnessesResponse> ListConnectHarnesses(ListConnectHarnessesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listConnectHarnesses");
@@ -604,7 +604,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ListStreamPools.cs.html">here</a> to see an example of how to use ListStreamPools API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ListStreamPools.cs.html">here</a> to see an example of how to use ListStreamPools API.</example>
         public async Task<ListStreamPoolsResponse> ListStreamPools(ListStreamPoolsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listStreamPools");
@@ -647,7 +647,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ListStreams.cs.html">here</a> to see an example of how to use ListStreams API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ListStreams.cs.html">here</a> to see an example of how to use ListStreams API.</example>
         public async Task<ListStreamsResponse> ListStreams(ListStreamsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listStreams");
@@ -687,7 +687,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/UpdateConnectHarness.cs.html">here</a> to see an example of how to use UpdateConnectHarness API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/UpdateConnectHarness.cs.html">here</a> to see an example of how to use UpdateConnectHarness API.</example>
         public async Task<UpdateConnectHarnessResponse> UpdateConnectHarness(UpdateConnectHarnessRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateConnectHarness");
@@ -727,7 +727,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/UpdateStream.cs.html">here</a> to see an example of how to use UpdateStream API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/UpdateStream.cs.html">here</a> to see an example of how to use UpdateStream API.</example>
         public async Task<UpdateStreamResponse> UpdateStream(UpdateStreamRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateStream");
@@ -767,7 +767,7 @@ namespace Oci.StreamingService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/UpdateStreamPool.cs.html">here</a> to see an example of how to use UpdateStreamPool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/UpdateStreamPool.cs.html">here</a> to see an example of how to use UpdateStreamPool API.</example>
         public async Task<UpdateStreamPoolResponse> UpdateStreamPool(UpdateStreamPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateStreamPool");

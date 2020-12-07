@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the Exadata Cloud@Customer VM cluster.
+    /// Details of the VM cluster resource. Applies to Exadata Cloud@Customer instances only.
     /// 
     /// </summary>
     public class VmCluster 
@@ -56,7 +56,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress
         };
 
         /// <value>

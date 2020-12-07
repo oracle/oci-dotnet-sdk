@@ -14,7 +14,7 @@ using Oci.SchService.Models;
 namespace Oci.SchService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/sch/DeactivateServiceConnector.cs.html">here</a> to see an example of how to use DeactivateServiceConnector request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/sch/DeactivateServiceConnector.cs.html">here</a> to see an example of how to use DeactivateServiceConnector request.
     /// </example>
     public class DeactivateServiceConnectorRequest : Oci.Common.IOciRequest
     {

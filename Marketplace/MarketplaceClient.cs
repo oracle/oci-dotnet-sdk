@@ -71,7 +71,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/CreateAcceptedAgreement.cs.html">here</a> to see an example of how to use CreateAcceptedAgreement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/CreateAcceptedAgreement.cs.html">here</a> to see an example of how to use CreateAcceptedAgreement API.</example>
         public async Task<CreateAcceptedAgreementResponse> CreateAcceptedAgreement(CreateAcceptedAgreementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAcceptedAgreement");
@@ -113,7 +113,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/DeleteAcceptedAgreement.cs.html">here</a> to see an example of how to use DeleteAcceptedAgreement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/DeleteAcceptedAgreement.cs.html">here</a> to see an example of how to use DeleteAcceptedAgreement API.</example>
         public async Task<DeleteAcceptedAgreementResponse> DeleteAcceptedAgreement(DeleteAcceptedAgreementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAcceptedAgreement");
@@ -153,7 +153,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/GetAcceptedAgreement.cs.html">here</a> to see an example of how to use GetAcceptedAgreement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/GetAcceptedAgreement.cs.html">here</a> to see an example of how to use GetAcceptedAgreement API.</example>
         public async Task<GetAcceptedAgreementResponse> GetAcceptedAgreement(GetAcceptedAgreementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAcceptedAgreement");
@@ -194,7 +194,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/GetAgreement.cs.html">here</a> to see an example of how to use GetAgreement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/GetAgreement.cs.html">here</a> to see an example of how to use GetAgreement API.</example>
         public async Task<GetAgreementResponse> GetAgreement(GetAgreementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAgreement");
@@ -248,7 +248,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/GetListing.cs.html">here</a> to see an example of how to use GetListing API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/GetListing.cs.html">here</a> to see an example of how to use GetListing API.</example>
         public async Task<GetListingResponse> GetListing(GetListingRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getListing");
@@ -301,7 +301,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/GetPackage.cs.html">here</a> to see an example of how to use GetPackage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/GetPackage.cs.html">here</a> to see an example of how to use GetPackage API.</example>
         public async Task<GetPackageResponse> GetPackage(GetPackageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPackage");
@@ -342,7 +342,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListAcceptedAgreements.cs.html">here</a> to see an example of how to use ListAcceptedAgreements API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListAcceptedAgreements.cs.html">here</a> to see an example of how to use ListAcceptedAgreements API.</example>
         public async Task<ListAcceptedAgreementsResponse> ListAcceptedAgreements(ListAcceptedAgreementsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAcceptedAgreements");
@@ -382,7 +382,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListAgreements.cs.html">here</a> to see an example of how to use ListAgreements API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListAgreements.cs.html">here</a> to see an example of how to use ListAgreements API.</example>
         public async Task<ListAgreementsResponse> ListAgreements(ListAgreementsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAgreements");
@@ -423,7 +423,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListCategories.cs.html">here</a> to see an example of how to use ListCategories API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListCategories.cs.html">here</a> to see an example of how to use ListCategories API.</example>
         public async Task<ListCategoriesResponse> ListCategories(ListCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCategories");
@@ -477,7 +477,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListListings.cs.html">here</a> to see an example of how to use ListListings API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListListings.cs.html">here</a> to see an example of how to use ListListings API.</example>
         public async Task<ListListingsResponse> ListListings(ListListingsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listListings");
@@ -530,7 +530,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListPackages.cs.html">here</a> to see an example of how to use ListPackages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListPackages.cs.html">here</a> to see an example of how to use ListPackages API.</example>
         public async Task<ListPackagesResponse> ListPackages(ListPackagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPackages");
@@ -570,7 +570,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListPublishers.cs.html">here</a> to see an example of how to use ListPublishers API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListPublishers.cs.html">here</a> to see an example of how to use ListPublishers API.</example>
         public async Task<ListPublishersResponse> ListPublishers(ListPublishersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPublishers");
@@ -609,7 +609,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListReportTypes.cs.html">here</a> to see an example of how to use ListReportTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListReportTypes.cs.html">here</a> to see an example of how to use ListReportTypes API.</example>
         public async Task<ListReportTypesResponse> ListReportTypes(ListReportTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listReportTypes");
@@ -648,7 +648,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListReports.cs.html">here</a> to see an example of how to use ListReports API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListReports.cs.html">here</a> to see an example of how to use ListReports API.</example>
         public async Task<ListReportsResponse> ListReports(ListReportsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listReports");
@@ -687,7 +687,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/ListTaxes.cs.html">here</a> to see an example of how to use ListTaxes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListTaxes.cs.html">here</a> to see an example of how to use ListTaxes API.</example>
         public async Task<ListTaxesResponse> ListTaxes(ListTaxesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTaxes");
@@ -727,7 +727,7 @@ namespace Oci.MarketplaceService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/marketplace/UpdateAcceptedAgreement.cs.html">here</a> to see an example of how to use UpdateAcceptedAgreement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/UpdateAcceptedAgreement.cs.html">here</a> to see an example of how to use UpdateAcceptedAgreement API.</example>
         public async Task<UpdateAcceptedAgreementResponse> UpdateAcceptedAgreement(UpdateAcceptedAgreementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAcceptedAgreement");

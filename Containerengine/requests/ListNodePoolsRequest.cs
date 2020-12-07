@@ -14,7 +14,7 @@ using Oci.ContainerengineService.Models;
 namespace Oci.ContainerengineService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/containerengine/ListNodePools.cs.html">here</a> to see an example of how to use ListNodePools request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/containerengine/ListNodePools.cs.html">here</a> to see an example of how to use ListNodePools request.
     /// </example>
     public class ListNodePoolsRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.DatasafeService.Models;
 namespace Oci.DatasafeService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListOnPremConnectors.cs.html">here</a> to see an example of how to use ListOnPremConnectors request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListOnPremConnectors.cs.html">here</a> to see an example of how to use ListOnPremConnectors request.
     /// </example>
     public class ListOnPremConnectorsRequest : Oci.Common.IOciRequest
     {

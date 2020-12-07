@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListTypes.cs.html">here</a> to see an example of how to use ListTypes request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListTypes.cs.html">here</a> to see an example of how to use ListTypes request.
     /// </example>
     public class ListTypesRequest : Oci.Common.IOciRequest
     {

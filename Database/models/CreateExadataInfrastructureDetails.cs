@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Request to create Exadata Cloud@Customer infrastructure resource.
+    /// Request to create Exadata infrastructure resource. Applies to Exadata Cloud@Customer instances only.
+    /// See {@link #createCloudExadataInfrastructureDetails(CreateCloudExadataInfrastructureDetailsRequest) createCloudExadataInfrastructureDetails} for information on creating a cloud Exadata infrastructure resource in an Exadata Cloud Service instance.
     /// 
     /// </summary>
     public class CreateExadataInfrastructureDetails 
@@ -139,6 +140,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.

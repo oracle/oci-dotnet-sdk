@@ -65,7 +65,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "DISCONNECTED")]
-            Disconnected
+            Disconnected,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress
         };
 
         /// <value>
@@ -232,6 +234,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

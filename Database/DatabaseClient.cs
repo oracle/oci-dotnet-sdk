@@ -66,13 +66,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Activates the specified Exadata Cloud@Customer infrastructure.
+        /// Activates the specified Exadata infrastructure resource. Applies to Exadata Cloud@Customer instances only.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ActivateExadataInfrastructure.cs.html">here</a> to see an example of how to use ActivateExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ActivateExadataInfrastructure.cs.html">here</a> to see an example of how to use ActivateExadataInfrastructure API.</example>
         public async Task<ActivateExadataInfrastructureResponse> ActivateExadataInfrastructure(ActivateExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called activateExadataInfrastructure");
@@ -112,7 +113,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/AutonomousDatabaseManualRefresh.cs.html">here</a> to see an example of how to use AutonomousDatabaseManualRefresh API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/AutonomousDatabaseManualRefresh.cs.html">here</a> to see an example of how to use AutonomousDatabaseManualRefresh API.</example>
         public async Task<AutonomousDatabaseManualRefreshResponse> AutonomousDatabaseManualRefresh(AutonomousDatabaseManualRefreshRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called autonomousDatabaseManualRefresh");
@@ -154,7 +155,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeAutonomousContainerDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousContainerDatabaseCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeAutonomousContainerDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousContainerDatabaseCompartment API.</example>
         public async Task<ChangeAutonomousContainerDatabaseCompartmentResponse> ChangeAutonomousContainerDatabaseCompartment(ChangeAutonomousContainerDatabaseCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAutonomousContainerDatabaseCompartment");
@@ -196,7 +197,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeAutonomousDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousDatabaseCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeAutonomousDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousDatabaseCompartment API.</example>
         public async Task<ChangeAutonomousDatabaseCompartmentResponse> ChangeAutonomousDatabaseCompartment(ChangeAutonomousDatabaseCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAutonomousDatabaseCompartment");
@@ -238,7 +239,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeAutonomousExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousExadataInfrastructureCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeAutonomousExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousExadataInfrastructureCompartment API.</example>
         public async Task<ChangeAutonomousExadataInfrastructureCompartmentResponse> ChangeAutonomousExadataInfrastructureCompartment(ChangeAutonomousExadataInfrastructureCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAutonomousExadataInfrastructureCompartment");
@@ -279,7 +280,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeAutonomousVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousVmClusterCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeAutonomousVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousVmClusterCompartment API.</example>
         public async Task<ChangeAutonomousVmClusterCompartmentResponse> ChangeAutonomousVmClusterCompartment(ChangeAutonomousVmClusterCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAutonomousVmClusterCompartment");
@@ -321,7 +322,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeBackupDestinationCompartment.cs.html">here</a> to see an example of how to use ChangeBackupDestinationCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeBackupDestinationCompartment.cs.html">here</a> to see an example of how to use ChangeBackupDestinationCompartment API.</example>
         public async Task<ChangeBackupDestinationCompartmentResponse> ChangeBackupDestinationCompartment(ChangeBackupDestinationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeBackupDestinationCompartment");
@@ -354,15 +355,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move a cloud Exadata infrastructure resource and its dependent resources to another compartment, use the
-        /// {@link #changeCloudExadataInfrastructureCompartment(ChangeCloudExadataInfrastructureCompartmentRequest) changeCloudExadataInfrastructureCompartment} operation.
+        /// Moves a cloud Exadata infrastructure resource and its dependent resources to another compartment. Applies to Exadata Cloud Service instances only. For more information about moving resources to a different compartment, see [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeCloudExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeCloudExadataInfrastructureCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeCloudExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeCloudExadataInfrastructureCompartment API.</example>
         public async Task<ChangeCloudExadataInfrastructureCompartmentResponse> ChangeCloudExadataInfrastructureCompartment(ChangeCloudExadataInfrastructureCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCloudExadataInfrastructureCompartment");
@@ -395,15 +395,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move a cloud VM cluster and its dependent resources to another compartment, use the
-        /// {@link #changeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest) changeCloudVmClusterCompartment} operation.
+        /// Moves a cloud VM cluster and its dependent resources to another compartment. Applies to Exadata Cloud Service instances only. 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeCloudVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeCloudVmClusterCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeCloudVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeCloudVmClusterCompartment API.</example>
         public async Task<ChangeCloudVmClusterCompartmentResponse> ChangeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCloudVmClusterCompartment");
@@ -445,7 +444,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeDatabaseSoftwareImageCompartment.cs.html">here</a> to see an example of how to use ChangeDatabaseSoftwareImageCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeDatabaseSoftwareImageCompartment.cs.html">here</a> to see an example of how to use ChangeDatabaseSoftwareImageCompartment API.</example>
         public async Task<ChangeDatabaseSoftwareImageCompartmentResponse> ChangeDatabaseSoftwareImageCompartment(ChangeDatabaseSoftwareImageCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeDatabaseSoftwareImageCompartment");
@@ -478,7 +477,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Move the DB system and its dependent resources to the specified compartment.
+        /// Moves the DB system and its dependent resources to the specified compartment.
         /// For more information about moving DB systems, see
         /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
         /// 
@@ -487,7 +486,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeDbSystemCompartment.cs.html">here</a> to see an example of how to use ChangeDbSystemCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeDbSystemCompartment.cs.html">here</a> to see an example of how to use ChangeDbSystemCompartment API.</example>
         public async Task<ChangeDbSystemCompartmentResponse> ChangeDbSystemCompartment(ChangeDbSystemCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeDbSystemCompartment");
@@ -520,15 +519,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move an Exadata Cloud@Customer infrastructure resource and its dependent resources to another compartment, use the
-        /// {@link #changeExadataInfrastructureCompartment(ChangeExadataInfrastructureCompartmentRequest) changeExadataInfrastructureCompartment} operation.
+        /// Moves an Exadata infrastructure resource and its dependent resources to another compartment. Applies to Exadata Cloud@Customer instances only. 
+        /// To move an Exadata Cloud Service infrastructure resource to another compartment, use the  {@link #changeCloudExadataInfrastructureCompartment(ChangeCloudExadataInfrastructureCompartmentRequest) changeCloudExadataInfrastructureCompartment} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeExadataInfrastructureCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeExadataInfrastructureCompartment.cs.html">here</a> to see an example of how to use ChangeExadataInfrastructureCompartment API.</example>
         public async Task<ChangeExadataInfrastructureCompartmentResponse> ChangeExadataInfrastructureCompartment(ChangeExadataInfrastructureCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeExadataInfrastructureCompartment");
@@ -570,7 +569,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeKeyStoreCompartment.cs.html">here</a> to see an example of how to use ChangeKeyStoreCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeKeyStoreCompartment.cs.html">here</a> to see an example of how to use ChangeKeyStoreCompartment API.</example>
         public async Task<ChangeKeyStoreCompartmentResponse> ChangeKeyStoreCompartment(ChangeKeyStoreCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeKeyStoreCompartment");
@@ -603,15 +602,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// To move an Exadata Cloud@Customer VM cluster and its dependent resources to another compartment, use the
-        /// {@link #changeVmClusterCompartment(ChangeVmClusterCompartmentRequest) changeVmClusterCompartment} operation.
+        /// Moves a VM cluster and its dependent resources to another compartment. Applies to Exadata Cloud@Customer instances only.
+        /// To move a cloud VM cluster in an Exadata Cloud Service instance to another compartment, use the {@link #changeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest) changeCloudVmClusterCompartment} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeVmClusterCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeVmClusterCompartment.cs.html">here</a> to see an example of how to use ChangeVmClusterCompartment API.</example>
         public async Task<ChangeVmClusterCompartmentResponse> ChangeVmClusterCompartment(ChangeVmClusterCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVmClusterCompartment");
@@ -653,7 +652,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CompleteExternalBackupJob.cs.html">here</a> to see an example of how to use CompleteExternalBackupJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CompleteExternalBackupJob.cs.html">here</a> to see an example of how to use CompleteExternalBackupJob API.</example>
         public async Task<CompleteExternalBackupJobResponse> CompleteExternalBackupJob(CompleteExternalBackupJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called completeExternalBackupJob");
@@ -693,7 +692,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use CreateAutonomousContainerDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use CreateAutonomousContainerDatabase API.</example>
         public async Task<CreateAutonomousContainerDatabaseResponse> CreateAutonomousContainerDatabase(CreateAutonomousContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousContainerDatabase");
@@ -733,7 +732,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use CreateAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use CreateAutonomousDataWarehouse API.</example>
         public async Task<CreateAutonomousDataWarehouseResponse> CreateAutonomousDataWarehouse(CreateAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousDataWarehouse");
@@ -773,7 +772,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousDataWarehouseBackup.cs.html">here</a> to see an example of how to use CreateAutonomousDataWarehouseBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousDataWarehouseBackup.cs.html">here</a> to see an example of how to use CreateAutonomousDataWarehouseBackup API.</example>
         public async Task<CreateAutonomousDataWarehouseBackupResponse> CreateAutonomousDataWarehouseBackup(CreateAutonomousDataWarehouseBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousDataWarehouseBackup");
@@ -813,7 +812,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousDatabase.cs.html">here</a> to see an example of how to use CreateAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousDatabase.cs.html">here</a> to see an example of how to use CreateAutonomousDatabase API.</example>
         public async Task<CreateAutonomousDatabaseResponse> CreateAutonomousDatabase(CreateAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousDatabase");
@@ -853,7 +852,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousDatabaseBackup.cs.html">here</a> to see an example of how to use CreateAutonomousDatabaseBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousDatabaseBackup.cs.html">here</a> to see an example of how to use CreateAutonomousDatabaseBackup API.</example>
         public async Task<CreateAutonomousDatabaseBackupResponse> CreateAutonomousDatabaseBackup(CreateAutonomousDatabaseBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousDatabaseBackup");
@@ -893,7 +892,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateAutonomousVmCluster.cs.html">here</a> to see an example of how to use CreateAutonomousVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateAutonomousVmCluster.cs.html">here</a> to see an example of how to use CreateAutonomousVmCluster API.</example>
         public async Task<CreateAutonomousVmClusterResponse> CreateAutonomousVmCluster(CreateAutonomousVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAutonomousVmCluster");
@@ -933,7 +932,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateBackup.cs.html">here</a> to see an example of how to use CreateBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateBackup.cs.html">here</a> to see an example of how to use CreateBackup API.</example>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBackup");
@@ -973,7 +972,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateBackupDestination.cs.html">here</a> to see an example of how to use CreateBackupDestination API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateBackupDestination.cs.html">here</a> to see an example of how to use CreateBackupDestination API.</example>
         public async Task<CreateBackupDestinationResponse> CreateBackupDestination(CreateBackupDestinationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBackupDestination");
@@ -1006,13 +1005,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a cloud Exadata infrastructure resource.
+        /// Creates a cloud Exadata infrastructure resource. This resource is used to create an [Exadata Cloud Service](https://docs.cloud.oracle.com/Content/Database/Concepts/exaoverview.htm) instance.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use CreateCloudExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use CreateCloudExadataInfrastructure API.</example>
         public async Task<CreateCloudExadataInfrastructureResponse> CreateCloudExadataInfrastructure(CreateCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCloudExadataInfrastructure");
@@ -1052,7 +1052,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateCloudVmCluster.cs.html">here</a> to see an example of how to use CreateCloudVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateCloudVmCluster.cs.html">here</a> to see an example of how to use CreateCloudVmCluster API.</example>
         public async Task<CreateCloudVmClusterResponse> CreateCloudVmCluster(CreateCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCloudVmCluster");
@@ -1094,7 +1094,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateConsoleConnection.cs.html">here</a> to see an example of how to use CreateConsoleConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateConsoleConnection.cs.html">here</a> to see an example of how to use CreateConsoleConnection API.</example>
         public async Task<CreateConsoleConnectionResponse> CreateConsoleConnection(CreateConsoleConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createConsoleConnection");
@@ -1141,7 +1141,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateDataGuardAssociation.cs.html">here</a> to see an example of how to use CreateDataGuardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateDataGuardAssociation.cs.html">here</a> to see an example of how to use CreateDataGuardAssociation API.</example>
         public async Task<CreateDataGuardAssociationResponse> CreateDataGuardAssociation(CreateDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDataGuardAssociation");
@@ -1181,7 +1181,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateDatabase.cs.html">here</a> to see an example of how to use CreateDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateDatabase.cs.html">here</a> to see an example of how to use CreateDatabase API.</example>
         public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDatabase");
@@ -1221,7 +1221,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use CreateDatabaseSoftwareImage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use CreateDatabaseSoftwareImage API.</example>
         public async Task<CreateDatabaseSoftwareImageResponse> CreateDatabaseSoftwareImage(CreateDatabaseSoftwareImageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDatabaseSoftwareImage");
@@ -1261,7 +1261,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateDbHome.cs.html">here</a> to see an example of how to use CreateDbHome API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateDbHome.cs.html">here</a> to see an example of how to use CreateDbHome API.</example>
         public async Task<CreateDbHomeResponse> CreateDbHome(CreateDbHomeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDbHome");
@@ -1294,13 +1294,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates Exadata Cloud@Customer infrastructure.
+        /// Creates an Exadata infrastructure resource. Applies to Exadata Cloud@Customer instances only.
+        /// To create an Exadata Cloud Service infrastructure resource, use the  {@link #createCloudExadataInfrastructure(CreateCloudExadataInfrastructureRequest) createCloudExadataInfrastructure} operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateExadataInfrastructure.cs.html">here</a> to see an example of how to use CreateExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateExadataInfrastructure.cs.html">here</a> to see an example of how to use CreateExadataInfrastructure API.</example>
         public async Task<CreateExadataInfrastructureResponse> CreateExadataInfrastructure(CreateExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createExadataInfrastructure");
@@ -1342,7 +1344,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateExternalBackupJob.cs.html">here</a> to see an example of how to use CreateExternalBackupJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateExternalBackupJob.cs.html">here</a> to see an example of how to use CreateExternalBackupJob API.</example>
         public async Task<CreateExternalBackupJobResponse> CreateExternalBackupJob(CreateExternalBackupJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createExternalBackupJob");
@@ -1382,7 +1384,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateKeyStore.cs.html">here</a> to see an example of how to use CreateKeyStore API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateKeyStore.cs.html">here</a> to see an example of how to use CreateKeyStore API.</example>
         public async Task<CreateKeyStoreResponse> CreateKeyStore(CreateKeyStoreRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createKeyStore");
@@ -1422,7 +1424,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateVmCluster.cs.html">here</a> to see an example of how to use CreateVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateVmCluster.cs.html">here</a> to see an example of how to use CreateVmCluster API.</example>
         public async Task<CreateVmClusterResponse> CreateVmCluster(CreateVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVmCluster");
@@ -1455,14 +1457,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates the Exadata Cloud@Customer VM cluster network.
+        /// Creates the VM cluster network. Applies to Exadata Cloud@Customer instances only.
+        /// To create a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #createCloudVmCluster(CreateCloudVmClusterRequest) createCloudVmCluster} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateVmClusterNetwork.cs.html">here</a> to see an example of how to use CreateVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateVmClusterNetwork.cs.html">here</a> to see an example of how to use CreateVmClusterNetwork API.</example>
         public async Task<CreateVmClusterNetworkResponse> CreateVmClusterNetwork(CreateVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVmClusterNetwork");
@@ -1514,7 +1517,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DbNodeAction.cs.html">here</a> to see an example of how to use DbNodeAction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DbNodeAction.cs.html">here</a> to see an example of how to use DbNodeAction API.</example>
         public async Task<DbNodeActionResponse> DbNodeAction(DbNodeActionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called dbNodeAction");
@@ -1554,7 +1557,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use DeleteAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use DeleteAutonomousDataWarehouse API.</example>
         public async Task<DeleteAutonomousDataWarehouseResponse> DeleteAutonomousDataWarehouse(DeleteAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAutonomousDataWarehouse");
@@ -1594,7 +1597,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteAutonomousDatabase.cs.html">here</a> to see an example of how to use DeleteAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteAutonomousDatabase.cs.html">here</a> to see an example of how to use DeleteAutonomousDatabase API.</example>
         public async Task<DeleteAutonomousDatabaseResponse> DeleteAutonomousDatabase(DeleteAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAutonomousDatabase");
@@ -1634,7 +1637,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteAutonomousVmCluster.cs.html">here</a> to see an example of how to use DeleteAutonomousVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteAutonomousVmCluster.cs.html">here</a> to see an example of how to use DeleteAutonomousVmCluster API.</example>
         public async Task<DeleteAutonomousVmClusterResponse> DeleteAutonomousVmCluster(DeleteAutonomousVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAutonomousVmCluster");
@@ -1673,7 +1676,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteBackup.cs.html">here</a> to see an example of how to use DeleteBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteBackup.cs.html">here</a> to see an example of how to use DeleteBackup API.</example>
         public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBackup");
@@ -1713,7 +1716,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteBackupDestination.cs.html">here</a> to see an example of how to use DeleteBackupDestination API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteBackupDestination.cs.html">here</a> to see an example of how to use DeleteBackupDestination API.</example>
         public async Task<DeleteBackupDestinationResponse> DeleteBackupDestination(DeleteBackupDestinationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBackupDestination");
@@ -1746,14 +1749,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the cloud Exadata infrastructure resource.
+        /// Deletes the cloud Exadata infrastructure resource. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use DeleteCloudExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use DeleteCloudExadataInfrastructure API.</example>
         public async Task<DeleteCloudExadataInfrastructureResponse> DeleteCloudExadataInfrastructure(DeleteCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCloudExadataInfrastructure");
@@ -1786,14 +1789,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified cloud VM cluster.
+        /// Deletes the specified cloud VM cluster. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteCloudVmCluster.cs.html">here</a> to see an example of how to use DeleteCloudVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteCloudVmCluster.cs.html">here</a> to see an example of how to use DeleteCloudVmCluster API.</example>
         public async Task<DeleteCloudVmClusterResponse> DeleteCloudVmCluster(DeleteCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCloudVmCluster");
@@ -1832,7 +1835,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteConsoleConnection.cs.html">here</a> to see an example of how to use DeleteConsoleConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteConsoleConnection.cs.html">here</a> to see an example of how to use DeleteConsoleConnection API.</example>
         public async Task<DeleteConsoleConnectionResponse> DeleteConsoleConnection(DeleteConsoleConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteConsoleConnection");
@@ -1874,7 +1877,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteDatabase.cs.html">here</a> to see an example of how to use DeleteDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteDatabase.cs.html">here</a> to see an example of how to use DeleteDatabase API.</example>
         public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDatabase");
@@ -1913,7 +1916,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use DeleteDatabaseSoftwareImage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use DeleteDatabaseSoftwareImage API.</example>
         public async Task<DeleteDatabaseSoftwareImageResponse> DeleteDatabaseSoftwareImage(DeleteDatabaseSoftwareImageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDatabaseSoftwareImage");
@@ -1955,7 +1958,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteDbHome.cs.html">here</a> to see an example of how to use DeleteDbHome API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteDbHome.cs.html">here</a> to see an example of how to use DeleteDbHome API.</example>
         public async Task<DeleteDbHomeResponse> DeleteDbHome(DeleteDbHomeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDbHome");
@@ -1995,7 +1998,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteExadataInfrastructure.cs.html">here</a> to see an example of how to use DeleteExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteExadataInfrastructure.cs.html">here</a> to see an example of how to use DeleteExadataInfrastructure API.</example>
         public async Task<DeleteExadataInfrastructureResponse> DeleteExadataInfrastructure(DeleteExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteExadataInfrastructure");
@@ -2035,7 +2038,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteKeyStore.cs.html">here</a> to see an example of how to use DeleteKeyStore API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteKeyStore.cs.html">here</a> to see an example of how to use DeleteKeyStore API.</example>
         public async Task<DeleteKeyStoreResponse> DeleteKeyStore(DeleteKeyStoreRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteKeyStore");
@@ -2068,14 +2071,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified Exadata Cloud@Customer VM cluster.
+        /// Deletes the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteVmCluster.cs.html">here</a> to see an example of how to use DeleteVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteVmCluster.cs.html">here</a> to see an example of how to use DeleteVmCluster API.</example>
         public async Task<DeleteVmClusterResponse> DeleteVmCluster(DeleteVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVmCluster");
@@ -2108,14 +2111,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified Exadata Cloud@Customer VM cluster network.
+        /// Deletes the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+        /// To delete a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #deleteCloudVmCluster(DeleteCloudVmClusterRequest) deleteCloudVmCluster} operation. 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeleteVmClusterNetwork.cs.html">here</a> to see an example of how to use DeleteVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteVmClusterNetwork.cs.html">here</a> to see an example of how to use DeleteVmClusterNetwork API.</example>
         public async Task<DeleteVmClusterNetworkResponse> DeleteVmClusterNetwork(DeleteVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteVmClusterNetwork");
@@ -2155,7 +2159,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DeregisterAutonomousDatabaseDataSafe.cs.html">here</a> to see an example of how to use DeregisterAutonomousDatabaseDataSafe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeregisterAutonomousDatabaseDataSafe.cs.html">here</a> to see an example of how to use DeregisterAutonomousDatabaseDataSafe API.</example>
         public async Task<DeregisterAutonomousDatabaseDataSafeResponse> DeregisterAutonomousDatabaseDataSafe(DeregisterAutonomousDatabaseDataSafeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deregisterAutonomousDatabaseDataSafe");
@@ -2195,7 +2199,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DisableAutonomousDatabaseOperationsInsights.cs.html">here</a> to see an example of how to use DisableAutonomousDatabaseOperationsInsights API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DisableAutonomousDatabaseOperationsInsights.cs.html">here</a> to see an example of how to use DisableAutonomousDatabaseOperationsInsights API.</example>
         public async Task<DisableAutonomousDatabaseOperationsInsightsResponse> DisableAutonomousDatabaseOperationsInsights(DisableAutonomousDatabaseOperationsInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called disableAutonomousDatabaseOperationsInsights");
@@ -2235,7 +2239,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DownloadExadataInfrastructureConfigFile.cs.html">here</a> to see an example of how to use DownloadExadataInfrastructureConfigFile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DownloadExadataInfrastructureConfigFile.cs.html">here</a> to see an example of how to use DownloadExadataInfrastructureConfigFile API.</example>
         public async Task<DownloadExadataInfrastructureConfigFileResponse> DownloadExadataInfrastructureConfigFile(DownloadExadataInfrastructureConfigFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called downloadExadataInfrastructureConfigFile");
@@ -2268,14 +2272,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Downloads the configuration file for the specified Exadata Cloud@Customer VM cluster network.
+        /// Downloads the configuration file for the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/DownloadVmClusterNetworkConfigFile.cs.html">here</a> to see an example of how to use DownloadVmClusterNetworkConfigFile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DownloadVmClusterNetworkConfigFile.cs.html">here</a> to see an example of how to use DownloadVmClusterNetworkConfigFile API.</example>
         public async Task<DownloadVmClusterNetworkConfigFileResponse> DownloadVmClusterNetworkConfigFile(DownloadVmClusterNetworkConfigFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called downloadVmClusterNetworkConfigFile");
@@ -2315,7 +2319,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/EnableAutonomousDatabaseOperationsInsights.cs.html">here</a> to see an example of how to use EnableAutonomousDatabaseOperationsInsights API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/EnableAutonomousDatabaseOperationsInsights.cs.html">here</a> to see an example of how to use EnableAutonomousDatabaseOperationsInsights API.</example>
         public async Task<EnableAutonomousDatabaseOperationsInsightsResponse> EnableAutonomousDatabaseOperationsInsights(EnableAutonomousDatabaseOperationsInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called enableAutonomousDatabaseOperationsInsights");
@@ -2355,7 +2359,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/FailOverAutonomousDatabase.cs.html">here</a> to see an example of how to use FailOverAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/FailOverAutonomousDatabase.cs.html">here</a> to see an example of how to use FailOverAutonomousDatabase API.</example>
         public async Task<FailOverAutonomousDatabaseResponse> FailOverAutonomousDatabase(FailOverAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called failOverAutonomousDatabase");
@@ -2397,7 +2401,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/FailoverAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use FailoverAutonomousContainerDatabaseDataguardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/FailoverAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use FailoverAutonomousContainerDatabaseDataguardAssociation API.</example>
         public async Task<FailoverAutonomousContainerDatabaseDataguardAssociationResponse> FailoverAutonomousContainerDatabaseDataguardAssociation(FailoverAutonomousContainerDatabaseDataguardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called failoverAutonomousContainerDatabaseDataguardAssociation");
@@ -2441,7 +2445,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/FailoverDataGuardAssociation.cs.html">here</a> to see an example of how to use FailoverDataGuardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/FailoverDataGuardAssociation.cs.html">here</a> to see an example of how to use FailoverDataGuardAssociation API.</example>
         public async Task<FailoverDataGuardAssociationResponse> FailoverDataGuardAssociation(FailoverDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called failoverDataGuardAssociation");
@@ -2481,7 +2485,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GenerateAutonomousDataWarehouseWallet.cs.html">here</a> to see an example of how to use GenerateAutonomousDataWarehouseWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GenerateAutonomousDataWarehouseWallet.cs.html">here</a> to see an example of how to use GenerateAutonomousDataWarehouseWallet API.</example>
         public async Task<GenerateAutonomousDataWarehouseWalletResponse> GenerateAutonomousDataWarehouseWallet(GenerateAutonomousDataWarehouseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateAutonomousDataWarehouseWallet");
@@ -2521,7 +2525,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GenerateAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use GenerateAutonomousDatabaseWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GenerateAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use GenerateAutonomousDatabaseWallet API.</example>
         public async Task<GenerateAutonomousDatabaseWalletResponse> GenerateAutonomousDatabaseWallet(GenerateAutonomousDatabaseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateAutonomousDatabaseWallet");
@@ -2561,7 +2565,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GenerateRecommendedVmClusterNetwork.cs.html">here</a> to see an example of how to use GenerateRecommendedVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GenerateRecommendedVmClusterNetwork.cs.html">here</a> to see an example of how to use GenerateRecommendedVmClusterNetwork API.</example>
         public async Task<GenerateRecommendedVmClusterNetworkResponse> GenerateRecommendedVmClusterNetwork(GenerateRecommendedVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateRecommendedVmClusterNetwork");
@@ -2600,7 +2604,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use GetAutonomousContainerDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use GetAutonomousContainerDatabase API.</example>
         public async Task<GetAutonomousContainerDatabaseResponse> GetAutonomousContainerDatabase(GetAutonomousContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousContainerDatabase");
@@ -2640,7 +2644,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use GetAutonomousContainerDatabaseDataguardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use GetAutonomousContainerDatabaseDataguardAssociation API.</example>
         public async Task<GetAutonomousContainerDatabaseDataguardAssociationResponse> GetAutonomousContainerDatabaseDataguardAssociation(GetAutonomousContainerDatabaseDataguardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousContainerDatabaseDataguardAssociation");
@@ -2680,7 +2684,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use GetAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use GetAutonomousDataWarehouse API.</example>
         public async Task<GetAutonomousDataWarehouseResponse> GetAutonomousDataWarehouse(GetAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDataWarehouse");
@@ -2720,7 +2724,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDataWarehouseBackup.cs.html">here</a> to see an example of how to use GetAutonomousDataWarehouseBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDataWarehouseBackup.cs.html">here</a> to see an example of how to use GetAutonomousDataWarehouseBackup API.</example>
         public async Task<GetAutonomousDataWarehouseBackupResponse> GetAutonomousDataWarehouseBackup(GetAutonomousDataWarehouseBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDataWarehouseBackup");
@@ -2760,7 +2764,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDatabase.cs.html">here</a> to see an example of how to use GetAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDatabase.cs.html">here</a> to see an example of how to use GetAutonomousDatabase API.</example>
         public async Task<GetAutonomousDatabaseResponse> GetAutonomousDatabase(GetAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDatabase");
@@ -2799,7 +2803,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDatabaseBackup.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDatabaseBackup.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseBackup API.</example>
         public async Task<GetAutonomousDatabaseBackupResponse> GetAutonomousDatabaseBackup(GetAutonomousDatabaseBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDatabaseBackup");
@@ -2839,7 +2843,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseDataguardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseDataguardAssociation API.</example>
         public async Task<GetAutonomousDatabaseDataguardAssociationResponse> GetAutonomousDatabaseDataguardAssociation(GetAutonomousDatabaseDataguardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDatabaseDataguardAssociation");
@@ -2879,7 +2883,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDatabaseRegionalWallet.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseRegionalWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDatabaseRegionalWallet.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseRegionalWallet API.</example>
         public async Task<GetAutonomousDatabaseRegionalWalletResponse> GetAutonomousDatabaseRegionalWallet(GetAutonomousDatabaseRegionalWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDatabaseRegionalWallet");
@@ -2919,7 +2923,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use GetAutonomousDatabaseWallet API.</example>
         public async Task<GetAutonomousDatabaseWalletResponse> GetAutonomousDatabaseWallet(GetAutonomousDatabaseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousDatabaseWallet");
@@ -2958,7 +2962,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use GetAutonomousExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use GetAutonomousExadataInfrastructure API.</example>
         public async Task<GetAutonomousExadataInfrastructureResponse> GetAutonomousExadataInfrastructure(GetAutonomousExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousExadataInfrastructure");
@@ -2997,7 +3001,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousPatch.cs.html">here</a> to see an example of how to use GetAutonomousPatch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousPatch.cs.html">here</a> to see an example of how to use GetAutonomousPatch API.</example>
         public async Task<GetAutonomousPatchResponse> GetAutonomousPatch(GetAutonomousPatchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousPatch");
@@ -3036,7 +3040,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetAutonomousVmCluster.cs.html">here</a> to see an example of how to use GetAutonomousVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetAutonomousVmCluster.cs.html">here</a> to see an example of how to use GetAutonomousVmCluster API.</example>
         public async Task<GetAutonomousVmClusterResponse> GetAutonomousVmCluster(GetAutonomousVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAutonomousVmCluster");
@@ -3075,7 +3079,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetBackup.cs.html">here</a> to see an example of how to use GetBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetBackup.cs.html">here</a> to see an example of how to use GetBackup API.</example>
         public async Task<GetBackupResponse> GetBackup(GetBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBackup");
@@ -3115,7 +3119,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetBackupDestination.cs.html">here</a> to see an example of how to use GetBackupDestination API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetBackupDestination.cs.html">here</a> to see an example of how to use GetBackupDestination API.</example>
         public async Task<GetBackupDestinationResponse> GetBackupDestination(GetBackupDestinationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBackupDestination");
@@ -3148,13 +3152,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified cloud Exadata infrastructure resource.
+        /// Gets information about the specified cloud Exadata infrastructure resource. Applies to Exadata Cloud Service instances only.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use GetCloudExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use GetCloudExadataInfrastructure API.</example>
         public async Task<GetCloudExadataInfrastructureResponse> GetCloudExadataInfrastructure(GetCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCloudExadataInfrastructure");
@@ -3187,13 +3192,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified cloud VM cluster.
+        /// Gets information about the specified cloud VM cluster. Applies to Exadata Cloud Service instances only.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetCloudVmCluster.cs.html">here</a> to see an example of how to use GetCloudVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetCloudVmCluster.cs.html">here</a> to see an example of how to use GetCloudVmCluster API.</example>
         public async Task<GetCloudVmClusterResponse> GetCloudVmCluster(GetCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCloudVmCluster");
@@ -3226,7 +3232,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the IORM configuration for the specified cloud VM cluster.
+        /// Gets the IORM configuration for the specified cloud VM cluster in an Exadata Cloud Service instance.
         /// If you have not specified an IORM configuration, the default configuration is returned.
         /// 
         /// </summary>
@@ -3234,7 +3240,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetCloudVmClusterIormConfig.cs.html">here</a> to see an example of how to use GetCloudVmClusterIormConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetCloudVmClusterIormConfig.cs.html">here</a> to see an example of how to use GetCloudVmClusterIormConfig API.</example>
         public async Task<GetCloudVmClusterIormConfigResponse> GetCloudVmClusterIormConfig(GetCloudVmClusterIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCloudVmClusterIormConfig");
@@ -3267,14 +3273,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about a specified maintenance update package.
+        /// Gets information about a specified maintenance update package for a cloud VM cluster. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetCloudVmClusterUpdate.cs.html">here</a> to see an example of how to use GetCloudVmClusterUpdate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetCloudVmClusterUpdate.cs.html">here</a> to see an example of how to use GetCloudVmClusterUpdate API.</example>
         public async Task<GetCloudVmClusterUpdateResponse> GetCloudVmClusterUpdate(GetCloudVmClusterUpdateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCloudVmClusterUpdate");
@@ -3307,14 +3313,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the maintenance update history details for the specified update history entry.
+        /// Gets the maintenance update history details for the specified update history entry. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetCloudVmClusterUpdateHistoryEntry.cs.html">here</a> to see an example of how to use GetCloudVmClusterUpdateHistoryEntry API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetCloudVmClusterUpdateHistoryEntry.cs.html">here</a> to see an example of how to use GetCloudVmClusterUpdateHistoryEntry API.</example>
         public async Task<GetCloudVmClusterUpdateHistoryEntryResponse> GetCloudVmClusterUpdateHistoryEntry(GetCloudVmClusterUpdateHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCloudVmClusterUpdateHistoryEntry");
@@ -3353,7 +3359,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetConsoleConnection.cs.html">here</a> to see an example of how to use GetConsoleConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetConsoleConnection.cs.html">here</a> to see an example of how to use GetConsoleConnection API.</example>
         public async Task<GetConsoleConnectionResponse> GetConsoleConnection(GetConsoleConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConsoleConnection");
@@ -3393,7 +3399,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDataGuardAssociation.cs.html">here</a> to see an example of how to use GetDataGuardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDataGuardAssociation.cs.html">here</a> to see an example of how to use GetDataGuardAssociation API.</example>
         public async Task<GetDataGuardAssociationResponse> GetDataGuardAssociation(GetDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDataGuardAssociation");
@@ -3432,7 +3438,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDatabase.cs.html">here</a> to see an example of how to use GetDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDatabase.cs.html">here</a> to see an example of how to use GetDatabase API.</example>
         public async Task<GetDatabaseResponse> GetDatabase(GetDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDatabase");
@@ -3471,7 +3477,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use GetDatabaseSoftwareImage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use GetDatabaseSoftwareImage API.</example>
         public async Task<GetDatabaseSoftwareImageResponse> GetDatabaseSoftwareImage(GetDatabaseSoftwareImageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDatabaseSoftwareImage");
@@ -3511,7 +3517,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDatabaseUpgradeHistoryEntry.cs.html">here</a> to see an example of how to use GetDatabaseUpgradeHistoryEntry API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDatabaseUpgradeHistoryEntry.cs.html">here</a> to see an example of how to use GetDatabaseUpgradeHistoryEntry API.</example>
         public async Task<GetDatabaseUpgradeHistoryEntryResponse> GetDatabaseUpgradeHistoryEntry(GetDatabaseUpgradeHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDatabaseUpgradeHistoryEntry");
@@ -3550,7 +3556,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbHome.cs.html">here</a> to see an example of how to use GetDbHome API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbHome.cs.html">here</a> to see an example of how to use GetDbHome API.</example>
         public async Task<GetDbHomeResponse> GetDbHome(GetDbHomeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbHome");
@@ -3590,7 +3596,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbHomePatch.cs.html">here</a> to see an example of how to use GetDbHomePatch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbHomePatch.cs.html">here</a> to see an example of how to use GetDbHomePatch API.</example>
         public async Task<GetDbHomePatchResponse> GetDbHomePatch(GetDbHomePatchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbHomePatch");
@@ -3630,7 +3636,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbHomePatchHistoryEntry.cs.html">here</a> to see an example of how to use GetDbHomePatchHistoryEntry API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbHomePatchHistoryEntry.cs.html">here</a> to see an example of how to use GetDbHomePatchHistoryEntry API.</example>
         public async Task<GetDbHomePatchHistoryEntryResponse> GetDbHomePatchHistoryEntry(GetDbHomePatchHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbHomePatchHistoryEntry");
@@ -3669,7 +3675,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbNode.cs.html">here</a> to see an example of how to use GetDbNode API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbNode.cs.html">here</a> to see an example of how to use GetDbNode API.</example>
         public async Task<GetDbNodeResponse> GetDbNode(GetDbNodeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbNode");
@@ -3708,7 +3714,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbSystem.cs.html">here</a> to see an example of how to use GetDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbSystem.cs.html">here</a> to see an example of how to use GetDbSystem API.</example>
         public async Task<GetDbSystemResponse> GetDbSystem(GetDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbSystem");
@@ -3748,7 +3754,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbSystemPatch.cs.html">here</a> to see an example of how to use GetDbSystemPatch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbSystemPatch.cs.html">here</a> to see an example of how to use GetDbSystemPatch API.</example>
         public async Task<GetDbSystemPatchResponse> GetDbSystemPatch(GetDbSystemPatchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbSystemPatch");
@@ -3788,7 +3794,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetDbSystemPatchHistoryEntry.cs.html">here</a> to see an example of how to use GetDbSystemPatchHistoryEntry API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDbSystemPatchHistoryEntry.cs.html">here</a> to see an example of how to use GetDbSystemPatchHistoryEntry API.</example>
         public async Task<GetDbSystemPatchHistoryEntryResponse> GetDbSystemPatchHistoryEntry(GetDbSystemPatchHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbSystemPatchHistoryEntry");
@@ -3821,13 +3827,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Exadata Cloud@Customer infrastructure.
+        /// Gets information about the specified Exadata infrastructure. Applies to Exadata Cloud@Customer instances only.
+        /// To get information on an Exadata Cloud Service infrastructure resource, use the  {@link #getCloudExadataInfrastructure(GetCloudExadataInfrastructureRequest) getCloudExadataInfrastructure} operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetExadataInfrastructure.cs.html">here</a> to see an example of how to use GetExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetExadataInfrastructure.cs.html">here</a> to see an example of how to use GetExadataInfrastructure API.</example>
         public async Task<GetExadataInfrastructureResponse> GetExadataInfrastructure(GetExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getExadataInfrastructure");
@@ -3867,7 +3875,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetExadataInfrastructureOcpus.cs.html">here</a> to see an example of how to use GetExadataInfrastructureOcpus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetExadataInfrastructureOcpus.cs.html">here</a> to see an example of how to use GetExadataInfrastructureOcpus API.</example>
         public async Task<GetExadataInfrastructureOcpusResponse> GetExadataInfrastructureOcpus(GetExadataInfrastructureOcpusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getExadataInfrastructureOcpus");
@@ -3908,7 +3916,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetExadataIormConfig.cs.html">here</a> to see an example of how to use GetExadataIormConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetExadataIormConfig.cs.html">here</a> to see an example of how to use GetExadataIormConfig API.</example>
         public async Task<GetExadataIormConfigResponse> GetExadataIormConfig(GetExadataIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getExadataIormConfig");
@@ -3950,7 +3958,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetExternalBackupJob.cs.html">here</a> to see an example of how to use GetExternalBackupJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetExternalBackupJob.cs.html">here</a> to see an example of how to use GetExternalBackupJob API.</example>
         public async Task<GetExternalBackupJobResponse> GetExternalBackupJob(GetExternalBackupJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getExternalBackupJob");
@@ -3990,7 +3998,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetKeyStore.cs.html">here</a> to see an example of how to use GetKeyStore API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetKeyStore.cs.html">here</a> to see an example of how to use GetKeyStore API.</example>
         public async Task<GetKeyStoreResponse> GetKeyStore(GetKeyStoreRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getKeyStore");
@@ -4029,7 +4037,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetMaintenanceRun.cs.html">here</a> to see an example of how to use GetMaintenanceRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetMaintenanceRun.cs.html">here</a> to see an example of how to use GetMaintenanceRun API.</example>
         public async Task<GetMaintenanceRunResponse> GetMaintenanceRun(GetMaintenanceRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getMaintenanceRun");
@@ -4062,13 +4070,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Exadata Cloud@Customer VM cluster.
+        /// Gets information about the VM cluster. Applies to Exadata Cloud@Customer instances only.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetVmCluster.cs.html">here</a> to see an example of how to use GetVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetVmCluster.cs.html">here</a> to see an example of how to use GetVmCluster API.</example>
         public async Task<GetVmClusterResponse> GetVmCluster(GetVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVmCluster");
@@ -4101,13 +4110,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Exadata Cloud@Customer VM cluster network.
+        /// Gets information about the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+        /// To get information about a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #getCloudVmCluster(GetCloudVmClusterRequest) getCloudVmCluster} operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetVmClusterNetwork.cs.html">here</a> to see an example of how to use GetVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetVmClusterNetwork.cs.html">here</a> to see an example of how to use GetVmClusterNetwork API.</example>
         public async Task<GetVmClusterNetworkResponse> GetVmClusterNetwork(GetVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVmClusterNetwork");
@@ -4147,7 +4158,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetVmClusterPatch.cs.html">here</a> to see an example of how to use GetVmClusterPatch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetVmClusterPatch.cs.html">here</a> to see an example of how to use GetVmClusterPatch API.</example>
         public async Task<GetVmClusterPatchResponse> GetVmClusterPatch(GetVmClusterPatchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVmClusterPatch");
@@ -4187,7 +4198,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/GetVmClusterPatchHistoryEntry.cs.html">here</a> to see an example of how to use GetVmClusterPatchHistoryEntry API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetVmClusterPatchHistoryEntry.cs.html">here</a> to see an example of how to use GetVmClusterPatchHistoryEntry API.</example>
         public async Task<GetVmClusterPatchHistoryEntryResponse> GetVmClusterPatchHistoryEntry(GetVmClusterPatchHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVmClusterPatchHistoryEntry");
@@ -4227,7 +4238,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/LaunchAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use LaunchAutonomousExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/LaunchAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use LaunchAutonomousExadataInfrastructure API.</example>
         public async Task<LaunchAutonomousExadataInfrastructureResponse> LaunchAutonomousExadataInfrastructure(LaunchAutonomousExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called launchAutonomousExadataInfrastructure");
@@ -4274,7 +4285,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/LaunchDbSystem.cs.html">here</a> to see an example of how to use LaunchDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/LaunchDbSystem.cs.html">here</a> to see an example of how to use LaunchDbSystem API.</example>
         public async Task<LaunchDbSystemResponse> LaunchDbSystem(LaunchDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called launchDbSystem");
@@ -4307,14 +4318,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Autonomous Container Databases with Autonomous Data Guard enabled associated with the specified Autonomous Container Database.
+        /// Gets a list of the Autonomous Container Databases with Autonomous Data Guard-enabled associated with the specified Autonomous Container Database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousContainerDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabaseDataguardAssociations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousContainerDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabaseDataguardAssociations API.</example>
         public async Task<ListAutonomousContainerDatabaseDataguardAssociationsResponse> ListAutonomousContainerDatabaseDataguardAssociations(ListAutonomousContainerDatabaseDataguardAssociationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousContainerDatabaseDataguardAssociations");
@@ -4354,7 +4365,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousContainerDatabases.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabases API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousContainerDatabases.cs.html">here</a> to see an example of how to use ListAutonomousContainerDatabases API.</example>
         public async Task<ListAutonomousContainerDatabasesResponse> ListAutonomousContainerDatabases(ListAutonomousContainerDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousContainerDatabases");
@@ -4394,7 +4405,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDataWarehouseBackups.cs.html">here</a> to see an example of how to use ListAutonomousDataWarehouseBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDataWarehouseBackups.cs.html">here</a> to see an example of how to use ListAutonomousDataWarehouseBackups API.</example>
         public async Task<ListAutonomousDataWarehouseBackupsResponse> ListAutonomousDataWarehouseBackups(ListAutonomousDataWarehouseBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDataWarehouseBackups");
@@ -4434,7 +4445,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDataWarehouses.cs.html">here</a> to see an example of how to use ListAutonomousDataWarehouses API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDataWarehouses.cs.html">here</a> to see an example of how to use ListAutonomousDataWarehouses API.</example>
         public async Task<ListAutonomousDataWarehousesResponse> ListAutonomousDataWarehouses(ListAutonomousDataWarehousesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDataWarehouses");
@@ -4474,7 +4485,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDatabaseBackups.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDatabaseBackups.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseBackups API.</example>
         public async Task<ListAutonomousDatabaseBackupsResponse> ListAutonomousDatabaseBackups(ListAutonomousDatabaseBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDatabaseBackups");
@@ -4514,7 +4525,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDatabaseClones.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseClones API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDatabaseClones.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseClones API.</example>
         public async Task<ListAutonomousDatabaseClonesResponse> ListAutonomousDatabaseClones(ListAutonomousDatabaseClonesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDatabaseClones");
@@ -4554,7 +4565,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseDataguardAssociations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDatabaseDataguardAssociations.cs.html">here</a> to see an example of how to use ListAutonomousDatabaseDataguardAssociations API.</example>
         public async Task<ListAutonomousDatabaseDataguardAssociationsResponse> ListAutonomousDatabaseDataguardAssociations(ListAutonomousDatabaseDataguardAssociationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDatabaseDataguardAssociations");
@@ -4594,7 +4605,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDatabases.cs.html">here</a> to see an example of how to use ListAutonomousDatabases API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDatabases.cs.html">here</a> to see an example of how to use ListAutonomousDatabases API.</example>
         public async Task<ListAutonomousDatabasesResponse> ListAutonomousDatabases(ListAutonomousDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDatabases");
@@ -4635,7 +4646,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDbPreviewVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbPreviewVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDbPreviewVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbPreviewVersions API.</example>
         public async Task<ListAutonomousDbPreviewVersionsResponse> ListAutonomousDbPreviewVersions(ListAutonomousDbPreviewVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDbPreviewVersions");
@@ -4674,7 +4685,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousDbVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDbVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbVersions API.</example>
         public async Task<ListAutonomousDbVersionsResponse> ListAutonomousDbVersions(ListAutonomousDbVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousDbVersions");
@@ -4713,7 +4724,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousExadataInfrastructureShapes.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructureShapes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousExadataInfrastructureShapes.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructureShapes API.</example>
         public async Task<ListAutonomousExadataInfrastructureShapesResponse> ListAutonomousExadataInfrastructureShapes(ListAutonomousExadataInfrastructureShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousExadataInfrastructureShapes");
@@ -4753,7 +4764,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousExadataInfrastructures.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructures API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousExadataInfrastructures.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructures API.</example>
         public async Task<ListAutonomousExadataInfrastructuresResponse> ListAutonomousExadataInfrastructures(ListAutonomousExadataInfrastructuresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousExadataInfrastructures");
@@ -4793,7 +4804,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousVmClusters.cs.html">here</a> to see an example of how to use ListAutonomousVmClusters API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousVmClusters.cs.html">here</a> to see an example of how to use ListAutonomousVmClusters API.</example>
         public async Task<ListAutonomousVmClustersResponse> ListAutonomousVmClusters(ListAutonomousVmClustersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAutonomousVmClusters");
@@ -4833,7 +4844,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListBackupDestination.cs.html">here</a> to see an example of how to use ListBackupDestination API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListBackupDestination.cs.html">here</a> to see an example of how to use ListBackupDestination API.</example>
         public async Task<ListBackupDestinationResponse> ListBackupDestination(ListBackupDestinationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBackupDestination");
@@ -4873,7 +4884,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListBackups.cs.html">here</a> to see an example of how to use ListBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListBackups.cs.html">here</a> to see an example of how to use ListBackups API.</example>
         public async Task<ListBackupsResponse> ListBackups(ListBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBackups");
@@ -4906,14 +4917,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the cloud Exadata infrastructure in the specified compartment.
+        /// Gets a list of the cloud Exadata infrastructure resources in the specified compartment. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListCloudExadataInfrastructures.cs.html">here</a> to see an example of how to use ListCloudExadataInfrastructures API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListCloudExadataInfrastructures.cs.html">here</a> to see an example of how to use ListCloudExadataInfrastructures API.</example>
         public async Task<ListCloudExadataInfrastructuresResponse> ListCloudExadataInfrastructures(ListCloudExadataInfrastructuresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCloudExadataInfrastructures");
@@ -4946,14 +4957,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the history of the maintenance update actions performed on the specified cloud VM cluster.
+        /// Gets the history of the maintenance update actions performed on the specified cloud VM cluster. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListCloudVmClusterUpdateHistoryEntries.cs.html">here</a> to see an example of how to use ListCloudVmClusterUpdateHistoryEntries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListCloudVmClusterUpdateHistoryEntries.cs.html">here</a> to see an example of how to use ListCloudVmClusterUpdateHistoryEntries API.</example>
         public async Task<ListCloudVmClusterUpdateHistoryEntriesResponse> ListCloudVmClusterUpdateHistoryEntries(ListCloudVmClusterUpdateHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCloudVmClusterUpdateHistoryEntries");
@@ -4986,14 +4997,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Lists the maintenance updates that can be applied to the requested cloud VM cluster.
+        /// Lists the maintenance updates that can be applied to the specified cloud VM cluster. Applies to Exadata Cloud Service instances only. 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListCloudVmClusterUpdates.cs.html">here</a> to see an example of how to use ListCloudVmClusterUpdates API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListCloudVmClusterUpdates.cs.html">here</a> to see an example of how to use ListCloudVmClusterUpdates API.</example>
         public async Task<ListCloudVmClusterUpdatesResponse> ListCloudVmClusterUpdates(ListCloudVmClusterUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCloudVmClusterUpdates");
@@ -5026,14 +5037,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the cloud VM clusters in the specified compartment.
+        /// Gets a list of the cloud VM clusters in the specified compartment. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListCloudVmClusters.cs.html">here</a> to see an example of how to use ListCloudVmClusters API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListCloudVmClusters.cs.html">here</a> to see an example of how to use ListCloudVmClusters API.</example>
         public async Task<ListCloudVmClustersResponse> ListCloudVmClusters(ListCloudVmClustersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCloudVmClusters");
@@ -5073,7 +5084,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListConsoleConnections.cs.html">here</a> to see an example of how to use ListConsoleConnections API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListConsoleConnections.cs.html">here</a> to see an example of how to use ListConsoleConnections API.</example>
         public async Task<ListConsoleConnectionsResponse> ListConsoleConnections(ListConsoleConnectionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listConsoleConnections");
@@ -5113,7 +5124,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListContainerDatabasePatches.cs.html">here</a> to see an example of how to use ListContainerDatabasePatches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListContainerDatabasePatches.cs.html">here</a> to see an example of how to use ListContainerDatabasePatches API.</example>
         public async Task<ListContainerDatabasePatchesResponse> ListContainerDatabasePatches(ListContainerDatabasePatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listContainerDatabasePatches");
@@ -5153,7 +5164,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDataGuardAssociations.cs.html">here</a> to see an example of how to use ListDataGuardAssociations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDataGuardAssociations.cs.html">here</a> to see an example of how to use ListDataGuardAssociations API.</example>
         public async Task<ListDataGuardAssociationsResponse> ListDataGuardAssociations(ListDataGuardAssociationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDataGuardAssociations");
@@ -5193,7 +5204,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDatabaseSoftwareImages.cs.html">here</a> to see an example of how to use ListDatabaseSoftwareImages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDatabaseSoftwareImages.cs.html">here</a> to see an example of how to use ListDatabaseSoftwareImages API.</example>
         public async Task<ListDatabaseSoftwareImagesResponse> ListDatabaseSoftwareImages(ListDatabaseSoftwareImagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDatabaseSoftwareImages");
@@ -5233,7 +5244,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDatabaseUpgradeHistoryEntries.cs.html">here</a> to see an example of how to use ListDatabaseUpgradeHistoryEntries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDatabaseUpgradeHistoryEntries.cs.html">here</a> to see an example of how to use ListDatabaseUpgradeHistoryEntries API.</example>
         public async Task<ListDatabaseUpgradeHistoryEntriesResponse> ListDatabaseUpgradeHistoryEntries(ListDatabaseUpgradeHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDatabaseUpgradeHistoryEntries");
@@ -5273,7 +5284,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDatabases.cs.html">here</a> to see an example of how to use ListDatabases API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDatabases.cs.html">here</a> to see an example of how to use ListDatabases API.</example>
         public async Task<ListDatabasesResponse> ListDatabases(ListDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDatabases");
@@ -5313,7 +5324,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbHomePatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbHomePatchHistoryEntries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbHomePatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbHomePatchHistoryEntries API.</example>
         public async Task<ListDbHomePatchHistoryEntriesResponse> ListDbHomePatchHistoryEntries(ListDbHomePatchHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbHomePatchHistoryEntries");
@@ -5353,7 +5364,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbHomePatches.cs.html">here</a> to see an example of how to use ListDbHomePatches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbHomePatches.cs.html">here</a> to see an example of how to use ListDbHomePatches API.</example>
         public async Task<ListDbHomePatchesResponse> ListDbHomePatches(ListDbHomePatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbHomePatches");
@@ -5393,7 +5404,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbHomes.cs.html">here</a> to see an example of how to use ListDbHomes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbHomes.cs.html">here</a> to see an example of how to use ListDbHomes API.</example>
         public async Task<ListDbHomesResponse> ListDbHomes(ListDbHomesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbHomes");
@@ -5433,7 +5444,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbNodes.cs.html">here</a> to see an example of how to use ListDbNodes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbNodes.cs.html">here</a> to see an example of how to use ListDbNodes API.</example>
         public async Task<ListDbNodesResponse> ListDbNodes(ListDbNodesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbNodes");
@@ -5473,7 +5484,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbSystemPatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbSystemPatchHistoryEntries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbSystemPatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbSystemPatchHistoryEntries API.</example>
         public async Task<ListDbSystemPatchHistoryEntriesResponse> ListDbSystemPatchHistoryEntries(ListDbSystemPatchHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbSystemPatchHistoryEntries");
@@ -5513,7 +5524,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbSystemPatches.cs.html">here</a> to see an example of how to use ListDbSystemPatches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbSystemPatches.cs.html">here</a> to see an example of how to use ListDbSystemPatches API.</example>
         public async Task<ListDbSystemPatchesResponse> ListDbSystemPatches(ListDbSystemPatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbSystemPatches");
@@ -5552,7 +5563,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbSystemShapes.cs.html">here</a> to see an example of how to use ListDbSystemShapes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbSystemShapes.cs.html">here</a> to see an example of how to use ListDbSystemShapes API.</example>
         public async Task<ListDbSystemShapesResponse> ListDbSystemShapes(ListDbSystemShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbSystemShapes");
@@ -5592,7 +5603,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbSystems.cs.html">here</a> to see an example of how to use ListDbSystems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbSystems.cs.html">here</a> to see an example of how to use ListDbSystems API.</example>
         public async Task<ListDbSystemsResponse> ListDbSystems(ListDbSystemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbSystems");
@@ -5631,7 +5642,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListDbVersions.cs.html">here</a> to see an example of how to use ListDbVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbVersions.cs.html">here</a> to see an example of how to use ListDbVersions API.</example>
         public async Task<ListDbVersionsResponse> ListDbVersions(ListDbVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbVersions");
@@ -5664,14 +5675,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Exadata Cloud@Customer infrastructure resources in the specified compartment.
+        /// Lists the Exadata infrastructure resources in the specified compartment. Applies to Exadata Cloud@Customer instances only.
+        /// To list the Exadata Cloud Service infrastructure resources in a compartment, use the  {@link #listCloudExadataInfrastructures(ListCloudExadataInfrastructuresRequest) listCloudExadataInfrastructures} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListExadataInfrastructures.cs.html">here</a> to see an example of how to use ListExadataInfrastructures API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListExadataInfrastructures.cs.html">here</a> to see an example of how to use ListExadataInfrastructures API.</example>
         public async Task<ListExadataInfrastructuresResponse> ListExadataInfrastructures(ListExadataInfrastructuresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listExadataInfrastructures");
@@ -5710,7 +5722,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListGiVersions.cs.html">here</a> to see an example of how to use ListGiVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListGiVersions.cs.html">here</a> to see an example of how to use ListGiVersions API.</example>
         public async Task<ListGiVersionsResponse> ListGiVersions(ListGiVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listGiVersions");
@@ -5750,7 +5762,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListKeyStores.cs.html">here</a> to see an example of how to use ListKeyStores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListKeyStores.cs.html">here</a> to see an example of how to use ListKeyStores API.</example>
         public async Task<ListKeyStoresResponse> ListKeyStores(ListKeyStoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listKeyStores");
@@ -5790,7 +5802,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListMaintenanceRuns.cs.html">here</a> to see an example of how to use ListMaintenanceRuns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListMaintenanceRuns.cs.html">here</a> to see an example of how to use ListMaintenanceRuns API.</example>
         public async Task<ListMaintenanceRunsResponse> ListMaintenanceRuns(ListMaintenanceRunsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listMaintenanceRuns");
@@ -5823,14 +5835,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Exadata Cloud@Customer VM cluster networks in the specified compartment.
+        /// Gets a list of the VM cluster networks in the specified compartment. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListVmClusterNetworks.cs.html">here</a> to see an example of how to use ListVmClusterNetworks API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListVmClusterNetworks.cs.html">here</a> to see an example of how to use ListVmClusterNetworks API.</example>
         public async Task<ListVmClusterNetworksResponse> ListVmClusterNetworks(ListVmClusterNetworksRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVmClusterNetworks");
@@ -5870,7 +5882,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListVmClusterPatchHistoryEntries.cs.html">here</a> to see an example of how to use ListVmClusterPatchHistoryEntries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListVmClusterPatchHistoryEntries.cs.html">here</a> to see an example of how to use ListVmClusterPatchHistoryEntries API.</example>
         public async Task<ListVmClusterPatchHistoryEntriesResponse> ListVmClusterPatchHistoryEntries(ListVmClusterPatchHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVmClusterPatchHistoryEntries");
@@ -5910,7 +5922,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListVmClusterPatches.cs.html">here</a> to see an example of how to use ListVmClusterPatches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListVmClusterPatches.cs.html">here</a> to see an example of how to use ListVmClusterPatches API.</example>
         public async Task<ListVmClusterPatchesResponse> ListVmClusterPatches(ListVmClusterPatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVmClusterPatches");
@@ -5943,14 +5955,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Exadata Cloud@Customer VM clusters in the specified compartment.
+        /// Lists the VM clusters in the specified compartment. Applies to Exadata Cloud@Customer instances only.
+        /// To list the cloud VM clusters in an Exadata Cloud Service instance, use the {@link #listCloudVmClusters(ListCloudVmClustersRequest) listCloudVmClusters} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListVmClusters.cs.html">here</a> to see an example of how to use ListVmClusters API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListVmClusters.cs.html">here</a> to see an example of how to use ListVmClusters API.</example>
         public async Task<ListVmClustersResponse> ListVmClusters(ListVmClustersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVmClusters");
@@ -5990,7 +6003,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/MigrateExadataDbSystemResourceModel.cs.html">here</a> to see an example of how to use MigrateExadataDbSystemResourceModel API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/MigrateExadataDbSystemResourceModel.cs.html">here</a> to see an example of how to use MigrateExadataDbSystemResourceModel API.</example>
         public async Task<MigrateExadataDbSystemResourceModelResponse> MigrateExadataDbSystemResourceModel(MigrateExadataDbSystemResourceModelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called migrateExadataDbSystemResourceModel");
@@ -6030,7 +6043,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RegisterAutonomousDatabaseDataSafe.cs.html">here</a> to see an example of how to use RegisterAutonomousDatabaseDataSafe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RegisterAutonomousDatabaseDataSafe.cs.html">here</a> to see an example of how to use RegisterAutonomousDatabaseDataSafe API.</example>
         public async Task<RegisterAutonomousDatabaseDataSafeResponse> RegisterAutonomousDatabaseDataSafe(RegisterAutonomousDatabaseDataSafeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called registerAutonomousDatabaseDataSafe");
@@ -6070,7 +6083,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ReinstateAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use ReinstateAutonomousContainerDatabaseDataguardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ReinstateAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use ReinstateAutonomousContainerDatabaseDataguardAssociation API.</example>
         public async Task<ReinstateAutonomousContainerDatabaseDataguardAssociationResponse> ReinstateAutonomousContainerDatabaseDataguardAssociation(ReinstateAutonomousContainerDatabaseDataguardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called reinstateAutonomousContainerDatabaseDataguardAssociation");
@@ -6110,7 +6123,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ReinstateDataGuardAssociation.cs.html">here</a> to see an example of how to use ReinstateDataGuardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ReinstateDataGuardAssociation.cs.html">here</a> to see an example of how to use ReinstateDataGuardAssociation API.</example>
         public async Task<ReinstateDataGuardAssociationResponse> ReinstateDataGuardAssociation(ReinstateDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called reinstateDataGuardAssociation");
@@ -6150,7 +6163,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestartAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use RestartAutonomousContainerDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestartAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use RestartAutonomousContainerDatabase API.</example>
         public async Task<RestartAutonomousContainerDatabaseResponse> RestartAutonomousContainerDatabase(RestartAutonomousContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restartAutonomousContainerDatabase");
@@ -6190,7 +6203,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestartAutonomousDatabase.cs.html">here</a> to see an example of how to use RestartAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestartAutonomousDatabase.cs.html">here</a> to see an example of how to use RestartAutonomousDatabase API.</example>
         public async Task<RestartAutonomousDatabaseResponse> RestartAutonomousDatabase(RestartAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restartAutonomousDatabase");
@@ -6230,7 +6243,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestoreAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use RestoreAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestoreAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use RestoreAutonomousDataWarehouse API.</example>
         public async Task<RestoreAutonomousDataWarehouseResponse> RestoreAutonomousDataWarehouse(RestoreAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreAutonomousDataWarehouse");
@@ -6270,7 +6283,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestoreAutonomousDatabase.cs.html">here</a> to see an example of how to use RestoreAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestoreAutonomousDatabase.cs.html">here</a> to see an example of how to use RestoreAutonomousDatabase API.</example>
         public async Task<RestoreAutonomousDatabaseResponse> RestoreAutonomousDatabase(RestoreAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreAutonomousDatabase");
@@ -6310,7 +6323,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestoreDatabase.cs.html">here</a> to see an example of how to use RestoreDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestoreDatabase.cs.html">here</a> to see an example of how to use RestoreDatabase API.</example>
         public async Task<RestoreDatabaseResponse> RestoreDatabase(RestoreDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreDatabase");
@@ -6349,7 +6362,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RotateAutonomousContainerDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousContainerDatabaseEncryptionKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RotateAutonomousContainerDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousContainerDatabaseEncryptionKey API.</example>
         public async Task<RotateAutonomousContainerDatabaseEncryptionKeyResponse> RotateAutonomousContainerDatabaseEncryptionKey(RotateAutonomousContainerDatabaseEncryptionKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called rotateAutonomousContainerDatabaseEncryptionKey");
@@ -6388,7 +6401,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RotateAutonomousDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousDatabaseEncryptionKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RotateAutonomousDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousDatabaseEncryptionKey API.</example>
         public async Task<RotateAutonomousDatabaseEncryptionKeyResponse> RotateAutonomousDatabaseEncryptionKey(RotateAutonomousDatabaseEncryptionKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called rotateAutonomousDatabaseEncryptionKey");
@@ -6421,6 +6434,86 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Rotates Oracle REST Data Services (ORDS) certs for an Autonomous Exadata Infrastructure resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RotateOrdsCerts.cs.html">here</a> to see an example of how to use RotateOrdsCerts API.</example>
+        public async Task<RotateOrdsCertsResponse> RotateOrdsCerts(RotateOrdsCertsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called rotateOrdsCerts");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousExadataInfrastructures/{autonomousExadataInfrastructureId}/actions/rotateOrdsCerts".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RotateOrdsCertsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RotateOrdsCerts failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Rotates SSL certs for an Autonomous Exadata Infrastructure resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RotateSslCerts.cs.html">here</a> to see an example of how to use RotateSslCerts API.</example>
+        public async Task<RotateSslCertsResponse> RotateSslCerts(RotateSslCertsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called rotateSslCerts");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousExadataInfrastructures/{autonomousExadataInfrastructureId}/actions/rotateSslCerts".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RotateSslCertsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RotateSslCerts failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// **Deprecated.** To start an Autonomous Data Warehouse, use the {@link #startAutonomousDatabase(StartAutonomousDatabaseRequest) startAutonomousDatabase} operation.
         /// 
         /// </summary>
@@ -6428,7 +6521,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/StartAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use StartAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/StartAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use StartAutonomousDataWarehouse API.</example>
         public async Task<StartAutonomousDataWarehouseResponse> StartAutonomousDataWarehouse(StartAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startAutonomousDataWarehouse");
@@ -6468,7 +6561,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/StartAutonomousDatabase.cs.html">here</a> to see an example of how to use StartAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/StartAutonomousDatabase.cs.html">here</a> to see an example of how to use StartAutonomousDatabase API.</example>
         public async Task<StartAutonomousDatabaseResponse> StartAutonomousDatabase(StartAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startAutonomousDatabase");
@@ -6508,7 +6601,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/StopAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use StopAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/StopAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use StopAutonomousDataWarehouse API.</example>
         public async Task<StopAutonomousDataWarehouseResponse> StopAutonomousDataWarehouse(StopAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopAutonomousDataWarehouse");
@@ -6548,7 +6641,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/StopAutonomousDatabase.cs.html">here</a> to see an example of how to use StopAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/StopAutonomousDatabase.cs.html">here</a> to see an example of how to use StopAutonomousDatabase API.</example>
         public async Task<StopAutonomousDatabaseResponse> StopAutonomousDatabase(StopAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopAutonomousDatabase");
@@ -6581,7 +6674,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Switches over the primary Autonomous Container Database of an Autonomous Data Guard peer association into a standby role. The standby Autonomous Container Database associated with autonomousContainerDatabaseDataguardAssociationId assumes the primary Autonomous Container Database role.
+        /// Switches over the primary Autonomous Container Database of an Autonomous Data Guard peer association to standby role. The standby Autonomous Container Database associated with autonomousContainerDatabaseDataguardAssociationId assumes the primary Autonomous Container Database role.
         /// &lt;br/&gt;
         /// A switchover incurs no data loss.
         /// 
@@ -6590,7 +6683,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/SwitchoverAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use SwitchoverAutonomousContainerDatabaseDataguardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/SwitchoverAutonomousContainerDatabaseDataguardAssociation.cs.html">here</a> to see an example of how to use SwitchoverAutonomousContainerDatabaseDataguardAssociation API.</example>
         public async Task<SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse> SwitchoverAutonomousContainerDatabaseDataguardAssociation(SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called switchoverAutonomousContainerDatabaseDataguardAssociation");
@@ -6630,7 +6723,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/SwitchoverAutonomousDatabase.cs.html">here</a> to see an example of how to use SwitchoverAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/SwitchoverAutonomousDatabase.cs.html">here</a> to see an example of how to use SwitchoverAutonomousDatabase API.</example>
         public async Task<SwitchoverAutonomousDatabaseResponse> SwitchoverAutonomousDatabase(SwitchoverAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called switchoverAutonomousDatabase");
@@ -6673,7 +6766,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/SwitchoverDataGuardAssociation.cs.html">here</a> to see an example of how to use SwitchoverDataGuardAssociation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/SwitchoverDataGuardAssociation.cs.html">here</a> to see an example of how to use SwitchoverDataGuardAssociation API.</example>
         public async Task<SwitchoverDataGuardAssociationResponse> SwitchoverDataGuardAssociation(SwitchoverDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called switchoverDataGuardAssociation");
@@ -6712,7 +6805,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/TerminateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use TerminateAutonomousContainerDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/TerminateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use TerminateAutonomousContainerDatabase API.</example>
         public async Task<TerminateAutonomousContainerDatabaseResponse> TerminateAutonomousContainerDatabase(TerminateAutonomousContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called terminateAutonomousContainerDatabase");
@@ -6751,7 +6844,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/TerminateAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use TerminateAutonomousExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/TerminateAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use TerminateAutonomousExadataInfrastructure API.</example>
         public async Task<TerminateAutonomousExadataInfrastructureResponse> TerminateAutonomousExadataInfrastructure(TerminateAutonomousExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called terminateAutonomousExadataInfrastructure");
@@ -6790,7 +6883,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/TerminateDbSystem.cs.html">here</a> to see an example of how to use TerminateDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/TerminateDbSystem.cs.html">here</a> to see an example of how to use TerminateDbSystem API.</example>
         public async Task<TerminateDbSystemResponse> TerminateDbSystem(TerminateDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called terminateDbSystem");
@@ -6829,7 +6922,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousContainerDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousContainerDatabase API.</example>
         public async Task<UpdateAutonomousContainerDatabaseResponse> UpdateAutonomousContainerDatabase(UpdateAutonomousContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousContainerDatabase");
@@ -6869,7 +6962,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use UpdateAutonomousDataWarehouse API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousDataWarehouse.cs.html">here</a> to see an example of how to use UpdateAutonomousDataWarehouse API.</example>
         public async Task<UpdateAutonomousDataWarehouseResponse> UpdateAutonomousDataWarehouse(UpdateAutonomousDataWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousDataWarehouse");
@@ -6909,7 +7002,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabase API.</example>
         public async Task<UpdateAutonomousDatabaseResponse> UpdateAutonomousDatabase(UpdateAutonomousDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousDatabase");
@@ -6949,7 +7042,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousDatabaseRegionalWallet.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabaseRegionalWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousDatabaseRegionalWallet.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabaseRegionalWallet API.</example>
         public async Task<UpdateAutonomousDatabaseRegionalWalletResponse> UpdateAutonomousDatabaseRegionalWallet(UpdateAutonomousDatabaseRegionalWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousDatabaseRegionalWallet");
@@ -6989,7 +7082,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabaseWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousDatabaseWallet.cs.html">here</a> to see an example of how to use UpdateAutonomousDatabaseWallet API.</example>
         public async Task<UpdateAutonomousDatabaseWalletResponse> UpdateAutonomousDatabaseWallet(UpdateAutonomousDatabaseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousDatabaseWallet");
@@ -7028,7 +7121,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateAutonomousExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateAutonomousExadataInfrastructure API.</example>
         public async Task<UpdateAutonomousExadataInfrastructureResponse> UpdateAutonomousExadataInfrastructure(UpdateAutonomousExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousExadataInfrastructure");
@@ -7068,7 +7161,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateAutonomousVmCluster.cs.html">here</a> to see an example of how to use UpdateAutonomousVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousVmCluster.cs.html">here</a> to see an example of how to use UpdateAutonomousVmCluster API.</example>
         public async Task<UpdateAutonomousVmClusterResponse> UpdateAutonomousVmCluster(UpdateAutonomousVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAutonomousVmCluster");
@@ -7110,7 +7203,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateBackupDestination.cs.html">here</a> to see an example of how to use UpdateBackupDestination API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateBackupDestination.cs.html">here</a> to see an example of how to use UpdateBackupDestination API.</example>
         public async Task<UpdateBackupDestinationResponse> UpdateBackupDestination(UpdateBackupDestinationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBackupDestination");
@@ -7143,14 +7236,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the Cloud Exadata infrastructure resource.
+        /// Updates the Cloud Exadata infrastructure resource. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateCloudExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateCloudExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateCloudExadataInfrastructure API.</example>
         public async Task<UpdateCloudExadataInfrastructureResponse> UpdateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCloudExadataInfrastructure");
@@ -7183,14 +7276,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified cloud VM cluster.
+        /// Updates the specified cloud VM cluster. Applies to Exadata Cloud Service instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateCloudVmCluster.cs.html">here</a> to see an example of how to use UpdateCloudVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateCloudVmCluster.cs.html">here</a> to see an example of how to use UpdateCloudVmCluster API.</example>
         public async Task<UpdateCloudVmClusterResponse> UpdateCloudVmCluster(UpdateCloudVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCloudVmCluster");
@@ -7223,14 +7316,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the IORM settings for the specified cloud VM cluster.
+        /// Updates the IORM settings for the specified cloud VM cluster in an Exadata Cloud Service instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateCloudVmClusterIormConfig.cs.html">here</a> to see an example of how to use UpdateCloudVmClusterIormConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateCloudVmClusterIormConfig.cs.html">here</a> to see an example of how to use UpdateCloudVmClusterIormConfig API.</example>
         public async Task<UpdateCloudVmClusterIormConfigResponse> UpdateCloudVmClusterIormConfig(UpdateCloudVmClusterIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCloudVmClusterIormConfig");
@@ -7270,7 +7363,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateDatabase.cs.html">here</a> to see an example of how to use UpdateDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateDatabase.cs.html">here</a> to see an example of how to use UpdateDatabase API.</example>
         public async Task<UpdateDatabaseResponse> UpdateDatabase(UpdateDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDatabase");
@@ -7309,7 +7402,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use UpdateDatabaseSoftwareImage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateDatabaseSoftwareImage.cs.html">here</a> to see an example of how to use UpdateDatabaseSoftwareImage API.</example>
         public async Task<UpdateDatabaseSoftwareImageResponse> UpdateDatabaseSoftwareImage(UpdateDatabaseSoftwareImageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDatabaseSoftwareImage");
@@ -7348,7 +7441,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateDbHome.cs.html">here</a> to see an example of how to use UpdateDbHome API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateDbHome.cs.html">here</a> to see an example of how to use UpdateDbHome API.</example>
         public async Task<UpdateDbHomeResponse> UpdateDbHome(UpdateDbHomeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDbHome");
@@ -7387,7 +7480,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateDbSystem.cs.html">here</a> to see an example of how to use UpdateDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateDbSystem.cs.html">here</a> to see an example of how to use UpdateDbSystem API.</example>
         public async Task<UpdateDbSystemResponse> UpdateDbSystem(UpdateDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDbSystem");
@@ -7420,14 +7513,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the Exadata Cloud@Customer infrastructure.
+        /// Updates the Exadata infrastructure resource. Applies to Exadata Cloud@Customer instances only.
+        /// To update an Exadata Cloud Service infrastructure resource, use the  {@link #updateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest) updateCloudExadataInfrastructure} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateExadataInfrastructure API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateExadataInfrastructure.cs.html">here</a> to see an example of how to use UpdateExadataInfrastructure API.</example>
         public async Task<UpdateExadataInfrastructureResponse> UpdateExadataInfrastructure(UpdateExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateExadataInfrastructure");
@@ -7467,7 +7561,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateExadataIormConfig.cs.html">here</a> to see an example of how to use UpdateExadataIormConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateExadataIormConfig.cs.html">here</a> to see an example of how to use UpdateExadataIormConfig API.</example>
         public async Task<UpdateExadataIormConfigResponse> UpdateExadataIormConfig(UpdateExadataIormConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateExadataIormConfig");
@@ -7507,7 +7601,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateKeyStore.cs.html">here</a> to see an example of how to use UpdateKeyStore API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateKeyStore.cs.html">here</a> to see an example of how to use UpdateKeyStore API.</example>
         public async Task<UpdateKeyStoreResponse> UpdateKeyStore(UpdateKeyStoreRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateKeyStore");
@@ -7546,7 +7640,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateMaintenanceRun.cs.html">here</a> to see an example of how to use UpdateMaintenanceRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateMaintenanceRun.cs.html">here</a> to see an example of how to use UpdateMaintenanceRun API.</example>
         public async Task<UpdateMaintenanceRunResponse> UpdateMaintenanceRun(UpdateMaintenanceRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateMaintenanceRun");
@@ -7579,14 +7673,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified Exadata Cloud@Customer VM cluster.
+        /// Updates the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateVmCluster.cs.html">here</a> to see an example of how to use UpdateVmCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateVmCluster.cs.html">here</a> to see an example of how to use UpdateVmCluster API.</example>
         public async Task<UpdateVmClusterResponse> UpdateVmCluster(UpdateVmClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVmCluster");
@@ -7619,14 +7713,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates the specified Exadata Cloud@Customer VM cluster network.
+        /// Updates the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+        /// To update a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #updateCloudVmCluster(UpdateCloudVmClusterRequest) updateCloudVmCluster} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpdateVmClusterNetwork.cs.html">here</a> to see an example of how to use UpdateVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateVmClusterNetwork.cs.html">here</a> to see an example of how to use UpdateVmClusterNetwork API.</example>
         public async Task<UpdateVmClusterNetworkResponse> UpdateVmClusterNetwork(UpdateVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVmClusterNetwork");
@@ -7666,7 +7761,7 @@ namespace Oci.DatabaseService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/UpgradeDatabase.cs.html">here</a> to see an example of how to use UpgradeDatabase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpgradeDatabase.cs.html">here</a> to see an example of how to use UpgradeDatabase API.</example>
         public async Task<UpgradeDatabaseResponse> UpgradeDatabase(UpgradeDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called upgradeDatabase");
@@ -7699,14 +7794,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Validates the specified Exadata Cloud@Customer VM cluster network.
+        /// Validates the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ValidateVmClusterNetwork.cs.html">here</a> to see an example of how to use ValidateVmClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ValidateVmClusterNetwork.cs.html">here</a> to see an example of how to use ValidateVmClusterNetwork API.</example>
         public async Task<ValidateVmClusterNetworkResponse> ValidateVmClusterNetwork(ValidateVmClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called validateVmClusterNetwork");

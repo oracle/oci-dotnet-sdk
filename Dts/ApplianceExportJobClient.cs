@@ -72,7 +72,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ChangeApplianceExportJobCompartment.cs.html">here</a> to see an example of how to use ChangeApplianceExportJobCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ChangeApplianceExportJobCompartment.cs.html">here</a> to see an example of how to use ChangeApplianceExportJobCompartment API.</example>
         public async Task<ChangeApplianceExportJobCompartmentResponse> ChangeApplianceExportJobCompartment(ChangeApplianceExportJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeApplianceExportJobCompartment");
@@ -111,7 +111,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateApplianceExportJob.cs.html">here</a> to see an example of how to use CreateApplianceExportJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateApplianceExportJob.cs.html">here</a> to see an example of how to use CreateApplianceExportJob API.</example>
         public async Task<CreateApplianceExportJobResponse> CreateApplianceExportJob(CreateApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createApplianceExportJob");
@@ -150,7 +150,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DeleteApplianceExportJob.cs.html">here</a> to see an example of how to use DeleteApplianceExportJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/DeleteApplianceExportJob.cs.html">here</a> to see an example of how to use DeleteApplianceExportJob API.</example>
         public async Task<DeleteApplianceExportJobResponse> DeleteApplianceExportJob(DeleteApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteApplianceExportJob");
@@ -189,7 +189,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/GetApplianceExportJob.cs.html">here</a> to see an example of how to use GetApplianceExportJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetApplianceExportJob.cs.html">here</a> to see an example of how to use GetApplianceExportJob API.</example>
         public async Task<GetApplianceExportJobResponse> GetApplianceExportJob(GetApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getApplianceExportJob");
@@ -228,7 +228,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/ListApplianceExportJobs.cs.html">here</a> to see an example of how to use ListApplianceExportJobs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ListApplianceExportJobs.cs.html">here</a> to see an example of how to use ListApplianceExportJobs API.</example>
         public async Task<ListApplianceExportJobsResponse> ListApplianceExportJobs(ListApplianceExportJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listApplianceExportJobs");
@@ -267,7 +267,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/UpdateApplianceExportJob.cs.html">here</a> to see an example of how to use UpdateApplianceExportJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/UpdateApplianceExportJob.cs.html">here</a> to see an example of how to use UpdateApplianceExportJob API.</example>
         public async Task<UpdateApplianceExportJobResponse> UpdateApplianceExportJob(UpdateApplianceExportJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateApplianceExportJob");

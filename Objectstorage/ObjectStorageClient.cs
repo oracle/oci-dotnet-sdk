@@ -73,7 +73,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/AbortMultipartUpload.cs.html">here</a> to see an example of how to use AbortMultipartUpload API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/AbortMultipartUpload.cs.html">here</a> to see an example of how to use AbortMultipartUpload API.</example>
         public async Task<AbortMultipartUploadResponse> AbortMultipartUpload(AbortMultipartUploadRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called abortMultipartUpload");
@@ -113,7 +113,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CancelWorkRequest.cs.html">here</a> to see an example of how to use CancelWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CancelWorkRequest.cs.html">here</a> to see an example of how to use CancelWorkRequest API.</example>
         public async Task<CancelWorkRequestResponse> CancelWorkRequest(CancelWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelWorkRequest");
@@ -153,7 +153,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CommitMultipartUpload.cs.html">here</a> to see an example of how to use CommitMultipartUpload API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CommitMultipartUpload.cs.html">here</a> to see an example of how to use CommitMultipartUpload API.</example>
         public async Task<CommitMultipartUploadResponse> CommitMultipartUpload(CommitMultipartUploadRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called commitMultipartUpload");
@@ -193,7 +193,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CopyObject.cs.html">here</a> to see an example of how to use CopyObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CopyObject.cs.html">here</a> to see an example of how to use CopyObject API.</example>
         public async Task<CopyObjectResponse> CopyObject(CopyObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called copyObject");
@@ -235,7 +235,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CreateBucket.cs.html">here</a> to see an example of how to use CreateBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreateBucket.cs.html">here</a> to see an example of how to use CreateBucket API.</example>
         public async Task<CreateBucketResponse> CreateBucket(CreateBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBucket");
@@ -275,7 +275,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CreateMultipartUpload.cs.html">here</a> to see an example of how to use CreateMultipartUpload API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreateMultipartUpload.cs.html">here</a> to see an example of how to use CreateMultipartUpload API.</example>
         public async Task<CreateMultipartUploadResponse> CreateMultipartUpload(CreateMultipartUploadRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createMultipartUpload");
@@ -316,7 +316,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CreatePreauthenticatedRequest.cs.html">here</a> to see an example of how to use CreatePreauthenticatedRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreatePreauthenticatedRequest.cs.html">here</a> to see an example of how to use CreatePreauthenticatedRequest API.</example>
         public async Task<CreatePreauthenticatedRequestResponse> CreatePreauthenticatedRequest(CreatePreauthenticatedRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createPreauthenticatedRequest");
@@ -356,7 +356,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CreateReplicationPolicy.cs.html">here</a> to see an example of how to use CreateReplicationPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreateReplicationPolicy.cs.html">here</a> to see an example of how to use CreateReplicationPolicy API.</example>
         public async Task<CreateReplicationPolicyResponse> CreateReplicationPolicy(CreateReplicationPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createReplicationPolicy");
@@ -397,7 +397,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/CreateRetentionRule.cs.html">here</a> to see an example of how to use CreateRetentionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreateRetentionRule.cs.html">here</a> to see an example of how to use CreateRetentionRule API.</example>
         public async Task<CreateRetentionRuleResponse> CreateRetentionRule(CreateRetentionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createRetentionRule");
@@ -440,7 +440,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeleteBucket.cs.html">here</a> to see an example of how to use DeleteBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeleteBucket.cs.html">here</a> to see an example of how to use DeleteBucket API.</example>
         public async Task<DeleteBucketResponse> DeleteBucket(DeleteBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBucket");
@@ -480,7 +480,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeleteObject.cs.html">here</a> to see an example of how to use DeleteObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeleteObject.cs.html">here</a> to see an example of how to use DeleteObject API.</example>
         public async Task<DeleteObjectResponse> DeleteObject(DeleteObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteObject");
@@ -520,7 +520,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeleteObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use DeleteObjectLifecyclePolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeleteObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use DeleteObjectLifecyclePolicy API.</example>
         public async Task<DeleteObjectLifecyclePolicyResponse> DeleteObjectLifecyclePolicy(DeleteObjectLifecyclePolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteObjectLifecyclePolicy");
@@ -559,7 +559,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeletePreauthenticatedRequest.cs.html">here</a> to see an example of how to use DeletePreauthenticatedRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeletePreauthenticatedRequest.cs.html">here</a> to see an example of how to use DeletePreauthenticatedRequest API.</example>
         public async Task<DeletePreauthenticatedRequestResponse> DeletePreauthenticatedRequest(DeletePreauthenticatedRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deletePreauthenticatedRequest");
@@ -599,7 +599,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeleteReplicationPolicy.cs.html">here</a> to see an example of how to use DeleteReplicationPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeleteReplicationPolicy.cs.html">here</a> to see an example of how to use DeleteReplicationPolicy API.</example>
         public async Task<DeleteReplicationPolicyResponse> DeleteReplicationPolicy(DeleteReplicationPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteReplicationPolicy");
@@ -638,7 +638,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/DeleteRetentionRule.cs.html">here</a> to see an example of how to use DeleteRetentionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/DeleteRetentionRule.cs.html">here</a> to see an example of how to use DeleteRetentionRule API.</example>
         public async Task<DeleteRetentionRuleResponse> DeleteRetentionRule(DeleteRetentionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteRetentionRule");
@@ -678,7 +678,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetBucket.cs.html">here</a> to see an example of how to use GetBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetBucket.cs.html">here</a> to see an example of how to use GetBucket API.</example>
         public async Task<GetBucketResponse> GetBucket(GetBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBucket");
@@ -724,7 +724,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace API.</example>
         public async Task<GetNamespaceResponse> GetNamespace(GetNamespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getNamespace");
@@ -770,7 +770,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetNamespaceMetadata.cs.html">here</a> to see an example of how to use GetNamespaceMetadata API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetNamespaceMetadata.cs.html">here</a> to see an example of how to use GetNamespaceMetadata API.</example>
         public async Task<GetNamespaceMetadataResponse> GetNamespaceMetadata(GetNamespaceMetadataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getNamespaceMetadata");
@@ -810,7 +810,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetObject.cs.html">here</a> to see an example of how to use GetObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetObject.cs.html">here</a> to see an example of how to use GetObject API.</example>
         public async Task<GetObjectResponse> GetObject(GetObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getObject");
@@ -850,7 +850,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use GetObjectLifecyclePolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use GetObjectLifecyclePolicy API.</example>
         public async Task<GetObjectLifecyclePolicyResponse> GetObjectLifecyclePolicy(GetObjectLifecyclePolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getObjectLifecyclePolicy");
@@ -889,7 +889,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetPreauthenticatedRequest.cs.html">here</a> to see an example of how to use GetPreauthenticatedRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetPreauthenticatedRequest.cs.html">here</a> to see an example of how to use GetPreauthenticatedRequest API.</example>
         public async Task<GetPreauthenticatedRequestResponse> GetPreauthenticatedRequest(GetPreauthenticatedRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPreauthenticatedRequest");
@@ -929,7 +929,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetReplicationPolicy.cs.html">here</a> to see an example of how to use GetReplicationPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetReplicationPolicy.cs.html">here</a> to see an example of how to use GetReplicationPolicy API.</example>
         public async Task<GetReplicationPolicyResponse> GetReplicationPolicy(GetReplicationPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getReplicationPolicy");
@@ -968,7 +968,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetRetentionRule.cs.html">here</a> to see an example of how to use GetRetentionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetRetentionRule.cs.html">here</a> to see an example of how to use GetRetentionRule API.</example>
         public async Task<GetRetentionRuleResponse> GetRetentionRule(GetRetentionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRetentionRule");
@@ -1007,7 +1007,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -1047,7 +1047,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/HeadBucket.cs.html">here</a> to see an example of how to use HeadBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/HeadBucket.cs.html">here</a> to see an example of how to use HeadBucket API.</example>
         public async Task<HeadBucketResponse> HeadBucket(HeadBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called headBucket");
@@ -1087,7 +1087,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/HeadObject.cs.html">here</a> to see an example of how to use HeadObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/HeadObject.cs.html">here</a> to see an example of how to use HeadObject API.</example>
         public async Task<HeadObjectResponse> HeadObject(HeadObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called headObject");
@@ -1132,7 +1132,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListBuckets.cs.html">here</a> to see an example of how to use ListBuckets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListBuckets.cs.html">here</a> to see an example of how to use ListBuckets API.</example>
         public async Task<ListBucketsResponse> ListBuckets(ListBucketsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBuckets");
@@ -1172,7 +1172,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListMultipartUploadParts.cs.html">here</a> to see an example of how to use ListMultipartUploadParts API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListMultipartUploadParts.cs.html">here</a> to see an example of how to use ListMultipartUploadParts API.</example>
         public async Task<ListMultipartUploadPartsResponse> ListMultipartUploadParts(ListMultipartUploadPartsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listMultipartUploadParts");
@@ -1212,7 +1212,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListMultipartUploads.cs.html">here</a> to see an example of how to use ListMultipartUploads API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListMultipartUploads.cs.html">here</a> to see an example of how to use ListMultipartUploads API.</example>
         public async Task<ListMultipartUploadsResponse> ListMultipartUploads(ListMultipartUploadsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listMultipartUploads");
@@ -1256,7 +1256,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListObjectVersions.cs.html">here</a> to see an example of how to use ListObjectVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListObjectVersions.cs.html">here</a> to see an example of how to use ListObjectVersions API.</example>
         public async Task<ListObjectVersionsResponse> ListObjectVersions(ListObjectVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listObjectVersions");
@@ -1300,7 +1300,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListObjects.cs.html">here</a> to see an example of how to use ListObjects API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListObjects.cs.html">here</a> to see an example of how to use ListObjects API.</example>
         public async Task<ListObjectsResponse> ListObjects(ListObjectsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listObjects");
@@ -1340,7 +1340,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListPreauthenticatedRequests.cs.html">here</a> to see an example of how to use ListPreauthenticatedRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListPreauthenticatedRequests.cs.html">here</a> to see an example of how to use ListPreauthenticatedRequests API.</example>
         public async Task<ListPreauthenticatedRequestsResponse> ListPreauthenticatedRequests(ListPreauthenticatedRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPreauthenticatedRequests");
@@ -1380,7 +1380,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListReplicationPolicies.cs.html">here</a> to see an example of how to use ListReplicationPolicies API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListReplicationPolicies.cs.html">here</a> to see an example of how to use ListReplicationPolicies API.</example>
         public async Task<ListReplicationPoliciesResponse> ListReplicationPolicies(ListReplicationPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listReplicationPolicies");
@@ -1420,7 +1420,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListReplicationSources.cs.html">here</a> to see an example of how to use ListReplicationSources API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListReplicationSources.cs.html">here</a> to see an example of how to use ListReplicationSources API.</example>
         public async Task<ListReplicationSourcesResponse> ListReplicationSources(ListReplicationSourcesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listReplicationSources");
@@ -1461,7 +1461,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListRetentionRules.cs.html">here</a> to see an example of how to use ListRetentionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListRetentionRules.cs.html">here</a> to see an example of how to use ListRetentionRules API.</example>
         public async Task<ListRetentionRulesResponse> ListRetentionRules(ListRetentionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRetentionRules");
@@ -1500,7 +1500,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -1539,7 +1539,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -1579,7 +1579,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -1622,7 +1622,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/MakeBucketWritable.cs.html">here</a> to see an example of how to use MakeBucketWritable API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/MakeBucketWritable.cs.html">here</a> to see an example of how to use MakeBucketWritable API.</example>
         public async Task<MakeBucketWritableResponse> MakeBucketWritable(MakeBucketWritableRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called makeBucketWritable");
@@ -1669,7 +1669,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/PutObject.cs.html">here</a> to see an example of how to use PutObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/PutObject.cs.html">here</a> to see an example of how to use PutObject API.</example>
         public async Task<PutObjectResponse> PutObject(PutObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called putObject");
@@ -1711,7 +1711,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/PutObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use PutObjectLifecyclePolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/PutObjectLifecyclePolicy.cs.html">here</a> to see an example of how to use PutObjectLifecyclePolicy API.</example>
         public async Task<PutObjectLifecyclePolicyResponse> PutObjectLifecyclePolicy(PutObjectLifecyclePolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called putObjectLifecyclePolicy");
@@ -1765,7 +1765,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ReencryptBucket.cs.html">here</a> to see an example of how to use ReencryptBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ReencryptBucket.cs.html">here</a> to see an example of how to use ReencryptBucket API.</example>
         public async Task<ReencryptBucketResponse> ReencryptBucket(ReencryptBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called reencryptBucket");
@@ -1813,7 +1813,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ReencryptObject.cs.html">here</a> to see an example of how to use ReencryptObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ReencryptObject.cs.html">here</a> to see an example of how to use ReencryptObject API.</example>
         public async Task<ReencryptObjectResponse> ReencryptObject(ReencryptObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called reencryptObject");
@@ -1856,7 +1856,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/RenameObject.cs.html">here</a> to see an example of how to use RenameObject API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/RenameObject.cs.html">here</a> to see an example of how to use RenameObject API.</example>
         public async Task<RenameObjectResponse> RenameObject(RenameObjectRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called renameObject");
@@ -1897,7 +1897,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/RestoreObjects.cs.html">here</a> to see an example of how to use RestoreObjects API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/RestoreObjects.cs.html">here</a> to see an example of how to use RestoreObjects API.</example>
         public async Task<RestoreObjectsResponse> RestoreObjects(RestoreObjectsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreObjects");
@@ -1941,7 +1941,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/UpdateBucket.cs.html">here</a> to see an example of how to use UpdateBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/UpdateBucket.cs.html">here</a> to see an example of how to use UpdateBucket API.</example>
         public async Task<UpdateBucketResponse> UpdateBucket(UpdateBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBucket");
@@ -1987,7 +1987,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/UpdateNamespaceMetadata.cs.html">here</a> to see an example of how to use UpdateNamespaceMetadata API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/UpdateNamespaceMetadata.cs.html">here</a> to see an example of how to use UpdateNamespaceMetadata API.</example>
         public async Task<UpdateNamespaceMetadataResponse> UpdateNamespaceMetadata(UpdateNamespaceMetadataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateNamespaceMetadata");
@@ -2027,7 +2027,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/UpdateRetentionRule.cs.html">here</a> to see an example of how to use UpdateRetentionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/UpdateRetentionRule.cs.html">here</a> to see an example of how to use UpdateRetentionRule API.</example>
         public async Task<UpdateRetentionRuleResponse> UpdateRetentionRule(UpdateRetentionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRetentionRule");
@@ -2067,7 +2067,7 @@ namespace Oci.ObjectstorageService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/UploadPart.cs.html">here</a> to see an example of how to use UploadPart API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/UploadPart.cs.html">here</a> to see an example of how to use UploadPart API.</example>
         public async Task<UploadPartResponse> UploadPart(UploadPartRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called uploadPart");

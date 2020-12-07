@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ListAutonomousExadataInfrastructures.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructures request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousExadataInfrastructures.cs.html">here</a> to see an example of how to use ListAutonomousExadataInfrastructures request.
     /// </example>
     public class ListAutonomousExadataInfrastructuresRequest : Oci.Common.IOciRequest
     {

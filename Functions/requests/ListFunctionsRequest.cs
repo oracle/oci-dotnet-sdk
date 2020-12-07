@@ -14,7 +14,7 @@ using Oci.FunctionsService.Models;
 namespace Oci.FunctionsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ListFunctions.cs.html">here</a> to see an example of how to use ListFunctions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/ListFunctions.cs.html">here</a> to see an example of how to use ListFunctions request.
     /// </example>
     public class ListFunctionsRequest : Oci.Common.IOciRequest
     {

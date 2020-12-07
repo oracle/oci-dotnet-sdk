@@ -14,7 +14,7 @@ using Oci.OcvpService.Models;
 namespace Oci.OcvpService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ocvp/ListEsxiHosts.cs.html">here</a> to see an example of how to use ListEsxiHosts request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/ListEsxiHosts.cs.html">here</a> to see an example of how to use ListEsxiHosts request.
     /// </example>
     public class ListEsxiHostsRequest : Oci.Common.IOciRequest
     {

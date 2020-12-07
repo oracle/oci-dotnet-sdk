@@ -75,7 +75,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/CancelSecretDeletion.cs.html">here</a> to see an example of how to use CancelSecretDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/CancelSecretDeletion.cs.html">here</a> to see an example of how to use CancelSecretDeletion API.</example>
         public async Task<CancelSecretDeletionResponse> CancelSecretDeletion(CancelSecretDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelSecretDeletion");
@@ -114,7 +114,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/CancelSecretVersionDeletion.cs.html">here</a> to see an example of how to use CancelSecretVersionDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/CancelSecretVersionDeletion.cs.html">here</a> to see an example of how to use CancelSecretVersionDeletion API.</example>
         public async Task<CancelSecretVersionDeletionResponse> CancelSecretVersionDeletion(CancelSecretVersionDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelSecretVersionDeletion");
@@ -157,7 +157,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ChangeSecretCompartment.cs.html">here</a> to see an example of how to use ChangeSecretCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ChangeSecretCompartment.cs.html">here</a> to see an example of how to use ChangeSecretCompartment API.</example>
         public async Task<ChangeSecretCompartmentResponse> ChangeSecretCompartment(ChangeSecretCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeSecretCompartment");
@@ -199,7 +199,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/CreateSecret.cs.html">here</a> to see an example of how to use CreateSecret API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/CreateSecret.cs.html">here</a> to see an example of how to use CreateSecret API.</example>
         public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSecret");
@@ -238,7 +238,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/GetSecret.cs.html">here</a> to see an example of how to use GetSecret API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/GetSecret.cs.html">here</a> to see an example of how to use GetSecret API.</example>
         public async Task<GetSecretResponse> GetSecret(GetSecretRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSecret");
@@ -278,7 +278,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/GetSecretVersion.cs.html">here</a> to see an example of how to use GetSecretVersion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/GetSecretVersion.cs.html">here</a> to see an example of how to use GetSecretVersion API.</example>
         public async Task<GetSecretVersionResponse> GetSecretVersion(GetSecretVersionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSecretVersion");
@@ -317,7 +317,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ListSecretVersions.cs.html">here</a> to see an example of how to use ListSecretVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ListSecretVersions.cs.html">here</a> to see an example of how to use ListSecretVersions API.</example>
         public async Task<ListSecretVersionsResponse> ListSecretVersions(ListSecretVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSecretVersions");
@@ -356,7 +356,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ListSecrets.cs.html">here</a> to see an example of how to use ListSecrets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ListSecrets.cs.html">here</a> to see an example of how to use ListSecrets API.</example>
         public async Task<ListSecretsResponse> ListSecrets(ListSecretsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSecrets");
@@ -397,7 +397,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ScheduleSecretDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ScheduleSecretDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretDeletion API.</example>
         public async Task<ScheduleSecretDeletionResponse> ScheduleSecretDeletion(ScheduleSecretDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called scheduleSecretDeletion");
@@ -438,7 +438,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ScheduleSecretVersionDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretVersionDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ScheduleSecretVersionDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretVersionDeletion API.</example>
         public async Task<ScheduleSecretVersionDeletionResponse> ScheduleSecretVersionDeletion(ScheduleSecretVersionDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called scheduleSecretVersionDeletion");
@@ -483,7 +483,7 @@ namespace Oci.VaultService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/UpdateSecret.cs.html">here</a> to see an example of how to use UpdateSecret API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/UpdateSecret.cs.html">here</a> to see an example of how to use UpdateSecret API.</example>
         public async Task<UpdateSecretResponse> UpdateSecret(UpdateSecretRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateSecret");

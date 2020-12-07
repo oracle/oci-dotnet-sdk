@@ -104,6 +104,23 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "MessagePacks is required.")]
         [JsonProperty(PropertyName = "messagePacks")]
         public System.Nullable<int> MessagePacks { get; set; }
+        
+        /// <value>
+        /// Visual Builder is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isVisualBuilderEnabled")]
+        public System.Nullable<bool> IsVisualBuilderEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "customEndpoint")]
+        public CreateCustomEndpointDetails CustomEndpoint { get; set; }
+        
+        /// <value>
+        /// A list of alternate custom endpoints to be used for the integration instance URL
+        /// (contact Oracle for alternateCustomEndpoints availability for a specific instance).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "alternateCustomEndpoints")]
+        public System.Collections.Generic.List<CreateCustomEndpointDetails> AlternateCustomEndpoints { get; set; }
                 ///
         /// <value>
         /// Optional parameter specifying which entitlement to use for billing purposes. Only required if the account possesses more than one entitlement.

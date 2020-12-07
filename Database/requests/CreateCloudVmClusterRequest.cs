@@ -14,13 +14,14 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/CreateCloudVmCluster.cs.html">here</a> to see an example of how to use CreateCloudVmCluster request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/CreateCloudVmCluster.cs.html">here</a> to see an example of how to use CreateCloudVmCluster request.
     /// </example>
     public class CreateCloudVmClusterRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// Request to create a cloud VM cluster.
+        /// Request to create a cloud VM cluster. Applies to Exadata Cloud Service instances only. See [The New Exadata Cloud Service Resource Model](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) for information on this resource type.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

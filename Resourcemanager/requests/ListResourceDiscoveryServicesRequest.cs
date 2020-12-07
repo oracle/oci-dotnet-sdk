@@ -14,7 +14,7 @@ using Oci.ResourcemanagerService.Models;
 namespace Oci.ResourcemanagerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/ListResourceDiscoveryServices.cs.html">here</a> to see an example of how to use ListResourceDiscoveryServices request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/resourcemanager/ListResourceDiscoveryServices.cs.html">here</a> to see an example of how to use ListResourceDiscoveryServices request.
     /// </example>
     public class ListResourceDiscoveryServicesRequest : Oci.Common.IOciRequest
     {

@@ -72,7 +72,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ChangeDataSafePrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangeDataSafePrivateEndpointCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ChangeDataSafePrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangeDataSafePrivateEndpointCompartment API.</example>
         public async Task<ChangeDataSafePrivateEndpointCompartmentResponse> ChangeDataSafePrivateEndpointCompartment(ChangeDataSafePrivateEndpointCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeDataSafePrivateEndpointCompartment");
@@ -111,7 +111,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ChangeOnPremConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeOnPremConnectorCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ChangeOnPremConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeOnPremConnectorCompartment API.</example>
         public async Task<ChangeOnPremConnectorCompartmentResponse> ChangeOnPremConnectorCompartment(ChangeOnPremConnectorCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeOnPremConnectorCompartment");
@@ -151,7 +151,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/CreateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use CreateDataSafePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/CreateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use CreateDataSafePrivateEndpoint API.</example>
         public async Task<CreateDataSafePrivateEndpointResponse> CreateDataSafePrivateEndpoint(CreateDataSafePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDataSafePrivateEndpoint");
@@ -191,7 +191,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/CreateOnPremConnector.cs.html">here</a> to see an example of how to use CreateOnPremConnector API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/CreateOnPremConnector.cs.html">here</a> to see an example of how to use CreateOnPremConnector API.</example>
         public async Task<CreateOnPremConnectorResponse> CreateOnPremConnector(CreateOnPremConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createOnPremConnector");
@@ -230,7 +230,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/DeleteDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use DeleteDataSafePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/DeleteDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use DeleteDataSafePrivateEndpoint API.</example>
         public async Task<DeleteDataSafePrivateEndpointResponse> DeleteDataSafePrivateEndpoint(DeleteDataSafePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDataSafePrivateEndpoint");
@@ -269,7 +269,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/DeleteOnPremConnector.cs.html">here</a> to see an example of how to use DeleteOnPremConnector API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/DeleteOnPremConnector.cs.html">here</a> to see an example of how to use DeleteOnPremConnector API.</example>
         public async Task<DeleteOnPremConnectorResponse> DeleteOnPremConnector(DeleteOnPremConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteOnPremConnector");
@@ -309,7 +309,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/EnableDataSafeConfiguration.cs.html">here</a> to see an example of how to use EnableDataSafeConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/EnableDataSafeConfiguration.cs.html">here</a> to see an example of how to use EnableDataSafeConfiguration API.</example>
         public async Task<EnableDataSafeConfigurationResponse> EnableDataSafeConfiguration(EnableDataSafeConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called enableDataSafeConfiguration");
@@ -349,7 +349,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GenerateOnPremConnectorConfiguration.cs.html">here</a> to see an example of how to use GenerateOnPremConnectorConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/GenerateOnPremConnectorConfiguration.cs.html">here</a> to see an example of how to use GenerateOnPremConnectorConfiguration API.</example>
         public async Task<GenerateOnPremConnectorConfigurationResponse> GenerateOnPremConnectorConfiguration(GenerateOnPremConnectorConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateOnPremConnectorConfiguration");
@@ -388,7 +388,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GetDataSafeConfiguration.cs.html">here</a> to see an example of how to use GetDataSafeConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/GetDataSafeConfiguration.cs.html">here</a> to see an example of how to use GetDataSafeConfiguration API.</example>
         public async Task<GetDataSafeConfigurationResponse> GetDataSafeConfiguration(GetDataSafeConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDataSafeConfiguration");
@@ -427,7 +427,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GetDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use GetDataSafePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/GetDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use GetDataSafePrivateEndpoint API.</example>
         public async Task<GetDataSafePrivateEndpointResponse> GetDataSafePrivateEndpoint(GetDataSafePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDataSafePrivateEndpoint");
@@ -466,7 +466,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GetOnPremConnector.cs.html">here</a> to see an example of how to use GetOnPremConnector API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/GetOnPremConnector.cs.html">here</a> to see an example of how to use GetOnPremConnector API.</example>
         public async Task<GetOnPremConnectorResponse> GetOnPremConnector(GetOnPremConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getOnPremConnector");
@@ -505,7 +505,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -545,7 +545,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListDataSafePrivateEndpoints.cs.html">here</a> to see an example of how to use ListDataSafePrivateEndpoints API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListDataSafePrivateEndpoints.cs.html">here</a> to see an example of how to use ListDataSafePrivateEndpoints API.</example>
         public async Task<ListDataSafePrivateEndpointsResponse> ListDataSafePrivateEndpoints(ListDataSafePrivateEndpointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDataSafePrivateEndpoints");
@@ -585,7 +585,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListOnPremConnectors.cs.html">here</a> to see an example of how to use ListOnPremConnectors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListOnPremConnectors.cs.html">here</a> to see an example of how to use ListOnPremConnectors API.</example>
         public async Task<ListOnPremConnectorsResponse> ListOnPremConnectors(ListOnPremConnectorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listOnPremConnectors");
@@ -625,7 +625,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -665,7 +665,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -705,7 +705,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -744,7 +744,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/UpdateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use UpdateDataSafePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/UpdateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use UpdateDataSafePrivateEndpoint API.</example>
         public async Task<UpdateDataSafePrivateEndpointResponse> UpdateDataSafePrivateEndpoint(UpdateDataSafePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDataSafePrivateEndpoint");
@@ -783,7 +783,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/UpdateOnPremConnector.cs.html">here</a> to see an example of how to use UpdateOnPremConnector API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/UpdateOnPremConnector.cs.html">here</a> to see an example of how to use UpdateOnPremConnector API.</example>
         public async Task<UpdateOnPremConnectorResponse> UpdateOnPremConnector(UpdateOnPremConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateOnPremConnector");
@@ -823,7 +823,7 @@ namespace Oci.DatasafeService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/UpdateOnPremConnectorWallet.cs.html">here</a> to see an example of how to use UpdateOnPremConnectorWallet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/UpdateOnPremConnectorWallet.cs.html">here</a> to see an example of how to use UpdateOnPremConnectorWallet API.</example>
         public async Task<UpdateOnPremConnectorWalletResponse> UpdateOnPremConnectorWallet(UpdateOnPremConnectorWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateOnPremConnectorWallet");

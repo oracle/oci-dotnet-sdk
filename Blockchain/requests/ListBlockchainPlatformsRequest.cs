@@ -14,7 +14,7 @@ using Oci.BlockchainService.Models;
 namespace Oci.BlockchainService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/blockchain/ListBlockchainPlatforms.cs.html">here</a> to see an example of how to use ListBlockchainPlatforms request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListBlockchainPlatforms.cs.html">here</a> to see an example of how to use ListBlockchainPlatforms request.
     /// </example>
     public class ListBlockchainPlatformsRequest : Oci.Common.IOciRequest
     {

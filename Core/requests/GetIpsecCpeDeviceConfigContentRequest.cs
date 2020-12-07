@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetIpsecCpeDeviceConfigContent.cs.html">here</a> to see an example of how to use GetIpsecCpeDeviceConfigContent request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetIpsecCpeDeviceConfigContent.cs.html">here</a> to see an example of how to use GetIpsecCpeDeviceConfigContent request.
     /// </example>
     public class GetIpsecCpeDeviceConfigContentRequest : Oci.Common.IOciRequest
     {

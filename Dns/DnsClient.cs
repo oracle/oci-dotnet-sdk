@@ -74,7 +74,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ChangeResolverCompartment.cs.html">here</a> to see an example of how to use ChangeResolverCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ChangeResolverCompartment.cs.html">here</a> to see an example of how to use ChangeResolverCompartment API.</example>
         public async Task<ChangeResolverCompartmentResponse> ChangeResolverCompartment(ChangeResolverCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeResolverCompartment");
@@ -113,7 +113,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ChangeSteeringPolicyCompartment.cs.html">here</a> to see an example of how to use ChangeSteeringPolicyCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ChangeSteeringPolicyCompartment.cs.html">here</a> to see an example of how to use ChangeSteeringPolicyCompartment API.</example>
         public async Task<ChangeSteeringPolicyCompartmentResponse> ChangeSteeringPolicyCompartment(ChangeSteeringPolicyCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeSteeringPolicyCompartment");
@@ -152,7 +152,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ChangeTsigKeyCompartment.cs.html">here</a> to see an example of how to use ChangeTsigKeyCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ChangeTsigKeyCompartment.cs.html">here</a> to see an example of how to use ChangeTsigKeyCompartment API.</example>
         public async Task<ChangeTsigKeyCompartmentResponse> ChangeTsigKeyCompartment(ChangeTsigKeyCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeTsigKeyCompartment");
@@ -192,7 +192,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ChangeViewCompartment.cs.html">here</a> to see an example of how to use ChangeViewCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ChangeViewCompartment.cs.html">here</a> to see an example of how to use ChangeViewCompartment API.</example>
         public async Task<ChangeViewCompartmentResponse> ChangeViewCompartment(ChangeViewCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeViewCompartment");
@@ -234,7 +234,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ChangeZoneCompartment.cs.html">here</a> to see an example of how to use ChangeZoneCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ChangeZoneCompartment.cs.html">here</a> to see an example of how to use ChangeZoneCompartment API.</example>
         public async Task<ChangeZoneCompartmentResponse> ChangeZoneCompartment(ChangeZoneCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeZoneCompartment");
@@ -274,7 +274,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateResolverEndpoint.cs.html">here</a> to see an example of how to use CreateResolverEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateResolverEndpoint.cs.html">here</a> to see an example of how to use CreateResolverEndpoint API.</example>
         public async Task<CreateResolverEndpointResponse> CreateResolverEndpoint(CreateResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createResolverEndpoint");
@@ -315,7 +315,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateSteeringPolicy.cs.html">here</a> to see an example of how to use CreateSteeringPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateSteeringPolicy.cs.html">here</a> to see an example of how to use CreateSteeringPolicy API.</example>
         public async Task<CreateSteeringPolicyResponse> CreateSteeringPolicy(CreateSteeringPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSteeringPolicy");
@@ -360,7 +360,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use CreateSteeringPolicyAttachment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use CreateSteeringPolicyAttachment API.</example>
         public async Task<CreateSteeringPolicyAttachmentResponse> CreateSteeringPolicyAttachment(CreateSteeringPolicyAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSteeringPolicyAttachment");
@@ -401,7 +401,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateTsigKey.cs.html">here</a> to see an example of how to use CreateTsigKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateTsigKey.cs.html">here</a> to see an example of how to use CreateTsigKey API.</example>
         public async Task<CreateTsigKeyResponse> CreateTsigKey(CreateTsigKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTsigKey");
@@ -441,7 +441,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateView.cs.html">here</a> to see an example of how to use CreateView API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateView.cs.html">here</a> to see an example of how to use CreateView API.</example>
         public async Task<CreateViewResponse> CreateView(CreateViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createView");
@@ -483,7 +483,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/CreateZone.cs.html">here</a> to see an example of how to use CreateZone API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/CreateZone.cs.html">here</a> to see an example of how to use CreateZone API.</example>
         public async Task<CreateZoneResponse> CreateZone(CreateZoneRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createZone");
@@ -522,7 +522,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteDomainRecords.cs.html">here</a> to see an example of how to use DeleteDomainRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteDomainRecords.cs.html">here</a> to see an example of how to use DeleteDomainRecords API.</example>
         public async Task<DeleteDomainRecordsResponse> DeleteDomainRecords(DeleteDomainRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDomainRecords");
@@ -562,7 +562,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteRRSet.cs.html">here</a> to see an example of how to use DeleteRRSet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteRRSet.cs.html">here</a> to see an example of how to use DeleteRRSet API.</example>
         public async Task<DeleteRRSetResponse> DeleteRRSet(DeleteRRSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteRRSet");
@@ -604,7 +604,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteResolverEndpoint.cs.html">here</a> to see an example of how to use DeleteResolverEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteResolverEndpoint.cs.html">here</a> to see an example of how to use DeleteResolverEndpoint API.</example>
         public async Task<DeleteResolverEndpointResponse> DeleteResolverEndpoint(DeleteResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteResolverEndpoint");
@@ -647,7 +647,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteSteeringPolicy.cs.html">here</a> to see an example of how to use DeleteSteeringPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteSteeringPolicy.cs.html">here</a> to see an example of how to use DeleteSteeringPolicy API.</example>
         public async Task<DeleteSteeringPolicyResponse> DeleteSteeringPolicy(DeleteSteeringPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteSteeringPolicy");
@@ -688,7 +688,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use DeleteSteeringPolicyAttachment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use DeleteSteeringPolicyAttachment API.</example>
         public async Task<DeleteSteeringPolicyAttachmentResponse> DeleteSteeringPolicyAttachment(DeleteSteeringPolicyAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteSteeringPolicyAttachment");
@@ -728,7 +728,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteTsigKey.cs.html">here</a> to see an example of how to use DeleteTsigKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteTsigKey.cs.html">here</a> to see an example of how to use DeleteTsigKey API.</example>
         public async Task<DeleteTsigKeyResponse> DeleteTsigKey(DeleteTsigKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTsigKey");
@@ -772,7 +772,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteView.cs.html">here</a> to see an example of how to use DeleteView API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteView.cs.html">here</a> to see an example of how to use DeleteView API.</example>
         public async Task<DeleteViewResponse> DeleteView(DeleteViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteView");
@@ -814,7 +814,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteZone.cs.html">here</a> to see an example of how to use DeleteZone API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteZone.cs.html">here</a> to see an example of how to use DeleteZone API.</example>
         public async Task<DeleteZoneResponse> DeleteZone(DeleteZoneRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteZone");
@@ -856,7 +856,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetDomainRecords.cs.html">here</a> to see an example of how to use GetDomainRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetDomainRecords.cs.html">here</a> to see an example of how to use GetDomainRecords API.</example>
         public async Task<GetDomainRecordsResponse> GetDomainRecords(GetDomainRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDomainRecords");
@@ -897,7 +897,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetRRSet.cs.html">here</a> to see an example of how to use GetRRSet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetRRSet.cs.html">here</a> to see an example of how to use GetRRSet API.</example>
         public async Task<GetRRSetResponse> GetRRSet(GetRRSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRRSet");
@@ -939,7 +939,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetResolver.cs.html">here</a> to see an example of how to use GetResolver API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetResolver.cs.html">here</a> to see an example of how to use GetResolver API.</example>
         public async Task<GetResolverResponse> GetResolver(GetResolverRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResolver");
@@ -980,7 +980,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetResolverEndpoint.cs.html">here</a> to see an example of how to use GetResolverEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetResolverEndpoint.cs.html">here</a> to see an example of how to use GetResolverEndpoint API.</example>
         public async Task<GetResolverEndpointResponse> GetResolverEndpoint(GetResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResolverEndpoint");
@@ -1020,7 +1020,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetSteeringPolicy.cs.html">here</a> to see an example of how to use GetSteeringPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetSteeringPolicy.cs.html">here</a> to see an example of how to use GetSteeringPolicy API.</example>
         public async Task<GetSteeringPolicyResponse> GetSteeringPolicy(GetSteeringPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSteeringPolicy");
@@ -1060,7 +1060,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use GetSteeringPolicyAttachment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use GetSteeringPolicyAttachment API.</example>
         public async Task<GetSteeringPolicyAttachmentResponse> GetSteeringPolicyAttachment(GetSteeringPolicyAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSteeringPolicyAttachment");
@@ -1100,7 +1100,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetTsigKey.cs.html">here</a> to see an example of how to use GetTsigKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetTsigKey.cs.html">here</a> to see an example of how to use GetTsigKey API.</example>
         public async Task<GetTsigKeyResponse> GetTsigKey(GetTsigKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTsigKey");
@@ -1142,7 +1142,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetView.cs.html">here</a> to see an example of how to use GetView API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetView.cs.html">here</a> to see an example of how to use GetView API.</example>
         public async Task<GetViewResponse> GetView(GetViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getView");
@@ -1183,7 +1183,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetZone.cs.html">here</a> to see an example of how to use GetZone API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetZone.cs.html">here</a> to see an example of how to use GetZone API.</example>
         public async Task<GetZoneResponse> GetZone(GetZoneRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getZone");
@@ -1225,7 +1225,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/GetZoneRecords.cs.html">here</a> to see an example of how to use GetZoneRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetZoneRecords.cs.html">here</a> to see an example of how to use GetZoneRecords API.</example>
         public async Task<GetZoneRecordsResponse> GetZoneRecords(GetZoneRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getZoneRecords");
@@ -1268,7 +1268,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListResolverEndpoints.cs.html">here</a> to see an example of how to use ListResolverEndpoints API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListResolverEndpoints.cs.html">here</a> to see an example of how to use ListResolverEndpoints API.</example>
         public async Task<ListResolverEndpointsResponse> ListResolverEndpoints(ListResolverEndpointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResolverEndpoints");
@@ -1313,7 +1313,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListResolvers.cs.html">here</a> to see an example of how to use ListResolvers API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListResolvers.cs.html">here</a> to see an example of how to use ListResolvers API.</example>
         public async Task<ListResolversResponse> ListResolvers(ListResolversRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResolvers");
@@ -1353,7 +1353,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListSteeringPolicies.cs.html">here</a> to see an example of how to use ListSteeringPolicies API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListSteeringPolicies.cs.html">here</a> to see an example of how to use ListSteeringPolicies API.</example>
         public async Task<ListSteeringPoliciesResponse> ListSteeringPolicies(ListSteeringPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSteeringPolicies");
@@ -1393,7 +1393,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListSteeringPolicyAttachments.cs.html">here</a> to see an example of how to use ListSteeringPolicyAttachments API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListSteeringPolicyAttachments.cs.html">here</a> to see an example of how to use ListSteeringPolicyAttachments API.</example>
         public async Task<ListSteeringPolicyAttachmentsResponse> ListSteeringPolicyAttachments(ListSteeringPolicyAttachmentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSteeringPolicyAttachments");
@@ -1433,7 +1433,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListTsigKeys.cs.html">here</a> to see an example of how to use ListTsigKeys API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListTsigKeys.cs.html">here</a> to see an example of how to use ListTsigKeys API.</example>
         public async Task<ListTsigKeysResponse> ListTsigKeys(ListTsigKeysRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTsigKeys");
@@ -1478,7 +1478,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListViews.cs.html">here</a> to see an example of how to use ListViews API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListViews.cs.html">here</a> to see an example of how to use ListViews API.</example>
         public async Task<ListViewsResponse> ListViews(ListViewsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listViews");
@@ -1519,7 +1519,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/ListZones.cs.html">here</a> to see an example of how to use ListZones API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/ListZones.cs.html">here</a> to see an example of how to use ListZones API.</example>
         public async Task<ListZonesResponse> ListZones(ListZonesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listZones");
@@ -1562,7 +1562,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/PatchDomainRecords.cs.html">here</a> to see an example of how to use PatchDomainRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/PatchDomainRecords.cs.html">here</a> to see an example of how to use PatchDomainRecords API.</example>
         public async Task<PatchDomainRecordsResponse> PatchDomainRecords(PatchDomainRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called patchDomainRecords");
@@ -1601,7 +1601,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/PatchRRSet.cs.html">here</a> to see an example of how to use PatchRRSet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/PatchRRSet.cs.html">here</a> to see an example of how to use PatchRRSet API.</example>
         public async Task<PatchRRSetResponse> PatchRRSet(PatchRRSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called patchRRSet");
@@ -1644,7 +1644,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/PatchZoneRecords.cs.html">here</a> to see an example of how to use PatchZoneRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/PatchZoneRecords.cs.html">here</a> to see an example of how to use PatchZoneRecords API.</example>
         public async Task<PatchZoneRecordsResponse> PatchZoneRecords(PatchZoneRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called patchZoneRecords");
@@ -1689,7 +1689,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateDomainRecords.cs.html">here</a> to see an example of how to use UpdateDomainRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateDomainRecords.cs.html">here</a> to see an example of how to use UpdateDomainRecords API.</example>
         public async Task<UpdateDomainRecordsResponse> UpdateDomainRecords(UpdateDomainRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDomainRecords");
@@ -1728,7 +1728,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateRRSet.cs.html">here</a> to see an example of how to use UpdateRRSet API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateRRSet.cs.html">here</a> to see an example of how to use UpdateRRSet API.</example>
         public async Task<UpdateRRSetResponse> UpdateRRSet(UpdateRRSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRRSet");
@@ -1768,7 +1768,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateResolver.cs.html">here</a> to see an example of how to use UpdateResolver API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateResolver.cs.html">here</a> to see an example of how to use UpdateResolver API.</example>
         public async Task<UpdateResolverResponse> UpdateResolver(UpdateResolverRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateResolver");
@@ -1808,7 +1808,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateResolverEndpoint.cs.html">here</a> to see an example of how to use UpdateResolverEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateResolverEndpoint.cs.html">here</a> to see an example of how to use UpdateResolverEndpoint API.</example>
         public async Task<UpdateResolverEndpointResponse> UpdateResolverEndpoint(UpdateResolverEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateResolverEndpoint");
@@ -1848,7 +1848,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateSteeringPolicy.cs.html">here</a> to see an example of how to use UpdateSteeringPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateSteeringPolicy.cs.html">here</a> to see an example of how to use UpdateSteeringPolicy API.</example>
         public async Task<UpdateSteeringPolicyResponse> UpdateSteeringPolicy(UpdateSteeringPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateSteeringPolicy");
@@ -1888,7 +1888,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use UpdateSteeringPolicyAttachment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use UpdateSteeringPolicyAttachment API.</example>
         public async Task<UpdateSteeringPolicyAttachmentResponse> UpdateSteeringPolicyAttachment(UpdateSteeringPolicyAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateSteeringPolicyAttachment");
@@ -1928,7 +1928,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateTsigKey.cs.html">here</a> to see an example of how to use UpdateTsigKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateTsigKey.cs.html">here</a> to see an example of how to use UpdateTsigKey API.</example>
         public async Task<UpdateTsigKeyResponse> UpdateTsigKey(UpdateTsigKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTsigKey");
@@ -1968,7 +1968,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateView.cs.html">here</a> to see an example of how to use UpdateView API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateView.cs.html">here</a> to see an example of how to use UpdateView API.</example>
         public async Task<UpdateViewResponse> UpdateView(UpdateViewRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateView");
@@ -2010,7 +2010,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateZone.cs.html">here</a> to see an example of how to use UpdateZone API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateZone.cs.html">here</a> to see an example of how to use UpdateZone API.</example>
         public async Task<UpdateZoneResponse> UpdateZone(UpdateZoneRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateZone");
@@ -2054,7 +2054,7 @@ namespace Oci.DnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/UpdateZoneRecords.cs.html">here</a> to see an example of how to use UpdateZoneRecords API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateZoneRecords.cs.html">here</a> to see an example of how to use UpdateZoneRecords API.</example>
         public async Task<UpdateZoneRecordsResponse> UpdateZoneRecords(UpdateZoneRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateZoneRecords");

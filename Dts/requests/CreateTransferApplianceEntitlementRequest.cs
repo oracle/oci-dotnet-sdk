@@ -14,7 +14,7 @@ using Oci.DtsService.Models;
 namespace Oci.DtsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/CreateTransferApplianceEntitlement.cs.html">here</a> to see an example of how to use CreateTransferApplianceEntitlement request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateTransferApplianceEntitlement.cs.html">here</a> to see an example of how to use CreateTransferApplianceEntitlement request.
     /// </example>
     public class CreateTransferApplianceEntitlementRequest : Oci.Common.IOciRequest
     {

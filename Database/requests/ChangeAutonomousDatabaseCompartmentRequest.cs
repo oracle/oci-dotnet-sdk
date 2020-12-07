@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/ChangeAutonomousDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousDatabaseCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ChangeAutonomousDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeAutonomousDatabaseCompartment request.
     /// </example>
     public class ChangeAutonomousDatabaseCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.OsmanagementService.Models;
 namespace Oci.OsmanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/osmanagement/CreateScheduledJob.cs.html">here</a> to see an example of how to use CreateScheduledJob request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/CreateScheduledJob.cs.html">here</a> to see an example of how to use CreateScheduledJob request.
     /// </example>
     public class CreateScheduledJobRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.LoadbalancerService.Models;
 namespace Oci.LoadbalancerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loadbalancer/UpdateHealthChecker.cs.html">here</a> to see an example of how to use UpdateHealthChecker request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loadbalancer/UpdateHealthChecker.cs.html">here</a> to see an example of how to use UpdateHealthChecker request.
     /// </example>
     public class UpdateHealthCheckerRequest : Oci.Common.IOciRequest
     {

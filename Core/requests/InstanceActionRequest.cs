@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/InstanceAction.cs.html">here</a> to see an example of how to use InstanceAction request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/InstanceAction.cs.html">here</a> to see an example of how to use InstanceAction request.
     /// </example>
     public class InstanceActionRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.ResourcemanagerService.Models;
 namespace Oci.ResourcemanagerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/resourcemanager/GetStackTfConfig.cs.html">here</a> to see an example of how to use GetStackTfConfig request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/resourcemanager/GetStackTfConfig.cs.html">here</a> to see an example of how to use GetStackTfConfig request.
     /// </example>
     public class GetStackTfConfigRequest : Oci.Common.IOciRequest
     {

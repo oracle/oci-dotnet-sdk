@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/CreateGroupCursor.cs.html">here</a> to see an example of how to use CreateGroupCursor request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateGroupCursor.cs.html">here</a> to see an example of how to use CreateGroupCursor request.
     /// </example>
     public class CreateGroupCursorRequest : Oci.Common.IOciRequest
     {

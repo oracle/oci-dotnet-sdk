@@ -14,7 +14,7 @@ using Oci.LimitsService.Models;
 namespace Oci.LimitsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/limits/ListServices.cs.html">here</a> to see an example of how to use ListServices request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/limits/ListServices.cs.html">here</a> to see an example of how to use ListServices request.
     /// </example>
     public class ListServicesRequest : Oci.Common.IOciRequest
     {

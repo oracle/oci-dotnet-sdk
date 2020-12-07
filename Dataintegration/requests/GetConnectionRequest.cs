@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dataintegration/GetConnection.cs.html">here</a> to see an example of how to use GetConnection request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/GetConnection.cs.html">here</a> to see an example of how to use GetConnection request.
     /// </example>
     public class GetConnectionRequest : Oci.Common.IOciRequest
     {

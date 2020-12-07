@@ -79,5 +79,22 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
         
+        /// <value>
+        /// Visual Builder is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isVisualBuilderEnabled")]
+        public System.Nullable<bool> IsVisualBuilderEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "customEndpoint")]
+        public UpdateCustomEndpointDetails CustomEndpoint { get; set; }
+        
+        /// <value>
+        /// A list of alternate custom endpoints to be used for the integration instance URL
+        /// (contact Oracle for alternateCustomEndpoints availability for a specific instance).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "alternateCustomEndpoints")]
+        public System.Collections.Generic.List<UpdateCustomEndpointDetails> AlternateCustomEndpoints { get; set; }
+        
     }
 }

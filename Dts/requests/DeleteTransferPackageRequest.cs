@@ -14,7 +14,7 @@ using Oci.DtsService.Models;
 namespace Oci.DtsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dts/DeleteTransferPackage.cs.html">here</a> to see an example of how to use DeleteTransferPackage request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/DeleteTransferPackage.cs.html">here</a> to see an example of how to use DeleteTransferPackage request.
     /// </example>
     public class DeleteTransferPackageRequest : Oci.Common.IOciRequest
     {

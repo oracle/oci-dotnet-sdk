@@ -14,7 +14,7 @@ using Oci.NosqlService.Models;
 namespace Oci.NosqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/nosql/DeleteIndex.cs.html">here</a> to see an example of how to use DeleteIndex request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/DeleteIndex.cs.html">here</a> to see an example of how to use DeleteIndex request.
     /// </example>
     public class DeleteIndexRequest : Oci.Common.IOciRequest
     {

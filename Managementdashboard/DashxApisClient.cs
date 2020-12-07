@@ -70,7 +70,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ChangeManagementDashboardsCompartment.cs.html">here</a> to see an example of how to use ChangeManagementDashboardsCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ChangeManagementDashboardsCompartment.cs.html">here</a> to see an example of how to use ChangeManagementDashboardsCompartment API.</example>
         public async Task<ChangeManagementDashboardsCompartmentResponse> ChangeManagementDashboardsCompartment(ChangeManagementDashboardsCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeManagementDashboardsCompartment");
@@ -110,7 +110,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ChangeManagementSavedSearchesCompartment.cs.html">here</a> to see an example of how to use ChangeManagementSavedSearchesCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ChangeManagementSavedSearchesCompartment.cs.html">here</a> to see an example of how to use ChangeManagementSavedSearchesCompartment API.</example>
         public async Task<ChangeManagementSavedSearchesCompartmentResponse> ChangeManagementSavedSearchesCompartment(ChangeManagementSavedSearchesCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeManagementSavedSearchesCompartment");
@@ -150,7 +150,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/CreateManagementDashboard.cs.html">here</a> to see an example of how to use CreateManagementDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/CreateManagementDashboard.cs.html">here</a> to see an example of how to use CreateManagementDashboard API.</example>
         public async Task<CreateManagementDashboardResponse> CreateManagementDashboard(CreateManagementDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createManagementDashboard");
@@ -190,7 +190,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/CreateManagementSavedSearch.cs.html">here</a> to see an example of how to use CreateManagementSavedSearch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/CreateManagementSavedSearch.cs.html">here</a> to see an example of how to use CreateManagementSavedSearch API.</example>
         public async Task<CreateManagementSavedSearchResponse> CreateManagementSavedSearch(CreateManagementSavedSearchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createManagementSavedSearch");
@@ -229,7 +229,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/DeleteManagementDashboard.cs.html">here</a> to see an example of how to use DeleteManagementDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/DeleteManagementDashboard.cs.html">here</a> to see an example of how to use DeleteManagementDashboard API.</example>
         public async Task<DeleteManagementDashboardResponse> DeleteManagementDashboard(DeleteManagementDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteManagementDashboard");
@@ -268,7 +268,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/DeleteManagementSavedSearch.cs.html">here</a> to see an example of how to use DeleteManagementSavedSearch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/DeleteManagementSavedSearch.cs.html">here</a> to see an example of how to use DeleteManagementSavedSearch API.</example>
         public async Task<DeleteManagementSavedSearchResponse> DeleteManagementSavedSearch(DeleteManagementSavedSearchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteManagementSavedSearch");
@@ -307,7 +307,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ExportDashboard.cs.html">here</a> to see an example of how to use ExportDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ExportDashboard.cs.html">here</a> to see an example of how to use ExportDashboard API.</example>
         public async Task<ExportDashboardResponse> ExportDashboard(ExportDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called exportDashboard");
@@ -346,7 +346,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/GetManagementDashboard.cs.html">here</a> to see an example of how to use GetManagementDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/GetManagementDashboard.cs.html">here</a> to see an example of how to use GetManagementDashboard API.</example>
         public async Task<GetManagementDashboardResponse> GetManagementDashboard(GetManagementDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getManagementDashboard");
@@ -385,7 +385,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/GetManagementSavedSearch.cs.html">here</a> to see an example of how to use GetManagementSavedSearch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/GetManagementSavedSearch.cs.html">here</a> to see an example of how to use GetManagementSavedSearch API.</example>
         public async Task<GetManagementSavedSearchResponse> GetManagementSavedSearch(GetManagementSavedSearchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getManagementSavedSearch");
@@ -425,7 +425,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ImportDashboard.cs.html">here</a> to see an example of how to use ImportDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ImportDashboard.cs.html">here</a> to see an example of how to use ImportDashboard API.</example>
         public async Task<ImportDashboardResponse> ImportDashboard(ImportDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called importDashboard");
@@ -464,7 +464,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ListManagementDashboards.cs.html">here</a> to see an example of how to use ListManagementDashboards API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ListManagementDashboards.cs.html">here</a> to see an example of how to use ListManagementDashboards API.</example>
         public async Task<ListManagementDashboardsResponse> ListManagementDashboards(ListManagementDashboardsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagementDashboards");
@@ -503,7 +503,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ListManagementSavedSearches.cs.html">here</a> to see an example of how to use ListManagementSavedSearches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ListManagementSavedSearches.cs.html">here</a> to see an example of how to use ListManagementSavedSearches API.</example>
         public async Task<ListManagementSavedSearchesResponse> ListManagementSavedSearches(ListManagementSavedSearchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagementSavedSearches");
@@ -543,7 +543,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/UpdateManagementDashboard.cs.html">here</a> to see an example of how to use UpdateManagementDashboard API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/UpdateManagementDashboard.cs.html">here</a> to see an example of how to use UpdateManagementDashboard API.</example>
         public async Task<UpdateManagementDashboardResponse> UpdateManagementDashboard(UpdateManagementDashboardRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateManagementDashboard");
@@ -583,7 +583,7 @@ namespace Oci.ManagementdashboardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/UpdateManagementSavedSearch.cs.html">here</a> to see an example of how to use UpdateManagementSavedSearch API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/UpdateManagementSavedSearch.cs.html">here</a> to see an example of how to use UpdateManagementSavedSearch API.</example>
         public async Task<UpdateManagementSavedSearchResponse> UpdateManagementSavedSearch(UpdateManagementSavedSearchRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateManagementSavedSearch");

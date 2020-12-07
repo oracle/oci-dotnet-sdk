@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dns/DeleteResolverEndpoint.cs.html">here</a> to see an example of how to use DeleteResolverEndpoint request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteResolverEndpoint.cs.html">here</a> to see an example of how to use DeleteResolverEndpoint request.
     /// </example>
     public class DeleteResolverEndpointRequest : Oci.Common.IOciRequest
     {

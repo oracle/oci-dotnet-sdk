@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/GetComputeImageCapabilitySchema.cs.html">here</a> to see an example of how to use GetComputeImageCapabilitySchema request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetComputeImageCapabilitySchema.cs.html">here</a> to see an example of how to use GetComputeImageCapabilitySchema request.
     /// </example>
     public class GetComputeImageCapabilitySchemaRequest : Oci.Common.IOciRequest
     {

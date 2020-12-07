@@ -14,7 +14,7 @@ using Oci.NosqlService.Models;
 namespace Oci.NosqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/nosql/ListIndexes.cs.html">here</a> to see an example of how to use ListIndexes request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListIndexes.cs.html">here</a> to see an example of how to use ListIndexes request.
     /// </example>
     public class ListIndexesRequest : Oci.Common.IOciRequest
     {

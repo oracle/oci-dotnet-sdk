@@ -14,7 +14,7 @@ using Oci.BdsService.Models;
 namespace Oci.BdsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/bds/RestartNode.cs.html">here</a> to see an example of how to use RestartNode request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/bds/RestartNode.cs.html">here</a> to see an example of how to use RestartNode request.
     /// </example>
     public class RestartNodeRequest : Oci.Common.IOciRequest
     {

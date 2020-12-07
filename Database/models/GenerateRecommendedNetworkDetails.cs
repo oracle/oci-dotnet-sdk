@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Generates a recommended VM cluster network configuration for an Exadata Cloud@Customer system.
+    /// Generates a recommended VM cluster network configuration for an Exadata Cloud@Customer system. Applies to Exadata Cloud@Customer instances only.
     /// 
     /// </summary>
     public class GenerateRecommendedNetworkDetails 

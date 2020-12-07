@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/identity/GetTag.cs.html">here</a> to see an example of how to use GetTag request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/GetTag.cs.html">here</a> to see an example of how to use GetTag request.
     /// </example>
     public class GetTagRequest : Oci.Common.IOciRequest
     {

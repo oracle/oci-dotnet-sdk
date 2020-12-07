@@ -68,7 +68,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<RoleEnum> Role { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Data Guard.
+        /// The current state of Autonomous Data Guard.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -87,7 +87,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Data Guard.
+        /// The current state of Autonomous Data Guard.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PeerRoleEnum> PeerRole { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Data Guard.
+        /// The current state of Autonomous Data Guard.
         /// </value>
         ///
         public enum PeerLifecycleStateEnum {
@@ -161,7 +161,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Data Guard.
+        /// The current state of Autonomous Data Guard.
         /// </value>
         [JsonProperty(PropertyName = "peerLifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
