@@ -14,7 +14,7 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datascience/ActivateModel.cs.html">here</a> to see an example of how to use ActivateModel request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datascience/ActivateModel.cs.html">here</a> to see an example of how to use ActivateModel request.
     /// </example>
     public class ActivateModelRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.SchService.Models;
 namespace Oci.SchService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/sch/ChangeServiceConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeServiceConnectorCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/sch/ChangeServiceConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeServiceConnectorCompartment request.
     /// </example>
     public class ChangeServiceConnectorCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The activation details for the Exadata Cloud@Customer infrastructure.
+    /// The activation details for the Exadata Cloud@Customer infrastructure. Applies to Exadata Cloud@Customer instances only.
+    /// 
     /// </summary>
     public class ActivateExadataInfrastructureDetails 
     {

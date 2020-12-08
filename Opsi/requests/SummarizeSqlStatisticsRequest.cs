@@ -14,7 +14,7 @@ using Oci.OpsiService.Models;
 namespace Oci.OpsiService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/opsi/SummarizeSqlStatistics.cs.html">here</a> to see an example of how to use SummarizeSqlStatistics request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlStatistics.cs.html">here</a> to see an example of how to use SummarizeSqlStatistics request.
     /// </example>
     public class SummarizeSqlStatisticsRequest : Oci.Common.IOciRequest
     {
@@ -210,6 +210,8 @@ namespace Oci.OpsiService.Requests
             Inefficient,
             [EnumMember(Value = "CHANGING_PLANS")]
             ChangingPlans,
+            [EnumMember(Value = "IMPROVING")]
+            Improving,
             [EnumMember(Value = "DEGRADING_VARIANT")]
             DegradingVariant,
             [EnumMember(Value = "DEGRADING_INEFFICIENT")]

@@ -14,7 +14,7 @@ using Oci.OcvpService.Models;
 namespace Oci.OcvpService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ocvp/CreateEsxiHost.cs.html">here</a> to see an example of how to use CreateEsxiHost request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/CreateEsxiHost.cs.html">here</a> to see an example of how to use CreateEsxiHost request.
     /// </example>
     public class CreateEsxiHostRequest : Oci.Common.IOciRequest
     {

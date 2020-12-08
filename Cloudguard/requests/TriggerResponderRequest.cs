@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cloudguard/TriggerResponder.cs.html">here</a> to see an example of how to use TriggerResponder request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/TriggerResponder.cs.html">here</a> to see an example of how to use TriggerResponder request.
     /// </example>
     public class TriggerResponderRequest : Oci.Common.IOciRequest
     {

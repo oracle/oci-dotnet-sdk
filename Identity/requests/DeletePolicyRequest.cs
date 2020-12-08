@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/identity/DeletePolicy.cs.html">here</a> to see an example of how to use DeletePolicy request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/DeletePolicy.cs.html">here</a> to see an example of how to use DeletePolicy request.
     /// </example>
     public class DeletePolicyRequest : Oci.Common.IOciRequest
     {

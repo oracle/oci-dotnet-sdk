@@ -14,7 +14,7 @@ using Oci.LoggingService.Models;
 namespace Oci.LoggingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/logging/ChangeLogLogGroup.cs.html">here</a> to see an example of how to use ChangeLogLogGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/logging/ChangeLogLogGroup.cs.html">here</a> to see an example of how to use ChangeLogLogGroup request.
     /// </example>
     public class ChangeLogLogGroupRequest : Oci.Common.IOciRequest
     {

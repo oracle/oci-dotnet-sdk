@@ -66,9 +66,20 @@ namespace Oci.Common
             string existingRegionId = "us-phoenix-1";
             int regionsCount = Region.Values().Length;
             Region existingRegion = Region.FromRegionId(existingRegionId);
+            var existingRegionIds = new List<string>();
+            foreach (var region in Region.Values())
+            {
+                existingRegionIds.Add(region.RegionId);
+            }
+
             Region newRegion = Region.Register(existingRegionId, Realm.OC1);
+            var newRegionIds = new List<string>();
+            foreach (var region in Region.Values())
+            {
+                newRegionIds.Add(region.RegionId);
+            }
             Assert.True(AreRegionsSame(newRegion, existingRegion));
-            Assert.Equal(regionsCount, Region.Values().Length);
+            Assert.True(regionsCount == Region.Values().Length, $"Regions don't Match! \nExisting Regions: {String.Join(',', existingRegionIds)} \n\nNew Regions: {String.Join(',', newRegionIds)}");
         }
 
         [Fact]

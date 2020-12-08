@@ -72,7 +72,7 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/AcceptRecipientInvitation.cs.html">here</a> to see an example of how to use AcceptRecipientInvitation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/AcceptRecipientInvitation.cs.html">here</a> to see an example of how to use AcceptRecipientInvitation API.</example>
         public async Task<AcceptRecipientInvitationResponse> AcceptRecipientInvitation(AcceptRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called acceptRecipientInvitation");
@@ -111,7 +111,7 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/GetRecipientInvitation.cs.html">here</a> to see an example of how to use GetRecipientInvitation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/GetRecipientInvitation.cs.html">here</a> to see an example of how to use GetRecipientInvitation API.</example>
         public async Task<GetRecipientInvitationResponse> GetRecipientInvitation(GetRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRecipientInvitation");
@@ -150,7 +150,7 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/IgnoreRecipientInvitation.cs.html">here</a> to see an example of how to use IgnoreRecipientInvitation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/IgnoreRecipientInvitation.cs.html">here</a> to see an example of how to use IgnoreRecipientInvitation API.</example>
         public async Task<IgnoreRecipientInvitationResponse> IgnoreRecipientInvitation(IgnoreRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called ignoreRecipientInvitation");
@@ -190,7 +190,7 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/ListRecipientInvitations.cs.html">here</a> to see an example of how to use ListRecipientInvitations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/ListRecipientInvitations.cs.html">here</a> to see an example of how to use ListRecipientInvitations API.</example>
         public async Task<ListRecipientInvitationsResponse> ListRecipientInvitations(ListRecipientInvitationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRecipientInvitations");
@@ -229,7 +229,7 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/tenantmanagercontrolplane/UpdateRecipientInvitation.cs.html">here</a> to see an example of how to use UpdateRecipientInvitation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/UpdateRecipientInvitation.cs.html">here</a> to see an example of how to use UpdateRecipientInvitation API.</example>
         public async Task<UpdateRecipientInvitationResponse> UpdateRecipientInvitation(UpdateRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRecipientInvitation");

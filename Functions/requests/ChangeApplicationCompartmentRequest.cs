@@ -14,7 +14,7 @@ using Oci.FunctionsService.Models;
 namespace Oci.FunctionsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment request.
     /// </example>
     public class ChangeApplicationCompartmentRequest : Oci.Common.IOciRequest
     {

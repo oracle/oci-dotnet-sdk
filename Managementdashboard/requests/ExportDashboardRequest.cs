@@ -14,7 +14,7 @@ using Oci.ManagementdashboardService.Models;
 namespace Oci.ManagementdashboardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/managementdashboard/ExportDashboard.cs.html">here</a> to see an example of how to use ExportDashboard request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ExportDashboard.cs.html">here</a> to see an example of how to use ExportDashboard request.
     /// </example>
     public class ExportDashboardRequest : Oci.Common.IOciRequest
     {

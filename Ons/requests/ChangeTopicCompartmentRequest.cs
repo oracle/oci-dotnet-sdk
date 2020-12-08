@@ -14,7 +14,7 @@ using Oci.OnsService.Models;
 namespace Oci.OnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ons/ChangeTopicCompartment.cs.html">here</a> to see an example of how to use ChangeTopicCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/ChangeTopicCompartment.cs.html">here</a> to see an example of how to use ChangeTopicCompartment request.
     /// </example>
     public class ChangeTopicCompartmentRequest : Oci.Common.IOciRequest
     {

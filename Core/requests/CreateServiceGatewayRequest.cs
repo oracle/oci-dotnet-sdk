@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateServiceGateway.cs.html">here</a> to see an example of how to use CreateServiceGateway request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateServiceGateway.cs.html">here</a> to see an example of how to use CreateServiceGateway request.
     /// </example>
     public class CreateServiceGatewayRequest : Oci.Common.IOciRequest
     {

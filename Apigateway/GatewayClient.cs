@@ -72,7 +72,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/ChangeGatewayCompartment.cs.html">here</a> to see an example of how to use ChangeGatewayCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/ChangeGatewayCompartment.cs.html">here</a> to see an example of how to use ChangeGatewayCompartment API.</example>
         public async Task<ChangeGatewayCompartmentResponse> ChangeGatewayCompartment(ChangeGatewayCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeGatewayCompartment");
@@ -112,7 +112,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/CreateGateway.cs.html">here</a> to see an example of how to use CreateGateway API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/CreateGateway.cs.html">here</a> to see an example of how to use CreateGateway API.</example>
         public async Task<CreateGatewayResponse> CreateGateway(CreateGatewayRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createGateway");
@@ -151,7 +151,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/DeleteGateway.cs.html">here</a> to see an example of how to use DeleteGateway API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/DeleteGateway.cs.html">here</a> to see an example of how to use DeleteGateway API.</example>
         public async Task<DeleteGatewayResponse> DeleteGateway(DeleteGatewayRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteGateway");
@@ -190,7 +190,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/GetGateway.cs.html">here</a> to see an example of how to use GetGateway API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/GetGateway.cs.html">here</a> to see an example of how to use GetGateway API.</example>
         public async Task<GetGatewayResponse> GetGateway(GetGatewayRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getGateway");
@@ -230,7 +230,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/ListGateways.cs.html">here</a> to see an example of how to use ListGateways API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/ListGateways.cs.html">here</a> to see an example of how to use ListGateways API.</example>
         public async Task<ListGatewaysResponse> ListGateways(ListGatewaysRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listGateways");
@@ -269,7 +269,7 @@ namespace Oci.ApigatewayService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/UpdateGateway.cs.html">here</a> to see an example of how to use UpdateGateway API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/UpdateGateway.cs.html">here</a> to see an example of how to use UpdateGateway API.</example>
         public async Task<UpdateGatewayResponse> UpdateGateway(UpdateGatewayRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateGateway");

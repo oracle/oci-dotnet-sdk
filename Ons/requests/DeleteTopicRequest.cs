@@ -14,7 +14,7 @@ using Oci.OnsService.Models;
 namespace Oci.OnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/ons/DeleteTopic.cs.html">here</a> to see an example of how to use DeleteTopic request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/DeleteTopic.cs.html">here</a> to see an example of how to use DeleteTopic request.
     /// </example>
     public class DeleteTopicRequest : Oci.Common.IOciRequest
     {

@@ -24,7 +24,7 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// Insight text.
         /// For example `Degrading SQLs`, `Variant SQLs`,
-        ///   `Inefficient SQLs`, `SQLs with Plan Changes`,
+        ///   `Inefficient SQLs`, `Improving SQLs`, `SQLs with Plan Changes`,
         ///   `Degrading SQLs have increasing IO Time above 50%`,
         ///   `Degrading SQLs are variant`,
         ///   `2 of the 2 variant SQLs have plan changes`,
@@ -55,6 +55,7 @@ namespace Oci.OpsiService.Models
         /// VARIANT,
         /// INEFFICIENT,
         /// CHANGING_PLANS,
+        /// IMPROVING,
         /// DEGRADING_VARIANT,
         /// DEGRADING_INEFFICIENT,
         /// DEGRADING_CHANGING_PLANS,

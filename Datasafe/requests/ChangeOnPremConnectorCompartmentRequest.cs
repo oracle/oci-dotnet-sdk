@@ -14,7 +14,7 @@ using Oci.DatasafeService.Models;
 namespace Oci.DatasafeService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datasafe/ChangeOnPremConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeOnPremConnectorCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/ChangeOnPremConnectorCompartment.cs.html">here</a> to see an example of how to use ChangeOnPremConnectorCompartment request.
     /// </example>
     public class ChangeOnPremConnectorCompartmentRequest : Oci.Common.IOciRequest
     {

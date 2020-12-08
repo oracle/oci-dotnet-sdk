@@ -14,7 +14,7 @@ using Oci.VaultService.Models;
 namespace Oci.VaultService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/vault/ScheduleSecretDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretDeletion request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/ScheduleSecretDeletion.cs.html">here</a> to see an example of how to use ScheduleSecretDeletion request.
     /// </example>
     public class ScheduleSecretDeletionRequest : Oci.Common.IOciRequest
     {

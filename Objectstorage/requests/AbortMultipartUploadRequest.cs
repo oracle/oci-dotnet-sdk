@@ -14,7 +14,7 @@ using Oci.ObjectstorageService.Models;
 namespace Oci.ObjectstorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/AbortMultipartUpload.cs.html">here</a> to see an example of how to use AbortMultipartUpload request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/AbortMultipartUpload.cs.html">here</a> to see an example of how to use AbortMultipartUpload request.
     /// </example>
     public class AbortMultipartUploadRequest : Oci.Common.IOciRequest
     {

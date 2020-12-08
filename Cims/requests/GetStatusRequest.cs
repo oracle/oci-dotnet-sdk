@@ -14,7 +14,7 @@ using Oci.CimsService.Models;
 namespace Oci.CimsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/GetStatus.cs.html">here</a> to see an example of how to use GetStatus request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/GetStatus.cs.html">here</a> to see an example of how to use GetStatus request.
     /// </example>
     public class GetStatusRequest : Oci.Common.IOciRequest
     {

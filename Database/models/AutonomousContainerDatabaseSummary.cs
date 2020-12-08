@@ -222,8 +222,8 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
-        /// The scheduling detail for the quarterly maintenance window of standby Autonomous Container Database.
-        /// This value represents the number of days before the primary database maintenance schedule.
+        /// The scheduling detail for the quarterly maintenance window of the standby Autonomous Container Database.
+        /// This value represents the number of days before scheduled maintenance of the primary database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]

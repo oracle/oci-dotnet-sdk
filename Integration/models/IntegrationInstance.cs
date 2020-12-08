@@ -170,6 +170,22 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
+        
+        /// <value>
+        /// VisualBuilder is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isVisualBuilderEnabled")]
+        public System.Nullable<bool> IsVisualBuilderEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "customEndpoint")]
+        public CustomEndpointDetails CustomEndpoint { get; set; }
+        
+        /// <value>
+        /// A list of alternate custom endpoints used for the integration instance URL.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "alternateCustomEndpoints")]
+        public System.Collections.Generic.List<CustomEndpointDetails> AlternateCustomEndpoints { get; set; }
                 ///
         /// <value>
         /// The entitlement used for billing purposes.

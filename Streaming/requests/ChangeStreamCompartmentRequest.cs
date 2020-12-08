@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/streaming/ChangeStreamCompartment.cs.html">here</a> to see an example of how to use ChangeStreamCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ChangeStreamCompartment.cs.html">here</a> to see an example of how to use ChangeStreamCompartment request.
     /// </example>
     public class ChangeStreamCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -71,7 +71,7 @@ namespace Oci.SecretsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/secrets/GetSecretBundle.cs.html">here</a> to see an example of how to use GetSecretBundle API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/secrets/GetSecretBundle.cs.html">here</a> to see an example of how to use GetSecretBundle API.</example>
         public async Task<GetSecretBundleResponse> GetSecretBundle(GetSecretBundleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSecretBundle");
@@ -110,7 +110,7 @@ namespace Oci.SecretsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/secrets/ListSecretBundleVersions.cs.html">here</a> to see an example of how to use ListSecretBundleVersions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/secrets/ListSecretBundleVersions.cs.html">here</a> to see an example of how to use ListSecretBundleVersions API.</example>
         public async Task<ListSecretBundleVersionsResponse> ListSecretBundleVersions(ListSecretBundleVersionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSecretBundleVersions");

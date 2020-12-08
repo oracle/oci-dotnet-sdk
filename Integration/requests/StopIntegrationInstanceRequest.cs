@@ -14,7 +14,7 @@ using Oci.IntegrationService.Models;
 namespace Oci.IntegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/integration/StopIntegrationInstance.cs.html">here</a> to see an example of how to use StopIntegrationInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/integration/StopIntegrationInstance.cs.html">here</a> to see an example of how to use StopIntegrationInstance request.
     /// </example>
     public class StopIntegrationInstanceRequest : Oci.Common.IOciRequest
     {

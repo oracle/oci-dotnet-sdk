@@ -132,7 +132,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "EXADATA_DB_SYSTEM")]
             ExadataDbSystem,
             [EnumMember(Value = "CLOUD_EXADATA_INFRASTRUCTURE")]
-            CloudExadataInfrastructure
+            CloudExadataInfrastructure,
+            [EnumMember(Value = "EXACC_INFRASTRUCTURE")]
+            ExaccInfrastructure
         };
 
         /// <value>

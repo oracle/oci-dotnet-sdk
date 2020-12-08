@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/database/RestoreAutonomousDatabase.cs.html">here</a> to see an example of how to use RestoreAutonomousDatabase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RestoreAutonomousDatabase.cs.html">here</a> to see an example of how to use RestoreAutonomousDatabase request.
     /// </example>
     public class RestoreAutonomousDatabaseRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.MysqlService.Models;
 namespace Oci.MysqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/mysql/CreateConfiguration.cs.html">here</a> to see an example of how to use CreateConfiguration request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/CreateConfiguration.cs.html">here</a> to see an example of how to use CreateConfiguration request.
     /// </example>
     public class CreateConfigurationRequest : Oci.Common.IOciRequest
     {

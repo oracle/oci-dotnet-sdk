@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/CreateVolumeBackup.cs.html">here</a> to see an example of how to use CreateVolumeBackup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateVolumeBackup.cs.html">here</a> to see an example of how to use CreateVolumeBackup request.
     /// </example>
     public class CreateVolumeBackupRequest : Oci.Common.IOciRequest
     {

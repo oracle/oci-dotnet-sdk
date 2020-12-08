@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobLogs.cs.html">here</a> to see an example of how to use ListJobLogs request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobLogs.cs.html">here</a> to see an example of how to use ListJobLogs request.
     /// </example>
     public class ListJobLogsRequest : Oci.Common.IOciRequest
     {

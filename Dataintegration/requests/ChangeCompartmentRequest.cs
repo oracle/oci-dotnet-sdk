@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/dataintegration/ChangeCompartment.cs.html">here</a> to see an example of how to use ChangeCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/ChangeCompartment.cs.html">here</a> to see an example of how to use ChangeCompartment request.
     /// </example>
     public class ChangeCompartmentRequest : Oci.Common.IOciRequest
     {

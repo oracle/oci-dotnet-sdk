@@ -72,7 +72,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/AddDataSelectorPatterns.cs.html">here</a> to see an example of how to use AddDataSelectorPatterns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/AddDataSelectorPatterns.cs.html">here</a> to see an example of how to use AddDataSelectorPatterns API.</example>
         public async Task<AddDataSelectorPatternsResponse> AddDataSelectorPatterns(AddDataSelectorPatternsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called addDataSelectorPatterns");
@@ -111,7 +111,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/AssociateCustomProperty.cs.html">here</a> to see an example of how to use AssociateCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/AssociateCustomProperty.cs.html">here</a> to see an example of how to use AssociateCustomProperty API.</example>
         public async Task<AssociateCustomPropertyResponse> AssociateCustomProperty(AssociateCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called associateCustomProperty");
@@ -150,7 +150,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/AttachCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use AttachCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/AttachCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use AttachCatalogPrivateEndpoint API.</example>
         public async Task<AttachCatalogPrivateEndpointResponse> AttachCatalogPrivateEndpoint(AttachCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called attachCatalogPrivateEndpoint");
@@ -189,7 +189,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ChangeCatalogCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ChangeCatalogCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogCompartment API.</example>
         public async Task<ChangeCatalogCompartmentResponse> ChangeCatalogCompartment(ChangeCatalogCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCatalogCompartment");
@@ -228,7 +228,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ChangeCatalogPrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogPrivateEndpointCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ChangeCatalogPrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogPrivateEndpointCompartment API.</example>
         public async Task<ChangeCatalogPrivateEndpointCompartmentResponse> ChangeCatalogPrivateEndpointCompartment(ChangeCatalogPrivateEndpointCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCatalogPrivateEndpointCompartment");
@@ -267,7 +267,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateAttribute.cs.html">here</a> to see an example of how to use CreateAttribute API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateAttribute.cs.html">here</a> to see an example of how to use CreateAttribute API.</example>
         public async Task<CreateAttributeResponse> CreateAttribute(CreateAttributeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAttribute");
@@ -306,7 +306,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateAttributeTag.cs.html">here</a> to see an example of how to use CreateAttributeTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateAttributeTag.cs.html">here</a> to see an example of how to use CreateAttributeTag API.</example>
         public async Task<CreateAttributeTagResponse> CreateAttributeTag(CreateAttributeTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAttributeTag");
@@ -347,7 +347,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateCatalog.cs.html">here</a> to see an example of how to use CreateCatalog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateCatalog.cs.html">here</a> to see an example of how to use CreateCatalog API.</example>
         public async Task<CreateCatalogResponse> CreateCatalog(CreateCatalogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCatalog");
@@ -386,7 +386,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use CreateCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use CreateCatalogPrivateEndpoint API.</example>
         public async Task<CreateCatalogPrivateEndpointResponse> CreateCatalogPrivateEndpoint(CreateCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCatalogPrivateEndpoint");
@@ -425,7 +425,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateConnection.cs.html">here</a> to see an example of how to use CreateConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateConnection.cs.html">here</a> to see an example of how to use CreateConnection API.</example>
         public async Task<CreateConnectionResponse> CreateConnection(CreateConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createConnection");
@@ -464,7 +464,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateCustomProperty.cs.html">here</a> to see an example of how to use CreateCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateCustomProperty.cs.html">here</a> to see an example of how to use CreateCustomProperty API.</example>
         public async Task<CreateCustomPropertyResponse> CreateCustomProperty(CreateCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCustomProperty");
@@ -503,7 +503,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateDataAsset.cs.html">here</a> to see an example of how to use CreateDataAsset API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateDataAsset.cs.html">here</a> to see an example of how to use CreateDataAsset API.</example>
         public async Task<CreateDataAssetResponse> CreateDataAsset(CreateDataAssetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDataAsset");
@@ -542,7 +542,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateDataAssetTag.cs.html">here</a> to see an example of how to use CreateDataAssetTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateDataAssetTag.cs.html">here</a> to see an example of how to use CreateDataAssetTag API.</example>
         public async Task<CreateDataAssetTagResponse> CreateDataAssetTag(CreateDataAssetTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDataAssetTag");
@@ -581,7 +581,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateEntity.cs.html">here</a> to see an example of how to use CreateEntity API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateEntity.cs.html">here</a> to see an example of how to use CreateEntity API.</example>
         public async Task<CreateEntityResponse> CreateEntity(CreateEntityRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createEntity");
@@ -620,7 +620,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateEntityTag.cs.html">here</a> to see an example of how to use CreateEntityTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateEntityTag.cs.html">here</a> to see an example of how to use CreateEntityTag API.</example>
         public async Task<CreateEntityTagResponse> CreateEntityTag(CreateEntityTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createEntityTag");
@@ -659,7 +659,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateFolder.cs.html">here</a> to see an example of how to use CreateFolder API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateFolder.cs.html">here</a> to see an example of how to use CreateFolder API.</example>
         public async Task<CreateFolderResponse> CreateFolder(CreateFolderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createFolder");
@@ -698,7 +698,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateFolderTag.cs.html">here</a> to see an example of how to use CreateFolderTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateFolderTag.cs.html">here</a> to see an example of how to use CreateFolderTag API.</example>
         public async Task<CreateFolderTagResponse> CreateFolderTag(CreateFolderTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createFolderTag");
@@ -737,7 +737,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateGlossary.cs.html">here</a> to see an example of how to use CreateGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateGlossary.cs.html">here</a> to see an example of how to use CreateGlossary API.</example>
         public async Task<CreateGlossaryResponse> CreateGlossary(CreateGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createGlossary");
@@ -776,7 +776,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateJob.cs.html">here</a> to see an example of how to use CreateJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateJob.cs.html">here</a> to see an example of how to use CreateJob API.</example>
         public async Task<CreateJobResponse> CreateJob(CreateJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createJob");
@@ -815,7 +815,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateJobDefinition.cs.html">here</a> to see an example of how to use CreateJobDefinition API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateJobDefinition.cs.html">here</a> to see an example of how to use CreateJobDefinition API.</example>
         public async Task<CreateJobDefinitionResponse> CreateJobDefinition(CreateJobDefinitionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createJobDefinition");
@@ -854,7 +854,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateJobExecution.cs.html">here</a> to see an example of how to use CreateJobExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateJobExecution.cs.html">here</a> to see an example of how to use CreateJobExecution API.</example>
         public async Task<CreateJobExecutionResponse> CreateJobExecution(CreateJobExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createJobExecution");
@@ -893,7 +893,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateNamespace.cs.html">here</a> to see an example of how to use CreateNamespace API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateNamespace.cs.html">here</a> to see an example of how to use CreateNamespace API.</example>
         public async Task<CreateNamespaceResponse> CreateNamespace(CreateNamespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createNamespace");
@@ -932,7 +932,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreatePattern.cs.html">here</a> to see an example of how to use CreatePattern API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreatePattern.cs.html">here</a> to see an example of how to use CreatePattern API.</example>
         public async Task<CreatePatternResponse> CreatePattern(CreatePatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createPattern");
@@ -971,7 +971,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateTerm.cs.html">here</a> to see an example of how to use CreateTerm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateTerm.cs.html">here</a> to see an example of how to use CreateTerm API.</example>
         public async Task<CreateTermResponse> CreateTerm(CreateTermRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTerm");
@@ -1010,7 +1010,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/CreateTermRelationship.cs.html">here</a> to see an example of how to use CreateTermRelationship API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/CreateTermRelationship.cs.html">here</a> to see an example of how to use CreateTermRelationship API.</example>
         public async Task<CreateTermRelationshipResponse> CreateTermRelationship(CreateTermRelationshipRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTermRelationship");
@@ -1049,7 +1049,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteAttribute.cs.html">here</a> to see an example of how to use DeleteAttribute API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteAttribute.cs.html">here</a> to see an example of how to use DeleteAttribute API.</example>
         public async Task<DeleteAttributeResponse> DeleteAttribute(DeleteAttributeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAttribute");
@@ -1088,7 +1088,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteAttributeTag.cs.html">here</a> to see an example of how to use DeleteAttributeTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteAttributeTag.cs.html">here</a> to see an example of how to use DeleteAttributeTag API.</example>
         public async Task<DeleteAttributeTagResponse> DeleteAttributeTag(DeleteAttributeTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAttributeTag");
@@ -1127,7 +1127,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteCatalog.cs.html">here</a> to see an example of how to use DeleteCatalog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteCatalog.cs.html">here</a> to see an example of how to use DeleteCatalog API.</example>
         public async Task<DeleteCatalogResponse> DeleteCatalog(DeleteCatalogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCatalog");
@@ -1166,7 +1166,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use DeleteCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use DeleteCatalogPrivateEndpoint API.</example>
         public async Task<DeleteCatalogPrivateEndpointResponse> DeleteCatalogPrivateEndpoint(DeleteCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCatalogPrivateEndpoint");
@@ -1205,7 +1205,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteConnection.cs.html">here</a> to see an example of how to use DeleteConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteConnection.cs.html">here</a> to see an example of how to use DeleteConnection API.</example>
         public async Task<DeleteConnectionResponse> DeleteConnection(DeleteConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteConnection");
@@ -1244,7 +1244,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteCustomProperty.cs.html">here</a> to see an example of how to use DeleteCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteCustomProperty.cs.html">here</a> to see an example of how to use DeleteCustomProperty API.</example>
         public async Task<DeleteCustomPropertyResponse> DeleteCustomProperty(DeleteCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCustomProperty");
@@ -1283,7 +1283,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteDataAsset.cs.html">here</a> to see an example of how to use DeleteDataAsset API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteDataAsset.cs.html">here</a> to see an example of how to use DeleteDataAsset API.</example>
         public async Task<DeleteDataAssetResponse> DeleteDataAsset(DeleteDataAssetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDataAsset");
@@ -1322,7 +1322,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteDataAssetTag.cs.html">here</a> to see an example of how to use DeleteDataAssetTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteDataAssetTag.cs.html">here</a> to see an example of how to use DeleteDataAssetTag API.</example>
         public async Task<DeleteDataAssetTagResponse> DeleteDataAssetTag(DeleteDataAssetTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDataAssetTag");
@@ -1361,7 +1361,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteEntity.cs.html">here</a> to see an example of how to use DeleteEntity API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteEntity.cs.html">here</a> to see an example of how to use DeleteEntity API.</example>
         public async Task<DeleteEntityResponse> DeleteEntity(DeleteEntityRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteEntity");
@@ -1400,7 +1400,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteEntityTag.cs.html">here</a> to see an example of how to use DeleteEntityTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteEntityTag.cs.html">here</a> to see an example of how to use DeleteEntityTag API.</example>
         public async Task<DeleteEntityTagResponse> DeleteEntityTag(DeleteEntityTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteEntityTag");
@@ -1439,7 +1439,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteFolder.cs.html">here</a> to see an example of how to use DeleteFolder API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteFolder.cs.html">here</a> to see an example of how to use DeleteFolder API.</example>
         public async Task<DeleteFolderResponse> DeleteFolder(DeleteFolderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteFolder");
@@ -1478,7 +1478,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteFolderTag.cs.html">here</a> to see an example of how to use DeleteFolderTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteFolderTag.cs.html">here</a> to see an example of how to use DeleteFolderTag API.</example>
         public async Task<DeleteFolderTagResponse> DeleteFolderTag(DeleteFolderTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteFolderTag");
@@ -1517,7 +1517,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteGlossary.cs.html">here</a> to see an example of how to use DeleteGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteGlossary.cs.html">here</a> to see an example of how to use DeleteGlossary API.</example>
         public async Task<DeleteGlossaryResponse> DeleteGlossary(DeleteGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteGlossary");
@@ -1556,7 +1556,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteJob.cs.html">here</a> to see an example of how to use DeleteJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteJob.cs.html">here</a> to see an example of how to use DeleteJob API.</example>
         public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteJob");
@@ -1595,7 +1595,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteJobDefinition.cs.html">here</a> to see an example of how to use DeleteJobDefinition API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteJobDefinition.cs.html">here</a> to see an example of how to use DeleteJobDefinition API.</example>
         public async Task<DeleteJobDefinitionResponse> DeleteJobDefinition(DeleteJobDefinitionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteJobDefinition");
@@ -1634,7 +1634,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteNamespace.cs.html">here</a> to see an example of how to use DeleteNamespace API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteNamespace.cs.html">here</a> to see an example of how to use DeleteNamespace API.</example>
         public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteNamespace");
@@ -1673,7 +1673,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeletePattern.cs.html">here</a> to see an example of how to use DeletePattern API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeletePattern.cs.html">here</a> to see an example of how to use DeletePattern API.</example>
         public async Task<DeletePatternResponse> DeletePattern(DeletePatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deletePattern");
@@ -1712,7 +1712,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteTerm.cs.html">here</a> to see an example of how to use DeleteTerm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteTerm.cs.html">here</a> to see an example of how to use DeleteTerm API.</example>
         public async Task<DeleteTermResponse> DeleteTerm(DeleteTermRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTerm");
@@ -1751,7 +1751,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DeleteTermRelationship.cs.html">here</a> to see an example of how to use DeleteTermRelationship API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DeleteTermRelationship.cs.html">here</a> to see an example of how to use DeleteTermRelationship API.</example>
         public async Task<DeleteTermRelationshipResponse> DeleteTermRelationship(DeleteTermRelationshipRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTermRelationship");
@@ -1790,7 +1790,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DetachCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use DetachCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DetachCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use DetachCatalogPrivateEndpoint API.</example>
         public async Task<DetachCatalogPrivateEndpointResponse> DetachCatalogPrivateEndpoint(DetachCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called detachCatalogPrivateEndpoint");
@@ -1829,7 +1829,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/DisassociateCustomProperty.cs.html">here</a> to see an example of how to use DisassociateCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/DisassociateCustomProperty.cs.html">here</a> to see an example of how to use DisassociateCustomProperty API.</example>
         public async Task<DisassociateCustomPropertyResponse> DisassociateCustomProperty(DisassociateCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called disassociateCustomProperty");
@@ -1868,7 +1868,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ExpandTreeForGlossary.cs.html">here</a> to see an example of how to use ExpandTreeForGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ExpandTreeForGlossary.cs.html">here</a> to see an example of how to use ExpandTreeForGlossary API.</example>
         public async Task<ExpandTreeForGlossaryResponse> ExpandTreeForGlossary(ExpandTreeForGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called expandTreeForGlossary");
@@ -1907,7 +1907,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ExportGlossary.cs.html">here</a> to see an example of how to use ExportGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ExportGlossary.cs.html">here</a> to see an example of how to use ExportGlossary API.</example>
         public async Task<ExportGlossaryResponse> ExportGlossary(ExportGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called exportGlossary");
@@ -1946,7 +1946,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetAttribute.cs.html">here</a> to see an example of how to use GetAttribute API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetAttribute.cs.html">here</a> to see an example of how to use GetAttribute API.</example>
         public async Task<GetAttributeResponse> GetAttribute(GetAttributeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAttribute");
@@ -1985,7 +1985,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetAttributeTag.cs.html">here</a> to see an example of how to use GetAttributeTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetAttributeTag.cs.html">here</a> to see an example of how to use GetAttributeTag API.</example>
         public async Task<GetAttributeTagResponse> GetAttributeTag(GetAttributeTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAttributeTag");
@@ -2024,7 +2024,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetCatalog.cs.html">here</a> to see an example of how to use GetCatalog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetCatalog.cs.html">here</a> to see an example of how to use GetCatalog API.</example>
         public async Task<GetCatalogResponse> GetCatalog(GetCatalogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCatalog");
@@ -2063,7 +2063,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use GetCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use GetCatalogPrivateEndpoint API.</example>
         public async Task<GetCatalogPrivateEndpointResponse> GetCatalogPrivateEndpoint(GetCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCatalogPrivateEndpoint");
@@ -2102,7 +2102,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetConnection.cs.html">here</a> to see an example of how to use GetConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetConnection.cs.html">here</a> to see an example of how to use GetConnection API.</example>
         public async Task<GetConnectionResponse> GetConnection(GetConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConnection");
@@ -2141,7 +2141,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetCustomProperty.cs.html">here</a> to see an example of how to use GetCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetCustomProperty.cs.html">here</a> to see an example of how to use GetCustomProperty API.</example>
         public async Task<GetCustomPropertyResponse> GetCustomProperty(GetCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCustomProperty");
@@ -2180,7 +2180,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetDataAsset.cs.html">here</a> to see an example of how to use GetDataAsset API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetDataAsset.cs.html">here</a> to see an example of how to use GetDataAsset API.</example>
         public async Task<GetDataAssetResponse> GetDataAsset(GetDataAssetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDataAsset");
@@ -2219,7 +2219,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetDataAssetTag.cs.html">here</a> to see an example of how to use GetDataAssetTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetDataAssetTag.cs.html">here</a> to see an example of how to use GetDataAssetTag API.</example>
         public async Task<GetDataAssetTagResponse> GetDataAssetTag(GetDataAssetTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDataAssetTag");
@@ -2258,7 +2258,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetEntity.cs.html">here</a> to see an example of how to use GetEntity API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetEntity.cs.html">here</a> to see an example of how to use GetEntity API.</example>
         public async Task<GetEntityResponse> GetEntity(GetEntityRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getEntity");
@@ -2297,7 +2297,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetEntityTag.cs.html">here</a> to see an example of how to use GetEntityTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetEntityTag.cs.html">here</a> to see an example of how to use GetEntityTag API.</example>
         public async Task<GetEntityTagResponse> GetEntityTag(GetEntityTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getEntityTag");
@@ -2336,7 +2336,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetFolder.cs.html">here</a> to see an example of how to use GetFolder API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetFolder.cs.html">here</a> to see an example of how to use GetFolder API.</example>
         public async Task<GetFolderResponse> GetFolder(GetFolderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getFolder");
@@ -2375,7 +2375,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetFolderTag.cs.html">here</a> to see an example of how to use GetFolderTag API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetFolderTag.cs.html">here</a> to see an example of how to use GetFolderTag API.</example>
         public async Task<GetFolderTagResponse> GetFolderTag(GetFolderTagRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getFolderTag");
@@ -2414,7 +2414,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetGlossary.cs.html">here</a> to see an example of how to use GetGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetGlossary.cs.html">here</a> to see an example of how to use GetGlossary API.</example>
         public async Task<GetGlossaryResponse> GetGlossary(GetGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getGlossary");
@@ -2453,7 +2453,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetJob.cs.html">here</a> to see an example of how to use GetJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJob.cs.html">here</a> to see an example of how to use GetJob API.</example>
         public async Task<GetJobResponse> GetJob(GetJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJob");
@@ -2492,7 +2492,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetJobDefinition.cs.html">here</a> to see an example of how to use GetJobDefinition API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJobDefinition.cs.html">here</a> to see an example of how to use GetJobDefinition API.</example>
         public async Task<GetJobDefinitionResponse> GetJobDefinition(GetJobDefinitionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJobDefinition");
@@ -2531,7 +2531,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetJobExecution.cs.html">here</a> to see an example of how to use GetJobExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJobExecution.cs.html">here</a> to see an example of how to use GetJobExecution API.</example>
         public async Task<GetJobExecutionResponse> GetJobExecution(GetJobExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJobExecution");
@@ -2570,7 +2570,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetJobLog.cs.html">here</a> to see an example of how to use GetJobLog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJobLog.cs.html">here</a> to see an example of how to use GetJobLog API.</example>
         public async Task<GetJobLogResponse> GetJobLog(GetJobLogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJobLog");
@@ -2609,7 +2609,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetJobMetrics.cs.html">here</a> to see an example of how to use GetJobMetrics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJobMetrics.cs.html">here</a> to see an example of how to use GetJobMetrics API.</example>
         public async Task<GetJobMetricsResponse> GetJobMetrics(GetJobMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJobMetrics");
@@ -2648,7 +2648,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace API.</example>
         public async Task<GetNamespaceResponse> GetNamespace(GetNamespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getNamespace");
@@ -2687,7 +2687,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetPattern.cs.html">here</a> to see an example of how to use GetPattern API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetPattern.cs.html">here</a> to see an example of how to use GetPattern API.</example>
         public async Task<GetPatternResponse> GetPattern(GetPatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPattern");
@@ -2726,7 +2726,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetTerm.cs.html">here</a> to see an example of how to use GetTerm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetTerm.cs.html">here</a> to see an example of how to use GetTerm API.</example>
         public async Task<GetTermResponse> GetTerm(GetTermRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTerm");
@@ -2765,7 +2765,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetTermRelationship.cs.html">here</a> to see an example of how to use GetTermRelationship API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetTermRelationship.cs.html">here</a> to see an example of how to use GetTermRelationship API.</example>
         public async Task<GetTermRelationshipResponse> GetTermRelationship(GetTermRelationshipRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTermRelationship");
@@ -2804,7 +2804,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetType.cs.html">here</a> to see an example of how to use GetType API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetType.cs.html">here</a> to see an example of how to use GetType API.</example>
         public async Task<GetTypeResponse> GetType(GetTypeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getType");
@@ -2843,7 +2843,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -2882,7 +2882,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ImportConnection.cs.html">here</a> to see an example of how to use ImportConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ImportConnection.cs.html">here</a> to see an example of how to use ImportConnection API.</example>
         public async Task<ImportConnectionResponse> ImportConnection(ImportConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called importConnection");
@@ -2921,7 +2921,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ImportGlossary.cs.html">here</a> to see an example of how to use ImportGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ImportGlossary.cs.html">here</a> to see an example of how to use ImportGlossary API.</example>
         public async Task<ImportGlossaryResponse> ImportGlossary(ImportGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called importGlossary");
@@ -2960,7 +2960,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListAggregatedPhysicalEntities.cs.html">here</a> to see an example of how to use ListAggregatedPhysicalEntities API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListAggregatedPhysicalEntities.cs.html">here</a> to see an example of how to use ListAggregatedPhysicalEntities API.</example>
         public async Task<ListAggregatedPhysicalEntitiesResponse> ListAggregatedPhysicalEntities(ListAggregatedPhysicalEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAggregatedPhysicalEntities");
@@ -2999,7 +2999,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListAttributeTags.cs.html">here</a> to see an example of how to use ListAttributeTags API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListAttributeTags.cs.html">here</a> to see an example of how to use ListAttributeTags API.</example>
         public async Task<ListAttributeTagsResponse> ListAttributeTags(ListAttributeTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAttributeTags");
@@ -3038,7 +3038,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListAttributes.cs.html">here</a> to see an example of how to use ListAttributes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListAttributes.cs.html">here</a> to see an example of how to use ListAttributes API.</example>
         public async Task<ListAttributesResponse> ListAttributes(ListAttributesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAttributes");
@@ -3078,7 +3078,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListCatalogPrivateEndpoints.cs.html">here</a> to see an example of how to use ListCatalogPrivateEndpoints API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListCatalogPrivateEndpoints.cs.html">here</a> to see an example of how to use ListCatalogPrivateEndpoints API.</example>
         public async Task<ListCatalogPrivateEndpointsResponse> ListCatalogPrivateEndpoints(ListCatalogPrivateEndpointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCatalogPrivateEndpoints");
@@ -3118,7 +3118,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListCatalogs.cs.html">here</a> to see an example of how to use ListCatalogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListCatalogs.cs.html">here</a> to see an example of how to use ListCatalogs API.</example>
         public async Task<ListCatalogsResponse> ListCatalogs(ListCatalogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCatalogs");
@@ -3157,7 +3157,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListConnections.cs.html">here</a> to see an example of how to use ListConnections API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListConnections.cs.html">here</a> to see an example of how to use ListConnections API.</example>
         public async Task<ListConnectionsResponse> ListConnections(ListConnectionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listConnections");
@@ -3196,7 +3196,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListCustomProperties.cs.html">here</a> to see an example of how to use ListCustomProperties API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListCustomProperties.cs.html">here</a> to see an example of how to use ListCustomProperties API.</example>
         public async Task<ListCustomPropertiesResponse> ListCustomProperties(ListCustomPropertiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCustomProperties");
@@ -3235,7 +3235,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListDataAssetTags.cs.html">here</a> to see an example of how to use ListDataAssetTags API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListDataAssetTags.cs.html">here</a> to see an example of how to use ListDataAssetTags API.</example>
         public async Task<ListDataAssetTagsResponse> ListDataAssetTags(ListDataAssetTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDataAssetTags");
@@ -3274,7 +3274,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListDataAssets.cs.html">here</a> to see an example of how to use ListDataAssets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListDataAssets.cs.html">here</a> to see an example of how to use ListDataAssets API.</example>
         public async Task<ListDataAssetsResponse> ListDataAssets(ListDataAssetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDataAssets");
@@ -3313,7 +3313,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListDerivedLogicalEntities.cs.html">here</a> to see an example of how to use ListDerivedLogicalEntities API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListDerivedLogicalEntities.cs.html">here</a> to see an example of how to use ListDerivedLogicalEntities API.</example>
         public async Task<ListDerivedLogicalEntitiesResponse> ListDerivedLogicalEntities(ListDerivedLogicalEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDerivedLogicalEntities");
@@ -3352,7 +3352,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListEntities.cs.html">here</a> to see an example of how to use ListEntities API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListEntities.cs.html">here</a> to see an example of how to use ListEntities API.</example>
         public async Task<ListEntitiesResponse> ListEntities(ListEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEntities");
@@ -3391,7 +3391,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListEntityTags.cs.html">here</a> to see an example of how to use ListEntityTags API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListEntityTags.cs.html">here</a> to see an example of how to use ListEntityTags API.</example>
         public async Task<ListEntityTagsResponse> ListEntityTags(ListEntityTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEntityTags");
@@ -3430,7 +3430,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListFolderTags.cs.html">here</a> to see an example of how to use ListFolderTags API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListFolderTags.cs.html">here</a> to see an example of how to use ListFolderTags API.</example>
         public async Task<ListFolderTagsResponse> ListFolderTags(ListFolderTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listFolderTags");
@@ -3469,7 +3469,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListFolders.cs.html">here</a> to see an example of how to use ListFolders API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListFolders.cs.html">here</a> to see an example of how to use ListFolders API.</example>
         public async Task<ListFoldersResponse> ListFolders(ListFoldersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listFolders");
@@ -3508,7 +3508,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListGlossaries.cs.html">here</a> to see an example of how to use ListGlossaries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListGlossaries.cs.html">here</a> to see an example of how to use ListGlossaries API.</example>
         public async Task<ListGlossariesResponse> ListGlossaries(ListGlossariesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listGlossaries");
@@ -3547,7 +3547,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobDefinitions.cs.html">here</a> to see an example of how to use ListJobDefinitions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobDefinitions.cs.html">here</a> to see an example of how to use ListJobDefinitions API.</example>
         public async Task<ListJobDefinitionsResponse> ListJobDefinitions(ListJobDefinitionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listJobDefinitions");
@@ -3586,7 +3586,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobExecutions.cs.html">here</a> to see an example of how to use ListJobExecutions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobExecutions.cs.html">here</a> to see an example of how to use ListJobExecutions API.</example>
         public async Task<ListJobExecutionsResponse> ListJobExecutions(ListJobExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listJobExecutions");
@@ -3625,7 +3625,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobLogs.cs.html">here</a> to see an example of how to use ListJobLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobLogs.cs.html">here</a> to see an example of how to use ListJobLogs API.</example>
         public async Task<ListJobLogsResponse> ListJobLogs(ListJobLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listJobLogs");
@@ -3664,7 +3664,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobMetrics.cs.html">here</a> to see an example of how to use ListJobMetrics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobMetrics.cs.html">here</a> to see an example of how to use ListJobMetrics API.</example>
         public async Task<ListJobMetricsResponse> ListJobMetrics(ListJobMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listJobMetrics");
@@ -3703,7 +3703,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListJobs.cs.html">here</a> to see an example of how to use ListJobs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListJobs.cs.html">here</a> to see an example of how to use ListJobs API.</example>
         public async Task<ListJobsResponse> ListJobs(ListJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listJobs");
@@ -3742,7 +3742,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListNamespaces.cs.html">here</a> to see an example of how to use ListNamespaces API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListNamespaces.cs.html">here</a> to see an example of how to use ListNamespaces API.</example>
         public async Task<ListNamespacesResponse> ListNamespaces(ListNamespacesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listNamespaces");
@@ -3781,7 +3781,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListPatterns.cs.html">here</a> to see an example of how to use ListPatterns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListPatterns.cs.html">here</a> to see an example of how to use ListPatterns API.</example>
         public async Task<ListPatternsResponse> ListPatterns(ListPatternsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPatterns");
@@ -3820,7 +3820,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListTags.cs.html">here</a> to see an example of how to use ListTags API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListTags.cs.html">here</a> to see an example of how to use ListTags API.</example>
         public async Task<ListTagsResponse> ListTags(ListTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTags");
@@ -3859,7 +3859,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListTermRelationships.cs.html">here</a> to see an example of how to use ListTermRelationships API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListTermRelationships.cs.html">here</a> to see an example of how to use ListTermRelationships API.</example>
         public async Task<ListTermRelationshipsResponse> ListTermRelationships(ListTermRelationshipsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTermRelationships");
@@ -3898,7 +3898,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListTerms.cs.html">here</a> to see an example of how to use ListTerms API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListTerms.cs.html">here</a> to see an example of how to use ListTerms API.</example>
         public async Task<ListTermsResponse> ListTerms(ListTermsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTerms");
@@ -3937,7 +3937,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListTypes.cs.html">here</a> to see an example of how to use ListTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListTypes.cs.html">here</a> to see an example of how to use ListTypes API.</example>
         public async Task<ListTypesResponse> ListTypes(ListTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTypes");
@@ -3977,7 +3977,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -4017,7 +4017,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -4057,7 +4057,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -4096,7 +4096,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ObjectStats.cs.html">here</a> to see an example of how to use ObjectStats API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ObjectStats.cs.html">here</a> to see an example of how to use ObjectStats API.</example>
         public async Task<ObjectStatsResponse> ObjectStats(ObjectStatsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called objectStats");
@@ -4135,7 +4135,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ParseConnection.cs.html">here</a> to see an example of how to use ParseConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ParseConnection.cs.html">here</a> to see an example of how to use ParseConnection API.</example>
         public async Task<ParseConnectionResponse> ParseConnection(ParseConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called parseConnection");
@@ -4174,7 +4174,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/RemoveDataSelectorPatterns.cs.html">here</a> to see an example of how to use RemoveDataSelectorPatterns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/RemoveDataSelectorPatterns.cs.html">here</a> to see an example of how to use RemoveDataSelectorPatterns API.</example>
         public async Task<RemoveDataSelectorPatternsResponse> RemoveDataSelectorPatterns(RemoveDataSelectorPatternsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called removeDataSelectorPatterns");
@@ -4213,7 +4213,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/SearchCriteria.cs.html">here</a> to see an example of how to use SearchCriteria API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/SearchCriteria.cs.html">here</a> to see an example of how to use SearchCriteria API.</example>
         public async Task<SearchCriteriaResponse> SearchCriteria(SearchCriteriaRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called searchCriteria");
@@ -4252,7 +4252,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/TestConnection.cs.html">here</a> to see an example of how to use TestConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/TestConnection.cs.html">here</a> to see an example of how to use TestConnection API.</example>
         public async Task<TestConnectionResponse> TestConnection(TestConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called testConnection");
@@ -4291,7 +4291,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateAttribute.cs.html">here</a> to see an example of how to use UpdateAttribute API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateAttribute.cs.html">here</a> to see an example of how to use UpdateAttribute API.</example>
         public async Task<UpdateAttributeResponse> UpdateAttribute(UpdateAttributeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAttribute");
@@ -4330,7 +4330,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateCatalog.cs.html">here</a> to see an example of how to use UpdateCatalog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateCatalog.cs.html">here</a> to see an example of how to use UpdateCatalog API.</example>
         public async Task<UpdateCatalogResponse> UpdateCatalog(UpdateCatalogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCatalog");
@@ -4369,7 +4369,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use UpdateCatalogPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateCatalogPrivateEndpoint.cs.html">here</a> to see an example of how to use UpdateCatalogPrivateEndpoint API.</example>
         public async Task<UpdateCatalogPrivateEndpointResponse> UpdateCatalogPrivateEndpoint(UpdateCatalogPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCatalogPrivateEndpoint");
@@ -4408,7 +4408,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateConnection.cs.html">here</a> to see an example of how to use UpdateConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateConnection.cs.html">here</a> to see an example of how to use UpdateConnection API.</example>
         public async Task<UpdateConnectionResponse> UpdateConnection(UpdateConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateConnection");
@@ -4447,7 +4447,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateCustomProperty.cs.html">here</a> to see an example of how to use UpdateCustomProperty API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateCustomProperty.cs.html">here</a> to see an example of how to use UpdateCustomProperty API.</example>
         public async Task<UpdateCustomPropertyResponse> UpdateCustomProperty(UpdateCustomPropertyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCustomProperty");
@@ -4486,7 +4486,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateDataAsset.cs.html">here</a> to see an example of how to use UpdateDataAsset API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateDataAsset.cs.html">here</a> to see an example of how to use UpdateDataAsset API.</example>
         public async Task<UpdateDataAssetResponse> UpdateDataAsset(UpdateDataAssetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDataAsset");
@@ -4525,7 +4525,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateEntity.cs.html">here</a> to see an example of how to use UpdateEntity API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateEntity.cs.html">here</a> to see an example of how to use UpdateEntity API.</example>
         public async Task<UpdateEntityResponse> UpdateEntity(UpdateEntityRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateEntity");
@@ -4564,7 +4564,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateFolder.cs.html">here</a> to see an example of how to use UpdateFolder API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateFolder.cs.html">here</a> to see an example of how to use UpdateFolder API.</example>
         public async Task<UpdateFolderResponse> UpdateFolder(UpdateFolderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateFolder");
@@ -4603,7 +4603,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateGlossary.cs.html">here</a> to see an example of how to use UpdateGlossary API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateGlossary.cs.html">here</a> to see an example of how to use UpdateGlossary API.</example>
         public async Task<UpdateGlossaryResponse> UpdateGlossary(UpdateGlossaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateGlossary");
@@ -4642,7 +4642,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateJob.cs.html">here</a> to see an example of how to use UpdateJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateJob.cs.html">here</a> to see an example of how to use UpdateJob API.</example>
         public async Task<UpdateJobResponse> UpdateJob(UpdateJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateJob");
@@ -4681,7 +4681,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateJobDefinition.cs.html">here</a> to see an example of how to use UpdateJobDefinition API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateJobDefinition.cs.html">here</a> to see an example of how to use UpdateJobDefinition API.</example>
         public async Task<UpdateJobDefinitionResponse> UpdateJobDefinition(UpdateJobDefinitionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateJobDefinition");
@@ -4720,7 +4720,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateNamespace.cs.html">here</a> to see an example of how to use UpdateNamespace API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateNamespace.cs.html">here</a> to see an example of how to use UpdateNamespace API.</example>
         public async Task<UpdateNamespaceResponse> UpdateNamespace(UpdateNamespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateNamespace");
@@ -4759,7 +4759,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdatePattern.cs.html">here</a> to see an example of how to use UpdatePattern API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdatePattern.cs.html">here</a> to see an example of how to use UpdatePattern API.</example>
         public async Task<UpdatePatternResponse> UpdatePattern(UpdatePatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updatePattern");
@@ -4798,7 +4798,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateTerm.cs.html">here</a> to see an example of how to use UpdateTerm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateTerm.cs.html">here</a> to see an example of how to use UpdateTerm API.</example>
         public async Task<UpdateTermResponse> UpdateTerm(UpdateTermRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTerm");
@@ -4837,7 +4837,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UpdateTermRelationship.cs.html">here</a> to see an example of how to use UpdateTermRelationship API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UpdateTermRelationship.cs.html">here</a> to see an example of how to use UpdateTermRelationship API.</example>
         public async Task<UpdateTermRelationshipResponse> UpdateTermRelationship(UpdateTermRelationshipRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTermRelationship");
@@ -4876,7 +4876,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/UploadCredentials.cs.html">here</a> to see an example of how to use UploadCredentials API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/UploadCredentials.cs.html">here</a> to see an example of how to use UploadCredentials API.</example>
         public async Task<UploadCredentialsResponse> UploadCredentials(UploadCredentialsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called uploadCredentials");
@@ -4915,7 +4915,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/Users.cs.html">here</a> to see an example of how to use Users API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/Users.cs.html">here</a> to see an example of how to use Users API.</example>
         public async Task<UsersResponse> Users(UsersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called users");
@@ -4954,7 +4954,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ValidateConnection.cs.html">here</a> to see an example of how to use ValidateConnection API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ValidateConnection.cs.html">here</a> to see an example of how to use ValidateConnection API.</example>
         public async Task<ValidateConnectionResponse> ValidateConnection(ValidateConnectionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called validateConnection");
@@ -4993,7 +4993,7 @@ namespace Oci.DatacatalogService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ValidatePattern.cs.html">here</a> to see an example of how to use ValidatePattern API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ValidatePattern.cs.html">here</a> to see an example of how to use ValidatePattern API.</example>
         public async Task<ValidatePatternResponse> ValidatePattern(ValidatePatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called validatePattern");

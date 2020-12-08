@@ -14,7 +14,7 @@ using Oci.LoggingService.Models;
 namespace Oci.LoggingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/logging/GetUnifiedAgentConfiguration.cs.html">here</a> to see an example of how to use GetUnifiedAgentConfiguration request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/logging/GetUnifiedAgentConfiguration.cs.html">here</a> to see an example of how to use GetUnifiedAgentConfiguration request.
     /// </example>
     public class GetUnifiedAgentConfigurationRequest : Oci.Common.IOciRequest
     {

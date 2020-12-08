@@ -74,7 +74,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment API.</example>
         public async Task<ChangeApplicationCompartmentResponse> ChangeApplicationCompartment(ChangeApplicationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeApplicationCompartment");
@@ -113,7 +113,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/CreateApplication.cs.html">here</a> to see an example of how to use CreateApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/CreateApplication.cs.html">here</a> to see an example of how to use CreateApplication API.</example>
         public async Task<CreateApplicationResponse> CreateApplication(CreateApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createApplication");
@@ -152,7 +152,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/CreateFunction.cs.html">here</a> to see an example of how to use CreateFunction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/CreateFunction.cs.html">here</a> to see an example of how to use CreateFunction API.</example>
         public async Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createFunction");
@@ -191,7 +191,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/DeleteApplication.cs.html">here</a> to see an example of how to use DeleteApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/DeleteApplication.cs.html">here</a> to see an example of how to use DeleteApplication API.</example>
         public async Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteApplication");
@@ -230,7 +230,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/DeleteFunction.cs.html">here</a> to see an example of how to use DeleteFunction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/DeleteFunction.cs.html">here</a> to see an example of how to use DeleteFunction API.</example>
         public async Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteFunction");
@@ -269,7 +269,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/GetApplication.cs.html">here</a> to see an example of how to use GetApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/GetApplication.cs.html">here</a> to see an example of how to use GetApplication API.</example>
         public async Task<GetApplicationResponse> GetApplication(GetApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getApplication");
@@ -308,7 +308,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/GetFunction.cs.html">here</a> to see an example of how to use GetFunction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/GetFunction.cs.html">here</a> to see an example of how to use GetFunction API.</example>
         public async Task<GetFunctionResponse> GetFunction(GetFunctionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getFunction");
@@ -347,7 +347,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ListApplications.cs.html">here</a> to see an example of how to use ListApplications API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/ListApplications.cs.html">here</a> to see an example of how to use ListApplications API.</example>
         public async Task<ListApplicationsResponse> ListApplications(ListApplicationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listApplications");
@@ -386,7 +386,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/ListFunctions.cs.html">here</a> to see an example of how to use ListFunctions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/ListFunctions.cs.html">here</a> to see an example of how to use ListFunctions API.</example>
         public async Task<ListFunctionsResponse> ListFunctions(ListFunctionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listFunctions");
@@ -425,7 +425,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication API.</example>
         public async Task<UpdateApplicationResponse> UpdateApplication(UpdateApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateApplication");
@@ -464,7 +464,7 @@ namespace Oci.FunctionsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/functions/UpdateFunction.cs.html">here</a> to see an example of how to use UpdateFunction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/UpdateFunction.cs.html">here</a> to see an example of how to use UpdateFunction API.</example>
         public async Task<UpdateFunctionResponse> UpdateFunction(UpdateFunctionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateFunction");

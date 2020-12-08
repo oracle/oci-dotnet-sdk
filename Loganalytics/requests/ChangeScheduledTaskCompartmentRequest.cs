@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/loganalytics/ChangeScheduledTaskCompartment.cs.html">here</a> to see an example of how to use ChangeScheduledTaskCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/ChangeScheduledTaskCompartment.cs.html">here</a> to see an example of how to use ChangeScheduledTaskCompartment request.
     /// </example>
     public class ChangeScheduledTaskCompartmentRequest : Oci.Common.IOciRequest
     {

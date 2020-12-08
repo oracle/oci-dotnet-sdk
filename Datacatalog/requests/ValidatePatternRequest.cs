@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/datacatalog/ValidatePattern.cs.html">here</a> to see an example of how to use ValidatePattern request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ValidatePattern.cs.html">here</a> to see an example of how to use ValidatePattern request.
     /// </example>
     public class ValidatePatternRequest : Oci.Common.IOciRequest
     {

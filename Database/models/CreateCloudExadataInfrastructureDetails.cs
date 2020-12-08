@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Request to create cloud Exadata infrastructure.
+    /// Request to create cloud Exadata infrastructure. Applies to Exadata Cloud Service instances only. 
     /// 
     /// </summary>
     public class CreateCloudExadataInfrastructureDetails 

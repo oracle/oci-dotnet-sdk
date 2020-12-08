@@ -14,7 +14,7 @@ using Oci.CimsService.Models;
 namespace Oci.CimsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/cims/CreateIncident.cs.html">here</a> to see an example of how to use CreateIncident request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/CreateIncident.cs.html">here</a> to see an example of how to use CreateIncident request.
     /// </example>
     public class CreateIncidentRequest : Oci.Common.IOciRequest
     {

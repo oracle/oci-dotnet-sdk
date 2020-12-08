@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/core/ListSecurityLists.cs.html">here</a> to see an example of how to use ListSecurityLists request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListSecurityLists.cs.html">here</a> to see an example of how to use ListSecurityLists request.
     /// </example>
     public class ListSecurityListsRequest : Oci.Common.IOciRequest
     {

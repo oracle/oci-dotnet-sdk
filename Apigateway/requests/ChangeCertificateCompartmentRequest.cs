@@ -14,7 +14,7 @@ using Oci.ApigatewayService.Models;
 namespace Oci.ApigatewayService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/apigateway/ChangeCertificateCompartment.cs.html">here</a> to see an example of how to use ChangeCertificateCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/ChangeCertificateCompartment.cs.html">here</a> to see an example of how to use ChangeCertificateCompartment request.
     /// </example>
     public class ChangeCertificateCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.IntegrationService.Models;
 namespace Oci.IntegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/integration/StartIntegrationInstance.cs.html">here</a> to see an example of how to use StartIntegrationInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/integration/StartIntegrationInstance.cs.html">here</a> to see an example of how to use StartIntegrationInstance request.
     /// </example>
     public class StartIntegrationInstanceRequest : Oci.Common.IOciRequest
     {

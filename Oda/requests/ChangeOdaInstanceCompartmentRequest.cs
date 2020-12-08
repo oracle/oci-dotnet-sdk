@@ -14,7 +14,7 @@ using Oci.OdaService.Models;
 namespace Oci.OdaService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/oda/ChangeOdaInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeOdaInstanceCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/oda/ChangeOdaInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeOdaInstanceCompartment request.
     /// </example>
     public class ChangeOdaInstanceCompartmentRequest : Oci.Common.IOciRequest
     {

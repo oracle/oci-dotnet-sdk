@@ -14,7 +14,7 @@ using Oci.ObjectstorageService.Models;
 namespace Oci.ObjectstorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/objectstorage/ListObjects.cs.html">here</a> to see an example of how to use ListObjects request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/ListObjects.cs.html">here</a> to see an example of how to use ListObjects request.
     /// </example>
     public class ListObjectsRequest : Oci.Common.IOciRequest
     {

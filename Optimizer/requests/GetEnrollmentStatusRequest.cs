@@ -14,7 +14,7 @@ using Oci.OptimizerService.Models;
 namespace Oci.OptimizerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/optimizer/GetEnrollmentStatus.cs.html">here</a> to see an example of how to use GetEnrollmentStatus request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetEnrollmentStatus.cs.html">here</a> to see an example of how to use GetEnrollmentStatus request.
     /// </example>
     public class GetEnrollmentStatusRequest : Oci.Common.IOciRequest
     {

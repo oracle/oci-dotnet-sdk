@@ -14,7 +14,7 @@ using Oci.AutoscalingService.Models;
 namespace Oci.AutoscalingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.0.0/autoscaling/ChangeAutoScalingConfigurationCompartment.cs.html">here</a> to see an example of how to use ChangeAutoScalingConfigurationCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/autoscaling/ChangeAutoScalingConfigurationCompartment.cs.html">here</a> to see an example of how to use ChangeAutoScalingConfigurationCompartment request.
     /// </example>
     public class ChangeAutoScalingConfigurationCompartmentRequest : Oci.Common.IOciRequest
     {
