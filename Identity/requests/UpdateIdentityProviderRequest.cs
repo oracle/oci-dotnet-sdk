@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/UpdateIdentityProvider.cs.html">here</a> to see an example of how to use UpdateIdentityProvider request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/UpdateIdentityProvider.cs.html">here</a> to see an example of how to use UpdateIdentityProvider request.
     /// </example>
     public class UpdateIdentityProviderRequest : Oci.Common.IOciRequest
     {

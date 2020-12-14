@@ -164,7 +164,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Additional information about the current lifecycleState.
+        /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }

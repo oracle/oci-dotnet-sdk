@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetExternalBackupJob.cs.html">here</a> to see an example of how to use GetExternalBackupJob request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetExternalBackupJob.cs.html">here</a> to see an example of how to use GetExternalBackupJob request.
     /// </example>
     public class GetExternalBackupJobRequest : Oci.Common.IOciRequest
     {

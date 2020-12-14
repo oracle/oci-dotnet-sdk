@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/ListWorkspaces.cs.html">here</a> to see an example of how to use ListWorkspaces request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataintegration/ListWorkspaces.cs.html">here</a> to see an example of how to use ListWorkspaces request.
     /// </example>
     public class ListWorkspacesRequest : Oci.Common.IOciRequest
     {

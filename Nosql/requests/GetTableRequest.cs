@@ -14,7 +14,7 @@ using Oci.NosqlService.Models;
 namespace Oci.NosqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/GetTable.cs.html">here</a> to see an example of how to use GetTable request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/GetTable.cs.html">here</a> to see an example of how to use GetTable request.
     /// </example>
     public class GetTableRequest : Oci.Common.IOciRequest
     {

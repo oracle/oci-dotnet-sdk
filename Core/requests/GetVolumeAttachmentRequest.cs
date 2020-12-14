@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetVolumeAttachment.cs.html">here</a> to see an example of how to use GetVolumeAttachment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetVolumeAttachment.cs.html">here</a> to see an example of how to use GetVolumeAttachment request.
     /// </example>
     public class GetVolumeAttachmentRequest : Oci.Common.IOciRequest
     {

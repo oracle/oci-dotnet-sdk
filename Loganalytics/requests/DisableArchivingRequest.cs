@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/DisableArchiving.cs.html">here</a> to see an example of how to use DisableArchiving request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DisableArchiving.cs.html">here</a> to see an example of how to use DisableArchiving request.
     /// </example>
     public class DisableArchivingRequest : Oci.Common.IOciRequest
     {

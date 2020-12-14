@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/UpdateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousContainerDatabase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateAutonomousContainerDatabase.cs.html">here</a> to see an example of how to use UpdateAutonomousContainerDatabase request.
     /// </example>
     public class UpdateAutonomousContainerDatabaseRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetClusterNetwork.cs.html">here</a> to see an example of how to use GetClusterNetwork request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetClusterNetwork.cs.html">here</a> to see an example of how to use GetClusterNetwork request.
     /// </example>
     public class GetClusterNetworkRequest : Oci.Common.IOciRequest
     {

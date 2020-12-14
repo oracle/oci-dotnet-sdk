@@ -14,7 +14,7 @@ using Oci.OnsService.Models;
 namespace Oci.OnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/ListTopics.cs.html">here</a> to see an example of how to use ListTopics request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/ListTopics.cs.html">here</a> to see an example of how to use ListTopics request.
     /// </example>
     public class ListTopicsRequest : Oci.Common.IOciRequest
     {

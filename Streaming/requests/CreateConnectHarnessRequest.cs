@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateConnectHarness.cs.html">here</a> to see an example of how to use CreateConnectHarness request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/CreateConnectHarness.cs.html">here</a> to see an example of how to use CreateConnectHarness request.
     /// </example>
     public class CreateConnectHarnessRequest : Oci.Common.IOciRequest
     {

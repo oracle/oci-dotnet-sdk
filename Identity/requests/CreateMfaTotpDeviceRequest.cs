@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/CreateMfaTotpDevice.cs.html">here</a> to see an example of how to use CreateMfaTotpDevice request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/CreateMfaTotpDevice.cs.html">here</a> to see an example of how to use CreateMfaTotpDevice request.
     /// </example>
     public class CreateMfaTotpDeviceRequest : Oci.Common.IOciRequest
     {

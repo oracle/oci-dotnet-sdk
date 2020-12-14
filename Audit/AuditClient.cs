@@ -41,7 +41,7 @@ namespace Oci.AuditService
             {
                 ServiceName = "AUDIT",
                 ServiceEndpointPrefix = "audit",
-                ServiceEndpointTemplate = "https://audit.{region}.oraclecloud.com"
+                ServiceEndpointTemplate = "https://audit.{region}.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -69,7 +69,7 @@ namespace Oci.AuditService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/audit/GetConfiguration.cs.html">here</a> to see an example of how to use GetConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/audit/GetConfiguration.cs.html">here</a> to see an example of how to use GetConfiguration API.</example>
         public async Task<GetConfigurationResponse> GetConfiguration(GetConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConfiguration");
@@ -110,7 +110,7 @@ namespace Oci.AuditService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/audit/ListEvents.cs.html">here</a> to see an example of how to use ListEvents API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/audit/ListEvents.cs.html">here</a> to see an example of how to use ListEvents API.</example>
         public async Task<ListEventsResponse> ListEvents(ListEventsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEvents");
@@ -149,7 +149,7 @@ namespace Oci.AuditService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/audit/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/audit/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration API.</example>
         public async Task<UpdateConfigurationResponse> UpdateConfiguration(UpdateConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateConfiguration");

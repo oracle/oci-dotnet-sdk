@@ -14,7 +14,7 @@ using Oci.ApigatewayService.Models;
 namespace Oci.ApigatewayService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/GetApiDeploymentSpecification.cs.html">here</a> to see an example of how to use GetApiDeploymentSpecification request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apigateway/GetApiDeploymentSpecification.cs.html">here</a> to see an example of how to use GetApiDeploymentSpecification request.
     /// </example>
     public class GetApiDeploymentSpecificationRequest : Oci.Common.IOciRequest
     {

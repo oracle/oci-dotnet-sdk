@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetCrossConnectStatus.cs.html">here</a> to see an example of how to use GetCrossConnectStatus request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetCrossConnectStatus.cs.html">here</a> to see an example of how to use GetCrossConnectStatus request.
     /// </example>
     public class GetCrossConnectStatusRequest : Oci.Common.IOciRequest
     {

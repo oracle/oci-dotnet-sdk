@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/GetIdentityProvider.cs.html">here</a> to see an example of how to use GetIdentityProvider request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/GetIdentityProvider.cs.html">here</a> to see an example of how to use GetIdentityProvider request.
     /// </example>
     public class GetIdentityProviderRequest : Oci.Common.IOciRequest
     {

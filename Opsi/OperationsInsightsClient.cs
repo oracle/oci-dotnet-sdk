@@ -69,7 +69,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/IngestSqlBucket.cs.html">here</a> to see an example of how to use IngestSqlBucket API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlBucket.cs.html">here</a> to see an example of how to use IngestSqlBucket API.</example>
         public async Task<IngestSqlBucketResponse> IngestSqlBucket(IngestSqlBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called ingestSqlBucket");
@@ -108,7 +108,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/IngestSqlPlanLines.cs.html">here</a> to see an example of how to use IngestSqlPlanLines API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlPlanLines.cs.html">here</a> to see an example of how to use IngestSqlPlanLines API.</example>
         public async Task<IngestSqlPlanLinesResponse> IngestSqlPlanLines(IngestSqlPlanLinesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called ingestSqlPlanLines");
@@ -149,7 +149,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/IngestSqlText.cs.html">here</a> to see an example of how to use IngestSqlText API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlText.cs.html">here</a> to see an example of how to use IngestSqlText API.</example>
         public async Task<IngestSqlTextResponse> IngestSqlText(IngestSqlTextRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called ingestSqlText");
@@ -188,7 +188,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/ListDatabaseInsights.cs.html">here</a> to see an example of how to use ListDatabaseInsights API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListDatabaseInsights.cs.html">here</a> to see an example of how to use ListDatabaseInsights API.</example>
         public async Task<ListDatabaseInsightsResponse> ListDatabaseInsights(ListDatabaseInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDatabaseInsights");
@@ -227,7 +227,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/ListSqlPlans.cs.html">here</a> to see an example of how to use ListSqlPlans API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlPlans.cs.html">here</a> to see an example of how to use ListSqlPlans API.</example>
         public async Task<ListSqlPlansResponse> ListSqlPlans(ListSqlPlansRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSqlPlans");
@@ -266,7 +266,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/ListSqlSearches.cs.html">here</a> to see an example of how to use ListSqlSearches API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlSearches.cs.html">here</a> to see an example of how to use ListSqlSearches API.</example>
         public async Task<ListSqlSearchesResponse> ListSqlSearches(ListSqlSearchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSqlSearches");
@@ -305,7 +305,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/ListSqlTexts.cs.html">here</a> to see an example of how to use ListSqlTexts API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlTexts.cs.html">here</a> to see an example of how to use ListSqlTexts API.</example>
         public async Task<ListSqlTextsResponse> ListSqlTexts(ListSqlTextsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSqlTexts");
@@ -346,7 +346,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceCapacityTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceCapacityTrend API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceCapacityTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceCapacityTrend API.</example>
         public async Task<SummarizeDatabaseInsightResourceCapacityTrendResponse> SummarizeDatabaseInsightResourceCapacityTrend(SummarizeDatabaseInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceCapacityTrend");
@@ -386,7 +386,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceForecastTrend API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceForecastTrend API.</example>
         public async Task<SummarizeDatabaseInsightResourceForecastTrendResponse> SummarizeDatabaseInsightResourceForecastTrend(SummarizeDatabaseInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceForecastTrend");
@@ -425,7 +425,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceStatistics.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceStatistics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceStatistics.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceStatistics API.</example>
         public async Task<SummarizeDatabaseInsightResourceStatisticsResponse> SummarizeDatabaseInsightResourceStatistics(SummarizeDatabaseInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceStatistics");
@@ -467,7 +467,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsage API.</example>
         public async Task<SummarizeDatabaseInsightResourceUsageResponse> SummarizeDatabaseInsightResourceUsage(SummarizeDatabaseInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUsage");
@@ -508,7 +508,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceUsageTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsageTrend API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUsageTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsageTrend API.</example>
         public async Task<SummarizeDatabaseInsightResourceUsageTrendResponse> SummarizeDatabaseInsightResourceUsageTrend(SummarizeDatabaseInsightResourceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUsageTrend");
@@ -547,7 +547,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceUtilizationInsight.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUtilizationInsight API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUtilizationInsight.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUtilizationInsight API.</example>
         public async Task<SummarizeDatabaseInsightResourceUtilizationInsightResponse> SummarizeDatabaseInsightResourceUtilizationInsight(SummarizeDatabaseInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUtilizationInsight");
@@ -586,7 +586,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlInsights.cs.html">here</a> to see an example of how to use SummarizeSqlInsights API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlInsights.cs.html">here</a> to see an example of how to use SummarizeSqlInsights API.</example>
         public async Task<SummarizeSqlInsightsResponse> SummarizeSqlInsights(SummarizeSqlInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlInsights");
@@ -625,7 +625,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlPlanInsights.cs.html">here</a> to see an example of how to use SummarizeSqlPlanInsights API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlPlanInsights.cs.html">here</a> to see an example of how to use SummarizeSqlPlanInsights API.</example>
         public async Task<SummarizeSqlPlanInsightsResponse> SummarizeSqlPlanInsights(SummarizeSqlPlanInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlPlanInsights");
@@ -664,7 +664,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlResponseTimeDistributions.cs.html">here</a> to see an example of how to use SummarizeSqlResponseTimeDistributions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlResponseTimeDistributions.cs.html">here</a> to see an example of how to use SummarizeSqlResponseTimeDistributions API.</example>
         public async Task<SummarizeSqlResponseTimeDistributionsResponse> SummarizeSqlResponseTimeDistributions(SummarizeSqlResponseTimeDistributionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlResponseTimeDistributions");
@@ -703,7 +703,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlStatistics.cs.html">here</a> to see an example of how to use SummarizeSqlStatistics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatistics.cs.html">here</a> to see an example of how to use SummarizeSqlStatistics API.</example>
         public async Task<SummarizeSqlStatisticsResponse> SummarizeSqlStatistics(SummarizeSqlStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlStatistics");
@@ -742,7 +742,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlStatisticsTimeSeries.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeries API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatisticsTimeSeries.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeries API.</example>
         public async Task<SummarizeSqlStatisticsTimeSeriesResponse> SummarizeSqlStatisticsTimeSeries(SummarizeSqlStatisticsTimeSeriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlStatisticsTimeSeries");
@@ -781,7 +781,7 @@ namespace Oci.OpsiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeSqlStatisticsTimeSeriesByPlan.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeriesByPlan API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatisticsTimeSeriesByPlan.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeriesByPlan API.</example>
         public async Task<SummarizeSqlStatisticsTimeSeriesByPlanResponse> SummarizeSqlStatisticsTimeSeriesByPlan(SummarizeSqlStatisticsTimeSeriesByPlanRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeSqlStatisticsTimeSeriesByPlan");

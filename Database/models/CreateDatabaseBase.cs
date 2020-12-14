@@ -57,6 +57,19 @@ namespace Oci.DatabaseService.Models
         };
 
         
+        /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyVersionId")]
+        public string KmsKeyVersionId { get; set; }
+        
     }
 
     public class CreateDatabaseBaseModelConverter : JsonConverter

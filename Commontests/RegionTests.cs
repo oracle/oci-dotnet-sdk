@@ -8,6 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Collections.Generic;
 using Xunit;
 
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
 namespace Oci.Common
 {
     [ExcludeFromCodeCoverage]
@@ -79,7 +80,7 @@ namespace Oci.Common
                 newRegionIds.Add(region.RegionId);
             }
             Assert.True(AreRegionsSame(newRegion, existingRegion));
-            Assert.True(regionsCount == Region.Values().Length, $"Regions don't Match! \nExisting Regions: {String.Join(',', existingRegionIds)} \n\nNew Regions: {String.Join(',', newRegionIds)}");
+            Assert.True(regionsCount == Region.Values().Length, $"Regions don't Match! \nExisting Regions: {String.Join(",", existingRegionIds)} \nNew Regions: {String.Join(",", newRegionIds)}");
         }
 
         [Fact]

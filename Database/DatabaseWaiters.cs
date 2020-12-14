@@ -1626,62 +1626,6 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAutonomousDataWarehouseRequest, GetAutonomousDataWarehouseResponse> ForAutonomousDataWarehouse(GetAutonomousDataWarehouseRequest request, params AutonomousDataWarehouse.LifecycleStateEnum[] targetStates)
-        {
-            return this.ForAutonomousDataWarehouse(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
-        }
-
-        /// <summary>
-        /// Creates a waiter using the provided configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="config">Wait Configuration</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAutonomousDataWarehouseRequest, GetAutonomousDataWarehouseResponse> ForAutonomousDataWarehouse(GetAutonomousDataWarehouseRequest request, WaiterConfiguration config, params AutonomousDataWarehouse.LifecycleStateEnum[] targetStates)
-        {
-            var agent = new WaiterAgent<GetAutonomousDataWarehouseRequest, GetAutonomousDataWarehouseResponse>(
-                request,
-                request => client.GetAutonomousDataWarehouse(request),
-                response => targetStates.Contains(response.AutonomousDataWarehouse.LifecycleState.Value),
-                targetStates.Contains(AutonomousDataWarehouse.LifecycleStateEnum.Terminated)
-            );
-            return new Waiter<GetAutonomousDataWarehouseRequest, GetAutonomousDataWarehouseResponse>(config, agent);
-        }
-        /// <summary>
-        /// Creates a waiter using default wait configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAutonomousDataWarehouseBackupRequest, GetAutonomousDataWarehouseBackupResponse> ForAutonomousDataWarehouseBackup(GetAutonomousDataWarehouseBackupRequest request, params AutonomousDataWarehouseBackup.LifecycleStateEnum[] targetStates)
-        {
-            return this.ForAutonomousDataWarehouseBackup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
-        }
-
-        /// <summary>
-        /// Creates a waiter using the provided configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="config">Wait Configuration</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAutonomousDataWarehouseBackupRequest, GetAutonomousDataWarehouseBackupResponse> ForAutonomousDataWarehouseBackup(GetAutonomousDataWarehouseBackupRequest request, WaiterConfiguration config, params AutonomousDataWarehouseBackup.LifecycleStateEnum[] targetStates)
-        {
-            var agent = new WaiterAgent<GetAutonomousDataWarehouseBackupRequest, GetAutonomousDataWarehouseBackupResponse>(
-                request,
-                request => client.GetAutonomousDataWarehouseBackup(request),
-                response => targetStates.Contains(response.AutonomousDataWarehouseBackup.LifecycleState.Value),
-                targetStates.Contains(AutonomousDataWarehouseBackup.LifecycleStateEnum.Deleted)
-            );
-            return new Waiter<GetAutonomousDataWarehouseBackupRequest, GetAutonomousDataWarehouseBackupResponse>(config, agent);
-        }
-        /// <summary>
-        /// Creates a waiter using default wait configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetAutonomousDatabaseRequest, GetAutonomousDatabaseResponse> ForAutonomousDatabase(GetAutonomousDatabaseRequest request, params AutonomousDatabase.LifecycleStateEnum[] targetStates)
         {
             return this.ForAutonomousDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2474,6 +2418,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MigrateVaultKeyRequest, MigrateVaultKeyResponse> ForMigrateVaultKey(MigrateVaultKeyRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForMigrateVaultKey(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MigrateVaultKeyRequest, MigrateVaultKeyResponse> ForMigrateVaultKey(MigrateVaultKeyRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<MigrateVaultKeyRequest, MigrateVaultKeyResponse>(() =>
+            {
+                var response = client.MigrateVaultKey(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<RegisterAutonomousDatabaseDataSafeRequest, RegisterAutonomousDatabaseDataSafeResponse> ForRegisterAutonomousDatabaseDataSafe(RegisterAutonomousDatabaseDataSafeRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForRegisterAutonomousDatabaseDataSafe(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2811,6 +2787,38 @@ namespace Oci.DatabaseService
             return new Waiter<RotateSslCertsRequest, RotateSslCertsResponse>(() =>
             {
                 var response = client.RotateSslCerts(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateVaultKeyRequest, RotateVaultKeyResponse> ForRotateVaultKey(RotateVaultKeyRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRotateVaultKey(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateVaultKeyRequest, RotateVaultKeyResponse> ForRotateVaultKey(RotateVaultKeyRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RotateVaultKeyRequest, RotateVaultKeyResponse>(() =>
+            {
+                var response = client.RotateVaultKey(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

@@ -14,7 +14,7 @@ using Oci.FunctionsService.Models;
 namespace Oci.FunctionsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/CreateFunction.cs.html">here</a> to see an example of how to use CreateFunction request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/functions/CreateFunction.cs.html">here</a> to see an example of how to use CreateFunction request.
     /// </example>
     public class CreateFunctionRequest : Oci.Common.IOciRequest
     {

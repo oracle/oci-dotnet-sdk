@@ -14,7 +14,7 @@ using Oci.SecretsService.Models;
 namespace Oci.SecretsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/secrets/ListSecretBundleVersions.cs.html">here</a> to see an example of how to use ListSecretBundleVersions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/secrets/ListSecretBundleVersions.cs.html">here</a> to see an example of how to use ListSecretBundleVersions request.
     /// </example>
     public class ListSecretBundleVersionsRequest : Oci.Common.IOciRequest
     {

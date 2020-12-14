@@ -14,7 +14,7 @@ using Oci.EventsService.Models;
 namespace Oci.EventsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/events/GetRule.cs.html">here</a> to see an example of how to use GetRule request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/events/GetRule.cs.html">here</a> to see an example of how to use GetRule request.
     /// </example>
     public class GetRuleRequest : Oci.Common.IOciRequest
     {

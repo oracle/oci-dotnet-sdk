@@ -14,7 +14,7 @@ using Oci.ManagementdashboardService.Models;
 namespace Oci.ManagementdashboardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/UpdateManagementDashboard.cs.html">here</a> to see an example of how to use UpdateManagementDashboard request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementdashboard/UpdateManagementDashboard.cs.html">here</a> to see an example of how to use UpdateManagementDashboard request.
     /// </example>
     public class UpdateManagementDashboardRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/EstimatePurgeDataSize.cs.html">here</a> to see an example of how to use EstimatePurgeDataSize request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/EstimatePurgeDataSize.cs.html">here</a> to see an example of how to use EstimatePurgeDataSize request.
     /// </example>
     public class EstimatePurgeDataSizeRequest : Oci.Common.IOciRequest
     {

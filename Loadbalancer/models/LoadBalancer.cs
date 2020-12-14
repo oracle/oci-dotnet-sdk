@@ -126,6 +126,9 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
         
+        [JsonProperty(PropertyName = "shapeDetails")]
+        public ShapeDetails ShapeDetails { get; set; }
+        
         /// <value>
         /// Whether the load balancer has a VCN-local (private) IP address.
         /// <br/>

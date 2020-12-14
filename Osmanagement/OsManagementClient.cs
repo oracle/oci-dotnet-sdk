@@ -73,7 +73,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/AddPackagesToSoftwareSource.cs.html">here</a> to see an example of how to use AddPackagesToSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/AddPackagesToSoftwareSource.cs.html">here</a> to see an example of how to use AddPackagesToSoftwareSource API.</example>
         public async Task<AddPackagesToSoftwareSourceResponse> AddPackagesToSoftwareSource(AddPackagesToSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called addPackagesToSoftwareSource");
@@ -115,7 +115,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/AttachChildSoftwareSourceToManagedInstance.cs.html">here</a> to see an example of how to use AttachChildSoftwareSourceToManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/AttachChildSoftwareSourceToManagedInstance.cs.html">here</a> to see an example of how to use AttachChildSoftwareSourceToManagedInstance API.</example>
         public async Task<AttachChildSoftwareSourceToManagedInstanceResponse> AttachChildSoftwareSourceToManagedInstance(AttachChildSoftwareSourceToManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called attachChildSoftwareSourceToManagedInstance");
@@ -158,7 +158,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/AttachManagedInstanceToManagedInstanceGroup.cs.html">here</a> to see an example of how to use AttachManagedInstanceToManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/AttachManagedInstanceToManagedInstanceGroup.cs.html">here</a> to see an example of how to use AttachManagedInstanceToManagedInstanceGroup API.</example>
         public async Task<AttachManagedInstanceToManagedInstanceGroupResponse> AttachManagedInstanceToManagedInstanceGroup(AttachManagedInstanceToManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called attachManagedInstanceToManagedInstanceGroup");
@@ -201,7 +201,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/AttachParentSoftwareSourceToManagedInstance.cs.html">here</a> to see an example of how to use AttachParentSoftwareSourceToManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/AttachParentSoftwareSourceToManagedInstance.cs.html">here</a> to see an example of how to use AttachParentSoftwareSourceToManagedInstance API.</example>
         public async Task<AttachParentSoftwareSourceToManagedInstanceResponse> AttachParentSoftwareSourceToManagedInstance(AttachParentSoftwareSourceToManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called attachParentSoftwareSourceToManagedInstance");
@@ -242,7 +242,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ChangeManagedInstanceGroupCompartment.cs.html">here</a> to see an example of how to use ChangeManagedInstanceGroupCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ChangeManagedInstanceGroupCompartment.cs.html">here</a> to see an example of how to use ChangeManagedInstanceGroupCompartment API.</example>
         public async Task<ChangeManagedInstanceGroupCompartmentResponse> ChangeManagedInstanceGroupCompartment(ChangeManagedInstanceGroupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeManagedInstanceGroupCompartment");
@@ -283,7 +283,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ChangeScheduledJobCompartment.cs.html">here</a> to see an example of how to use ChangeScheduledJobCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ChangeScheduledJobCompartment.cs.html">here</a> to see an example of how to use ChangeScheduledJobCompartment API.</example>
         public async Task<ChangeScheduledJobCompartmentResponse> ChangeScheduledJobCompartment(ChangeScheduledJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeScheduledJobCompartment");
@@ -324,7 +324,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ChangeSoftwareSourceCompartment.cs.html">here</a> to see an example of how to use ChangeSoftwareSourceCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ChangeSoftwareSourceCompartment.cs.html">here</a> to see an example of how to use ChangeSoftwareSourceCompartment API.</example>
         public async Task<ChangeSoftwareSourceCompartmentResponse> ChangeSoftwareSourceCompartment(ChangeSoftwareSourceCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeSoftwareSourceCompartment");
@@ -366,7 +366,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/CreateManagedInstanceGroup.cs.html">here</a> to see an example of how to use CreateManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/CreateManagedInstanceGroup.cs.html">here</a> to see an example of how to use CreateManagedInstanceGroup API.</example>
         public async Task<CreateManagedInstanceGroupResponse> CreateManagedInstanceGroup(CreateManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createManagedInstanceGroup");
@@ -409,7 +409,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/CreateScheduledJob.cs.html">here</a> to see an example of how to use CreateScheduledJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/CreateScheduledJob.cs.html">here</a> to see an example of how to use CreateScheduledJob API.</example>
         public async Task<CreateScheduledJobResponse> CreateScheduledJob(CreateScheduledJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createScheduledJob");
@@ -451,7 +451,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/CreateSoftwareSource.cs.html">here</a> to see an example of how to use CreateSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/CreateSoftwareSource.cs.html">here</a> to see an example of how to use CreateSoftwareSource API.</example>
         public async Task<CreateSoftwareSourceResponse> CreateSoftwareSource(CreateSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSoftwareSource");
@@ -491,7 +491,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DeleteManagedInstanceGroup.cs.html">here</a> to see an example of how to use DeleteManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DeleteManagedInstanceGroup.cs.html">here</a> to see an example of how to use DeleteManagedInstanceGroup API.</example>
         public async Task<DeleteManagedInstanceGroupResponse> DeleteManagedInstanceGroup(DeleteManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteManagedInstanceGroup");
@@ -531,7 +531,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DeleteScheduledJob.cs.html">here</a> to see an example of how to use DeleteScheduledJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DeleteScheduledJob.cs.html">here</a> to see an example of how to use DeleteScheduledJob API.</example>
         public async Task<DeleteScheduledJobResponse> DeleteScheduledJob(DeleteScheduledJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteScheduledJob");
@@ -571,7 +571,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DeleteSoftwareSource.cs.html">here</a> to see an example of how to use DeleteSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DeleteSoftwareSource.cs.html">here</a> to see an example of how to use DeleteSoftwareSource API.</example>
         public async Task<DeleteSoftwareSourceResponse> DeleteSoftwareSource(DeleteSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteSoftwareSource");
@@ -612,7 +612,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DetachChildSoftwareSourceFromManagedInstance.cs.html">here</a> to see an example of how to use DetachChildSoftwareSourceFromManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DetachChildSoftwareSourceFromManagedInstance.cs.html">here</a> to see an example of how to use DetachChildSoftwareSourceFromManagedInstance API.</example>
         public async Task<DetachChildSoftwareSourceFromManagedInstanceResponse> DetachChildSoftwareSourceFromManagedInstance(DetachChildSoftwareSourceFromManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called detachChildSoftwareSourceFromManagedInstance");
@@ -652,7 +652,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DetachManagedInstanceFromManagedInstanceGroup.cs.html">here</a> to see an example of how to use DetachManagedInstanceFromManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DetachManagedInstanceFromManagedInstanceGroup.cs.html">here</a> to see an example of how to use DetachManagedInstanceFromManagedInstanceGroup API.</example>
         public async Task<DetachManagedInstanceFromManagedInstanceGroupResponse> DetachManagedInstanceFromManagedInstanceGroup(DetachManagedInstanceFromManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called detachManagedInstanceFromManagedInstanceGroup");
@@ -693,7 +693,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/DetachParentSoftwareSourceFromManagedInstance.cs.html">here</a> to see an example of how to use DetachParentSoftwareSourceFromManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DetachParentSoftwareSourceFromManagedInstance.cs.html">here</a> to see an example of how to use DetachParentSoftwareSourceFromManagedInstance API.</example>
         public async Task<DetachParentSoftwareSourceFromManagedInstanceResponse> DetachParentSoftwareSourceFromManagedInstance(DetachParentSoftwareSourceFromManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called detachParentSoftwareSourceFromManagedInstance");
@@ -733,7 +733,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetErratum.cs.html">here</a> to see an example of how to use GetErratum API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetErratum.cs.html">here</a> to see an example of how to use GetErratum API.</example>
         public async Task<GetErratumResponse> GetErratum(GetErratumRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getErratum");
@@ -773,7 +773,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetManagedInstance.cs.html">here</a> to see an example of how to use GetManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetManagedInstance.cs.html">here</a> to see an example of how to use GetManagedInstance API.</example>
         public async Task<GetManagedInstanceResponse> GetManagedInstance(GetManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getManagedInstance");
@@ -813,7 +813,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetManagedInstanceGroup.cs.html">here</a> to see an example of how to use GetManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetManagedInstanceGroup.cs.html">here</a> to see an example of how to use GetManagedInstanceGroup API.</example>
         public async Task<GetManagedInstanceGroupResponse> GetManagedInstanceGroup(GetManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getManagedInstanceGroup");
@@ -853,7 +853,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetScheduledJob.cs.html">here</a> to see an example of how to use GetScheduledJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetScheduledJob.cs.html">here</a> to see an example of how to use GetScheduledJob API.</example>
         public async Task<GetScheduledJobResponse> GetScheduledJob(GetScheduledJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getScheduledJob");
@@ -893,7 +893,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetSoftwarePackage.cs.html">here</a> to see an example of how to use GetSoftwarePackage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetSoftwarePackage.cs.html">here</a> to see an example of how to use GetSoftwarePackage API.</example>
         public async Task<GetSoftwarePackageResponse> GetSoftwarePackage(GetSoftwarePackageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSoftwarePackage");
@@ -933,7 +933,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetSoftwareSource.cs.html">here</a> to see an example of how to use GetSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetSoftwareSource.cs.html">here</a> to see an example of how to use GetSoftwareSource API.</example>
         public async Task<GetSoftwareSourceResponse> GetSoftwareSource(GetSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSoftwareSource");
@@ -973,7 +973,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetWindowsUpdate.cs.html">here</a> to see an example of how to use GetWindowsUpdate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetWindowsUpdate.cs.html">here</a> to see an example of how to use GetWindowsUpdate API.</example>
         public async Task<GetWindowsUpdateResponse> GetWindowsUpdate(GetWindowsUpdateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWindowsUpdate");
@@ -1012,7 +1012,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -1052,7 +1052,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/InstallAllPackageUpdatesOnManagedInstance.cs.html">here</a> to see an example of how to use InstallAllPackageUpdatesOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallAllPackageUpdatesOnManagedInstance.cs.html">here</a> to see an example of how to use InstallAllPackageUpdatesOnManagedInstance API.</example>
         public async Task<InstallAllPackageUpdatesOnManagedInstanceResponse> InstallAllPackageUpdatesOnManagedInstance(InstallAllPackageUpdatesOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called installAllPackageUpdatesOnManagedInstance");
@@ -1092,7 +1092,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/InstallAllWindowsUpdatesOnManagedInstance.cs.html">here</a> to see an example of how to use InstallAllWindowsUpdatesOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallAllWindowsUpdatesOnManagedInstance.cs.html">here</a> to see an example of how to use InstallAllWindowsUpdatesOnManagedInstance API.</example>
         public async Task<InstallAllWindowsUpdatesOnManagedInstanceResponse> InstallAllWindowsUpdatesOnManagedInstance(InstallAllWindowsUpdatesOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called installAllWindowsUpdatesOnManagedInstance");
@@ -1132,7 +1132,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/InstallPackageOnManagedInstance.cs.html">here</a> to see an example of how to use InstallPackageOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallPackageOnManagedInstance.cs.html">here</a> to see an example of how to use InstallPackageOnManagedInstance API.</example>
         public async Task<InstallPackageOnManagedInstanceResponse> InstallPackageOnManagedInstance(InstallPackageOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called installPackageOnManagedInstance");
@@ -1172,7 +1172,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/InstallPackageUpdateOnManagedInstance.cs.html">here</a> to see an example of how to use InstallPackageUpdateOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallPackageUpdateOnManagedInstance.cs.html">here</a> to see an example of how to use InstallPackageUpdateOnManagedInstance API.</example>
         public async Task<InstallPackageUpdateOnManagedInstanceResponse> InstallPackageUpdateOnManagedInstance(InstallPackageUpdateOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called installPackageUpdateOnManagedInstance");
@@ -1212,7 +1212,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/InstallWindowsUpdateOnManagedInstance.cs.html">here</a> to see an example of how to use InstallWindowsUpdateOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallWindowsUpdateOnManagedInstance.cs.html">here</a> to see an example of how to use InstallWindowsUpdateOnManagedInstance API.</example>
         public async Task<InstallWindowsUpdateOnManagedInstanceResponse> InstallWindowsUpdateOnManagedInstance(InstallWindowsUpdateOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called installWindowsUpdateOnManagedInstance");
@@ -1252,7 +1252,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListAvailablePackagesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailablePackagesForManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListAvailablePackagesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailablePackagesForManagedInstance API.</example>
         public async Task<ListAvailablePackagesForManagedInstanceResponse> ListAvailablePackagesForManagedInstance(ListAvailablePackagesForManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAvailablePackagesForManagedInstance");
@@ -1292,7 +1292,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListAvailableSoftwareSourcesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableSoftwareSourcesForManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListAvailableSoftwareSourcesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableSoftwareSourcesForManagedInstance API.</example>
         public async Task<ListAvailableSoftwareSourcesForManagedInstanceResponse> ListAvailableSoftwareSourcesForManagedInstance(ListAvailableSoftwareSourcesForManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAvailableSoftwareSourcesForManagedInstance");
@@ -1332,7 +1332,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListAvailableUpdatesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableUpdatesForManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListAvailableUpdatesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableUpdatesForManagedInstance API.</example>
         public async Task<ListAvailableUpdatesForManagedInstanceResponse> ListAvailableUpdatesForManagedInstance(ListAvailableUpdatesForManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAvailableUpdatesForManagedInstance");
@@ -1372,7 +1372,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListAvailableWindowsUpdatesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableWindowsUpdatesForManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListAvailableWindowsUpdatesForManagedInstance.cs.html">here</a> to see an example of how to use ListAvailableWindowsUpdatesForManagedInstance API.</example>
         public async Task<ListAvailableWindowsUpdatesForManagedInstanceResponse> ListAvailableWindowsUpdatesForManagedInstance(ListAvailableWindowsUpdatesForManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAvailableWindowsUpdatesForManagedInstance");
@@ -1412,7 +1412,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListManagedInstanceGroups.cs.html">here</a> to see an example of how to use ListManagedInstanceGroups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListManagedInstanceGroups.cs.html">here</a> to see an example of how to use ListManagedInstanceGroups API.</example>
         public async Task<ListManagedInstanceGroupsResponse> ListManagedInstanceGroups(ListManagedInstanceGroupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagedInstanceGroups");
@@ -1452,7 +1452,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListManagedInstances.cs.html">here</a> to see an example of how to use ListManagedInstances API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListManagedInstances.cs.html">here</a> to see an example of how to use ListManagedInstances API.</example>
         public async Task<ListManagedInstancesResponse> ListManagedInstances(ListManagedInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagedInstances");
@@ -1492,7 +1492,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListPackagesInstalledOnManagedInstance.cs.html">here</a> to see an example of how to use ListPackagesInstalledOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListPackagesInstalledOnManagedInstance.cs.html">here</a> to see an example of how to use ListPackagesInstalledOnManagedInstance API.</example>
         public async Task<ListPackagesInstalledOnManagedInstanceResponse> ListPackagesInstalledOnManagedInstance(ListPackagesInstalledOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPackagesInstalledOnManagedInstance");
@@ -1532,7 +1532,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListScheduledJobs.cs.html">here</a> to see an example of how to use ListScheduledJobs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListScheduledJobs.cs.html">here</a> to see an example of how to use ListScheduledJobs API.</example>
         public async Task<ListScheduledJobsResponse> ListScheduledJobs(ListScheduledJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listScheduledJobs");
@@ -1572,7 +1572,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListSoftwareSourcePackages.cs.html">here</a> to see an example of how to use ListSoftwareSourcePackages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListSoftwareSourcePackages.cs.html">here</a> to see an example of how to use ListSoftwareSourcePackages API.</example>
         public async Task<ListSoftwareSourcePackagesResponse> ListSoftwareSourcePackages(ListSoftwareSourcePackagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSoftwareSourcePackages");
@@ -1612,7 +1612,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListSoftwareSources.cs.html">here</a> to see an example of how to use ListSoftwareSources API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListSoftwareSources.cs.html">here</a> to see an example of how to use ListSoftwareSources API.</example>
         public async Task<ListSoftwareSourcesResponse> ListSoftwareSources(ListSoftwareSourcesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSoftwareSources");
@@ -1652,7 +1652,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListUpcomingScheduledJobs.cs.html">here</a> to see an example of how to use ListUpcomingScheduledJobs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListUpcomingScheduledJobs.cs.html">here</a> to see an example of how to use ListUpcomingScheduledJobs API.</example>
         public async Task<ListUpcomingScheduledJobsResponse> ListUpcomingScheduledJobs(ListUpcomingScheduledJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listUpcomingScheduledJobs");
@@ -1692,7 +1692,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListWindowsUpdates.cs.html">here</a> to see an example of how to use ListWindowsUpdates API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListWindowsUpdates.cs.html">here</a> to see an example of how to use ListWindowsUpdates API.</example>
         public async Task<ListWindowsUpdatesResponse> ListWindowsUpdates(ListWindowsUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWindowsUpdates");
@@ -1732,7 +1732,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListWindowsUpdatesInstalledOnManagedInstance.cs.html">here</a> to see an example of how to use ListWindowsUpdatesInstalledOnManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListWindowsUpdatesInstalledOnManagedInstance.cs.html">here</a> to see an example of how to use ListWindowsUpdatesInstalledOnManagedInstance API.</example>
         public async Task<ListWindowsUpdatesInstalledOnManagedInstanceResponse> ListWindowsUpdatesInstalledOnManagedInstance(ListWindowsUpdatesInstalledOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWindowsUpdatesInstalledOnManagedInstance");
@@ -1771,7 +1771,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -1810,7 +1810,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -1850,7 +1850,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -1890,7 +1890,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/RemovePackageFromManagedInstance.cs.html">here</a> to see an example of how to use RemovePackageFromManagedInstance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/RemovePackageFromManagedInstance.cs.html">here</a> to see an example of how to use RemovePackageFromManagedInstance API.</example>
         public async Task<RemovePackageFromManagedInstanceResponse> RemovePackageFromManagedInstance(RemovePackageFromManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called removePackageFromManagedInstance");
@@ -1930,7 +1930,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/RemovePackagesFromSoftwareSource.cs.html">here</a> to see an example of how to use RemovePackagesFromSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/RemovePackagesFromSoftwareSource.cs.html">here</a> to see an example of how to use RemovePackagesFromSoftwareSource API.</example>
         public async Task<RemovePackagesFromSoftwareSourceResponse> RemovePackagesFromSoftwareSource(RemovePackagesFromSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called removePackagesFromSoftwareSource");
@@ -1971,7 +1971,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/RunScheduledJobNow.cs.html">here</a> to see an example of how to use RunScheduledJobNow API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/RunScheduledJobNow.cs.html">here</a> to see an example of how to use RunScheduledJobNow API.</example>
         public async Task<RunScheduledJobNowResponse> RunScheduledJobNow(RunScheduledJobNowRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called runScheduledJobNow");
@@ -2012,7 +2012,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/SearchSoftwarePackages.cs.html">here</a> to see an example of how to use SearchSoftwarePackages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/SearchSoftwarePackages.cs.html">here</a> to see an example of how to use SearchSoftwarePackages API.</example>
         public async Task<SearchSoftwarePackagesResponse> SearchSoftwarePackages(SearchSoftwarePackagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called searchSoftwarePackages");
@@ -2053,7 +2053,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/SkipNextScheduledJobExecution.cs.html">here</a> to see an example of how to use SkipNextScheduledJobExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/SkipNextScheduledJobExecution.cs.html">here</a> to see an example of how to use SkipNextScheduledJobExecution API.</example>
         public async Task<SkipNextScheduledJobExecutionResponse> SkipNextScheduledJobExecution(SkipNextScheduledJobExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called skipNextScheduledJobExecution");
@@ -2093,7 +2093,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/UpdateManagedInstanceGroup.cs.html">here</a> to see an example of how to use UpdateManagedInstanceGroup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/UpdateManagedInstanceGroup.cs.html">here</a> to see an example of how to use UpdateManagedInstanceGroup API.</example>
         public async Task<UpdateManagedInstanceGroupResponse> UpdateManagedInstanceGroup(UpdateManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateManagedInstanceGroup");
@@ -2133,7 +2133,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/UpdateScheduledJob.cs.html">here</a> to see an example of how to use UpdateScheduledJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/UpdateScheduledJob.cs.html">here</a> to see an example of how to use UpdateScheduledJob API.</example>
         public async Task<UpdateScheduledJobResponse> UpdateScheduledJob(UpdateScheduledJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateScheduledJob");
@@ -2173,7 +2173,7 @@ namespace Oci.OsmanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/UpdateSoftwareSource.cs.html">here</a> to see an example of how to use UpdateSoftwareSource API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/UpdateSoftwareSource.cs.html">here</a> to see an example of how to use UpdateSoftwareSource API.</example>
         public async Task<UpdateSoftwareSourceResponse> UpdateSoftwareSource(UpdateSoftwareSourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateSoftwareSource");

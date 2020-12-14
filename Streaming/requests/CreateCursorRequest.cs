@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/CreateCursor.cs.html">here</a> to see an example of how to use CreateCursor request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/CreateCursor.cs.html">here</a> to see an example of how to use CreateCursor request.
     /// </example>
     public class CreateCursorRequest : Oci.Common.IOciRequest
     {

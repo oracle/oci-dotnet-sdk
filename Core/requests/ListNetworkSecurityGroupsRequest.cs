@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListNetworkSecurityGroups.cs.html">here</a> to see an example of how to use ListNetworkSecurityGroups request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListNetworkSecurityGroups.cs.html">here</a> to see an example of how to use ListNetworkSecurityGroups request.
     /// </example>
     public class ListNetworkSecurityGroupsRequest : Oci.Common.IOciRequest
     {

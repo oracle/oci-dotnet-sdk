@@ -14,7 +14,7 @@ using Oci.VaultService.Models;
 namespace Oci.VaultService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/vault/CreateSecret.cs.html">here</a> to see an example of how to use CreateSecret request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/vault/CreateSecret.cs.html">here</a> to see an example of how to use CreateSecret request.
     /// </example>
     public class CreateSecretRequest : Oci.Common.IOciRequest
     {

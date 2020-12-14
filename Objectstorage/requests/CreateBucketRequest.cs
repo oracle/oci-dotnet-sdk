@@ -14,7 +14,7 @@ using Oci.ObjectstorageService.Models;
 namespace Oci.ObjectstorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CreateBucket.cs.html">here</a> to see an example of how to use CreateBucket request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/objectstorage/CreateBucket.cs.html">here</a> to see an example of how to use CreateBucket request.
     /// </example>
     public class CreateBucketRequest : Oci.Common.IOciRequest
     {

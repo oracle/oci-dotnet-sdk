@@ -14,7 +14,7 @@ using Oci.OptimizerService.Models;
 namespace Oci.OptimizerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/UpdateRecommendation.cs.html">here</a> to see an example of how to use UpdateRecommendation request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/UpdateRecommendation.cs.html">here</a> to see an example of how to use UpdateRecommendation request.
     /// </example>
     public class UpdateRecommendationRequest : Oci.Common.IOciRequest
     {

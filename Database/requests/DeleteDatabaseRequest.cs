@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/DeleteDatabase.cs.html">here</a> to see an example of how to use DeleteDatabase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeleteDatabase.cs.html">here</a> to see an example of how to use DeleteDatabase request.
     /// </example>
     public class DeleteDatabaseRequest : Oci.Common.IOciRequest
     {

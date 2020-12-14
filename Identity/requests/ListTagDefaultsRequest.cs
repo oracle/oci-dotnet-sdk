@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/ListTagDefaults.cs.html">here</a> to see an example of how to use ListTagDefaults request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListTagDefaults.cs.html">here</a> to see an example of how to use ListTagDefaults request.
     /// </example>
     public class ListTagDefaultsRequest : Oci.Common.IOciRequest
     {

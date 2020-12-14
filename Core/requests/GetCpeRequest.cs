@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetCpe.cs.html">here</a> to see an example of how to use GetCpe request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetCpe.cs.html">here</a> to see an example of how to use GetCpe request.
     /// </example>
     public class GetCpeRequest : Oci.Common.IOciRequest
     {

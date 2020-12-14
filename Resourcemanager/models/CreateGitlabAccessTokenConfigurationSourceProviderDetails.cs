@@ -24,8 +24,8 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// The Git service API endpoint.
-        /// Example: https://gitlab.com/api/v4/
+        /// The Git service endpoint.
+        /// Example: https://gitlab.com
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +35,7 @@ namespace Oci.ResourcemanagerService.Models
         public string ApiEndpoint { get; set; }
         
         /// <value>
-        /// The personal access token to be configured on the Git repository. Avoid entering confidential information.
+        /// The personal access token to be configured on the GitLab repository. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

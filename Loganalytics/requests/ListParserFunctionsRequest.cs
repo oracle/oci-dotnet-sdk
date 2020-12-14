@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/ListParserFunctions.cs.html">here</a> to see an example of how to use ListParserFunctions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListParserFunctions.cs.html">here</a> to see an example of how to use ListParserFunctions request.
     /// </example>
     public class ListParserFunctionsRequest : Oci.Common.IOciRequest
     {

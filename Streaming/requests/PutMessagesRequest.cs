@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/PutMessages.cs.html">here</a> to see an example of how to use PutMessages request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/PutMessages.cs.html">here</a> to see an example of how to use PutMessages request.
     /// </example>
     public class PutMessagesRequest : Oci.Common.IOciRequest
     {

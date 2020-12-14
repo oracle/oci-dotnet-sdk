@@ -67,7 +67,7 @@ namespace Oci.UsageapiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/usageapi/RequestSummarizedConfigurations.cs.html">here</a> to see an example of how to use RequestSummarizedConfigurations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/usageapi/RequestSummarizedConfigurations.cs.html">here</a> to see an example of how to use RequestSummarizedConfigurations API.</example>
         public async Task<RequestSummarizedConfigurationsResponse> RequestSummarizedConfigurations(RequestSummarizedConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedConfigurations");
@@ -107,7 +107,7 @@ namespace Oci.UsageapiService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/usageapi/RequestSummarizedUsages.cs.html">here</a> to see an example of how to use RequestSummarizedUsages API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/usageapi/RequestSummarizedUsages.cs.html">here</a> to see an example of how to use RequestSummarizedUsages API.</example>
         public async Task<RequestSummarizedUsagesResponse> RequestSummarizedUsages(RequestSummarizedUsagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedUsages");

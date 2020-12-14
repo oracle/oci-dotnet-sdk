@@ -14,7 +14,7 @@ using Oci.EmailService.Models;
 namespace Oci.EmailService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/DeleteSender.cs.html">here</a> to see an example of how to use DeleteSender request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/DeleteSender.cs.html">here</a> to see an example of how to use DeleteSender request.
     /// </example>
     public class DeleteSenderRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datascience/ChangeModelCompartment.cs.html">here</a> to see an example of how to use ChangeModelCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ChangeModelCompartment.cs.html">here</a> to see an example of how to use ChangeModelCompartment request.
     /// </example>
     public class ChangeModelCompartmentRequest : Oci.Common.IOciRequest
     {

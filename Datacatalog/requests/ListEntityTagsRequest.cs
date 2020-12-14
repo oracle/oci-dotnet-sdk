@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListEntityTags.cs.html">here</a> to see an example of how to use ListEntityTags request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/ListEntityTags.cs.html">here</a> to see an example of how to use ListEntityTags request.
     /// </example>
     public class ListEntityTagsRequest : Oci.Common.IOciRequest
     {

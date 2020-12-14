@@ -14,7 +14,7 @@ using Oci.MonitoringService.Models;
 namespace Oci.MonitoringService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/RemoveAlarmSuppression.cs.html">here</a> to see an example of how to use RemoveAlarmSuppression request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/RemoveAlarmSuppression.cs.html">here</a> to see an example of how to use RemoveAlarmSuppression request.
     /// </example>
     public class RemoveAlarmSuppressionRequest : Oci.Common.IOciRequest
     {

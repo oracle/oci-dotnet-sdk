@@ -14,7 +14,7 @@ using Oci.BlockchainService.Models;
 namespace Oci.BlockchainService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/UpdatePeer.cs.html">here</a> to see an example of how to use UpdatePeer request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/UpdatePeer.cs.html">here</a> to see an example of how to use UpdatePeer request.
     /// </example>
     public class UpdatePeerRequest : Oci.Common.IOciRequest
     {

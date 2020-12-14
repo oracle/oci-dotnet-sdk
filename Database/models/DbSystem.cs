@@ -165,6 +165,12 @@ namespace Oci.DatabaseService.Models
         public string Domain { get; set; }
         
         /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
         /// The Oracle Database version of the DB system.
         /// </value>
         [JsonProperty(PropertyName = "version")]
@@ -278,7 +284,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Additional information about the current lifecycleState.
+        /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }

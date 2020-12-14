@@ -14,7 +14,7 @@ using Oci.IntegrationService.Models;
 namespace Oci.IntegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/integration/UpdateIntegrationInstance.cs.html">here</a> to see an example of how to use UpdateIntegrationInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/integration/UpdateIntegrationInstance.cs.html">here</a> to see an example of how to use UpdateIntegrationInstance request.
     /// </example>
     public class UpdateIntegrationInstanceRequest : Oci.Common.IOciRequest
     {

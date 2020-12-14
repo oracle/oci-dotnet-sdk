@@ -24,8 +24,8 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// The Git service API endpoint.
-        /// Example: https://gitlab.com/api/v4/
+        /// The Git service endpoint.
+        /// Example: https://gitlab.com
         /// </value>
         [JsonProperty(PropertyName = "apiEndpoint")]
         public string ApiEndpoint { get; set; }

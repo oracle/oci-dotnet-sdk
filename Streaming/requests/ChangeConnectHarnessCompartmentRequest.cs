@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ChangeConnectHarnessCompartment.cs.html">here</a> to see an example of how to use ChangeConnectHarnessCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/ChangeConnectHarnessCompartment.cs.html">here</a> to see an example of how to use ChangeConnectHarnessCompartment request.
     /// </example>
     public class ChangeConnectHarnessCompartmentRequest : Oci.Common.IOciRequest
     {

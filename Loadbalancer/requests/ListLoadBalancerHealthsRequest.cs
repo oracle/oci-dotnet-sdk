@@ -14,7 +14,7 @@ using Oci.LoadbalancerService.Models;
 namespace Oci.LoadbalancerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loadbalancer/ListLoadBalancerHealths.cs.html">here</a> to see an example of how to use ListLoadBalancerHealths request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/ListLoadBalancerHealths.cs.html">here</a> to see an example of how to use ListLoadBalancerHealths request.
     /// </example>
     public class ListLoadBalancerHealthsRequest : Oci.Common.IOciRequest
     {

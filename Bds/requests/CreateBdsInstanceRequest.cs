@@ -14,7 +14,7 @@ using Oci.BdsService.Models;
 namespace Oci.BdsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/bds/CreateBdsInstance.cs.html">here</a> to see an example of how to use CreateBdsInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/bds/CreateBdsInstance.cs.html">here</a> to see an example of how to use CreateBdsInstance request.
     /// </example>
     public class CreateBdsInstanceRequest : Oci.Common.IOciRequest
     {

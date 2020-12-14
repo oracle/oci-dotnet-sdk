@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ChangeKeyCompartment.cs.html">here</a> to see an example of how to use ChangeKeyCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ChangeKeyCompartment.cs.html">here</a> to see an example of how to use ChangeKeyCompartment request.
     /// </example>
     public class ChangeKeyCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.DataflowService.Models;
 namespace Oci.DataflowService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListPrivateEndpoints.cs.html">here</a> to see an example of how to use ListPrivateEndpoints request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListPrivateEndpoints.cs.html">here</a> to see an example of how to use ListPrivateEndpoints request.
     /// </example>
     public class ListPrivateEndpointsRequest : Oci.Common.IOciRequest
     {

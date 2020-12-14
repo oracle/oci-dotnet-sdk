@@ -14,7 +14,7 @@ using Oci.ApigatewayService.Models;
 namespace Oci.ApigatewayService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/UpdateCertificate.cs.html">here</a> to see an example of how to use UpdateCertificate request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apigateway/UpdateCertificate.cs.html">here</a> to see an example of how to use UpdateCertificate request.
     /// </example>
     public class UpdateCertificateRequest : Oci.Common.IOciRequest
     {

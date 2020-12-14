@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetResponderRecipe.cs.html">here</a> to see an example of how to use GetResponderRecipe request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetResponderRecipe.cs.html">here</a> to see an example of how to use GetResponderRecipe request.
     /// </example>
     public class GetResponderRecipeRequest : Oci.Common.IOciRequest
     {

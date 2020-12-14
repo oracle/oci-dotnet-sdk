@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/AutonomousDatabaseManualRefresh.cs.html">here</a> to see an example of how to use AutonomousDatabaseManualRefresh request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/AutonomousDatabaseManualRefresh.cs.html">here</a> to see an example of how to use AutonomousDatabaseManualRefresh request.
     /// </example>
     public class AutonomousDatabaseManualRefreshRequest : Oci.Common.IOciRequest
     {

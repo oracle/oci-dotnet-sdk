@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetDhcpOptions.cs.html">here</a> to see an example of how to use GetDhcpOptions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetDhcpOptions.cs.html">here</a> to see an example of how to use GetDhcpOptions request.
     /// </example>
     public class GetDhcpOptionsRequest : Oci.Common.IOciRequest
     {

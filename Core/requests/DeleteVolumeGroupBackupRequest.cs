@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeGroupBackup.cs.html">here</a> to see an example of how to use DeleteVolumeGroupBackup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteVolumeGroupBackup.cs.html">here</a> to see an example of how to use DeleteVolumeGroupBackup request.
     /// </example>
     public class DeleteVolumeGroupBackupRequest : Oci.Common.IOciRequest
     {

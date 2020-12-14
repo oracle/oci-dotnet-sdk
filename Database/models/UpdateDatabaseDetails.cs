@@ -40,7 +40,7 @@ namespace Oci.DatabaseService.Models
         public string NewAdminPassword { get; set; }
         
         /// <value>
-        /// The existing password to open the TDE wallet. It is required to set a new tde password.
+        /// The existing TDE wallet password. You must provide the existing password in order to set a new TDE wallet password.
         /// </value>
         [JsonProperty(PropertyName = "oldTdeWalletPassword")]
         public string OldTdeWalletPassword { get; set; }

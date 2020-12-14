@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdatePublicIpPool.cs.html">here</a> to see an example of how to use UpdatePublicIpPool request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdatePublicIpPool.cs.html">here</a> to see an example of how to use UpdatePublicIpPool request.
     /// </example>
     public class UpdatePublicIpPoolRequest : Oci.Common.IOciRequest
     {

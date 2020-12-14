@@ -80,13 +80,17 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
-        /// The type of configuration source provider. The `GITLAB_ACCESS_TOKEN` type corresponds to Git.
+        /// The type of configuration source provider.
+        /// The `GITLAB_ACCESS_TOKEN` type corresponds to GitLab.
+        /// The `GITHUB_ACCESS_TOKEN` type corresponds to GitHub.
         /// 
         /// </value>
         ///
         public enum ConfigSourceProviderTypeEnum {
             [EnumMember(Value = "GITLAB_ACCESS_TOKEN")]
-            GitlabAccessToken
+            GitlabAccessToken,
+            [EnumMember(Value = "GITHUB_ACCESS_TOKEN")]
+            GithubAccessToken
         };
 
         
@@ -128,6 +132,9 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["configSourceProviderType"].Value<string>();
             switch (discriminator)
             {
+                case "GITHUB_ACCESS_TOKEN":
+                    obj = new GithubAccessTokenConfigurationSourceProvider();
+                    break;
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new GitlabAccessTokenConfigurationSourceProvider();
                     break;

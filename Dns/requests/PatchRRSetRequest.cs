@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/PatchRRSet.cs.html">here</a> to see an example of how to use PatchRRSet request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/PatchRRSet.cs.html">here</a> to see an example of how to use PatchRRSet request.
     /// </example>
     public class PatchRRSetRequest : Oci.Common.IOciRequest
     {

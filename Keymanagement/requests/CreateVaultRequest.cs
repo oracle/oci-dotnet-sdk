@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/CreateVault.cs.html">here</a> to see an example of how to use CreateVault request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/CreateVault.cs.html">here</a> to see an example of how to use CreateVault request.
     /// </example>
     public class CreateVaultRequest : Oci.Common.IOciRequest
     {

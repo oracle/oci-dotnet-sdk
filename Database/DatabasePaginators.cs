@@ -148,104 +148,6 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDataWarehouseBackups operation. This enumerable
-        /// will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<ListAutonomousDataWarehouseBackupsResponse> ListAutonomousDataWarehouseBackupsResponseEnumerator(ListAutonomousDataWarehouseBackupsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseEnumerable<ListAutonomousDataWarehouseBackupsRequest, ListAutonomousDataWarehouseBackupsResponse>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListAutonomousDataWarehouseBackups(request, retryConfiguration, cancellationToken)
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the AutonomousDataWarehouseBackupSummary objects
-        /// contained in responses from the ListAutonomousDataWarehouseBackups operation. This enumerable will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<AutonomousDataWarehouseBackupSummary> ListAutonomousDataWarehouseBackupsRecordEnumerator(ListAutonomousDataWarehouseBackupsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousDataWarehouseBackupsRequest, ListAutonomousDataWarehouseBackupsResponse, AutonomousDataWarehouseBackupSummary>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListAutonomousDataWarehouseBackups(request, retryConfiguration, cancellationToken),
-                response => response.Items
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDataWarehouses operation. This enumerable
-        /// will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<ListAutonomousDataWarehousesResponse> ListAutonomousDataWarehousesResponseEnumerator(ListAutonomousDataWarehousesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseEnumerable<ListAutonomousDataWarehousesRequest, ListAutonomousDataWarehousesResponse>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListAutonomousDataWarehouses(request, retryConfiguration, cancellationToken)
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the AutonomousDataWarehouseSummary objects
-        /// contained in responses from the ListAutonomousDataWarehouses operation. This enumerable will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<AutonomousDataWarehouseSummary> ListAutonomousDataWarehousesRecordEnumerator(ListAutonomousDataWarehousesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousDataWarehousesRequest, ListAutonomousDataWarehousesResponse, AutonomousDataWarehouseSummary>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListAutonomousDataWarehouses(request, retryConfiguration, cancellationToken),
-                response => response.Items
-            );
-        }
-
-        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDatabaseBackups operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1712,6 +1614,55 @@ namespace Oci.DatabaseService
                 },
                 request => client.ListExadataInfrastructures(request, retryConfiguration, cancellationToken),
                 response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListFlexComponents operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListFlexComponentsResponse> ListFlexComponentsResponseEnumerator(ListFlexComponentsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListFlexComponentsRequest, ListFlexComponentsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFlexComponents(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the FlexComponentSummary objects
+        /// contained in responses from the ListFlexComponents operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<FlexComponentSummary> ListFlexComponentsRecordEnumerator(ListFlexComponentsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListFlexComponentsRequest, ListFlexComponentsResponse, FlexComponentSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFlexComponents(request, retryConfiguration, cancellationToken),
+                response => response.FlexComponentCollection.Items
             );
         }
 

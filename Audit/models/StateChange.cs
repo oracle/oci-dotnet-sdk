@@ -17,8 +17,7 @@ namespace Oci.AuditService.Models
 {
     /// <summary>
     /// A container object for state change attributes.
-    /// <br/>
-    /// Example:   -----    {      &quot;previous&quot;: null,      &quot;current&quot;: null    }  -----
+    /// 
     /// </summary>
     public class StateChange 
     {

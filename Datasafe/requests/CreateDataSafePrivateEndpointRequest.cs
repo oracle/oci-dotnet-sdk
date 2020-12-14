@@ -14,7 +14,7 @@ using Oci.DatasafeService.Models;
 namespace Oci.DatasafeService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datasafe/CreateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use CreateDataSafePrivateEndpoint request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/CreateDataSafePrivateEndpoint.cs.html">here</a> to see an example of how to use CreateDataSafePrivateEndpoint request.
     /// </example>
     public class CreateDataSafePrivateEndpointRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteComputeImageCapabilitySchema.cs.html">here</a> to see an example of how to use DeleteComputeImageCapabilitySchema request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteComputeImageCapabilitySchema.cs.html">here</a> to see an example of how to use DeleteComputeImageCapabilitySchema request.
     /// </example>
     public class DeleteComputeImageCapabilitySchemaRequest : Oci.Common.IOciRequest
     {

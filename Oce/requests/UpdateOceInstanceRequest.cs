@@ -14,7 +14,7 @@ using Oci.OceService.Models;
 namespace Oci.OceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/oce/UpdateOceInstance.cs.html">here</a> to see an example of how to use UpdateOceInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/oce/UpdateOceInstance.cs.html">here</a> to see an example of how to use UpdateOceInstance request.
     /// </example>
     public class UpdateOceInstanceRequest : Oci.Common.IOciRequest
     {

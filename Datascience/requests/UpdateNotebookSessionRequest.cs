@@ -14,7 +14,7 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datascience/UpdateNotebookSession.cs.html">here</a> to see an example of how to use UpdateNotebookSession request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/UpdateNotebookSession.cs.html">here</a> to see an example of how to use UpdateNotebookSession request.
     /// </example>
     public class UpdateNotebookSessionRequest : Oci.Common.IOciRequest
     {

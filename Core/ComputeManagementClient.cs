@@ -73,7 +73,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/AttachLoadBalancer.cs.html">here</a> to see an example of how to use AttachLoadBalancer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/AttachLoadBalancer.cs.html">here</a> to see an example of how to use AttachLoadBalancer API.</example>
         public async Task<AttachLoadBalancerResponse> AttachLoadBalancer(AttachLoadBalancerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called attachLoadBalancer");
@@ -118,7 +118,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeClusterNetworkCompartment.cs.html">here</a> to see an example of how to use ChangeClusterNetworkCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ChangeClusterNetworkCompartment.cs.html">here</a> to see an example of how to use ChangeClusterNetworkCompartment API.</example>
         public async Task<ChangeClusterNetworkCompartmentResponse> ChangeClusterNetworkCompartment(ChangeClusterNetworkCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeClusterNetworkCompartment");
@@ -170,7 +170,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeInstanceConfigurationCompartment.cs.html">here</a> to see an example of how to use ChangeInstanceConfigurationCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ChangeInstanceConfigurationCompartment.cs.html">here</a> to see an example of how to use ChangeInstanceConfigurationCompartment API.</example>
         public async Task<ChangeInstanceConfigurationCompartmentResponse> ChangeInstanceConfigurationCompartment(ChangeInstanceConfigurationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeInstanceConfigurationCompartment");
@@ -215,7 +215,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeInstancePoolCompartment.cs.html">here</a> to see an example of how to use ChangeInstancePoolCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ChangeInstancePoolCompartment.cs.html">here</a> to see an example of how to use ChangeInstancePoolCompartment API.</example>
         public async Task<ChangeInstancePoolCompartmentResponse> ChangeInstancePoolCompartment(ChangeInstancePoolCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeInstancePoolCompartment");
@@ -256,7 +256,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateClusterNetwork.cs.html">here</a> to see an example of how to use CreateClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateClusterNetwork.cs.html">here</a> to see an example of how to use CreateClusterNetwork API.</example>
         public async Task<CreateClusterNetworkResponse> CreateClusterNetwork(CreateClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createClusterNetwork");
@@ -297,7 +297,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateInstanceConfiguration.cs.html">here</a> to see an example of how to use CreateInstanceConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateInstanceConfiguration.cs.html">here</a> to see an example of how to use CreateInstanceConfiguration API.</example>
         public async Task<CreateInstanceConfigurationResponse> CreateInstanceConfiguration(CreateInstanceConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createInstanceConfiguration");
@@ -336,7 +336,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreateInstancePool.cs.html">here</a> to see an example of how to use CreateInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateInstancePool.cs.html">here</a> to see an example of how to use CreateInstancePool API.</example>
         public async Task<CreateInstancePoolResponse> CreateInstancePool(CreateInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createInstancePool");
@@ -375,7 +375,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteInstanceConfiguration.cs.html">here</a> to see an example of how to use DeleteInstanceConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteInstanceConfiguration.cs.html">here</a> to see an example of how to use DeleteInstanceConfiguration API.</example>
         public async Task<DeleteInstanceConfigurationResponse> DeleteInstanceConfiguration(DeleteInstanceConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteInstanceConfiguration");
@@ -415,7 +415,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DetachLoadBalancer.cs.html">here</a> to see an example of how to use DetachLoadBalancer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DetachLoadBalancer.cs.html">here</a> to see an example of how to use DetachLoadBalancer API.</example>
         public async Task<DetachLoadBalancerResponse> DetachLoadBalancer(DetachLoadBalancerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called detachLoadBalancer");
@@ -454,7 +454,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetClusterNetwork.cs.html">here</a> to see an example of how to use GetClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetClusterNetwork.cs.html">here</a> to see an example of how to use GetClusterNetwork API.</example>
         public async Task<GetClusterNetworkResponse> GetClusterNetwork(GetClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getClusterNetwork");
@@ -493,7 +493,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetInstanceConfiguration.cs.html">here</a> to see an example of how to use GetInstanceConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetInstanceConfiguration.cs.html">here</a> to see an example of how to use GetInstanceConfiguration API.</example>
         public async Task<GetInstanceConfigurationResponse> GetInstanceConfiguration(GetInstanceConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getInstanceConfiguration");
@@ -532,7 +532,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetInstancePool.cs.html">here</a> to see an example of how to use GetInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetInstancePool.cs.html">here</a> to see an example of how to use GetInstancePool API.</example>
         public async Task<GetInstancePoolResponse> GetInstancePool(GetInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getInstancePool");
@@ -572,7 +572,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetInstancePoolLoadBalancerAttachment.cs.html">here</a> to see an example of how to use GetInstancePoolLoadBalancerAttachment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetInstancePoolLoadBalancerAttachment.cs.html">here</a> to see an example of how to use GetInstancePoolLoadBalancerAttachment API.</example>
         public async Task<GetInstancePoolLoadBalancerAttachmentResponse> GetInstancePoolLoadBalancerAttachment(GetInstancePoolLoadBalancerAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getInstancePoolLoadBalancerAttachment");
@@ -618,7 +618,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/LaunchInstanceConfiguration.cs.html">here</a> to see an example of how to use LaunchInstanceConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/LaunchInstanceConfiguration.cs.html">here</a> to see an example of how to use LaunchInstanceConfiguration API.</example>
         public async Task<LaunchInstanceConfigurationResponse> LaunchInstanceConfiguration(LaunchInstanceConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called launchInstanceConfiguration");
@@ -657,7 +657,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListClusterNetworkInstances.cs.html">here</a> to see an example of how to use ListClusterNetworkInstances API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListClusterNetworkInstances.cs.html">here</a> to see an example of how to use ListClusterNetworkInstances API.</example>
         public async Task<ListClusterNetworkInstancesResponse> ListClusterNetworkInstances(ListClusterNetworkInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listClusterNetworkInstances");
@@ -696,7 +696,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListClusterNetworks.cs.html">here</a> to see an example of how to use ListClusterNetworks API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListClusterNetworks.cs.html">here</a> to see an example of how to use ListClusterNetworks API.</example>
         public async Task<ListClusterNetworksResponse> ListClusterNetworks(ListClusterNetworksRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listClusterNetworks");
@@ -736,7 +736,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListInstanceConfigurations.cs.html">here</a> to see an example of how to use ListInstanceConfigurations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListInstanceConfigurations.cs.html">here</a> to see an example of how to use ListInstanceConfigurations API.</example>
         public async Task<ListInstanceConfigurationsResponse> ListInstanceConfigurations(ListInstanceConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listInstanceConfigurations");
@@ -775,7 +775,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListInstancePoolInstances.cs.html">here</a> to see an example of how to use ListInstancePoolInstances API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListInstancePoolInstances.cs.html">here</a> to see an example of how to use ListInstancePoolInstances API.</example>
         public async Task<ListInstancePoolInstancesResponse> ListInstancePoolInstances(ListInstancePoolInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listInstancePoolInstances");
@@ -814,7 +814,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListInstancePools.cs.html">here</a> to see an example of how to use ListInstancePools API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListInstancePools.cs.html">here</a> to see an example of how to use ListInstancePools API.</example>
         public async Task<ListInstancePoolsResponse> ListInstancePools(ListInstancePoolsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listInstancePools");
@@ -855,7 +855,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ResetInstancePool.cs.html">here</a> to see an example of how to use ResetInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ResetInstancePool.cs.html">here</a> to see an example of how to use ResetInstancePool API.</example>
         public async Task<ResetInstancePoolResponse> ResetInstancePool(ResetInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called resetInstancePool");
@@ -896,7 +896,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/SoftresetInstancePool.cs.html">here</a> to see an example of how to use SoftresetInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/SoftresetInstancePool.cs.html">here</a> to see an example of how to use SoftresetInstancePool API.</example>
         public async Task<SoftresetInstancePoolResponse> SoftresetInstancePool(SoftresetInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called softresetInstancePool");
@@ -937,7 +937,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/StartInstancePool.cs.html">here</a> to see an example of how to use StartInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/StartInstancePool.cs.html">here</a> to see an example of how to use StartInstancePool API.</example>
         public async Task<StartInstancePoolResponse> StartInstancePool(StartInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startInstancePool");
@@ -978,7 +978,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/StopInstancePool.cs.html">here</a> to see an example of how to use StopInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/StopInstancePool.cs.html">here</a> to see an example of how to use StopInstancePool API.</example>
         public async Task<StopInstancePoolResponse> StopInstancePool(StopInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopInstancePool");
@@ -1021,7 +1021,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/TerminateClusterNetwork.cs.html">here</a> to see an example of how to use TerminateClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/TerminateClusterNetwork.cs.html">here</a> to see an example of how to use TerminateClusterNetwork API.</example>
         public async Task<TerminateClusterNetworkResponse> TerminateClusterNetwork(TerminateClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called terminateClusterNetwork");
@@ -1068,7 +1068,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/TerminateInstancePool.cs.html">here</a> to see an example of how to use TerminateInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/TerminateInstancePool.cs.html">here</a> to see an example of how to use TerminateInstancePool API.</example>
         public async Task<TerminateInstancePoolResponse> TerminateInstancePool(TerminateInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called terminateInstancePool");
@@ -1108,7 +1108,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateClusterNetwork.cs.html">here</a> to see an example of how to use UpdateClusterNetwork API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateClusterNetwork.cs.html">here</a> to see an example of how to use UpdateClusterNetwork API.</example>
         public async Task<UpdateClusterNetworkResponse> UpdateClusterNetwork(UpdateClusterNetworkRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateClusterNetwork");
@@ -1147,7 +1147,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateInstanceConfiguration.cs.html">here</a> to see an example of how to use UpdateInstanceConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateInstanceConfiguration.cs.html">here</a> to see an example of how to use UpdateInstanceConfiguration API.</example>
         public async Task<UpdateInstanceConfigurationResponse> UpdateInstanceConfiguration(UpdateInstanceConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateInstanceConfiguration");
@@ -1189,7 +1189,7 @@ namespace Oci.CoreService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateInstancePool.cs.html">here</a> to see an example of how to use UpdateInstancePool API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateInstancePool.cs.html">here</a> to see an example of how to use UpdateInstancePool API.</example>
         public async Task<UpdateInstancePoolResponse> UpdateInstancePool(UpdateInstancePoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateInstancePool");

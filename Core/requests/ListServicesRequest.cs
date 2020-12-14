@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListServices.cs.html">here</a> to see an example of how to use ListServices request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListServices.cs.html">here</a> to see an example of how to use ListServices request.
     /// </example>
     public class ListServicesRequest : Oci.Common.IOciRequest
     {

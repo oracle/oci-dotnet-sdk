@@ -62,6 +62,13 @@ namespace Oci.LoadbalancerService.Models
         public string ShapeName { get; set; }
         
         /// <value>
+        /// The configuration details to create load balancer using Flexible shape. This is required only if shapeName is `Flexible`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeDetails")]
+        public ShapeDetails ShapeDetails { get; set; }
+        
+        /// <value>
         /// Whether the load balancer has a VCN-local (private) IP address.
         /// <br/>
         /// If \"true\", the service assigns a private IP address to the load balancer.

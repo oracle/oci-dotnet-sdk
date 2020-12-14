@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ListKeys.cs.html">here</a> to see an example of how to use ListKeys request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ListKeys.cs.html">here</a> to see an example of how to use ListKeys request.
     /// </example>
     public class ListKeysRequest : Oci.Common.IOciRequest
     {
@@ -124,5 +124,30 @@ namespace Oci.KeymanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "protectionMode")]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+        
+        ///
+        /// <value>
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES is supported.
+        /// 
+        /// </value>
+        ///
+        public enum AlgorithmEnum {
+            [EnumMember(Value = "AES")]
+            Aes
+        };
+
+        /// <value>
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES is supported.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "algorithm")]
+        public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
+        
+        /// <value>
+        /// The length of the key in bytes, expressed as an integer. Values of 16, 24, or 32 are supported.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "length")]
+        public System.Nullable<int> Length { get; set; }
     }
 }

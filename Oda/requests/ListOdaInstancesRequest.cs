@@ -14,7 +14,7 @@ using Oci.OdaService.Models;
 namespace Oci.OdaService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/oda/ListOdaInstances.cs.html">here</a> to see an example of how to use ListOdaInstances request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/oda/ListOdaInstances.cs.html">here</a> to see an example of how to use ListOdaInstances request.
     /// </example>
     public class ListOdaInstancesRequest : Oci.Common.IOciRequest
     {

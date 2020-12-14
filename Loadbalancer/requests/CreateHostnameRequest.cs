@@ -14,7 +14,7 @@ using Oci.LoadbalancerService.Models;
 namespace Oci.LoadbalancerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loadbalancer/CreateHostname.cs.html">here</a> to see an example of how to use CreateHostname request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/CreateHostname.cs.html">here</a> to see an example of how to use CreateHostname request.
     /// </example>
     public class CreateHostnameRequest : Oci.Common.IOciRequest
     {

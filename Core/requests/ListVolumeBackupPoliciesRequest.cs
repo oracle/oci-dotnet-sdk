@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVolumeBackupPolicies.cs.html">here</a> to see an example of how to use ListVolumeBackupPolicies request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListVolumeBackupPolicies.cs.html">here</a> to see an example of how to use ListVolumeBackupPolicies request.
     /// </example>
     public class ListVolumeBackupPoliciesRequest : Oci.Common.IOciRequest
     {

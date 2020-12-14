@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestRiskScores.cs.html">here</a> to see an example of how to use RequestRiskScores request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestRiskScores.cs.html">here</a> to see an example of how to use RequestRiskScores request.
     /// </example>
     public class RequestRiskScoresRequest : Oci.Common.IOciRequest
     {

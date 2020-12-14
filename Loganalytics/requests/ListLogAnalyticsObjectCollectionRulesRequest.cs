@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/ListLogAnalyticsObjectCollectionRules.cs.html">here</a> to see an example of how to use ListLogAnalyticsObjectCollectionRules request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListLogAnalyticsObjectCollectionRules.cs.html">here</a> to see an example of how to use ListLogAnalyticsObjectCollectionRules request.
     /// </example>
     public class ListLogAnalyticsObjectCollectionRulesRequest : Oci.Common.IOciRequest
     {

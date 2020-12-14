@@ -14,7 +14,7 @@ using Oci.ManagementagentService.Models;
 namespace Oci.ManagementagentService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementagent/GetManagementAgentInstallKey.cs.html">here</a> to see an example of how to use GetManagementAgentInstallKey request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementagent/GetManagementAgentInstallKey.cs.html">here</a> to see an example of how to use GetManagementAgentInstallKey request.
     /// </example>
     public class GetManagementAgentInstallKeyRequest : Oci.Common.IOciRequest
     {

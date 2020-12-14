@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetNamespace.cs.html">here</a> to see an example of how to use GetNamespace request.
     /// </example>
     public class GetNamespaceRequest : Oci.Common.IOciRequest
     {

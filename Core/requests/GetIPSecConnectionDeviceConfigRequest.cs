@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/GetIPSecConnectionDeviceConfig.cs.html">here</a> to see an example of how to use GetIPSecConnectionDeviceConfig request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetIPSecConnectionDeviceConfig.cs.html">here</a> to see an example of how to use GetIPSecConnectionDeviceConfig request.
     /// </example>
     public class GetIPSecConnectionDeviceConfigRequest : Oci.Common.IOciRequest
     {

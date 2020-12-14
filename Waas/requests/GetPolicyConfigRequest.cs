@@ -14,7 +14,7 @@ using Oci.WaasService.Models;
 namespace Oci.WaasService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetPolicyConfig.cs.html">here</a> to see an example of how to use GetPolicyConfig request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetPolicyConfig.cs.html">here</a> to see an example of how to use GetPolicyConfig request.
     /// </example>
     public class GetPolicyConfigRequest : Oci.Common.IOciRequest
     {

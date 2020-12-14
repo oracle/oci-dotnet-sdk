@@ -14,7 +14,7 @@ using Oci.LimitsService.Models;
 namespace Oci.LimitsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/limits/DeleteQuota.cs.html">here</a> to see an example of how to use DeleteQuota request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/limits/DeleteQuota.cs.html">here</a> to see an example of how to use DeleteQuota request.
     /// </example>
     public class DeleteQuotaRequest : Oci.Common.IOciRequest
     {

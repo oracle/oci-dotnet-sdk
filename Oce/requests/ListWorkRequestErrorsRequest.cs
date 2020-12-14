@@ -14,7 +14,7 @@ using Oci.OceService.Models;
 namespace Oci.OceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/oce/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/oce/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors request.
     /// </example>
     public class ListWorkRequestErrorsRequest : Oci.Common.IOciRequest
     {

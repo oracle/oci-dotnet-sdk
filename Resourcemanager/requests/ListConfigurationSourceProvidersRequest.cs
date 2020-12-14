@@ -14,7 +14,7 @@ using Oci.ResourcemanagerService.Models;
 namespace Oci.ResourcemanagerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/resourcemanager/ListConfigurationSourceProviders.cs.html">here</a> to see an example of how to use ListConfigurationSourceProviders request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/resourcemanager/ListConfigurationSourceProviders.cs.html">here</a> to see an example of how to use ListConfigurationSourceProviders request.
     /// </example>
     public class ListConfigurationSourceProvidersRequest : Oci.Common.IOciRequest
     {
@@ -107,5 +107,12 @@ namespace Oci.ResourcemanagerService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// A filter to return only configuration source providers of the specified type (GitHub or GitLab).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configSourceProviderType")]
+        public string ConfigSourceProviderType { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using Oci.WaasService.Models;
 namespace Oci.WaasService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateWaasPolicy.cs.html">here</a> to see an example of how to use CreateWaasPolicy request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CreateWaasPolicy.cs.html">here</a> to see an example of how to use CreateWaasPolicy request.
     /// </example>
     public class CreateWaasPolicyRequest : Oci.Common.IOciRequest
     {

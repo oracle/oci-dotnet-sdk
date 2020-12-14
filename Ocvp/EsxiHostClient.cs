@@ -78,7 +78,7 @@ namespace Oci.OcvpService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/CreateEsxiHost.cs.html">here</a> to see an example of how to use CreateEsxiHost API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/CreateEsxiHost.cs.html">here</a> to see an example of how to use CreateEsxiHost API.</example>
         public async Task<CreateEsxiHostResponse> CreateEsxiHost(CreateEsxiHostRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createEsxiHost");
@@ -131,7 +131,7 @@ namespace Oci.OcvpService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/DeleteEsxiHost.cs.html">here</a> to see an example of how to use DeleteEsxiHost API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/DeleteEsxiHost.cs.html">here</a> to see an example of how to use DeleteEsxiHost API.</example>
         public async Task<DeleteEsxiHostResponse> DeleteEsxiHost(DeleteEsxiHostRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteEsxiHost");
@@ -170,7 +170,7 @@ namespace Oci.OcvpService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/GetEsxiHost.cs.html">here</a> to see an example of how to use GetEsxiHost API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/GetEsxiHost.cs.html">here</a> to see an example of how to use GetEsxiHost API.</example>
         public async Task<GetEsxiHostResponse> GetEsxiHost(GetEsxiHostRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getEsxiHost");
@@ -218,7 +218,7 @@ namespace Oci.OcvpService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/ListEsxiHosts.cs.html">here</a> to see an example of how to use ListEsxiHosts API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/ListEsxiHosts.cs.html">here</a> to see an example of how to use ListEsxiHosts API.</example>
         public async Task<ListEsxiHostsResponse> ListEsxiHosts(ListEsxiHostsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEsxiHosts");
@@ -257,7 +257,7 @@ namespace Oci.OcvpService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/UpdateEsxiHost.cs.html">here</a> to see an example of how to use UpdateEsxiHost API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/UpdateEsxiHost.cs.html">here</a> to see an example of how to use UpdateEsxiHost API.</example>
         public async Task<UpdateEsxiHostResponse> UpdateEsxiHost(UpdateEsxiHostRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateEsxiHost");

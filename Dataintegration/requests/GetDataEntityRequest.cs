@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/GetDataEntity.cs.html">here</a> to see an example of how to use GetDataEntity request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataintegration/GetDataEntity.cs.html">here</a> to see an example of how to use GetDataEntity request.
     /// </example>
     public class GetDataEntityRequest : Oci.Common.IOciRequest
     {

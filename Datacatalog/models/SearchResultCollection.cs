@@ -47,5 +47,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "facetedSearchAggregation")]
         public System.Collections.Generic.List<FacetedSearchAggregation> FacetedSearchAggregation { get; set; }
         
+        /// <value>
+        /// A list of fields or properties used in the sorting of a search result.
+        /// </value>
+        [JsonProperty(PropertyName = "sortableFields")]
+        public System.Collections.Generic.List<string> SortableFields { get; set; }
+        
     }
 }

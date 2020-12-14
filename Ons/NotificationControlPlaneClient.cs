@@ -74,7 +74,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/ChangeTopicCompartment.cs.html">here</a> to see an example of how to use ChangeTopicCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/ChangeTopicCompartment.cs.html">here</a> to see an example of how to use ChangeTopicCompartment API.</example>
         public async Task<ChangeTopicCompartmentResponse> ChangeTopicCompartment(ChangeTopicCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeTopicCompartment");
@@ -127,7 +127,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/CreateTopic.cs.html">here</a> to see an example of how to use CreateTopic API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/CreateTopic.cs.html">here</a> to see an example of how to use CreateTopic API.</example>
         public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTopic");
@@ -169,7 +169,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/DeleteTopic.cs.html">here</a> to see an example of how to use DeleteTopic API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/DeleteTopic.cs.html">here</a> to see an example of how to use DeleteTopic API.</example>
         public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTopic");
@@ -209,7 +209,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/GetTopic.cs.html">here</a> to see an example of how to use GetTopic API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/GetTopic.cs.html">here</a> to see an example of how to use GetTopic API.</example>
         public async Task<GetTopicResponse> GetTopic(GetTopicRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTopic");
@@ -251,7 +251,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/ListTopics.cs.html">here</a> to see an example of how to use ListTopics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/ListTopics.cs.html">here</a> to see an example of how to use ListTopics API.</example>
         public async Task<ListTopicsResponse> ListTopics(ListTopicsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTopics");
@@ -293,7 +293,7 @@ namespace Oci.OnsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/UpdateTopic.cs.html">here</a> to see an example of how to use UpdateTopic API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/UpdateTopic.cs.html">here</a> to see an example of how to use UpdateTopic API.</example>
         public async Task<UpdateTopicResponse> UpdateTopic(UpdateTopicRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTopic");

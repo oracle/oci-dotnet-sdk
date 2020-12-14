@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListBackups.cs.html">here</a> to see an example of how to use ListBackups request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListBackups.cs.html">here</a> to see an example of how to use ListBackups request.
     /// </example>
     public class ListBackupsRequest : Oci.Common.IOciRequest
     {

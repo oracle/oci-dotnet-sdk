@@ -14,7 +14,7 @@ using Oci.BlockchainService.Models;
 namespace Oci.BlockchainService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/DeletePeer.cs.html">here</a> to see an example of how to use DeletePeer request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/DeletePeer.cs.html">here</a> to see an example of how to use DeletePeer request.
     /// </example>
     public class DeletePeerRequest : Oci.Common.IOciRequest
     {

@@ -72,7 +72,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ChangeBlockchainPlatformCompartment.cs.html">here</a> to see an example of how to use ChangeBlockchainPlatformCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ChangeBlockchainPlatformCompartment.cs.html">here</a> to see an example of how to use ChangeBlockchainPlatformCompartment API.</example>
         public async Task<ChangeBlockchainPlatformCompartmentResponse> ChangeBlockchainPlatformCompartment(ChangeBlockchainPlatformCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeBlockchainPlatformCompartment");
@@ -112,7 +112,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/CreateBlockchainPlatform.cs.html">here</a> to see an example of how to use CreateBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/CreateBlockchainPlatform.cs.html">here</a> to see an example of how to use CreateBlockchainPlatform API.</example>
         public async Task<CreateBlockchainPlatformResponse> CreateBlockchainPlatform(CreateBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBlockchainPlatform");
@@ -151,7 +151,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/CreateOsn.cs.html">here</a> to see an example of how to use CreateOsn API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/CreateOsn.cs.html">here</a> to see an example of how to use CreateOsn API.</example>
         public async Task<CreateOsnResponse> CreateOsn(CreateOsnRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createOsn");
@@ -190,7 +190,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/CreatePeer.cs.html">here</a> to see an example of how to use CreatePeer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/CreatePeer.cs.html">here</a> to see an example of how to use CreatePeer API.</example>
         public async Task<CreatePeerResponse> CreatePeer(CreatePeerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createPeer");
@@ -229,7 +229,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/DeleteBlockchainPlatform.cs.html">here</a> to see an example of how to use DeleteBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/DeleteBlockchainPlatform.cs.html">here</a> to see an example of how to use DeleteBlockchainPlatform API.</example>
         public async Task<DeleteBlockchainPlatformResponse> DeleteBlockchainPlatform(DeleteBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBlockchainPlatform");
@@ -268,7 +268,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/DeleteOsn.cs.html">here</a> to see an example of how to use DeleteOsn API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/DeleteOsn.cs.html">here</a> to see an example of how to use DeleteOsn API.</example>
         public async Task<DeleteOsnResponse> DeleteOsn(DeleteOsnRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteOsn");
@@ -307,7 +307,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/DeletePeer.cs.html">here</a> to see an example of how to use DeletePeer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/DeletePeer.cs.html">here</a> to see an example of how to use DeletePeer API.</example>
         public async Task<DeletePeerResponse> DeletePeer(DeletePeerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deletePeer");
@@ -346,7 +346,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest API.</example>
         public async Task<DeleteWorkRequestResponse> DeleteWorkRequest(DeleteWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteWorkRequest");
@@ -385,7 +385,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/GetBlockchainPlatform.cs.html">here</a> to see an example of how to use GetBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/GetBlockchainPlatform.cs.html">here</a> to see an example of how to use GetBlockchainPlatform API.</example>
         public async Task<GetBlockchainPlatformResponse> GetBlockchainPlatform(GetBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBlockchainPlatform");
@@ -424,7 +424,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/GetOsn.cs.html">here</a> to see an example of how to use GetOsn API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/GetOsn.cs.html">here</a> to see an example of how to use GetOsn API.</example>
         public async Task<GetOsnResponse> GetOsn(GetOsnRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getOsn");
@@ -463,7 +463,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/GetPeer.cs.html">here</a> to see an example of how to use GetPeer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/GetPeer.cs.html">here</a> to see an example of how to use GetPeer API.</example>
         public async Task<GetPeerResponse> GetPeer(GetPeerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPeer");
@@ -502,7 +502,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -541,7 +541,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListBlockchainPlatforms.cs.html">here</a> to see an example of how to use ListBlockchainPlatforms API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListBlockchainPlatforms.cs.html">here</a> to see an example of how to use ListBlockchainPlatforms API.</example>
         public async Task<ListBlockchainPlatformsResponse> ListBlockchainPlatforms(ListBlockchainPlatformsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBlockchainPlatforms");
@@ -580,7 +580,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListOsns.cs.html">here</a> to see an example of how to use ListOsns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListOsns.cs.html">here</a> to see an example of how to use ListOsns API.</example>
         public async Task<ListOsnsResponse> ListOsns(ListOsnsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listOsns");
@@ -619,7 +619,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListPeers.cs.html">here</a> to see an example of how to use ListPeers API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListPeers.cs.html">here</a> to see an example of how to use ListPeers API.</example>
         public async Task<ListPeersResponse> ListPeers(ListPeersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPeers");
@@ -659,7 +659,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -699,7 +699,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -739,7 +739,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -778,7 +778,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/PreviewScaleBlockchainPlatform.cs.html">here</a> to see an example of how to use PreviewScaleBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/PreviewScaleBlockchainPlatform.cs.html">here</a> to see an example of how to use PreviewScaleBlockchainPlatform API.</example>
         public async Task<PreviewScaleBlockchainPlatformResponse> PreviewScaleBlockchainPlatform(PreviewScaleBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called previewScaleBlockchainPlatform");
@@ -817,7 +817,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ScaleBlockchainPlatform.cs.html">here</a> to see an example of how to use ScaleBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ScaleBlockchainPlatform.cs.html">here</a> to see an example of how to use ScaleBlockchainPlatform API.</example>
         public async Task<ScaleBlockchainPlatformResponse> ScaleBlockchainPlatform(ScaleBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called scaleBlockchainPlatform");
@@ -856,7 +856,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/StartBlockchainPlatform.cs.html">here</a> to see an example of how to use StartBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/StartBlockchainPlatform.cs.html">here</a> to see an example of how to use StartBlockchainPlatform API.</example>
         public async Task<StartBlockchainPlatformResponse> StartBlockchainPlatform(StartBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startBlockchainPlatform");
@@ -895,7 +895,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/StopBlockchainPlatform.cs.html">here</a> to see an example of how to use StopBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/StopBlockchainPlatform.cs.html">here</a> to see an example of how to use StopBlockchainPlatform API.</example>
         public async Task<StopBlockchainPlatformResponse> StopBlockchainPlatform(StopBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopBlockchainPlatform");
@@ -934,7 +934,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/UpdateBlockchainPlatform.cs.html">here</a> to see an example of how to use UpdateBlockchainPlatform API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/UpdateBlockchainPlatform.cs.html">here</a> to see an example of how to use UpdateBlockchainPlatform API.</example>
         public async Task<UpdateBlockchainPlatformResponse> UpdateBlockchainPlatform(UpdateBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBlockchainPlatform");
@@ -973,7 +973,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/UpdateOsn.cs.html">here</a> to see an example of how to use UpdateOsn API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/UpdateOsn.cs.html">here</a> to see an example of how to use UpdateOsn API.</example>
         public async Task<UpdateOsnResponse> UpdateOsn(UpdateOsnRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateOsn");
@@ -1012,7 +1012,7 @@ namespace Oci.BlockchainService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/UpdatePeer.cs.html">here</a> to see an example of how to use UpdatePeer API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/UpdatePeer.cs.html">here</a> to see an example of how to use UpdatePeer API.</example>
         public async Task<UpdatePeerResponse> UpdatePeer(UpdatePeerRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updatePeer");

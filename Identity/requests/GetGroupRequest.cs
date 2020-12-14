@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/GetGroup.cs.html">here</a> to see an example of how to use GetGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/GetGroup.cs.html">here</a> to see an example of how to use GetGroup request.
     /// </example>
     public class GetGroupRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ExportKey.cs.html">here</a> to see an example of how to use ExportKey request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ExportKey.cs.html">here</a> to see an example of how to use ExportKey request.
     /// </example>
     public class ExportKeyRequest : Oci.Common.IOciRequest
     {

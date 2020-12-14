@@ -74,7 +74,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/AcceptRecommendations.cs.html">here</a> to see an example of how to use AcceptRecommendations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/AcceptRecommendations.cs.html">here</a> to see an example of how to use AcceptRecommendations API.</example>
         public async Task<AcceptRecommendationsResponse> AcceptRecommendations(AcceptRecommendationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called acceptRecommendations");
@@ -113,7 +113,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CancelWorkRequest.cs.html">here</a> to see an example of how to use CancelWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CancelWorkRequest.cs.html">here</a> to see an example of how to use CancelWorkRequest API.</example>
         public async Task<CancelWorkRequestResponse> CancelWorkRequest(CancelWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelWorkRequest");
@@ -155,7 +155,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ChangeAddressListCompartment.cs.html">here</a> to see an example of how to use ChangeAddressListCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ChangeAddressListCompartment.cs.html">here</a> to see an example of how to use ChangeAddressListCompartment API.</example>
         public async Task<ChangeAddressListCompartmentResponse> ChangeAddressListCompartment(ChangeAddressListCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAddressListCompartment");
@@ -196,7 +196,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ChangeCertificateCompartment.cs.html">here</a> to see an example of how to use ChangeCertificateCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ChangeCertificateCompartment.cs.html">here</a> to see an example of how to use ChangeCertificateCompartment API.</example>
         public async Task<ChangeCertificateCompartmentResponse> ChangeCertificateCompartment(ChangeCertificateCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCertificateCompartment");
@@ -235,7 +235,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ChangeCustomProtectionRuleCompartment.cs.html">here</a> to see an example of how to use ChangeCustomProtectionRuleCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ChangeCustomProtectionRuleCompartment.cs.html">here</a> to see an example of how to use ChangeCustomProtectionRuleCompartment API.</example>
         public async Task<ChangeCustomProtectionRuleCompartmentResponse> ChangeCustomProtectionRuleCompartment(ChangeCustomProtectionRuleCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeCustomProtectionRuleCompartment");
@@ -276,7 +276,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ChangeWaasPolicyCompartment.cs.html">here</a> to see an example of how to use ChangeWaasPolicyCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ChangeWaasPolicyCompartment.cs.html">here</a> to see an example of how to use ChangeWaasPolicyCompartment API.</example>
         public async Task<ChangeWaasPolicyCompartmentResponse> ChangeWaasPolicyCompartment(ChangeWaasPolicyCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeWaasPolicyCompartment");
@@ -315,7 +315,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateAddressList.cs.html">here</a> to see an example of how to use CreateAddressList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CreateAddressList.cs.html">here</a> to see an example of how to use CreateAddressList API.</example>
         public async Task<CreateAddressListResponse> CreateAddressList(CreateAddressListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAddressList");
@@ -356,7 +356,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateCertificate.cs.html">here</a> to see an example of how to use CreateCertificate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CreateCertificate.cs.html">here</a> to see an example of how to use CreateCertificate API.</example>
         public async Task<CreateCertificateResponse> CreateCertificate(CreateCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCertificate");
@@ -397,7 +397,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateCustomProtectionRule.cs.html">here</a> to see an example of how to use CreateCustomProtectionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CreateCustomProtectionRule.cs.html">here</a> to see an example of how to use CreateCustomProtectionRule API.</example>
         public async Task<CreateCustomProtectionRuleResponse> CreateCustomProtectionRule(CreateCustomProtectionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createCustomProtectionRule");
@@ -448,7 +448,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/CreateWaasPolicy.cs.html">here</a> to see an example of how to use CreateWaasPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/CreateWaasPolicy.cs.html">here</a> to see an example of how to use CreateWaasPolicy API.</example>
         public async Task<CreateWaasPolicyResponse> CreateWaasPolicy(CreateWaasPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createWaasPolicy");
@@ -487,7 +487,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/DeleteAddressList.cs.html">here</a> to see an example of how to use DeleteAddressList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/DeleteAddressList.cs.html">here</a> to see an example of how to use DeleteAddressList API.</example>
         public async Task<DeleteAddressListResponse> DeleteAddressList(DeleteAddressListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAddressList");
@@ -526,7 +526,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/DeleteCertificate.cs.html">here</a> to see an example of how to use DeleteCertificate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/DeleteCertificate.cs.html">here</a> to see an example of how to use DeleteCertificate API.</example>
         public async Task<DeleteCertificateResponse> DeleteCertificate(DeleteCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCertificate");
@@ -565,7 +565,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/DeleteCustomProtectionRule.cs.html">here</a> to see an example of how to use DeleteCustomProtectionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/DeleteCustomProtectionRule.cs.html">here</a> to see an example of how to use DeleteCustomProtectionRule API.</example>
         public async Task<DeleteCustomProtectionRuleResponse> DeleteCustomProtectionRule(DeleteCustomProtectionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteCustomProtectionRule");
@@ -604,7 +604,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/DeleteWaasPolicy.cs.html">here</a> to see an example of how to use DeleteWaasPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/DeleteWaasPolicy.cs.html">here</a> to see an example of how to use DeleteWaasPolicy API.</example>
         public async Task<DeleteWaasPolicyResponse> DeleteWaasPolicy(DeleteWaasPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteWaasPolicy");
@@ -643,7 +643,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetAddressList.cs.html">here</a> to see an example of how to use GetAddressList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetAddressList.cs.html">here</a> to see an example of how to use GetAddressList API.</example>
         public async Task<GetAddressListResponse> GetAddressList(GetAddressListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAddressList");
@@ -682,7 +682,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetCertificate.cs.html">here</a> to see an example of how to use GetCertificate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetCertificate.cs.html">here</a> to see an example of how to use GetCertificate API.</example>
         public async Task<GetCertificateResponse> GetCertificate(GetCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCertificate");
@@ -721,7 +721,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetCustomProtectionRule.cs.html">here</a> to see an example of how to use GetCustomProtectionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetCustomProtectionRule.cs.html">here</a> to see an example of how to use GetCustomProtectionRule API.</example>
         public async Task<GetCustomProtectionRuleResponse> GetCustomProtectionRule(GetCustomProtectionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCustomProtectionRule");
@@ -760,7 +760,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetDeviceFingerprintChallenge.cs.html">here</a> to see an example of how to use GetDeviceFingerprintChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetDeviceFingerprintChallenge.cs.html">here</a> to see an example of how to use GetDeviceFingerprintChallenge API.</example>
         public async Task<GetDeviceFingerprintChallengeResponse> GetDeviceFingerprintChallenge(GetDeviceFingerprintChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDeviceFingerprintChallenge");
@@ -799,7 +799,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetHumanInteractionChallenge.cs.html">here</a> to see an example of how to use GetHumanInteractionChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetHumanInteractionChallenge.cs.html">here</a> to see an example of how to use GetHumanInteractionChallenge API.</example>
         public async Task<GetHumanInteractionChallengeResponse> GetHumanInteractionChallenge(GetHumanInteractionChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getHumanInteractionChallenge");
@@ -838,7 +838,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetJsChallenge.cs.html">here</a> to see an example of how to use GetJsChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetJsChallenge.cs.html">here</a> to see an example of how to use GetJsChallenge API.</example>
         public async Task<GetJsChallengeResponse> GetJsChallenge(GetJsChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getJsChallenge");
@@ -877,7 +877,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetPolicyConfig.cs.html">here</a> to see an example of how to use GetPolicyConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetPolicyConfig.cs.html">here</a> to see an example of how to use GetPolicyConfig API.</example>
         public async Task<GetPolicyConfigResponse> GetPolicyConfig(GetPolicyConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPolicyConfig");
@@ -916,7 +916,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetProtectionRule.cs.html">here</a> to see an example of how to use GetProtectionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetProtectionRule.cs.html">here</a> to see an example of how to use GetProtectionRule API.</example>
         public async Task<GetProtectionRuleResponse> GetProtectionRule(GetProtectionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getProtectionRule");
@@ -955,7 +955,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetProtectionSettings.cs.html">here</a> to see an example of how to use GetProtectionSettings API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetProtectionSettings.cs.html">here</a> to see an example of how to use GetProtectionSettings API.</example>
         public async Task<GetProtectionSettingsResponse> GetProtectionSettings(GetProtectionSettingsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getProtectionSettings");
@@ -994,7 +994,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetWaasPolicy.cs.html">here</a> to see an example of how to use GetWaasPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetWaasPolicy.cs.html">here</a> to see an example of how to use GetWaasPolicy API.</example>
         public async Task<GetWaasPolicyResponse> GetWaasPolicy(GetWaasPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWaasPolicy");
@@ -1033,7 +1033,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetWafAddressRateLimiting.cs.html">here</a> to see an example of how to use GetWafAddressRateLimiting API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetWafAddressRateLimiting.cs.html">here</a> to see an example of how to use GetWafAddressRateLimiting API.</example>
         public async Task<GetWafAddressRateLimitingResponse> GetWafAddressRateLimiting(GetWafAddressRateLimitingRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWafAddressRateLimiting");
@@ -1072,7 +1072,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetWafConfig.cs.html">here</a> to see an example of how to use GetWafConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetWafConfig.cs.html">here</a> to see an example of how to use GetWafConfig API.</example>
         public async Task<GetWafConfigResponse> GetWafConfig(GetWafConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWafConfig");
@@ -1111,7 +1111,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -1151,7 +1151,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListAccessRules.cs.html">here</a> to see an example of how to use ListAccessRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListAccessRules.cs.html">here</a> to see an example of how to use ListAccessRules API.</example>
         public async Task<ListAccessRulesResponse> ListAccessRules(ListAccessRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAccessRules");
@@ -1190,7 +1190,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListAddressLists.cs.html">here</a> to see an example of how to use ListAddressLists API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListAddressLists.cs.html">here</a> to see an example of how to use ListAddressLists API.</example>
         public async Task<ListAddressListsResponse> ListAddressLists(ListAddressListsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAddressLists");
@@ -1230,7 +1230,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListCachingRules.cs.html">here</a> to see an example of how to use ListCachingRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListCachingRules.cs.html">here</a> to see an example of how to use ListCachingRules API.</example>
         public async Task<ListCachingRulesResponse> ListCachingRules(ListCachingRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCachingRules");
@@ -1274,7 +1274,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListCaptchas.cs.html">here</a> to see an example of how to use ListCaptchas API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListCaptchas.cs.html">here</a> to see an example of how to use ListCaptchas API.</example>
         public async Task<ListCaptchasResponse> ListCaptchas(ListCaptchasRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCaptchas");
@@ -1313,7 +1313,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListCertificates.cs.html">here</a> to see an example of how to use ListCertificates API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListCertificates.cs.html">here</a> to see an example of how to use ListCertificates API.</example>
         public async Task<ListCertificatesResponse> ListCertificates(ListCertificatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCertificates");
@@ -1352,7 +1352,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListCustomProtectionRules.cs.html">here</a> to see an example of how to use ListCustomProtectionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListCustomProtectionRules.cs.html">here</a> to see an example of how to use ListCustomProtectionRules API.</example>
         public async Task<ListCustomProtectionRulesResponse> ListCustomProtectionRules(ListCustomProtectionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCustomProtectionRules");
@@ -1391,7 +1391,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListEdgeSubnets.cs.html">here</a> to see an example of how to use ListEdgeSubnets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListEdgeSubnets.cs.html">here</a> to see an example of how to use ListEdgeSubnets API.</example>
         public async Task<ListEdgeSubnetsResponse> ListEdgeSubnets(ListEdgeSubnetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEdgeSubnets");
@@ -1433,7 +1433,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListGoodBots.cs.html">here</a> to see an example of how to use ListGoodBots API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListGoodBots.cs.html">here</a> to see an example of how to use ListGoodBots API.</example>
         public async Task<ListGoodBotsResponse> ListGoodBots(ListGoodBotsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listGoodBots");
@@ -1473,7 +1473,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListProtectionRules.cs.html">here</a> to see an example of how to use ListProtectionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListProtectionRules.cs.html">here</a> to see an example of how to use ListProtectionRules API.</example>
         public async Task<ListProtectionRulesResponse> ListProtectionRules(ListProtectionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listProtectionRules");
@@ -1515,7 +1515,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
         public async Task<ListRecommendationsResponse> ListRecommendations(ListRecommendationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRecommendations");
@@ -1557,7 +1557,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListThreatFeeds.cs.html">here</a> to see an example of how to use ListThreatFeeds API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListThreatFeeds.cs.html">here</a> to see an example of how to use ListThreatFeeds API.</example>
         public async Task<ListThreatFeedsResponse> ListThreatFeeds(ListThreatFeedsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listThreatFeeds");
@@ -1596,7 +1596,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWaasPolicies.cs.html">here</a> to see an example of how to use ListWaasPolicies API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWaasPolicies.cs.html">here</a> to see an example of how to use ListWaasPolicies API.</example>
         public async Task<ListWaasPoliciesResponse> ListWaasPolicies(ListWaasPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWaasPolicies");
@@ -1635,7 +1635,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use ListWaasPolicyCustomProtectionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use ListWaasPolicyCustomProtectionRules API.</example>
         public async Task<ListWaasPolicyCustomProtectionRulesResponse> ListWaasPolicyCustomProtectionRules(ListWaasPolicyCustomProtectionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWaasPolicyCustomProtectionRules");
@@ -1674,7 +1674,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWafBlockedRequests.cs.html">here</a> to see an example of how to use ListWafBlockedRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWafBlockedRequests.cs.html">here</a> to see an example of how to use ListWafBlockedRequests API.</example>
         public async Task<ListWafBlockedRequestsResponse> ListWafBlockedRequests(ListWafBlockedRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWafBlockedRequests");
@@ -1716,7 +1716,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWafLogs.cs.html">here</a> to see an example of how to use ListWafLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWafLogs.cs.html">here</a> to see an example of how to use ListWafLogs API.</example>
         public async Task<ListWafLogsResponse> ListWafLogs(ListWafLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWafLogs");
@@ -1758,7 +1758,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWafRequests.cs.html">here</a> to see an example of how to use ListWafRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWafRequests.cs.html">here</a> to see an example of how to use ListWafRequests API.</example>
         public async Task<ListWafRequestsResponse> ListWafRequests(ListWafRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWafRequests");
@@ -1799,7 +1799,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWafTraffic.cs.html">here</a> to see an example of how to use ListWafTraffic API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWafTraffic.cs.html">here</a> to see an example of how to use ListWafTraffic API.</example>
         public async Task<ListWafTrafficResponse> ListWafTraffic(ListWafTrafficRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWafTraffic");
@@ -1838,7 +1838,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWhitelists.cs.html">here</a> to see an example of how to use ListWhitelists API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWhitelists.cs.html">here</a> to see an example of how to use ListWhitelists API.</example>
         public async Task<ListWhitelistsResponse> ListWhitelists(ListWhitelistsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWhitelists");
@@ -1877,7 +1877,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -1917,7 +1917,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/PurgeCache.cs.html">here</a> to see an example of how to use PurgeCache API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/PurgeCache.cs.html">here</a> to see an example of how to use PurgeCache API.</example>
         public async Task<PurgeCacheResponse> PurgeCache(PurgeCacheRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called purgeCache");
@@ -1964,7 +1964,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateAccessRules.cs.html">here</a> to see an example of how to use UpdateAccessRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateAccessRules.cs.html">here</a> to see an example of how to use UpdateAccessRules API.</example>
         public async Task<UpdateAccessRulesResponse> UpdateAccessRules(UpdateAccessRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAccessRules");
@@ -2003,7 +2003,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateAddressList.cs.html">here</a> to see an example of how to use UpdateAddressList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateAddressList.cs.html">here</a> to see an example of how to use UpdateAddressList API.</example>
         public async Task<UpdateAddressListResponse> UpdateAddressList(UpdateAddressListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAddressList");
@@ -2048,7 +2048,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateCachingRules.cs.html">here</a> to see an example of how to use UpdateCachingRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateCachingRules.cs.html">here</a> to see an example of how to use UpdateCachingRules API.</example>
         public async Task<UpdateCachingRulesResponse> UpdateCachingRules(UpdateCachingRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCachingRules");
@@ -2095,7 +2095,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateCaptchas.cs.html">here</a> to see an example of how to use UpdateCaptchas API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateCaptchas.cs.html">here</a> to see an example of how to use UpdateCaptchas API.</example>
         public async Task<UpdateCaptchasResponse> UpdateCaptchas(UpdateCaptchasRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCaptchas");
@@ -2134,7 +2134,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateCertificate.cs.html">here</a> to see an example of how to use UpdateCertificate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateCertificate.cs.html">here</a> to see an example of how to use UpdateCertificate API.</example>
         public async Task<UpdateCertificateResponse> UpdateCertificate(UpdateCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCertificate");
@@ -2173,7 +2173,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateCustomProtectionRule.cs.html">here</a> to see an example of how to use UpdateCustomProtectionRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateCustomProtectionRule.cs.html">here</a> to see an example of how to use UpdateCustomProtectionRule API.</example>
         public async Task<UpdateCustomProtectionRuleResponse> UpdateCustomProtectionRule(UpdateCustomProtectionRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateCustomProtectionRule");
@@ -2216,7 +2216,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateDeviceFingerprintChallenge.cs.html">here</a> to see an example of how to use UpdateDeviceFingerprintChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateDeviceFingerprintChallenge.cs.html">here</a> to see an example of how to use UpdateDeviceFingerprintChallenge API.</example>
         public async Task<UpdateDeviceFingerprintChallengeResponse> UpdateDeviceFingerprintChallenge(UpdateDeviceFingerprintChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDeviceFingerprintChallenge");
@@ -2257,7 +2257,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateGoodBots.cs.html">here</a> to see an example of how to use UpdateGoodBots API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateGoodBots.cs.html">here</a> to see an example of how to use UpdateGoodBots API.</example>
         public async Task<UpdateGoodBotsResponse> UpdateGoodBots(UpdateGoodBotsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateGoodBots");
@@ -2296,7 +2296,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateHumanInteractionChallenge.cs.html">here</a> to see an example of how to use UpdateHumanInteractionChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateHumanInteractionChallenge.cs.html">here</a> to see an example of how to use UpdateHumanInteractionChallenge API.</example>
         public async Task<UpdateHumanInteractionChallengeResponse> UpdateHumanInteractionChallenge(UpdateHumanInteractionChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateHumanInteractionChallenge");
@@ -2335,7 +2335,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateJsChallenge.cs.html">here</a> to see an example of how to use UpdateJsChallenge API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateJsChallenge.cs.html">here</a> to see an example of how to use UpdateJsChallenge API.</example>
         public async Task<UpdateJsChallengeResponse> UpdateJsChallenge(UpdateJsChallengeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateJsChallenge");
@@ -2374,7 +2374,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdatePolicyConfig.cs.html">here</a> to see an example of how to use UpdatePolicyConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdatePolicyConfig.cs.html">here</a> to see an example of how to use UpdatePolicyConfig API.</example>
         public async Task<UpdatePolicyConfigResponse> UpdatePolicyConfig(UpdatePolicyConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updatePolicyConfig");
@@ -2415,7 +2415,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateProtectionRules.cs.html">here</a> to see an example of how to use UpdateProtectionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateProtectionRules.cs.html">here</a> to see an example of how to use UpdateProtectionRules API.</example>
         public async Task<UpdateProtectionRulesResponse> UpdateProtectionRules(UpdateProtectionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateProtectionRules");
@@ -2454,7 +2454,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateProtectionSettings.cs.html">here</a> to see an example of how to use UpdateProtectionSettings API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateProtectionSettings.cs.html">here</a> to see an example of how to use UpdateProtectionSettings API.</example>
         public async Task<UpdateProtectionSettingsResponse> UpdateProtectionSettings(UpdateProtectionSettingsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateProtectionSettings");
@@ -2493,7 +2493,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateThreatFeeds.cs.html">here</a> to see an example of how to use UpdateThreatFeeds API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateThreatFeeds.cs.html">here</a> to see an example of how to use UpdateThreatFeeds API.</example>
         public async Task<UpdateThreatFeedsResponse> UpdateThreatFeeds(UpdateThreatFeedsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateThreatFeeds");
@@ -2534,7 +2534,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateWaasPolicy.cs.html">here</a> to see an example of how to use UpdateWaasPolicy API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateWaasPolicy.cs.html">here</a> to see an example of how to use UpdateWaasPolicy API.</example>
         public async Task<UpdateWaasPolicyResponse> UpdateWaasPolicy(UpdateWaasPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateWaasPolicy");
@@ -2573,7 +2573,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use UpdateWaasPolicyCustomProtectionRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use UpdateWaasPolicyCustomProtectionRules API.</example>
         public async Task<UpdateWaasPolicyCustomProtectionRulesResponse> UpdateWaasPolicyCustomProtectionRules(UpdateWaasPolicyCustomProtectionRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateWaasPolicyCustomProtectionRules");
@@ -2612,7 +2612,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateWafAddressRateLimiting.cs.html">here</a> to see an example of how to use UpdateWafAddressRateLimiting API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateWafAddressRateLimiting.cs.html">here</a> to see an example of how to use UpdateWafAddressRateLimiting API.</example>
         public async Task<UpdateWafAddressRateLimitingResponse> UpdateWafAddressRateLimiting(UpdateWafAddressRateLimitingRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateWafAddressRateLimiting");
@@ -2659,7 +2659,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateWafConfig.cs.html">here</a> to see an example of how to use UpdateWafConfig API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateWafConfig.cs.html">here</a> to see an example of how to use UpdateWafConfig API.</example>
         public async Task<UpdateWafConfigResponse> UpdateWafConfig(UpdateWafConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateWafConfig");
@@ -2706,7 +2706,7 @@ namespace Oci.WaasService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/UpdateWhitelists.cs.html">here</a> to see an example of how to use UpdateWhitelists API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/UpdateWhitelists.cs.html">here</a> to see an example of how to use UpdateWhitelists API.</example>
         public async Task<UpdateWhitelistsResponse> UpdateWhitelists(UpdateWhitelistsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateWhitelists");

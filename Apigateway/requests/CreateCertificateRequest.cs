@@ -14,7 +14,7 @@ using Oci.ApigatewayService.Models;
 namespace Oci.ApigatewayService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/apigateway/CreateCertificate.cs.html">here</a> to see an example of how to use CreateCertificate request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apigateway/CreateCertificate.cs.html">here</a> to see an example of how to use CreateCertificate request.
     /// </example>
     public class CreateCertificateRequest : Oci.Common.IOciRequest
     {

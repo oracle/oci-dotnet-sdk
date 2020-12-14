@@ -14,7 +14,7 @@ using Oci.LoggingService.Models;
 namespace Oci.LoggingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/logging/ListLogGroups.cs.html">here</a> to see an example of how to use ListLogGroups request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/logging/ListLogGroups.cs.html">here</a> to see an example of how to use ListLogGroups request.
     /// </example>
     public class ListLogGroupsRequest : Oci.Common.IOciRequest
     {

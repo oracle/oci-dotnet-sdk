@@ -14,7 +14,7 @@ using Oci.MarketplaceService.Models;
 namespace Oci.MarketplaceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/marketplace/ListPublishers.cs.html">here</a> to see an example of how to use ListPublishers request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplace/ListPublishers.cs.html">here</a> to see an example of how to use ListPublishers request.
     /// </example>
     public class ListPublishersRequest : Oci.Common.IOciRequest
     {

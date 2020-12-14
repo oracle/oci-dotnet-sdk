@@ -14,7 +14,7 @@ using Oci.ManagementdashboardService.Models;
 namespace Oci.ManagementdashboardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/ListManagementDashboards.cs.html">here</a> to see an example of how to use ListManagementDashboards request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementdashboard/ListManagementDashboards.cs.html">here</a> to see an example of how to use ListManagementDashboards request.
     /// </example>
     public class ListManagementDashboardsRequest : Oci.Common.IOciRequest
     {

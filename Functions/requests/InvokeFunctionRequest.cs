@@ -14,7 +14,7 @@ using Oci.FunctionsService.Models;
 namespace Oci.FunctionsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/functions/InvokeFunction.cs.html">here</a> to see an example of how to use InvokeFunction request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/functions/InvokeFunction.cs.html">here</a> to see an example of how to use InvokeFunction request.
     /// </example>
     public class InvokeFunctionRequest : Oci.Common.IOciRequest
     {

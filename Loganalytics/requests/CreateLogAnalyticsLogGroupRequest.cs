@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/CreateLogAnalyticsLogGroup.cs.html">here</a> to see an example of how to use CreateLogAnalyticsLogGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/CreateLogAnalyticsLogGroup.cs.html">here</a> to see an example of how to use CreateLogAnalyticsLogGroup request.
     /// </example>
     public class CreateLogAnalyticsLogGroupRequest : Oci.Common.IOciRequest
     {

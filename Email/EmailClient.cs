@@ -72,7 +72,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/ChangeSenderCompartment.cs.html">here</a> to see an example of how to use ChangeSenderCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/ChangeSenderCompartment.cs.html">here</a> to see an example of how to use ChangeSenderCompartment API.</example>
         public async Task<ChangeSenderCompartmentResponse> ChangeSenderCompartment(ChangeSenderCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeSenderCompartment");
@@ -111,7 +111,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/CreateSender.cs.html">here</a> to see an example of how to use CreateSender API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/CreateSender.cs.html">here</a> to see an example of how to use CreateSender API.</example>
         public async Task<CreateSenderResponse> CreateSender(CreateSenderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSender");
@@ -154,7 +154,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/CreateSuppression.cs.html">here</a> to see an example of how to use CreateSuppression API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/CreateSuppression.cs.html">here</a> to see an example of how to use CreateSuppression API.</example>
         public async Task<CreateSuppressionResponse> CreateSuppression(CreateSuppressionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createSuppression");
@@ -195,7 +195,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/DeleteSender.cs.html">here</a> to see an example of how to use DeleteSender API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/DeleteSender.cs.html">here</a> to see an example of how to use DeleteSender API.</example>
         public async Task<DeleteSenderResponse> DeleteSender(DeleteSenderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteSender");
@@ -236,7 +236,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/DeleteSuppression.cs.html">here</a> to see an example of how to use DeleteSuppression API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/DeleteSuppression.cs.html">here</a> to see an example of how to use DeleteSuppression API.</example>
         public async Task<DeleteSuppressionResponse> DeleteSuppression(DeleteSuppressionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteSuppression");
@@ -275,7 +275,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/GetSender.cs.html">here</a> to see an example of how to use GetSender API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/GetSender.cs.html">here</a> to see an example of how to use GetSender API.</example>
         public async Task<GetSenderResponse> GetSender(GetSenderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSender");
@@ -316,7 +316,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/GetSuppression.cs.html">here</a> to see an example of how to use GetSuppression API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/GetSuppression.cs.html">here</a> to see an example of how to use GetSuppression API.</example>
         public async Task<GetSuppressionResponse> GetSuppression(GetSuppressionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getSuppression");
@@ -356,7 +356,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/ListSenders.cs.html">here</a> to see an example of how to use ListSenders API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/ListSenders.cs.html">here</a> to see an example of how to use ListSenders API.</example>
         public async Task<ListSendersResponse> ListSenders(ListSendersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSenders");
@@ -398,7 +398,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/ListSuppressions.cs.html">here</a> to see an example of how to use ListSuppressions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/ListSuppressions.cs.html">here</a> to see an example of how to use ListSuppressions API.</example>
         public async Task<ListSuppressionsResponse> ListSuppressions(ListSuppressionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listSuppressions");
@@ -441,7 +441,7 @@ namespace Oci.EmailService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/UpdateSender.cs.html">here</a> to see an example of how to use UpdateSender API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/UpdateSender.cs.html">here</a> to see an example of how to use UpdateSender API.</example>
         public async Task<UpdateSenderResponse> UpdateSender(UpdateSenderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateSender");

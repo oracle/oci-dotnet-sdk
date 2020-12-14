@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedTrendResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedTrendResponderExecutions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedTrendResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedTrendResponderExecutions request.
     /// </example>
     public class RequestSummarizedTrendResponderExecutionsRequest : Oci.Common.IOciRequest
     {

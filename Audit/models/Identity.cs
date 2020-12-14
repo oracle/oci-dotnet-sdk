@@ -17,8 +17,7 @@ namespace Oci.AuditService.Models
 {
     /// <summary>
     /// A container object for identity attributes.
-    /// <br/>
-    /// Example:   -----    {      &quot;principalName&quot;: &quot;ExampleName&quot;,      &quot;principalId&quot;: &quot;ocid1.user.oc1..<unique_ID>&quot;,      &quot;authType&quot;: &quot;natv&quot;,      &quot;callerName&quot;: null,      &quot;callerId&quot;: null,      &quot;tenantId&quot;: &quot;ocid1.tenancy.oc1..<unique_ID>&quot;,      &quot;ipAddress&quot;: &quot;172.24.80.88&quot;,      &quot;credentials&quot;: null,      &quot;userAgent&quot;: &quot;Jersey/2.23 (HttpUrlConnection 1.8.0_212)&quot;,      &quot;consoleSessionId&quot;: null    }  -----
+    /// 
     /// </summary>
     public class Identity 
     {

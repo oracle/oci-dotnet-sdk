@@ -73,7 +73,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/CreateAlertRule.cs.html">here</a> to see an example of how to use CreateAlertRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/CreateAlertRule.cs.html">here</a> to see an example of how to use CreateAlertRule API.</example>
         public async Task<CreateAlertRuleResponse> CreateAlertRule(CreateAlertRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAlertRule");
@@ -113,7 +113,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/CreateBudget.cs.html">here</a> to see an example of how to use CreateBudget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/CreateBudget.cs.html">here</a> to see an example of how to use CreateBudget API.</example>
         public async Task<CreateBudgetResponse> CreateBudget(CreateBudgetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBudget");
@@ -152,7 +152,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/DeleteAlertRule.cs.html">here</a> to see an example of how to use DeleteAlertRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/DeleteAlertRule.cs.html">here</a> to see an example of how to use DeleteAlertRule API.</example>
         public async Task<DeleteAlertRuleResponse> DeleteAlertRule(DeleteAlertRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAlertRule");
@@ -191,7 +191,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/DeleteBudget.cs.html">here</a> to see an example of how to use DeleteBudget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/DeleteBudget.cs.html">here</a> to see an example of how to use DeleteBudget API.</example>
         public async Task<DeleteBudgetResponse> DeleteBudget(DeleteBudgetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBudget");
@@ -230,7 +230,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/GetAlertRule.cs.html">here</a> to see an example of how to use GetAlertRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/GetAlertRule.cs.html">here</a> to see an example of how to use GetAlertRule API.</example>
         public async Task<GetAlertRuleResponse> GetAlertRule(GetAlertRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAlertRule");
@@ -269,7 +269,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/GetBudget.cs.html">here</a> to see an example of how to use GetBudget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/GetBudget.cs.html">here</a> to see an example of how to use GetBudget API.</example>
         public async Task<GetBudgetResponse> GetBudget(GetBudgetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBudget");
@@ -309,7 +309,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/ListAlertRules.cs.html">here</a> to see an example of how to use ListAlertRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/ListAlertRules.cs.html">here</a> to see an example of how to use ListAlertRules API.</example>
         public async Task<ListAlertRulesResponse> ListAlertRules(ListAlertRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAlertRules");
@@ -358,7 +358,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/ListBudgets.cs.html">here</a> to see an example of how to use ListBudgets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/ListBudgets.cs.html">here</a> to see an example of how to use ListBudgets API.</example>
         public async Task<ListBudgetsResponse> ListBudgets(ListBudgetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBudgets");
@@ -397,7 +397,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/UpdateAlertRule.cs.html">here</a> to see an example of how to use UpdateAlertRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/UpdateAlertRule.cs.html">here</a> to see an example of how to use UpdateAlertRule API.</example>
         public async Task<UpdateAlertRuleResponse> UpdateAlertRule(UpdateAlertRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAlertRule");
@@ -436,7 +436,7 @@ namespace Oci.BudgetService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/UpdateBudget.cs.html">here</a> to see an example of how to use UpdateBudget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/UpdateBudget.cs.html">here</a> to see an example of how to use UpdateBudget API.</example>
         public async Task<UpdateBudgetResponse> UpdateBudget(UpdateBudgetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBudget");

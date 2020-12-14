@@ -14,7 +14,7 @@ using Oci.OptimizerService.Models;
 namespace Oci.OptimizerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/BulkApplyRecommendations.cs.html">here</a> to see an example of how to use BulkApplyRecommendations request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/BulkApplyRecommendations.cs.html">here</a> to see an example of how to use BulkApplyRecommendations request.
     /// </example>
     public class BulkApplyRecommendationsRequest : Oci.Common.IOciRequest
     {

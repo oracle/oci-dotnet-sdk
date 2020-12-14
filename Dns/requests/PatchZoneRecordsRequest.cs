@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/PatchZoneRecords.cs.html">here</a> to see an example of how to use PatchZoneRecords request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/PatchZoneRecords.cs.html">here</a> to see an example of how to use PatchZoneRecords request.
     /// </example>
     public class PatchZoneRecordsRequest : Oci.Common.IOciRequest
     {

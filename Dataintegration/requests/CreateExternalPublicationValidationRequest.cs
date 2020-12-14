@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/CreateExternalPublicationValidation.cs.html">here</a> to see an example of how to use CreateExternalPublicationValidation request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataintegration/CreateExternalPublicationValidation.cs.html">here</a> to see an example of how to use CreateExternalPublicationValidation request.
     /// </example>
     public class CreateExternalPublicationValidationRequest : Oci.Common.IOciRequest
     {

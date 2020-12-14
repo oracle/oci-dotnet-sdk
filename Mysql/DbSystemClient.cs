@@ -73,7 +73,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/AddAnalyticsCluster.cs.html">here</a> to see an example of how to use AddAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/AddAnalyticsCluster.cs.html">here</a> to see an example of how to use AddAnalyticsCluster API.</example>
         public async Task<AddAnalyticsClusterResponse> AddAnalyticsCluster(AddAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called addAnalyticsCluster");
@@ -113,7 +113,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/CreateDbSystem.cs.html">here</a> to see an example of how to use CreateDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/CreateDbSystem.cs.html">here</a> to see an example of how to use CreateDbSystem API.</example>
         public async Task<CreateDbSystemResponse> CreateDbSystem(CreateDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDbSystem");
@@ -154,7 +154,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/DeleteAnalyticsCluster.cs.html">here</a> to see an example of how to use DeleteAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/DeleteAnalyticsCluster.cs.html">here</a> to see an example of how to use DeleteAnalyticsCluster API.</example>
         public async Task<DeleteAnalyticsClusterResponse> DeleteAnalyticsCluster(DeleteAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAnalyticsCluster");
@@ -195,7 +195,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/DeleteDbSystem.cs.html">here</a> to see an example of how to use DeleteDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/DeleteDbSystem.cs.html">here</a> to see an example of how to use DeleteDbSystem API.</example>
         public async Task<DeleteDbSystemResponse> DeleteDbSystem(DeleteDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDbSystem");
@@ -235,7 +235,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/GenerateAnalyticsClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GenerateAnalyticsClusterMemoryEstimate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GenerateAnalyticsClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GenerateAnalyticsClusterMemoryEstimate API.</example>
         public async Task<GenerateAnalyticsClusterMemoryEstimateResponse> GenerateAnalyticsClusterMemoryEstimate(GenerateAnalyticsClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateAnalyticsClusterMemoryEstimate");
@@ -274,7 +274,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/GetAnalyticsCluster.cs.html">here</a> to see an example of how to use GetAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetAnalyticsCluster.cs.html">here</a> to see an example of how to use GetAnalyticsCluster API.</example>
         public async Task<GetAnalyticsClusterResponse> GetAnalyticsCluster(GetAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAnalyticsCluster");
@@ -315,7 +315,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/GetAnalyticsClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GetAnalyticsClusterMemoryEstimate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetAnalyticsClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GetAnalyticsClusterMemoryEstimate API.</example>
         public async Task<GetAnalyticsClusterMemoryEstimateResponse> GetAnalyticsClusterMemoryEstimate(GetAnalyticsClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAnalyticsClusterMemoryEstimate");
@@ -354,7 +354,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/GetDbSystem.cs.html">here</a> to see an example of how to use GetDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetDbSystem.cs.html">here</a> to see an example of how to use GetDbSystem API.</example>
         public async Task<GetDbSystemResponse> GetDbSystem(GetDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDbSystem");
@@ -395,7 +395,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/ListDbSystems.cs.html">here</a> to see an example of how to use ListDbSystems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/ListDbSystems.cs.html">here</a> to see an example of how to use ListDbSystems API.</example>
         public async Task<ListDbSystemsResponse> ListDbSystems(ListDbSystemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDbSystems");
@@ -434,7 +434,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/RestartAnalyticsCluster.cs.html">here</a> to see an example of how to use RestartAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/RestartAnalyticsCluster.cs.html">here</a> to see an example of how to use RestartAnalyticsCluster API.</example>
         public async Task<RestartAnalyticsClusterResponse> RestartAnalyticsCluster(RestartAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restartAnalyticsCluster");
@@ -473,7 +473,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/RestartDbSystem.cs.html">here</a> to see an example of how to use RestartDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/RestartDbSystem.cs.html">here</a> to see an example of how to use RestartDbSystem API.</example>
         public async Task<RestartDbSystemResponse> RestartDbSystem(RestartDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restartDbSystem");
@@ -512,7 +512,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/StartAnalyticsCluster.cs.html">here</a> to see an example of how to use StartAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StartAnalyticsCluster.cs.html">here</a> to see an example of how to use StartAnalyticsCluster API.</example>
         public async Task<StartAnalyticsClusterResponse> StartAnalyticsCluster(StartAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startAnalyticsCluster");
@@ -551,7 +551,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/StartDbSystem.cs.html">here</a> to see an example of how to use StartDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StartDbSystem.cs.html">here</a> to see an example of how to use StartDbSystem API.</example>
         public async Task<StartDbSystemResponse> StartDbSystem(StartDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called startDbSystem");
@@ -590,7 +590,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/StopAnalyticsCluster.cs.html">here</a> to see an example of how to use StopAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StopAnalyticsCluster.cs.html">here</a> to see an example of how to use StopAnalyticsCluster API.</example>
         public async Task<StopAnalyticsClusterResponse> StopAnalyticsCluster(StopAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopAnalyticsCluster");
@@ -632,7 +632,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/StopDbSystem.cs.html">here</a> to see an example of how to use StopDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StopDbSystem.cs.html">here</a> to see an example of how to use StopDbSystem API.</example>
         public async Task<StopDbSystemResponse> StopDbSystem(StopDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called stopDbSystem");
@@ -672,7 +672,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/UpdateAnalyticsCluster.cs.html">here</a> to see an example of how to use UpdateAnalyticsCluster API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/UpdateAnalyticsCluster.cs.html">here</a> to see an example of how to use UpdateAnalyticsCluster API.</example>
         public async Task<UpdateAnalyticsClusterResponse> UpdateAnalyticsCluster(UpdateAnalyticsClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAnalyticsCluster");
@@ -719,7 +719,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/UpdateDbSystem.cs.html">here</a> to see an example of how to use UpdateDbSystem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/UpdateDbSystem.cs.html">here</a> to see an example of how to use UpdateDbSystem API.</example>
         public async Task<UpdateDbSystemResponse> UpdateDbSystem(UpdateDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDbSystem");

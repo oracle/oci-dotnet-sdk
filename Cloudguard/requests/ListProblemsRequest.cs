@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListProblems.cs.html">here</a> to see an example of how to use ListProblems request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListProblems.cs.html">here</a> to see an example of how to use ListProblems request.
     /// </example>
     public class ListProblemsRequest : Oci.Common.IOciRequest
     {

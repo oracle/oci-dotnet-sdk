@@ -31,6 +31,10 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: com.oraclecloud.ComputeApi.GetInstance
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EventType is required.")]
         [JsonProperty(PropertyName = "eventType")]
         public string EventType { get; set; }
         
@@ -43,6 +47,10 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: 0.1
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CloudEventsVersion is required.")]
         [JsonProperty(PropertyName = "cloudEventsVersion")]
         public string CloudEventsVersion { get; set; }
         
@@ -52,6 +60,10 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: 2.0
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EventTypeVersion is required.")]
         [JsonProperty(PropertyName = "eventTypeVersion")]
         public string EventTypeVersion { get; set; }
         
@@ -60,6 +72,10 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: ComputeApi
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
         
@@ -67,6 +83,10 @@ namespace Oci.AuditService.Models
         /// The GUID of the event.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EventId is required.")]
         [JsonProperty(PropertyName = "eventId")]
         public string EventId { get; set; }
         
@@ -75,6 +95,10 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: 2019-09-18T00:10:59.252Z
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EventTime is required.")]
         [JsonProperty(PropertyName = "eventTime")]
         public System.Nullable<System.DateTime> EventTime { get; set; }
         
@@ -83,9 +107,17 @@ namespace Oci.AuditService.Models
         /// <br/>
         /// Example: application/json
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ContentType is required.")]
         [JsonProperty(PropertyName = "contentType")]
         public string ContentType { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Data is required.")]
         [JsonProperty(PropertyName = "data")]
         public Data Data { get; set; }
         

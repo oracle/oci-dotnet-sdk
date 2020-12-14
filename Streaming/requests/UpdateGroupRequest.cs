@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/UpdateGroup.cs.html">here</a> to see an example of how to use UpdateGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/UpdateGroup.cs.html">here</a> to see an example of how to use UpdateGroup request.
     /// </example>
     public class UpdateGroupRequest : Oci.Common.IOciRequest
     {

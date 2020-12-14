@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/GetDatabase.cs.html">here</a> to see an example of how to use GetDatabase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetDatabase.cs.html">here</a> to see an example of how to use GetDatabase request.
     /// </example>
     public class GetDatabaseRequest : Oci.Common.IOciRequest
     {

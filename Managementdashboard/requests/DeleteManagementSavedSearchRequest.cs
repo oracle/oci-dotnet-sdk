@@ -14,7 +14,7 @@ using Oci.ManagementdashboardService.Models;
 namespace Oci.ManagementdashboardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementdashboard/DeleteManagementSavedSearch.cs.html">here</a> to see an example of how to use DeleteManagementSavedSearch request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementdashboard/DeleteManagementSavedSearch.cs.html">here</a> to see an example of how to use DeleteManagementSavedSearch request.
     /// </example>
     public class DeleteManagementSavedSearchRequest : Oci.Common.IOciRequest
     {
