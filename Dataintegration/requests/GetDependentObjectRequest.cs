@@ -14,7 +14,7 @@ using Oci.DataintegrationService.Models;
 namespace Oci.DataintegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataintegration/GetDependentObject.cs.html">here</a> to see an example of how to use GetDependentObject request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataintegration/GetDependentObject.cs.html">here</a> to see an example of how to use GetDependentObject request.
     /// </example>
     public class GetDependentObjectRequest : Oci.Common.IOciRequest
     {

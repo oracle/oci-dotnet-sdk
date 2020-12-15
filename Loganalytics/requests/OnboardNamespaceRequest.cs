@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/OnboardNamespace.cs.html">here</a> to see an example of how to use OnboardNamespace request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/OnboardNamespace.cs.html">here</a> to see an example of how to use OnboardNamespace request.
     /// </example>
     public class OnboardNamespaceRequest : Oci.Common.IOciRequest
     {

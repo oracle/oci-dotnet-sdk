@@ -73,7 +73,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/BulkApplyRecommendations.cs.html">here</a> to see an example of how to use BulkApplyRecommendations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/BulkApplyRecommendations.cs.html">here</a> to see an example of how to use BulkApplyRecommendations API.</example>
         public async Task<BulkApplyRecommendationsResponse> BulkApplyRecommendations(BulkApplyRecommendationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called bulkApplyRecommendations");
@@ -113,7 +113,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/CreateProfile.cs.html">here</a> to see an example of how to use CreateProfile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/CreateProfile.cs.html">here</a> to see an example of how to use CreateProfile API.</example>
         public async Task<CreateProfileResponse> CreateProfile(CreateProfileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createProfile");
@@ -153,7 +153,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/DeleteProfile.cs.html">here</a> to see an example of how to use DeleteProfile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/DeleteProfile.cs.html">here</a> to see an example of how to use DeleteProfile API.</example>
         public async Task<DeleteProfileResponse> DeleteProfile(DeleteProfileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteProfile");
@@ -193,7 +193,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetCategory.cs.html">here</a> to see an example of how to use GetCategory API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetCategory.cs.html">here</a> to see an example of how to use GetCategory API.</example>
         public async Task<GetCategoryResponse> GetCategory(GetCategoryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getCategory");
@@ -233,7 +233,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetEnrollmentStatus.cs.html">here</a> to see an example of how to use GetEnrollmentStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetEnrollmentStatus.cs.html">here</a> to see an example of how to use GetEnrollmentStatus API.</example>
         public async Task<GetEnrollmentStatusResponse> GetEnrollmentStatus(GetEnrollmentStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getEnrollmentStatus");
@@ -273,7 +273,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetProfile.cs.html">here</a> to see an example of how to use GetProfile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetProfile.cs.html">here</a> to see an example of how to use GetProfile API.</example>
         public async Task<GetProfileResponse> GetProfile(GetProfileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getProfile");
@@ -313,7 +313,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetRecommendation.cs.html">here</a> to see an example of how to use GetRecommendation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetRecommendation.cs.html">here</a> to see an example of how to use GetRecommendation API.</example>
         public async Task<GetRecommendationResponse> GetRecommendation(GetRecommendationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRecommendation");
@@ -353,7 +353,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetResourceAction.cs.html">here</a> to see an example of how to use GetResourceAction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetResourceAction.cs.html">here</a> to see an example of how to use GetResourceAction API.</example>
         public async Task<GetResourceActionResponse> GetResourceAction(GetResourceActionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResourceAction");
@@ -392,7 +392,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -432,7 +432,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListCategories.cs.html">here</a> to see an example of how to use ListCategories API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListCategories.cs.html">here</a> to see an example of how to use ListCategories API.</example>
         public async Task<ListCategoriesResponse> ListCategories(ListCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listCategories");
@@ -472,7 +472,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListEnrollmentStatuses.cs.html">here</a> to see an example of how to use ListEnrollmentStatuses API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListEnrollmentStatuses.cs.html">here</a> to see an example of how to use ListEnrollmentStatuses API.</example>
         public async Task<ListEnrollmentStatusesResponse> ListEnrollmentStatuses(ListEnrollmentStatusesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listEnrollmentStatuses");
@@ -513,7 +513,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListHistories.cs.html">here</a> to see an example of how to use ListHistories API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListHistories.cs.html">here</a> to see an example of how to use ListHistories API.</example>
         public async Task<ListHistoriesResponse> ListHistories(ListHistoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listHistories");
@@ -553,7 +553,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListProfiles.cs.html">here</a> to see an example of how to use ListProfiles API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListProfiles.cs.html">here</a> to see an example of how to use ListProfiles API.</example>
         public async Task<ListProfilesResponse> ListProfiles(ListProfilesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listProfiles");
@@ -593,7 +593,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
         public async Task<ListRecommendationsResponse> ListRecommendations(ListRecommendationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRecommendations");
@@ -633,7 +633,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListResourceActions.cs.html">here</a> to see an example of how to use ListResourceActions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListResourceActions.cs.html">here</a> to see an example of how to use ListResourceActions API.</example>
         public async Task<ListResourceActionsResponse> ListResourceActions(ListResourceActionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResourceActions");
@@ -673,7 +673,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -713,7 +713,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -753,7 +753,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -793,7 +793,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/UpdateEnrollmentStatus.cs.html">here</a> to see an example of how to use UpdateEnrollmentStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/UpdateEnrollmentStatus.cs.html">here</a> to see an example of how to use UpdateEnrollmentStatus API.</example>
         public async Task<UpdateEnrollmentStatusResponse> UpdateEnrollmentStatus(UpdateEnrollmentStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateEnrollmentStatus");
@@ -833,7 +833,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/UpdateProfile.cs.html">here</a> to see an example of how to use UpdateProfile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/UpdateProfile.cs.html">here</a> to see an example of how to use UpdateProfile API.</example>
         public async Task<UpdateProfileResponse> UpdateProfile(UpdateProfileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateProfile");
@@ -878,7 +878,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/UpdateRecommendation.cs.html">here</a> to see an example of how to use UpdateRecommendation API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/UpdateRecommendation.cs.html">here</a> to see an example of how to use UpdateRecommendation API.</example>
         public async Task<UpdateRecommendationResponse> UpdateRecommendation(UpdateRecommendationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRecommendation");
@@ -923,7 +923,7 @@ namespace Oci.OptimizerService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/optimizer/UpdateResourceAction.cs.html">here</a> to see an example of how to use UpdateResourceAction API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/optimizer/UpdateResourceAction.cs.html">here</a> to see an example of how to use UpdateResourceAction API.</example>
         public async Task<UpdateResourceActionResponse> UpdateResourceAction(UpdateResourceActionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateResourceAction");

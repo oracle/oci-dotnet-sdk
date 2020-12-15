@@ -72,7 +72,7 @@ namespace Oci.AnnouncementsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/announcementsservice/GetAnnouncement.cs.html">here</a> to see an example of how to use GetAnnouncement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/announcementsservice/GetAnnouncement.cs.html">here</a> to see an example of how to use GetAnnouncement API.</example>
         public async Task<GetAnnouncementResponse> GetAnnouncement(GetAnnouncementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAnnouncement");
@@ -112,7 +112,7 @@ namespace Oci.AnnouncementsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/announcementsservice/GetAnnouncementUserStatus.cs.html">here</a> to see an example of how to use GetAnnouncementUserStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/announcementsservice/GetAnnouncementUserStatus.cs.html">here</a> to see an example of how to use GetAnnouncementUserStatus API.</example>
         public async Task<GetAnnouncementUserStatusResponse> GetAnnouncementUserStatus(GetAnnouncementUserStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAnnouncementUserStatus");
@@ -152,7 +152,7 @@ namespace Oci.AnnouncementsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/announcementsservice/ListAnnouncements.cs.html">here</a> to see an example of how to use ListAnnouncements API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/announcementsservice/ListAnnouncements.cs.html">here</a> to see an example of how to use ListAnnouncements API.</example>
         public async Task<ListAnnouncementsResponse> ListAnnouncements(ListAnnouncementsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAnnouncements");
@@ -192,7 +192,7 @@ namespace Oci.AnnouncementsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/announcementsservice/UpdateAnnouncementUserStatus.cs.html">here</a> to see an example of how to use UpdateAnnouncementUserStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/announcementsservice/UpdateAnnouncementUserStatus.cs.html">here</a> to see an example of how to use UpdateAnnouncementUserStatus API.</example>
         public async Task<UpdateAnnouncementUserStatusResponse> UpdateAnnouncementUserStatus(UpdateAnnouncementUserStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAnnouncementUserStatus");

@@ -47,10 +47,6 @@ namespace Oci.LoadbalancerService.Models
         /// <br/>
         /// Example: example_certificate_bundle
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CertificateName is required.")]
         [JsonProperty(PropertyName = "certificateName")]
         public string CertificateName { get; set; }
         

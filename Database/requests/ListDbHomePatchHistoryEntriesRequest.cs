@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListDbHomePatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbHomePatchHistoryEntries request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListDbHomePatchHistoryEntries.cs.html">here</a> to see an example of how to use ListDbHomePatchHistoryEntries request.
     /// </example>
     public class ListDbHomePatchHistoryEntriesRequest : Oci.Common.IOciRequest
     {

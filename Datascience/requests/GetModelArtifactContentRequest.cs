@@ -14,7 +14,7 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datascience/GetModelArtifactContent.cs.html">here</a> to see an example of how to use GetModelArtifactContent request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/GetModelArtifactContent.cs.html">here</a> to see an example of how to use GetModelArtifactContent request.
     /// </example>
     public class GetModelArtifactContentRequest : Oci.Common.IOciRequest
     {

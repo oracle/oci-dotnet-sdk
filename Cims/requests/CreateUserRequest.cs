@@ -14,7 +14,7 @@ using Oci.CimsService.Models;
 namespace Oci.CimsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/CreateUser.cs.html">here</a> to see an example of how to use CreateUser request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cims/CreateUser.cs.html">here</a> to see an example of how to use CreateUser request.
     /// </example>
     public class CreateUserRequest : Oci.Common.IOciRequest
     {

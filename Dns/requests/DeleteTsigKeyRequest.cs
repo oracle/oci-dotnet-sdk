@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteTsigKey.cs.html">here</a> to see an example of how to use DeleteTsigKey request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/DeleteTsigKey.cs.html">here</a> to see an example of how to use DeleteTsigKey request.
     /// </example>
     public class DeleteTsigKeyRequest : Oci.Common.IOciRequest
     {

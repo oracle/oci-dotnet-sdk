@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/StartAutonomousDatabase.cs.html">here</a> to see an example of how to use StartAutonomousDatabase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/StartAutonomousDatabase.cs.html">here</a> to see an example of how to use StartAutonomousDatabase request.
     /// </example>
     public class StartAutonomousDatabaseRequest : Oci.Common.IOciRequest
     {

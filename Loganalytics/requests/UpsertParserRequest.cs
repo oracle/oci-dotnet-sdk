@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/UpsertParser.cs.html">here</a> to see an example of how to use UpsertParser request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpsertParser.cs.html">here</a> to see an example of how to use UpsertParser request.
     /// </example>
     public class UpsertParserRequest : Oci.Common.IOciRequest
     {

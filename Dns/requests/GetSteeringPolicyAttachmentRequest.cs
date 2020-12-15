@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use GetSteeringPolicyAttachment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/GetSteeringPolicyAttachment.cs.html">here</a> to see an example of how to use GetSteeringPolicyAttachment request.
     /// </example>
     public class GetSteeringPolicyAttachmentRequest : Oci.Common.IOciRequest
     {

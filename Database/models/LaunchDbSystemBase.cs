@@ -232,6 +232,19 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> InitialDataStorageSizeInGB { get; set; }
         
         /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyVersionId")]
+        public string KmsKeyVersionId { get; set; }
+        
+        /// <value>
         /// The number of nodes to launch for a 2-node RAC virtual machine DB system. Specify either 1 or 2.
         /// 
         /// </value>

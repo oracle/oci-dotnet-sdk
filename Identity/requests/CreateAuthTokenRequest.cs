@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/CreateAuthToken.cs.html">here</a> to see an example of how to use CreateAuthToken request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/CreateAuthToken.cs.html">here</a> to see an example of how to use CreateAuthToken request.
     /// </example>
     public class CreateAuthTokenRequest : Oci.Common.IOciRequest
     {

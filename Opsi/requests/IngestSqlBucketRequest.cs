@@ -14,7 +14,7 @@ using Oci.OpsiService.Models;
 namespace Oci.OpsiService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/IngestSqlBucket.cs.html">here</a> to see an example of how to use IngestSqlBucket request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlBucket.cs.html">here</a> to see an example of how to use IngestSqlBucket request.
     /// </example>
     public class IngestSqlBucketRequest : Oci.Common.IOciRequest
     {

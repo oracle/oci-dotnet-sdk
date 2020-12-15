@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/GetRRSet.cs.html">here</a> to see an example of how to use GetRRSet request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/GetRRSet.cs.html">here</a> to see an example of how to use GetRRSet request.
     /// </example>
     public class GetRRSetRequest : Oci.Common.IOciRequest
     {

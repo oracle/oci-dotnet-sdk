@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicyAssignment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteVolumeBackupPolicyAssignment.cs.html">here</a> to see an example of how to use DeleteVolumeBackupPolicyAssignment request.
     /// </example>
     public class DeleteVolumeBackupPolicyAssignmentRequest : Oci.Common.IOciRequest
     {

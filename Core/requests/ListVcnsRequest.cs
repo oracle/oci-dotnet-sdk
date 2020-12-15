@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListVcns.cs.html">here</a> to see an example of how to use ListVcns request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListVcns.cs.html">here</a> to see an example of how to use ListVcns request.
     /// </example>
     public class ListVcnsRequest : Oci.Common.IOciRequest
     {

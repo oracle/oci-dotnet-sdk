@@ -14,7 +14,7 @@ using Oci.MysqlService.Models;
 namespace Oci.MysqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/AddAnalyticsCluster.cs.html">here</a> to see an example of how to use AddAnalyticsCluster request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/AddAnalyticsCluster.cs.html">here</a> to see an example of how to use AddAnalyticsCluster request.
     /// </example>
     public class AddAnalyticsClusterRequest : Oci.Common.IOciRequest
     {

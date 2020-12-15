@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListIpv6s.cs.html">here</a> to see an example of how to use ListIpv6s request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListIpv6s.cs.html">here</a> to see an example of how to use ListIpv6s request.
     /// </example>
     public class ListIpv6sRequest : Oci.Common.IOciRequest
     {

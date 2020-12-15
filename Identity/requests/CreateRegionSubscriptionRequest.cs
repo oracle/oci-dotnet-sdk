@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/CreateRegionSubscription.cs.html">here</a> to see an example of how to use CreateRegionSubscription request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/CreateRegionSubscription.cs.html">here</a> to see an example of how to use CreateRegionSubscription request.
     /// </example>
     public class CreateRegionSubscriptionRequest : Oci.Common.IOciRequest
     {

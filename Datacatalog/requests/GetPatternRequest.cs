@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetPattern.cs.html">here</a> to see an example of how to use GetPattern request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/GetPattern.cs.html">here</a> to see an example of how to use GetPattern request.
     /// </example>
     public class GetPatternRequest : Oci.Common.IOciRequest
     {

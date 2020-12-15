@@ -14,7 +14,7 @@ using Oci.OpsiService.Models;
 namespace Oci.OpsiService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/SummarizeDatabaseInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceForecastTrend request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceForecastTrend request.
     /// </example>
     public class SummarizeDatabaseInsightResourceForecastTrendRequest : Oci.Common.IOciRequest
     {

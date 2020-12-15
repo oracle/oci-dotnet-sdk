@@ -14,7 +14,7 @@ using Oci.IntegrationService.Models;
 namespace Oci.IntegrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/integration/ChangeIntegrationInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeIntegrationInstanceCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/integration/ChangeIntegrationInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeIntegrationInstanceCompartment request.
     /// </example>
     public class ChangeIntegrationInstanceCompartmentRequest : Oci.Common.IOciRequest
     {

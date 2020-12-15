@@ -75,7 +75,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/BackupVault.cs.html">here</a> to see an example of how to use BackupVault API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/BackupVault.cs.html">here</a> to see an example of how to use BackupVault API.</example>
         public async Task<BackupVaultResponse> BackupVault(BackupVaultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called backupVault");
@@ -123,7 +123,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/CancelVaultDeletion.cs.html">here</a> to see an example of how to use CancelVaultDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/CancelVaultDeletion.cs.html">here</a> to see an example of how to use CancelVaultDeletion API.</example>
         public async Task<CancelVaultDeletionResponse> CancelVaultDeletion(CancelVaultDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called cancelVaultDeletion");
@@ -171,7 +171,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ChangeVaultCompartment.cs.html">here</a> to see an example of how to use ChangeVaultCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ChangeVaultCompartment.cs.html">here</a> to see an example of how to use ChangeVaultCompartment API.</example>
         public async Task<ChangeVaultCompartmentResponse> ChangeVaultCompartment(ChangeVaultCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeVaultCompartment");
@@ -219,7 +219,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/CreateVault.cs.html">here</a> to see an example of how to use CreateVault API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/CreateVault.cs.html">here</a> to see an example of how to use CreateVault API.</example>
         public async Task<CreateVaultResponse> CreateVault(CreateVaultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createVault");
@@ -264,7 +264,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/GetVault.cs.html">here</a> to see an example of how to use GetVault API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/GetVault.cs.html">here</a> to see an example of how to use GetVault API.</example>
         public async Task<GetVaultResponse> GetVault(GetVaultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVault");
@@ -304,7 +304,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/GetVaultUsage.cs.html">here</a> to see an example of how to use GetVaultUsage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/GetVaultUsage.cs.html">here</a> to see an example of how to use GetVaultUsage API.</example>
         public async Task<GetVaultUsageResponse> GetVaultUsage(GetVaultUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getVaultUsage");
@@ -349,7 +349,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ListVaults.cs.html">here</a> to see an example of how to use ListVaults API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ListVaults.cs.html">here</a> to see an example of how to use ListVaults API.</example>
         public async Task<ListVaultsResponse> ListVaults(ListVaultsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listVaults");
@@ -391,7 +391,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/RestoreVaultFromFile.cs.html">here</a> to see an example of how to use RestoreVaultFromFile API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/RestoreVaultFromFile.cs.html">here</a> to see an example of how to use RestoreVaultFromFile API.</example>
         public async Task<RestoreVaultFromFileResponse> RestoreVaultFromFile(RestoreVaultFromFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreVaultFromFile");
@@ -433,7 +433,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/RestoreVaultFromObjectStore.cs.html">here</a> to see an example of how to use RestoreVaultFromObjectStore API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/RestoreVaultFromObjectStore.cs.html">here</a> to see an example of how to use RestoreVaultFromObjectStore API.</example>
         public async Task<RestoreVaultFromObjectStoreResponse> RestoreVaultFromObjectStore(RestoreVaultFromObjectStoreRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called restoreVaultFromObjectStore");
@@ -482,7 +482,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ScheduleVaultDeletion.cs.html">here</a> to see an example of how to use ScheduleVaultDeletion API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ScheduleVaultDeletion.cs.html">here</a> to see an example of how to use ScheduleVaultDeletion API.</example>
         public async Task<ScheduleVaultDeletionResponse> ScheduleVaultDeletion(ScheduleVaultDeletionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called scheduleVaultDeletion");
@@ -529,7 +529,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/UpdateVault.cs.html">here</a> to see an example of how to use UpdateVault API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/UpdateVault.cs.html">here</a> to see an example of how to use UpdateVault API.</example>
         public async Task<UpdateVaultResponse> UpdateVault(UpdateVaultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateVault");

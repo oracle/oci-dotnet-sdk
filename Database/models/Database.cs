@@ -103,7 +103,7 @@ namespace Oci.DatabaseService.Models
         public string DbUniqueName { get; set; }
         
         /// <value>
-        /// Additional information about the current lifecycleState.
+        /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
@@ -181,6 +181,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "connectionStrings")]
         public DatabaseConnectionStrings ConnectionStrings { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
         
         /// <value>
         /// Point in time recovery timeStamp of the source database at which cloned database system is cloned from the source database system, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339)

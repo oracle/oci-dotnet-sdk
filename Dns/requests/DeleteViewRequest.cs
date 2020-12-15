@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/DeleteView.cs.html">here</a> to see an example of how to use DeleteView request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/DeleteView.cs.html">here</a> to see an example of how to use DeleteView request.
     /// </example>
     public class DeleteViewRequest : Oci.Common.IOciRequest
     {

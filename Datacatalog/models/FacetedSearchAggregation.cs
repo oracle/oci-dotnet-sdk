@@ -33,5 +33,35 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "aggregation")]
         public System.Collections.Generic.Dictionary<string, long> Aggregation { get; set; }
         
+        /// <value>
+        /// Data type of object property.
+        /// </value>
+        [JsonProperty(PropertyName = "dataType")]
+        public string DataType { get; set; }
+                ///
+        /// <value>
+        /// Type of property that indicates if it was defined by the user or system.
+        /// CUSTOM_PROPERTY is defined by the user on a data object.
+        /// DEFAULT_PROPERTY is defined by the system on a data object.
+        /// 
+        /// </value>
+        ///
+        public enum PropertyTypeEnum {
+            [EnumMember(Value = "CUSTOM_PROPERTY")]
+            CustomProperty,
+            [EnumMember(Value = "DEFAULT_PROPERTY")]
+            DefaultProperty
+        };
+
+        /// <value>
+        /// Type of property that indicates if it was defined by the user or system.
+        /// CUSTOM_PROPERTY is defined by the user on a data object.
+        /// DEFAULT_PROPERTY is defined by the system on a data object.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "propertyType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PropertyTypeEnum> PropertyType { get; set; }
+        
     }
 }

@@ -72,7 +72,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ChangeDetectorRecipeCompartment.cs.html">here</a> to see an example of how to use ChangeDetectorRecipeCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ChangeDetectorRecipeCompartment.cs.html">here</a> to see an example of how to use ChangeDetectorRecipeCompartment API.</example>
         public async Task<ChangeDetectorRecipeCompartmentResponse> ChangeDetectorRecipeCompartment(ChangeDetectorRecipeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeDetectorRecipeCompartment");
@@ -111,7 +111,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ChangeManagedListCompartment.cs.html">here</a> to see an example of how to use ChangeManagedListCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ChangeManagedListCompartment.cs.html">here</a> to see an example of how to use ChangeManagedListCompartment API.</example>
         public async Task<ChangeManagedListCompartmentResponse> ChangeManagedListCompartment(ChangeManagedListCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeManagedListCompartment");
@@ -150,7 +150,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ChangeResponderRecipeCompartment.cs.html">here</a> to see an example of how to use ChangeResponderRecipeCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ChangeResponderRecipeCompartment.cs.html">here</a> to see an example of how to use ChangeResponderRecipeCompartment API.</example>
         public async Task<ChangeResponderRecipeCompartmentResponse> ChangeResponderRecipeCompartment(ChangeResponderRecipeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeResponderRecipeCompartment");
@@ -190,7 +190,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateDetectorRecipe.cs.html">here</a> to see an example of how to use CreateDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateDetectorRecipe.cs.html">here</a> to see an example of how to use CreateDetectorRecipe API.</example>
         public async Task<CreateDetectorRecipeResponse> CreateDetectorRecipe(CreateDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createDetectorRecipe");
@@ -230,7 +230,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateManagedList.cs.html">here</a> to see an example of how to use CreateManagedList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateManagedList.cs.html">here</a> to see an example of how to use CreateManagedList API.</example>
         public async Task<CreateManagedListResponse> CreateManagedList(CreateManagedListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createManagedList");
@@ -270,7 +270,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateResponderRecipe.cs.html">here</a> to see an example of how to use CreateResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateResponderRecipe.cs.html">here</a> to see an example of how to use CreateResponderRecipe API.</example>
         public async Task<CreateResponderRecipeResponse> CreateResponderRecipe(CreateResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createResponderRecipe");
@@ -310,7 +310,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateTarget.cs.html">here</a> to see an example of how to use CreateTarget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateTarget.cs.html">here</a> to see an example of how to use CreateTarget API.</example>
         public async Task<CreateTargetResponse> CreateTarget(CreateTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTarget");
@@ -350,7 +350,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateTargetDetectorRecipe.cs.html">here</a> to see an example of how to use CreateTargetDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateTargetDetectorRecipe.cs.html">here</a> to see an example of how to use CreateTargetDetectorRecipe API.</example>
         public async Task<CreateTargetDetectorRecipeResponse> CreateTargetDetectorRecipe(CreateTargetDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTargetDetectorRecipe");
@@ -390,7 +390,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/CreateTargetResponderRecipe.cs.html">here</a> to see an example of how to use CreateTargetResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/CreateTargetResponderRecipe.cs.html">here</a> to see an example of how to use CreateTargetResponderRecipe API.</example>
         public async Task<CreateTargetResponderRecipeResponse> CreateTargetResponderRecipe(CreateTargetResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTargetResponderRecipe");
@@ -429,7 +429,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteDetectorRecipe.cs.html">here</a> to see an example of how to use DeleteDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteDetectorRecipe.cs.html">here</a> to see an example of how to use DeleteDetectorRecipe API.</example>
         public async Task<DeleteDetectorRecipeResponse> DeleteDetectorRecipe(DeleteDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteDetectorRecipe");
@@ -468,7 +468,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteManagedList.cs.html">here</a> to see an example of how to use DeleteManagedList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteManagedList.cs.html">here</a> to see an example of how to use DeleteManagedList API.</example>
         public async Task<DeleteManagedListResponse> DeleteManagedList(DeleteManagedListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteManagedList");
@@ -507,7 +507,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteResponderRecipe.cs.html">here</a> to see an example of how to use DeleteResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteResponderRecipe.cs.html">here</a> to see an example of how to use DeleteResponderRecipe API.</example>
         public async Task<DeleteResponderRecipeResponse> DeleteResponderRecipe(DeleteResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteResponderRecipe");
@@ -546,7 +546,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteTarget.cs.html">here</a> to see an example of how to use DeleteTarget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteTarget.cs.html">here</a> to see an example of how to use DeleteTarget API.</example>
         public async Task<DeleteTargetResponse> DeleteTarget(DeleteTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTarget");
@@ -585,7 +585,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteTargetDetectorRecipe.cs.html">here</a> to see an example of how to use DeleteTargetDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteTargetDetectorRecipe.cs.html">here</a> to see an example of how to use DeleteTargetDetectorRecipe API.</example>
         public async Task<DeleteTargetDetectorRecipeResponse> DeleteTargetDetectorRecipe(DeleteTargetDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTargetDetectorRecipe");
@@ -624,7 +624,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/DeleteTargetResponderRecipe.cs.html">here</a> to see an example of how to use DeleteTargetResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/DeleteTargetResponderRecipe.cs.html">here</a> to see an example of how to use DeleteTargetResponderRecipe API.</example>
         public async Task<DeleteTargetResponderRecipeResponse> DeleteTargetResponderRecipe(DeleteTargetResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTargetResponderRecipe");
@@ -663,7 +663,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ExecuteResponderExecution.cs.html">here</a> to see an example of how to use ExecuteResponderExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ExecuteResponderExecution.cs.html">here</a> to see an example of how to use ExecuteResponderExecution API.</example>
         public async Task<ExecuteResponderExecutionResponse> ExecuteResponderExecution(ExecuteResponderExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called executeResponderExecution");
@@ -703,7 +703,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetConditionMetadataType.cs.html">here</a> to see an example of how to use GetConditionMetadataType API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetConditionMetadataType.cs.html">here</a> to see an example of how to use GetConditionMetadataType API.</example>
         public async Task<GetConditionMetadataTypeResponse> GetConditionMetadataType(GetConditionMetadataTypeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConditionMetadataType");
@@ -742,7 +742,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetConfiguration.cs.html">here</a> to see an example of how to use GetConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetConfiguration.cs.html">here</a> to see an example of how to use GetConfiguration API.</example>
         public async Task<GetConfigurationResponse> GetConfiguration(GetConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getConfiguration");
@@ -782,7 +782,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetDetector.cs.html">here</a> to see an example of how to use GetDetector API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetDetector.cs.html">here</a> to see an example of how to use GetDetector API.</example>
         public async Task<GetDetectorResponse> GetDetector(GetDetectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDetector");
@@ -821,7 +821,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetDetectorRecipe.cs.html">here</a> to see an example of how to use GetDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetDetectorRecipe.cs.html">here</a> to see an example of how to use GetDetectorRecipe API.</example>
         public async Task<GetDetectorRecipeResponse> GetDetectorRecipe(GetDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDetectorRecipe");
@@ -860,7 +860,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetDetectorRecipeDetectorRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetDetectorRecipeDetectorRule API.</example>
         public async Task<GetDetectorRecipeDetectorRuleResponse> GetDetectorRecipeDetectorRule(GetDetectorRecipeDetectorRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDetectorRecipeDetectorRule");
@@ -900,7 +900,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetDetectorRule.cs.html">here</a> to see an example of how to use GetDetectorRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetDetectorRule.cs.html">here</a> to see an example of how to use GetDetectorRule API.</example>
         public async Task<GetDetectorRuleResponse> GetDetectorRule(GetDetectorRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getDetectorRule");
@@ -939,7 +939,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetManagedList.cs.html">here</a> to see an example of how to use GetManagedList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetManagedList.cs.html">here</a> to see an example of how to use GetManagedList API.</example>
         public async Task<GetManagedListResponse> GetManagedList(GetManagedListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getManagedList");
@@ -978,7 +978,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetProblem.cs.html">here</a> to see an example of how to use GetProblem API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetProblem.cs.html">here</a> to see an example of how to use GetProblem API.</example>
         public async Task<GetProblemResponse> GetProblem(GetProblemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getProblem");
@@ -1018,7 +1018,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetResponderExecution.cs.html">here</a> to see an example of how to use GetResponderExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetResponderExecution.cs.html">here</a> to see an example of how to use GetResponderExecution API.</example>
         public async Task<GetResponderExecutionResponse> GetResponderExecution(GetResponderExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResponderExecution");
@@ -1057,7 +1057,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetResponderRecipe.cs.html">here</a> to see an example of how to use GetResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetResponderRecipe.cs.html">here</a> to see an example of how to use GetResponderRecipe API.</example>
         public async Task<GetResponderRecipeResponse> GetResponderRecipe(GetResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResponderRecipe");
@@ -1096,7 +1096,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use GetResponderRecipeResponderRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use GetResponderRecipeResponderRule API.</example>
         public async Task<GetResponderRecipeResponderRuleResponse> GetResponderRecipeResponderRule(GetResponderRecipeResponderRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResponderRecipeResponderRule");
@@ -1135,7 +1135,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetResponderRule.cs.html">here</a> to see an example of how to use GetResponderRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetResponderRule.cs.html">here</a> to see an example of how to use GetResponderRule API.</example>
         public async Task<GetResponderRuleResponse> GetResponderRule(GetResponderRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getResponderRule");
@@ -1174,7 +1174,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTarget.cs.html">here</a> to see an example of how to use GetTarget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTarget.cs.html">here</a> to see an example of how to use GetTarget API.</example>
         public async Task<GetTargetResponse> GetTarget(GetTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTarget");
@@ -1213,7 +1213,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTargetDetectorRecipe.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTargetDetectorRecipe.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipe API.</example>
         public async Task<GetTargetDetectorRecipeResponse> GetTargetDetectorRecipe(GetTargetDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTargetDetectorRecipe");
@@ -1252,7 +1252,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipeDetectorRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use GetTargetDetectorRecipeDetectorRule API.</example>
         public async Task<GetTargetDetectorRecipeDetectorRuleResponse> GetTargetDetectorRecipeDetectorRule(GetTargetDetectorRecipeDetectorRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTargetDetectorRecipeDetectorRule");
@@ -1291,7 +1291,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTargetResponderRecipe.cs.html">here</a> to see an example of how to use GetTargetResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTargetResponderRecipe.cs.html">here</a> to see an example of how to use GetTargetResponderRecipe API.</example>
         public async Task<GetTargetResponderRecipeResponse> GetTargetResponderRecipe(GetTargetResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTargetResponderRecipe");
@@ -1330,7 +1330,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTargetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use GetTargetResponderRecipeResponderRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTargetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use GetTargetResponderRecipeResponderRule API.</example>
         public async Task<GetTargetResponderRecipeResponderRuleResponse> GetTargetResponderRecipeResponderRule(GetTargetResponderRecipeResponderRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTargetResponderRecipeResponderRule");
@@ -1370,7 +1370,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListConditionMetadataTypes.cs.html">here</a> to see an example of how to use ListConditionMetadataTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListConditionMetadataTypes.cs.html">here</a> to see an example of how to use ListConditionMetadataTypes API.</example>
         public async Task<ListConditionMetadataTypesResponse> ListConditionMetadataTypes(ListConditionMetadataTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listConditionMetadataTypes");
@@ -1410,7 +1410,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListDetectorRecipeDetectorRules.cs.html">here</a> to see an example of how to use ListDetectorRecipeDetectorRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListDetectorRecipeDetectorRules.cs.html">here</a> to see an example of how to use ListDetectorRecipeDetectorRules API.</example>
         public async Task<ListDetectorRecipeDetectorRulesResponse> ListDetectorRecipeDetectorRules(ListDetectorRecipeDetectorRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDetectorRecipeDetectorRules");
@@ -1464,7 +1464,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListDetectorRecipes.cs.html">here</a> to see an example of how to use ListDetectorRecipes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListDetectorRecipes.cs.html">here</a> to see an example of how to use ListDetectorRecipes API.</example>
         public async Task<ListDetectorRecipesResponse> ListDetectorRecipes(ListDetectorRecipesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDetectorRecipes");
@@ -1504,7 +1504,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListDetectorRules.cs.html">here</a> to see an example of how to use ListDetectorRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListDetectorRules.cs.html">here</a> to see an example of how to use ListDetectorRules API.</example>
         public async Task<ListDetectorRulesResponse> ListDetectorRules(ListDetectorRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDetectorRules");
@@ -1544,7 +1544,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListDetectors.cs.html">here</a> to see an example of how to use ListDetectors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListDetectors.cs.html">here</a> to see an example of how to use ListDetectors API.</example>
         public async Task<ListDetectorsResponse> ListDetectors(ListDetectorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listDetectors");
@@ -1584,7 +1584,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListImpactedResources.cs.html">here</a> to see an example of how to use ListImpactedResources API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListImpactedResources.cs.html">here</a> to see an example of how to use ListImpactedResources API.</example>
         public async Task<ListImpactedResourcesResponse> ListImpactedResources(ListImpactedResourcesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listImpactedResources");
@@ -1623,7 +1623,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListManagedListTypes.cs.html">here</a> to see an example of how to use ListManagedListTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListManagedListTypes.cs.html">here</a> to see an example of how to use ListManagedListTypes API.</example>
         public async Task<ListManagedListTypesResponse> ListManagedListTypes(ListManagedListTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagedListTypes");
@@ -1676,7 +1676,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListManagedLists.cs.html">here</a> to see an example of how to use ListManagedLists API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListManagedLists.cs.html">here</a> to see an example of how to use ListManagedLists API.</example>
         public async Task<ListManagedListsResponse> ListManagedLists(ListManagedListsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listManagedLists");
@@ -1716,7 +1716,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListProblemHistories.cs.html">here</a> to see an example of how to use ListProblemHistories API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListProblemHistories.cs.html">here</a> to see an example of how to use ListProblemHistories API.</example>
         public async Task<ListProblemHistoriesResponse> ListProblemHistories(ListProblemHistoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listProblemHistories");
@@ -1770,7 +1770,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListProblems.cs.html">here</a> to see an example of how to use ListProblems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListProblems.cs.html">here</a> to see an example of how to use ListProblems API.</example>
         public async Task<ListProblemsResponse> ListProblems(ListProblemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listProblems");
@@ -1810,7 +1810,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListRecommendations.cs.html">here</a> to see an example of how to use ListRecommendations API.</example>
         public async Task<ListRecommendationsResponse> ListRecommendations(ListRecommendationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRecommendations");
@@ -1850,7 +1850,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResourceTypes.cs.html">here</a> to see an example of how to use ListResourceTypes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResourceTypes.cs.html">here</a> to see an example of how to use ListResourceTypes API.</example>
         public async Task<ListResourceTypesResponse> ListResourceTypes(ListResourceTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResourceTypes");
@@ -1890,7 +1890,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResponderActivities.cs.html">here</a> to see an example of how to use ListResponderActivities API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResponderActivities.cs.html">here</a> to see an example of how to use ListResponderActivities API.</example>
         public async Task<ListResponderActivitiesResponse> ListResponderActivities(ListResponderActivitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResponderActivities");
@@ -1930,7 +1930,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResponderExecutions.cs.html">here</a> to see an example of how to use ListResponderExecutions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResponderExecutions.cs.html">here</a> to see an example of how to use ListResponderExecutions API.</example>
         public async Task<ListResponderExecutionsResponse> ListResponderExecutions(ListResponderExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResponderExecutions");
@@ -1970,7 +1970,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResponderRecipeResponderRules.cs.html">here</a> to see an example of how to use ListResponderRecipeResponderRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResponderRecipeResponderRules.cs.html">here</a> to see an example of how to use ListResponderRecipeResponderRules API.</example>
         public async Task<ListResponderRecipeResponderRulesResponse> ListResponderRecipeResponderRules(ListResponderRecipeResponderRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResponderRecipeResponderRules");
@@ -2023,7 +2023,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResponderRecipes.cs.html">here</a> to see an example of how to use ListResponderRecipes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResponderRecipes.cs.html">here</a> to see an example of how to use ListResponderRecipes API.</example>
         public async Task<ListResponderRecipesResponse> ListResponderRecipes(ListResponderRecipesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResponderRecipes");
@@ -2063,7 +2063,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListResponderRules.cs.html">here</a> to see an example of how to use ListResponderRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListResponderRules.cs.html">here</a> to see an example of how to use ListResponderRules API.</example>
         public async Task<ListResponderRulesResponse> ListResponderRules(ListResponderRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listResponderRules");
@@ -2103,7 +2103,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListTargetDetectorRecipeDetectorRules.cs.html">here</a> to see an example of how to use ListTargetDetectorRecipeDetectorRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListTargetDetectorRecipeDetectorRules.cs.html">here</a> to see an example of how to use ListTargetDetectorRecipeDetectorRules API.</example>
         public async Task<ListTargetDetectorRecipeDetectorRulesResponse> ListTargetDetectorRecipeDetectorRules(ListTargetDetectorRecipeDetectorRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTargetDetectorRecipeDetectorRules");
@@ -2142,7 +2142,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListTargetDetectorRecipes.cs.html">here</a> to see an example of how to use ListTargetDetectorRecipes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListTargetDetectorRecipes.cs.html">here</a> to see an example of how to use ListTargetDetectorRecipes API.</example>
         public async Task<ListTargetDetectorRecipesResponse> ListTargetDetectorRecipes(ListTargetDetectorRecipesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTargetDetectorRecipes");
@@ -2182,7 +2182,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListTargetResponderRecipeResponderRules.cs.html">here</a> to see an example of how to use ListTargetResponderRecipeResponderRules API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListTargetResponderRecipeResponderRules.cs.html">here</a> to see an example of how to use ListTargetResponderRecipeResponderRules API.</example>
         public async Task<ListTargetResponderRecipeResponderRulesResponse> ListTargetResponderRecipeResponderRules(ListTargetResponderRecipeResponderRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTargetResponderRecipeResponderRules");
@@ -2221,7 +2221,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListTargetResponderRecipes.cs.html">here</a> to see an example of how to use ListTargetResponderRecipes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListTargetResponderRecipes.cs.html">here</a> to see an example of how to use ListTargetResponderRecipes API.</example>
         public async Task<ListTargetResponderRecipesResponse> ListTargetResponderRecipes(ListTargetResponderRecipesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTargetResponderRecipes");
@@ -2274,7 +2274,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/ListTargets.cs.html">here</a> to see an example of how to use ListTargets API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/ListTargets.cs.html">here</a> to see an example of how to use ListTargets API.</example>
         public async Task<ListTargetsResponse> ListTargets(ListTargetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTargets");
@@ -2314,7 +2314,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestRiskScores.cs.html">here</a> to see an example of how to use RequestRiskScores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestRiskScores.cs.html">here</a> to see an example of how to use RequestRiskScores API.</example>
         public async Task<RequestRiskScoresResponse> RequestRiskScores(RequestRiskScoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestRiskScores");
@@ -2355,7 +2355,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSecurityScoreSummarizedTrend.cs.html">here</a> to see an example of how to use RequestSecurityScoreSummarizedTrend API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSecurityScoreSummarizedTrend.cs.html">here</a> to see an example of how to use RequestSecurityScoreSummarizedTrend API.</example>
         public async Task<RequestSecurityScoreSummarizedTrendResponse> RequestSecurityScoreSummarizedTrend(RequestSecurityScoreSummarizedTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSecurityScoreSummarizedTrend");
@@ -2395,7 +2395,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSecurityScores.cs.html">here</a> to see an example of how to use RequestSecurityScores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSecurityScores.cs.html">here</a> to see an example of how to use RequestSecurityScores API.</example>
         public async Task<RequestSecurityScoresResponse> RequestSecurityScores(RequestSecurityScoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSecurityScores");
@@ -2449,7 +2449,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedActivityProblems.cs.html">here</a> to see an example of how to use RequestSummarizedActivityProblems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedActivityProblems.cs.html">here</a> to see an example of how to use RequestSummarizedActivityProblems API.</example>
         public async Task<RequestSummarizedActivityProblemsResponse> RequestSummarizedActivityProblems(RequestSummarizedActivityProblemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedActivityProblems");
@@ -2500,7 +2500,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedProblems.cs.html">here</a> to see an example of how to use RequestSummarizedProblems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedProblems.cs.html">here</a> to see an example of how to use RequestSummarizedProblems API.</example>
         public async Task<RequestSummarizedProblemsResponse> RequestSummarizedProblems(RequestSummarizedProblemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedProblems");
@@ -2551,7 +2551,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedResponderExecutions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedResponderExecutions API.</example>
         public async Task<RequestSummarizedResponderExecutionsResponse> RequestSummarizedResponderExecutions(RequestSummarizedResponderExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedResponderExecutions");
@@ -2591,7 +2591,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedRiskScores.cs.html">here</a> to see an example of how to use RequestSummarizedRiskScores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedRiskScores.cs.html">here</a> to see an example of how to use RequestSummarizedRiskScores API.</example>
         public async Task<RequestSummarizedRiskScoresResponse> RequestSummarizedRiskScores(RequestSummarizedRiskScoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedRiskScores");
@@ -2631,7 +2631,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedSecurityScores.cs.html">here</a> to see an example of how to use RequestSummarizedSecurityScores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedSecurityScores.cs.html">here</a> to see an example of how to use RequestSummarizedSecurityScores API.</example>
         public async Task<RequestSummarizedSecurityScoresResponse> RequestSummarizedSecurityScores(RequestSummarizedSecurityScoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedSecurityScores");
@@ -2682,7 +2682,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedTrendProblems.cs.html">here</a> to see an example of how to use RequestSummarizedTrendProblems API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedTrendProblems.cs.html">here</a> to see an example of how to use RequestSummarizedTrendProblems API.</example>
         public async Task<RequestSummarizedTrendProblemsResponse> RequestSummarizedTrendProblems(RequestSummarizedTrendProblemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedTrendProblems");
@@ -2733,7 +2733,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedTrendResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedTrendResponderExecutions API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedTrendResponderExecutions.cs.html">here</a> to see an example of how to use RequestSummarizedTrendResponderExecutions API.</example>
         public async Task<RequestSummarizedTrendResponderExecutionsResponse> RequestSummarizedTrendResponderExecutions(RequestSummarizedTrendResponderExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedTrendResponderExecutions");
@@ -2773,7 +2773,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/RequestSummarizedTrendSecurityScores.cs.html">here</a> to see an example of how to use RequestSummarizedTrendSecurityScores API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/RequestSummarizedTrendSecurityScores.cs.html">here</a> to see an example of how to use RequestSummarizedTrendSecurityScores API.</example>
         public async Task<RequestSummarizedTrendSecurityScoresResponse> RequestSummarizedTrendSecurityScores(RequestSummarizedTrendSecurityScoresRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called requestSummarizedTrendSecurityScores");
@@ -2814,7 +2814,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/SkipBulkResponderExecution.cs.html">here</a> to see an example of how to use SkipBulkResponderExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/SkipBulkResponderExecution.cs.html">here</a> to see an example of how to use SkipBulkResponderExecution API.</example>
         public async Task<SkipBulkResponderExecutionResponse> SkipBulkResponderExecution(SkipBulkResponderExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called skipBulkResponderExecution");
@@ -2853,7 +2853,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/SkipResponderExecution.cs.html">here</a> to see an example of how to use SkipResponderExecution API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/SkipResponderExecution.cs.html">here</a> to see an example of how to use SkipResponderExecution API.</example>
         public async Task<SkipResponderExecutionResponse> SkipResponderExecution(SkipResponderExecutionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called skipResponderExecution");
@@ -2893,7 +2893,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/TriggerResponder.cs.html">here</a> to see an example of how to use TriggerResponder API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/TriggerResponder.cs.html">here</a> to see an example of how to use TriggerResponder API.</example>
         public async Task<TriggerResponderResponse> TriggerResponder(TriggerResponderRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called triggerResponder");
@@ -2934,7 +2934,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateBulkProblemStatus.cs.html">here</a> to see an example of how to use UpdateBulkProblemStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateBulkProblemStatus.cs.html">here</a> to see an example of how to use UpdateBulkProblemStatus API.</example>
         public async Task<UpdateBulkProblemStatusResponse> UpdateBulkProblemStatus(UpdateBulkProblemStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBulkProblemStatus");
@@ -2974,7 +2974,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration API.</example>
         public async Task<UpdateConfigurationResponse> UpdateConfiguration(UpdateConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateConfiguration");
@@ -3013,7 +3013,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateDetectorRecipe.cs.html">here</a> to see an example of how to use UpdateDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateDetectorRecipe.cs.html">here</a> to see an example of how to use UpdateDetectorRecipe API.</example>
         public async Task<UpdateDetectorRecipeResponse> UpdateDetectorRecipe(UpdateDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDetectorRecipe");
@@ -3052,7 +3052,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use UpdateDetectorRecipeDetectorRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use UpdateDetectorRecipeDetectorRule API.</example>
         public async Task<UpdateDetectorRecipeDetectorRuleResponse> UpdateDetectorRecipeDetectorRule(UpdateDetectorRecipeDetectorRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateDetectorRecipeDetectorRule");
@@ -3091,7 +3091,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateManagedList.cs.html">here</a> to see an example of how to use UpdateManagedList API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateManagedList.cs.html">here</a> to see an example of how to use UpdateManagedList API.</example>
         public async Task<UpdateManagedListResponse> UpdateManagedList(UpdateManagedListRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateManagedList");
@@ -3131,7 +3131,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateProblemStatus.cs.html">here</a> to see an example of how to use UpdateProblemStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateProblemStatus.cs.html">here</a> to see an example of how to use UpdateProblemStatus API.</example>
         public async Task<UpdateProblemStatusResponse> UpdateProblemStatus(UpdateProblemStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateProblemStatus");
@@ -3170,7 +3170,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateResponderRecipe.cs.html">here</a> to see an example of how to use UpdateResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateResponderRecipe.cs.html">here</a> to see an example of how to use UpdateResponderRecipe API.</example>
         public async Task<UpdateResponderRecipeResponse> UpdateResponderRecipe(UpdateResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateResponderRecipe");
@@ -3209,7 +3209,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use UpdateResponderRecipeResponderRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use UpdateResponderRecipeResponderRule API.</example>
         public async Task<UpdateResponderRecipeResponderRuleResponse> UpdateResponderRecipeResponderRule(UpdateResponderRecipeResponderRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateResponderRecipeResponderRule");
@@ -3248,7 +3248,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateTarget.cs.html">here</a> to see an example of how to use UpdateTarget API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateTarget.cs.html">here</a> to see an example of how to use UpdateTarget API.</example>
         public async Task<UpdateTargetResponse> UpdateTarget(UpdateTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTarget");
@@ -3287,7 +3287,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateTargetDetectorRecipe.cs.html">here</a> to see an example of how to use UpdateTargetDetectorRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateTargetDetectorRecipe.cs.html">here</a> to see an example of how to use UpdateTargetDetectorRecipe API.</example>
         public async Task<UpdateTargetDetectorRecipeResponse> UpdateTargetDetectorRecipe(UpdateTargetDetectorRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTargetDetectorRecipe");
@@ -3326,7 +3326,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use UpdateTargetDetectorRecipeDetectorRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateTargetDetectorRecipeDetectorRule.cs.html">here</a> to see an example of how to use UpdateTargetDetectorRecipeDetectorRule API.</example>
         public async Task<UpdateTargetDetectorRecipeDetectorRuleResponse> UpdateTargetDetectorRecipeDetectorRule(UpdateTargetDetectorRecipeDetectorRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTargetDetectorRecipeDetectorRule");
@@ -3365,7 +3365,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateTargetResponderRecipe.cs.html">here</a> to see an example of how to use UpdateTargetResponderRecipe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateTargetResponderRecipe.cs.html">here</a> to see an example of how to use UpdateTargetResponderRecipe API.</example>
         public async Task<UpdateTargetResponderRecipeResponse> UpdateTargetResponderRecipe(UpdateTargetResponderRecipeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTargetResponderRecipe");
@@ -3404,7 +3404,7 @@ namespace Oci.CloudguardService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/UpdateTargetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use UpdateTargetResponderRecipeResponderRule API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/UpdateTargetResponderRecipeResponderRule.cs.html">here</a> to see an example of how to use UpdateTargetResponderRecipeResponderRule API.</example>
         public async Task<UpdateTargetResponderRecipeResponderRuleResponse> UpdateTargetResponderRecipeResponderRule(UpdateTargetResponderRecipeResponderRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTargetResponderRecipeResponderRule");

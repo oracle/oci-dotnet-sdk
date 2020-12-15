@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/GetParser.cs.html">here</a> to see an example of how to use GetParser request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetParser.cs.html">here</a> to see an example of how to use GetParser request.
     /// </example>
     public class GetParserRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/ListAutonomousDbVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbVersions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListAutonomousDbVersions.cs.html">here</a> to see an example of how to use ListAutonomousDbVersions request.
     /// </example>
     public class ListAutonomousDbVersionsRequest : Oci.Common.IOciRequest
     {

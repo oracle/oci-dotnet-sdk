@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ValidateByoipRange.cs.html">here</a> to see an example of how to use ValidateByoipRange request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ValidateByoipRange.cs.html">here</a> to see an example of how to use ValidateByoipRange request.
     /// </example>
     public class ValidateByoipRangeRequest : Oci.Common.IOciRequest
     {

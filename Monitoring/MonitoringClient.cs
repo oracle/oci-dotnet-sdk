@@ -75,7 +75,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/ChangeAlarmCompartment.cs.html">here</a> to see an example of how to use ChangeAlarmCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/ChangeAlarmCompartment.cs.html">here</a> to see an example of how to use ChangeAlarmCompartment API.</example>
         public async Task<ChangeAlarmCompartmentResponse> ChangeAlarmCompartment(ChangeAlarmCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeAlarmCompartment");
@@ -120,7 +120,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/CreateAlarm.cs.html">here</a> to see an example of how to use CreateAlarm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/CreateAlarm.cs.html">here</a> to see an example of how to use CreateAlarm API.</example>
         public async Task<CreateAlarmResponse> CreateAlarm(CreateAlarmRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createAlarm");
@@ -165,7 +165,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/DeleteAlarm.cs.html">here</a> to see an example of how to use DeleteAlarm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/DeleteAlarm.cs.html">here</a> to see an example of how to use DeleteAlarm API.</example>
         public async Task<DeleteAlarmResponse> DeleteAlarm(DeleteAlarmRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteAlarm");
@@ -210,7 +210,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/GetAlarm.cs.html">here</a> to see an example of how to use GetAlarm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/GetAlarm.cs.html">here</a> to see an example of how to use GetAlarm API.</example>
         public async Task<GetAlarmResponse> GetAlarm(GetAlarmRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAlarm");
@@ -255,7 +255,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/GetAlarmHistory.cs.html">here</a> to see an example of how to use GetAlarmHistory API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/GetAlarmHistory.cs.html">here</a> to see an example of how to use GetAlarmHistory API.</example>
         public async Task<GetAlarmHistoryResponse> GetAlarmHistory(GetAlarmHistoryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getAlarmHistory");
@@ -300,7 +300,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/ListAlarms.cs.html">here</a> to see an example of how to use ListAlarms API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/ListAlarms.cs.html">here</a> to see an example of how to use ListAlarms API.</example>
         public async Task<ListAlarmsResponse> ListAlarms(ListAlarmsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAlarms");
@@ -345,7 +345,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/ListAlarmsStatus.cs.html">here</a> to see an example of how to use ListAlarmsStatus API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/ListAlarmsStatus.cs.html">here</a> to see an example of how to use ListAlarmsStatus API.</example>
         public async Task<ListAlarmsStatusResponse> ListAlarmsStatus(ListAlarmsStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listAlarmsStatus");
@@ -389,7 +389,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/ListMetrics.cs.html">here</a> to see an example of how to use ListMetrics API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/ListMetrics.cs.html">here</a> to see an example of how to use ListMetrics API.</example>
         public async Task<ListMetricsResponse> ListMetrics(ListMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listMetrics");
@@ -446,7 +446,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/PostMetricData.cs.html">here</a> to see an example of how to use PostMetricData API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/PostMetricData.cs.html">here</a> to see an example of how to use PostMetricData API.</example>
         public async Task<PostMetricDataResponse> PostMetricData(PostMetricDataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called postMetricData");
@@ -491,7 +491,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/RemoveAlarmSuppression.cs.html">here</a> to see an example of how to use RemoveAlarmSuppression API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/RemoveAlarmSuppression.cs.html">here</a> to see an example of how to use RemoveAlarmSuppression API.</example>
         public async Task<RemoveAlarmSuppressionResponse> RemoveAlarmSuppression(RemoveAlarmSuppressionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called removeAlarmSuppression");
@@ -535,7 +535,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/SummarizeMetricsData.cs.html">here</a> to see an example of how to use SummarizeMetricsData API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/SummarizeMetricsData.cs.html">here</a> to see an example of how to use SummarizeMetricsData API.</example>
         public async Task<SummarizeMetricsDataResponse> SummarizeMetricsData(SummarizeMetricsDataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeMetricsData");
@@ -580,7 +580,7 @@ namespace Oci.MonitoringService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/monitoring/UpdateAlarm.cs.html">here</a> to see an example of how to use UpdateAlarm API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/UpdateAlarm.cs.html">here</a> to see an example of how to use UpdateAlarm API.</example>
         public async Task<UpdateAlarmResponse> UpdateAlarm(UpdateAlarmRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateAlarm");

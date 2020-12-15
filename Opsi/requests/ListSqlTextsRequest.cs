@@ -14,7 +14,7 @@ using Oci.OpsiService.Models;
 namespace Oci.OpsiService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/opsi/ListSqlTexts.cs.html">here</a> to see an example of how to use ListSqlTexts request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlTexts.cs.html">here</a> to see an example of how to use ListSqlTexts request.
     /// </example>
     public class ListSqlTextsRequest : Oci.Common.IOciRequest
     {

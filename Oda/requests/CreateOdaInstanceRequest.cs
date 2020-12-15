@@ -14,7 +14,7 @@ using Oci.OdaService.Models;
 namespace Oci.OdaService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/oda/CreateOdaInstance.cs.html">here</a> to see an example of how to use CreateOdaInstance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/oda/CreateOdaInstance.cs.html">here</a> to see an example of how to use CreateOdaInstance request.
     /// </example>
     public class CreateOdaInstanceRequest : Oci.Common.IOciRequest
     {

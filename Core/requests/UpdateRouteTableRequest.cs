@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/UpdateRouteTable.cs.html">here</a> to see an example of how to use UpdateRouteTable request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateRouteTable.cs.html">here</a> to see an example of how to use UpdateRouteTable request.
     /// </example>
     public class UpdateRouteTableRequest : Oci.Common.IOciRequest
     {

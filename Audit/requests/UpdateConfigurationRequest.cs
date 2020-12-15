@@ -14,7 +14,7 @@ using Oci.AuditService.Models;
 namespace Oci.AuditService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/audit/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/audit/UpdateConfiguration.cs.html">here</a> to see an example of how to use UpdateConfiguration request.
     /// </example>
     public class UpdateConfigurationRequest : Oci.Common.IOciRequest
     {

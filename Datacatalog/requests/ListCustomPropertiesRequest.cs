@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ListCustomProperties.cs.html">here</a> to see an example of how to use ListCustomProperties request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/ListCustomProperties.cs.html">here</a> to see an example of how to use ListCustomProperties request.
     /// </example>
     public class ListCustomPropertiesRequest : Oci.Common.IOciRequest
     {
@@ -114,7 +114,11 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "FILE")]
             File,
             [EnumMember(Value = "BUCKET")]
-            Bucket
+            Bucket,
+            [EnumMember(Value = "MESSAGE")]
+            Message,
+            [EnumMember(Value = "UNRECOGNIZED_FILE")]
+            UnrecognizedFile
         };
 
         /// <value>

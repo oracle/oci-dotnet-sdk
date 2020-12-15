@@ -14,7 +14,7 @@ using Oci.HealthchecksService.Models;
 namespace Oci.HealthchecksService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListPingMonitors.cs.html">here</a> to see an example of how to use ListPingMonitors request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListPingMonitors.cs.html">here</a> to see an example of how to use ListPingMonitors request.
     /// </example>
     public class ListPingMonitorsRequest : Oci.Common.IOciRequest
     {

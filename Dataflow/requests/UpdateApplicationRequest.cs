@@ -14,7 +14,7 @@ using Oci.DataflowService.Models;
 namespace Oci.DataflowService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication request.
     /// </example>
     public class UpdateApplicationRequest : Oci.Common.IOciRequest
     {

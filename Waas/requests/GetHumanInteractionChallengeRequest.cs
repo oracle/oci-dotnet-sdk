@@ -14,7 +14,7 @@ using Oci.WaasService.Models;
 namespace Oci.WaasService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/GetHumanInteractionChallenge.cs.html">here</a> to see an example of how to use GetHumanInteractionChallenge request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/GetHumanInteractionChallenge.cs.html">here</a> to see an example of how to use GetHumanInteractionChallenge request.
     /// </example>
     public class GetHumanInteractionChallengeRequest : Oci.Common.IOciRequest
     {

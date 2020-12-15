@@ -14,7 +14,7 @@ using Oci.LoadbalancerService.Models;
 namespace Oci.LoadbalancerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loadbalancer/UpdatePathRouteSet.cs.html">here</a> to see an example of how to use UpdatePathRouteSet request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/UpdatePathRouteSet.cs.html">here</a> to see an example of how to use UpdatePathRouteSet request.
     /// </example>
     public class UpdatePathRouteSetRequest : Oci.Common.IOciRequest
     {

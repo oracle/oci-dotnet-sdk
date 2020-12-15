@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/UpdateUserState.cs.html">here</a> to see an example of how to use UpdateUserState request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/UpdateUserState.cs.html">here</a> to see an example of how to use UpdateUserState request.
     /// </example>
     public class UpdateUserStateRequest : Oci.Common.IOciRequest
     {

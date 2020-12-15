@@ -14,7 +14,7 @@ using Oci.DtsService.Models;
 namespace Oci.DtsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ListApplianceExportJobs.cs.html">here</a> to see an example of how to use ListApplianceExportJobs request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/ListApplianceExportJobs.cs.html">here</a> to see an example of how to use ListApplianceExportJobs request.
     /// </example>
     public class ListApplianceExportJobsRequest : Oci.Common.IOciRequest
     {

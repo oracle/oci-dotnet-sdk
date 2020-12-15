@@ -61,7 +61,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/Decrypt.cs.html">here</a> to see an example of how to use Decrypt API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/Decrypt.cs.html">here</a> to see an example of how to use Decrypt API.</example>
         public async Task<DecryptResponse> Decrypt(DecryptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called decrypt");
@@ -102,7 +102,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/Encrypt.cs.html">here</a> to see an example of how to use Encrypt API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/Encrypt.cs.html">here</a> to see an example of how to use Encrypt API.</example>
         public async Task<EncryptResponse> Encrypt(EncryptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called encrypt");
@@ -144,7 +144,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/ExportKey.cs.html">here</a> to see an example of how to use ExportKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ExportKey.cs.html">here</a> to see an example of how to use ExportKey API.</example>
         public async Task<ExportKeyResponse> ExportKey(ExportKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called exportKey");
@@ -184,7 +184,7 @@ namespace Oci.KeymanagementService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/GenerateDataEncryptionKey.cs.html">here</a> to see an example of how to use GenerateDataEncryptionKey API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/GenerateDataEncryptionKey.cs.html">here</a> to see an example of how to use GenerateDataEncryptionKey API.</example>
         public async Task<GenerateDataEncryptionKeyResponse> GenerateDataEncryptionKey(GenerateDataEncryptionKeyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called generateDataEncryptionKey");

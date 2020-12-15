@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/ChangeCatalogCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/ChangeCatalogCompartment.cs.html">here</a> to see an example of how to use ChangeCatalogCompartment request.
     /// </example>
     public class ChangeCatalogCompartmentRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.OsmanagementService.Models;
 namespace Oci.OsmanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/osmanagement/GetSoftwareSource.cs.html">here</a> to see an example of how to use GetSoftwareSource request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetSoftwareSource.cs.html">here</a> to see an example of how to use GetSoftwareSource request.
     /// </example>
     public class GetSoftwareSourceRequest : Oci.Common.IOciRequest
     {

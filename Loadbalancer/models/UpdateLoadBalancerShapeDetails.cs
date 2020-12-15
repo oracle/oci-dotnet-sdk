@@ -27,7 +27,9 @@ namespace Oci.LoadbalancerService.Models
         ///   *  100Mbps
         ///   *  400Mbps
         ///   *  8000Mbps
-        /// 
+        ///   *  Flexible
+        /// <br/>
+        ///   Example: Flexible
         /// </value>
         /// <remarks>
         /// Required
@@ -35,6 +37,13 @@ namespace Oci.LoadbalancerService.Models
         [Required(ErrorMessage = "ShapeName is required.")]
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
+        
+        /// <value>
+        /// The configuration details to update load balancer to a different profile.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeDetails")]
+        public ShapeDetails ShapeDetails { get; set; }
         
     }
 }

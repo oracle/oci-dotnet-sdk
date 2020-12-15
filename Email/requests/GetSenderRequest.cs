@@ -14,7 +14,7 @@ using Oci.EmailService.Models;
 namespace Oci.EmailService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/email/GetSender.cs.html">here</a> to see an example of how to use GetSender request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/GetSender.cs.html">here</a> to see an example of how to use GetSender request.
     /// </example>
     public class GetSenderRequest : Oci.Common.IOciRequest
     {

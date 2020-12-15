@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListCpes.cs.html">here</a> to see an example of how to use ListCpes request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListCpes.cs.html">here</a> to see an example of how to use ListCpes request.
     /// </example>
     public class ListCpesRequest : Oci.Common.IOciRequest
     {

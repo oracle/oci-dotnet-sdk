@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ListComputeGlobalImageCapabilitySchemaVersions.cs.html">here</a> to see an example of how to use ListComputeGlobalImageCapabilitySchemaVersions request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListComputeGlobalImageCapabilitySchemaVersions.cs.html">here</a> to see an example of how to use ListComputeGlobalImageCapabilitySchemaVersions request.
     /// </example>
     public class ListComputeGlobalImageCapabilitySchemaVersionsRequest : Oci.Common.IOciRequest
     {

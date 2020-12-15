@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ListStreamPools.cs.html">here</a> to see an example of how to use ListStreamPools request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/ListStreamPools.cs.html">here</a> to see an example of how to use ListStreamPools request.
     /// </example>
     public class ListStreamPoolsRequest : Oci.Common.IOciRequest
     {

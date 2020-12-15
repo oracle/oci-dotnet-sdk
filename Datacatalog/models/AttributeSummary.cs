@@ -140,5 +140,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
         
+        /// <value>
+        /// Rule types associated with attribute.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedRuleTypes", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<RuleType> AssociatedRuleTypes { get; set; }
+        
     }
 }

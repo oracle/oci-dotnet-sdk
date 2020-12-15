@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetTarget.cs.html">here</a> to see an example of how to use GetTarget request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetTarget.cs.html">here</a> to see an example of how to use GetTarget request.
     /// </example>
     public class GetTargetRequest : Oci.Common.IOciRequest
     {

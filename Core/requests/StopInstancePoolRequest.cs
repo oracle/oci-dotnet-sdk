@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/StopInstancePool.cs.html">here</a> to see an example of how to use StopInstancePool request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/StopInstancePool.cs.html">here</a> to see an example of how to use StopInstancePool request.
     /// </example>
     public class StopInstancePoolRequest : Oci.Common.IOciRequest
     {

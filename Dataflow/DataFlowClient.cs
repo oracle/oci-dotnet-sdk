@@ -74,7 +74,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ChangeApplicationCompartment.cs.html">here</a> to see an example of how to use ChangeApplicationCompartment API.</example>
         public async Task<ChangeApplicationCompartmentResponse> ChangeApplicationCompartment(ChangeApplicationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeApplicationCompartment");
@@ -114,7 +114,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ChangePrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangePrivateEndpointCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ChangePrivateEndpointCompartment.cs.html">here</a> to see an example of how to use ChangePrivateEndpointCompartment API.</example>
         public async Task<ChangePrivateEndpointCompartmentResponse> ChangePrivateEndpointCompartment(ChangePrivateEndpointCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changePrivateEndpointCompartment");
@@ -157,7 +157,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ChangeRunCompartment.cs.html">here</a> to see an example of how to use ChangeRunCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ChangeRunCompartment.cs.html">here</a> to see an example of how to use ChangeRunCompartment API.</example>
         public async Task<ChangeRunCompartmentResponse> ChangeRunCompartment(ChangeRunCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeRunCompartment");
@@ -197,7 +197,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/CreateApplication.cs.html">here</a> to see an example of how to use CreateApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/CreateApplication.cs.html">here</a> to see an example of how to use CreateApplication API.</example>
         public async Task<CreateApplicationResponse> CreateApplication(CreateApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createApplication");
@@ -237,7 +237,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/CreatePrivateEndpoint.cs.html">here</a> to see an example of how to use CreatePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/CreatePrivateEndpoint.cs.html">here</a> to see an example of how to use CreatePrivateEndpoint API.</example>
         public async Task<CreatePrivateEndpointResponse> CreatePrivateEndpoint(CreatePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createPrivateEndpoint");
@@ -277,7 +277,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/CreateRun.cs.html">here</a> to see an example of how to use CreateRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/CreateRun.cs.html">here</a> to see an example of how to use CreateRun API.</example>
         public async Task<CreateRunResponse> CreateRun(CreateRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createRun");
@@ -317,7 +317,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/DeleteApplication.cs.html">here</a> to see an example of how to use DeleteApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/DeleteApplication.cs.html">here</a> to see an example of how to use DeleteApplication API.</example>
         public async Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteApplication");
@@ -357,7 +357,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/DeletePrivateEndpoint.cs.html">here</a> to see an example of how to use DeletePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/DeletePrivateEndpoint.cs.html">here</a> to see an example of how to use DeletePrivateEndpoint API.</example>
         public async Task<DeletePrivateEndpointResponse> DeletePrivateEndpoint(DeletePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deletePrivateEndpoint");
@@ -398,7 +398,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/DeleteRun.cs.html">here</a> to see an example of how to use DeleteRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/DeleteRun.cs.html">here</a> to see an example of how to use DeleteRun API.</example>
         public async Task<DeleteRunResponse> DeleteRun(DeleteRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteRun");
@@ -438,7 +438,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/GetApplication.cs.html">here</a> to see an example of how to use GetApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/GetApplication.cs.html">here</a> to see an example of how to use GetApplication API.</example>
         public async Task<GetApplicationResponse> GetApplication(GetApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getApplication");
@@ -478,7 +478,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/GetPrivateEndpoint.cs.html">here</a> to see an example of how to use GetPrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/GetPrivateEndpoint.cs.html">here</a> to see an example of how to use GetPrivateEndpoint API.</example>
         public async Task<GetPrivateEndpointResponse> GetPrivateEndpoint(GetPrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPrivateEndpoint");
@@ -518,7 +518,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/GetRun.cs.html">here</a> to see an example of how to use GetRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/GetRun.cs.html">here</a> to see an example of how to use GetRun API.</example>
         public async Task<GetRunResponse> GetRun(GetRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRun");
@@ -558,7 +558,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/GetRunLog.cs.html">here</a> to see an example of how to use GetRunLog API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/GetRunLog.cs.html">here</a> to see an example of how to use GetRunLog API.</example>
         public async Task<GetRunLogResponse> GetRunLog(GetRunLogRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRunLog");
@@ -598,7 +598,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -638,7 +638,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListApplications.cs.html">here</a> to see an example of how to use ListApplications API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListApplications.cs.html">here</a> to see an example of how to use ListApplications API.</example>
         public async Task<ListApplicationsResponse> ListApplications(ListApplicationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listApplications");
@@ -678,7 +678,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListPrivateEndpoints.cs.html">here</a> to see an example of how to use ListPrivateEndpoints API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListPrivateEndpoints.cs.html">here</a> to see an example of how to use ListPrivateEndpoints API.</example>
         public async Task<ListPrivateEndpointsResponse> ListPrivateEndpoints(ListPrivateEndpointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPrivateEndpoints");
@@ -718,7 +718,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListRunLogs.cs.html">here</a> to see an example of how to use ListRunLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListRunLogs.cs.html">here</a> to see an example of how to use ListRunLogs API.</example>
         public async Task<ListRunLogsResponse> ListRunLogs(ListRunLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRunLogs");
@@ -758,7 +758,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListRuns.cs.html">here</a> to see an example of how to use ListRuns API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListRuns.cs.html">here</a> to see an example of how to use ListRuns API.</example>
         public async Task<ListRunsResponse> ListRuns(ListRunsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listRuns");
@@ -798,7 +798,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -838,7 +838,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -878,7 +878,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -918,7 +918,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/UpdateApplication.cs.html">here</a> to see an example of how to use UpdateApplication API.</example>
         public async Task<UpdateApplicationResponse> UpdateApplication(UpdateApplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateApplication");
@@ -960,7 +960,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/UpdatePrivateEndpoint.cs.html">here</a> to see an example of how to use UpdatePrivateEndpoint API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/UpdatePrivateEndpoint.cs.html">here</a> to see an example of how to use UpdatePrivateEndpoint API.</example>
         public async Task<UpdatePrivateEndpointResponse> UpdatePrivateEndpoint(UpdatePrivateEndpointRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updatePrivateEndpoint");
@@ -1000,7 +1000,7 @@ namespace Oci.DataflowService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dataflow/UpdateRun.cs.html">here</a> to see an example of how to use UpdateRun API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataflow/UpdateRun.cs.html">here</a> to see an example of how to use UpdateRun API.</example>
         public async Task<UpdateRunResponse> UpdateRun(UpdateRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRun");

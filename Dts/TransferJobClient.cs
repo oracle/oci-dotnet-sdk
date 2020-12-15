@@ -72,7 +72,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ChangeTransferJobCompartment.cs.html">here</a> to see an example of how to use ChangeTransferJobCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/ChangeTransferJobCompartment.cs.html">here</a> to see an example of how to use ChangeTransferJobCompartment API.</example>
         public async Task<ChangeTransferJobCompartmentResponse> ChangeTransferJobCompartment(ChangeTransferJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeTransferJobCompartment");
@@ -111,7 +111,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateTransferJob.cs.html">here</a> to see an example of how to use CreateTransferJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/CreateTransferJob.cs.html">here</a> to see an example of how to use CreateTransferJob API.</example>
         public async Task<CreateTransferJobResponse> CreateTransferJob(CreateTransferJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferJob");
@@ -150,7 +150,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/DeleteTransferJob.cs.html">here</a> to see an example of how to use DeleteTransferJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/DeleteTransferJob.cs.html">here</a> to see an example of how to use DeleteTransferJob API.</example>
         public async Task<DeleteTransferJobResponse> DeleteTransferJob(DeleteTransferJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTransferJob");
@@ -189,7 +189,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferJob.cs.html">here</a> to see an example of how to use GetTransferJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/GetTransferJob.cs.html">here</a> to see an example of how to use GetTransferJob API.</example>
         public async Task<GetTransferJobResponse> GetTransferJob(GetTransferJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferJob");
@@ -228,7 +228,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ListTransferJobs.cs.html">here</a> to see an example of how to use ListTransferJobs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/ListTransferJobs.cs.html">here</a> to see an example of how to use ListTransferJobs API.</example>
         public async Task<ListTransferJobsResponse> ListTransferJobs(ListTransferJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTransferJobs");
@@ -267,7 +267,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/UpdateTransferJob.cs.html">here</a> to see an example of how to use UpdateTransferJob API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/UpdateTransferJob.cs.html">here</a> to see an example of how to use UpdateTransferJob API.</example>
         public async Task<UpdateTransferJobResponse> UpdateTransferJob(UpdateTransferJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTransferJob");

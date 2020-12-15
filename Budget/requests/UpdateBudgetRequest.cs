@@ -14,7 +14,7 @@ using Oci.BudgetService.Models;
 namespace Oci.BudgetService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/UpdateBudget.cs.html">here</a> to see an example of how to use UpdateBudget request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/UpdateBudget.cs.html">here</a> to see an example of how to use UpdateBudget request.
     /// </example>
     public class UpdateBudgetRequest : Oci.Common.IOciRequest
     {

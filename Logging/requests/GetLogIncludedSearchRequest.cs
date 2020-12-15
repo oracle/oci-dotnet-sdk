@@ -14,7 +14,7 @@ using Oci.LoggingService.Models;
 namespace Oci.LoggingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/logging/GetLogIncludedSearch.cs.html">here</a> to see an example of how to use GetLogIncludedSearch request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/logging/GetLogIncludedSearch.cs.html">here</a> to see an example of how to use GetLogIncludedSearch request.
     /// </example>
     public class GetLogIncludedSearchRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.AnalyticsService.Models;
 namespace Oci.AnalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/analytics/ChangeAnalyticsInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeAnalyticsInstanceCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/ChangeAnalyticsInstanceCompartment.cs.html">here</a> to see an example of how to use ChangeAnalyticsInstanceCompartment request.
     /// </example>
     public class ChangeAnalyticsInstanceCompartmentRequest : Oci.Common.IOciRequest
     {

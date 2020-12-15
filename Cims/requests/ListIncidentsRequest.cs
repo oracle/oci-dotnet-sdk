@@ -14,7 +14,7 @@ using Oci.CimsService.Models;
 namespace Oci.CimsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cims/ListIncidents.cs.html">here</a> to see an example of how to use ListIncidents request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cims/ListIncidents.cs.html">here</a> to see an example of how to use ListIncidents request.
     /// </example>
     public class ListIncidentsRequest : Oci.Common.IOciRequest
     {

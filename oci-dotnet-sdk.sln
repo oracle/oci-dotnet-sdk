@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Tenantmanager
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetsdk.Objectstoragetests", "Objectstoragetests\OCI.DotNetsdk.Objectstoragetests.csproj", "{942136E1-FDD9-4B82-B294-A96BD4FEAD3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Rover", "Rover\OCI.DotNetSDK.Rover.csproj", "{B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1503,5 +1505,17 @@ Global
 		{942136E1-FDD9-4B82-B294-A96BD4FEAD3A}.Release|x64.Build.0 = Release|Any CPU
 		{942136E1-FDD9-4B82-B294-A96BD4FEAD3A}.Release|x86.ActiveCfg = Release|Any CPU
 		{942136E1-FDD9-4B82-B294-A96BD4FEAD3A}.Release|x86.Build.0 = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|x64.Build.0 = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Debug|x86.Build.0 = Debug|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|x64.ActiveCfg = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|x64.Build.0 = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|x86.ActiveCfg = Release|Any CPU
+        {B3B8DFF0-CAAA-4D58-8E53-0F134DCD2BC2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

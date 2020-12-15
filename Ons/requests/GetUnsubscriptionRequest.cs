@@ -14,7 +14,7 @@ using Oci.OnsService.Models;
 namespace Oci.OnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/GetUnsubscription.cs.html">here</a> to see an example of how to use GetUnsubscription request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/GetUnsubscription.cs.html">here</a> to see an example of how to use GetUnsubscription request.
     /// </example>
     public class GetUnsubscriptionRequest : Oci.Common.IOciRequest
     {

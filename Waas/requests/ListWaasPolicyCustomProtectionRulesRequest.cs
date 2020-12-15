@@ -14,7 +14,7 @@ using Oci.WaasService.Models;
 namespace Oci.WaasService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/waas/ListWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use ListWaasPolicyCustomProtectionRules request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/waas/ListWaasPolicyCustomProtectionRules.cs.html">here</a> to see an example of how to use ListWaasPolicyCustomProtectionRules request.
     /// </example>
     public class ListWaasPolicyCustomProtectionRulesRequest : Oci.Common.IOciRequest
     {

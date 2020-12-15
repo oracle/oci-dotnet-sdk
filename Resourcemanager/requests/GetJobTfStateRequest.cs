@@ -14,7 +14,7 @@ using Oci.ResourcemanagerService.Models;
 namespace Oci.ResourcemanagerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/resourcemanager/GetJobTfState.cs.html">here</a> to see an example of how to use GetJobTfState request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/resourcemanager/GetJobTfState.cs.html">here</a> to see an example of how to use GetJobTfState request.
     /// </example>
     public class GetJobTfStateRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.ObjectstorageService.Models;
 namespace Oci.ObjectstorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/MakeBucketWritable.cs.html">here</a> to see an example of how to use MakeBucketWritable request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/objectstorage/MakeBucketWritable.cs.html">here</a> to see an example of how to use MakeBucketWritable request.
     /// </example>
     public class MakeBucketWritableRequest : Oci.Common.IOciRequest
     {

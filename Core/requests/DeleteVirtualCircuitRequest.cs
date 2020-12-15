@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/DeleteVirtualCircuit.cs.html">here</a> to see an example of how to use DeleteVirtualCircuit request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteVirtualCircuit.cs.html">here</a> to see an example of how to use DeleteVirtualCircuit request.
     /// </example>
     public class DeleteVirtualCircuitRequest : Oci.Common.IOciRequest
     {

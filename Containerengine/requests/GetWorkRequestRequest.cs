@@ -14,7 +14,7 @@ using Oci.ContainerengineService.Models;
 namespace Oci.ContainerengineService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/containerengine/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/containerengine/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest request.
     /// </example>
     public class GetWorkRequestRequest : Oci.Common.IOciRequest
     {

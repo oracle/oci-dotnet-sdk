@@ -14,7 +14,7 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datascience/CreateModel.cs.html">here</a> to see an example of how to use CreateModel request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateModel.cs.html">here</a> to see an example of how to use CreateModel request.
     /// </example>
     public class CreateModelRequest : Oci.Common.IOciRequest
     {

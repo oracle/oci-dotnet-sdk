@@ -69,7 +69,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateTransferAppliance.cs.html">here</a> to see an example of how to use CreateTransferAppliance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/CreateTransferAppliance.cs.html">here</a> to see an example of how to use CreateTransferAppliance API.</example>
         public async Task<CreateTransferApplianceResponse> CreateTransferAppliance(CreateTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferAppliance");
@@ -108,7 +108,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/CreateTransferApplianceAdminCredentials.cs.html">here</a> to see an example of how to use CreateTransferApplianceAdminCredentials API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/CreateTransferApplianceAdminCredentials.cs.html">here</a> to see an example of how to use CreateTransferApplianceAdminCredentials API.</example>
         public async Task<CreateTransferApplianceAdminCredentialsResponse> CreateTransferApplianceAdminCredentials(CreateTransferApplianceAdminCredentialsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTransferApplianceAdminCredentials");
@@ -147,7 +147,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/DeleteTransferAppliance.cs.html">here</a> to see an example of how to use DeleteTransferAppliance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/DeleteTransferAppliance.cs.html">here</a> to see an example of how to use DeleteTransferAppliance API.</example>
         public async Task<DeleteTransferApplianceResponse> DeleteTransferAppliance(DeleteTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTransferAppliance");
@@ -186,7 +186,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferAppliance.cs.html">here</a> to see an example of how to use GetTransferAppliance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/GetTransferAppliance.cs.html">here</a> to see an example of how to use GetTransferAppliance API.</example>
         public async Task<GetTransferApplianceResponse> GetTransferAppliance(GetTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferAppliance");
@@ -225,7 +225,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferApplianceCertificateAuthorityCertificate.cs.html">here</a> to see an example of how to use GetTransferApplianceCertificateAuthorityCertificate API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/GetTransferApplianceCertificateAuthorityCertificate.cs.html">here</a> to see an example of how to use GetTransferApplianceCertificateAuthorityCertificate API.</example>
         public async Task<GetTransferApplianceCertificateAuthorityCertificateResponse> GetTransferApplianceCertificateAuthorityCertificate(GetTransferApplianceCertificateAuthorityCertificateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferApplianceCertificateAuthorityCertificate");
@@ -264,7 +264,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferApplianceEncryptionPassphrase.cs.html">here</a> to see an example of how to use GetTransferApplianceEncryptionPassphrase API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/GetTransferApplianceEncryptionPassphrase.cs.html">here</a> to see an example of how to use GetTransferApplianceEncryptionPassphrase API.</example>
         public async Task<GetTransferApplianceEncryptionPassphraseResponse> GetTransferApplianceEncryptionPassphrase(GetTransferApplianceEncryptionPassphraseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTransferApplianceEncryptionPassphrase");
@@ -303,7 +303,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/ListTransferAppliances.cs.html">here</a> to see an example of how to use ListTransferAppliances API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/ListTransferAppliances.cs.html">here</a> to see an example of how to use ListTransferAppliances API.</example>
         public async Task<ListTransferAppliancesResponse> ListTransferAppliances(ListTransferAppliancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTransferAppliances");
@@ -342,7 +342,7 @@ namespace Oci.DtsService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/UpdateTransferAppliance.cs.html">here</a> to see an example of how to use UpdateTransferAppliance API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/UpdateTransferAppliance.cs.html">here</a> to see an example of how to use UpdateTransferAppliance API.</example>
         public async Task<UpdateTransferApplianceResponse> UpdateTransferAppliance(UpdateTransferApplianceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTransferAppliance");

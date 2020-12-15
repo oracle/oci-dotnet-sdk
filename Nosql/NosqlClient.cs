@@ -72,7 +72,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ChangeTableCompartment.cs.html">here</a> to see an example of how to use ChangeTableCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ChangeTableCompartment.cs.html">here</a> to see an example of how to use ChangeTableCompartment API.</example>
         public async Task<ChangeTableCompartmentResponse> ChangeTableCompartment(ChangeTableCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeTableCompartment");
@@ -111,7 +111,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/CreateIndex.cs.html">here</a> to see an example of how to use CreateIndex API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/CreateIndex.cs.html">here</a> to see an example of how to use CreateIndex API.</example>
         public async Task<CreateIndexResponse> CreateIndex(CreateIndexRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createIndex");
@@ -150,7 +150,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/CreateTable.cs.html">here</a> to see an example of how to use CreateTable API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/CreateTable.cs.html">here</a> to see an example of how to use CreateTable API.</example>
         public async Task<CreateTableResponse> CreateTable(CreateTableRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createTable");
@@ -189,7 +189,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/DeleteIndex.cs.html">here</a> to see an example of how to use DeleteIndex API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/DeleteIndex.cs.html">here</a> to see an example of how to use DeleteIndex API.</example>
         public async Task<DeleteIndexResponse> DeleteIndex(DeleteIndexRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteIndex");
@@ -228,7 +228,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/DeleteRow.cs.html">here</a> to see an example of how to use DeleteRow API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/DeleteRow.cs.html">here</a> to see an example of how to use DeleteRow API.</example>
         public async Task<DeleteRowResponse> DeleteRow(DeleteRowRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteRow");
@@ -267,7 +267,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/DeleteTable.cs.html">here</a> to see an example of how to use DeleteTable API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/DeleteTable.cs.html">here</a> to see an example of how to use DeleteTable API.</example>
         public async Task<DeleteTableResponse> DeleteTable(DeleteTableRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteTable");
@@ -306,7 +306,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest API.</example>
         public async Task<DeleteWorkRequestResponse> DeleteWorkRequest(DeleteWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteWorkRequest");
@@ -345,7 +345,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/GetIndex.cs.html">here</a> to see an example of how to use GetIndex API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/GetIndex.cs.html">here</a> to see an example of how to use GetIndex API.</example>
         public async Task<GetIndexResponse> GetIndex(GetIndexRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getIndex");
@@ -384,7 +384,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/GetRow.cs.html">here</a> to see an example of how to use GetRow API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/GetRow.cs.html">here</a> to see an example of how to use GetRow API.</example>
         public async Task<GetRowResponse> GetRow(GetRowRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getRow");
@@ -423,7 +423,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/GetTable.cs.html">here</a> to see an example of how to use GetTable API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/GetTable.cs.html">here</a> to see an example of how to use GetTable API.</example>
         public async Task<GetTableResponse> GetTable(GetTableRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getTable");
@@ -462,7 +462,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getWorkRequest");
@@ -501,7 +501,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListIndexes.cs.html">here</a> to see an example of how to use ListIndexes API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListIndexes.cs.html">here</a> to see an example of how to use ListIndexes API.</example>
         public async Task<ListIndexesResponse> ListIndexes(ListIndexesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listIndexes");
@@ -540,7 +540,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListTableUsage.cs.html">here</a> to see an example of how to use ListTableUsage API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListTableUsage.cs.html">here</a> to see an example of how to use ListTableUsage API.</example>
         public async Task<ListTableUsageResponse> ListTableUsage(ListTableUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTableUsage");
@@ -579,7 +579,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListTables.cs.html">here</a> to see an example of how to use ListTables API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListTables.cs.html">here</a> to see an example of how to use ListTables API.</example>
         public async Task<ListTablesResponse> ListTables(ListTablesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listTables");
@@ -619,7 +619,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestErrors");
@@ -659,7 +659,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequestLogs");
@@ -698,7 +698,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listWorkRequests");
@@ -738,7 +738,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/PrepareStatement.cs.html">here</a> to see an example of how to use PrepareStatement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/PrepareStatement.cs.html">here</a> to see an example of how to use PrepareStatement API.</example>
         public async Task<PrepareStatementResponse> PrepareStatement(PrepareStatementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called prepareStatement");
@@ -777,7 +777,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/Query.cs.html">here</a> to see an example of how to use Query API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/Query.cs.html">here</a> to see an example of how to use Query API.</example>
         public async Task<QueryResponse> Query(QueryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called query");
@@ -817,7 +817,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/SummarizeStatement.cs.html">here</a> to see an example of how to use SummarizeStatement API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/SummarizeStatement.cs.html">here</a> to see an example of how to use SummarizeStatement API.</example>
         public async Task<SummarizeStatementResponse> SummarizeStatement(SummarizeStatementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called summarizeStatement");
@@ -856,7 +856,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/UpdateRow.cs.html">here</a> to see an example of how to use UpdateRow API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/UpdateRow.cs.html">here</a> to see an example of how to use UpdateRow API.</example>
         public async Task<UpdateRowResponse> UpdateRow(UpdateRowRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateRow");
@@ -897,7 +897,7 @@ namespace Oci.NosqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/UpdateTable.cs.html">here</a> to see an example of how to use UpdateTable API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/UpdateTable.cs.html">here</a> to see an example of how to use UpdateTable API.</example>
         public async Task<UpdateTableResponse> UpdateTable(UpdateTableRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateTable");

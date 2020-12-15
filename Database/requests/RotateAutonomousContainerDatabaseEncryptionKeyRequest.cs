@@ -14,7 +14,7 @@ using Oci.DatabaseService.Models;
 namespace Oci.DatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/database/RotateAutonomousContainerDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousContainerDatabaseEncryptionKey request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/RotateAutonomousContainerDatabaseEncryptionKey.cs.html">here</a> to see an example of how to use RotateAutonomousContainerDatabaseEncryptionKey request.
     /// </example>
     public class RotateAutonomousContainerDatabaseEncryptionKeyRequest : Oci.Common.IOciRequest
     {

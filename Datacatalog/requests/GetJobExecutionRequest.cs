@@ -14,7 +14,7 @@ using Oci.DatacatalogService.Models;
 namespace Oci.DatacatalogService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/datacatalog/GetJobExecution.cs.html">here</a> to see an example of how to use GetJobExecution request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/GetJobExecution.cs.html">here</a> to see an example of how to use GetJobExecution request.
     /// </example>
     public class GetJobExecutionRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.StreamingService.Models;
 namespace Oci.StreamingService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/streaming/ConsumerCommit.cs.html">here</a> to see an example of how to use ConsumerCommit request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/streaming/ConsumerCommit.cs.html">here</a> to see an example of how to use ConsumerCommit request.
     /// </example>
     public class ConsumerCommitRequest : Oci.Common.IOciRequest
     {

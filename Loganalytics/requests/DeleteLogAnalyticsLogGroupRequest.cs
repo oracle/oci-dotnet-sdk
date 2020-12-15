@@ -14,7 +14,7 @@ using Oci.LoganalyticsService.Models;
 namespace Oci.LoganalyticsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loganalytics/DeleteLogAnalyticsLogGroup.cs.html">here</a> to see an example of how to use DeleteLogAnalyticsLogGroup request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DeleteLogAnalyticsLogGroup.cs.html">here</a> to see an example of how to use DeleteLogAnalyticsLogGroup request.
     /// </example>
     public class DeleteLogAnalyticsLogGroupRequest : Oci.Common.IOciRequest
     {

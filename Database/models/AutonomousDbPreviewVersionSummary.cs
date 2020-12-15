@@ -50,6 +50,7 @@ namespace Oci.DatabaseService.Models
         /// - OLTP - indicates an Autonomous Transaction Processing database
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
+        /// - APEX - indicates an Autonomous Database with the Oracle Application Express (APEX) workload type.
         /// 
         /// </value>
         ///
@@ -59,7 +60,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DW")]
             Dw,
             [EnumMember(Value = "AJD")]
-            Ajd
+            Ajd,
+            [EnumMember(Value = "APEX")]
+            Apex
         };
 
         /// <value>
@@ -68,6 +71,7 @@ namespace Oci.DatabaseService.Models
         /// - OLTP - indicates an Autonomous Transaction Processing database
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
+        /// - APEX - indicates an Autonomous Database with the Oracle Application Express (APEX) workload type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]

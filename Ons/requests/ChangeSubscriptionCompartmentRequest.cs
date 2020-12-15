@@ -14,7 +14,7 @@ using Oci.OnsService.Models;
 namespace Oci.OnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ons/ChangeSubscriptionCompartment.cs.html">here</a> to see an example of how to use ChangeSubscriptionCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ons/ChangeSubscriptionCompartment.cs.html">here</a> to see an example of how to use ChangeSubscriptionCompartment request.
     /// </example>
     public class ChangeSubscriptionCompartmentRequest : Oci.Common.IOciRequest
     {

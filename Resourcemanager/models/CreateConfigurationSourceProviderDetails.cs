@@ -85,6 +85,9 @@ namespace Oci.ResourcemanagerService.Models
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new CreateGitlabAccessTokenConfigurationSourceProviderDetails();
                     break;
+                case "GITHUB_ACCESS_TOKEN":
+                    obj = new CreateGithubAccessTokenConfigurationSourceProviderDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

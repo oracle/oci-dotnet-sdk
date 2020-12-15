@@ -14,7 +14,7 @@ using Oci.DtsService.Models;
 namespace Oci.DtsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/GetTransferApplianceEncryptionPassphrase.cs.html">here</a> to see an example of how to use GetTransferApplianceEncryptionPassphrase request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/GetTransferApplianceEncryptionPassphrase.cs.html">here</a> to see an example of how to use GetTransferApplianceEncryptionPassphrase request.
     /// </example>
     public class GetTransferApplianceEncryptionPassphraseRequest : Oci.Common.IOciRequest
     {

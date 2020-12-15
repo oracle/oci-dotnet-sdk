@@ -14,7 +14,7 @@ using Oci.HealthchecksService.Models;
 namespace Oci.HealthchecksService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/DeleteHttpMonitor.cs.html">here</a> to see an example of how to use DeleteHttpMonitor request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/DeleteHttpMonitor.cs.html">here</a> to see an example of how to use DeleteHttpMonitor request.
     /// </example>
     public class DeleteHttpMonitorRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 namespace Oci.TenantmanagercontrolplaneService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/tenantmanagercontrolplane/UpdateSenderInvitation.cs.html">here</a> to see an example of how to use UpdateSenderInvitation request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/UpdateSenderInvitation.cs.html">here</a> to see an example of how to use UpdateSenderInvitation request.
     /// </example>
     public class UpdateSenderInvitationRequest : Oci.Common.IOciRequest
     {

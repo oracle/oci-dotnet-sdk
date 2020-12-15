@@ -14,7 +14,7 @@ using Oci.LoadbalancerService.Models;
 namespace Oci.LoadbalancerService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/loadbalancer/UpdateListener.cs.html">here</a> to see an example of how to use UpdateListener request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/UpdateListener.cs.html">here</a> to see an example of how to use UpdateListener request.
     /// </example>
     public class UpdateListenerRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.NosqlService.Models;
 namespace Oci.NosqlService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/nosql/CreateIndex.cs.html">here</a> to see an example of how to use CreateIndex request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/nosql/CreateIndex.cs.html">here</a> to see an example of how to use CreateIndex request.
     /// </example>
     public class CreateIndexRequest : Oci.Common.IOciRequest
     {

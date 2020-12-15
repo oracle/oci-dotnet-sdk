@@ -71,7 +71,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ChangeHttpMonitorCompartment.cs.html">here</a> to see an example of how to use ChangeHttpMonitorCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ChangeHttpMonitorCompartment.cs.html">here</a> to see an example of how to use ChangeHttpMonitorCompartment API.</example>
         public async Task<ChangeHttpMonitorCompartmentResponse> ChangeHttpMonitorCompartment(ChangeHttpMonitorCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changeHttpMonitorCompartment");
@@ -112,7 +112,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ChangePingMonitorCompartment.cs.html">here</a> to see an example of how to use ChangePingMonitorCompartment API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ChangePingMonitorCompartment.cs.html">here</a> to see an example of how to use ChangePingMonitorCompartment API.</example>
         public async Task<ChangePingMonitorCompartmentResponse> ChangePingMonitorCompartment(ChangePingMonitorCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called changePingMonitorCompartment");
@@ -154,7 +154,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/CreateHttpMonitor.cs.html">here</a> to see an example of how to use CreateHttpMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/CreateHttpMonitor.cs.html">here</a> to see an example of how to use CreateHttpMonitor API.</example>
         public async Task<CreateHttpMonitorResponse> CreateHttpMonitor(CreateHttpMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createHttpMonitor");
@@ -197,7 +197,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/CreateOnDemandHttpProbe.cs.html">here</a> to see an example of how to use CreateOnDemandHttpProbe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/CreateOnDemandHttpProbe.cs.html">here</a> to see an example of how to use CreateOnDemandHttpProbe API.</example>
         public async Task<CreateOnDemandHttpProbeResponse> CreateOnDemandHttpProbe(CreateOnDemandHttpProbeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createOnDemandHttpProbe");
@@ -240,7 +240,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/CreateOnDemandPingProbe.cs.html">here</a> to see an example of how to use CreateOnDemandPingProbe API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/CreateOnDemandPingProbe.cs.html">here</a> to see an example of how to use CreateOnDemandPingProbe API.</example>
         public async Task<CreateOnDemandPingProbeResponse> CreateOnDemandPingProbe(CreateOnDemandPingProbeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createOnDemandPingProbe");
@@ -282,7 +282,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/CreatePingMonitor.cs.html">here</a> to see an example of how to use CreatePingMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/CreatePingMonitor.cs.html">here</a> to see an example of how to use CreatePingMonitor API.</example>
         public async Task<CreatePingMonitorResponse> CreatePingMonitor(CreatePingMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createPingMonitor");
@@ -323,7 +323,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/DeleteHttpMonitor.cs.html">here</a> to see an example of how to use DeleteHttpMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/DeleteHttpMonitor.cs.html">here</a> to see an example of how to use DeleteHttpMonitor API.</example>
         public async Task<DeleteHttpMonitorResponse> DeleteHttpMonitor(DeleteHttpMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteHttpMonitor");
@@ -364,7 +364,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/DeletePingMonitor.cs.html">here</a> to see an example of how to use DeletePingMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/DeletePingMonitor.cs.html">here</a> to see an example of how to use DeletePingMonitor API.</example>
         public async Task<DeletePingMonitorResponse> DeletePingMonitor(DeletePingMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deletePingMonitor");
@@ -404,7 +404,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/GetHttpMonitor.cs.html">here</a> to see an example of how to use GetHttpMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/GetHttpMonitor.cs.html">here</a> to see an example of how to use GetHttpMonitor API.</example>
         public async Task<GetHttpMonitorResponse> GetHttpMonitor(GetHttpMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getHttpMonitor");
@@ -444,7 +444,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/GetPingMonitor.cs.html">here</a> to see an example of how to use GetPingMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/GetPingMonitor.cs.html">here</a> to see an example of how to use GetPingMonitor API.</example>
         public async Task<GetPingMonitorResponse> GetPingMonitor(GetPingMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getPingMonitor");
@@ -484,7 +484,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListHealthChecksVantagePoints.cs.html">here</a> to see an example of how to use ListHealthChecksVantagePoints API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListHealthChecksVantagePoints.cs.html">here</a> to see an example of how to use ListHealthChecksVantagePoints API.</example>
         public async Task<ListHealthChecksVantagePointsResponse> ListHealthChecksVantagePoints(ListHealthChecksVantagePointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listHealthChecksVantagePoints");
@@ -524,7 +524,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListHttpMonitors.cs.html">here</a> to see an example of how to use ListHttpMonitors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListHttpMonitors.cs.html">here</a> to see an example of how to use ListHttpMonitors API.</example>
         public async Task<ListHttpMonitorsResponse> ListHttpMonitors(ListHttpMonitorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listHttpMonitors");
@@ -566,7 +566,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListHttpProbeResults.cs.html">here</a> to see an example of how to use ListHttpProbeResults API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListHttpProbeResults.cs.html">here</a> to see an example of how to use ListHttpProbeResults API.</example>
         public async Task<ListHttpProbeResultsResponse> ListHttpProbeResults(ListHttpProbeResultsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listHttpProbeResults");
@@ -609,7 +609,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListPingMonitors.cs.html">here</a> to see an example of how to use ListPingMonitors API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListPingMonitors.cs.html">here</a> to see an example of how to use ListPingMonitors API.</example>
         public async Task<ListPingMonitorsResponse> ListPingMonitors(ListPingMonitorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPingMonitors");
@@ -655,7 +655,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/ListPingProbeResults.cs.html">here</a> to see an example of how to use ListPingProbeResults API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/ListPingProbeResults.cs.html">here</a> to see an example of how to use ListPingProbeResults API.</example>
         public async Task<ListPingProbeResultsResponse> ListPingProbeResults(ListPingProbeResultsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listPingProbeResults");
@@ -697,7 +697,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/UpdateHttpMonitor.cs.html">here</a> to see an example of how to use UpdateHttpMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/UpdateHttpMonitor.cs.html">here</a> to see an example of how to use UpdateHttpMonitor API.</example>
         public async Task<UpdateHttpMonitorResponse> UpdateHttpMonitor(UpdateHttpMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateHttpMonitor");
@@ -739,7 +739,7 @@ namespace Oci.HealthchecksService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/healthchecks/UpdatePingMonitor.cs.html">here</a> to see an example of how to use UpdatePingMonitor API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/healthchecks/UpdatePingMonitor.cs.html">here</a> to see an example of how to use UpdatePingMonitor API.</example>
         public async Task<UpdatePingMonitorResponse> UpdatePingMonitor(UpdatePingMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updatePingMonitor");

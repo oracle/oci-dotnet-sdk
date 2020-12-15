@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/ListDynamicGroups.cs.html">here</a> to see an example of how to use ListDynamicGroups request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListDynamicGroups.cs.html">here</a> to see an example of how to use ListDynamicGroups request.
     /// </example>
     public class ListDynamicGroupsRequest : Oci.Common.IOciRequest
     {

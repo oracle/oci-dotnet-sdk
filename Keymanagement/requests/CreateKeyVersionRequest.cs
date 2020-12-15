@@ -14,7 +14,7 @@ using Oci.KeymanagementService.Models;
 namespace Oci.KeymanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/keymanagement/CreateKeyVersion.cs.html">here</a> to see an example of how to use CreateKeyVersion request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/CreateKeyVersion.cs.html">here</a> to see an example of how to use CreateKeyVersion request.
     /// </example>
     public class CreateKeyVersionRequest : Oci.Common.IOciRequest
     {

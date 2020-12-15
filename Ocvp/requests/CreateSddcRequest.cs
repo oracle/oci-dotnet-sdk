@@ -14,7 +14,7 @@ using Oci.OcvpService.Models;
 namespace Oci.OcvpService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/ocvp/CreateSddc.cs.html">here</a> to see an example of how to use CreateSddc request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/CreateSddc.cs.html">here</a> to see an example of how to use CreateSddc request.
     /// </example>
     public class CreateSddcRequest : Oci.Common.IOciRequest
     {

@@ -73,7 +73,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/CreateBackup.cs.html">here</a> to see an example of how to use CreateBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/CreateBackup.cs.html">here</a> to see an example of how to use CreateBackup API.</example>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called createBackup");
@@ -113,7 +113,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/DeleteBackup.cs.html">here</a> to see an example of how to use DeleteBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/DeleteBackup.cs.html">here</a> to see an example of how to use DeleteBackup API.</example>
         public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called deleteBackup");
@@ -152,7 +152,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/GetBackup.cs.html">here</a> to see an example of how to use GetBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetBackup.cs.html">here</a> to see an example of how to use GetBackup API.</example>
         public async Task<GetBackupResponse> GetBackup(GetBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called getBackup");
@@ -192,7 +192,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/ListBackups.cs.html">here</a> to see an example of how to use ListBackups API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/ListBackups.cs.html">here</a> to see an example of how to use ListBackups API.</example>
         public async Task<ListBackupsResponse> ListBackups(ListBackupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called listBackups");
@@ -231,7 +231,7 @@ namespace Oci.MysqlService
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/mysql/UpdateBackup.cs.html">here</a> to see an example of how to use UpdateBackup API.</example>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/UpdateBackup.cs.html">here</a> to see an example of how to use UpdateBackup API.</example>
         public async Task<UpdateBackupResponse> UpdateBackup(UpdateBackupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
         {
             logger.Trace("Called updateBackup");

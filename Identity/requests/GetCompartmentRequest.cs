@@ -14,7 +14,7 @@ using Oci.IdentityService.Models;
 namespace Oci.IdentityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/identity/GetCompartment.cs.html">here</a> to see an example of how to use GetCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/GetCompartment.cs.html">here</a> to see an example of how to use GetCompartment request.
     /// </example>
     public class GetCompartmentRequest : Oci.Common.IOciRequest
     {

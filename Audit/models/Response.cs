@@ -17,8 +17,7 @@ namespace Oci.AuditService.Models
 {
     /// <summary>
     /// A container object for response attributes.
-    /// <br/>
-    /// Example:   -----    {      &quot;status&quot;: &quot;200&quot;,      &quot;responseTime&quot;: &quot;2019-09-18T00:10:59.278Z&quot;,      &quot;headers&quot;: {        &quot;ETag&quot;: [          &quot;<unique_ID>&quot;        ],        &quot;Connection&quot;: [          &quot;close&quot;        ],        &quot;Content-Length&quot;: [          &quot;1828&quot;        ],        &quot;opc-request-id&quot;: [          &quot;<unique_ID>&quot;        ],        &quot;Date&quot;: [          &quot;Wed, 18 Sep 2019 00:10:59 GMT&quot;        ],        &quot;Content-Type&quot;: [          &quot;application/json&quot;        ]      },      &quot;payload&quot;: {        &quot;resourceName&quot;: &quot;my_instance&quot;,        &quot;id&quot;: &quot;ocid1.instance.oc1.phx.<unique_ID>&quot;      },      &quot;message&quot;: null    }  -----
+    /// 
     /// </summary>
     public class Response 
     {

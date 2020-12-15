@@ -14,7 +14,7 @@ using Oci.BlockchainService.Models;
 namespace Oci.BlockchainService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/blockchain/ListPeers.cs.html">here</a> to see an example of how to use ListPeers request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListPeers.cs.html">here</a> to see an example of how to use ListPeers request.
     /// </example>
     public class ListPeersRequest : Oci.Common.IOciRequest
     {

@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/ChangeVirtualCircuitCompartment.cs.html">here</a> to see an example of how to use ChangeVirtualCircuitCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ChangeVirtualCircuitCompartment.cs.html">here</a> to see an example of how to use ChangeVirtualCircuitCompartment request.
     /// </example>
     public class ChangeVirtualCircuitCompartmentRequest : Oci.Common.IOciRequest
     {

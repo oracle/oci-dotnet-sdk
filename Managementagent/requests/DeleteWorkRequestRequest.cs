@@ -14,7 +14,7 @@ using Oci.ManagementagentService.Models;
 namespace Oci.ManagementagentService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/managementagent/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementagent/DeleteWorkRequest.cs.html">here</a> to see an example of how to use DeleteWorkRequest request.
     /// </example>
     public class DeleteWorkRequestRequest : Oci.Common.IOciRequest
     {

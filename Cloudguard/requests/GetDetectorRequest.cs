@@ -14,7 +14,7 @@ using Oci.CloudguardService.Models;
 namespace Oci.CloudguardService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/cloudguard/GetDetector.cs.html">here</a> to see an example of how to use GetDetector request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudguard/GetDetector.cs.html">here</a> to see an example of how to use GetDetector request.
     /// </example>
     public class GetDetectorRequest : Oci.Common.IOciRequest
     {

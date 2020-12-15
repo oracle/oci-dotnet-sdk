@@ -14,7 +14,7 @@ using Oci.ObjectstorageService.Models;
 namespace Oci.ObjectstorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/objectstorage/CopyObject.cs.html">here</a> to see an example of how to use CopyObject request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/objectstorage/CopyObject.cs.html">here</a> to see an example of how to use CopyObject request.
     /// </example>
     public class CopyObjectRequest : Oci.Common.IOciRequest
     {

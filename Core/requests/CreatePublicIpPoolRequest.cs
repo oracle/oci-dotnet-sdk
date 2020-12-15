@@ -14,7 +14,7 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/core/CreatePublicIpPool.cs.html">here</a> to see an example of how to use CreatePublicIpPool request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreatePublicIpPool.cs.html">here</a> to see an example of how to use CreatePublicIpPool request.
     /// </example>
     public class CreatePublicIpPoolRequest : Oci.Common.IOciRequest
     {

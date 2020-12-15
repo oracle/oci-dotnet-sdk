@@ -14,7 +14,7 @@ using Oci.ApplicationmigrationService.Models;
 namespace Oci.ApplicationmigrationService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/applicationmigration/ChangeMigrationCompartment.cs.html">here</a> to see an example of how to use ChangeMigrationCompartment request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/applicationmigration/ChangeMigrationCompartment.cs.html">here</a> to see an example of how to use ChangeMigrationCompartment request.
     /// </example>
     public class ChangeMigrationCompartmentRequest : Oci.Common.IOciRequest
     {

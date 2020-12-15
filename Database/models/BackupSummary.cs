@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// Additional information about the current lifecycleState.
+        /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
@@ -161,6 +161,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
         
     }
 }

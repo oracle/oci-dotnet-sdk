@@ -14,7 +14,7 @@ using Oci.BudgetService.Models;
 namespace Oci.BudgetService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/budget/ListAlertRules.cs.html">here</a> to see an example of how to use ListAlertRules request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/budget/ListAlertRules.cs.html">here</a> to see an example of how to use ListAlertRules request.
     /// </example>
     public class ListAlertRulesRequest : Oci.Common.IOciRequest
     {

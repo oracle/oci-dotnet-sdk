@@ -14,7 +14,7 @@ using Oci.DnsService.Models;
 namespace Oci.DnsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dns/UpdateTsigKey.cs.html">here</a> to see an example of how to use UpdateTsigKey request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/UpdateTsigKey.cs.html">here</a> to see an example of how to use UpdateTsigKey request.
     /// </example>
     public class UpdateTsigKeyRequest : Oci.Common.IOciRequest
     {

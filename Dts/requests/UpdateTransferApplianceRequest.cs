@@ -14,7 +14,7 @@ using Oci.DtsService.Models;
 namespace Oci.DtsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/8.1.0/dts/UpdateTransferAppliance.cs.html">here</a> to see an example of how to use UpdateTransferAppliance request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dts/UpdateTransferAppliance.cs.html">here</a> to see an example of how to use UpdateTransferAppliance request.
     /// </example>
     public class UpdateTransferApplianceRequest : Oci.Common.IOciRequest
     {
