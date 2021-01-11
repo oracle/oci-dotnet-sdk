@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about additionaly added nodes
+    /// Resize details specified for individual nodes.
     /// </summary>
     public class ChangeShapeDetails 
     {
@@ -31,9 +31,6 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
         
-        /// <value>
-        /// Inidividial worker nodes groups details
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
