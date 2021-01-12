@@ -122,6 +122,10 @@ Only SDK logging will be captured if logger is not created in user application.
 
 Examples can be found [here](/Examples).
 
+Examples for all supported services can be found at the [API reference](https://docs.cloud.oracle.com/en-us/iaas/tools/dotnet/latest/api/index.html) under their respective reference doc.
+
+To use the example code: copy the sample, change the parameter values to values that make sense for your use case (ex: OCI instance ID with your OCI instance ID), and then you can run the code to have a working automation against OCI.
+
 ## Building and Testing
 
 ### Build

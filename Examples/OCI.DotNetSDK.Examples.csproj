@@ -14,6 +14,9 @@
     <ProjectReference Include="..\Keymanagement\OCI.DotNetSDK.Keymanagement.csproj" />
     <ProjectReference Include="..\Monitoring\OCI.DotNetSDK.Monitoring.csproj" />
     <ProjectReference Include="..\Containerengine\OCI.DotNetSDK.Containerengine.csproj" />
+    <ProjectReference Include="..\Logging\OCI.DotNetSDK.Logging.csproj" />
+    <ProjectReference Include="..\Loggingingestion\OCI.DotNetSDK.Loggingingestion.csproj" />
+    <ProjectReference Include="..\Loggingsearch\OCI.DotNetSDK.Loggingsearch.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>

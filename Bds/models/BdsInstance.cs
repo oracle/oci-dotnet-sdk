@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -62,8 +62,6 @@ namespace Oci.BdsService.Models
             Active,
             [EnumMember(Value = "UPDATING")]
             Updating,
-            [EnumMember(Value = "UPDATING_INFRA")]
-            UpdatingInfra,
             [EnumMember(Value = "SUSPENDING")]
             Suspending,
             [EnumMember(Value = "SUSPENDED")]
@@ -137,15 +135,9 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "isCloudSqlConfigured")]
         public System.Nullable<bool> IsCloudSqlConfigured { get; set; }
         
-        /// <value>
-        /// Additional configuration of customer's network.
-        /// </value>
         [JsonProperty(PropertyName = "networkConfig")]
         public NetworkConfig NetworkConfig { get; set; }
         
-        /// <value>
-        /// Specific info about a Hadoop cluster
-        /// </value>
         [JsonProperty(PropertyName = "clusterDetails")]
         public ClusterDetails ClusterDetails { get; set; }
         
@@ -159,9 +151,6 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<Node> Nodes { get; set; }
         
-        /// <value>
-        /// The information about added Cloud SQL capability
-        /// </value>
         [JsonProperty(PropertyName = "cloudSqlDetails")]
         public CloudSqlDetails CloudSqlDetails { get; set; }
         

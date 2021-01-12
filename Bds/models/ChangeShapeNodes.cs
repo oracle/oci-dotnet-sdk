@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -15,30 +15,32 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.BdsService.Models
 {
-    
+    /// <summary>
+    /// Inidividual worker nodes groups details
+    /// </summary>
     public class ChangeShapeNodes 
     {
         
         /// <value>
-        /// worker nodes shape
+        /// Change shape of worker nodes to the desired target shape. Only VM_STANDARD shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "worker")]
         public string Worker { get; set; }
         
         /// <value>
-        /// master nodes shape
+        /// Change shape of master nodes to the desired target shape. Only VM_STANDARD shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "master")]
         public string Master { get; set; }
         
         /// <value>
-        /// utility nodes shape
+        /// Change shape of utility nodes to the desired target shape. Only VM_STANDARD shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "utility")]
         public string Utility { get; set; }
         
         /// <value>
-        /// cloudsql node shape
+        /// Change shape of cloudsql node to the desired target shape. Only VM_STANDARD shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "cloudsql")]
         public string Cloudsql { get; set; }

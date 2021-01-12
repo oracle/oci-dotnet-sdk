@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 10.0.0 - 2021-01-12
+### Added
+- Support for auto-scaling in the Big Data service
+- Documentation fixes for the Logging Search service
+
+### Breaking Changes
+- Removed `STARTING` and `STOPPING` values from enum LifecycleStateEnum of model `Node` in the Bds
+- Removed `UPDATING_INFRA` value from enum LifecycleStateEnum of model `BdsInstance` in the Bds
+
 ## 9.0.0 - 2020-12-15
 ### Added
 
