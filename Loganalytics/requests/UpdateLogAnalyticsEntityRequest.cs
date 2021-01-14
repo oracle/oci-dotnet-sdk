@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Requests
         public string LogAnalyticsEntityId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// Log analytics entity information to be updated.
         /// </value>
         /// <remarks>
         /// Required

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.LoganalyticsService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// Log analytics entity lifecycle state. Supported states are ACTIVE, DELETED
     /// 
   /// </summary>
   public enum EntityLifecycleStates {

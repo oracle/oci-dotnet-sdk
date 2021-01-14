@@ -39,5 +39,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "lookupReference")]
         public System.Nullable<long> LookupReference { get; set; }
         
+        /// <value>
+        /// lookupReference
+        /// </value>
+        [JsonProperty(PropertyName = "lookupReferenceString")]
+        public string LookupReferenceString { get; set; }
+        
     }
 }

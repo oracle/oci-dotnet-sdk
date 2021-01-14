@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The streaming target.
+    /// The stream used for the Streaming target.
     /// 
     /// </summary>
     public class StreamingTargetDetails : TargetDetails

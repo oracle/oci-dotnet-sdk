@@ -102,7 +102,15 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "HIGHLIGHT")]
             Highlight,
             [EnumMember(Value = "HIGHLIGHT_ROWS")]
-            HighlightRows
+            HighlightRows,
+            [EnumMember(Value = "HIGHLIGHT_GROUPS")]
+            HighlightGroups,
+            [EnumMember(Value = "CREATE_VIEW")]
+            CreateView,
+            [EnumMember(Value = "MAP")]
+            Map,
+            [EnumMember(Value = "NLP")]
+            Nlp
         };
 
         
@@ -204,8 +212,14 @@ namespace Oci.LoganalyticsService.Models
                 case "FIELD_SUMMARY":
                     obj = new FieldSummaryCommandDescriptor();
                     break;
+                case "MAP":
+                    obj = new MapCommandDescriptor();
+                    break;
                 case "EVENT_STATS":
                     obj = new EventStatsCommandDescriptor();
+                    break;
+                case "HIGHLIGHT_GROUPS":
+                    obj = new HighlightGroupsCommandDescriptor();
                     break;
                 case "WHERE":
                     obj = new WhereCommandDescriptor();
@@ -249,6 +263,9 @@ namespace Oci.LoganalyticsService.Models
                 case "EXTRACT":
                     obj = new ExtractCommandDescriptor();
                     break;
+                case "NLP":
+                    obj = new NlpCommandDescriptor();
+                    break;
                 case "BOTTOM":
                     obj = new BottomCommandDescriptor();
                     break;
@@ -272,6 +289,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "HEAD":
                     obj = new HeadCommandDescriptor();
+                    break;
+                case "CREATE_VIEW":
+                    obj = new CreateViewCommandDescriptor();
                     break;
                 case "ADD_FIELDS":
                     obj = new AddFieldsCommandDescriptor();

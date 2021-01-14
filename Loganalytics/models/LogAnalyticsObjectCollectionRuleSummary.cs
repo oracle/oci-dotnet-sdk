@@ -81,8 +81,7 @@ namespace Oci.LoganalyticsService.Models
         public string OsBucketName { get; set; }
         
         /// <value>
-        /// The type of collection.
-        /// Supported collection types: LIVE, HISTORIC, HISTORIC_LIVE
+        /// The type of log collection.
         /// 
         /// </value>
         /// <remarks>
@@ -103,7 +102,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LogAnalyticsObjectCollectionRule.LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<ObjectCollectionRuleLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
         /// A detailed status of the life cycle state.
@@ -130,6 +129,17 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Whether or not this rule is currently enabled.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnabled is required.")]
+        [JsonProperty(PropertyName = "isEnabled")]
+        public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.

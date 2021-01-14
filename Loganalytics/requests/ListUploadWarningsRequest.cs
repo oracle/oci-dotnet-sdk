@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Unique internal identifier to refer to upload container
+        /// Unique internal identifier to refer upload container.
         /// </value>
         /// <remarks>
         /// Required

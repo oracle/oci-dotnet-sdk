@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Summary of an log analytics entity type.
+    /// Summary of a log analytics entity type.
     /// 
     /// </summary>
     public class LogAnalyticsEntityTypeSummary 
@@ -56,7 +56,7 @@ namespace Oci.LoganalyticsService.Models
         public string Category { get; set; }
         
         /// <value>
-        /// Nature of log analytics entity type.
+        /// Log analytics entity type group. This can be CLOUD (OCI) or NON_CLOUD otherwise.
         /// 
         /// </value>
         /// <remarks>
@@ -68,7 +68,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<EntityCloudType> CloudType { get; set; }
         
         /// <value>
-        /// The current state of the log analytics entity
+        /// The current lifecycle state of the log analytics entity type.
         /// 
         /// </value>
         /// <remarks>

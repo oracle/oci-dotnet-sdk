@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Unique internal identifier to refer to upload container
+        /// Unique internal identifier to refer upload container.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,39 +74,47 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeStarted is descending.
+        /// timeCreated, fileName and logGroup are deprecated. Instead use timestarted, name, logGroup accordingly.
         /// 
         /// </value>
         ///
         public enum SortByEnum {
+            [EnumMember(Value = "timeStarted")]
+            TimeStarted,
+            [EnumMember(Value = "name")]
+            Name,
+            [EnumMember(Value = "logGroupName")]
+            LogGroupName,
+            [EnumMember(Value = "sourceName")]
+            SourceName,
+            [EnumMember(Value = "status")]
+            Status,
             [EnumMember(Value = "timeCreated")]
             TimeCreated,
             [EnumMember(Value = "fileName")]
             FileName,
             [EnumMember(Value = "logGroup")]
-            LogGroup,
-            [EnumMember(Value = "sourceName")]
-            SourceName,
-            [EnumMember(Value = "status")]
-            Status
+            LogGroup
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeStarted is descending.
+        /// timeCreated, fileName and logGroup are deprecated. Instead use timestarted, name, logGroup accordingly.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Search string used to filtering uploads based on file name, log group name and log source name.
+        /// This can be used to filter upload files based on the file, log group and log source names.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "searchStr")]
         public string SearchStr { get; set; }
         
         ///
         /// <value>
-        /// Upload Status.
+        /// Upload File processing state.
         /// </value>
         ///
         public enum StatusEnum {
@@ -119,7 +127,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Upload Status.
+        /// Upload File processing state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Collections.Generic.List<StatusEnum> Status { get; set; }

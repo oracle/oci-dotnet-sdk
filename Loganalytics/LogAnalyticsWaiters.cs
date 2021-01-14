@@ -88,7 +88,7 @@ namespace Oci.LoganalyticsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse> ForLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleRequest request, params LogAnalyticsObjectCollectionRule.LifecycleStateEnum[] targetStates)
+        public Waiter<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse> ForLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleRequest request, params ObjectCollectionRuleLifecycleStates[] targetStates)
         {
             return this.ForLogAnalyticsObjectCollectionRule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -100,13 +100,13 @@ namespace Oci.LoganalyticsService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse> ForLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleRequest request, WaiterConfiguration config, params LogAnalyticsObjectCollectionRule.LifecycleStateEnum[] targetStates)
+        public Waiter<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse> ForLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleRequest request, WaiterConfiguration config, params ObjectCollectionRuleLifecycleStates[] targetStates)
         {
             var agent = new WaiterAgent<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse>(
                 request,
                 request => client.GetLogAnalyticsObjectCollectionRule(request),
                 response => targetStates.Contains(response.LogAnalyticsObjectCollectionRule.LifecycleState.Value),
-                targetStates.Contains(LogAnalyticsObjectCollectionRule.LifecycleStateEnum.Deleted)
+                targetStates.Contains(ObjectCollectionRuleLifecycleStates.Deleted)
             );
             return new Waiter<GetLogAnalyticsObjectCollectionRuleRequest, GetLogAnalyticsObjectCollectionRuleResponse>(config, agent);
         }

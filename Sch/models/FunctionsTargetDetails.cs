@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The function target.
+    /// The function used for the Functions target.
     /// 
     /// </summary>
     public class FunctionsTargetDetails : TargetDetails

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// The new compartment this Object Collection Rule will be moved to.
+    /// New compartment details.
     /// 
     /// </summary>
     public class ChangeLogAnalyticsObjectCollectionRuleCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment into which the rule should be moved.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to which the rule have to be moved.
         /// 
         /// </value>
         /// <remarks>

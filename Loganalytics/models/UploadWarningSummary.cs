@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Unique internal identifier to refer to upload warning
+        /// Unique internal identifier to refer upload warning.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.LoganalyticsService.Models
         public string Reference { get; set; }
         
         /// <value>
-        /// Status of the upload. Ex - Failed
+        /// Status of the upload. Ex - Failed.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
         
         /// <value>
-        /// The time when the upload processing started
+        /// The time when the upload processing started.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The details about upload processing failure
+        /// The details about upload processing failure.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }

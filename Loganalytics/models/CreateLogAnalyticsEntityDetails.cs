@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Log analytics entity name. The name must be unique, within the tenancy, and cannot be changed.
+        /// Log analytics entity name.
         /// 
         /// </value>
         /// <remarks>

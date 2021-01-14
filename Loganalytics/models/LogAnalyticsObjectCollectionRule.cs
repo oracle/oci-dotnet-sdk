@@ -81,8 +81,7 @@ namespace Oci.LoganalyticsService.Models
         public string OsBucketName { get; set; }
         
         /// <value>
-        /// The type of collection.
-        /// Supported collection types: LIVE, HISTORIC, HISTORIC_LIVE
+        /// The type of log collection.
         /// 
         /// </value>
         /// <remarks>
@@ -96,7 +95,7 @@ namespace Oci.LoganalyticsService.Models
         /// <value>
         /// The oldest time of the file in the bucket to consider for collection.
         /// Accepted values are: BEGINNING or CURRENT_TIME or RFC3339 formatted datetime string.
-        /// When collectionType is LIVE, specifying pollSince value other than CURRENT_TIME will result in error.
+        /// Use this for HISTORIC or HISTORIC_LIVE collection types. When collectionType is LIVE, specifying pollSince value other than CURRENT_TIME will result in error.
         /// 
         /// </value>
         /// <remarks>
@@ -107,9 +106,9 @@ namespace Oci.LoganalyticsService.Models
         public string PollSince { get; set; }
         
         /// <value>
-        /// The oldest time of the file in the bucket to consider for collection.
+        /// The newest time of the file in the bucket to consider for collection.
         /// Accepted values are: CURRENT_TIME or RFC3339 formatted datetime string.
-        /// When collectionType is LIVE, specifying pollTill will result in error.
+        /// Use this for HISTORIC collection type. When collectionType is LIVE or HISTORIC_LIVE, specifying pollTill will result in error.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "pollTill")]
@@ -143,7 +142,7 @@ namespace Oci.LoganalyticsService.Models
         
         /// <value>
         /// An optional character encoding to aid in detecting the character encoding of the contents of the objects while processing.
-        /// It is recommended to set this value as ISO_8589_1 when configuring content of the objects having more numeric characters,
+        /// It is recommended to set this value as ISO_8859_1 when configuring content of the objects having more numeric characters,
         /// and very few alphabets.
         /// For e.g. this applies when configuring VCN Flow Logs.
         /// 
@@ -159,19 +158,7 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "overrides")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<PropertyOverride>> Overrides { get; set; }
-                ///
-        /// <value>
-        /// The current state of the rule.
-        /// 
-        /// </value>
-        ///
-        public enum LifecycleStateEnum {
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "DELETED")]
-            Deleted
-        };
-
+        
         /// <value>
         /// The current state of the rule.
         /// 
@@ -182,7 +169,7 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<ObjectCollectionRuleLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
         /// A detailed status of the life cycle state.
@@ -209,6 +196,17 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Whether or not this rule is currently enabled.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnabled is required.")]
+        [JsonProperty(PropertyName = "isEnabled")]
+        public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.

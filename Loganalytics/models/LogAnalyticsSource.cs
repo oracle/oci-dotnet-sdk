@@ -231,5 +231,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// An array of event types.
+        /// </value>
+        [JsonProperty(PropertyName = "eventTypes")]
+        public System.Collections.Generic.List<EventType> EventTypes { get; set; }
+        
     }
 }

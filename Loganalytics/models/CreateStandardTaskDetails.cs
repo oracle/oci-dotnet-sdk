@@ -37,6 +37,8 @@ namespace Oci.LoganalyticsService.Models
         
         /// <value>
         /// Schedules, typically a single schedule.
+        /// Note there may only be a single schedule for SAVED_SEARCH and PURGE scheduled tasks.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
