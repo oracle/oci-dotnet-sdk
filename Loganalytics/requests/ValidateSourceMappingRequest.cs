@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Location of the log file
+        /// Location of the log file.
         /// </value>
         /// <remarks>
         /// Required

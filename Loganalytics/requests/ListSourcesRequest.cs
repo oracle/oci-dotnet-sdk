@@ -47,7 +47,7 @@ namespace Oci.LoganalyticsService.Requests
         public string EntityType { get; set; }
         
         /// <value>
-        /// search by source display name or description
+        /// Search by source display name or description.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceDisplayText")]
         public string SourceDisplayText { get; set; }

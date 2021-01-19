@@ -32,16 +32,18 @@ namespace Oci.SchService.Models
         /// </value>
         ///
         public enum KindEnum {
-            [EnumMember(Value = "streaming")]
-            Streaming,
-            [EnumMember(Value = "objectStorage")]
-            ObjectStorage,
-            [EnumMember(Value = "monitoring")]
-            Monitoring,
             [EnumMember(Value = "functions")]
             Functions,
+            [EnumMember(Value = "loggingAnalytics")]
+            LoggingAnalytics,
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
             [EnumMember(Value = "notifications")]
-            Notifications
+            Notifications,
+            [EnumMember(Value = "objectStorage")]
+            ObjectStorage,
+            [EnumMember(Value = "streaming")]
+            Streaming
         };
 
         
@@ -78,6 +80,9 @@ namespace Oci.SchService.Models
                     break;
                 case "functions":
                     obj = new FunctionsTargetDetails();
+                    break;
+                case "loggingAnalytics":
+                    obj = new LoggingAnalyticsTargetDetails();
                     break;
                 case "streaming":
                     obj = new StreamingTargetDetails();

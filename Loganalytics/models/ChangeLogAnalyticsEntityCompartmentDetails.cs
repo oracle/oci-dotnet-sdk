@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// log analytics entity compartment to be updated.
+    /// Log analytics entity compartment to be updated.
     /// 
     /// </summary>
     public class ChangeLogAnalyticsEntityCompartmentDetails 

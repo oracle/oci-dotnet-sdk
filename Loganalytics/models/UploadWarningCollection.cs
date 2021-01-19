@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Collection of UploadFileSummary objects.
+    /// Collection of UploadWarningSummary objects.
     /// </summary>
     public class UploadWarningCollection 
     {

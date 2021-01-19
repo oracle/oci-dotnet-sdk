@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.LoganalyticsService.Models
 {
@@ -19,8 +19,21 @@ namespace Oci.LoganalyticsService.Models
     /// The details for updating a schedule task.
     /// 
     /// </summary>
+    [JsonConverter(typeof(UpdateScheduledTaskDetailsModelConverter))]
     public class UpdateScheduledTaskDetails 
     {
+                ///
+        /// <value>
+        /// Discriminator.
+        /// </value>
+        ///
+        public enum KindEnum {
+            [EnumMember(Value = "ACCELERATION")]
+            Acceleration,
+            [EnumMember(Value = "STANDARD")]
+            Standard
+        };
+
         
         /// <value>
         /// A user-friendly name that is changeable and that does not have to be unique.
@@ -47,11 +60,41 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Schedules may be updated for task types SAVED_SEARCH and PURGE
+        /// Schedules may be updated for task types SAVED_SEARCH and PURGE.
+        /// Note there may only be a single schedule for SAVED_SEARCH and PURGE scheduled tasks.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "schedules")]
         public System.Collections.Generic.List<Schedule> Schedules { get; set; }
         
+    }
+
+    public class UpdateScheduledTaskDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(UpdateScheduledTaskDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(UpdateScheduledTaskDetails);
+            var discriminator = jsonObject["kind"].Value<string>();
+            switch (discriminator)
+            {
+                case "STANDARD":
+                    obj = new UpdateStandardTaskDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

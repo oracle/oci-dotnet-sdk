@@ -66,7 +66,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Adds association between input source log analytics entity and destination entities.
+        /// Adds association between input source log analytics entity and one or more existing destination entities.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -100,6 +100,47 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"AddEntityAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Append data to a lookup.  The file containing the information to append
+        /// must be provided.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/AppendLookupData.cs.html">here</a> to see an example of how to use AppendLookupData API.</example>
+        public async Task<AppendLookupDataResponse> AppendLookupData(AppendLookupDataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called appendLookupData");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/{lookupName}/actions/appendData".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AppendLookupDataResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AppendLookupData failed with error: {e.Message}");
                 throw;
             }
         }
@@ -261,7 +302,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Move the rule from it&#39;s current compartment to given compartment.
+        /// Move the rule from it&#39;s current compartment to the given compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -498,7 +539,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Create a configuration to collect logs from object storage bucket.
+        /// Creates a rule to collect logs from an object storage bucket.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -732,7 +773,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Delete the log analytics entity type with the given name.
+        /// Delete log analytics entity type with the given name.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -810,8 +851,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Deletes a configured object storage bucket based collection rule to stop the log collection of the configured bucket .
-        /// It will not delete the already collected log data from the configured bucket.
+        /// Deletes the configured object storage bucket based collection rule and stop the log collection.
+        /// It will not delete the existing processed data associated with this bucket from logging analytics storage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -846,6 +887,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"DeleteLogAnalyticsObjectCollectionRule failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete the specified lookup.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DeleteLookup.cs.html">here</a> to see an example of how to use DeleteLookup API.</example>
+        public async Task<DeleteLookupResponse> DeleteLookup(DeleteLookupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteLookup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/{lookupName}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteLookupResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteLookup failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1009,8 +1090,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Deletes a specific log file inside an upload by providing upload file reference.
-        /// It deletes all the logs in storage asscoiated with the upload file and the corresponding upload metadata.
+        /// Deletes a specific log file inside an upload by upload file reference.
+        /// It deletes all the logs from storage associated with the file and the corresponding metadata.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1205,6 +1286,86 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"EstimatePurgeDataSize failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// This API gives an active storage usage estimate for archived data to be recalled and the time range of such data.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/EstimateRecallDataSize.cs.html">here</a> to see an example of how to use EstimateRecallDataSize API.</example>
+        public async Task<EstimateRecallDataSizeResponse> EstimateRecallDataSize(EstimateRecallDataSizeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called estimateRecallDataSize");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/storage/actions/estimateRecallDataSize".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EstimateRecallDataSizeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EstimateRecallDataSize failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// This API gives an active storage usage estimate for recalled data to be released and the time range of such data.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/EstimateReleaseDataSize.cs.html">here</a> to see an example of how to use EstimateReleaseDataSize API.</example>
+        public async Task<EstimateReleaseDataSizeResponse> EstimateReleaseDataSize(EstimateReleaseDataSizeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called estimateReleaseDataSize");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/storage/actions/estimateReleaseDataSize".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EstimateReleaseDataSizeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EstimateReleaseDataSize failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1678,7 +1839,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Returns log analytics entities count summary.
+        /// Returns log analytics entities count summary report.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1907,6 +2068,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"GetLogAnalyticsObjectCollectionRule failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Obtains the lookup with the specified reference.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetLookup.cs.html">here</a> to see an example of how to use GetLookup API.</example>
+        public async Task<GetLookupResponse> GetLookup(GetLookupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getLookup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/{lookupName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetLookupResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetLookup failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2349,7 +2550,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets an On-Demand Upload info by reference
+        /// Gets an On-Demand Upload info by reference.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2895,7 +3096,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets list of configuration details of Object Storage based collection rules.
+        /// Gets list of collection rules.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2929,6 +3130,47 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListLogAnalyticsObjectCollectionRules failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Obtains a list of lookups.  The list is filtered according to the filter criteria
+        /// specified by the user, and sorted according to the ordering criteria specified.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListLookups.cs.html">here</a> to see an example of how to use ListLookups API.</example>
+        public async Task<ListLookupsResponse> ListLookups(ListLookupsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listLookups");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListLookupsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListLookups failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3165,6 +3407,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListQueryWorkRequests failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// This API returns the list of recalled data of a tenancy.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListRecalledData.cs.html">here</a> to see an example of how to use ListRecalledData API.</example>
+        public async Task<ListRecalledDataResponse> ListRecalledData(ListRecalledDataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listRecalledData");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/storage/recalledData".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListRecalledDataResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListRecalledData failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3522,7 +3804,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets the list of character encodings supported for log files.
+        /// Gets list of character encodings which are supported by on-demand upload.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3561,7 +3843,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets timezones that are supported when performing uploads.
+        /// Gets list of timezones which are supported by on-demand upload.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3600,7 +3882,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets list of files in an upload.
+        /// Gets list of files in an upload along with its processing state.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3639,7 +3921,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Gets list of warnings in an upload explaining the failures due to incorrect configuration.
+        /// Gets list of warnings in an upload caused by incorrect configuration.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3714,6 +3996,47 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListUploads failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Obtains a list of warnings.  The list is filtered according to the filter criteria
+        /// specified by the user, and sorted according to the ordering criteria specified.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListWarnings.cs.html">here</a> to see an example of how to use ListWarnings API.</example>
+        public async Task<ListWarningsResponse> ListWarnings(ListWarningsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listWarnings");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/warnings".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListWarningsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListWarnings failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3952,6 +4275,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ParseQuery failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Pause the scheduled task specified by {scheduledTaskId}.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/PauseScheduledTask.cs.html">here</a> to see an example of how to use PauseScheduledTask API.</example>
+        public async Task<PauseScheduledTaskResponse> PauseScheduledTask(PauseScheduledTaskRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called pauseScheduledTask");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/scheduledTasks/{scheduledTaskId}/actions/pause".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<PauseScheduledTaskResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"PauseScheduledTask failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4235,6 +4598,46 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Resume the scheduled task specified by {scheduledTaskId}.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ResumeScheduledTask.cs.html">here</a> to see an example of how to use ResumeScheduledTask API.</example>
+        public async Task<ResumeScheduledTaskResponse> ResumeScheduledTask(ResumeScheduledTaskRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called resumeScheduledTask");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/scheduledTasks/{scheduledTaskId}/actions/resume".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ResumeScheduledTaskResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ResumeScheduledTask failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Execute the saved search acceleration task in the foreground.
         /// The ScheduledTask taskType must be ACCELERATION.
         /// Optionally specify time range (timeStart and timeEnd). The default is all time.
@@ -4316,6 +4719,48 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Accepts a list of warnings.  Any unsuppressed warnings in the input list will
+        /// be suppressed.  Warnings in the input list which are already suppressed will
+        /// not be modified.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/SuppressWarning.cs.html">here</a> to see an example of how to use SuppressWarning API.</example>
+        public async Task<SuppressWarningResponse> SuppressWarning(SuppressWarningRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called suppressWarning");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/warnings/actions/suppress".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SuppressWarningResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SuppressWarning failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// test parser
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4350,6 +4795,48 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"TestParser failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Accepts a list of warnings.  Any suppressed warnings in the input list will
+        /// be unsuppressed.  Warnings in the input list which are unsuppressed will
+        /// not be modified.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UnsuppressWarning.cs.html">here</a> to see an example of how to use UnsuppressWarning API.</example>
+        public async Task<UnsuppressWarningResponse> UnsuppressWarning(UnsuppressWarningRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called unsuppressWarning");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/warnings/actions/unsuppress".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UnsuppressWarningResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UnsuppressWarning failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4472,7 +4959,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Update the rule with the given id.
+        /// Updates configuration of the object collection rule for the given id.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4506,6 +4993,87 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"UpdateLogAnalyticsObjectCollectionRule failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the metadata of the specified lookup, such as the lookup description.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpdateLookup.cs.html">here</a> to see an example of how to use UpdateLookup API.</example>
+        public async Task<UpdateLookupResponse> UpdateLookup(UpdateLookupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateLookup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/{lookupName}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateLookupResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateLookup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the specified lookup with the details provided.  This API will not update
+        /// lookup metadata (such as lookup description).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpdateLookupData.cs.html">here</a> to see an example of how to use UpdateLookupData API.</example>
+        public async Task<UpdateLookupDataResponse> UpdateLookupData(UpdateLookupDataRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateLookupData");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/{lookupName}/actions/updateData".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateLookupDataResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateLookupData failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4865,7 +5433,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Validates a log file to check whether it is eligible to upload or not.
+        /// Validates a log file to check whether it is eligible to be uploaded or not.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4982,7 +5550,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Validates the source mapping for given file and provides match status and parsed representation of log data.
+        /// Validates the source mapping for a given file and provides match status and the parsed representation of log data.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

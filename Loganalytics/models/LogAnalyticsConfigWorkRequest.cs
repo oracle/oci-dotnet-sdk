@@ -41,7 +41,13 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "CREATE_ASSOCIATIONS")]
             CreateAssociations,
             [EnumMember(Value = "DELETE_ASSOCIATIONS")]
-            DeleteAssociations
+            DeleteAssociations,
+            [EnumMember(Value = "APPEND_LOOKUP_DATA")]
+            AppendLookupData,
+            [EnumMember(Value = "UPDATE_LOOKUP_DATA")]
+            UpdateLookupData,
+            [EnumMember(Value = "DELETE_LOOKUP")]
+            DeleteLookup
         };
 
         /// <value>

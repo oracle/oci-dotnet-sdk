@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Upload is a container that can be used to optionally put all the relevant and related on-demand upload based log files.
+    /// Upload is a container that can be used to put all the relevant and related on-demand upload based log files together.
     /// 
     /// </summary>
     public class Upload 
     {
         
         /// <value>
-        /// Unique internal identifier to refer to the upload container
+        /// Unique internal identifier to refer the upload container.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.LoganalyticsService.Models
         public string Reference { get; set; }
         
         /// <value>
-        /// The name of the upload container
+        /// The name of the upload container.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The time when this upload container is created. An RFC3339 formatted datetime string
+        /// The time when this upload container is created. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,19 +53,19 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The latest time when this upload container is modified. An RFC3339 formatted datetime string
+        /// The latest time when this upload container is modified. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// This time represents the earliest time of the log entry in this container. An RFC3339 formatted datetime string
+        /// This time represents the earliest time of the log entry in this container. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeEarliestLogEntry")]
         public System.Nullable<System.DateTime> TimeEarliestLogEntry { get; set; }
         
         /// <value>
-        /// This time represents the latest time of the log entry in this container. An RFC3339 formatted datetime string
+        /// This time represents the latest time of the log entry in this container. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeLatestLogEntry")]
         public System.Nullable<System.DateTime> TimeLatestLogEntry { get; set; }

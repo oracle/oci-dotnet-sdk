@@ -23,6 +23,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
+        /// User specified color to highlight matches with if found.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "color")]
+        public string Color { get; set; }
+        
+        /// <value>
         /// List of terms or phrases to find to mark the result row as highlighted.
         /// 
         /// </value>

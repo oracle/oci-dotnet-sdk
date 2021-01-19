@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of LogAnalyticsObjectCollectionRuleSummary objects.
+        /// List of LogAnalyticsObjectCollectionRuleSummary objects.
         /// </value>
         /// <remarks>
         /// Required

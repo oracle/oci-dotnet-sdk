@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// List of supported character encodings
+    /// List of supported character encodings.
     /// </summary>
     public class CharEncodingCollection 
     {
         
         /// <value>
-        /// List of supported character encodings
+        /// List of supported character encodings.
         /// </value>
         /// <remarks>
         /// Required

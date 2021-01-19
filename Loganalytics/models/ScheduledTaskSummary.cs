@@ -141,6 +141,30 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+                ///
+        /// <value>
+        /// The most recent task execution status.
+        /// </value>
+        ///
+        public enum LastExecutionStatusEnum {
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "SUCCEEDED")]
+            Succeeded
+        };
+
+        /// <value>
+        /// The most recent task execution status.
+        /// </value>
+        [JsonProperty(PropertyName = "lastExecutionStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LastExecutionStatusEnum> LastExecutionStatus { get; set; }
+        
+        /// <value>
+        /// The date and time the scheduled task last executed, in the format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastExecuted")]
+        public System.Nullable<System.DateTime> TimeLastExecuted { get; set; }
         
     }
 }

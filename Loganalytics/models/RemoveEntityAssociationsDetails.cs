@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Information about the associations to be deleted between entity and other existing entities.
+    /// Information about the associations to be deleted between source entity and other existing destination entities.
     /// 
     /// </summary>
     public class RemoveEntityAssociationsDetails 

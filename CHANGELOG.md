@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 11.0.0 - 2021-01-19
+### Added
+- Support for Logging Analytics as a target in the Service Connector Hub service.
+- Support for lookups, agent collection warnings, task commands, and data archive/recall in the Logging Analytics service.
+
+### Fixed
+- Fixed a bug in the endpoint used for the Management Dashboard service.
+
+### Breaking Changes
+- Parameter `SortBy` type in request `ListMetaSourceTypesRequest` changed from `string` to `System.Nullable<SortByEnum>` in the Loganalytics service.
+- Parameter `SortBy` type in request `ListParserFunctionsRequest` changed from `string` to `System.Nullable<SortByEnum>` in the Loganalytics service.
+- Parameter `SortBy` type in request `ListParserMetaPluginsRequest` changed from `string` to `System.Nullable<SortByEnum>` in the Loganalytics service.
+- Parameter `SortBy` type in request `ListSourceLabelOperatorsRequest` changed from `string` to `System.Nullable<SortByEnum>` in the Loganalytics service.
+- Parameter `SortBy` type in request `ListSourceMetaFunctionsRequest` changed from `string` to `System.Nullable<SortByEnum>` in the Loganalytics service.
+
 ## 10.0.0 - 2021-01-12
 ### Added
 - Support for auto-scaling in the Big Data service

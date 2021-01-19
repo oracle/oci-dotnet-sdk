@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The notifications target.
+    /// The topic used for the Notifications target.
     /// 
     /// </summary>
     public class NotificationsTargetDetails : TargetDetails

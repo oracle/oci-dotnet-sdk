@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Unique internal identifier to refer to upload file
+        /// Unique internal identifier to refer upload file.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,37 +68,37 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<decimal> TotalChunks { get; set; }
         
         /// <value>
-        /// Number of chunks processed
+        /// Number of chunks processed.
         /// </value>
         [JsonProperty(PropertyName = "chunksConsumed")]
         public System.Nullable<decimal> ChunksConsumed { get; set; }
         
         /// <value>
-        /// Number of chunks processed successfully
+        /// Number of chunks processed successfully.
         /// </value>
         [JsonProperty(PropertyName = "chunksSuccess")]
         public System.Nullable<decimal> ChunksSuccess { get; set; }
         
         /// <value>
-        /// Number of chunks failed processing
+        /// Number of chunks failed processing.
         /// </value>
         [JsonProperty(PropertyName = "chunksFail")]
         public System.Nullable<decimal> ChunksFail { get; set; }
         
         /// <value>
-        /// The time when this file processing started
+        /// The time when this file processing started.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// Name of the log source used for processing this file
+        /// Name of the log source used for processing this file.
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
         
         /// <value>
-        /// Name of the entity type
+        /// Name of the entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
@@ -110,7 +110,7 @@ namespace Oci.LoganalyticsService.Models
         public string EntityName { get; set; }
         
         /// <value>
-        /// Log namespace associated with the file.
+        /// (Deprecated) Name of the log namespace associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "logNamespace")]
         public string LogNamespace { get; set; }
@@ -122,13 +122,13 @@ namespace Oci.LoganalyticsService.Models
         public string LogGroupId { get; set; }
         
         /// <value>
-        /// Log group name associated with the file.
+        /// Name of the log group associated with the file.
         /// </value>
         [JsonProperty(PropertyName = "logGroupName")]
         public string LogGroupName { get; set; }
         
         /// <value>
-        /// The details about upload processing failure
+        /// The details about upload processing failure.
         /// </value>
         [JsonProperty(PropertyName = "failureDetails")]
         public string FailureDetails { get; set; }

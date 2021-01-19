@@ -638,6 +638,55 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListLookups operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListLookupsResponse> ListLookupsResponseEnumerator(ListLookupsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListLookupsRequest, ListLookupsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLookups(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the LogAnalyticsLookup objects
+        /// contained in responses from the ListLookups operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<LogAnalyticsLookup> ListLookupsRecordEnumerator(ListLookupsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListLookupsRequest, ListLookupsResponse, LogAnalyticsLookup>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLookups(request, retryConfiguration, cancellationToken),
+                response => response.LogAnalyticsLookupCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListMetaSourceTypes operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -879,6 +928,55 @@ namespace Oci.LoganalyticsService
                 },
                 request => client.ListQueryWorkRequests(request, retryConfiguration, cancellationToken),
                 response => response.QueryWorkRequestCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListRecalledData operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListRecalledDataResponse> ListRecalledDataResponseEnumerator(ListRecalledDataRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListRecalledDataRequest, ListRecalledDataResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRecalledData(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the RecalledData objects
+        /// contained in responses from the ListRecalledData operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<RecalledData> ListRecalledDataRecordEnumerator(ListRecalledDataRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListRecalledDataRequest, ListRecalledDataResponse, RecalledData>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRecalledData(request, retryConfiguration, cancellationToken),
+                response => response.RecalledDataCollection.Items
             );
         }
 
@@ -1467,6 +1565,55 @@ namespace Oci.LoganalyticsService
                 },
                 request => client.ListUploads(request, retryConfiguration, cancellationToken),
                 response => response.UploadCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListWarnings operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListWarningsResponse> ListWarningsResponseEnumerator(ListWarningsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListWarningsRequest, ListWarningsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWarnings(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the LogAnalyticsWarning objects
+        /// contained in responses from the ListWarnings operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<LogAnalyticsWarning> ListWarningsRecordEnumerator(ListWarningsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListWarningsRequest, ListWarningsResponse, LogAnalyticsWarning>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWarnings(request, retryConfiguration, cancellationToken),
+                response => response.LogAnalyticsWarningCollection.Items
             );
         }
 

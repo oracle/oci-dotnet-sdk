@@ -25,7 +25,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Match Type. Accepted values are: contains
+        /// Match Type. Accepted values are: contains.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "matchType")]
@@ -45,7 +45,7 @@ namespace Oci.LoganalyticsService.Models
         public string PropertyName { get; set; }
         
         /// <value>
-        /// Value.
+        /// Value of the property.
         /// </value>
         [JsonProperty(PropertyName = "propertyValue")]
         public string PropertyValue { get; set; }

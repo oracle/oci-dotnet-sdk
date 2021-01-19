@@ -105,6 +105,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "filterQueryString")]
         public string FilterQueryString { get; set; }
         
+        /// <value>
+        /// Field denoting field unit type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "unitType")]
+        public string UnitType { get; set; }
+        
     }
 
     public class AbstractFieldModelConverter : JsonConverter

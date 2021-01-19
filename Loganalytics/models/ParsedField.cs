@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Parsed field response
+    /// Parsed field response.
     /// </summary>
     public class ParsedField 
     {
         
         /// <value>
-        /// Sample log entries picked up from the given file for validation
+        /// Sample log entries picked up from the given file for validation.
         /// </value>
         [JsonProperty(PropertyName = "logContent")]
         public string LogContent { get; set; }
         
         /// <value>
-        /// Field Values
+        /// List of field Values.
         /// </value>
         [JsonProperty(PropertyName = "fieldValues")]
         public System.Collections.Generic.List<string> FieldValues { get; set; }

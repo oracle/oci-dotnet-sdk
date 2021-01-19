@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The monitoring target.
+    /// The metric and metric namespace used for the Monitoring target.
     /// 
     /// </summary>
     public class MonitoringTargetDetails : TargetDetails

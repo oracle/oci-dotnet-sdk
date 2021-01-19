@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Requests
         public string LogAnalyticsEntityId { get; set; }
         
         /// <value>
-        /// This parameter specifies the entity OCIDs with which associations are to be created. Specify destination OCIDs as comma separated string.
+        /// This parameter specifies the destination entity OCIDs with which associations are to be created.
         /// </value>
         /// <remarks>
         /// Required

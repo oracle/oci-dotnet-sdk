@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Response object containing match status and parsed representation of log data
+    /// Response object containing match status and parsed representation of log data.
     /// </summary>
     public class SourceMappingResponse 
     {
         
         /// <value>
-        /// Parsed representation of the log file
+        /// Parsed representation of the log file.
         /// </value>
         /// <remarks>
         /// Required

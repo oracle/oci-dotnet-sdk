@@ -41,7 +41,7 @@ namespace Oci.ManagementdashboardService
             {
                 ServiceName = "DASHXAPIS",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://managementdashboards.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://managementdashboard.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

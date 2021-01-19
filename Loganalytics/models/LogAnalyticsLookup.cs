@@ -52,10 +52,34 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.List<LookupField> Fields { get; set; }
         
         /// <value>
-        /// lookupReference
+        /// The lookup reference as an integer.
         /// </value>
         [JsonProperty(PropertyName = "lookupReference")]
         public System.Nullable<long> LookupReference { get; set; }
+        
+        /// <value>
+        /// The lookup reference as a string.
+        /// </value>
+        [JsonProperty(PropertyName = "lookupReferenceString")]
+        public string LookupReferenceString { get; set; }
+                ///
+        /// <value>
+        /// The lookup type.  Valid values are LOOKUP or DICTIONARY.
+        /// </value>
+        ///
+        public enum TypeEnum {
+            [EnumMember(Value = "Lookup")]
+            Lookup,
+            [EnumMember(Value = "Dictionary")]
+            Dictionary
+        };
+
+        /// <value>
+        /// The lookup type.  Valid values are LOOKUP or DICTIONARY.
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// iname

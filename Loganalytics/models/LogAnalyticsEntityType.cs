@@ -62,7 +62,7 @@ namespace Oci.LoganalyticsService.Models
         public string Category { get; set; }
         
         /// <value>
-        /// Nature of log analytics entity type.
+        /// Log analytics entity type group. That can be CLOUD (OCI) or NON_CLOUD otherwise.
         /// 
         /// </value>
         /// <remarks>
@@ -81,7 +81,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.List<EntityTypeProperty> Properties { get; set; }
         
         /// <value>
-        /// The current state of the log analytics entity.
+        /// The current lifecycle state of the log analytics entity.
         /// 
         /// </value>
         /// <remarks>

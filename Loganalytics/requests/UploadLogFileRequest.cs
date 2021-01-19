@@ -99,7 +99,9 @@ namespace Oci.LoganalyticsService.Requests
         public string Timezone { get; set; }
         
         /// <value>
-        /// Character Encoding
+        /// Character encoding to be used to detect the encoding type of file(s) being uploaded.
+        /// When this property is not specified, system detected character encoding will be used.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "charEncoding")]
         public string CharEncoding { get; set; }

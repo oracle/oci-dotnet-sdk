@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.LoganalyticsService.Models
 {
@@ -19,8 +19,21 @@ namespace Oci.LoganalyticsService.Models
     /// Log analytics scheduled task resource.
     /// 
     /// </summary>
+    [JsonConverter(typeof(ScheduledTaskModelConverter))]
     public class ScheduledTask 
     {
+                ///
+        /// <value>
+        /// Discriminator.
+        /// </value>
+        ///
+        public enum KindEnum {
+            [EnumMember(Value = "ACCELERATION")]
+            Acceleration,
+            [EnumMember(Value = "STANDARD")]
+            Standard
+        };
+
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the data plane resource.
@@ -177,5 +190,34 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+    }
+
+    public class ScheduledTaskModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(ScheduledTask);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(ScheduledTask);
+            var discriminator = jsonObject["kind"].Value<string>();
+            switch (discriminator)
+            {
+                case "STANDARD":
+                    obj = new StandardTask();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

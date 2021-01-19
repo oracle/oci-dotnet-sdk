@@ -48,11 +48,21 @@ namespace Oci.LoganalyticsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
         
+        ///
+        /// <value>
+        /// sort by field
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "name")]
+            Name
+        };
+
         /// <value>
         /// sort by field
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public string SortBy { get; set; }
+        public System.Nullable<SortByEnum> SortBy { get; set; }
         
         ///
         /// <value>

@@ -16,43 +16,43 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Parsed Content
+    /// Parsed representation of the log file.
     /// </summary>
     public class ParsedContent 
     {
         
         /// <value>
-        /// Field names
+        /// List of field names.
         /// </value>
         [JsonProperty(PropertyName = "fieldNames")]
         public System.Collections.Generic.List<string> FieldNames { get; set; }
         
         /// <value>
-        /// Display names for fields
+        /// List of field display names.
         /// </value>
         [JsonProperty(PropertyName = "fieldDisplayNames")]
         public System.Collections.Generic.List<string> FieldDisplayNames { get; set; }
         
         /// <value>
-        /// Parsed field values
+        /// Parsed field values.
         /// </value>
         [JsonProperty(PropertyName = "parsedFieldValues")]
         public System.Collections.Generic.List<ParsedField> ParsedFieldValues { get; set; }
         
         /// <value>
-        /// Sample log entries picked up from the given file for validation
+        /// Sample log entries picked up from the given file for validation.
         /// </value>
         [JsonProperty(PropertyName = "logContent")]
         public string LogContent { get; set; }
         
         /// <value>
-        /// Sample Size taken for validation
+        /// Sample Size taken for validation.
         /// </value>
         [JsonProperty(PropertyName = "sampleSize")]
         public System.Nullable<int> SampleSize { get; set; }
         
         /// <value>
-        /// Match Status
+        /// Match Status.
         /// </value>
         [JsonProperty(PropertyName = "matchStatus")]
         public string MatchStatus { get; set; }

@@ -35,7 +35,7 @@ namespace Oci.LoganalyticsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Log analytics entity name. The name must be unique, within the tenancy, and cannot be changed.
+        /// Log analytics entity name.
         /// 
         /// </value>
         /// <remarks>

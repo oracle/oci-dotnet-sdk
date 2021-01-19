@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The object storage target.
+    /// The bucket used for the Object Storage target.
     /// 
     /// </summary>
     public class ObjectStorageTargetDetails : TargetDetails
@@ -46,6 +46,20 @@ namespace Oci.SchService.Models
         /// </value>
         [JsonProperty(PropertyName = "objectNamePrefix")]
         public string ObjectNamePrefix { get; set; }
+        
+        /// <value>
+        /// The batch rollover size in megabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "batchRolloverSizeInMBs")]
+        public System.Nullable<int> BatchRolloverSizeInMBs { get; set; }
+        
+        /// <value>
+        /// The batch rollover time in milliseconds.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "batchRolloverTimeInMs")]
+        public System.Nullable<int> BatchRolloverTimeInMs { get; set; }
         
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "objectStorage";

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// To update the attributes of an Object Storage based collection rule.
+    /// Configuration of the collection rule to be updated.
     /// 
     /// </summary>
     public class UpdateLogAnalyticsObjectCollectionRuleDetails 
@@ -50,13 +50,20 @@ namespace Oci.LoganalyticsService.Models
         
         /// <value>
         /// An optional character encoding to aid in detecting the character encoding of the contents of the objects while processing.
-        /// It is recommended to set this value as ISO_8589_1 when configuring content of the objects having more numeric characters,
+        /// It is recommended to set this value as ISO_8859_1 when configuring content of the objects having more numeric characters,
         /// and very few alphabets.
         /// For e.g. this applies when configuring VCN Flow Logs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "charEncoding")]
         public string CharEncoding { get; set; }
+        
+        /// <value>
+        /// Whether or not this rule is currently enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isEnabled")]
+        public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
         /// Use this to override some property values which are defined at bucket level to the scope of object.
