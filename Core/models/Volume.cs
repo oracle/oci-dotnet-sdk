@@ -175,11 +175,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
         
-        /// <value>
-        /// The volume source, either an existing volume in the same availability domain or a volume backup.
-        /// If null, an empty volume is created.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public VolumeSourceDetails SourceDetails { get; set; }
         

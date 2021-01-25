@@ -29,5 +29,43 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "ciphertext")]
         public string Ciphertext { get; set; }
         
+        /// <value>
+        /// The OCID of the key used to sign the message
+        /// </value>
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// The OCID of the keyVersion used to encrypt the ciphertext.
+        /// </value>
+        [JsonProperty(PropertyName = "keyVersionId")]
+        public string KeyVersionId { get; set; }
+                ///
+        /// <value>
+        /// Encryption algorithm to be used while encrypting/decrypting data using a customer key
+        /// AES_256_GCM is the supported value AES keys and uses GCM mode of operation
+        /// RSA_OAEP_SHA_1 and RSA_OAEP_SHA_256 are supported for RSA keys and use OAEP padding.   
+        /// 
+        /// </value>
+        ///
+        public enum EncryptionAlgorithmEnum {
+            [EnumMember(Value = "AES_256_GCM")]
+            Aes256Gcm,
+            [EnumMember(Value = "RSA_OAEP_SHA_1")]
+            RsaOaepSha1,
+            [EnumMember(Value = "RSA_OAEP_SHA_256")]
+            RsaOaepSha256
+        };
+
+        /// <value>
+        /// Encryption algorithm to be used while encrypting/decrypting data using a customer key
+        /// AES_256_GCM is the supported value AES keys and uses GCM mode of operation
+        /// RSA_OAEP_SHA_1 and RSA_OAEP_SHA_256 are supported for RSA keys and use OAEP padding.   
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionAlgorithm")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EncryptionAlgorithmEnum> EncryptionAlgorithm { get; set; }
+        
     }
 }

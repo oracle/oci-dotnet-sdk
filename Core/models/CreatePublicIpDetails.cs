@@ -100,7 +100,7 @@ namespace Oci.CoreService.Models
         public string PrivateIpId { get; set; }
         
         /// <value>
-        /// OCID of the pool object created by the current tenancy
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the public IP pool.
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]
         public string PublicIpPoolId { get; set; }

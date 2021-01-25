@@ -128,11 +128,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
         
-        /// <value>
-        /// The volume group source. The source is either another a list of
-        /// volume IDs in the same availability domain, another volume group, or a volume group backup.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public VolumeGroupSourceDetails SourceDetails { get; set; }
         

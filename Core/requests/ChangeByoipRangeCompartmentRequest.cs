@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The OCID of the Byoip Range object.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource containing the BYOIP CIDR block.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string ByoipRangeId { get; set; }
         
         /// <value>
-        /// Request to change the compartment of a Byoip Range.
+        /// Request to change the compartment of a BYOIP CIDR block.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A Public IP pool, conceptually, is a set of public IP addresses (represented as one or more CIDRs) Users can be allocated addresses from this for internet access.
+    /// A public IP pool is a set of public IP addresses represented as one or more IPv4 CIDR blocks. Resources like load balancers and compute instances can be allocated public IP addresses from a public IP pool.
     /// </summary>
     public class PublicIpPool 
     {
         
         /// <value>
-        /// The CIDRs that make up this pool
+        /// The CIDR blocks added to this pool. This could be all or a portion of a BYOIP CIDR block.
         /// </value>
         [JsonProperty(PropertyName = "cidrBlocks")]
         public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the Public IP Pool
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing this pool.
         /// 
         /// </value>
         /// <remarks>
@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The Oracle ID (OCID) of the Public Ip Pool.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the public IP pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
                 ///
         /// <value>
-        /// The Public IP Pool's current state.
+        /// The public IP pool's current state.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -92,14 +92,14 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The Public IP Pool's current state.
+        /// The public IP pool's current state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The date and time the public IP Pool was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the public IP pool was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>

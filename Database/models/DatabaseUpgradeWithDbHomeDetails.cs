@@ -16,8 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of Database Home for upgrading a database.
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+    /// Details of Database Home to be used to upgrade a database.
     /// 
     /// </summary>
     public class DatabaseUpgradeWithDbHomeDetails : DatabaseUpgradeSourceBase

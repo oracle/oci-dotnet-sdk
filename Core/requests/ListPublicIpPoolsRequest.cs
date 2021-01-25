@@ -64,7 +64,7 @@ namespace Oci.CoreService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given Byoip Range
+        /// A filter to return only resources that match the given BYOIP CIDR block.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "byoipRangeId")]

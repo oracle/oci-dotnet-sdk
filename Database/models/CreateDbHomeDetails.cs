@@ -41,7 +41,7 @@ namespace Oci.DatabaseService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }

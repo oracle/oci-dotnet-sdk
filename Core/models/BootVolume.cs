@@ -170,11 +170,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sizeInMBs")]
         public System.Nullable<long> SizeInMBs { get; set; }
         
-        /// <value>
-        /// The boot volume source, either an existing boot volume in the same availability domain or a boot volume backup.
-        /// If null, this means that the boot volume was created from an image.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public BootVolumeSourceDetails SourceDetails { get; set; }
         

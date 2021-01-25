@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Oracle Application Express (APEX) is a low-code development platform that enables you to build scalable, secure enterprise apps, with world-class features. Autonomous Database with the APEX workload type is optimized to support APEX development.
+    /// Oracle APEX Application Development is a low-code development platform that enables you to build scalable, secure enterprise apps, with world-class features. Autonomous Database with the APEX workload type is optimized to support APEX development.
     /// 
     /// </summary>
     public class AutonomousDatabaseApex 
     {
         
         /// <value>
-        /// The Oracle Application Express service version.
+        /// The Oracle APEX Application Development version.
         /// </value>
         [JsonProperty(PropertyName = "apexVersion")]
         public string ApexVersion { get; set; }

@@ -127,27 +127,53 @@ namespace Oci.KeymanagementService.Requests
         
         ///
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES is supported.
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES, RSA and ECDSA are supported.
         /// 
         /// </value>
         ///
         public enum AlgorithmEnum {
             [EnumMember(Value = "AES")]
-            Aes
+            Aes,
+            [EnumMember(Value = "RSA")]
+            Rsa,
+            [EnumMember(Value = "ECDSA")]
+            Ecdsa
         };
 
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES is supported.
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Currently, only AES, RSA and ECDSA are supported.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "algorithm")]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
         /// <value>
-        /// The length of the key in bytes, expressed as an integer. Values of 16, 24, or 32 are supported.
+        /// The length of the key in bytes, expressed as an integer. Values of 16, 24, 32 are supported.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "length")]
         public System.Nullable<int> Length { get; set; }
+        
+        ///
+        /// <value>
+        /// The curve Id of the keys in case of ECDSA keys
+        /// 
+        /// </value>
+        ///
+        public enum CurveIdEnum {
+            [EnumMember(Value = "NIST_P256")]
+            NistP256,
+            [EnumMember(Value = "NIST_P384")]
+            NistP384,
+            [EnumMember(Value = "NIST_P521")]
+            NistP521
+        };
+
+        /// <value>
+        /// The curve Id of the keys in case of ECDSA keys
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "curveId")]
+        public System.Nullable<CurveIdEnum> CurveId { get; set; }
     }
 }

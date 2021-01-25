@@ -30,6 +30,18 @@ namespace Oci.AnalyticsService.Models
       [EnumMember(Value = "CHANGE_ANALYTICS_INSTANCE_COMPARTMENT")]
       ChangeAnalyticsInstanceCompartment,
       [EnumMember(Value = "CHANGE_ANALYTICS_INSTANCE_NETWORK_ENDPOINT")]
-      ChangeAnalyticsInstanceNetworkEndpoint
+      ChangeAnalyticsInstanceNetworkEndpoint,
+      [EnumMember(Value = "CREATE_VANITY_URL")]
+      CreateVanityUrl,
+      [EnumMember(Value = "UPDATE_VANITY_URL")]
+      UpdateVanityUrl,
+      [EnumMember(Value = "DELETE_VANITY_URL")]
+      DeleteVanityUrl,
+      [EnumMember(Value = "CREATE_PRIVATE_ACCESS_CHANNEL")]
+      CreatePrivateAccessChannel,
+      [EnumMember(Value = "UPDATE_PRIVATE_ACCESS_CHANNEL")]
+      UpdatePrivateAccessChannel,
+      [EnumMember(Value = "DELETE_PRIVATE_ACCESS_CHANNEL")]
+      DeletePrivateAccessChannel
   }
 }

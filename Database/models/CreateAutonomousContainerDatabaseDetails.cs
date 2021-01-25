@@ -117,6 +117,12 @@ namespace Oci.DatabaseService.Models
         public PeerAutonomousContainerDatabaseBackupConfig PeerAutonomousContainerDatabaseBackupConfig { get; set; }
         
         /// <value>
+        /// The `DB_UNIQUE_NAME` of the peer Autonomous Container Database in a Data Guard association.
+        /// </value>
+        [JsonProperty(PropertyName = "peerDbUniqueName")]
+        public string PeerDbUniqueName { get; set; }
+        
+        /// <value>
         /// The OCID of the Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "autonomousVmClusterId")]

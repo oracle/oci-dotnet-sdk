@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to update a Byoip Range
+    /// The information used to update a `ByoipRange` resource.
     /// </summary>
     public class UpdateByoipRangeDetails 
     {

@@ -30,6 +30,14 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
+        /// If provided, specifies the ID of the volume backup policy to assign to the newly
+        /// created volume group. If omitted, no policy will be assigned.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupPolicyId")]
+        public string BackupPolicyId { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment that contains the volume group.
         /// </value>
         /// <remarks>
@@ -63,11 +71,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
-        /// <value>
-        /// Specifies the volume group source details for a new volume group. The volume source is either another a list of
-        /// volume ids in the same availability domain, another volume group or a volume group backup.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

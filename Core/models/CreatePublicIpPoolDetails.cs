@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to create a public ip pool
+    /// The information used to create a public IP pool.
     /// </summary>
     public class CreatePublicIpPoolDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment to contain the Public Ip Pool
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the public IP pool.
         /// 
         /// </value>
         /// <remarks>

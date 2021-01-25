@@ -104,11 +104,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
         
-        /// <value>
-        /// Specifies the boot volume source details for a new boot volume. The volume source is either another boot volume in the same availability domain or a boot volume backup.
-        /// This is a mandatory field for a boot volume.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

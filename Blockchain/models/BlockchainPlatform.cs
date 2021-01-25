@@ -150,6 +150,24 @@ namespace Oci.BlockchainService.Models
         [JsonProperty(PropertyName = "platformShapeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PlatformShapeTypeEnum> PlatformShapeType { get; set; }
+                ///
+        /// <value>
+        /// Type of Load Balancer shape - LB_100_MBPS or LB_400_MBPS. Default is LB_100_MBPS.
+        /// </value>
+        ///
+        public enum LoadBalancerShapeEnum {
+            [EnumMember(Value = "LB_100_MBPS")]
+            Lb100Mbps,
+            [EnumMember(Value = "LB_400_MBPS")]
+            Lb400Mbps
+        };
+
+        /// <value>
+        /// Type of Load Balancer shape - LB_100_MBPS or LB_400_MBPS. Default is LB_100_MBPS.
+        /// </value>
+        [JsonProperty(PropertyName = "loadBalancerShape")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LoadBalancerShapeEnum> LoadBalancerShape { get; set; }
         
         /// <value>
         /// Service endpoint URL, valid post-provisioning

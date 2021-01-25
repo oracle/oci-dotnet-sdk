@@ -60,6 +60,17 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The date and time the volume group backup will expire and be automatically deleted.
+        /// Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). This parameter will always be present for volume group
+        /// backups that were created automatically by a scheduled-backup policy. For manually
+        /// created volume group backups, it will be absent, signifying that there is no expiration
+        /// time and the backup will last forever until manually deleted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "expirationTime")]
+        public System.Nullable<System.DateTime> ExpirationTime { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -123,6 +134,24 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]
         public System.Nullable<long> SizeInGBs { get; set; }
+                ///
+        /// <value>
+        /// Specifies whether the volume group backup was created manually, or via scheduled backup policy.
+        /// </value>
+        ///
+        public enum SourceTypeEnum {
+            [EnumMember(Value = "MANUAL")]
+            Manual,
+            [EnumMember(Value = "SCHEDULED")]
+            Scheduled
+        };
+
+        /// <value>
+        /// Specifies whether the volume group backup was created manually, or via scheduled backup policy.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SourceTypeEnum> SourceType { get; set; }
         
         /// <value>
         /// The date and time the volume group backup was created. This is the time the actual point-in-time image
@@ -198,6 +227,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "volumeGroupId")]
         public string VolumeGroupId { get; set; }
+        
+        /// <value>
+        /// The OCID of the source volume group backup.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceVolumeGroupBackupId")]
+        public string SourceVolumeGroupBackupId { get; set; }
         
     }
 }

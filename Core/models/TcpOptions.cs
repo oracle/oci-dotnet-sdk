@@ -16,26 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Optional object to specify ports for a TCP rule. If you specify TCP as the
-    /// protocol but omit this object, then all ports are allowed.
+    /// Optional and valid only for TCP. Use to specify particular destination ports for TCP rules.
+    /// If you specify TCP as the protocol but omit this object, then all destination ports are allowed.
     /// 
     /// </summary>
     public class TcpOptions 
     {
         
-        /// <value>
-        /// An inclusive range of allowed destination ports. Use the same number for the min and max
-        /// to indicate a single port. Defaults to all ports if not specified.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "destinationPortRange")]
         public PortRange DestinationPortRange { get; set; }
         
-        /// <value>
-        /// An inclusive range of allowed source ports. Use the same number for the min and max to
-        /// indicate a single port. Defaults to all ports if not specified.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "sourcePortRange")]
         public PortRange SourcePortRange { get; set; }
         

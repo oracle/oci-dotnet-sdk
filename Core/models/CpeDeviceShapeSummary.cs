@@ -31,9 +31,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
-        /// <value>
-        /// Basic information about this particular CPE device type.
-        /// </value>
         [JsonProperty(PropertyName = "cpeDeviceInfo")]
         public CpeDeviceInfo CpeDeviceInfo { get; set; }
         

@@ -38,7 +38,7 @@ namespace Oci.AnalyticsService.Requests
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Type of the resource associated with a work request
+        /// Type of the resource associated with a work request.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]

@@ -67,10 +67,6 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IkeVersionEnum> IkeVersion { get; set; }
         
-        /// <value>
-        /// Information for establishing a BGP session for the IPSec tunnel.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "bgpSessionConfig")]
         public UpdateIPSecTunnelBgpSessionDetails BgpSessionConfig { get; set; }
         

@@ -78,6 +78,10 @@ namespace Oci.BlockchainService.Models
         /// <value>
         /// IDCS access token with Identity Domain Administrator role
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IdcsAccessToken is required.")]
         [JsonProperty(PropertyName = "idcsAccessToken")]
         public string IdcsAccessToken { get; set; }
         

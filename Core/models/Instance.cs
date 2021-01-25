@@ -192,20 +192,12 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
         
-        /// <value>
-        /// Options for tuning the compatibility and performance of VM shapes. The values that you specify override any default values.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public LaunchOptions LaunchOptions { get; set; }
         
         [JsonProperty(PropertyName = "instanceOptions")]
         public InstanceOptions InstanceOptions { get; set; }
         
-        /// <value>
-        /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public InstanceAvailabilityConfig AvailabilityConfig { get; set; }
                 ///
@@ -283,9 +275,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "shapeConfig")]
         public InstanceShapeConfig ShapeConfig { get; set; }
         
-        /// <value>
-        /// Details for creating an instance
-        /// </value>
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceSourceDetails SourceDetails { get; set; }
         

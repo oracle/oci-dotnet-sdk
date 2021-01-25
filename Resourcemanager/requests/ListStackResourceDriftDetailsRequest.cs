@@ -38,6 +38,12 @@ namespace Oci.ResourcemanagerService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workRequestId")]
+        public string WorkRequestId { get; set; }
+        
+        /// <value>
         /// A filter that returns only resources that match the given drift status. The value is case-insensitive.
         /// Allowable values -
         ///   - NOT_CHECKED

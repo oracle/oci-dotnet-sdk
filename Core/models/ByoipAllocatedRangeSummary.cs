@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Subrange of ByoipRange which is allocated to a PublicIpPool
+    /// A summary of CIDR block subranges that are currently allocated to an IP pool.
     /// </summary>
     public class ByoipAllocatedRangeSummary 
     {
         
         /// <value>
-        /// The address range part of the ByoipRange which is used for a publicIpPool.
+        /// The BYOIP CIDR block range or subrange allocated to an IP pool. This could be all or part of a BYOIP CIDR block.
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the PublicIpPool containing the part of the Byoip range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the IP pool containing the CIDR block.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]

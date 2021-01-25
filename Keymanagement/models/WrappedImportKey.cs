@@ -31,15 +31,27 @@ namespace Oci.KeymanagementService.Models
                 ///
         /// <value>
         /// The wrapping mechanism to use during key import.
+        /// RSA_OAEP_AES_SHA256 invokes the RSA AES key wrap mechanism, which generates a temporary AES key. The temporary AES key is wrapped
+        /// by the Vault RSA public wrapping key, creating a wrapped temporary AES key. The temporary AES key is also used to wrap the private key material.
+        /// The wrapped temporary AES key and the wrapped exportable key material are concatenated, producing concatenated blob output that jointly represents them.
+        /// RSA_OAEP_SHA256 means that the exportable key material is wrapped by the Vault RSA public wrapping key.
+        /// 
         /// </value>
         ///
         public enum WrappingAlgorithmEnum {
             [EnumMember(Value = "RSA_OAEP_SHA256")]
-            RsaOaepSha256
+            RsaOaepSha256,
+            [EnumMember(Value = "RSA_OAEP_AES_SHA256")]
+            RsaOaepAesSha256
         };
 
         /// <value>
         /// The wrapping mechanism to use during key import.
+        /// RSA_OAEP_AES_SHA256 invokes the RSA AES key wrap mechanism, which generates a temporary AES key. The temporary AES key is wrapped
+        /// by the Vault RSA public wrapping key, creating a wrapped temporary AES key. The temporary AES key is also used to wrap the private key material.
+        /// The wrapped temporary AES key and the wrapped exportable key material are concatenated, producing concatenated blob output that jointly represents them.
+        /// RSA_OAEP_SHA256 means that the exportable key material is wrapped by the Vault RSA public wrapping key.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

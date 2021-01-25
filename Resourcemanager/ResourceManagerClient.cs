@@ -958,6 +958,8 @@ namespace Oci.ResourcemanagerService
         /// Lists drift status details for each resource defined in the specified stack.
         /// The drift status details for a given resource indicate differences, if any, between the actual state
         /// and the expected (defined) state for that resource.
+        /// The drift status details correspond to the specified work request (&#x60;workRequestId&#x60;).
+        /// If no work request is specified, then the drift status details correspond to the latest completed work request for the stack.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

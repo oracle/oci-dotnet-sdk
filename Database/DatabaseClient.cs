@@ -1992,7 +1992,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Deletes the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
-        /// To delete a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #deleteCloudVmCluster(DeleteCloudVmClusterRequest) deleteCloudVmCluster} operation. 
+        /// To delete a cloud VM cluster in an Exadata Cloud Service instance, use the {@link #deleteCloudVmCluster(DeleteCloudVmClusterRequest) deleteCloudVmCluster} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3469,6 +3469,11 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Gets information about the specified DB system.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3668,8 +3673,15 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets the IORM configuration settings for the specified cloud Exadata system.
+        /// Gets the IORM configuration settings for the specified cloud Exadata DB system.
         /// All Exadata service instances have default IORM settings.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// &lt;br/&gt;
+        /// The {@link #getCloudVmClusterIormConfig(GetCloudVmClusterIormConfigRequest) getCloudVmClusterIormConfig} API is used for this operation with Exadata systems using the
+        /// new resource model.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4035,10 +4047,13 @@ namespace Oci.DatabaseService
         /// Database edition that you specify applies to all the databases on that DB system. The selected edition cannot be changed.
         /// &lt;br/&gt;
         /// An initial database is created on the DB system based on the request parameters you provide and some default
-        /// options. For detailed information about default options, see the following:
+        /// options. For detailed information about default options, see [Bare metal and virtual machine DB system default options.](https://docs.cloud.oracle.com/Content/Database/Tasks/creatingDBsystem.htm#Default)
         /// &lt;br/&gt;
-        /// - [Bare metal and virtual machine DB system default options](https://docs.cloud.oracle.com/Content/Database/Tasks/creatingDBsystem.htm#DefaultOptionsfortheInitialDatabase)
-        /// - [Exadata DB system default options](https://docs.cloud.oracle.com/Content/Database/Tasks/exacreatingDBsystem.htm#DefaultOptionsfortheInitialDatabase)
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// &lt;br/&gt;
+        /// Use the {@link #createCloudExadataInfrastructure(CreateCloudExadataInfrastructureRequest) createCloudExadataInfrastructure} and {@link #createCloudVmCluster(CreateCloudVmClusterRequest) createCloudVmCluster} APIs to provision a new Exadata Cloud Service instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4917,7 +4932,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// gets the upgrade history for a specified database.
+        /// Gets the upgrade history for a specified database in a bare metal or virtual machine DB system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5277,6 +5292,10 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Lists the DB systems in the specified compartment. You can specify a &#x60;backupId&#x60; to list only the DB systems that support creating a database using this backup in this compartment.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5715,7 +5734,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Migrates the Exadata DB system to the cloud Exadata infrastructure model. All related resources will be migrated.
+        /// Migrates the Exadata DB system to the new [Exadata resource model](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model).
+        /// All related resources will be migrated.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6555,6 +6575,11 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Terminates a DB system and permanently deletes it and any databases running on it, and any storage volumes attached to it. The database data is local to the DB system and will be lost when the system is terminated. Oracle recommends that you back up any data in the DB system prior to terminating it.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7112,6 +7137,11 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Updates the properties of the specified DB system.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7191,7 +7221,14 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Updates IORM settings for the specified Exadata system.
+        /// Updates IORM settings for the specified Exadata DB system.
+        /// &lt;br/&gt;
+        /// **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+        /// &lt;br/&gt;
+        /// For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+        /// &lt;br/&gt;
+        /// The {@link #updateCloudVmClusterIormConfig(UpdateCloudVmClusterIormConfigRequest) updateCloudVmClusterIormConfig} API is used for Exadata systems using the
+        /// new resource model.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7391,7 +7428,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Upgrade the specified database.
+        /// Upgrades the specified Oracle Database instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

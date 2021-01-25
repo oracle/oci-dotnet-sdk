@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Results of a ListByoipAllocatedRanges operation.
+    /// Results of a `ListByoipAllocatedRanges` operation.
     /// </summary>
     public class ByoipAllocatedRangeCollection 
     {
         
         /// <value>
-        /// list of Byoip allocated ranges as part of public IP pool
+        /// A list of subranges of a BYOIP CIDR block allocated to an IP pool.
         /// </value>
         /// <remarks>
         /// Required

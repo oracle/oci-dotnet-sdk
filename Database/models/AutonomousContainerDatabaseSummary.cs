@@ -152,7 +152,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
             MaintenanceInProgress,
             [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
-            RoleChangeInProgress
+            RoleChangeInProgress,
+            [EnumMember(Value = "UNAVAILABLE")]
+            Unavailable
         };
 
         /// <value>
