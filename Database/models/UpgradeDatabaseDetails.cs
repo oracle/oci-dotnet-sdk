@@ -16,15 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for upgrading a database to a specific db version.
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+    /// Details for upgrading a database to a specific Oracle Database version.
     /// 
     /// </summary>
     public class UpgradeDatabaseDetails 
     {
                 ///
         /// <value>
-        /// action for upgrading database.
+        /// The database upgrade action.
         /// </value>
         ///
         public enum ActionEnum {
@@ -37,7 +36,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// action for upgrading database.
+        /// The database upgrade action.
         /// </value>
         /// <remarks>
         /// Required

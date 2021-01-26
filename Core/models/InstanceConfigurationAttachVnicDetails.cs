@@ -19,10 +19,6 @@ namespace Oci.CoreService.Models
     public class InstanceConfigurationAttachVnicDetails 
     {
         
-        /// <value>
-        /// Details for creating a new VNIC.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "createVnicDetails")]
         public InstanceConfigurationCreateVnicDetails CreateVnicDetails { get; set; }
         

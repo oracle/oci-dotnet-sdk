@@ -189,6 +189,88 @@ namespace Oci.AnalyticsService
         }
 
         /// <summary>
+        /// Create an Private access Channel for the Analytics instance. The operation is long-running
+        /// and creates a new WorkRequest.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/CreatePrivateAccessChannel.cs.html">here</a> to see an example of how to use CreatePrivateAccessChannel API.</example>
+        public async Task<CreatePrivateAccessChannelResponse> CreatePrivateAccessChannel(CreatePrivateAccessChannelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createPrivateAccessChannel");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreatePrivateAccessChannelResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreatePrivateAccessChannel failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Allows specifying a custom host name to be used to access the analytics instance.  This requires prior setup of DNS entry and certificate
+        /// for this host.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/CreateVanityUrl.cs.html">here</a> to see an example of how to use CreateVanityUrl API.</example>
+        public async Task<CreateVanityUrlResponse> CreateVanityUrl(CreateVanityUrlRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createVanityUrl");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/vanityUrls".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateVanityUrlResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateVanityUrl failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Terminates the specified Analytics instance. The operation is long-running
         /// and creates a new WorkRequest.
         /// 
@@ -225,6 +307,86 @@ namespace Oci.AnalyticsService
             catch (Exception e)
             {
                 logger.Error($"DeleteAnalyticsInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete an Analytics instance&#39;s Private access channel with the given unique identifier key.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/DeletePrivateAccessChannel.cs.html">here</a> to see an example of how to use DeletePrivateAccessChannel API.</example>
+        public async Task<DeletePrivateAccessChannelResponse> DeletePrivateAccessChannel(DeletePrivateAccessChannelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deletePrivateAccessChannel");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeletePrivateAccessChannelResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeletePrivateAccessChannel failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Allows deleting a previously created vanity url.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/DeleteVanityUrl.cs.html">here</a> to see an example of how to use DeleteVanityUrl API.</example>
+        public async Task<DeleteVanityUrlResponse> DeleteVanityUrl(DeleteVanityUrlRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteVanityUrl");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/vanityUrls/{vanityUrlKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteVanityUrlResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteVanityUrl failed with error: {e.Message}");
                 throw;
             }
         }
@@ -305,6 +467,46 @@ namespace Oci.AnalyticsService
             catch (Exception e)
             {
                 logger.Error($"GetAnalyticsInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve private access channel in the specified Analytics Instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/GetPrivateAccessChannel.cs.html">here</a> to see an example of how to use GetPrivateAccessChannel API.</example>
+        public async Task<GetPrivateAccessChannelResponse> GetPrivateAccessChannel(GetPrivateAccessChannelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getPrivateAccessChannel");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetPrivateAccessChannelResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetPrivateAccessChannel failed with error: {e.Message}");
                 throw;
             }
         }
@@ -669,6 +871,86 @@ namespace Oci.AnalyticsService
             catch (Exception e)
             {
                 logger.Error($"UpdateAnalyticsInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Update the Private Access Channel with the given unique identifier key in the specified Analytics Instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/UpdatePrivateAccessChannel.cs.html">here</a> to see an example of how to use UpdatePrivateAccessChannel API.</example>
+        public async Task<UpdatePrivateAccessChannelResponse> UpdatePrivateAccessChannel(UpdatePrivateAccessChannelRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updatePrivateAccessChannel");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdatePrivateAccessChannelResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdatePrivateAccessChannel failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Allows uploading a new certificate for a vanity url, which will have to be done when the current certificate is expiring.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/analytics/UpdateVanityUrl.cs.html">here</a> to see an example of how to use UpdateVanityUrl API.</example>
+        public async Task<UpdateVanityUrlResponse> UpdateVanityUrl(UpdateVanityUrlRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateVanityUrl");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyticsInstances/{analyticsInstanceId}/vanityUrls/{vanityUrlKey}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateVanityUrlResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateVanityUrl failed with error: {e.Message}");
                 throw;
             }
         }

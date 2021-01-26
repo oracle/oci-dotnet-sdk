@@ -135,10 +135,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
-        /// <value>
-        /// Information for establishing the tunnel's BGP session.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "bgpSessionInfo")]
         public BgpSessionInfo BgpSessionInfo { get; set; }
                 ///

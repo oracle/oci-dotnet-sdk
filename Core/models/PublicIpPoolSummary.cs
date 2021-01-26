@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Summary information about a Public IP pool
+    /// Summary information about a public IP pool.
     /// </summary>
     public class PublicIpPoolSummary 
     {
         
         /// <value>
-        /// The OCID of the compartment containing the Public IP Pool
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the public IP pool.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
@@ -55,20 +55,20 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The Oracle ID (OCID) of the Public Ip Pool.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the public IP pool.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The Public IP Pool's current state.
+        /// The public IP pool's current state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PublicIpPool.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The date and time the public IP Pool was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the public IP pool was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>

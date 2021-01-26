@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The OCID of the Public Ip Pool object.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the public IP pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string PublicIpPoolId { get; set; }
         
         /// <value>
-        /// Public Ip Pool details.
+        /// Public IP pool details.
         /// </value>
         /// <remarks>
         /// Required

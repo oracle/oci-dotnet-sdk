@@ -48,6 +48,13 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
+        
+        /// <value>
+        /// The public key in PEM format which will be populated only in case of RSA and ECDSA keys.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "publicKey")]
+        public string PublicKey { get; set; }
                 ///
         /// <value>
         /// The key version's current lifecycle state.

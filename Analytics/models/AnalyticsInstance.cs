@@ -116,6 +116,20 @@ namespace Oci.AnalyticsService.Models
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
         
         /// <value>
+        /// Map of PrivateAccessChannel unique identifier key as KEY and PrivateAccessChannel Object as VALUE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateAccessChannels")]
+        public System.Collections.Generic.Dictionary<string, PrivateAccessChannel> PrivateAccessChannels { get; set; }
+        
+        /// <value>
+        /// Map of VanityUrl unique identifier key as KEY and VanityUrl Object as VALUE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vanityUrlDetails")]
+        public System.Collections.Generic.Dictionary<string, VanityUrlDetails> VanityUrlDetails { get; set; }
+        
+        /// <value>
         /// URL of the Analytics service.
         /// 
         /// </value>

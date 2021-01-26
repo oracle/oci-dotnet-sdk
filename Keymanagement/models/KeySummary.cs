@@ -164,6 +164,26 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+                ///
+        /// <value>
+        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// </value>
+        ///
+        public enum AlgorithmEnum {
+            [EnumMember(Value = "AES")]
+            Aes,
+            [EnumMember(Value = "RSA")]
+            Rsa,
+            [EnumMember(Value = "ECDSA")]
+            Ecdsa
+        };
+
+        /// <value>
+        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// </value>
+        [JsonProperty(PropertyName = "algorithm")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
     }
 }

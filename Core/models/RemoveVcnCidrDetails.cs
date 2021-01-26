@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Contains the CIDR which will be removed from the VCN.
+    /// Details for removing a CIDR block from a VCN.
     /// </summary>
     public class RemoveVcnCidrDetails 
     {
         
         /// <value>
-        /// The CIDR IP address that needs to be removed.
+        /// The CIDR block to remove.
         /// 
         /// </value>
         /// <remarks>

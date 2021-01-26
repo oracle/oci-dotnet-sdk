@@ -85,7 +85,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UNAVAILABLE")]
+            Unavailable
         };
 
         /// <value>
@@ -153,7 +155,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UNAVAILABLE")]
+            Unavailable
         };
 
         /// <value>

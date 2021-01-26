@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Create Byoip Range details.
+        /// Details needed to create a BYOIP CIDR block subrange.
         /// </value>
         /// <remarks>
         /// Required

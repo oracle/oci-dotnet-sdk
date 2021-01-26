@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Results of a ListByoipRange operation.
+    /// The results returned by a `ListByoipRange` operation.
     /// </summary>
     public class ByoipRangeCollection 
     {
         
         /// <value>
-        /// list of Byoip Range object summaries
+        /// A list of `ByoipRange` resource summaries.
         /// </value>
         /// <remarks>
         /// Required

@@ -29,7 +29,9 @@ namespace Oci.KeymanagementService.Models
             [EnumMember(Value = "AES")]
             Aes,
             [EnumMember(Value = "RSA")]
-            Rsa
+            Rsa,
+            [EnumMember(Value = "ECDSA")]
+            Ecdsa
         };
 
         /// <value>
@@ -44,7 +46,10 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
         /// <value>
-        /// The length of the key, expressed as an integer. Values of 16, 24, or 32 are supported.
+        /// The length of the key in bytes, expressed as an integer. Values supported:
+        ///   - AES: 16, 24 or 32
+        ///   - RSA: 256, 384 or 512
+        ///   - ECDSA: 32, 48, 66
         /// 
         /// </value>
         /// <remarks>
@@ -53,6 +58,26 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "Length is required.")]
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<int> Length { get; set; }
+                ///
+        /// <value>
+        /// Supported curve Ids for ECDSA keys
+        /// </value>
+        ///
+        public enum CurveIdEnum {
+            [EnumMember(Value = "NIST_P256")]
+            NistP256,
+            [EnumMember(Value = "NIST_P384")]
+            NistP384,
+            [EnumMember(Value = "NIST_P521")]
+            NistP521
+        };
+
+        /// <value>
+        /// Supported curve Ids for ECDSA keys
+        /// </value>
+        [JsonProperty(PropertyName = "curveId")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CurveIdEnum> CurveId { get; set; }
         
     }
 }

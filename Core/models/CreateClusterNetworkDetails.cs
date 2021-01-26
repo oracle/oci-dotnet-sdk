@@ -72,9 +72,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "instancePools")]
         public System.Collections.Generic.List<CreateClusterNetworkInstancePoolDetails> InstancePools { get; set; }
         
-        /// <value>
-        /// The placement configuration for the instance pools in the cluster network.
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

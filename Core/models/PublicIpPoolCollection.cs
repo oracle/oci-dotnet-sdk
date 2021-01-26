@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Results of a ListPublicIpPool operation.
+    /// Results of a `ListPublicIpPool` operation.
     /// </summary>
     public class PublicIpPoolCollection 
     {
         
         /// <value>
-        /// list of Public Ip pool object summaries
+        /// A list of public IP pool summaries.
         /// </value>
         /// <remarks>
         /// Required

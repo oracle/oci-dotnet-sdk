@@ -45,7 +45,21 @@ namespace Oci.Common.Auth
                 {
                     // PemReader uses password only if the private is password encrypted.
                     // If password is passed for a plain private key, it would be ignored.
-                    keyPair = (AsymmetricCipherKeyPair)new PemReader(reader, this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                    object pemReader = new PemReader(reader, this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                    if (pemReader is AsymmetricCipherKeyPair)
+                    {
+                        keyPair = (AsymmetricCipherKeyPair)pemReader;
+                        return key = (RsaKeyParameters)keyPair.Private;
+                    }
+                    else if (pemReader is AsymmetricKeyParameter)
+                    {
+                        RsaPrivateCrtKeyParameters rsaPrivateCrtKeyParameters = (RsaPrivateCrtKeyParameters)pemReader;
+                        return key = new RsaKeyParameters(rsaPrivateCrtKeyParameters.IsPrivate, rsaPrivateCrtKeyParameters.Modulus, rsaPrivateCrtKeyParameters.Exponent);
+                    }
+                    else
+                    {
+                        throw new FormatException("The given key does not have the expected type");
+                    }
                 }
                 catch (InvalidCipherTextException e)
                 {
@@ -61,7 +75,6 @@ namespace Oci.Common.Auth
                 }
 
             }
-            return key = (RsaKeyParameters)keyPair.Private;
         }
     }
 }

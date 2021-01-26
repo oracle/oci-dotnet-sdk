@@ -106,10 +106,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Adds a Cidr from the named Byoip Range prefix to the referenced Public IP Pool.
-        /// The cidr must be a subset of the Byoip Range in question.
-        /// The cidr must not overlap with any other cidr already added to this
-        /// or any other Public Ip Pool.
+        /// Adds some or all of a CIDR block to a public IP pool.
+        /// &lt;br/&gt;
+        /// The CIDR block (or subrange) must not overlap with any other CIDR block already added to this or any other public IP pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -149,12 +148,13 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Add a CIDR to a VCN. The new CIDR must maintain the following rules -
+        /// Adds a CIDR block to a VCN. The CIDR block you add:
         /// &lt;br/&gt;
-        /// a. The CIDR provided is valid
-        /// b. The new CIDR range should not overlap with any existing CIDRs
-        /// c. The new CIDR should not exceed the max limit of CIDRs per VCNs
-        /// d. The new CIDR range does not overlap with any peered VCNs
+        /// - Must be valid.
+        /// - Must not overlap with another CIDR block in the VCN, a CIDR block of a peered VCN, or the on-premises network CIDR block.
+        /// - Must not exceed the limit of CIDR blocks allowed per VCN.
+        /// &lt;br/&gt;
+        /// **Note:** Adding a CIDR block places your VCN in an updating state until the changes are complete. You cannot create or update the VCN&#39;s subnets, VLANs, LPGs, or route tables during this operation. The time to completion can take a few minutes. You can use the &#x60;GetWorkRequest&#x60; operation to check the status of the update.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -194,8 +194,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// initiate route advertisements for the Byoip Range prefix.
-        /// the prefix must be in PROVISIONED state
+        /// Begins BGP route advertisements for the BYOIP CIDR block you imported to the Oracle Cloud.
+        /// The &#x60;ByoipRange&#x60; resource must be in the PROVISIONED state before the BYOIP CIDR block routes can be advertised with BGP.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -370,7 +370,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Moves a byoip range into a different compartment within the same tenancy. For information
+        /// Moves a BYOIP CIDR block to a different compartment. For information
         /// about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -876,7 +876,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Moves a public IP pool into a different compartment within the same tenancy. For information
+        /// Moves a public IP pool to a different compartment. For information
         /// about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -1348,7 +1348,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Creates a Byoip Range prefix.
+        /// Creates a subrange of the BYOIP CIDR block.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2097,7 +2097,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Creates a Public Ip Pool
+        /// Creates a public IP pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2405,17 +2405,14 @@ namespace Oci.CoreService
         /// Creates a new virtual cloud network (VCN). For more information, see
         /// [VCNs and Subnets](https://docs.cloud.oracle.com/Content/Network/Tasks/managingVCNs.htm).
         /// &lt;br/&gt;
-        /// To create the VCN, you may specify a list of IPv4 CIDR blocks. The CIDRs must maintain
-        /// the following rules -
+        /// For the VCN, you specify a list of one or more IPv4 CIDR blocks that meet the following criteria:
         /// &lt;br/&gt;
-        /// a. The list of CIDRs provided are valid
-        /// b. There is no overlap between different CIDRs
-        /// c. The list of CIDRs does not exceed the max limit of CIDRs per VCN
+        /// - The CIDR blocks must be valid.
+        /// - They must not overlap with each other or with the on-premises network CIDR block. 
+        /// - The number of CIDR blocks does not exceed the limit of CIDR blocks allowed per VCN.
         /// &lt;br/&gt;
-        /// Oracle recommends using one of the private IP address ranges specified in [RFC 1918]
-        /// (https://tools.ietf.org/html/rfc1918) (10.0.0.0/8, 172.16/12, and 192.168/16). Example:
-        /// 172.16.0.0/16. The CIDR blocks can range from /16 to /30, and they must not overlap with
-        /// your on-premises network.
+        /// For a CIDR block, Oracle recommends that you use one of the private IP address ranges specified in [RFC 1918](https://tools.ietf.org/html/rfc1918) (10.0.0.0/8, 172.16/12, and 192.168/16). Example:
+        /// 172.16.0.0/16. The CIDR blocks can range from /16 to /30.
         /// &lt;br/&gt;
         /// For the purposes of access control, you must provide the OCID of the compartment where you want the VCN to
         /// reside. Consult an Oracle Cloud Infrastructure administrator in your organization if you&#39;re not sure which
@@ -2577,12 +2574,11 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Deletes the specified Byoip Range prefix.
-        /// The prefix must be in CREATING, PROVISIONED or FAILED state.
-        /// It must not have any subranges allocated to a Public Ip Pool object.
-        /// You must specify the object&#39;s OCID.
-        /// &lt;br/&gt;
-        /// In case the range is currently PROVISIONED, the operation will be asynchronous as it needs to be de-ptovisioned first.
+        /// Deletes the specified &#x60;ByoipRange&#x60; resource.
+        /// The resource must be in one of the following states: CREATING, PROVISIONED, ACTIVE, or FAILED.
+        /// It must not have any subranges currently allocated to a PublicIpPool object or the deletion will fail.
+        /// You must specify the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// If the &#x60;ByoipRange&#x60; resource is currently in the PROVISIONED or ACTIVE state, it will be de-provisioned and then deleted.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3245,9 +3241,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Deletes the specified Public Ip Pool
-        /// It must not have any active address allocations
-        /// You must specify the object&#39;s OCID.
+        /// Deletes the specified public IP pool.
+        /// To delete a public IP pool it must not have any active IP address allocations.
+        /// You must specify the object&#39;s [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) when deleting an IP pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3678,7 +3674,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the specified Byoip Range object. You must specify the object&#39;s OCID.
+        /// Gets the &#x60;ByoipRange&#x60; resource. You must specify the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4919,7 +4915,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the specified Public Ip Pool object. You must specify the object&#39;s OCID.
+        /// Gets the specified &#x60;PublicIpPool&#x60; object. You must specify the object&#39;s [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5536,8 +5532,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the ByoipAllocatedRange objects for the ByoipRange.
-        /// Each ByoipAllocatedRange object has a CIDR block part of the ByoipRange and the PublicIpPool it is assigned to.
+        /// Lists the subranges of a BYOIP CIDR block currently allocated to an IP pool.
+        /// Each &#x60;ByoipAllocatedRange&#x60; object also lists the IP pool where it is allocated.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5577,8 +5573,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the ByoipRange objects in the specified compartment.
-        /// You can filter the list by using query parameters.
+        /// Lists the &#x60;ByoipRange&#x60; resources in the specified compartment.
+        /// You can filter the list using query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6513,8 +6509,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the PublicIpPool objects in the specified compartment.
-        /// You can filter the list by using query parameters.
+        /// Lists the public IP pools in the specified compartment.
+        /// You can filter the list using query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7062,14 +7058,15 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Update a CIDR from a VCN. The new CIDR must maintain the following rules -
+        /// Updates the specified CIDR block of a VCN. The new CIDR IP range must meet the following criteria:
         /// &lt;br/&gt;
-        /// a. The CIDR provided is valid
-        /// b. The new CIDR range should not overlap with any existing CIDRs
-        /// c. The new CIDR should not exceed the max limit of CIDRs per VCNs
-        /// d. The new CIDR range does not overlap with any peered VCNs
-        /// e. The new CIDR should overlap with any existing route rule within a VCN
-        /// f. All existing subnet CIDRs are subsets of the updated CIDR ranges
+        /// - Must be valid.
+        /// - Must not overlap with another CIDR block in the VCN, a CIDR block of a peered VCN, or the on-premises network CIDR block.
+        /// - Must not exceed the limit of CIDR blocks allowed per VCN.
+        /// - Must include IP addresses from the original CIDR block that are used in the VCN&#39;s existing route rules.
+        /// - No IP address in an existing subnet should be outside of the new CIDR block range.
+        /// &lt;br/&gt;
+        /// **Note:** Modifying a CIDR block places your VCN in an updating state until the changes are complete. You cannot create or update the VCN&#39;s subnets, VLANs, LPGs, or route tables during this operation. The time to completion can vary depending on the size of your network. Updating a small network could take about a minute, and updating a large network could take up to an hour. You can use the &#x60;GetWorkRequest&#x60; operation to check the status of the update.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7149,7 +7146,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Removes a Cidr from the referenced Public IP Pool.
+        /// Removes a CIDR block from the referenced public IP pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7189,8 +7186,11 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Remove a CIDR from a VCN. The CIDR being removed should not have
-        /// any resources allocated from it.
+        /// Removes a specified CIDR block from a VCN.
+        /// &lt;br/&gt;
+        /// **Notes:**
+        /// - You cannot remove a CIDR block if an IP address in its range is in use.
+        /// - Removing a CIDR block places your VCN in an updating state until the changes are complete. You cannot create or update the VCN&#39;s subnets, VLANs, LPGs, or route tables during this operation. The time to completion can take a few minutes. You can use the &#x60;GetWorkRequest&#x60; operation to check the status of the update.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7230,7 +7230,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified Byoip Range.
+        /// Updates the tags or display name associated to the specified BYOIP CIDR block.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8042,7 +8042,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified Public Ip Pool.
+        /// Updates the specified public IP pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8435,9 +8435,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified VLAN. This could result in changes to all
-        /// the VNICs in the VLAN, which can take time. During that transition
-        /// period, the VLAN will be in the UPDATING state.
+        /// Updates the specified VLAN. Note that this operation might require changes to all
+        /// the VNICs in the VLAN, which can take a while. The VLAN will be in the UPDATING state until the changes are complete.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8517,8 +8516,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// submit the Byoip Range for validation. This presumes the user has
-        /// updated their IP registry record in accordance to validation requirements
+        /// Submits the BYOIP CIDR block you are importing for validation. Do not submit to Oracle for validation if you have not already
+        /// modified the information for the BYOIP CIDR block with your Regional Internet Registry. See [To import a CIDR block](https://docs.cloud.oracle.com/Content/Network/Concepts/BYOIP.htm#import_cidr) for details.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8558,7 +8557,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// stop route advertisements for the Byoip Range prefix.
+        /// Withdraws BGP route advertisement for the BYOIP CIDR block.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

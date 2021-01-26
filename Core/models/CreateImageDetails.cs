@@ -60,9 +60,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
-        /// <value>
-        /// Details for creating an image through import
-        /// </value>
         [JsonProperty(PropertyName = "imageSourceDetails")]
         public ImageSourceDetails ImageSourceDetails { get; set; }
         

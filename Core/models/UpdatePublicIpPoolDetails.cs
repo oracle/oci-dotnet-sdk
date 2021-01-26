@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to update a public ip pool
+    /// The data to update for a public IP pool.
     /// </summary>
     public class UpdatePublicIpPoolDetails 
     {

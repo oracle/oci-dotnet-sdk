@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to create a Byoip Range
+    /// The information used to create a `ByoipRange` resource.
     /// </summary>
     public class CreateByoipRangeDetails 
     {
         
         /// <value>
-        /// The CIDR IP address range of the prefix.
+        /// The BYOIP CIDR block. You can assign some or all of it to a public IP pool after it is validated.
         /// Example: 10.0.1.0/24
         /// </value>
         /// <remarks>
@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to contain the Byoip Range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the BYOIP CIDR block.
         /// 
         /// </value>
         /// <remarks>

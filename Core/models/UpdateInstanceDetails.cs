@@ -46,10 +46,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
-        /// <value>
-        /// Instance agent configuration options to choose for updating the instance
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "agentConfig")]
         public UpdateInstanceAgentConfigDetails AgentConfig { get; set; }
         
@@ -131,17 +127,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
-        /// <value>
-        /// Options for tuning the compatibility and performance of VM shapes.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "launchOptions")]
         public UpdateLaunchOptions LaunchOptions { get; set; }
         
-        /// <value>
-        /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying hardware.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "availabilityConfig")]
         public UpdateInstanceAvailabilityConfigDetails AvailabilityConfig { get; set; }
         

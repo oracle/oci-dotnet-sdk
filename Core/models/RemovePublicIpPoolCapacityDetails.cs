@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to remove capacity from a public ip pool
+    /// The information needed to remove capacity from a public IP pool.
     /// </summary>
     public class RemovePublicIpPoolCapacityDetails 
     {
         
         /// <value>
-        /// The CIDR IP address range to be removed from the Public Ip Pool
+        /// The CIDR block to remove from the  public IP pool.
         /// Example: 10.0.1.0/24
         /// </value>
         /// <remarks>

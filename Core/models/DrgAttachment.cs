@@ -91,6 +91,14 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// The date and time the DRG attachment was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
         /// The OCID of the route table the DRG attachment is using.
         /// <br/>
         /// For information about why you would associate a route table with a DRG attachment, see:
@@ -103,15 +111,8 @@ namespace Oci.CoreService.Models
         public string RouteTableId { get; set; }
         
         /// <value>
-        /// The date and time the DRG attachment was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
-        /// <br/>
-        /// Example: 2016-08-25T21:10:29.600Z
-        /// </value>
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
         /// The OCID of the VCN.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

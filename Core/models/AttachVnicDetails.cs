@@ -19,10 +19,6 @@ namespace Oci.CoreService.Models
     public class AttachVnicDetails 
     {
         
-        /// <value>
-        /// Details for creating a new VNIC.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

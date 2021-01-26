@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Contains a new CIDR which will be added to the VCN.
+    /// Details for adding a CIDR block to a VCN.
     /// </summary>
     public class AddVcnCidrDetails 
     {
         
         /// <value>
-        /// The CIDR IP address that needs to be added.
+        /// The CIDR block to add.
         /// 
         /// </value>
         /// <remarks>

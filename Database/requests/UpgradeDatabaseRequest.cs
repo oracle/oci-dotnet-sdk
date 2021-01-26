@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string DatabaseId { get; set; }
         
         /// <value>
-        /// Request to perform database upgrade.
+        /// Request to perform a database upgrade.
         /// </value>
         /// <remarks>
         /// Required

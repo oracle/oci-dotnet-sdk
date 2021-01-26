@@ -31,6 +31,18 @@ namespace Oci.AnalyticsService.Models
       Scaled,
       [EnumMember(Value = "NETWORK_ENDPOINT_CHANGED")]
       NetworkEndpointChanged,
+      [EnumMember(Value = "VANITY_URL_CREATED")]
+      VanityUrlCreated,
+      [EnumMember(Value = "VANITY_URL_UPDATED")]
+      VanityUrlUpdated,
+      [EnumMember(Value = "VANITY_URL_DELETED")]
+      VanityUrlDeleted,
+      [EnumMember(Value = "PRIVATE_ACCESS_CHANNEL_CREATED")]
+      PrivateAccessChannelCreated,
+      [EnumMember(Value = "PRIVATE_ACCESS_CHANNEL_UPDATED")]
+      PrivateAccessChannelUpdated,
+      [EnumMember(Value = "PRIVATE_ACCESS_CHANNEL_DELETED")]
+      PrivateAccessChannelDeleted,
       [EnumMember(Value = "NONE")]
       None
   }

@@ -16,15 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Contains the original CIDR that needs to be updated and the
-    /// new CIDR which will replace the original CIDR.
+    /// Details for updating a CIDR block.
     /// 
     /// </summary>
     public class ModifyVcnCidrDetails 
     {
         
         /// <value>
-        /// The CIDR IP address that needs to be updated.
+        /// The CIDR IP address to update.
         /// 
         /// </value>
         /// <remarks>
@@ -35,7 +34,7 @@ namespace Oci.CoreService.Models
         public string OriginalCidrBlock { get; set; }
         
         /// <value>
-        /// The new CIDR IP address which will replace the orginal one.
+        /// The new CIDR IP address.
         /// 
         /// </value>
         /// <remarks>

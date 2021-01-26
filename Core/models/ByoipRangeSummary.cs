@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Summary information about a ByoipRange
+    /// Information about a `ByoipRange` resource.
     /// </summary>
     public class ByoipRangeSummary 
     {
         
         /// <value>
-        /// The address range the user is on-boarding.
+        /// The public IPv4 address range you are importing to the Oracle cloud.
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the Byoip Range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the `ByoipRange` resource.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
@@ -61,13 +61,13 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The Oracle ID (OCID) of the Byoip Range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The Byoip Range's current state.
+        /// The `ByoipRange` resource's current state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -81,7 +81,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<ByoipRange.LifecycleDetailsEnum> LifecycleDetails { get; set; }
         
         /// <value>
-        /// The date and time the Byoip Range was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the `ByoipRange` resource was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>

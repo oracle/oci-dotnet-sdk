@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A ByoipRange, is an IP address prefix that the user owns and wishes to import into OCI.
+    /// Oracle offers the ability to Bring Your Own IP (BYOIP), importing public IP addresses that you currently own to Oracle Cloud Infrastructure. A `ByoipRange` resource is a record of the imported address block (a BYOIP CIDR block) and also some associated metadata.
+    /// The process used to [Bring Your Own IP](https://docs.cloud.oracle.com/Content/Network/Concepts/BYOIP.htm) is explained in the documentation.
     /// </summary>
     public class ByoipRange 
     {
         
         /// <value>
-        /// The address range the user is on-boarding.
+        /// The public IPv4 CIDR block being imported from on-premises to the Oracle cloud.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the Byoip Range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the BYOIP CIDR block.
         /// 
         /// </value>
         /// <remarks>
@@ -69,7 +70,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The Oracle ID (OCID) of the Byoip Range.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,7 +80,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
                 ///
         /// <value>
-        /// The Byoip Range's current substate.
+        /// The `ByoipRange` resource's current status.
         /// </value>
         ///
         public enum LifecycleDetailsEnum {
@@ -96,18 +97,22 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "ADVERTISING")]
+            Advertising,
+            [EnumMember(Value = "WITHDRAWING")]
+            Withdrawing
         };
 
         /// <value>
-        /// The Byoip Range's current substate.
+        /// The `ByoipRange` resource's current status.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
                 ///
         /// <value>
-        /// The Byoip Range's current state.
+        /// The `ByoipRange` resource's current state.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -124,7 +129,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The Byoip Range's current state.
+        /// The `ByoipRange` resource's current state.
         /// </value>
         /// <remarks>
         /// Required
@@ -135,7 +140,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The date and time the Byoip Range was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the `ByoipRange` resource was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -147,7 +152,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the Byoip Range was validated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the `ByoipRange` resource was validated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -155,7 +160,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeValidated { get; set; }
         
         /// <value>
-        /// The date and time the Byoip Range was advertised, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the `ByoipRange` resource was advertised to the internet by BGP, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -163,7 +168,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeAdvertised { get; set; }
         
         /// <value>
-        /// The date and time the Byoip Range was withdrawn, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the `ByoipRange` resource was withdrawn from advertisement by BGP to the internet, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -171,7 +176,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeWithdrawn { get; set; }
         
         /// <value>
-        /// This is an internally generated ASCII string that the user will then use as part of the validation process. Specifically, they will need to add the token string generated by the service to their Internet Registry record.
+        /// The validation token is an internally-generated ASCII string used in the validation process. See [Importing a CIDR block](https://docs.cloud.oracle.com/Content/Network/Concepts/BYOIP.htm#import_cidr) for details.
         /// </value>
         /// <remarks>
         /// Required

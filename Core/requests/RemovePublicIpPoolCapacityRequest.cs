@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The OCID of the Public Ip Pool object.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the public IP pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string PublicIpPoolId { get; set; }
         
         /// <value>
-        /// The Cidr to be removed from the Public Ip Pool
+        /// The CIDR block to remove from the IP pool.
         /// </value>
         /// <remarks>
         /// Required
