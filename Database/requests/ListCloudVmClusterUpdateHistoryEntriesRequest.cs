@@ -38,7 +38,9 @@ namespace Oci.DatabaseService.Requests
             [EnumMember(Value = "GI_UPGRADE")]
             GiUpgrade,
             [EnumMember(Value = "GI_PATCH")]
-            GiPatch
+            GiPatch,
+            [EnumMember(Value = "OS_UPDATE")]
+            OsUpdate
         };
 
         /// <value>

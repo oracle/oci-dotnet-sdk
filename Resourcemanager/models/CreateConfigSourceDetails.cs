@@ -64,6 +64,9 @@ namespace Oci.ResourcemanagerService.Models
                 case "COMPARTMENT_CONFIG_SOURCE":
                     obj = new CreateCompartmentConfigSourceDetails();
                     break;
+                case "TEMPLATE_CONFIG_SOURCE":
+                    obj = new CreateStackTemplateConfigSourceDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

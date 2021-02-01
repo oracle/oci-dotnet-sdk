@@ -118,7 +118,8 @@ namespace Oci.CoreService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
+        /// A filter to return only resources that match the specified lifecycle
+        /// state. The value is case insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

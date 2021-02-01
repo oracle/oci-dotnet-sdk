@@ -21,6 +21,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The size of the boot volume in GBs. Minimum value is 50 GB and maximum value is 16384 GB (16TB).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeSizeInGBs")]
         public System.Nullable<long> BootVolumeSizeInGBs { get; set; }

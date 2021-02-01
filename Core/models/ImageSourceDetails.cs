@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         public string OperatingSystemVersion { get; set; }
                 ///
         /// <value>
-        /// The format of the image to be imported.  Only monolithic
+        /// The format of the image to be imported. Only monolithic
         /// images are supported. This attribute is not used for exported Oracle images with the OCI image format.
         /// 
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The format of the image to be imported.  Only monolithic
+        /// The format of the image to be imported. Only monolithic
         /// images are supported. This attribute is not used for exported Oracle images with the OCI image format.
         /// 
         /// </value>

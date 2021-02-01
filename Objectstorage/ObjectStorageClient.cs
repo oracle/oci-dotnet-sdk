@@ -1123,6 +1123,9 @@ namespace Oci.ObjectstorageService
         /// Gets a list of all BucketSummary items in a compartment. A BucketSummary contains only summary fields for the bucket
         /// and does not contain fields like the user-defined metadata.
         /// &lt;br/&gt;
+        /// ListBuckets returns a BucketSummary containing at most 1000 buckets. To paginate through more buckets, use the returned
+        /// &#x60;opc-next-page&#x60; value with the &#x60;page&#x60; request parameter.
+        /// &lt;br/&gt;
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
@@ -1247,6 +1250,9 @@ namespace Oci.ObjectstorageService
         /// <summary>
         /// Lists the object versions in a bucket.
         /// &lt;br/&gt;
+        /// ListObjectVersions returns an ObjectVersionCollection containing at most 1000 object versions. To paginate through
+        /// more object versions, use the returned &#x60;opc-next-page&#x60; value with the &#x60;page&#x60; request parameter.
+        /// &lt;br/&gt;
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
         /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
@@ -1289,7 +1295,12 @@ namespace Oci.ObjectstorageService
         }
 
         /// <summary>
-        /// Lists the objects in a bucket.
+        /// Lists the objects in a bucket. By default, ListObjects returns object names only. See the &#x60;fields&#x60;
+        /// parameter for other fields that you can optionally include in ListObjects response.
+        /// &lt;br/&gt;
+        /// ListObjects returns at most 1000 objects. To paginate through more objects, use the returned &#39;nextStartWith&#39;
+        /// value with the &#39;start&#39; parameter. To filter which objects ListObjects returns, use the &#39;start&#39; and &#39;end&#39;
+        /// parameters.
         /// &lt;br/&gt;
         /// To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
         /// talk to an administrator. If you are an administrator who needs to write policies to give users access, see
@@ -2015,6 +2026,46 @@ namespace Oci.ObjectstorageService
             catch (Exception e)
             {
                 logger.Error($"UpdateNamespaceMetadata failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Changes the storage tier of the object specified by the objectName parameter.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/objectstorage/UpdateObjectStorageTier.cs.html">here</a> to see an example of how to use UpdateObjectStorageTier API.</example>
+        public async Task<UpdateObjectStorageTierResponse> UpdateObjectStorageTier(UpdateObjectStorageTierRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateObjectStorageTier");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/n/{namespaceName}/b/{bucketName}/actions/updateObjectStorageTier".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateObjectStorageTierResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateObjectStorageTier failed with error: {e.Message}");
                 throw;
             }
         }

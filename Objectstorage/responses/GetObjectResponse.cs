@@ -121,27 +121,19 @@ namespace Oci.ObjectstorageService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "last-modified")]
         public System.Nullable<System.DateTime> LastModified { get; set; }
 
-        ///
-        /// <value>
-        /// The current state of the object.
-        /// </value>
-        ///
-        public enum ArchivalStateEnum {
-            [EnumMember(Value = "AVAILABLE")]
-            Available,
-            [EnumMember(Value = "ARCHIVED")]
-            Archived,
-            [EnumMember(Value = "RESTORING")]
-            Restoring,
-            [EnumMember(Value = "RESTORED")]
-            Restored
-        };
 
         /// <value>
-        /// The current state of the object.
+        /// The storage tier that the object is stored in.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "storage-tier")]
+        public System.Nullable<StorageTier> StorageTier { get; set; }
+
+
+        /// <value>
+        /// Archival state of an object. This field is set only for objects in Archive tier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "archival-state")]
-        public System.Nullable<ArchivalStateEnum> ArchivalState { get; set; }
+        public System.Nullable<ArchivalState> ArchivalState { get; set; }
 
 
         /// <value>

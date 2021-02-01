@@ -87,6 +87,15 @@ namespace Oci.ObjectstorageService.Models
         public string CacheControl { get; set; }
         
         /// <value>
+        /// The storage tier that the object should be stored in. If not specified, the object will be stored in
+        /// the same storage tier as the bucket.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "storageTier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<StorageTier> StorageTier { get; set; }
+        
+        /// <value>
         /// Arbitrary string keys and values for the user-defined metadata for the object.
         /// Keys must be in \"opc-meta-*\" format. Avoid entering confidential information.
         /// 

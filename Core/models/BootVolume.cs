@@ -102,7 +102,9 @@ namespace Oci.CoreService.Models
         public string ImageId { get; set; }
         
         /// <value>
-        /// Specifies whether the boot volume's data has finished copying from the source boot volume or boot volume backup.
+        /// Specifies whether the boot volume's data has finished copying
+        /// from the source boot volume or boot volume backup.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }

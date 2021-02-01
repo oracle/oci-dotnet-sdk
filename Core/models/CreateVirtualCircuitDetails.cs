@@ -20,7 +20,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The provisioned data rate of the connection.  To get a list of the
+        /// The provisioned data rate of the connection. To get a list of the
         /// available bandwidth levels (that is, shapes), see
         /// {@link #listFastConnectProviderVirtualCircuitBandwidthShapes(ListFastConnectProviderVirtualCircuitBandwidthShapesRequest) listFastConnectProviderVirtualCircuitBandwidthShapes}.
         /// <br/>

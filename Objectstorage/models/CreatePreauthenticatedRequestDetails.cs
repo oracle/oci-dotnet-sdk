@@ -21,6 +21,8 @@ namespace Oci.ObjectstorageService.Models
         
         /// <value>
         /// A user-specified name for the pre-authenticated request. Names can be helpful in managing pre-authenticated requests.
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

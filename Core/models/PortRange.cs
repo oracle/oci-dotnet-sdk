@@ -33,6 +33,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The minimum port number. Must not be greater than the maximum port number.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

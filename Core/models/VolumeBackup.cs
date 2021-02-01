@@ -156,6 +156,7 @@ namespace Oci.CoreService.Models
                 ///
         /// <value>
         /// Specifies whether the backup was created manually, or via scheduled backup policy.
+        /// 
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -167,6 +168,7 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Specifies whether the backup was created manually, or via scheduled backup policy.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]

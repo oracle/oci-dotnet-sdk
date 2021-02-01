@@ -81,7 +81,7 @@ namespace Oci.ObjectstorageService.Models
         public string DestinationBucket { get; set; }
         
         /// <value>
-        /// The name of the destination object resulting from the copy operation.
+        /// The name of the destination object resulting from the copy operation. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -116,6 +116,15 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "destinationObjectMetadata")]
         public System.Collections.Generic.Dictionary<string, string> DestinationObjectMetadata { get; set; }
+        
+        /// <value>
+        /// The storage tier that the object should be stored in. If not specified, the object will be stored in
+        /// the same storage tier as the bucket.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "destinationObjectStorageTier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<StorageTier> DestinationObjectStorageTier { get; set; }
         
     }
 }

@@ -56,7 +56,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name for the volume group. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the volume group. Does not have to be
+        /// unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -152,7 +154,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> VolumeIds { get; set; }
         
         /// <value>
-        /// Specifies whether the newly created cloned volume group's data has finished copying from the source volume group or backup.
+        /// Specifies whether the newly created cloned volume group's data has finished copying
+        /// from the source volume group or backup.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }

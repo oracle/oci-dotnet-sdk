@@ -236,6 +236,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "contacts")]
         public System.Collections.Generic.List<ExadataInfrastructureContact> Contacts { get; set; }
+                ///
+        /// <value>
+        /// A field to capture \u2018Maintenance SLO Status\u2019 for the Exadata infrastructure with values \u2018OK\u2019, \u2018DEGRADED\u2019. Default is \u2018OK\u2019 when the infrastructure is provisioned.
+        /// </value>
+        ///
+        public enum MaintenanceSLOStatusEnum {
+            [EnumMember(Value = "OK")]
+            Ok,
+            [EnumMember(Value = "DEGRADED")]
+            Degraded
+        };
+
+        /// <value>
+        /// A field to capture \u2018Maintenance SLO Status\u2019 for the Exadata infrastructure with values \u2018OK\u2019, \u2018DEGRADED\u2019. Default is \u2018OK\u2019 when the infrastructure is provisioned.
+        /// </value>
+        [JsonProperty(PropertyName = "maintenanceSLOStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MaintenanceSLOStatusEnum> MaintenanceSLOStatus { get; set; }
         
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }

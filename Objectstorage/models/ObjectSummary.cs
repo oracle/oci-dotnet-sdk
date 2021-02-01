@@ -60,6 +60,20 @@ namespace Oci.ObjectstorageService.Models
         public string Etag { get; set; }
         
         /// <value>
+        /// The storage tier that the object is stored in.
+        /// </value>
+        [JsonProperty(PropertyName = "storageTier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<StorageTier> StorageTier { get; set; }
+        
+        /// <value>
+        /// Archival state of an object. This field is set only for objects in Archive tier.
+        /// </value>
+        [JsonProperty(PropertyName = "archivalState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ArchivalState> ArchivalState { get; set; }
+        
+        /// <value>
         /// The date and time the object was modified, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616), section 14.29.
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]

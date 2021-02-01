@@ -52,7 +52,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "NON_ROLLING_APPLY")]
             NonRollingApply,
             [EnumMember(Value = "PRECHECK")]
-            Precheck
+            Precheck,
+            [EnumMember(Value = "ROLLBACK")]
+            Rollback
         };
 
         /// <value>
@@ -70,7 +72,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "GI_UPGRADE")]
             GiUpgrade,
             [EnumMember(Value = "GI_PATCH")]
-            GiPatch
+            GiPatch,
+            [EnumMember(Value = "OS_UPDATE")]
+            OsUpdate
         };
 
         /// <value>

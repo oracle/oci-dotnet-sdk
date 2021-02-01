@@ -47,6 +47,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The OCID of the volume backup policy that has been assigned to the volume.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +57,8 @@ namespace Oci.CoreService.Models
         public string PolicyId { get; set; }
         
         /// <value>
-        /// The date and time the volume backup policy was assigned to the volume. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the volume backup policy was assigned to the volume. The format is
+        /// defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         /// <remarks>

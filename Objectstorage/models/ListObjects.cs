@@ -43,7 +43,7 @@ namespace Oci.ObjectstorageService.Models
         public System.Collections.Generic.List<string> Prefixes { get; set; }
         
         /// <value>
-        /// The name of the object to use in the 'start' parameter to obtain the next page of
+        /// The name of the object to use in the `start` parameter to obtain the next page of
         /// a truncated ListObjects response. Avoid entering confidential information.
         /// Example: test/object1.log
         /// </value>

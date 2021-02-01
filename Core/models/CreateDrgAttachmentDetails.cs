@@ -20,7 +20,9 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique. Avoid entering
+        /// confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -18,9 +18,6 @@ namespace Oci.CoreService.Models
     /// <summary>
     /// A link between a DRG and VCN. For more information, see
     /// [Overview of the Networking Service](https://docs.cloud.oracle.com/Content/Network/Concepts/overview.htm).
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you
-    /// supply string values using the API.
     /// 
     /// </summary>
     public class DrgAttachment 

@@ -1086,7 +1086,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Deletes a volume group backup. This operation deletes all the backups in the volume group. For more information, see [Volume Groups](https://docs.cloud.oracle.com/Content/Block/Concepts/volumegroups.htm).
+        /// Deletes a volume group backup. This operation deletes all the backups in
+        /// the volume group. For more information, see [Volume Groups](https://docs.cloud.oracle.com/Content/Block/Concepts/volumegroups.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

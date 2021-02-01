@@ -35,16 +35,13 @@ namespace Oci.CoreService.Models
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
     /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you
-    /// supply string values using the API.
     /// 
     /// </summary>
     public class VirtualCircuit 
     {
         
         /// <value>
-        /// The provisioned data rate of the connection.  To get a list of the
+        /// The provisioned data rate of the connection. To get a list of the
         /// available bandwidth levels (that is, shapes), see
         /// {@link #listFastConnectProviderVirtualCircuitBandwidthShapes(ListFastConnectProviderVirtualCircuitBandwidthShapesRequest) listFastConnectProviderVirtualCircuitBandwidthShapes}.
         /// <br/>

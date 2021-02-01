@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `SCSI` - Emulated SCSI disk.
         /// * `IDE` - Emulated IDE disk.
-        /// * `VFIO` - Direct attached Virtual Function storage.  This is the default option for local data
+        /// * `VFIO` - Direct attached Virtual Function storage. This is the default option for local data
         /// volumes on Oracle provided images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on Oracle-provided images.
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `SCSI` - Emulated SCSI disk.
         /// * `IDE` - Emulated IDE disk.
-        /// * `VFIO` - Direct attached Virtual Function storage.  This is the default option for local data
+        /// * `VFIO` - Direct attached Virtual Function storage. This is the default option for local data
         /// volumes on Oracle provided images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on Oracle-provided images.
@@ -64,10 +64,10 @@ namespace Oci.CoreService.Models
         public System.Nullable<BootVolumeTypeEnum> BootVolumeType { get; set; }
                 ///
         /// <value>
-        /// Firmware used to boot VM.  Select the option that matches your operating system.
-        /// * `BIOS` - Boot VM using BIOS style firmware.  This is compatible with both 32 bit and 64 bit operating
+        /// Firmware used to boot VM. Select the option that matches your operating system.
+        /// * `BIOS` - Boot VM using BIOS style firmware. This is compatible with both 32 bit and 64 bit operating
         /// systems that boot using MBR style bootloaders.
-        /// * `UEFI_64` - Boot VM using UEFI style firmware compatible with 64 bit operating systems.  This is the
+        /// * `UEFI_64` - Boot VM using UEFI style firmware compatible with 64 bit operating systems. This is the
         /// default for Oracle-provided images.
         /// 
         /// </value>
@@ -80,10 +80,10 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Firmware used to boot VM.  Select the option that matches your operating system.
-        /// * `BIOS` - Boot VM using BIOS style firmware.  This is compatible with both 32 bit and 64 bit operating
+        /// Firmware used to boot VM. Select the option that matches your operating system.
+        /// * `BIOS` - Boot VM using BIOS style firmware. This is compatible with both 32 bit and 64 bit operating
         /// systems that boot using MBR style bootloaders.
-        /// * `UEFI_64` - Boot VM using UEFI style firmware compatible with 64 bit operating systems.  This is the
+        /// * `UEFI_64` - Boot VM using UEFI style firmware compatible with 64 bit operating systems. This is the
         /// default for Oracle-provided images.
         /// 
         /// </value>
@@ -93,7 +93,7 @@ namespace Oci.CoreService.Models
                 ///
         /// <value>
         /// Emulation type for the physical network interface card (NIC).
-        /// * `E1000` - Emulated Gigabit ethernet controller.  Compatible with Linux e1000 network driver.
+        /// * `E1000` - Emulated Gigabit ethernet controller. Compatible with Linux e1000 network driver.
         /// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
         /// when you launch an instance using hardware-assisted (SR-IOV) networking.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
@@ -111,7 +111,7 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Emulation type for the physical network interface card (NIC).
-        /// * `E1000` - Emulated Gigabit ethernet controller.  Compatible with Linux e1000 network driver.
+        /// * `E1000` - Emulated Gigabit ethernet controller. Compatible with Linux e1000 network driver.
         /// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
         /// when you launch an instance using hardware-assisted (SR-IOV) networking.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
@@ -126,7 +126,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `SCSI` - Emulated SCSI disk.
         /// * `IDE` - Emulated IDE disk.
-        /// * `VFIO` - Direct attached Virtual Function storage.  This is the default option for local data
+        /// * `VFIO` - Direct attached Virtual Function storage. This is the default option for local data
         /// volumes on Oracle provided images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on Oracle-provided images.
@@ -151,7 +151,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `SCSI` - Emulated SCSI disk.
         /// * `IDE` - Emulated IDE disk.
-        /// * `VFIO` - Direct attached Virtual Function storage.  This is the default option for local data
+        /// * `VFIO` - Direct attached Virtual Function storage. This is the default option for local data
         /// volumes on Oracle provided images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on Oracle-provided images.

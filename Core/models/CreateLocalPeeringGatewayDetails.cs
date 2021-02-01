@@ -21,6 +21,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The OCID of the compartment containing the local peering gateway (LPG).
+        /// 
         /// </value>
         /// <remarks>
         /// Required

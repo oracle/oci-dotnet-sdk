@@ -34,6 +34,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// A descriptive label for the question (for example, to display in a form in a graphical interface).
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
