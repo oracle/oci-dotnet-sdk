@@ -47,6 +47,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The collection of rules used for routing destination IPs to network devices.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "routeRules")]
         public System.Collections.Generic.List<RouteRule> RouteRules { get; set; }

@@ -159,6 +159,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The OCID of the VNIC. Available after the attachment process is complete.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }

@@ -50,7 +50,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name for the volume group backup. Does not have to be unique and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the volume group backup. Does not have
+        /// to be unique and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -136,7 +138,9 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> SizeInGBs { get; set; }
                 ///
         /// <value>
-        /// Specifies whether the volume group backup was created manually, or via scheduled backup policy.
+        /// Specifies whether the volume group backup was created manually, or via scheduled
+        /// backup policy.
+        /// 
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -147,7 +151,9 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Specifies whether the volume group backup was created manually, or via scheduled backup policy.
+        /// Specifies whether the volume group backup was created manually, or via scheduled
+        /// backup policy.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -195,18 +201,20 @@ namespace Oci.CoreService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// The aggregate size used by the volume group backup, in MBs. 
-        /// It is typically smaller than sizeInMBs, depending on the space
-        /// consumed on the volume group and whether the volume backup is full or incremental.
+        /// The aggregate size used by the volume group backup, in MBs.
+        /// <br/>
+        /// It is typically smaller than sizeInMBs, depending on the spaceconsumed
+        /// on the volume group and whether the volume backup is full or incremental.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInMbs")]
         public System.Nullable<long> UniqueSizeInMbs { get; set; }
         
         /// <value>
-        /// The aggregate size used by the volume group backup, in GBs. 
-        /// It is typically smaller than sizeInGBs, depending on the space
-        /// consumed on the volume group and whether the volume backup is full or incremental.
+        /// The aggregate size used by the volume group backup, in GBs.
+        /// <br/>
+        /// It is typically smaller than sizeInGBs, depending on the spaceconsumed
+        /// on the volume group and whether the volume backup is full or incremental.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "uniqueSizeInGbs")]

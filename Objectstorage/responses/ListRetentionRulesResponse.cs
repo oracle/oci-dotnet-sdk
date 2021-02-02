@@ -33,10 +33,12 @@ namespace Oci.ObjectstorageService.Responses
 
         /// <value>
         /// Paginating a list of retention rules.
-        /// If the opc-next-page header appears in the response, it indicates that this is a partial list
+        /// If the `opc-next-page` header appears in the response, it indicates that this is a partial list
         /// of retention rules and there are additional rules to get. Include the value of this header as
         /// the `page` parameter in a subsequent GET request to get the next set of retention rules.
         /// Repeat this process to retrieve the entire list of retention rules.
+        /// <br/>
+        /// For more details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]

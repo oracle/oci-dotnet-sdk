@@ -41,7 +41,7 @@ namespace Oci.ObjectstorageService.Requests
         public string BucketName { get; set; }
         
         /// <value>
-        /// The sourceName and newName of rename operation.
+        /// The sourceName and newName of rename operation. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

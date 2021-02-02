@@ -73,7 +73,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ImageShapeFamilyEnum> ImageShapeFamily { get; set; }
                 ///
         /// <value>
-        /// List of the Fault Domains in which this DB system is provisioned.
+        /// The type of software image. Can be grid or database.
         /// </value>
         ///
         public enum ImageTypeEnum {
@@ -84,7 +84,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// List of the Fault Domains in which this DB system is provisioned.
+        /// The type of software image. Can be grid or database.
         /// </value>
         [JsonProperty(PropertyName = "imageType")]
         [JsonConverter(typeof(StringEnumConverter))]

@@ -16,20 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Instance agent configuration options to choose for updating the instance
+    /// Configuration options for the Oracle Cloud Agent software running on the instance.
     /// </summary>
     public class UpdateInstanceAgentConfigDetails 
     {
         
         /// <value>
-        /// Whether the agent running on the instance can gather performance metrics and monitor the instance.
+        /// Whether Oracle Cloud Agent can gather performance metrics and monitor the instance using the
+        /// monitoring plugins.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMonitoringDisabled")]
         public System.Nullable<bool> IsMonitoringDisabled { get; set; }
         
         /// <value>
-        /// Whether the agent running on the instance can run all the available management plugins
+        /// Whether Oracle Cloud Agent can run all the available management plugins.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isManagementDisabled")]

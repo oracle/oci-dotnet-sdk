@@ -31,6 +31,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The OCID of the cross-connect group to put this cross-connect in.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "crossConnectGroupId")]
         public string CrossConnectGroupId { get; set; }

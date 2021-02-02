@@ -102,12 +102,14 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Specifies whether the cloned volume's data has finished copying from the source volume or backup.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }
         
         /// <value>
         /// The OCID of the Key Management key which is the master encryption key for the volume.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
@@ -166,7 +168,9 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> SizeInGBs { get; set; }
         
         /// <value>
-        /// The size of the volume in MBs. This field is deprecated. Use sizeInGBs instead.
+        /// The size of the volume in MBs. This field is deprecated. Use
+        /// sizeInGBs instead.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

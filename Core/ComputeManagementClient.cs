@@ -847,7 +847,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Performs the reset (power off and power on) action on the specified instance pool,
+        /// Performs the reset (immediate power off and power on) action on the specified instance pool,
         /// which performs the action on all the instances in the pool.
         /// 
         /// </summary>
@@ -889,7 +889,10 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Performs the softreset (ACPI shutdown and power on) action on the specified instance pool,
-        /// which performs the action on all the instances in the pool.
+        /// which performs the action on all the instances in the pool. 
+        /// &lt;br/&gt;
+        /// Softreset gracefully reboots the instances by sending a shutdown command to the operating systems. 
+        /// After waiting 15 minutes for the OS to shut down, the instances are powered off and then powered back on.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -970,7 +973,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Performs the stop (power off) action on the specified instance pool,
+        /// Performs the stop (immediate power off) action on the specified instance pool,
         /// which performs the action on all the instances in the pool.
         /// 
         /// </summary>

@@ -59,7 +59,10 @@ namespace Oci.ObjectstorageService.Requests
         public string End { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// For list pagination. The maximum number of results per page, or items to return in a paginated
+        /// \"List\" call. For important details about how pagination works, see
+        /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -77,11 +80,11 @@ namespace Oci.ObjectstorageService.Requests
         
         ///
         /// <value>
-        /// Object summary in list of objects includes the 'name' field. This parameter can also include 'size'
-        /// (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time) and 'timeModified'
-        /// (object modification date and time).
-        /// Value of this parameter should be a comma-separated, case-insensitive list of those field names.
-        /// For example 'name,etag,timeCreated,md5,timeModified'
+        /// Object summary by default includes only the 'name' field. Use this parameter to also
+        /// include 'size' (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time),
+        /// 'timeModified' (object modification date and time), 'storageTier' and 'archivalState' fields.
+        /// Specify the value of this parameter as a comma-separated, case-insensitive list of those field names. 
+        /// For example 'name,etag,timeCreated,md5,timeModified,storageTier,archivalState'.
         /// 
         /// </value>
         ///
@@ -97,15 +100,19 @@ namespace Oci.ObjectstorageService.Requests
             [EnumMember(Value = "md5")]
             Md5,
             [EnumMember(Value = "timeModified")]
-            TimeModified
+            TimeModified,
+            [EnumMember(Value = "storageTier")]
+            StorageTier,
+            [EnumMember(Value = "archivalState")]
+            ArchivalState
         };
 
         /// <value>
-        /// Object summary in list of objects includes the 'name' field. This parameter can also include 'size'
-        /// (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time) and 'timeModified'
-        /// (object modification date and time).
-        /// Value of this parameter should be a comma-separated, case-insensitive list of those field names.
-        /// For example 'name,etag,timeCreated,md5,timeModified'
+        /// Object summary by default includes only the 'name' field. Use this parameter to also
+        /// include 'size' (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time),
+        /// 'timeModified' (object modification date and time), 'storageTier' and 'archivalState' fields.
+        /// Specify the value of this parameter as a comma-separated, case-insensitive list of those field names. 
+        /// For example 'name,etag,timeCreated,md5,timeModified,storageTier,archivalState'.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
@@ -124,7 +131,9 @@ namespace Oci.ObjectstorageService.Requests
         public string StartAfter { get; set; }
         
         /// <value>
-        /// The page at which to start retrieving results.
+        /// For list pagination. The value of the `opc-next-page` response header from the previous \"List\" call. For important
+        /// details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }

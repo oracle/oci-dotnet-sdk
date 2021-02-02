@@ -258,7 +258,7 @@ namespace Oci.CoreService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// Whether to enable in-transit encryption for the data volume's paravirtualized attachment. The default value is false.
+        /// Whether to enable in-transit encryption for the data volume's paravirtualized attachment. This field applies to both block volumes and boot volumes. The default value is false.
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }

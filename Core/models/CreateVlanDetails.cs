@@ -67,7 +67,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A descriptive name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A descriptive name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

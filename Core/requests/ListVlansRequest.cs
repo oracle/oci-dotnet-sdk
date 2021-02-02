@@ -130,7 +130,8 @@ namespace Oci.CoreService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+        /// A filter to only return resources that match the given lifecycle
+        /// state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

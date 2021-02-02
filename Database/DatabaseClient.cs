@@ -560,6 +560,134 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Move the {@link #createExternalContainerDatabaseDetails(CreateExternalContainerDatabaseDetailsRequest) createExternalContainerDatabaseDetails}
+        /// and its dependent resources to the specified compartment.
+        /// For more information about moving external container databases, see
+        /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ChangeExternalContainerDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeExternalContainerDatabaseCompartment API.</example>
+        public async Task<ChangeExternalContainerDatabaseCompartmentResponse> ChangeExternalContainerDatabaseCompartment(ChangeExternalContainerDatabaseCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeExternalContainerDatabaseCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeExternalContainerDatabaseCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeExternalContainerDatabaseCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Move the external non-container database and its dependent resources to the specified compartment.
+        /// For more information about moving external non-container databases, see
+        /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ChangeExternalNonContainerDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeExternalNonContainerDatabaseCompartment API.</example>
+        public async Task<ChangeExternalNonContainerDatabaseCompartmentResponse> ChangeExternalNonContainerDatabaseCompartment(ChangeExternalNonContainerDatabaseCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeExternalNonContainerDatabaseCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeExternalNonContainerDatabaseCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeExternalNonContainerDatabaseCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Move the {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails} and
+        /// its dependent resources to the specified compartment.
+        /// For more information about moving external pluggable databases, see
+        /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ChangeExternalPluggableDatabaseCompartment.cs.html">here</a> to see an example of how to use ChangeExternalPluggableDatabaseCompartment API.</example>
+        public async Task<ChangeExternalPluggableDatabaseCompartmentResponse> ChangeExternalPluggableDatabaseCompartment(ChangeExternalPluggableDatabaseCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeExternalPluggableDatabaseCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeExternalPluggableDatabaseCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeExternalPluggableDatabaseCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Move the key store resource to the specified compartment.
         /// For more information about moving key stores, see
         /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
@@ -638,6 +766,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ChangeVmClusterCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Check the status of the external database connection specified in this connector.
+        /// This operation will refresh the connectionStatus and timeConnectionStatusLastUpdated fields.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CheckExternalDatabaseConnectorConnectionStatus.cs.html">here</a> to see an example of how to use CheckExternalDatabaseConnectorConnectionStatus API.</example>
+        public async Task<CheckExternalDatabaseConnectorConnectionStatusResponse> CheckExternalDatabaseConnectorConnectionStatus(CheckExternalDatabaseConnectorConnectionStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called checkExternalDatabaseConnectorConnectionStatus");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors/{externalDatabaseConnectorId}/actions/checkConnectionStatus".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CheckExternalDatabaseConnectorConnectionStatusResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CheckExternalDatabaseConnectorConnectionStatus failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1297,6 +1466,165 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new external container database resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CreateExternalContainerDatabase.cs.html">here</a> to see an example of how to use CreateExternalContainerDatabase API.</example>
+        public async Task<CreateExternalContainerDatabaseResponse> CreateExternalContainerDatabase(CreateExternalContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new external database connector.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CreateExternalDatabaseConnector.cs.html">here</a> to see an example of how to use CreateExternalDatabaseConnector API.</example>
+        public async Task<CreateExternalDatabaseConnectorResponse> CreateExternalDatabaseConnector(CreateExternalDatabaseConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalDatabaseConnector");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalDatabaseConnectorResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalDatabaseConnector failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new ExternalNonContainerDatabase resource
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CreateExternalNonContainerDatabase.cs.html">here</a> to see an example of how to use CreateExternalNonContainerDatabase API.</example>
+        public async Task<CreateExternalNonContainerDatabaseResponse> CreateExternalNonContainerDatabase(CreateExternalNonContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalNonContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalNonContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalNonContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Registers a new {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails}
+        /// resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CreateExternalPluggableDatabase.cs.html">here</a> to see an example of how to use CreateExternalPluggableDatabase API.</example>
+        public async Task<CreateExternalPluggableDatabaseResponse> CreateExternalPluggableDatabase(CreateExternalPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createExternalPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateExternalPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateExternalPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a Key Store.
         /// 
         /// </summary>
@@ -1911,6 +2239,171 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Deletes the {@link #createExternalContainerDatabaseDetails(CreateExternalContainerDatabaseDetailsRequest) createExternalContainerDatabaseDetails}
+        /// resource. Any external pluggable databases registered under this container database must be deleted in
+        /// your Oracle Cloud Infrastructure tenancy prior to this operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeleteExternalContainerDatabase.cs.html">here</a> to see an example of how to use DeleteExternalContainerDatabase API.</example>
+        public async Task<DeleteExternalContainerDatabaseResponse> DeleteExternalContainerDatabase(DeleteExternalContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes an external database connector.
+        /// Any services enabled using the external database connector must be
+        /// deleted prior to this operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeleteExternalDatabaseConnector.cs.html">here</a> to see an example of how to use DeleteExternalDatabaseConnector API.</example>
+        public async Task<DeleteExternalDatabaseConnectorResponse> DeleteExternalDatabaseConnector(DeleteExternalDatabaseConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalDatabaseConnector");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors/{externalDatabaseConnectorId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalDatabaseConnectorResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalDatabaseConnector failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the Oracle Cloud Infrastructure resource representing an external non-container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeleteExternalNonContainerDatabase.cs.html">here</a> to see an example of how to use DeleteExternalNonContainerDatabase API.</example>
+        public async Task<DeleteExternalNonContainerDatabaseResponse> DeleteExternalNonContainerDatabase(DeleteExternalNonContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalNonContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalNonContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalNonContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails}.
+        /// resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeleteExternalPluggableDatabase.cs.html">here</a> to see an example of how to use DeleteExternalPluggableDatabase API.</example>
+        public async Task<DeleteExternalPluggableDatabaseResponse> DeleteExternalPluggableDatabase(DeleteExternalPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteExternalPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteExternalPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteExternalPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes a key store.
         /// 
         /// </summary>
@@ -2112,6 +2605,130 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Disable Database Management service for the external container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalContainerDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use DisableExternalContainerDatabaseDatabaseManagement API.</example>
+        public async Task<DisableExternalContainerDatabaseDatabaseManagementResponse> DisableExternalContainerDatabaseDatabaseManagement(DisableExternalContainerDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called disableExternalContainerDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/disableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalContainerDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalContainerDatabaseDatabaseManagement failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Disable Database Management Service for the external non-container database.
+        /// For more information about the Database Management Service, see
+        /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalNonContainerDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use DisableExternalNonContainerDatabaseDatabaseManagement API.</example>
+        public async Task<DisableExternalNonContainerDatabaseDatabaseManagementResponse> DisableExternalNonContainerDatabaseDatabaseManagement(DisableExternalNonContainerDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called disableExternalNonContainerDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}/actions/disableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalNonContainerDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalNonContainerDatabaseDatabaseManagement failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Disable Database Management Service for the external pluggable database.
+        /// For more information about the Database Management Service, see
+        /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalPluggableDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use DisableExternalPluggableDatabaseDatabaseManagement API.</example>
+        public async Task<DisableExternalPluggableDatabaseDatabaseManagementResponse> DisableExternalPluggableDatabaseDatabaseManagement(DisableExternalPluggableDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called disableExternalPluggableDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}/actions/disableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalPluggableDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalPluggableDatabaseDatabaseManagement failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Downloads the configuration file for the specified Exadata Cloud@Customer infrastructure.
         /// 
         /// </summary>
@@ -2227,6 +2844,132 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"EnableAutonomousDatabaseOperationsInsights failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables Database Management Service for the external container database.
+        /// For more information about the Database Management Service, see
+        /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalContainerDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use EnableExternalContainerDatabaseDatabaseManagement API.</example>
+        public async Task<EnableExternalContainerDatabaseDatabaseManagementResponse> EnableExternalContainerDatabaseDatabaseManagement(EnableExternalContainerDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableExternalContainerDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/enableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalContainerDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalContainerDatabaseDatabaseManagement failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enable Database Management Service for the external non-container database.
+        /// For more information about the Database Management Service, see
+        /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalNonContainerDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use EnableExternalNonContainerDatabaseDatabaseManagement API.</example>
+        public async Task<EnableExternalNonContainerDatabaseDatabaseManagementResponse> EnableExternalNonContainerDatabaseDatabaseManagement(EnableExternalNonContainerDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableExternalNonContainerDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}/actions/enableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalNonContainerDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalNonContainerDatabaseDatabaseManagement failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enable Database Management Service for the external pluggable database.
+        /// For more information about the Database Management Service, see
+        /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalPluggableDatabaseDatabaseManagement.cs.html">here</a> to see an example of how to use EnableExternalPluggableDatabaseDatabaseManagement API.</example>
+        public async Task<EnableExternalPluggableDatabaseDatabaseManagementResponse> EnableExternalPluggableDatabaseDatabaseManagement(EnableExternalPluggableDatabaseDatabaseManagementRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableExternalPluggableDatabaseDatabaseManagement");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}/actions/enableDatabaseManagement".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalPluggableDatabaseDatabaseManagementResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalPluggableDatabaseDatabaseManagement failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3758,6 +4501,164 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"GetExternalBackupJob failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about the specified external container database.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetExternalContainerDatabase.cs.html">here</a> to see an example of how to use GetExternalContainerDatabase API.</example>
+        public async Task<GetExternalContainerDatabaseResponse> GetExternalContainerDatabase(GetExternalContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about the specified external database connector.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetExternalDatabaseConnector.cs.html">here</a> to see an example of how to use GetExternalDatabaseConnector API.</example>
+        public async Task<GetExternalDatabaseConnectorResponse> GetExternalDatabaseConnector(GetExternalDatabaseConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalDatabaseConnector");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors/{externalDatabaseConnectorId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalDatabaseConnectorResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalDatabaseConnector failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about a specific external non-container database.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetExternalNonContainerDatabase.cs.html">here</a> to see an example of how to use GetExternalNonContainerDatabase API.</example>
+        public async Task<GetExternalNonContainerDatabaseResponse> GetExternalNonContainerDatabase(GetExternalNonContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalNonContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalNonContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalNonContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about a specific
+        /// {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails} resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetExternalPluggableDatabase.cs.html">here</a> to see an example of how to use GetExternalPluggableDatabase API.</example>
+        public async Task<GetExternalPluggableDatabaseResponse> GetExternalPluggableDatabase(GetExternalPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getExternalPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetExternalPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetExternalPluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5415,6 +6316,167 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Gets a list of the external container databases in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListExternalContainerDatabases.cs.html">here</a> to see an example of how to use ListExternalContainerDatabases API.</example>
+        public async Task<ListExternalContainerDatabasesResponse> ListExternalContainerDatabases(ListExternalContainerDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalContainerDatabases");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalContainerDatabasesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalContainerDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the external database connectors in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListExternalDatabaseConnectors.cs.html">here</a> to see an example of how to use ListExternalDatabaseConnectors API.</example>
+        public async Task<ListExternalDatabaseConnectorsResponse> ListExternalDatabaseConnectors(ListExternalDatabaseConnectorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalDatabaseConnectors");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalDatabaseConnectorsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalDatabaseConnectors failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the ExternalNonContainerDatabases in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListExternalNonContainerDatabases.cs.html">here</a> to see an example of how to use ListExternalNonContainerDatabases API.</example>
+        public async Task<ListExternalNonContainerDatabasesResponse> ListExternalNonContainerDatabases(ListExternalNonContainerDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalNonContainerDatabases");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalNonContainerDatabasesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalNonContainerDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails}
+        /// resources in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListExternalPluggableDatabases.cs.html">here</a> to see an example of how to use ListExternalPluggableDatabases API.</example>
+        public async Task<ListExternalPluggableDatabasesResponse> ListExternalPluggableDatabases(ListExternalPluggableDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listExternalPluggableDatabases");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListExternalPluggableDatabasesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListExternalPluggableDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of the flex components that can be used to launch a new DB system. The flex component determines resources to allocate to the DB system - Database Servers and Storage Servers.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6286,6 +7348,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"RotateVaultKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Scans for pluggable databases in the specified external container database.
+        /// This operation will return un-registered pluggable databases in the &#x60;GetWorkRequest&#x60; operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ScanExternalContainerDatabasePluggableDatabases.cs.html">here</a> to see an example of how to use ScanExternalContainerDatabasePluggableDatabases API.</example>
+        public async Task<ScanExternalContainerDatabasePluggableDatabasesResponse> ScanExternalContainerDatabasePluggableDatabases(ScanExternalContainerDatabasePluggableDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called scanExternalContainerDatabasePluggableDatabases");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/scanPluggableDatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ScanExternalContainerDatabasePluggableDatabasesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ScanExternalContainerDatabasePluggableDatabases failed with error: {e.Message}");
                 throw;
             }
         }
@@ -7263,6 +8366,168 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"UpdateExadataIormConfig failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the properties of
+        /// an {@link #createExternalContainerDatabaseDetails(CreateExternalContainerDatabaseDetailsRequest) createExternalContainerDatabaseDetails} resource,
+        /// such as the display name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateExternalContainerDatabase.cs.html">here</a> to see an example of how to use UpdateExternalContainerDatabase API.</example>
+        public async Task<UpdateExternalContainerDatabaseResponse> UpdateExternalContainerDatabase(UpdateExternalContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateExternalContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateExternalContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateExternalContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the properties of an external database connector, such as the display name.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateExternalDatabaseConnector.cs.html">here</a> to see an example of how to use UpdateExternalDatabaseConnector API.</example>
+        public async Task<UpdateExternalDatabaseConnectorResponse> UpdateExternalDatabaseConnector(UpdateExternalDatabaseConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateExternalDatabaseConnector");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externaldatabaseconnectors/{externalDatabaseConnectorId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateExternalDatabaseConnectorResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateExternalDatabaseConnector failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the properties of an external non-container database, such as the display name.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateExternalNonContainerDatabase.cs.html">here</a> to see an example of how to use UpdateExternalNonContainerDatabase API.</example>
+        public async Task<UpdateExternalNonContainerDatabaseResponse> UpdateExternalNonContainerDatabase(UpdateExternalNonContainerDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateExternalNonContainerDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateExternalNonContainerDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateExternalNonContainerDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the properties of an
+        /// {@link #createExternalPluggableDatabaseDetails(CreateExternalPluggableDatabaseDetailsRequest) createExternalPluggableDatabaseDetails} resource,
+        /// such as the display name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateExternalPluggableDatabase.cs.html">here</a> to see an example of how to use UpdateExternalPluggableDatabase API.</example>
+        public async Task<UpdateExternalPluggableDatabaseResponse> UpdateExternalPluggableDatabase(UpdateExternalPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateExternalPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateExternalPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateExternalPluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }

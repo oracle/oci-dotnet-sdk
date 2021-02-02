@@ -38,7 +38,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "NON_ROLLING_APPLY")]
             NonRollingApply,
             [EnumMember(Value = "PRECHECK")]
-            Precheck
+            Precheck,
+            [EnumMember(Value = "ROLLBACK")]
+            Rollback
         };
 
         /// <value>

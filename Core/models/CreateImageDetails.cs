@@ -17,6 +17,7 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// Either instanceId or imageSourceDetails must be provided in addition to other required parameters.
+    /// 
     /// </summary>
     public class CreateImageDetails 
     {
@@ -65,6 +66,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The OCID of the instance you want to use as the basis for the image.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }

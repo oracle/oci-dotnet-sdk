@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The user-friendly name.  Does not have to be unique.
+        /// The user-friendly name. Does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

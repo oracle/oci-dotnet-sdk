@@ -31,6 +31,7 @@ namespace Oci.CoreService.Requests
         
         /// <value>
         /// Details to connect peering connection with peering connection from remote region
+        /// 
         /// </value>
         /// <remarks>
         /// Required

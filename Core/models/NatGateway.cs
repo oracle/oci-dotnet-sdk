@@ -26,9 +26,6 @@ namespace Oci.CoreService.Models
     /// administrator. If you are an administrator who needs to write
     /// policies to give users access, see [Getting Started with
     /// Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you
-    /// supply string values using the API.
     /// 
     /// </summary>
     public class NatGateway 
@@ -73,7 +70,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the NAT gateway.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the
+        /// NAT gateway.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

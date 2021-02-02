@@ -107,6 +107,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The image OCID used to create the boot volume the backup is taken from.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
@@ -166,6 +167,7 @@ namespace Oci.CoreService.Models
                 ///
         /// <value>
         /// Specifies whether the backup was created manually, or via scheduled backup policy.
+        /// 
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -177,6 +179,7 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Specifies whether the backup was created manually, or via scheduled backup policy.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]

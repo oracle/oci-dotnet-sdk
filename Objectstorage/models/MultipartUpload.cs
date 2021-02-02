@@ -80,5 +80,12 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// The storage tier that the object is stored in.
+        /// </value>
+        [JsonProperty(PropertyName = "storageTier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<StorageTier> StorageTier { get; set; }
+        
     }
 }

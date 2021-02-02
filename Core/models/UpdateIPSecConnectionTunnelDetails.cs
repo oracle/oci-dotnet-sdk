@@ -36,7 +36,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "BGP")]
             Bgp,
             [EnumMember(Value = "STATIC")]
-            Static
+            Static,
+            [EnumMember(Value = "POLICY")]
+            Policy
         };
 
         /// <value>
@@ -69,6 +71,9 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "bgpSessionConfig")]
         public UpdateIPSecTunnelBgpSessionDetails BgpSessionConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "encryptionDomainConfig")]
+        public UpdateIPSecTunnelEncryptionDomainDetails EncryptionDomainConfig { get; set; }
         
     }
 }

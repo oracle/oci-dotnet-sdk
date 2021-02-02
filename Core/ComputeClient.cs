@@ -640,7 +640,7 @@ namespace Oci.CoreService
         /// After the console connection has been created and is available,
         /// you connect to the console using SSH.
         /// &lt;br/&gt;
-        /// For more information about console access, see [Accessing the Console](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
+        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -760,6 +760,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Deletes the specified console history metadata and the console history data.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1784,13 +1785,15 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// - **RESET** - Powers off the instance and then powers it back on.
         /// &lt;br/&gt;
-        /// - **SOFTSTOP** - Gracefully shuts down the instance by sending a shutdown command to the operating system.
-        /// If the applications that run on the instance take a long time to shut down, they could be improperly stopped, resulting
-        /// in data corruption. To avoid this, shut down the instance using the commands available in the OS before you softstop the
+        /// - **SOFTSTOP** - Gracefully shuts down the instance by sending a shutdown command to the operating system. 
+        /// After waiting 15 minutes for the OS to shut down, the instance is powered off.
+        /// If the applications that run on the instance take more than 15 minutes to shut down, they could be improperly stopped, resulting
+        /// in data corruption. To avoid this, manually shut down the instance using the commands available in the OS before you softstop the
         /// instance.
         /// &lt;br/&gt;
-        /// - **SOFTRESET** - Gracefully reboots the instance by sending a shutdown command to the operating system, and
-        /// then powers the instance back on.
+        /// - **SOFTRESET** - Gracefully reboots the instance by sending a shutdown command to the operating system. 
+        /// After waiting 15 minutes for the OS to shut down, the instance is powered off and
+        /// then powered back on.
         /// &lt;br/&gt;
         /// - **SENDDIAGNOSTICINTERRUPT** - For advanced users. **Warning: Sending a diagnostic interrupt to a live system can
         /// cause data corruption or system failure.** Sends a diagnostic interrupt that causes the instance&#39;s
@@ -1799,6 +1802,7 @@ namespace Oci.CoreService
         /// the crash. After the OS restarts, you can analyze the crash dump to diagnose the issue. For more information, see
         /// [Sending a Diagnostic Interrupt](https://docs.cloud.oracle.com/Content/Compute/Tasks/sendingdiagnosticinterrupt.htm).
         /// &lt;br/&gt;
+        /// 
         /// For more information about managing instance lifecycle states, see
         /// [Stopping and Starting an Instance](https://docs.cloud.oracle.com/Content/Compute/Tasks/restartinginstance.htm).
         /// 
@@ -2487,7 +2491,7 @@ namespace Oci.CoreService
         /// <summary>
         /// Lists the console connections for the specified compartment or instance.
         /// &lt;br/&gt;
-        /// For more information about console access, see [Accessing the Console](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
+        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2942,6 +2946,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Updates the display name of the image. Avoid entering confidential information.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

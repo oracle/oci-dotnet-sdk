@@ -22,16 +22,17 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The Challenge-Handshake-Authentication-Protocol (CHAP) secret valid for the associated CHAP user name.
+        /// The Challenge-Handshake-Authentication-Protocol (CHAP) secret
+        /// valid for the associated CHAP user name.
         /// (Also called the \"CHAP password\".)
-        /// <br/>
         /// 
         /// </value>
         [JsonProperty(PropertyName = "chapSecret")]
         public string ChapSecret { get; set; }
         
         /// <value>
-        /// The volume's system-generated Challenge-Handshake-Authentication-Protocol (CHAP) user name. See [RFC 1994](https://tools.ietf.org/html/rfc1994) for more on CHAP.
+        /// The volume's system-generated Challenge-Handshake-Authentication-Protocol
+        /// (CHAP) user name. See [RFC 1994](https://tools.ietf.org/html/rfc1994) for more on CHAP.
         /// <br/>
         /// Example: ocid1.volume.oc1.phx.<unique_ID>
         /// </value>
@@ -51,7 +52,8 @@ namespace Oci.CoreService.Models
         public string Ipv4 { get; set; }
         
         /// <value>
-        /// The target volume's iSCSI Qualified Name in the format defined by [RFC 3720](https://tools.ietf.org/html/rfc3720#page-32).
+        /// The target volume's iSCSI Qualified Name in the format defined
+        /// by [RFC 3720](https://tools.ietf.org/html/rfc3720#page-32).
         /// <br/>
         /// Example: iqn.2015-12.us.oracle.com:<CHAP_username>
         /// </value>

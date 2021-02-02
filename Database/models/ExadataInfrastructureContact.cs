@@ -48,7 +48,7 @@ namespace Oci.DatabaseService.Models
         public string Email { get; set; }
         
         /// <value>
-        /// True, if this Exadata Infrastructure contact is a primary contact. False, if this Exadata Infrastructure is a secondary contact.
+        /// If `true`, this Exadata Infrastructure contact is a primary contact. If `false`, this Exadata Infrastructure is a secondary contact.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,6 +56,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "IsPrimary is required.")]
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
+        
+        /// <value>
+        /// If `true`, this Exadata Infrastructure contact is a valid My Oracle Support (MOS) contact. If `false`, this Exadata Infrastructure contact is not a valid MOS contact.
+        /// </value>
+        [JsonProperty(PropertyName = "isContactMosValidated")]
+        public System.Nullable<bool> IsContactMosValidated { get; set; }
         
     }
 }

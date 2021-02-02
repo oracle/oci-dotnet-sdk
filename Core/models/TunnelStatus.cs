@@ -44,7 +44,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "DOWN")]
             Down,
             [EnumMember(Value = "DOWN_FOR_MAINTENANCE")]
-            DownForMaintenance
+            DownForMaintenance,
+            [EnumMember(Value = "PARTIAL_UP")]
+            PartialUp
         };
 
         /// <value>

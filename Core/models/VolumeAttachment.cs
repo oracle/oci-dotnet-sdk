@@ -96,7 +96,11 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsReadOnly { get; set; }
         
         /// <value>
-        /// Whether the attachment should be created in shareable mode. If an attachment is created in shareable mode, then other instances can attach the same volume, provided that they also create their attachments in shareable mode. Only certain volume types can be attached in shareable mode. Defaults to false if not specified.
+        /// Whether the attachment should be created in shareable mode. If an attachment
+        /// is created in shareable mode, then other instances can attach the same volume, provided
+        /// that they also create their attachments in shareable mode. Only certain volume types can
+        /// be attached in shareable mode. Defaults to false if not specified.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isShareable")]
         public System.Nullable<bool> IsShareable { get; set; }

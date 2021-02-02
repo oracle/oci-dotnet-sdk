@@ -22,7 +22,7 @@ namespace Oci.ObjectstorageService.Models
     {
         
         /// <value>
-        /// The name of the policy.
+        /// The name of the policy. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

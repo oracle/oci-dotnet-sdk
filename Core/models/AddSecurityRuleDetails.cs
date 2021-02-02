@@ -84,7 +84,9 @@ namespace Oci.CoreService.Models
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
                 ///
         /// <value>
-        /// Direction of the security rule. Set to `EGRESS` for rules to allow outbound IP packets, or `INGRESS` for rules to allow inbound IP packets.
+        /// Direction of the security rule. Set to `EGRESS` for rules to allow outbound IP packets,
+        /// or `INGRESS` for rules to allow inbound IP packets.
+        /// 
         /// </value>
         ///
         public enum DirectionEnum {
@@ -95,7 +97,9 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Direction of the security rule. Set to `EGRESS` for rules to allow outbound IP packets, or `INGRESS` for rules to allow inbound IP packets.
+        /// Direction of the security rule. Set to `EGRESS` for rules to allow outbound IP packets,
+        /// or `INGRESS` for rules to allow inbound IP packets.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

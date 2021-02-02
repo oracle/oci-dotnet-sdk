@@ -30,7 +30,9 @@ namespace Oci.CoreService.Requests
         public string VirtualCircuitId { get; set; }
         
         /// <value>
-        /// A filter to only return resources that match the given verification state.
+        /// A filter to only return resources that match the given verification
+        /// state.
+        /// <br/>
         /// The state value is case-insensitive.
         /// 
         /// </value>

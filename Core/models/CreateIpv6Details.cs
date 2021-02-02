@@ -74,10 +74,6 @@ namespace Oci.CoreService.Models
         /// IPv6 will be in the VNIC's subnet.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VnicId is required.")]
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
         

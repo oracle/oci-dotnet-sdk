@@ -35,7 +35,7 @@ namespace Oci.ObjectstorageService.Models
         public string SourceName { get; set; }
         
         /// <value>
-        /// The new name of the source object.
+        /// The new name of the source object. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

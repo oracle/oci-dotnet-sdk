@@ -23,6 +23,8 @@ namespace Oci.ObjectstorageService.Models
         
         /// <value>
         /// A user-specified name for the retention rule. Names can be helpful in identifying retention rules.
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

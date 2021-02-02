@@ -1618,6 +1618,202 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListExternalContainerDatabases operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListExternalContainerDatabasesResponse> ListExternalContainerDatabasesResponseEnumerator(ListExternalContainerDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListExternalContainerDatabasesRequest, ListExternalContainerDatabasesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalContainerDatabases(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ExternalContainerDatabaseSummary objects
+        /// contained in responses from the ListExternalContainerDatabases operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ExternalContainerDatabaseSummary> ListExternalContainerDatabasesRecordEnumerator(ListExternalContainerDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListExternalContainerDatabasesRequest, ListExternalContainerDatabasesResponse, ExternalContainerDatabaseSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalContainerDatabases(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListExternalDatabaseConnectors operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListExternalDatabaseConnectorsResponse> ListExternalDatabaseConnectorsResponseEnumerator(ListExternalDatabaseConnectorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListExternalDatabaseConnectorsRequest, ListExternalDatabaseConnectorsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalDatabaseConnectors(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ExternalDatabaseConnectorSummary objects
+        /// contained in responses from the ListExternalDatabaseConnectors operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ExternalDatabaseConnectorSummary> ListExternalDatabaseConnectorsRecordEnumerator(ListExternalDatabaseConnectorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListExternalDatabaseConnectorsRequest, ListExternalDatabaseConnectorsResponse, ExternalDatabaseConnectorSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalDatabaseConnectors(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListExternalNonContainerDatabases operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListExternalNonContainerDatabasesResponse> ListExternalNonContainerDatabasesResponseEnumerator(ListExternalNonContainerDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListExternalNonContainerDatabasesRequest, ListExternalNonContainerDatabasesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalNonContainerDatabases(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ExternalNonContainerDatabaseSummary objects
+        /// contained in responses from the ListExternalNonContainerDatabases operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ExternalNonContainerDatabaseSummary> ListExternalNonContainerDatabasesRecordEnumerator(ListExternalNonContainerDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListExternalNonContainerDatabasesRequest, ListExternalNonContainerDatabasesResponse, ExternalNonContainerDatabaseSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalNonContainerDatabases(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListExternalPluggableDatabases operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListExternalPluggableDatabasesResponse> ListExternalPluggableDatabasesResponseEnumerator(ListExternalPluggableDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListExternalPluggableDatabasesRequest, ListExternalPluggableDatabasesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalPluggableDatabases(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ExternalPluggableDatabaseSummary objects
+        /// contained in responses from the ListExternalPluggableDatabases operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ExternalPluggableDatabaseSummary> ListExternalPluggableDatabasesRecordEnumerator(ListExternalPluggableDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListExternalPluggableDatabasesRequest, ListExternalPluggableDatabasesResponse, ExternalPluggableDatabaseSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalPluggableDatabases(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListFlexComponents operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

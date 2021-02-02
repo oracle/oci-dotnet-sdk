@@ -21,6 +21,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The public IP prefixes (CIDRs) to remove from the public virtual circuit.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

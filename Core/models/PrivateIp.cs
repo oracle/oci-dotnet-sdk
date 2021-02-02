@@ -50,9 +50,6 @@ namespace Oci.CoreService.Models
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
     /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you
-    /// supply string values using the API.
     /// 
     /// </summary>
     public class PrivateIp 
@@ -173,7 +170,6 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The OCID of the VNIC the private IP is assigned to. The VNIC and private IP
         /// must be in the same subnet.
-        /// <br/>
         /// However, if the `PrivateIp` object is being used with a VLAN as part of
         /// the Oracle Cloud VMware Solution, the `vnicId` is null.
         /// 
