@@ -64,6 +64,18 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<long> Length { get; set; }
         
         /// <value>
+        /// Precision of the attribute value usually applies to float data type.
+        /// </value>
+        [JsonProperty(PropertyName = "precision")]
+        public System.Nullable<int> Precision { get; set; }
+        
+        /// <value>
+        /// Scale of the attribute value usually applies to float data type.
+        /// </value>
+        [JsonProperty(PropertyName = "scale")]
+        public System.Nullable<int> Scale { get; set; }
+        
+        /// <value>
         /// Property that identifies if this attribute can be assigned null values.
         /// </value>
         [JsonProperty(PropertyName = "isNullable")]

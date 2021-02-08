@@ -20,6 +20,7 @@ namespace Oci.DatacatalogService.Models
     /// FAILED      - Job has failed due to errors during execution.
     /// SUCCEEDED   - Job has successfully completed execution.
     /// CANCELED    - Job has been aborted by the worker due to a user request.
+    /// SUCCEEDED_WITH_WARNINGS - Job has successfully completed execution with one or more warnings.
     /// 
   /// </summary>
   public enum JobExecutionState {
@@ -34,6 +35,8 @@ namespace Oci.DatacatalogService.Models
       [EnumMember(Value = "SUCCEEDED")]
       Succeeded,
       [EnumMember(Value = "CANCELED")]
-      Canceled
+      Canceled,
+      [EnumMember(Value = "SUCCEEDED_WITH_WARNINGS")]
+      SucceededWithWarnings
   }
 }

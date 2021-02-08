@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// command summary.
+    /// Summary information for a command.
     /// </summary>
     public class InstanceAgentCommandSummary 
     {
         
         /// <value>
-        /// The command OCID
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the command.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.ComputeinstanceagentService.Models
         public string InstanceAgentCommandId { get; set; }
         
         /// <value>
-        /// The user friendly display name of the command.
+        /// A user-friendly name. Does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment the command is created in.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the command.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,9 @@ namespace Oci.ComputeinstanceagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The command creation date
+        /// The date and time the command was created, in the format defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +60,9 @@ namespace Oci.ComputeinstanceagentService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The command last updated at date.
+        /// The date and time the command was last updated, in the format defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +72,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Set to true, if the command has been canceled.
+        /// Whether a request was made to cancel the command. Canceling a command is a best-effort attempt.
         /// </value>
         [JsonProperty(PropertyName = "isCanceled")]
         public System.Nullable<bool> IsCanceled { get; set; }

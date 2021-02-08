@@ -10,17 +10,24 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.OsmanagementService.Models
+namespace Oci.DatacatalogService.Models
 {
   /// <summary>
-  /// A reason why an update may not be installable.
+  /// Data Catalog resource type which can be used in recommendations.
+    /// - DATA_ENTITY
+    /// - ATTRIBUTE
+    /// - TERM
+    /// - CATEGORY
+    /// 
   /// </summary>
-  public enum InstallationRequirements {
-      [EnumMember(Value = "EULA_ACCEPTANCE_REQUIRED")]
-      EulaAcceptanceRequired,
-      [EnumMember(Value = "SOFTWARE_MEDIA_REQUIRED")]
-      SoftwareMediaRequired,
-      [EnumMember(Value = "USER_INTERACTION_REQUIRED")]
-      UserInteractionRequired
+  public enum RecommendationResourceType {
+      [EnumMember(Value = "DATA_ENTITY")]
+      DataEntity,
+      [EnumMember(Value = "ATTRIBUTE")]
+      Attribute,
+      [EnumMember(Value = "TERM")]
+      Term,
+      [EnumMember(Value = "CATEGORY")]
+      Category
   }
 }

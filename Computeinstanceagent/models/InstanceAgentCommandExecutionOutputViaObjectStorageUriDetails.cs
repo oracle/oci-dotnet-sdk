@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// command execution output via uri.
+    /// The execution output from a command when saved to an Object Storage URL.
     /// </summary>
     public class InstanceAgentCommandExecutionOutputViaObjectStorageUriDetails : InstanceAgentCommandExecutionOutputContent
     {
         
         /// <value>
-        /// The Object Storage URL or PAR for the command output.
+        /// The Object Storage URL or pre-authenticated request (PAR) for the command output.
         /// </value>
         /// <remarks>
         /// Required

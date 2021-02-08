@@ -16,11 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command content.
+    /// The contents of the command.
     /// </summary>
     public class InstanceAgentCommandContent 
     {
         
+        /// <value>
+        /// The source of the command.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
@@ -28,6 +31,9 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "source")]
         public InstanceAgentCommandSourceDetails Source { get; set; }
         
+        /// <value>
+        /// The output destination for the command.
+        /// </value>
         [JsonProperty(PropertyName = "output")]
         public InstanceAgentCommandOutputDetails Output { get; set; }
         

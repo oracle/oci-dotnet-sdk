@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Create Command Details
+    /// Creation details for an Oracle Cloud Agent command.
     /// </summary>
     public class CreateInstanceAgentCommandDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment you want to create the command.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to create the command in.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,9 @@ namespace Oci.ComputeinstanceagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Command execution time limit. Zero means no timeout.
+        /// The amount of time that Oracle Cloud Agent is given to run the command on the instance before timing
+        /// out. The timer starts when Oracle Cloud Agent starts the command. Zero means no timeout.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -44,11 +46,15 @@ namespace Oci.ComputeinstanceagentService.Models
         /// <value>
         /// A user-friendly name for the command. It does not have to be unique.
         /// Avoid entering confidential information.
-        /// Example: Database Backup Command
+        /// <br/>
+        /// Example: Database Backup Script
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// The target instance to run the command on.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
@@ -56,6 +62,9 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "target")]
         public InstanceAgentCommandTarget Target { get; set; }
         
+        /// <value>
+        /// The contents of the command.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

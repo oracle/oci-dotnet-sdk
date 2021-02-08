@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// command execution output via object storage tuple.
+    /// The execution output from a command when saved to an Object Storage bucket.
     /// </summary>
     public class InstanceAgentCommandExecutionOutputViaObjectStorageTupleDetails : InstanceAgentCommandExecutionOutputContent
     {
@@ -42,7 +42,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// The Object Storage name for the command output.
+        /// The Object Storage object name for the command output.
         /// </value>
         /// <remarks>
         /// Required

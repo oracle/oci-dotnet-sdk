@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command content via text.
+    /// The source of the command when provided using plain text.
     /// </summary>
     public class InstanceAgentCommandSourceViaTextDetails : InstanceAgentCommandSourceDetails
     {
@@ -32,7 +32,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Sha256 checksum value of the text content
+        /// SHA-256 checksum value of the text content.
         /// </value>
         [JsonProperty(PropertyName = "textSha256")]
         public string TextSha256 { get; set; }

@@ -6,9 +6,17 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
+
+using Newtonsoft.Json;
+
 using Oci.Common.Internal;
+using Oci.Common.Model;
+using Oci.Common.Utils;
 
 namespace Oci.Common
 {
@@ -21,7 +29,18 @@ namespace Oci.Common
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly Dictionary<string, Region> KNOWN_REGIONS = new Dictionary<string, Region>();
-
+        private static readonly string OCI_REGION_METADATA_ENV_VAR_NAME = "OCI_REGION_METADATA";
+        private static readonly string REGIONS_CONFIG_FILE_PATH = Path.Combine("~", ".oci", "regions-config.json");
+        private static volatile bool HasUsedEnvVar = false;
+        private static volatile bool HasUsedConfigFile = false;
+        private static volatile bool HasUsedInstanceMetadataService = false;
+        private static volatile bool HasReceivedInstanceMetadataServiceResponse = false;
+        private static volatile bool HasWarnedAboutValuesWithoutInstanceMetadataService = false;
+        private static volatile bool HasOptedForInstanceMetadataService = false;
+        private static Region RegionFromIMDS = null;
+        private static RegionSchema RegionSchemaFromIMDS = null;
+        private static readonly string METADATA_SERVICE_BASE_URL = "http://169.254.169.254/";
+        private static readonly string METADATA_SERVICE_API_URL = "opc/v2/instance/regionInfo/";
         // OC1
         public static readonly Region AP_CHUNCHEON_1 = Register("ap-chuncheon-1", Realm.OC1, "yny");
         public static readonly Region AP_HYDERABAD_1 = Register("ap-hyderabad-1", Realm.OC1, "hyd");
@@ -93,6 +112,36 @@ namespace Oci.Common
             return FormatDefaultRegionEndpoint(service, this);
         }
 
+        /// <summary>Enables contact to IMDS (Instance Metadata Service, only available on OCI instances) if user decides to opt-in</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static void EnableInstanceMetadataService()
+        {
+            HasOptedForInstanceMetadataService = true;
+        }
+
+        /// <summary>Instructs the SDK to not contact the IMDS (Instance Metadata Service, only available on OCI instances).</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static void SkipInstanceMetadataService()
+        {
+            HasUsedInstanceMetadataService = true;
+            HasOptedForInstanceMetadataService = false;
+        }
+
+        /// <summary> Resets the HasUsedEnvVar check for Region Metadata </summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static void ResetEnvironmentVariableInUse()
+        {
+            HasUsedEnvVar = false;
+        }
+
+
+        /// <summary> Resets the HasUsedConfigFile check for reading Region Metadata from region config file</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static void ResetConfigFileInUse()
+        {
+            HasUsedConfigFile = false;
+        }
+
         /// <summary>
         /// Creates a default endpoint URL for the given service in the given region.
         /// <br/>
@@ -138,14 +187,12 @@ namespace Oci.Common
         /// <exception>Throws ArgumentException when region id is not found.</exception>
         public static Region FromRegionId(string regionId)
         {
-            foreach (Region region in Values())
+            Region region = GetRegionAndRegisterIfNeccessary(regionId);
+            if (region == null)
             {
-                if (region.RegionId.Equals(regionId))
-                {
-                    return region;
-                }
+                throw new ArgumentException($"Unable to find region from regionId {regionId}.");
             }
-            throw new ArgumentException($"Unable to find region from regionId {regionId}.");
+            return region;
         }
 
         /// <summary>Returns the Region object from the canonical public region id or region code.</summary>
@@ -154,14 +201,12 @@ namespace Oci.Common
         /// <exception>Throws ArgumentException when region id is not found.</exception>
         public static Region FromRegionCodeOrId(string regionCodeOrId)
         {
-            foreach (Region region in Values())
+            Region region = GetRegionAndRegisterIfNeccessary(regionCodeOrId);
+            if (region == null)
             {
-                if ((region.RegionCode != null && region.RegionCode.Equals(regionCodeOrId)) || region.RegionId.Equals(regionCodeOrId))
-                {
-                    return region;
-                }
+                throw new ArgumentException($"Unable to find region from regionId or regionCode {regionCodeOrId}.");
             }
-            throw new ArgumentException($"Unable to find region from regionId or regionCode {regionCodeOrId}.");
+            return region;
         }
 
         /// <summary>
@@ -171,6 +216,14 @@ namespace Oci.Common
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Region[] Values()
         {
+            if (!HasUsedInstanceMetadataService && !HasWarnedAboutValuesWithoutInstanceMetadataService)
+            {
+                logger.Warn(
+                "Call to Regions.Values() without having contacted IMDS (Instance Metadata Service, only available on OCI instances)" +
+                "If you do need the region from IMDS, call Region.RegisterFromInstanceMetadataService() before calling Region.Values()");
+                HasWarnedAboutValuesWithoutInstanceMetadataService = true;
+            }
+            RegisterAllRegions();
             return KNOWN_REGIONS.Values.ToArray();
         }
 
@@ -207,7 +260,7 @@ namespace Oci.Common
                 throw new ArgumentNullException("Cannot have empty regionId");
             }
 
-            foreach (Region region in Values())
+            foreach (Region region in KNOWN_REGIONS.Values)
             {
                 if (region.RegionId.Equals(regionId))
                 {
@@ -229,6 +282,212 @@ namespace Oci.Common
             }
 
             return new Region(regionId, regionCode, realm);
+        }
+
+        /// <summary>Gets Region from Region Id or Region Code</summary>
+        /// <param name="regionCodeOrId">The region code/Id.</param>
+        /// <returns>Region corresponding to the region code or Id</returns>
+        private static Region GetRegionFromRegionCodeOrIdWithoutRegistering(string regionCodeOrId)
+        {
+            foreach (Region region in KNOWN_REGIONS.Values)
+            {
+                if ((region.RegionId != null && region.RegionId.Equals(regionCodeOrId)) || (region.RegionCode != null && region.RegionCode.Equals(regionCodeOrId)))
+                {
+                    return region;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>Gets Region from Region Id or Region Code and registers it if neccessary</summary>
+        /// <param name="regionCodeOrId">The region code/Id.</param>
+        /// <returns>Region corresponding to the region code or Id</returns>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static Region GetRegionAndRegisterIfNeccessary(string regionCodeOrId)
+        {
+
+            Region region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+            if (region != null)
+            {
+                return region;
+            }
+
+            if (!HasUsedConfigFile)
+            {
+                RegisterRegionFromRegionConfigFile(); //sets HasUsedConfigFile to true.
+                region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+                if (region != null)
+                {
+                    return region;
+                }
+            }
+
+            if (!HasUsedEnvVar)
+            {
+                RegisterRegionFromRegionEnvironmentVariable(); //sets HasUsedEnvVar to true.
+                region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+                if (region != null)
+                {
+                    return region;
+                }
+            }
+
+            if (HasOptedForInstanceMetadataService && !HasUsedInstanceMetadataService)
+            {
+                RegisterRegionFromInstanceMetadataService();
+                region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+            }
+            return region;
+        }
+
+        /// <summary> Registers all regions from Regions Config file and/or OCI_REGION_METADATA Environment Variable</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static void RegisterAllRegions()
+        {
+            if (!HasUsedConfigFile)
+            {
+                RegisterRegionFromRegionConfigFile();
+            }
+            if (!HasUsedEnvVar)
+            {
+                RegisterRegionFromRegionEnvironmentVariable();
+            }
+        }
+
+        /// <summary>Registers region and sets HasUsedConfigFile status to true</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static void RegisterRegionFromRegionConfigFile()
+        {
+            var regionConfigFile = FileUtils.ExpandUserHome(REGIONS_CONFIG_FILE_PATH);
+            HasUsedConfigFile = true;
+            if (!File.Exists(regionConfigFile))
+            {
+                logger.Info($"Region config file not found to fetch regions at {regionConfigFile}");
+                return;
+            }
+            try
+            {
+                var content = File.ReadAllText(regionConfigFile);
+                logger.Info("Region schemas from regions-config.json are {}", content);
+                if (String.IsNullOrEmpty(content))
+                {
+                    return;
+                }
+                try
+                {
+                var regionSchemas = JsonConvert.DeserializeObject<List<RegionSchema>>(content);
+                    if (regionSchemas != null)
+                    {
+                        foreach (RegionSchema regionSchema in regionSchemas)
+                        {
+                            if (regionSchema != null && regionSchema.isValid())
+                            {
+                                Register(regionSchema.regionIdentifier, Realm.Register(regionSchema.realmKey, regionSchema.realmDomainComponent), regionSchema.regionKey);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Warn($"Unable to convert the Region metadata read from {REGIONS_CONFIG_FILE_PATH} due to exception: {e}");
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Warn($"Exception in reading or parsing {FileUtils.ExpandUserHome(REGIONS_CONFIG_FILE_PATH)} to fetch regions: {e}");
+            }
+        }
+
+        ///<summary>Registers region and sets HasUsedEnvVar status to true.</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static void RegisterRegionFromRegionEnvironmentVariable()
+        {
+            var regionMetadataEnvVar = Environment.GetEnvironmentVariable(OCI_REGION_METADATA_ENV_VAR_NAME);
+            HasUsedEnvVar = true;
+            logger.Info($"Region metadata schema from OCI_REGION_METADATA env variable is:{regionMetadataEnvVar}");
+            if (!String.IsNullOrEmpty(regionMetadataEnvVar))
+            {
+                var regionSchema = JsonConvert.DeserializeObject<RegionSchema>(regionMetadataEnvVar);
+                try
+                {
+                    if (regionSchema != null && regionSchema.isValid())
+                    {
+                        Register(regionSchema.regionIdentifier, Realm.Register(regionSchema.realmKey, regionSchema.realmDomainComponent), regionSchema.regionKey);
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Warn($"Unable to convert the region metadata from {OCI_REGION_METADATA_ENV_VAR_NAME} due to exception: {e}");
+                }
+            }
+            else
+            {
+                logger.Info($"{OCI_REGION_METADATA_ENV_VAR_NAME} environment variable is not set");
+            }
+        }
+
+        /// <summary> Send request to IMDS (Instance Metadata Service, only available on OCI instances) </summary>
+        /// <returns> RegionSchema extracted from the IMDS </returns>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static RegionSchema GetRegionSchemaFromInstanceMetaDataService()
+        {
+            if (HasReceivedInstanceMetadataServiceResponse)
+            {
+                return RegionSchemaFromIMDS;
+            }
+            var client = new HttpClient();
+            try
+            {
+                logger.Info($"Requesting region metadata blob from IMDS at {METADATA_SERVICE_BASE_URL}{METADATA_SERVICE_API_URL}");
+                client.BaseAddress = new Uri(METADATA_SERVICE_BASE_URL);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Oracle");
+                client.DefaultRequestHeaders.UserAgent.ParseAdd(HttpUtils.BuildUserAgent(""));
+                var response = client.GetAsync(METADATA_SERVICE_API_URL).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var regionMetadata = response.Content.ReadAsStringAsync().Result;
+                    logger.Debug($"Response from IMDS: {regionMetadata}");
+                    if (!String.IsNullOrEmpty(regionMetadata))
+                    {
+                        RegionSchemaFromIMDS = JsonConvert.DeserializeObject<RegionSchema>(regionMetadata);
+                        logger.Debug($"Region read from IMDS Id:{RegionSchemaFromIMDS.regionIdentifier} Realm:{RegionSchemaFromIMDS.realmKey} Domain:{RegionSchemaFromIMDS.realmDomainComponent} Key:{RegionSchemaFromIMDS.regionKey}");
+                    }
+                }
+                else
+                {
+                    logger.Info($"Request to Instance Metadata Service failed: {response.StatusCode} ({response.ReasonPhrase})");
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Warn($"Region Schema read from Instance Metadata Service due to expception: {e}");
+            }
+            finally
+            {
+                client.Dispose();
+            }
+            return RegionSchemaFromIMDS;
+        }
+
+        /// <summary> Calls GetRegionSchemaFromInstanceMetaDataService , only available on OCI instances), registers region</summary>
+        /// <returns> Returns Region registered from InstanceMetadataServiceResponse</returns>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static Region RegisterRegionFromInstanceMetadataService()
+        {
+            if (HasUsedInstanceMetadataService)
+            {
+                return RegionFromIMDS;
+            }
+            EnableInstanceMetadataService();
+            HasUsedInstanceMetadataService = true;
+            var regionSchema = GetRegionSchemaFromInstanceMetaDataService();
+            if (regionSchema != null && regionSchema.isValid())
+            {
+                HasReceivedInstanceMetadataServiceResponse = true;
+                RegionFromIMDS = Register(regionSchema.regionIdentifier, Realm.Register(regionSchema.realmKey, regionSchema.realmDomainComponent), regionSchema.regionKey);
+            }
+            return RegionFromIMDS;
         }
     }
 }

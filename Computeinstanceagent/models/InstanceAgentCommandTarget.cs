@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Target instances that will receive a command.
+    /// The target instance that the command runs on.
     /// </summary>
     public class InstanceAgentCommandTarget 
     {
         
         /// <value>
-        /// The target instance OCID
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the target instance.
         /// </value>
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }

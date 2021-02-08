@@ -74,6 +74,12 @@ namespace Oci.OsmanagementService.Models
         public string InstallTime { get; set; }
         
         /// <value>
+        /// date the package was issued by a providing erratum (if available)
+        /// </value>
+        [JsonProperty(PropertyName = "issued")]
+        public string Issued { get; set; }
+        
+        /// <value>
         /// list of software sources that provide the software package
         /// </value>
         [JsonProperty(PropertyName = "softwareSources")]

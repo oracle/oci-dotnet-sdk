@@ -22,7 +22,7 @@ namespace Oci.ComputeinstanceagentService.Models
     {
         
         /// <value>
-        /// The command OCID
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the command.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment the command is created in.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the command.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,35 +42,44 @@ namespace Oci.ComputeinstanceagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The user friendly display name of the command.
+        /// A user-friendly name. Does not have to be unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// the time command was created at.
+        /// The date and time the command was created, in the format defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// the time command was updated at.
+        /// The date and time the command was last updated, in the format defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Whether the command has been requested to be canceled.
+        /// Whether a request was made to cancel the command. Canceling a command is a best-effort attempt.
         /// </value>
         [JsonProperty(PropertyName = "isCanceled")]
         public System.Nullable<bool> IsCanceled { get; set; }
         
         /// <value>
-        /// Command execution time limit that the instance agent will honor when executing the command inside the instance. This timer starts when the instance agent starts the commond. Zero means no timeout.
+        /// The amount of time that Oracle Cloud Agent is given to run the command on the instance before timing
+        /// out. The timer starts when Oracle Cloud Agent starts the command. Zero means no timeout.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "executionTimeOutInSeconds")]
         public System.Nullable<int> ExecutionTimeOutInSeconds { get; set; }
         
+        /// <value>
+        /// The target instance that the command runs on.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
@@ -78,6 +87,9 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "target")]
         public InstanceAgentCommandTarget Target { get; set; }
         
+        /// <value>
+        /// The contents of the command.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

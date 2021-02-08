@@ -41,6 +41,13 @@ namespace Oci.DatabaseService.Models
         };
 
         
+        /// <value>
+        /// Additional upgrade options supported by DBUA(Database Upgrade Assistant).
+        /// Example: &quot;-upgradeTimezone false -keepEvents&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "options")]
+        public string Options { get; set; }
+        
     }
 
     public class DatabaseUpgradeSourceBaseModelConverter : JsonConverter
