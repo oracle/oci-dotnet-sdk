@@ -17,15 +17,15 @@ namespace Oci.OsmanagementService.Responses
 
         /// <value>
         /// For optimistic concurrency control. See `if-match`.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If
-        /// you need to contact Oracle about a particular request,
-        /// please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -33,8 +33,8 @@ namespace Oci.OsmanagementService.Responses
 
 
         /// <value>
-        /// some decimal number representing the number of seconds
-        /// the client should wait before polling this endpoint again
+        /// A decimal number representing the number of seconds the client
+        /// should wait before polling this endpoint again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "retry-after")]

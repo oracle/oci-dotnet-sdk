@@ -173,6 +173,10 @@ namespace Oci.DatacatalogService.Requests
             ExternalKey,
             [EnumMember(Value = "length")]
             Length,
+            [EnumMember(Value = "precision")]
+            Precision,
+            [EnumMember(Value = "scale")]
+            Scale,
             [EnumMember(Value = "isNullable")]
             IsNullable,
             [EnumMember(Value = "uri")]

@@ -16,14 +16,21 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// command execution output.
+    /// The execution output from a command.
     /// </summary>
     [JsonConverter(typeof(InstanceAgentCommandExecutionOutputContentModelConverter))]
     public class InstanceAgentCommandExecutionOutputContent 
     {
                 ///
         /// <value>
-        /// The response type where the command reponse is made available
+        /// The output destination type for the command. The following values are supported:
+        /// <br/>
+        /// - TEXT - the command output is returned as plain text.
+        /// - OBJECT_STORAGE_URI - the command output is saved to an Object Storage URL.
+        /// - OBJECT_STORAGE_TUPLE - the command output is saved to an Object Storage bucket.
+        /// <br/>
+        /// For background information about Object Storage buckets and URLs, see
+        /// [Overview of Object Storage](https://docs.cloud.oracle.com/Content/Object/Concepts/objectstorageoverview.htm).
         /// 
         /// </value>
         ///
@@ -38,7 +45,7 @@ namespace Oci.ComputeinstanceagentService.Models
 
         
         /// <value>
-        /// command exit code.
+        /// The exit code for the command. Exit code `0` indicates success.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +55,8 @@ namespace Oci.ComputeinstanceagentService.Models
         public System.Nullable<int> ExitCode { get; set; }
         
         /// <value>
-        /// optional status message that agent's can populate for additional troubleshooting.
+        /// An optional status message that Oracle Cloud Agent can populate for additional troubleshooting.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }

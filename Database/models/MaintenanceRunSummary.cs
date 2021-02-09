@@ -78,7 +78,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "CANCELED")]
+            Canceled
         };
 
         /// <value>
@@ -184,7 +186,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "HARDWARE")]
             Hardware,
             [EnumMember(Value = "CRITICAL")]
-            Critical
+            Critical,
+            [EnumMember(Value = "ONEOFF")]
+            Oneoff
         };
 
         /// <value>

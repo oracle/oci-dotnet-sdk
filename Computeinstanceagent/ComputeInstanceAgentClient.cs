@@ -66,7 +66,11 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// Cancel a command. Cancel is best effort attempt. If the commmand has already completed it will skip cancel.
+        /// Cancels a command that is scheduled to run on a compute instance that is managed
+        /// by Oracle Cloud Agent.
+        /// &lt;br/&gt;
+        /// Canceling a command is a best-effort attempt. If the command has already
+        /// completed, it will not be canceled.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -106,7 +110,13 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// Create command for one or more managed instances
+        /// Creates a command or script to run on a compute instance that is managed by Oracle Cloud Agent.
+        /// &lt;br/&gt;
+        /// On Linux instances, the script runs in a bash shell. On Windows instances, the
+        /// script runs in a batch shell.
+        /// &lt;br/&gt;
+        /// Commands that require administrator privileges will run only if Oracle Cloud Agent
+        /// is running with administrator privileges.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -146,7 +156,7 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// Gets information about the specified instance agent commandId.
+        /// Gets information about an Oracle Cloud Agent command.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -224,8 +234,8 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// List all executions of a command, i.e return command execution results from all targeted instances batch by
-        /// batch.
+        /// Lists the execution details for Oracle Cloud Agent commands that run on the specified compute
+        /// instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -265,8 +275,7 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// List Instance agent commands issued with the specified filter.
-        /// Additonally you can filter commands sent to a particular InstanceId
+        /// Lists the Oracle Cloud Agent commands issued in a compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

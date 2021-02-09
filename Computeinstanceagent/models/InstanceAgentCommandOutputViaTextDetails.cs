@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command output via text.
+    /// The command output destination when returned in plain text.
     /// </summary>
     public class InstanceAgentCommandOutputViaTextDetails : InstanceAgentCommandOutputDetails
     {

@@ -20,7 +20,7 @@ namespace Oci.ComputeinstanceagentService.Requests
     {
         
         /// <value>
-        /// The OCID of the command.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the command.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,8 +30,8 @@ namespace Oci.ComputeinstanceagentService.Requests
         public string InstanceAgentCommandId { get; set; }
         
         /// <value>
-        /// Unique identifier for the request.
-        /// If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+        /// please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

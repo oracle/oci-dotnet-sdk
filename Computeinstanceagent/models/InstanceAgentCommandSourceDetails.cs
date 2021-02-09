@@ -16,15 +16,21 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command content.
+    /// The source of the command.
     /// </summary>
     [JsonConverter(typeof(InstanceAgentCommandSourceDetailsModelConverter))]
     public class InstanceAgentCommandSourceDetails 
     {
                 ///
         /// <value>
-        /// The source type of the command. Use `TEXT` for inlining the command. Use `OBJECT_STORAGE_TUPLE` when specifying
-        /// the namespace, bucket name, and object name. Use `OBJECT_STORAGE_URI` when specifying the Object Storage URL.
+        /// The source type for the command. The following values are supported:
+        /// <br/>
+        /// - `TEXT` - uses a plain text command that is specified inline with the request.
+        /// - `OBJECT_STORAGE_URI` - imports a command from an Object Storage URL.
+        /// - `OBJECT_STORAGE_TUPLE` - imports a command from an Object Storage bucket.
+        /// <br/>
+        /// For background information about Object Storage buckets and URLs, see
+        /// [Overview of Object Storage](https://docs.cloud.oracle.com/Content/Object/Concepts/objectstorageoverview.htm).
         /// 
         /// </value>
         ///

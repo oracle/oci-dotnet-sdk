@@ -4,9 +4,10 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
 
@@ -91,6 +92,16 @@ namespace Oci.Common.Utils
                 sb.AppendFormat("{0}{1}={2}", sb.Length > 1 ? "&" : "", keyValue.Key, keyValue.Value);
             }
             return sb.ToString();
+        }
+
+        /// <summary> Builds the useragent</summary>
+        public static string BuildUserAgent(string clientUserAgent)
+        {
+            var additionalUserAgent = String.IsNullOrEmpty(clientUserAgent) ? "" : $" {clientUserAgent}";
+            OperatingSystem os = Environment.OSVersion;
+            String ociSdkAppendUserAgent = Environment.GetEnvironmentVariable("OCI_SDK_APPEND_USER_AGENT");
+            ociSdkAppendUserAgent = String.IsNullOrEmpty(ociSdkAppendUserAgent) ? "" : $" {ociSdkAppendUserAgent}";
+            return $"Oracle-DotNetSDK/{Version.GetVersion()} ({os.Platform}/{os.Version}; {RuntimeInformation.FrameworkDescription}) {additionalUserAgent} {ociSdkAppendUserAgent}";
         }
     }
 }

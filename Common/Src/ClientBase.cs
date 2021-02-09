@@ -5,12 +5,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Net.Http;
 using Oci.Common.Auth;
 using Oci.Common.Http;
 using Oci.Common.Http.Signing;
-
+using Oci.Common.Utils;
 namespace Oci.Common
 {
     /// <summary>An abstract class for a generic service client.</summary>
@@ -99,11 +98,7 @@ namespace Oci.Common
             // User agent string will only be configured once and cannot be modified after that.
             if (userAgent == null)
             {
-                var additionalUserAgent = String.IsNullOrEmpty(clientUserAgent) ? "" : $" {clientUserAgent}";
-                OperatingSystem os = Environment.OSVersion;
-                String ociSdkAppendUserAgent = Environment.GetEnvironmentVariable("OCI_SDK_APPEND_USER_AGENT");
-                ociSdkAppendUserAgent = String.IsNullOrEmpty(ociSdkAppendUserAgent) ? "" : $" {ociSdkAppendUserAgent}";
-                userAgent = $"Oracle-DotNetSDK/{Version.GetVersion()} ({os.Platform}/{os.Version}; {RuntimeInformation.FrameworkDescription}) {additionalUserAgent} {ociSdkAppendUserAgent}";
+                userAgent = HttpUtils.BuildUserAgent(clientUserAgent);
             }
             return userAgent;
         }

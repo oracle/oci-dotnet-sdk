@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command content via uri.
+    /// The source of the command when imported from an Object Storage URL.
     /// </summary>
     public class InstanceAgentCommandSourceViaObjectStorageUriDetails : InstanceAgentCommandSourceDetails
     {
         
         /// <value>
-        /// The Object Storage URL or PAR for the command.
+        /// The Object Storage URL or pre-authenticated request (PAR) for the command.
         /// </value>
         /// <remarks>
         /// Required

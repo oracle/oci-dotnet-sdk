@@ -148,5 +148,41 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "isRebootRequired")]
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
+        /// <value>
+        /// Number of security type updates available to be installed
+        /// </value>
+        [JsonProperty(PropertyName = "securityUpdatesAvailable")]
+        public System.Nullable<int> SecurityUpdatesAvailable { get; set; }
+        
+        /// <value>
+        /// Number of bug fix type updates available to be installed
+        /// </value>
+        [JsonProperty(PropertyName = "bugUpdatesAvailable")]
+        public System.Nullable<int> BugUpdatesAvailable { get; set; }
+        
+        /// <value>
+        /// Number of enhancement type updates available to be installed
+        /// </value>
+        [JsonProperty(PropertyName = "enhancementUpdatesAvailable")]
+        public System.Nullable<int> EnhancementUpdatesAvailable { get; set; }
+        
+        /// <value>
+        /// Number of non-classified updates available to be installed
+        /// </value>
+        [JsonProperty(PropertyName = "otherUpdatesAvailable")]
+        public System.Nullable<int> OtherUpdatesAvailable { get; set; }
+        
+        /// <value>
+        /// Number of scheduled jobs associated with this instance
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledJobCount")]
+        public System.Nullable<int> ScheduledJobCount { get; set; }
+        
+        /// <value>
+        /// Number of work requests associated with this instance
+        /// </value>
+        [JsonProperty(PropertyName = "workRequestCount")]
+        public System.Nullable<int> WorkRequestCount { get; set; }
+        
     }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Command content via object storage tuple.
+    /// The source of the command when imported from an Object Storage bucket.
     /// </summary>
     public class InstanceAgentCommandSourceViaObjectStorageTupleDetails : InstanceAgentCommandSourceDetails
     {
@@ -42,7 +42,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// The Object Storage name for the command.
+        /// The Object Storage object name for the command.
         /// </value>
         /// <remarks>
         /// Required

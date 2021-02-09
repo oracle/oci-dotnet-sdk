@@ -41,6 +41,12 @@ namespace Oci.BudgetService.Models
         public System.Nullable<decimal> Amount { get; set; }
         
         /// <value>
+        /// The number of days offset from the first day of the month, at which the budget processing period starts. In months that have fewer days than this value, processing will begin on the last day of that month. For example, for a value of 12, processing starts every month on the 12th at midnight.
+        /// </value>
+        [JsonProperty(PropertyName = "budgetProcessingPeriodStartOffset")]
+        public System.Nullable<int> BudgetProcessingPeriodStartOffset { get; set; }
+        
+        /// <value>
         /// The reset period for the budget.
         /// 
         /// </value>

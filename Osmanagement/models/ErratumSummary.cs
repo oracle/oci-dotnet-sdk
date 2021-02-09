@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementService.Models
 {
     /// <summary>
-    /// Important changes for software. This can include security advisories, bug fixes, or enhancements.
+    /// Important changes for software. This can include security | advisories, bug fixes, or enhancements.
     /// </summary>
     public class ErratumSummary 
     {

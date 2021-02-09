@@ -4,8 +4,13 @@
  */
 
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
+
+using Oci.Common.Model;
+using Oci.Common.Utils;
+
 using Xunit;
 
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
@@ -15,6 +20,72 @@ namespace Oci.Common
     public class RegionTests : BaseTest
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void RegisterNewRegionFromEnvVariable()
+        {
+            Region.ResetEnvironmentVariableInUse();
+            string regionMetadataEnvVar = "{ \"realmKey\" : \"RTC\",\"realmDomainComponent\" : \"foobar-oraclecloud.com\",\"regionKey\" : \"hhh\",\"regionIdentifier\" : \"us-hhh-1\"}";
+            Environment.SetEnvironmentVariable("OCI_REGION_METADATA", regionMetadataEnvVar);
+            if (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("OCI_REGION_METADATA")))
+            {
+                Region regionFromEnvVar = Region.FromRegionCodeOrId("hhh");
+                Region US_HHH_TST = Region.Register("us-hhh-1", Realm.Register("RTC", "foobar-oraclecloud.com"), "hhh");
+                Assert.True(AreRegionsSame(regionFromEnvVar, US_HHH_TST));
+            }
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void RegisterNewRegionFromConfigFileTest()
+        {
+            Region.ResetConfigFileInUse();
+            string regionBlob = "[{ \"realmKey\" : \"RTC\",\"realmDomainComponent\" : \"foobar-oraclecloud.com\",\"regionKey\" : \"atl\",\"regionIdentifier\" : \"ap-atl-1\"}]";
+            DirectoryInfo dir = Directory.CreateDirectory(FileUtils.ExpandUserHome(Path.Combine("~", ".oci")));
+            var regionConfigFilePath = FileUtils.ExpandUserHome(Path.Combine("~", ".oci", "regions-config.json"));
+            try
+            {
+                File.WriteAllText(regionConfigFilePath, regionBlob);
+                if (File.Exists(regionConfigFilePath))
+                {
+                    Region regionFromConfigFile = Region.FromRegionCodeOrId("atl");
+                    Region US_ATLANTA_TST = Region.Register("ap-atl-1", Realm.Register("RTC", "foobar-oraclecloud.com"), "atl");
+                    Assert.True(AreRegionsSame(regionFromConfigFile, US_ATLANTA_TST));
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.True(false, $"RegisterNewRegionFromConfigFileTest failed due to exception:{e}");
+            }
+            finally
+            {
+                File.Delete(regionConfigFilePath);
+            }
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void RegisterFromIMDS()
+        {
+            // if IMDS can't be reached, this test takes >15 seconds
+            Region regionFromIMDS = Region.RegisterRegionFromInstanceMetadataService();
+            RegionSchema regionSchemaFromIMDS = Region.GetRegionSchemaFromInstanceMetaDataService();
+            if (regionFromIMDS != null && regionSchemaFromIMDS != null)
+            {
+                Assert.Equal(regionFromIMDS.RegionId, regionSchemaFromIMDS.regionIdentifier.ToLower());
+                Assert.Equal(regionFromIMDS.RegionCode, regionSchemaFromIMDS.regionKey.ToLower());
+                Assert.Equal(regionFromIMDS.Realm.RealmId, regionSchemaFromIMDS.realmKey);
+                Assert.Equal(regionFromIMDS.Realm.SecondLevelDomain, regionSchemaFromIMDS.realmDomainComponent);
+            }
+            else
+            {
+                Assert.True(regionFromIMDS == null && regionSchemaFromIMDS == null);
+            }
+        }
 
         [Fact]
         [Trait("Category", "Unit")]

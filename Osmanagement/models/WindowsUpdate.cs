@@ -72,12 +72,22 @@ namespace Oci.OsmanagementService.Models
         [JsonProperty(PropertyName = "isEligibleForInstallation")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<IsEligibleForInstallation> IsEligibleForInstallation { get; set; }
-        
+                ///
+        ///
+        public enum InstallationRequirementsEnum {
+            [EnumMember(Value = "EULA_ACCEPTANCE_REQUIRED")]
+            EulaAcceptanceRequired,
+            [EnumMember(Value = "SOFTWARE_MEDIA_REQUIRED")]
+            SoftwareMediaRequired,
+            [EnumMember(Value = "USER_INTERACTION_REQUIRED")]
+            UserInteractionRequired
+        };
+
         /// <value>
         /// List of requirements forinstalling on a managed instances
         /// </value>
         [JsonProperty(PropertyName = "installationRequirements", ItemConverterType = typeof(StringEnumConverter))]
-        public System.Collections.Generic.List<InstallationRequirements> InstallationRequirements { get; set; }
+        public System.Collections.Generic.List<InstallationRequirementsEnum> InstallationRequirements { get; set; }
         
         /// <value>
         /// Indicates whether a reboot may be required to complete installation of this update.
