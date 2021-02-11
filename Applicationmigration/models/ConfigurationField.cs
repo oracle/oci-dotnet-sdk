@@ -55,6 +55,13 @@ namespace Oci.ApplicationmigrationService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// A list of resources associated with a specific configuration object.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceList")]
+        public System.Collections.Generic.List<ResourceField> ResourceList { get; set; }
+        
+        /// <value>
         /// Indicates whether or not the field is required (defaults to `true`).
         /// 
         /// </value>

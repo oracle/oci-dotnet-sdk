@@ -371,6 +371,20 @@ namespace Oci.DatabaseService.Models
         public string ScanDnsRecordId { get; set; }
         
         /// <value>
+        /// The FQDN of the DNS record for the SCAN IP addresses that are associated with the DB system.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "scanDnsName")]
+        public string ScanDnsName { get; set; }
+        
+        /// <value>
+        /// The OCID of the zone the DB system is associated with.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "zoneId")]
+        public string ZoneId { get; set; }
+        
+        /// <value>
         /// The data storage size, in gigabytes, that is currently available to the DB system. Applies only for virtual machine DB systems.
         /// 
         /// </value>

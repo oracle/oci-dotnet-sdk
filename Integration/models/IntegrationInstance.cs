@@ -207,5 +207,8 @@ namespace Oci.IntegrationService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
         
+        [JsonProperty(PropertyName = "networkEndpointDetails")]
+        public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
     }
 }

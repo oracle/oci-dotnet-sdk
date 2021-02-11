@@ -10,17 +10,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.IntegrationService.Models
 {
   /// <summary>
-  /// Possible source environment types.
+  /// Public endpoint access type.
+    /// 
   /// </summary>
-  public enum SourceTypes {
-      [EnumMember(Value = "OCIC")]
-      Ocic,
-      [EnumMember(Value = "INTERNAL_COMPUTE")]
-      InternalCompute,
-      [EnumMember(Value = "OCC")]
-      Occ
+  public enum NetworkEndpointType {
+      [EnumMember(Value = "PUBLIC")]
+      Public
   }
 }

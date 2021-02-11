@@ -23,6 +23,8 @@ namespace Oci.ApplicationmigrationService.Models
     /// <br/>
     /// Specify `INTERNAL_COMPUTE` if you have a traditional Oracle Cloud Infrastructure - Classic account and you want to migrate Oracle
     /// Process Cloud Service or Oracle Integration Cloud Service applications.
+    /// <br/>
+    /// Specify `OCC` if you have an Oracle Cloud @ Customer account.
     /// 
     /// </summary>
     [JsonConverter(typeof(SourceDetailsModelConverter))]
@@ -52,6 +54,9 @@ namespace Oci.ApplicationmigrationService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "OCC":
+                    obj = new OccSourceDetails();
+                    break;
                 case "INTERNAL_COMPUTE":
                     obj = new InternalSourceDetails();
                     break;
