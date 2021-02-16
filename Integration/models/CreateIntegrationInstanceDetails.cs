@@ -90,7 +90,7 @@ namespace Oci.IntegrationService.Models
         public System.Nullable<bool> IsByol { get; set; }
         
         /// <value>
-        /// IDCS Authentication token. This is is required for pre-UCPIS cloud accounts, but not UCPIS, hence not a required parameter
+        /// IDCS Authentication token. This is required for all realms with IDCS. Its optional as its not required for non IDCS realms.
         /// </value>
         [JsonProperty(PropertyName = "idcsAt")]
         public string IdcsAt { get; set; }
@@ -147,6 +147,9 @@ namespace Oci.IntegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "networkEndpointDetails")]
+        public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
         
     }
 }

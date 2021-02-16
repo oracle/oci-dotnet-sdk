@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 14.1.0 - 2021-02-16
+### Added
+- Support for scan DNS names and zone ids on database system, cloud VM cluster, and autonomous Exadata infrastructure responses in the Database service
+- Support for specifying ACL rules to limit ingress into public load balancers in the Integration service
+- Support for Cloud at Customer as a source type in the Application Migration service
+- Support for selective migration of specific resources in the Application Migration service
+
 ## 14.0.0 - 2021-02-09
 ### Added
 - Support for the Database Management service
@@ -14,9 +21,9 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for additional database upgrade options in the Database service
 - Support for glossary term recommendations in the Data Catalog service
 - Support for listing errata in the OS Management service
- 
+
 ### Breaking changes
-- `InstanceAgentCommandContentInfo` was removed from Computeinstanceagent service. 
+- `InstanceAgentCommandContentInfo` was removed from Computeinstanceagent service.
 - `InstallationRequirements` was replaced by `InstallationRequirementsEnum` in WindowUpdate model in Osmanagement service.
 
 ## 13.0.0 - 2021-02-02

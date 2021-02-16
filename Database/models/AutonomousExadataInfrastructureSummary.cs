@@ -232,5 +232,19 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The FQDN of the DNS record for the SCAN IP addresses that are associated with the Autonomous Exadata Infrastructure.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "scanDnsName")]
+        public string ScanDnsName { get; set; }
+        
+        /// <value>
+        /// The OCID of the zone the Autonomous Exadata Infrastructure is associated with.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "zoneId")]
+        public string ZoneId { get; set; }
+        
     }
 }

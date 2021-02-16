@@ -13,27 +13,26 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.IntegrationService.Models
 {
     /// <summary>
-    /// Details of the source environment from which you want to migrate applications to Oracle Cloud Infrastructure. It also contains access
-    /// credentials.
+    /// Base representation of a network endpoint.
     /// 
     /// </summary>
-    [JsonConverter(typeof(AuthorizationDetailsModelConverter))]
-    public class AuthorizationDetails 
+    [JsonConverter(typeof(NetworkEndpointDetailsModelConverter))]
+    public class NetworkEndpointDetails 
     {
         
         
     }
 
-    public class AuthorizationDetailsModelConverter : JsonConverter
+    public class NetworkEndpointDetailsModelConverter : JsonConverter
     {
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(AuthorizationDetails);
+            return type == typeof(NetworkEndpointDetails);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -43,18 +42,12 @@ namespace Oci.ApplicationmigrationService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(AuthorizationDetails);
-            var discriminator = jsonObject["type"].Value<string>();
+            var obj = default(NetworkEndpointDetails);
+            var discriminator = jsonObject["networkEndpointType"].Value<string>();
             switch (discriminator)
             {
-                case "OCC":
-                    obj = new OccAuthorizationDetails();
-                    break;
-                case "INTERNAL_COMPUTE":
-                    obj = new InternalAuthorizationDetails();
-                    break;
-                case "OCIC":
-                    obj = new OcicAuthorizationDetails();
+                case "PUBLIC":
+                    obj = new PublicEndpointDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

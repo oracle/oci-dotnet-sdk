@@ -88,6 +88,13 @@ namespace Oci.ApplicationmigrationService.Models
         public System.Nullable<TargetDatabaseTypes> PreCreatedTargetDatabaseType { get; set; }
         
         /// <value>
+        /// If set to `true`, Application Migration migrates the application resources selectively depending on the source.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSelectiveMigration")]
+        public System.Nullable<bool> IsSelectiveMigration { get; set; }
+        
+        /// <value>
         /// Configuration required to migrate the application. In addition to the key and value, additional fields are provided
         /// to describe type type and purpose of each field. Only the value for each key is required when passing configuration to the 
         /// CreateMigration operation.
