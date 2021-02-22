@@ -22,11 +22,11 @@ namespace Oci.CoreService.Models
     /// routed through the service gateway and does not traverse the internet. The instances in the VCN
     /// do not need to have public IP addresses nor be in a public subnet. The VCN does not need an internet gateway
     /// for this traffic. For more information, see
-    /// [Access to Oracle Services: Service Gateway](https://docs.cloud.oracle.com/Content/Network/Tasks/servicegateway.htm).
+    /// [Access to Oracle Services: Service Gateway](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/servicegateway.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
-    /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
     /// 
     /// </summary>
     public class ServiceGateway 
@@ -46,7 +46,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> BlockTraffic { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the
         /// service gateway.
         /// 
         /// </value>
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the service gateway.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service gateway.
         /// 
         /// </value>
         /// <remarks>
@@ -123,7 +123,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The OCID of the route table the service gateway is using.
         /// For information about why you would associate a route table with a service gateway, see
-        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/Content/Network/Tasks/transitroutingoracleservices.htm).
+        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
@@ -152,7 +152,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN the service gateway
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN the service gateway
         /// belongs to.
         /// 
         /// </value>

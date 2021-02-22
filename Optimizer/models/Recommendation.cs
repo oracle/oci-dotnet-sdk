@@ -17,8 +17,6 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// The metadata associated with the recommendation.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class Recommendation 
@@ -143,7 +141,7 @@ namespace Oci.OptimizerService.Models
         /// <value>
         /// The date and time the current status will change. The format is defined by RFC3339.
         /// <br/>
-        /// For example, \"The current `postponed` status of the recommendation will end and change to `pending` on this 
+        /// For example, \"The current `postponed` status of the recommendation will end and change to `pending` on this
         /// date and time.\"
         /// 
         /// </value>

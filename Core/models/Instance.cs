@@ -309,5 +309,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "timeMaintenanceRebootDue")]
         public System.Nullable<System.DateTime> TimeMaintenanceRebootDue { get; set; }
         
+        [JsonProperty(PropertyName = "platformConfig")]
+        public PlatformConfig PlatformConfig { get; set; }
+        
     }
 }

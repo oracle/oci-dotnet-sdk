@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the IP pool containing the CIDR block.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IP pool containing the CIDR block.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]

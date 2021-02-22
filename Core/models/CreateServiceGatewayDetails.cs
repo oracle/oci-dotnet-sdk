@@ -64,7 +64,7 @@ namespace Oci.CoreService.Models
         /// with the service gateway.
         /// <br/>
         /// For information about why you would associate a route table with a service gateway, see
-        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/Content/Network/Tasks/transitroutingoracleservices.htm).
+        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
@@ -90,7 +90,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<ServiceIdRequestDetails> Services { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
         /// 
         /// </value>
         /// <remarks>

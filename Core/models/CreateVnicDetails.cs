@@ -19,7 +19,7 @@ namespace Oci.CoreService.Models
     /// Contains properties for a VNIC. You use this object when creating the
     /// primary VNIC during instance launch or when creating a secondary VNIC.
     /// For more information about VNICs, see
-    /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/Content/Network/Tasks/managingVNICs.htm).
+    /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVNICs.htm).
     /// 
     /// </summary>
     public class CreateVnicDetails 
@@ -36,14 +36,14 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// **Note:** This public IP address is associated with the primary private IP
         /// on the VNIC. For more information, see
-        /// [IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingIPaddresses.htm).
+        /// [IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingIPaddresses.htm).
         /// <br/>
         /// **Note:** There's a limit to the number of {@link PublicIp}
         /// a VNIC or instance can have. If you try to create a secondary VNIC
         /// with an assigned public IP for an instance that has already
         /// reached its public IP limit, an error is returned. For information
         /// about the public IP limits, see
-        /// [Public IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingpublicIPs.htm).
+        /// [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
         /// <br/>
         /// Example: falseIf you specify a vlanId, the assignPublicIp is required to be set to false. See{@link Vlan}.
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.CoreService.Models
         /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// For more information, see
-        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/Content/Network/Concepts/dns.htm).
+        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// <br/>
         /// When launching an instance, use this `hostnameLabel` instead
         /// of the deprecated `hostnameLabel` in
@@ -138,7 +138,7 @@ namespace Oci.CoreService.Models
         /// Whether the source/destination check is disabled on the VNIC.
         /// Defaults to `false`, which means the check is performed. For information
         /// about why you would skip the source/destination check, see
-        /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/Content/Network/Tasks/managingroutetables.htm#privateip).
+        /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#privateip).
         /// <br/>
         /// 
         /// If you specify a `vlanId`, the `skipSourceDestCheck` cannot be specified because the

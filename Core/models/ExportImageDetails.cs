@@ -31,6 +31,30 @@ namespace Oci.CoreService.Models
     public class ExportImageDetails 
     {
         
+                ///
+        /// <value>
+        /// The format of the image to be exported. The default value is \"OCI\".
+        /// </value>
+        ///
+        public enum ExportFormatEnum {
+            [EnumMember(Value = "QCOW2")]
+            Qcow2,
+            [EnumMember(Value = "VMDK")]
+            Vmdk,
+            [EnumMember(Value = "OCI")]
+            Oci,
+            [EnumMember(Value = "VHD")]
+            Vhd,
+            [EnumMember(Value = "VDI")]
+            Vdi
+        };
+
+        /// <value>
+        /// The format of the image to be exported. The default value is \"OCI\".
+        /// </value>
+        [JsonProperty(PropertyName = "exportFormat")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ExportFormatEnum> ExportFormat { get; set; }
         
     }
 

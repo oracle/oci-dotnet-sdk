@@ -191,7 +191,8 @@ namespace Oci.ObjectstorageService.Transfer
                 executor,
                 putobjectRequest.OpcClientRequestId,
                 _configuration.EnforceMd5MultipartUpload,
-                uploadRequest.RetryConfiguration);
+                uploadRequest.RetryConfiguration,
+                putobjectRequest.StorageTier.GetValueOrDefault(Models.StorageTier.Standard));
 
             try
             {
@@ -201,7 +202,8 @@ namespace Oci.ObjectstorageService.Transfer
                     manifest = await assembler.NewRequest(
                         putobjectRequest.ContentEncoding, putobjectRequest.ContentType,
                         putobjectRequest.ContentLanguage, putobjectRequest.ContentDisposition,
-                        putobjectRequest.CacheControl, putobjectRequest.OpcMeta);
+                        putobjectRequest.CacheControl, putobjectRequest.OpcMeta,
+                        putObjectRequest.StorageTier.GetValueOrDefault(Models.StorageTier.Standard));
                 }
                 else
                 {

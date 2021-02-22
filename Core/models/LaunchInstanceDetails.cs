@@ -263,5 +263,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
         
+        [JsonProperty(PropertyName = "platformConfig")]
+        public LaunchInstancePlatformConfig PlatformConfig { get; set; }
+        
     }
 }

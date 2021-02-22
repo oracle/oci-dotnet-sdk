@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// For more information, see
-        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/Content/Network/Concepts/dns.htm).
+        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
@@ -83,7 +83,7 @@ namespace Oci.CoreService.Models
         /// Whether the source/destination check is disabled on the VNIC.
         /// Defaults to `false`, which means the check is performed. For information about why you would
         /// skip the source/destination check, see
-        /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/Content/Network/Tasks/managingroutetables.htm#privateip).
+        /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#privateip).
         /// <br/>
         /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
         /// belonging to a subnet), the value of the `skipSourceDestCheck` attribute is ignored.

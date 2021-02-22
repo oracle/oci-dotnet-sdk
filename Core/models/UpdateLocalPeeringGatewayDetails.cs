@@ -49,7 +49,7 @@ namespace Oci.CoreService.Models
         /// The OCID of the route table the LPG will use.
         /// <br/>
         /// For information about why you would associate a route table with an LPG, see
-        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/Content/Network/Tasks/transitrouting.htm).
+        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]

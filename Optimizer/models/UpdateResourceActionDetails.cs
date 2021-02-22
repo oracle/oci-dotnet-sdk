@@ -35,7 +35,7 @@ namespace Oci.OptimizerService.Models
         /// <value>
         /// The date and time the current status will change. The format is defined by RFC3339.
         /// <br/>
-        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this 
+        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this
         /// date and time.\"
         /// 
         /// </value>

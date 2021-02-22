@@ -17,8 +17,6 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// Details about the recommended action.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you use the API to supply string values.
     /// 
     /// </summary>
     public class Action 

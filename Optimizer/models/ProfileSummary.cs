@@ -94,6 +94,12 @@ namespace Oci.OptimizerService.Models
         [JsonProperty(PropertyName = "levelsConfiguration")]
         public LevelsConfiguration LevelsConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "targetCompartments")]
+        public TargetCompartments TargetCompartments { get; set; }
+        
+        [JsonProperty(PropertyName = "targetTags")]
+        public TargetTags TargetTags { get; set; }
+        
         /// <value>
         /// The date and time the profile was created, in the format defined by RFC3339.
         /// </value>

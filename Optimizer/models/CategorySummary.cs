@@ -17,8 +17,6 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// The metadata associated with the category summary.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CategorySummary 
@@ -45,7 +43,7 @@ namespace Oci.OptimizerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The name assigned to the category.
+        /// The name assigned to the category. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +53,7 @@ namespace Oci.OptimizerService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Text describing the category.
+        /// Text describing the category. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

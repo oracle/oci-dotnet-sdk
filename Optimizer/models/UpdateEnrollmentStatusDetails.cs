@@ -17,8 +17,6 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// The request object for updating the enrollment status details.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you use the API to supply string values.
     /// 
     /// </summary>
     public class UpdateEnrollmentStatusDetails 

@@ -17,7 +17,7 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// A service offering from a supported provider. For more information,
-    /// see [FastConnect Overview](https://docs.cloud.oracle.com/Content/Network/Concepts/fastconnect.htm).
+    /// see [FastConnect Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/fastconnect.htm).
     /// 
     /// </summary>
     public class FastConnectProviderService 
