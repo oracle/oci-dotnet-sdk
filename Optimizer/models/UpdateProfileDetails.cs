@@ -17,15 +17,13 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// Details for updating a profile.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you use the API to supply string values.
     /// 
     /// </summary>
     public class UpdateProfileDetails 
     {
         
         /// <value>
-        /// Text describing the profile.
+        /// Text describing the profile. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -50,6 +48,18 @@ namespace Oci.OptimizerService.Models
         
         [JsonProperty(PropertyName = "levelsConfiguration")]
         public LevelsConfiguration LevelsConfiguration { get; set; }
+        
+        [JsonProperty(PropertyName = "targetCompartments")]
+        public TargetCompartments TargetCompartments { get; set; }
+        
+        [JsonProperty(PropertyName = "targetTags")]
+        public TargetTags TargetTags { get; set; }
+        
+        /// <value>
+        /// The name assigned to the profile. Avoid entering confidential information.
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
         
     }
 }

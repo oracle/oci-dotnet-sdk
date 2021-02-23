@@ -24,7 +24,7 @@ namespace Oci.CoreService.Models
     /// 2. Reserved
     /// <br/>
     /// For more information and comparison of the two types,
-    /// see [Public IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingpublicIPs.htm).
+    /// see [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
     /// 
     /// </summary>
     public class PublicIp 
@@ -164,7 +164,7 @@ namespace Oci.CoreService.Models
         /// whenever you like. It does not need to be assigned to a private IP at all times.
         /// <br/>
         /// For more information and comparison of the two types,
-        /// see [Public IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingpublicIPs.htm).
+        /// see [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
         /// 
         /// </value>
         ///
@@ -189,7 +189,7 @@ namespace Oci.CoreService.Models
         /// whenever you like. It does not need to be assigned to a private IP at all times.
         /// <br/>
         /// For more information and comparison of the two types,
-        /// see [Public IP Addresses](https://docs.cloud.oracle.com/Content/Network/Tasks/managingpublicIPs.htm).
+        /// see [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifetime")]
@@ -256,7 +256,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the pool object created in the current tenancy.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the pool object created in the current tenancy.
         /// </value>
         [JsonProperty(PropertyName = "publicIpPoolId")]
         public string PublicIpPoolId { get; set; }

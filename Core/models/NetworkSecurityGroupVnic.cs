@@ -23,7 +23,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the parent resource that the VNIC
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the parent resource that the VNIC
         /// is attached to (for example, a Compute instance).
         /// 
         /// </value>
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeAssociated { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VNIC.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC.
         /// </value>
         /// <remarks>
         /// Required

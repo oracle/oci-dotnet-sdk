@@ -17,8 +17,6 @@ namespace Oci.OptimizerService.Models
 {
     /// <summary>
     /// The metadata associated with the resource action summary.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you use the API to supply string values.
     /// 
     /// </summary>
     public class ResourceActionSummary 
@@ -159,7 +157,7 @@ namespace Oci.OptimizerService.Models
         /// <value>
         /// The date and time the current status will change. The format is defined by RFC3339.
         /// <br/>
-        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this 
+        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this
         /// date and time.\"
         /// 
         /// </value>
@@ -167,7 +165,7 @@ namespace Oci.OptimizerService.Models
         public System.Nullable<System.DateTime> TimeStatusEnd { get; set; }
         
         /// <value>
-        /// Custom metadata key/value pairs for the resource action. 
+        /// Custom metadata key/value pairs for the resource action.
         /// <br/>
         ///  **Metadata Example**
         /// <br/>
@@ -185,7 +183,7 @@ namespace Oci.OptimizerService.Models
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
         /// <value>
-        /// Additional metadata key/value pairs that you provide. 
+        /// Additional metadata key/value pairs that you provide.
         /// They serve the same purpose and functionality as fields in the `metadata` object.
         /// <br/>
         /// They are distinguished from `metadata` fields in that these can be nested JSON objects (whereas `metadata` fields are string/string maps only).

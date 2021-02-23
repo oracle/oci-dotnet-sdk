@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The OCID of the route table the service gateway will use.
         /// For information about why you would associate a route table with a service gateway, see
-        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/Content/Network/Tasks/transitroutingoracleservices.htm).
+        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]

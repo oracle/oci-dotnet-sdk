@@ -29,7 +29,8 @@ namespace Oci.ObjectstorageService.Transfer
             SemaphoreSlim executor,
             string opcClientRequestId,
             bool enforceContentMD5Upload = false,
-            RetryConfiguration retryConfiguration = null)
+            RetryConfiguration retryConfiguration = null,
+            StorageTier storageTier = StorageTier.Standard)
         {
             _service = service;
             _namespaceName = namespaceName;
@@ -41,6 +42,7 @@ namespace Oci.ObjectstorageService.Transfer
             _opcClientRequestId = opcClientRequestId;
             _enforceContentMD5Upload = enforceContentMD5Upload;
             _tokenSource = new CancellationTokenSource();
+            _storageTier = storageTier;
         }
 
         /// <summary>
@@ -51,7 +53,8 @@ namespace Oci.ObjectstorageService.Transfer
         public async Task<MultipartManifest> NewRequest(
             string contentEncoding, string contentType,
             string contentLanguage, string contentDisposition,
-            string cacheControl, Dictionary<string, string> metadata)
+            string cacheControl, Dictionary<string, string> metadata,
+            StorageTier storageTier)
         {
             CheckInitialized();
             var ifNoneMatch = _allowOverwrite ? null : "*";
@@ -70,6 +73,7 @@ namespace Oci.ObjectstorageService.Transfer
                     Metadata = metadata,
                     ContentDisposition = contentDisposition,
                     CacheControl = cacheControl,
+                    StorageTier = storageTier
                 },
                 OpcClientRequestId = CreateClientRequestId("New")
             };
@@ -310,5 +314,6 @@ namespace Oci.ObjectstorageService.Transfer
 
         private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly int MAX_CLIENT_REQUEST_ID_LENGTH = 98;
+        private readonly StorageTier _storageTier;
     }
 }

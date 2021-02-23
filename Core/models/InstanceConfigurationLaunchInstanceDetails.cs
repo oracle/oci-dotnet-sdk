@@ -180,6 +180,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "shapeConfig")]
         public InstanceConfigurationLaunchInstanceShapeConfigDetails ShapeConfig { get; set; }
         
+        [JsonProperty(PropertyName = "platformConfig")]
+        public InstanceConfigurationLaunchInstancePlatformConfig PlatformConfig { get; set; }
+        
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceConfigurationInstanceSourceDetails SourceDetails { get; set; }
         

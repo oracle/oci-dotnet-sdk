@@ -17,7 +17,7 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// Oracle offers the ability to Bring Your Own IP (BYOIP), importing public IP addresses that you currently own to Oracle Cloud Infrastructure. A `ByoipRange` resource is a record of the imported address block (a BYOIP CIDR block) and also some associated metadata.
-    /// The process used to [Bring Your Own IP](https://docs.cloud.oracle.com/Content/Network/Concepts/BYOIP.htm) is explained in the documentation.
+    /// The process used to [Bring Your Own IP](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/BYOIP.htm) is explained in the documentation.
     /// </summary>
     public class ByoipRange 
     {
@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the BYOIP CIDR block.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the BYOIP CIDR block.
         /// 
         /// </value>
         /// <remarks>
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -176,7 +176,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeWithdrawn { get; set; }
         
         /// <value>
-        /// The validation token is an internally-generated ASCII string used in the validation process. See [Importing a CIDR block](https://docs.cloud.oracle.com/Content/Network/Concepts/BYOIP.htm#import_cidr) for details.
+        /// The validation token is an internally-generated ASCII string used in the validation process. See [Importing a CIDR block](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/BYOIP.htm#import_cidr) for details.
         /// </value>
         /// <remarks>
         /// Required

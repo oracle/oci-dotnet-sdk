@@ -17,7 +17,7 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// DHCP option for specifying a search domain name for DNS queries. For more information, see
-    /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/Content/Network/Concepts/dns.htm).
+    /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
     /// 
     /// </summary>
     public class DhcpSearchDomainOption : DhcpOption

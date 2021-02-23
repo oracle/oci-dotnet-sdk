@@ -20,11 +20,11 @@ namespace Oci.CoreService.Models
     /// with another VCN in the same region. *Peering* means that the two VCNs can
     /// communicate using private IP addresses, but without the traffic traversing the
     /// internet or routing through your on-premises network. For more information,
-    /// see [VCN Peering](https://docs.cloud.oracle.com/Content/Network/Tasks/VCNpeering.htm).
+    /// see [VCN Peering](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/VCNpeering.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
-    /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
     /// 
     /// </summary>
     public class LocalPeeringGateway 
@@ -183,7 +183,7 @@ namespace Oci.CoreService.Models
         /// The OCID of the route table the LPG is using.
         /// <br/>
         /// For information about why you would associate a route table with an LPG, see
-        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/Content/Network/Tasks/transitrouting.htm).
+        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
@@ -202,7 +202,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The OCID of the VCN the LPG belongs to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN that uses the LPG.
         /// </value>
         /// <remarks>
         /// Required

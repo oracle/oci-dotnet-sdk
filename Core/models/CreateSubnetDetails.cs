@@ -99,7 +99,7 @@ namespace Oci.CoreService.Models
         /// was created with a DNS label.
         /// <br/>
         /// For more information, see
-        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/Content/Network/Concepts/dns.htm).
+        /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// <br/>
         /// Example: subnet123
         /// </value>
@@ -120,7 +120,7 @@ namespace Oci.CoreService.Models
         /// You can't change this subnet characteristic later. All subnets are /64 in size. The subnet
         /// portion of the IPv6 address is the fourth hextet from the left (1111 in the following example).
         /// <br/>
-        /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/Content/Network/Concepts/ipv6.htm).
+        /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
         /// <br/>
         /// Example: 2001:0db8:0123:1111::/64
         /// </value>

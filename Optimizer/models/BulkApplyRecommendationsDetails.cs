@@ -23,13 +23,18 @@ namespace Oci.OptimizerService.Models
         
         /// <value>
         /// The unique OCIDs of the resource actions that recommendations are applied to.
+        /// <br/>
+        /// This field is deprecated.
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ResourceActionIds is required.")]
         [JsonProperty(PropertyName = "resourceActionIds")]
         public System.Collections.Generic.List<string> ResourceActionIds { get; set; }
+        
+        /// <value>
+        /// The unique resource actions that recommendations are applied to.
+        /// </value>
+        [JsonProperty(PropertyName = "actions")]
+        public System.Collections.Generic.List<BulkApplyResourceAction> Actions { get; set; }
         
         /// <value>
         /// The current status of the recommendation.
@@ -45,7 +50,7 @@ namespace Oci.OptimizerService.Models
         /// <value>
         /// The date and time the current status will change. The format is defined by RFC3339.
         /// <br/>
-        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this 
+        /// For example, \"The current `postponed` status of the resource action will end and change to `pending` on this
         /// date and time.\"
         /// 
         /// </value>
