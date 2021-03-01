@@ -117,5 +117,11 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Used to filter by the name of the object.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameList")]
+        public System.Collections.Generic.List<string> NameList { get; set; }
     }
 }

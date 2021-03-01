@@ -47,6 +47,7 @@ namespace Oci.FilestorageService.Models
         /// any snapshots. This number reflects the metered size of the file
         /// system and is updated asynchronously with respect to
         /// updates to the file system.
+        /// For more information, see [File System Usage and Metering](https://docs.cloud.oracle.com/Content/File/Concepts/FSutilization.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -57,7 +58,7 @@ namespace Oci.FilestorageService.Models
         public System.Nullable<long> MeteredBytes { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the file system.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +81,7 @@ namespace Oci.FilestorageService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system.
         /// </value>
         /// <remarks>
         /// Required
@@ -146,11 +147,38 @@ namespace Oci.FilestorageService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The OCID of the KMS key which is the master encryption key for the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the KMS key which is the master encryption key for the file system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceDetails")]
+        public SourceDetails SourceDetails { get; set; }
+        
+        /// <value>
+        /// Specifies whether the file system has been cloned. 
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCloneParent")]
+        public System.Nullable<bool> IsCloneParent { get; set; }
+        
+        /// <value>
+        /// Specifies whether the data has finished copying from the source to the clone.
+        /// Hydration can take up to several hours to complete depending on the size of the source.
+        /// The source and clone remain available during hydration, but there may be some performance impact. 
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm#hydration).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHydrated")]
+        public System.Nullable<bool> IsHydrated { get; set; }
+        
+        /// <value>
+        /// Additional information about the current 'lifecycleState'.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
         
     }
 }

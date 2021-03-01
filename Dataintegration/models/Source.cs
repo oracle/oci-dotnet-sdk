@@ -42,6 +42,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "isPredefinedShape")]
         public System.Nullable<bool> IsPredefinedShape { get; set; }
         
+        [JsonProperty(PropertyName = "schemaDriftConfig")]
+        public SchemaDriftConfig SchemaDriftConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "fixedDataShape")]
+        public Shape FixedDataShape { get; set; }
+        
         [JsonProperty(PropertyName = "readOperationConfig")]
         public ReadOperationConfig ReadOperationConfig { get; set; }
         

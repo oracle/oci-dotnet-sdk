@@ -42,7 +42,25 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DISTINCT_OPERATOR")]
             DistinctOperator,
             [EnumMember(Value = "SORT_OPERATOR")]
-            SortOperator
+            SortOperator,
+            [EnumMember(Value = "UNION_OPERATOR")]
+            UnionOperator,
+            [EnumMember(Value = "INTERSECT_OPERATOR")]
+            IntersectOperator,
+            [EnumMember(Value = "MINUS_OPERATOR")]
+            MinusOperator,
+            [EnumMember(Value = "MERGE_OPERATOR")]
+            MergeOperator,
+            [EnumMember(Value = "START_OPERATOR")]
+            StartOperator,
+            [EnumMember(Value = "END_OPERATOR")]
+            EndOperator,
+            [EnumMember(Value = "PIPELINE_OPERATOR")]
+            PipelineOperator,
+            [EnumMember(Value = "REST_OPERATOR")]
+            RestOperator,
+            [EnumMember(Value = "TASK_OPERATOR")]
+            TaskOperator
         };
 
         
@@ -134,17 +152,11 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
-                case "TARGET_OPERATOR":
-                    obj = new Target();
-                    break;
                 case "JOINER_OPERATOR":
                     obj = new Joiner();
                     break;
-                case "DISTINCT_OPERATOR":
-                    obj = new Distinct();
-                    break;
-                case "FILTER_OPERATOR":
-                    obj = new Filter();
+                case "TASK_OPERATOR":
+                    obj = new TaskOperator();
                     break;
                 case "AGGREGATOR_OPERATOR":
                     obj = new Aggregator();
@@ -155,8 +167,35 @@ namespace Oci.DataintegrationService.Models
                 case "PROJECTION_OPERATOR":
                     obj = new Projection();
                     break;
+                case "END_OPERATOR":
+                    obj = new EndOperator();
+                    break;
                 case "SOURCE_OPERATOR":
                     obj = new Source();
+                    break;
+                case "UNION_OPERATOR":
+                    obj = new Union();
+                    break;
+                case "INTERSECT_OPERATOR":
+                    obj = new Intersect();
+                    break;
+                case "TARGET_OPERATOR":
+                    obj = new Target();
+                    break;
+                case "DISTINCT_OPERATOR":
+                    obj = new Distinct();
+                    break;
+                case "FILTER_OPERATOR":
+                    obj = new Filter();
+                    break;
+                case "START_OPERATOR":
+                    obj = new StartOperator();
+                    break;
+                case "MERGE_OPERATOR":
+                    obj = new MergeOperator();
+                    break;
+                case "MINUS_OPERATOR":
+                    obj = new Minus();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

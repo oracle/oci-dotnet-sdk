@@ -34,7 +34,7 @@ namespace Oci.FilestorageService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment in which to create the mount target.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which to create the mount target.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.FilestorageService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// The OCID of the subnet in which to create the mount target.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet in which to create the mount target.
         /// 
         /// </value>
         /// <remarks>

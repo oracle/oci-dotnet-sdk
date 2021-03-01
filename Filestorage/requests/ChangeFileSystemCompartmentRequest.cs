@@ -20,7 +20,7 @@ namespace Oci.FilestorageService.Requests
     {
         
         /// <value>
-        /// The OCID of the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system.
         /// </value>
         /// <remarks>
         /// Required

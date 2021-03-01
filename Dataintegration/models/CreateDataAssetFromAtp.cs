@@ -39,6 +39,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "credentialFileContent")]
         public string CredentialFileContent { get; set; }
         
+        [JsonProperty(PropertyName = "walletSecret")]
+        public SensitiveAttribute WalletSecret { get; set; }
+        
+        [JsonProperty(PropertyName = "walletPasswordSecret")]
+        public SensitiveAttribute WalletPasswordSecret { get; set; }
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public CreateConnectionFromAtp DefaultConnection { get; set; }
         

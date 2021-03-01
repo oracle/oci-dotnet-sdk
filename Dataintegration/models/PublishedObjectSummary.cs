@@ -30,7 +30,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "INTEGRATION_TASK")]
             IntegrationTask,
             [EnumMember(Value = "DATA_LOADER_TASK")]
-            DataLoaderTask
+            DataLoaderTask,
+            [EnumMember(Value = "PIPELINE_TASK")]
+            PipelineTask
         };
 
         
@@ -104,6 +106,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "PIPELINE_TASK":
+                    obj = new PublishedObjectFromPipelineTaskSummary();
+                    break;
                 case "INTEGRATION_TASK":
                     obj = new PublishedObjectSummaryFromIntegrationTask();
                     break;

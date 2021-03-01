@@ -11,15 +11,28 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
     /// The unqique key object.
     /// </summary>
-    public class UniqueKey : Key
+    [JsonConverter(typeof(UniqueKeyModelConverter))]
+    public class UniqueKey 
     {
+                ///
+        /// <value>
+        /// The key type.
+        /// </value>
+        ///
+        public enum ModelTypeEnum {
+            [EnumMember(Value = "PRIMARY_KEY")]
+            PrimaryKey,
+            [EnumMember(Value = "UNIQUE_KEY")]
+            UniqueKey
+        };
+
         
         /// <value>
         /// The object key.
@@ -54,7 +67,34 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "objectStatus")]
         public System.Nullable<int> ObjectStatus { get; set; }
         
-        [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "UNIQUE_KEY";
+    }
+
+    public class UniqueKeyModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(UniqueKey);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(UniqueKey);
+            var discriminator = jsonObject["modelType"].Value<string>();
+            switch (discriminator)
+            {
+                case "PRIMARY_KEY":
+                    obj = new PrimaryKey();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

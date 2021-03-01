@@ -20,7 +20,7 @@ namespace Oci.FilestorageService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -50,13 +50,13 @@ namespace Oci.FilestorageService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The OCID of the export set.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the export set.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exportSetId")]
         public string ExportSetId { get; set; }
         
         /// <value>
-        /// The OCID of the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fileSystemId")]
         public string FileSystemId { get; set; }
@@ -90,7 +90,7 @@ namespace Oci.FilestorageService.Requests
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Filter results by OCID. Must be an OCID of the correct type for
+        /// Filter results by [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for
         /// the resouce type.
         /// 
         /// </value>

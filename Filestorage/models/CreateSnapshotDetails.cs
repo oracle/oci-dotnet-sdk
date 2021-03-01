@@ -22,7 +22,7 @@ namespace Oci.FilestorageService.Models
     {
         
         /// <value>
-        /// The OCID of the file system to take a snapshot of.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system to take a snapshot of.
         /// </value>
         /// <remarks>
         /// Required

@@ -34,7 +34,7 @@ namespace Oci.FilestorageService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to create the file system in.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to create the file system in.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,11 +70,19 @@ namespace Oci.FilestorageService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The OCID of KMS key used to encrypt the encryption keys associated with this file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the KMS key used to encrypt the encryption keys associated with this file system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the snapshot used to create a cloned file system.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceSnapshotId")]
+        public string SourceSnapshotId { get; set; }
         
     }
 }

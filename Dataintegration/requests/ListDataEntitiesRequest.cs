@@ -123,5 +123,17 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Used to filter by the name of the object.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameList")]
+        public System.Collections.Generic.List<string> NameList { get; set; }
+        
+        /// <value>
+        /// This parameter can be used to specify whether entity search type is pattern search or not.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isPattern")]
+        public System.Nullable<bool> IsPattern { get; set; }
     }
 }

@@ -33,6 +33,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
         
+        [JsonProperty(PropertyName = "passwordSecret")]
+        public SensitiveAttribute PasswordSecret { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "ORACLEDB_CONNECTION";
     }
