@@ -128,6 +128,67 @@ namespace Oci.DataintegrationService.Models
         public string ErrorMessage { get; set; }
         
         /// <value>
+        /// The expected duration for the task run.
+        /// </value>
+        [JsonProperty(PropertyName = "expectedDuration")]
+        public System.Double ExpectedDuration { get; set; }
+                ///
+        /// <value>
+        /// The expected duration unit of measure.
+        /// </value>
+        ///
+        public enum ExpectedDurationUnitEnum {
+            [EnumMember(Value = "SECONDS")]
+            Seconds,
+            [EnumMember(Value = "MINUTES")]
+            Minutes,
+            [EnumMember(Value = "HOURS")]
+            Hours,
+            [EnumMember(Value = "DAYS")]
+            Days
+        };
+
+        /// <value>
+        /// The expected duration unit of measure.
+        /// </value>
+        [JsonProperty(PropertyName = "expectedDurationUnit")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ExpectedDurationUnitEnum> ExpectedDurationUnit { get; set; }
+        
+        /// <value>
+        /// Task Key of the task for which TaskRun is being created. If not specified, the AggregatorKey in RegistryMetadata will be assumed to be the TaskKey
+        /// </value>
+        [JsonProperty(PropertyName = "taskKey")]
+        public string TaskKey { get; set; }
+        
+        /// <value>
+        /// Holds the particular attempt number.
+        /// </value>
+        [JsonProperty(PropertyName = "retryAttempt")]
+        public System.Nullable<int> RetryAttempt { get; set; }
+        
+        [JsonProperty(PropertyName = "taskSchedule")]
+        public TaskSchedule TaskSchedule { get; set; }
+        
+        /// <value>
+        /// A map of metrics for the run.
+        /// </value>
+        [JsonProperty(PropertyName = "metrics")]
+        public System.Collections.Generic.Dictionary<string, float> Metrics { get; set; }
+        
+        /// <value>
+        /// An array of execution errors from the run.
+        /// </value>
+        [JsonProperty(PropertyName = "executionErrors")]
+        public System.Collections.Generic.List<string> ExecutionErrors { get; set; }
+        
+        /// <value>
+        /// An array of termination errors from the run.
+        /// </value>
+        [JsonProperty(PropertyName = "terminationErrors")]
+        public System.Collections.Generic.List<string> TerminationErrors { get; set; }
+        
+        /// <value>
         /// The OPC request ID of execution of the task run.
         /// </value>
         [JsonProperty(PropertyName = "opcRequestId")]
@@ -147,7 +208,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "INTEGRATION_TASK")]
             IntegrationTask,
             [EnumMember(Value = "DATA_LOADER_TASK")]
-            DataLoaderTask
+            DataLoaderTask,
+            [EnumMember(Value = "PIPELINE_TASK")]
+            PipelineTask
         };
 
         /// <value>

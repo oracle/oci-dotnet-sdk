@@ -132,7 +132,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "INTEGRATION_TASK")]
             IntegrationTask,
             [EnumMember(Value = "DATA_LOADER_TASK")]
-            DataLoaderTask
+            DataLoaderTask,
+            [EnumMember(Value = "PIPELINE_TASK")]
+            PipelineTask
         };
 
         /// <value>

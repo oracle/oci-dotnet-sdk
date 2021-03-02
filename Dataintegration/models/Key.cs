@@ -28,11 +28,7 @@ namespace Oci.DataintegrationService.Models
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "FOREIGN_KEY")]
-            ForeignKey,
-            [EnumMember(Value = "PRIMARY_KEY")]
-            PrimaryKey,
-            [EnumMember(Value = "UNIQUE_KEY")]
-            UniqueKey
+            ForeignKey
         };
 
         
@@ -58,9 +54,6 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
-                case "UNIQUE_KEY":
-                    obj = new UniqueKey();
-                    break;
                 case "FOREIGN_KEY":
                     obj = new ForeignKey();
                     break;

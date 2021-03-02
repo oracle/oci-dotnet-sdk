@@ -63,6 +63,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "aggregatorKey")]
         public string AggregatorKey { get; set; }
         
+        [JsonProperty(PropertyName = "aggregator")]
+        public AggregatorSummary Aggregator { get; set; }
+        
         /// <value>
         /// The full path to identify this object.
         /// </value>

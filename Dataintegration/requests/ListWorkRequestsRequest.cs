@@ -38,6 +38,12 @@ namespace Oci.DataintegrationService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
+        /// <value>
+        /// DIS workspace id
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workspaceId")]
+        public string WorkspaceId { get; set; }
+        
         ///
         /// <value>
         /// The work request status.

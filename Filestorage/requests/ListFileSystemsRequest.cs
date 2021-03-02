@@ -20,7 +20,7 @@ namespace Oci.FilestorageService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,12 +102,24 @@ namespace Oci.FilestorageService.Requests
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Filter results by OCID. Must be an OCID of the correct type for
+        /// Filter results by [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for
         /// the resouce type.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the snapshot used to create a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceSnapshotId")]
+        public string SourceSnapshotId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system that contains the source snapshot of a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parentFileSystemId")]
+        public string ParentFileSystemId { get; set; }
         
         ///
         /// <value>

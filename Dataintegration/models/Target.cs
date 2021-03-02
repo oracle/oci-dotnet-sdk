@@ -68,6 +68,12 @@ namespace Oci.DataintegrationService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataPropertyEnum> DataProperty { get; set; }
         
+        [JsonProperty(PropertyName = "schemaDriftConfig")]
+        public SchemaDriftConfig SchemaDriftConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "fixedDataShape")]
+        public Shape FixedDataShape { get; set; }
+        
         [JsonProperty(PropertyName = "writeOperationConfig")]
         public WriteOperationConfig WriteOperationConfig { get; set; }
         

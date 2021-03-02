@@ -20,7 +20,7 @@ namespace Oci.FilestorageService.Requests
     {
         
         /// <value>
-        /// The OCID of the export.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the export.
         /// </value>
         /// <remarks>
         /// Required

@@ -50,5 +50,8 @@ namespace Oci.DataintegrationService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
+        [JsonProperty(PropertyName = "compressionConfig")]
+        public Compression CompressionConfig { get; set; }
+        
     }
 }

@@ -34,6 +34,12 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<int> IntValue { get; set; }
         
         /// <value>
+        /// An object value of the parameter.
+        /// </value>
+        [JsonProperty(PropertyName = "objectValue")]
+        public System.Object ObjectValue { get; set; }
+        
+        /// <value>
         /// The root object reference value.
         /// </value>
         [JsonProperty(PropertyName = "refValue")]

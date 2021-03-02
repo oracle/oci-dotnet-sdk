@@ -25,7 +25,7 @@ namespace Oci.FilestorageService.Models
     {
         
         /// <value>
-        /// The OCID of the file system from which the snapshot
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system from which the snapshot
         /// was created.
         /// 
         /// </value>
@@ -37,7 +37,7 @@ namespace Oci.FilestorageService.Models
         public string FileSystemId { get; set; }
         
         /// <value>
-        /// The OCID of the snapshot.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the snapshot.
         /// </value>
         /// <remarks>
         /// Required
@@ -98,6 +98,30 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// An [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) identifying the parent from which this snapshot was cloned.
+        /// If this snapshot was not cloned, then the `provenanceId` is the same as the snapshot `id` value.
+        /// If this snapshot was cloned, then the `provenanceId` value is the parent's `provenanceId`.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "provenanceId")]
+        public string ProvenanceId { get; set; }
+        
+        /// <value>
+        /// Specifies whether the snapshot has been cloned. 
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCloneSource")]
+        public System.Nullable<bool> IsCloneSource { get; set; }
+        
+        /// <value>
+        /// Additional information about the current 'lifecycleState'.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair

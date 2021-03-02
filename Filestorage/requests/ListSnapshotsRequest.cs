@@ -20,7 +20,7 @@ namespace Oci.FilestorageService.Requests
     {
         
         /// <value>
-        /// The OCID of the file system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.FilestorageService.Requests
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Filter results by OCID. Must be an OCID of the correct type for
+        /// Filter results by [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for
         /// the resouce type.
         /// 
         /// </value>

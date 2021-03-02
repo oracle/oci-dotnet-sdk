@@ -38,7 +38,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "CONFIGURED_TYPE")]
             ConfiguredType,
             [EnumMember(Value = "COMPOSITE_TYPE")]
-            CompositeType
+            CompositeType,
+            [EnumMember(Value = "DERIVED_TYPE")]
+            DerivedType
         };
 
         

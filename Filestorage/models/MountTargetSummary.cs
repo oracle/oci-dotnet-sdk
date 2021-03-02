@@ -32,7 +32,7 @@ namespace Oci.FilestorageService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the mount target.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the mount target.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.FilestorageService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the associated export set. Controls what file
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the associated export set. Controls what file
         /// systems will be exported using Network File System (NFS) protocol on
         /// this mount target.
         /// 
@@ -64,7 +64,7 @@ namespace Oci.FilestorageService.Models
         public string ExportSetId { get; set; }
         
         /// <value>
-        /// The OCID of the mount target.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the mount target.
         /// </value>
         /// <remarks>
         /// Required
@@ -112,7 +112,7 @@ namespace Oci.FilestorageService.Models
         public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
         
         /// <value>
-        /// The OCID of the subnet the mount target is in.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the mount target is in.
         /// </value>
         /// <remarks>
         /// Required

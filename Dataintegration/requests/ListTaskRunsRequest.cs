@@ -49,6 +49,13 @@ namespace Oci.DataintegrationService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// Used to filter by the project or the folder object.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "aggregatorKey")]
+        public string AggregatorKey { get; set; }
+        
+        /// <value>
         /// Specifies the fields to get for an object.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
