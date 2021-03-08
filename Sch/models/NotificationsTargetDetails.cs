@@ -33,6 +33,14 @@ namespace Oci.SchService.Models
         [JsonProperty(PropertyName = "topicId")]
         public string TopicId { get; set; }
         
+        /// <value>
+        /// Whether to apply a simplified, user-friendly format to the message. Applies only when friendly formatting is supported by the service connector source and the subscription protocol.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "enableFormattedMessaging")]
+        public System.Nullable<bool> EnableFormattedMessaging { get; set; }
+        
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "notifications";
     }

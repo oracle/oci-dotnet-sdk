@@ -30,7 +30,8 @@ namespace Oci.OnsService.Models
         
         /// <value>
         /// The body of the message to be published.
-        /// For `messageType` of JSON, a default key-value pair is required. Example: {&quot;default&quot;: &quot;Alarm breached&quot;, &quot;Email&quot;: &quot;Alarm breached: <url>&quot;}.Avoid entering confidential information.
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
