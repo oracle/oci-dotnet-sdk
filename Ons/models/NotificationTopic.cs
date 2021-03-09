@@ -45,6 +45,13 @@ namespace Oci.OnsService.Models
         public string TopicId { get; set; }
         
         /// <value>
+        /// A unique short topic Id. This is used only for SMS subscriptions.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shortTopicId")]
+        public string ShortTopicId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment for the topic.
         /// 
         /// </value>

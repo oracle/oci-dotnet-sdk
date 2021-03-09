@@ -50,8 +50,13 @@ namespace Oci.OnsService.Requests
         
         ///
         /// <value>
+        /// **Deprecated.**
+        /// Support for JSON is deprecated.
+        /// You can send a JSON payload even when transmitting the payload as a raw string.
+        /// Configure your receiving system to read the raw payload as JSON format.
+        /// <br/>
         /// Type of message body in the request.
-        /// 
+        /// For `messageType` of JSON, a default key-value pair is required. Example: {&quot;default&quot;: &quot;Alarm breached&quot;, &quot;Email&quot;: &quot;Alarm breached: <url>&quot;}.
         /// </value>
         ///
         public enum MessageTypeEnum {
@@ -62,8 +67,13 @@ namespace Oci.OnsService.Requests
         };
 
         /// <value>
+        /// **Deprecated.**
+        /// Support for JSON is deprecated.
+        /// You can send a JSON payload even when transmitting the payload as a raw string.
+        /// Configure your receiving system to read the raw payload as JSON format.
+        /// <br/>
         /// Type of message body in the request.
-        /// 
+        /// For `messageType` of JSON, a default key-value pair is required. Example: {&quot;default&quot;: &quot;Alarm breached&quot;, &quot;Email&quot;: &quot;Alarm breached: <url>&quot;}.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "messageType")]
         public System.Nullable<MessageTypeEnum> MessageType { get; set; }

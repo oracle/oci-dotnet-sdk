@@ -280,7 +280,7 @@ namespace Oci.OnsService
         }
 
         /// <summary>
-        /// Gets the unsubscription details for the specified subscription.
+        /// Unsubscribes the subscription from the topic.
         /// &lt;br/&gt;
         /// Transactions Per Minute (TPM) per-tenancy limit for this operation: 60.
         /// 
@@ -377,7 +377,7 @@ namespace Oci.OnsService
         /// Message delivery rate limit per endpoint: 60 messages per minute for HTTP-based protocols, 10 messages per minute for the &#x60;EMAIL&#x60; protocol.
         /// HTTP-based protocols use URL endpoints that begin with \&quot;http:\&quot; or \&quot;https:\&quot;.
         /// &lt;br/&gt;
-        /// Transactions Per Minute (TPM) per-tenancy limit for this operation: 60 per topic.
+        /// Transactions Per Minute (TPM) per-tenancy limit for this operation: 60 per topic. (This TPM limit represents messages per minute.)
         /// &lt;br/&gt;
         /// For more information about publishing messages, see [Publishing Messages](https://docs.cloud.oracle.com/iaas/Content/Notification/Tasks/publishingmessages.htm).
         /// For steps to request a limit increase, see [Requesting a Service Limit Increase](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/servicelimits.htm#three).
