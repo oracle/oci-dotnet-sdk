@@ -46,6 +46,9 @@ namespace Oci.LoadbalancerService.Models
         
         /// <value>
         /// A header value that conforms to RFC 7230.
+        /// With the following exceptions:
+        /// *  value cannot contain `$`
+        /// *  value cannot contain patterns like `{variable_name}`. They are reserved for future extensions. Currently, such values are invalid.
         /// <br/>
         /// Example: example_value
         /// </value>

@@ -49,6 +49,9 @@ namespace Oci.LoadbalancerService.Models
         
         /// <value>
         /// A string to prepend to the header value. The resulting header value must conform to RFC 7230.
+        /// With the following exceptions:
+        /// *  value cannot contain `$`
+        /// *  value cannot contain patterns like `{variable_name}`. They are reserved for future extensions. Currently, such values are invalid.
         /// <br/>
         /// Example: example_prefix_value
         /// </value>
@@ -57,6 +60,9 @@ namespace Oci.LoadbalancerService.Models
         
         /// <value>
         /// A string to append to the header value. The resulting header value must conform to RFC 7230.
+        /// With the following exceptions:
+        /// *  value cannot contain `$`
+        /// *  value cannot contain patterns like `{variable_name}`. They are reserved for future extensions. Currently, such values are invalid.
         /// <br/>
         /// Example: example_suffix_value
         /// </value>

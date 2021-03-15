@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoadbalancerService.Models
 {
     /// <summary>
-    /// An access control rule condition that requires a match on the specified source IP address or address range.
+    /// A rule condition that checks client source IP against specified IP address or address range.
     /// 
     /// </summary>
     public class SourceIpAddressCondition : RuleCondition

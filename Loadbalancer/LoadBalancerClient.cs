@@ -411,6 +411,47 @@ namespace Oci.LoadbalancerService
         }
 
         /// <summary>
+        /// Adds a routing policy to a load balancer. For more information, see
+        /// [Managing Request Routing](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingrequest.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/CreateRoutingPolicy.cs.html">here</a> to see an example of how to use CreateRoutingPolicy API.</example>
+        public async Task<CreateRoutingPolicyResponse> CreateRoutingPolicy(CreateRoutingPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createRoutingPolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/routingPolicies".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateRoutingPolicyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateRoutingPolicy failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a new rule set associated with the specified load balancer. For more information, see
         /// [Managing Rule Sets](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingrulesets.htm).
         /// 
@@ -767,6 +808,49 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"DeletePathRouteSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes a routing policy from the specified load balancer.
+        /// &lt;br/&gt;
+        /// To delete a routing rule from a routing policy, use the
+        /// {@link #updateRoutingPolicy(UpdateRoutingPolicyRequest) updateRoutingPolicy} operation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/DeleteRoutingPolicy.cs.html">here</a> to see an example of how to use DeleteRoutingPolicy API.</example>
+        public async Task<DeleteRoutingPolicyResponse> DeleteRoutingPolicy(DeleteRoutingPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteRoutingPolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/routingPolicies/{routingPolicyName}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteRoutingPolicyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteRoutingPolicy failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1200,6 +1284,45 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"GetPathRouteSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the specified routing policy.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/GetRoutingPolicy.cs.html">here</a> to see an example of how to use GetRoutingPolicy API.</example>
+        public async Task<GetRoutingPolicyResponse> GetRoutingPolicy(GetRoutingPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getRoutingPolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/routingPolicies/{routingPolicyName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetRoutingPolicyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetRoutingPolicy failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1714,6 +1837,45 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"ListProtocols failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists all routing policies associated with the specified load balancer.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/ListRoutingPolicies.cs.html">here</a> to see an example of how to use ListRoutingPolicies API.</example>
+        public async Task<ListRoutingPoliciesResponse> ListRoutingPolicies(ListRoutingPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listRoutingPolicies");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/routingPolicies".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListRoutingPoliciesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListRoutingPolicies failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2235,6 +2397,49 @@ namespace Oci.LoadbalancerService
             catch (Exception e)
             {
                 logger.Error($"UpdatePathRouteSet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Overwrites an existing routing policy on the specified load balancer. Use this operation to add, delete, or alter
+        /// routing policy rules in a routing policy.
+        /// &lt;br/&gt;
+        /// To add a new routing rule to a routing policy, the body must include both the new routing rule to add and the existing rules to retain.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loadbalancer/UpdateRoutingPolicy.cs.html">here</a> to see an example of how to use UpdateRoutingPolicy API.</example>
+        public async Task<UpdateRoutingPolicyResponse> UpdateRoutingPolicy(UpdateRoutingPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateRoutingPolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/loadBalancers/{loadBalancerId}/routingPolicies/{routingPolicyName}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateRoutingPolicyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateRoutingPolicy failed with error: {e.Message}");
                 throw;
             }
         }

@@ -24,6 +24,16 @@ namespace Oci.DatascienceService.Models
       NotebookSessionActivate,
       [EnumMember(Value = "NOTEBOOK_SESSION_DEACTIVATE")]
       NotebookSessionDeactivate,
+      [EnumMember(Value = "MODEL_DEPLOYMENT_CREATE")]
+      ModelDeploymentCreate,
+      [EnumMember(Value = "MODEL_DEPLOYMENT_DELETE")]
+      ModelDeploymentDelete,
+      [EnumMember(Value = "MODEL_DEPLOYMENT_ACTIVATE")]
+      ModelDeploymentActivate,
+      [EnumMember(Value = "MODEL_DEPLOYMENT_DEACTIVATE")]
+      ModelDeploymentDeactivate,
+      [EnumMember(Value = "MODEL_DEPLOYMENT_UPDATE")]
+      ModelDeploymentUpdate,
       [EnumMember(Value = "PROJECT_DELETE")]
       ProjectDelete,
       [EnumMember(Value = "WORKREQUEST_CANCEL")]

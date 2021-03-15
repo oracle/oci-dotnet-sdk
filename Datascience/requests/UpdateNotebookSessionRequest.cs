@@ -20,7 +20,7 @@ namespace Oci.DatascienceService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the notebook session.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the notebook session.
         /// </value>
         /// <remarks>
         /// Required
@@ -31,7 +31,7 @@ namespace Oci.DatascienceService.Requests
         
         /// <value>
         /// Details for updating a notebook session. `notebookSessionConfigurationDetails` can only be updated while the notebook session is in the `INACTIVE` state.
-        /// Changes to the `notebookSessionConfigurationDetails` will take effect the next time the `ActivateNotebookSession` action is invoked on the notebook session resource.
+        /// Changes to the `notebookSessionConfigurationDetails` take effect the next time the `ActivateNotebookSession` action is invoked on the notebook session resource.
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.DatascienceService.Requests
         /// For optimistic concurrency control. In the PUT or DELETE call
         /// for a resource, set the `if-match` parameter to the value of the
         /// etag from a previous GET or POST response for that resource.
-        /// The resource will be updated or deleted only if the `etag` you
+        /// The resource is updated or deleted only if the `etag` you
         /// provide matches the resource's current `etag` value.
         /// 
         /// </value>
@@ -53,7 +53,7 @@ namespace Oci.DatascienceService.Requests
         public string IfMatch { get; set; }
         
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle assigned identifier for the request. If you need to contact Oracle about a particular request, then provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

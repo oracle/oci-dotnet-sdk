@@ -39,6 +39,24 @@ namespace Oci.OceService.Models
         [JsonProperty(PropertyName = "instanceLicenseType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
+                ///
+        /// <value>
+        /// Instance type based on its usage
+        /// </value>
+        ///
+        public enum InstanceUsageTypeEnum {
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            [EnumMember(Value = "NONPRIMARY")]
+            Nonprimary
+        };
+
+        /// <value>
+        /// Instance type based on its usage
+        /// </value>
+        [JsonProperty(PropertyName = "instanceUsageType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -22,10 +22,22 @@ namespace Oci.ContainerengineService.Models
     {
         
         /// <value>
-        /// The Kubernetes API server endpoint.
+        /// The non-native networking Kubernetes API server endpoint.
         /// </value>
         [JsonProperty(PropertyName = "kubernetes")]
         public string Kubernetes { get; set; }
+        
+        /// <value>
+        /// The public native networking Kubernetes API server endpoint, if one was requested.
+        /// </value>
+        [JsonProperty(PropertyName = "publicEndpoint")]
+        public string PublicEndpoint { get; set; }
+        
+        /// <value>
+        /// The private native networking Kubernetes API server endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpoint")]
+        public string PrivateEndpoint { get; set; }
         
     }
 }

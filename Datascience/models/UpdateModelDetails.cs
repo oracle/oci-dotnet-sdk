@@ -23,14 +23,14 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// A user-friendly display name for the resource. Does not have to be unique, and can be modified. Avoid entering confidential information.
+        /// A user-friendly display name for the resource. It does not have to be unique and can be modified. Avoid entering confidential information.
         ///  Example: My Model
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A short blurb describing the model.
+        /// A short description of the model.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

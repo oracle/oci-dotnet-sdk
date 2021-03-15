@@ -37,7 +37,13 @@ namespace Oci.ContainerengineService.Models
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "CANCELED_CREATE")]
+            CanceledCreate,
+            [EnumMember(Value = "CANCELED_UPDATE")]
+            CanceledUpdate,
+            [EnumMember(Value = "CANCELED_DELETE")]
+            CanceledDelete
         };
 
         /// <value>

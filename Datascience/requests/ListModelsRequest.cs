@@ -20,7 +20,7 @@ namespace Oci.DatascienceService.Requests
     {
         
         /// <value>
-        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the compartment.
+        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,14 +30,14 @@ namespace Oci.DatascienceService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// <b>Filter</b> results by [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm). Must be an OCID of the correct type for the resource type.
+        /// <b>Filter</b> results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resource type.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the project.
+        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "projectId")]
         public string ProjectId { get; set; }
@@ -57,7 +57,7 @@ namespace Oci.DatascienceService.Requests
         public System.Nullable<ModelLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the user who created the resource.
+        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the user who created the resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "createdBy")]
         public string CreatedBy { get; set; }
@@ -66,7 +66,7 @@ namespace Oci.DatascienceService.Requests
         /// For list pagination. The maximum number of results per page,
         /// or items to return in a paginated \"List\" call.
         /// 1 is the minimum, 1000 is the maximum.
-        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/usingapi.htm#nine).
         /// <br/>
         /// Example: 500
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.DatascienceService.Requests
         /// For list pagination. The value of the `opc-next-page` response
         /// header from the previous \"List\" call.
         /// <br/>
-        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
@@ -106,8 +106,8 @@ namespace Oci.DatascienceService.Requests
         ///
         /// <value>
         /// Specifies the field to sort by. Accepts only one field.
-        /// By default, when you sort by `timeCreated`, results are shown
-        /// in descending order. All other fields default to ascending order. Sort order for `displayName` field is case sensitive.
+        /// By default, when you sort by `timeCreated`, the results are shown
+        /// in descending order. All other fields default to ascending order. Sort order for the `displayName` field is case sensitive.
         /// 
         /// </value>
         ///
@@ -122,15 +122,15 @@ namespace Oci.DatascienceService.Requests
 
         /// <value>
         /// Specifies the field to sort by. Accepts only one field.
-        /// By default, when you sort by `timeCreated`, results are shown
-        /// in descending order. All other fields default to ascending order. Sort order for `displayName` field is case sensitive.
+        /// By default, when you sort by `timeCreated`, the results are shown
+        /// in descending order. All other fields default to ascending order. Sort order for the `displayName` field is case sensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle assigned identifier for the request. If you need to contact Oracle about a particular request, then provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

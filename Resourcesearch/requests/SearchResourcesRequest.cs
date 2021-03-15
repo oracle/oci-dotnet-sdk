@@ -20,7 +20,8 @@ namespace Oci.ResourcesearchService.Requests
     {
         
         /// <value>
-        /// Request parameters that describe query criteria.
+        /// Request parameters that describe query criteria. For more information, see {@link #searchDetails(SearchDetailsRequest) searchDetails}.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
