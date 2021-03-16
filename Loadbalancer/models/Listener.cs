@@ -81,6 +81,8 @@ namespace Oci.LoadbalancerService.Models
         public System.Collections.Generic.List<string> HostnameNames { get; set; }
         
         /// <value>
+        /// Deprecated. Please use `routingPolicies` instead.
+        /// <br/>
         /// The name of the set of path-based routing rules, {@link PathRouteSet},
         /// applied to this listener's traffic.
         /// <br/>
@@ -102,6 +104,14 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "ruleSetNames")]
         public System.Collections.Generic.List<string> RuleSetNames { get; set; }
+        
+        /// <value>
+        /// The name of the routing policy applied to this listener's traffic.
+        /// <br/>
+        /// Example: example_routing_policy_name
+        /// </value>
+        [JsonProperty(PropertyName = "routingPolicyName")]
+        public string RoutingPolicyName { get; set; }
         
     }
 }

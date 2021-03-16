@@ -20,7 +20,7 @@ namespace Oci.DatascienceService.Requests
     {
         
         /// <value>
-        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the compartment.
+        /// <b>Filter</b> results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DatascienceService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// <b>Filter</b> results by [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm). Must be an OCID of the correct type for the resource type.
+        /// <b>Filter</b> results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resource type.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
@@ -50,6 +50,16 @@ namespace Oci.DatascienceService.Requests
             NotebookSessionActivate,
             [EnumMember(Value = "NOTEBOOK_SESSION_DEACTIVATE")]
             NotebookSessionDeactivate,
+            [EnumMember(Value = "MODEL_DEPLOYMENT_CREATE")]
+            ModelDeploymentCreate,
+            [EnumMember(Value = "MODEL_DEPLOYMENT_DELETE")]
+            ModelDeploymentDelete,
+            [EnumMember(Value = "MODEL_DEPLOYMENT_ACTIVATE")]
+            ModelDeploymentActivate,
+            [EnumMember(Value = "MODEL_DEPLOYMENT_DEACTIVATE")]
+            ModelDeploymentDeactivate,
+            [EnumMember(Value = "MODEL_DEPLOYMENT_UPDATE")]
+            ModelDeploymentUpdate,
             [EnumMember(Value = "PROJECT_DELETE")]
             ProjectDelete,
             [EnumMember(Value = "WORKREQUEST_CANCEL")]
@@ -92,7 +102,7 @@ namespace Oci.DatascienceService.Requests
         /// For list pagination. The maximum number of results per page,
         /// or items to return in a paginated \"List\" call.
         /// 1 is the minimum, 1000 is the maximum.
-        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/usingapi.htm#nine).
         /// <br/>
         /// Example: 500
         /// </value>
@@ -103,7 +113,7 @@ namespace Oci.DatascienceService.Requests
         /// For list pagination. The value of the `opc-next-page` response
         /// header from the previous \"List\" call.
         /// <br/>
-        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
@@ -131,7 +141,7 @@ namespace Oci.DatascienceService.Requests
         
         ///
         /// <value>
-        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order.
+        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, the results are shown in descending order. All other fields default to ascending order.
         /// 
         /// </value>
         ///
@@ -145,14 +155,14 @@ namespace Oci.DatascienceService.Requests
         };
 
         /// <value>
-        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order.
+        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, the results are shown in descending order. All other fields default to ascending order.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle assigned identifier for the request. If you need to contact Oracle about a particular request, then provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

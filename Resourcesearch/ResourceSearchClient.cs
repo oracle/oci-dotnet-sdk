@@ -41,7 +41,7 @@ namespace Oci.ResourcesearchService
             {
                 ServiceName = "RESOURCESEARCH",
                 ServiceEndpointPrefix = "query",
-                ServiceEndpointTemplate = "https://query.{region}.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://query.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

@@ -40,6 +40,13 @@ namespace Oci.ContainerengineService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The network configuration for access to the Cluster control plane.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "endpointConfig")]
+        public ClusterEndpointConfig EndpointConfig { get; set; }
+        
+        /// <value>
         /// The OCID of the virtual cloud network (VCN) in which the cluster exists.
         /// </value>
         [JsonProperty(PropertyName = "vcnId")]

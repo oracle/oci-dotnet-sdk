@@ -22,7 +22,7 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the compartment to create the model in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to create the model in.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatascienceService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the project to associate with the model.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project to associate with the model.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,14 +42,14 @@ namespace Oci.DatascienceService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// A user-friendly display name for the resource. Does not have to be unique, and can be modified. Avoid entering confidential information.
+        /// A user-friendly display name for the resource. It does not have to be unique and can be modified. Avoid entering confidential information.
         /// Example: My Model
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A short blurb describing the model.
+        /// A short description of the model.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

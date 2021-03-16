@@ -23,7 +23,7 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the notebook session.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the notebook session.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatascienceService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The date and time the resource was created, in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the resource was created in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-08-25T21:10:29.41Z
         /// </value>
         /// <remarks>
@@ -44,7 +44,7 @@ namespace Oci.DatascienceService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// A user-friendly display name for the resource. Does not have to be unique, and can be modified. Avoid entering confidential information.
+        /// A user-friendly display name for the resource. It does not have to be unique and can be modified. Avoid entering confidential information.
         /// Example: My NotebookSession
         /// </value>
         /// <remarks>
@@ -55,7 +55,7 @@ namespace Oci.DatascienceService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the project associated with the notebook session.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project associated with the notebook session.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.DatascienceService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the user who created the notebook session.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the user who created the notebook session.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,7 +75,7 @@ namespace Oci.DatascienceService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the notebook session's compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the notebook session's compartment.
         /// </value>
         /// <remarks>
         /// Required

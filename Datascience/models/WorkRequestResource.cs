@@ -60,7 +60,7 @@ namespace Oci.DatascienceService.Models
         public string EntityType { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the resource the work request affects.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource the work request affects.
         /// </value>
         /// <remarks>
         /// Required

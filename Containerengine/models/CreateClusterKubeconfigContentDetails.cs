@@ -34,6 +34,26 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "expiration")]
         public System.Nullable<int> Expiration { get; set; }
+                ///
+        /// <value>
+        /// The endpoint to target. A cluster may have multiple endpoints exposed but the kubeconfig can only target one at a time.
+        /// </value>
+        ///
+        public enum EndpointEnum {
+            [EnumMember(Value = "LEGACY_KUBERNETES")]
+            LegacyKubernetes,
+            [EnumMember(Value = "PUBLIC_ENDPOINT")]
+            PublicEndpoint,
+            [EnumMember(Value = "PRIVATE_ENDPOINT")]
+            PrivateEndpoint
+        };
+
+        /// <value>
+        /// The endpoint to target. A cluster may have multiple endpoints exposed but the kubeconfig can only target one at a time.
+        /// </value>
+        [JsonProperty(PropertyName = "endpoint")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EndpointEnum> Endpoint { get; set; }
         
     }
 }

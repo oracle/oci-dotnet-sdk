@@ -105,6 +105,45 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Activates the model deployment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ActivateModelDeployment.cs.html">here</a> to see an example of how to use ActivateModelDeployment API.</example>
+        public async Task<ActivateModelDeploymentResponse> ActivateModelDeployment(ActivateModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called activateModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}/actions/activate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ActivateModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ActivateModelDeployment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Activates the notebook session.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -217,6 +256,45 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"ChangeModelCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves a model deployment into a different compartment. When provided, If-Match is checked against ETag values of the resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ChangeModelDeploymentCompartment.cs.html">here</a> to see an example of how to use ChangeModelDeploymentCompartment API.</example>
+        public async Task<ChangeModelDeploymentCompartmentResponse> ChangeModelDeploymentCompartment(ChangeModelDeploymentCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeModelDeploymentCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeModelDeploymentCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeModelDeploymentCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -379,6 +457,45 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Creates a new model deployment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateModelDeployment.cs.html">here</a> to see an example of how to use CreateModelDeployment API.</example>
+        public async Task<CreateModelDeploymentResponse> CreateModelDeployment(CreateModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateModelDeployment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates provenance information for the specified model.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -535,6 +652,45 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Deactivates the model deployment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/DeactivateModelDeployment.cs.html">here</a> to see an example of how to use DeactivateModelDeployment API.</example>
+        public async Task<DeactivateModelDeploymentResponse> DeactivateModelDeployment(DeactivateModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deactivateModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}/actions/deactivate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeactivateModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeactivateModelDeployment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deactivates the notebook session.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -613,7 +769,46 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
-        /// Deletes the specified notebook session. Any unsaved work in this notebook session will be lost.
+        /// Deletes the specified model deployment. Any unsaved work in this model deployment is lost.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/DeleteModelDeployment.cs.html">here</a> to see an example of how to use DeleteModelDeployment API.</example>
+        public async Task<DeleteModelDeploymentResponse> DeleteModelDeployment(DeleteModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteModelDeployment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified notebook session. Any unsaved work in this notebook session are lost.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -652,7 +847,7 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
-        /// Deletes the specified project. This operation will fail unless all associated resources (such as notebook sessions or models) are in a DELETED state. You must delete all associated resources before deleting a project.
+        /// Deletes the specified project. This operation fails unless all associated resources (notebook sessions or models) are in a DELETED state. You must delete all associated resources before deleting a project.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -764,6 +959,45 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"GetModelArtifactContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves the model deployment for the specified &#x60;modelDeploymentId&#x60;.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/GetModelDeployment.cs.html">here</a> to see an example of how to use GetModelDeployment API.</example>
+        public async Task<GetModelDeploymentResponse> GetModelDeployment(GetModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetModelDeployment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -964,6 +1198,85 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Lists the valid model deployment shapes.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListModelDeploymentShapes.cs.html">here</a> to see an example of how to use ListModelDeploymentShapes API.</example>
+        public async Task<ListModelDeploymentShapesResponse> ListModelDeploymentShapes(ListModelDeploymentShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listModelDeploymentShapes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeploymentShapes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListModelDeploymentShapesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModelDeploymentShapes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists all model deployments in the specified compartment. Only one parameter other than compartmentId may also be included in a query. The query must include compartmentId. If the query does not include compartmentId, or includes compartmentId but two or more other parameters an error is returned.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListModelDeployments.cs.html">here</a> to see an example of how to use ListModelDeployments API.</example>
+        public async Task<ListModelDeploymentsResponse> ListModelDeployments(ListModelDeploymentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listModelDeployments");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListModelDeploymentsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModelDeployments failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists models in the specified compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1042,7 +1355,7 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
-        /// Lists notebook sessions in the specified compartment.
+        /// Lists the notebook sessions in the specified compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1276,7 +1589,50 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
-        /// Updates provenance information for the specified model.
+        /// Updates the properties of a model deployment. You can update the &#x60;displayName&#x60;.
+        /// When the model deployment is in the ACTIVE lifecycle state, you can update &#x60;modelDeploymentConfigurationDetails&#x60; and  change &#x60;instanceShapeName&#x60; and &#x60;modelId&#x60;. Any update to
+        /// &#x60;bandwidthMbps&#x60; or &#x60;instanceCount&#x60; can be done when the model deployment is in the INACTIVE lifecycle state. Changes to the &#x60;bandwidthMbps&#x60; or &#x60;instanceCount&#x60; will take effect
+        /// the next time the &#x60;ActivateModelDeployment&#x60; action is invoked on the model deployment resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/UpdateModelDeployment.cs.html">here</a> to see an example of how to use UpdateModelDeployment API.</example>
+        public async Task<UpdateModelDeploymentResponse> UpdateModelDeployment(UpdateModelDeploymentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateModelDeployment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/modelDeployments/{modelDeploymentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateModelDeploymentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateModelDeployment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the provenance information for the specified model.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1317,7 +1673,7 @@ namespace Oci.DatascienceService
         /// <summary>
         /// Updates the properties of a notebook session. You can update the &#x60;displayName&#x60;, &#x60;freeformTags&#x60;, and &#x60;definedTags&#x60; properties.
         /// When the notebook session is in the INACTIVE lifecycle state, you can update &#x60;notebookSessionConfigurationDetails&#x60; and change &#x60;shape&#x60;, &#x60;subnetId&#x60;, and &#x60;blockStorageSizeInGBs&#x60;.
-        /// Changes to the &#x60;notebookSessionConfigurationDetails&#x60; will take effect the next time the &#x60;ActivateNotebookSession&#x60; action is invoked on the notebook session resource.
+        /// Changes to the &#x60;notebookSessionConfigurationDetails&#x60; take effect the next time the &#x60;ActivateNotebookSession&#x60; action is invoked on the notebook session resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

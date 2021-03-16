@@ -218,5 +218,8 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "ruleSets")]
         public System.Collections.Generic.Dictionary<string, RuleSet> RuleSets { get; set; }
         
+        [JsonProperty(PropertyName = "routingPolicies")]
+        public System.Collections.Generic.Dictionary<string, RoutingPolicy> RoutingPolicies { get; set; }
+        
     }
 }
