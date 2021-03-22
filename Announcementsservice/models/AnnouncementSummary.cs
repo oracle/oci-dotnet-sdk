@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AnnouncementsService.Models
 {
     /// <summary>
-    /// Summary representation of an announcement.
+    /// A summary representation of an announcement.
     /// 
     /// </summary>
     public class AnnouncementSummary : BaseAnnouncement

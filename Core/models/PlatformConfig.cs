@@ -16,8 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The platform configuration for the instance. The type of platform configuration is
-    /// determined by the `type`.
+    /// The platform configuration for the instance.
     /// 
     /// </summary>
     [JsonConverter(typeof(PlatformConfigModelConverter))]
@@ -26,7 +25,7 @@ namespace Oci.CoreService.Models
                 ///
         /// <value>
         /// The type of platform being configured. The only supported
-        /// `type` is `AMD_MILAN_BM`
+        /// `type` is `AMD_MILAN_BM`.
         /// 
         /// </value>
         ///

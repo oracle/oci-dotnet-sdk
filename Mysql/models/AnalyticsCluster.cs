@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MysqlService.Models
 {
     /// <summary>
+    /// DEPRECATED -- please use HeatWave API instead.
     /// An Analytics Cluster is a database accelerator for a DB System.
     /// 
     /// </summary>

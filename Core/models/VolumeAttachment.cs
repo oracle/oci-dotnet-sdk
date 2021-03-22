@@ -21,7 +21,7 @@ namespace Oci.CoreService.Models
     /// {@link IScsiVolumeAttachment}.
     /// <br/>
     /// For general information about volume attachments, see
-    /// [Overview of Block Volume Storage](https://docs.cloud.oracle.com/Content/Block/Concepts/overview.htm).
+    /// [Overview of Block Volume Storage](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you
     /// supply string values using the API.

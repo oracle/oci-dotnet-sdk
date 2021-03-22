@@ -16,7 +16,7 @@ namespace Oci.AnnouncementsService.Responses
     {
 
         /// <value>
-        /// 
+        /// The unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the complete request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }

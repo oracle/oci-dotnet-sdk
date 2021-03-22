@@ -39,6 +39,7 @@ namespace Oci.MysqlService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// If true, return only DB Systems with an Analytics Cluster attached, if false
         /// return only DB Systems with no Analytics Cluster attached. If not
         /// present, return all DB Systems.
@@ -46,6 +47,15 @@ namespace Oci.MysqlService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isAnalyticsClusterAttached")]
         public System.Nullable<bool> IsAnalyticsClusterAttached { get; set; }
+        
+        /// <value>
+        /// If true, return only DB Systems with a HeatWave cluster attached, if false
+        /// return only DB Systems with no HeatWave cluster attached. If not
+        /// present, return all DB Systems.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isHeatWaveClusterAttached")]
+        public System.Nullable<bool> IsHeatWaveClusterAttached { get; set; }
         
         /// <value>
         /// The DB System [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).

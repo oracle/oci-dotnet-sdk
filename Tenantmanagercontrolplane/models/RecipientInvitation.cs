@@ -84,7 +84,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<RecipientInvitationStatus> Status { get; set; }
         
         /// <value>
-        /// A user-created name to describe the invitation.
+        /// A user-created name to describe the invitation. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

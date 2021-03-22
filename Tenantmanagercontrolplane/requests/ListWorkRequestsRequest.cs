@@ -48,7 +48,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

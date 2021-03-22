@@ -147,7 +147,7 @@ namespace Oci.CoreService
         /// <summary>
         /// Creates a secondary VNIC and attaches it to the specified instance.
         /// For more information about secondary VNICs, see
-        /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/Content/Network/Tasks/managingVNICs.htm).
+        /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVNICs.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -278,6 +278,48 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"CaptureConsoleHistory failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves a compute capacity reservation into a different compartment. For information about
+        /// moving resources between compartments, see
+        /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ChangeComputeCapacityReservationCompartment.cs.html">here</a> to see an example of how to use ChangeComputeCapacityReservationCompartment API.</example>
+        public async Task<ChangeComputeCapacityReservationCompartmentResponse> ChangeComputeCapacityReservationCompartment(ChangeComputeCapacityReservationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeComputeCapacityReservationCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations/{capacityReservationId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeComputeCapacityReservationCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeComputeCapacityReservationCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -491,6 +533,50 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Creates a new compute capacity reservation in the specified compartment and availability domain.
+        /// Compute capacity reservations let you reserve instances in a compartment.
+        /// When you launch an instance using this reservation, you are assured that you have enough space for your instance,
+        /// and you won&#39;t get out of capacity errors.
+        /// For more information, see [Reserved Capacity](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/reserve-capacity.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateComputeCapacityReservation.cs.html">here</a> to see an example of how to use CreateComputeCapacityReservation API.</example>
+        public async Task<CreateComputeCapacityReservationResponse> CreateComputeCapacityReservation(CreateComputeCapacityReservationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createComputeCapacityReservation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateComputeCapacityReservationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateComputeCapacityReservation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates compute image capability schema.
         /// 
         /// </summary>
@@ -578,7 +664,7 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// When creating a new image, you must provide the OCID of the instance you want to use as the basis for the image, and
         /// the OCID of the compartment containing that instance. For more information about images,
-        /// see [Managing Custom Images](https://docs.cloud.oracle.com/Content/Compute/Tasks/managingcustomimages.htm).
+        /// see [Managing Custom Images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm).
         /// &lt;br/&gt;
         /// When importing an exported image from Object Storage, you specify the source information
         /// in {@link #imageSourceDetails(ImageSourceDetailsRequest) imageSourceDetails}.
@@ -588,11 +674,11 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// When importing an image based on the Object Storage URL, use
         /// {@link #imageSourceViaObjectStorageUriDetails(ImageSourceViaObjectStorageUriDetailsRequest) imageSourceViaObjectStorageUriDetails}.
-        /// See [Object Storage URLs](https://docs.cloud.oracle.com/Content/Compute/Tasks/imageimportexport.htm#URLs) and [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+        /// See [Object Storage URLs](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/imageimportexport.htm#URLs) and [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
         /// for constructing URLs for image import/export.
         /// &lt;br/&gt;
         /// For more information about importing exported images, see
-        /// [Image Import/Export](https://docs.cloud.oracle.com/Content/Compute/Tasks/imageimportexport.htm).
+        /// [Image Import/Export](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/imageimportexport.htm).
         /// &lt;br/&gt;
         /// You may optionally specify a *display name* for the image, which is simply a friendly name or description.
         /// It does not have to be unique, and you can change it. See {@link #updateImage(UpdateImageRequest) updateImage}.
@@ -640,7 +726,7 @@ namespace Oci.CoreService
         /// After the console connection has been created and is available,
         /// you connect to the console using SSH.
         /// &lt;br/&gt;
-        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
+        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/iaas/Content/Compute/References/serialconsole.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -714,6 +800,45 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"DeleteAppCatalogSubscription failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified compute capacity reservation.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/DeleteComputeCapacityReservation.cs.html">here</a> to see an example of how to use DeleteComputeCapacityReservation API.</example>
+        public async Task<DeleteComputeCapacityReservationResponse> DeleteComputeCapacityReservation(DeleteComputeCapacityReservationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteComputeCapacityReservation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations/{capacityReservationId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteComputeCapacityReservationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteComputeCapacityReservation failed with error: {e.Message}");
                 throw;
             }
         }
@@ -970,7 +1095,7 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// **Important:** If the VNIC has a
         /// {@link PrivateIp} that is the
-        /// [target of a route rule](https://docs.cloud.oracle.com/Content/Network/Tasks/managingroutetables.htm#privateip),
+        /// [target of a route rule](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#privateip),
         /// deleting the VNIC causes that route rule to blackhole and the traffic
         /// will be dropped.
         /// 
@@ -1058,12 +1183,12 @@ namespace Oci.CoreService
         /// Exports the specified image to the Oracle Cloud Infrastructure Object Storage service. You can use the Object Storage URL,
         /// or the namespace, bucket name, and object name when specifying the location to export to.
         /// &lt;br/&gt;
-        /// For more information about exporting images, see [Image Import/Export](https://docs.cloud.oracle.com/Content/Compute/Tasks/imageimportexport.htm).
+        /// For more information about exporting images, see [Image Import/Export](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/imageimportexport.htm).
         /// &lt;br/&gt;
         /// To perform an image export, you need write access to the Object Storage bucket for the image,
-        /// see [Let Users Write Objects to Object Storage Buckets](https://docs.cloud.oracle.com/Content/Identity/Concepts/commonpolicies.htm#Let4).
+        /// see [Let Users Write Objects to Object Storage Buckets](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/commonpolicies.htm#Let4).
         /// &lt;br/&gt;
-        /// See [Object Storage URLs](https://docs.cloud.oracle.com/Content/Compute/Tasks/imageimportexport.htm#URLs) and [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+        /// See [Object Storage URLs](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/imageimportexport.htm#URLs) and [Using Pre-Authenticated Requests](https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
         /// for constructing URLs for image import/export.
         /// 
         /// </summary>
@@ -1255,6 +1380,45 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"GetBootVolumeAttachment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about the specified compute capacity reservation.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetComputeCapacityReservation.cs.html">here</a> to see an example of how to use GetComputeCapacityReservation API.</example>
+        public async Task<GetComputeCapacityReservationResponse> GetComputeCapacityReservation(GetComputeCapacityReservationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getComputeCapacityReservation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations/{capacityReservationId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetComputeCapacityReservationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetComputeCapacityReservation failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1785,13 +1949,13 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// - **RESET** - Powers off the instance and then powers it back on.
         /// &lt;br/&gt;
-        /// - **SOFTSTOP** - Gracefully shuts down the instance by sending a shutdown command to the operating system. 
+        /// - **SOFTSTOP** - Gracefully shuts down the instance by sending a shutdown command to the operating system.
         /// After waiting 15 minutes for the OS to shut down, the instance is powered off.
         /// If the applications that run on the instance take more than 15 minutes to shut down, they could be improperly stopped, resulting
         /// in data corruption. To avoid this, manually shut down the instance using the commands available in the OS before you softstop the
         /// instance.
         /// &lt;br/&gt;
-        /// - **SOFTRESET** - Gracefully reboots the instance by sending a shutdown command to the operating system. 
+        /// - **SOFTRESET** - Gracefully reboots the instance by sending a shutdown command to the operating system.
         /// After waiting 15 minutes for the OS to shut down, the instance is powered off and
         /// then powered back on.
         /// &lt;br/&gt;
@@ -1800,11 +1964,11 @@ namespace Oci.CoreService
         /// OS to crash and then reboot. Before you send a diagnostic interrupt, you must configure the instance to generate a
         /// crash dump file when it crashes. The crash dump captures information about the state of the OS at the time of
         /// the crash. After the OS restarts, you can analyze the crash dump to diagnose the issue. For more information, see
-        /// [Sending a Diagnostic Interrupt](https://docs.cloud.oracle.com/Content/Compute/Tasks/sendingdiagnosticinterrupt.htm).
+        /// [Sending a Diagnostic Interrupt](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/sendingdiagnosticinterrupt.htm).
         /// &lt;br/&gt;
         /// 
         /// For more information about managing instance lifecycle states, see
-        /// [Stopping and Starting an Instance](https://docs.cloud.oracle.com/Content/Compute/Tasks/restartinginstance.htm).
+        /// [Stopping and Starting an Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/restartinginstance.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1846,13 +2010,13 @@ namespace Oci.CoreService
         /// <summary>
         /// Creates a new instance in the specified compartment and the specified availability domain.
         /// For general information about instances, see
-        /// [Overview of the Compute Service](https://docs.cloud.oracle.com/Content/Compute/Concepts/computeoverview.htm).
+        /// [Overview of the Compute Service](https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm).
         /// &lt;br/&gt;
         /// For information about access control and compartments, see
-        /// [Overview of the IAM Service](https://docs.cloud.oracle.com/Content/Identity/Concepts/overview.htm).
+        /// [Overview of the IAM Service](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/overview.htm).
         /// &lt;br/&gt;
         /// For information about availability domains, see
-        /// [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm).
+        /// [Regions and Availability Domains](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm).
         /// To get a list of availability domains, use the &#x60;ListAvailabilityDomains&#x60; operation
         /// in the Identity and Access Management Service API.
         /// &lt;br/&gt;
@@ -1874,7 +2038,7 @@ namespace Oci.CoreService
         /// {@link #getVnic(GetVnicRequest) getVnic} with the VNIC ID.
         /// &lt;br/&gt;
         /// You can later add secondary VNICs to an instance. For more information, see
-        /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/Content/Network/Tasks/managingVNICs.htm).
+        /// [Virtual Network Interface Cards (VNICs)](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVNICs.htm).
         /// &lt;br/&gt;
         /// To launch an instance from a Marketplace image listing, you must provide the image ID of the
         /// listing resource version that you want, but you also must subscribe to the listing before you try
@@ -2075,6 +2239,129 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"ListBootVolumeAttachments failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the shapes that can be reserved within the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListComputeCapacityReservationInstanceShapes.cs.html">here</a> to see an example of how to use ListComputeCapacityReservationInstanceShapes API.</example>
+        public async Task<ListComputeCapacityReservationInstanceShapesResponse> ListComputeCapacityReservationInstanceShapes(ListComputeCapacityReservationInstanceShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listComputeCapacityReservationInstanceShapes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservationInstanceShapes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListComputeCapacityReservationInstanceShapesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListComputeCapacityReservationInstanceShapes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the instances launched under a capacity reservation. You can filter results by specifying criteria.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListComputeCapacityReservationInstances.cs.html">here</a> to see an example of how to use ListComputeCapacityReservationInstances API.</example>
+        public async Task<ListComputeCapacityReservationInstancesResponse> ListComputeCapacityReservationInstances(ListComputeCapacityReservationInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listComputeCapacityReservationInstances");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations/{capacityReservationId}/instances".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListComputeCapacityReservationInstancesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListComputeCapacityReservationInstances failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the compute capacity reservations that match the specified criteria and compartment.
+        /// &lt;br/&gt;
+        /// You can limit the list by specifying a compute capacity reservation display name
+        /// (the list will include all the identically-named compute capacity reservations in the compartment).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListComputeCapacityReservations.cs.html">here</a> to see an example of how to use ListComputeCapacityReservations API.</example>
+        public async Task<ListComputeCapacityReservationsResponse> ListComputeCapacityReservations(ListComputeCapacityReservationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listComputeCapacityReservations");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListComputeCapacityReservationsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListComputeCapacityReservations failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2444,8 +2731,8 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Lists the available images in the specified compartment, including both
-        /// [Oracle-provided images](https://docs.cloud.oracle.com/Content/Compute/References/images.htm) and
-        /// [custom images](https://docs.cloud.oracle.com/Content/Compute/Tasks/managingcustomimages.htm) that have
+        /// [Oracle-provided images](https://docs.cloud.oracle.com/iaas/Content/Compute/References/images.htm) and
+        /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm) that have
         /// been created. The list of images returned is ordered to first show all
         /// Oracle-provided images, then all custom images.
         /// &lt;br/&gt;
@@ -2491,7 +2778,7 @@ namespace Oci.CoreService
         /// <summary>
         /// Lists the console connections for the specified compartment or instance.
         /// &lt;br/&gt;
-        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/Content/Compute/References/serialconsole.htm).
+        /// For more information about instance console connections, see [Troubleshooting Instances Using Instance Console Connections](https://docs.cloud.oracle.com/iaas/Content/Compute/References/serialconsole.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2820,6 +3107,49 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"TerminateInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the display name, defined tag, and freeform tag fields for the specified compute capacity reservation.
+        /// Fields that are not provided in the request will not be updated. Avoid entering confidential information.
+        /// &lt;br/&gt;
+        /// The update also modifies the reservation configurations of the specified compute capacity reservation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateComputeCapacityReservation.cs.html">here</a> to see an example of how to use UpdateComputeCapacityReservation API.</example>
+        public async Task<UpdateComputeCapacityReservationResponse> UpdateComputeCapacityReservation(UpdateComputeCapacityReservationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateComputeCapacityReservation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReservations/{capacityReservationId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateComputeCapacityReservationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateComputeCapacityReservation failed with error: {e.Message}");
                 throw;
             }
         }

@@ -66,7 +66,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Attach an instance to the instance pool.
+        /// Attaches an instance to an instance pool. For information about the prerequisites
+        /// that an instance must meet before you can attach it to a pool, see
+        /// [Attaching an Instance to an Instance Pool](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/updatinginstancepool.htm#attach-instance).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -448,7 +450,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Detach instance from the instance pool.
+        /// Detaches an instance from an instance pool.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -645,7 +647,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the instance pool instance
+        /// Gets information about an instance that belongs to an instance pool.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1008,9 +1010,9 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Performs the softreset (ACPI shutdown and power on) action on the specified instance pool,
-        /// which performs the action on all the instances in the pool. 
+        /// which performs the action on all the instances in the pool.
         /// &lt;br/&gt;
-        /// Softreset gracefully reboots the instances by sending a shutdown command to the operating systems. 
+        /// Softreset gracefully reboots the instances by sending a shutdown command to the operating systems.
         /// After waiting 15 minutes for the OS to shut down, the instances are powered off and then powered back on.
         /// 
         /// </summary>

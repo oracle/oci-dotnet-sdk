@@ -59,7 +59,8 @@ namespace Oci.DatabaseService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// The current state of the maintenance run.
+        /// The current state of the maintenance run. For Autonomous Database on shared Exadata infrastructure, valid states are IN_PROGRESS, SUCCEEDED and FAILED.
+        /// 
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -84,7 +85,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the maintenance run.
+        /// The current state of the maintenance run. For Autonomous Database on shared Exadata infrastructure, valid states are IN_PROGRESS, SUCCEEDED and FAILED.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -136,7 +138,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "CLOUD_EXADATA_INFRASTRUCTURE")]
             CloudExadataInfrastructure,
             [EnumMember(Value = "EXACC_INFRASTRUCTURE")]
-            ExaccInfrastructure
+            ExaccInfrastructure,
+            [EnumMember(Value = "AUTONOMOUS_DATABASE")]
+            AutonomousDatabase
         };
 
         /// <value>
@@ -187,6 +191,10 @@ namespace Oci.DatabaseService.Models
             Hardware,
             [EnumMember(Value = "CRITICAL")]
             Critical,
+            [EnumMember(Value = "INFRASTRUCTURE")]
+            Infrastructure,
+            [EnumMember(Value = "DATABASE")]
+            Database,
             [EnumMember(Value = "ONEOFF")]
             Oneoff
         };

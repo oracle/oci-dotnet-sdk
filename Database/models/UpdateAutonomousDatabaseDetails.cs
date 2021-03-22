@@ -221,6 +221,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }

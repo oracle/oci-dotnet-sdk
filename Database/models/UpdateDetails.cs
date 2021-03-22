@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details specifying which maintenance update to apply to the cloud VM cluster and which actions are to be performed by the maintenance update. Applies to Exadata Cloud Service instances only. 
+    /// Details specifying which maintenance update to apply to the cloud VM cluster and which actions are to be performed by the maintenance update. Applies to Exadata Cloud Service instances only.
     /// 
     /// </summary>
     public class UpdateDetails 

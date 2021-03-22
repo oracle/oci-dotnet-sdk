@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for updating the cloud VM cluster. Applies to Exadata Cloud Service instances only. 
+    /// Details for updating the cloud VM cluster. Applies to Exadata Cloud Service instances only.
     /// 
     /// </summary>
     public class UpdateCloudVmClusterDetails 
@@ -36,7 +36,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCount { get; set; }
                 ///
         /// <value>
-        /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE. Applies to Exadata Cloud Service instances only. 
+        /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE. Applies to Exadata Cloud Service instances only.
         /// 
         /// </value>
         ///
@@ -48,7 +48,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE. Applies to Exadata Cloud Service instances only. 
+        /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE. Applies to Exadata Cloud Service instances only.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]

@@ -73,7 +73,10 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order can be provided.
+        /// * The default order for timeCreated is descending.
+        /// * The default order for displayName is ascending.
+        /// * If no value is specified, timeCreated is the default.
         /// 
         /// </value>
         ///
@@ -85,14 +88,17 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order can be provided.
+        /// * The default order for timeCreated is descending.
+        /// * The default order for displayName is ascending.
+        /// * If no value is specified, timeCreated is the default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

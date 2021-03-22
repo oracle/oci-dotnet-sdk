@@ -59,13 +59,16 @@ namespace Oci.MarketplaceService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// The date and time this listing package was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) 
+        /// The date and time this listing package was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
         /// timestamp format.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        [JsonProperty(PropertyName = "operatingSystem")]
+        public OperatingSystem OperatingSystem { get; set; }
         
     }
 

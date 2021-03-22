@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Contains an instance and availability domain information for attaching an instance to the pool.
+    /// An instance that is to be attached to an instance pool.
     /// 
     /// </summary>
     public class AttachInstancePoolInstanceDetails 
     {
         
         /// <value>
-        /// the instance ocid to attach.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance.
         /// </value>
         /// <remarks>
         /// Required

@@ -13,7 +13,9 @@ using System.Runtime.Serialization;
 namespace Oci.MysqlService.Models
 {
   /// <summary>
-  /// Possible operation status.
+  /// DEPRECATED -- please use HeatWave API instead.
+    /// Possible operation status.
+    /// 
   /// </summary>
   public enum AnalyticsClusterMemoryEstimateStatus {
       [EnumMember(Value = "ACCEPTED")]

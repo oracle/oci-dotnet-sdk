@@ -30,16 +30,6 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -58,7 +48,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use, whether 'asc' or 'desc'.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

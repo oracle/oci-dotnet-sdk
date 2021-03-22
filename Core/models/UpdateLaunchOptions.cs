@@ -117,12 +117,12 @@ namespace Oci.CoreService.Models
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
         
         /// <value>
-        /// Whether to enable in-transit encryption for the volume's paravirtualized attachment. 
+        /// Whether to enable in-transit encryption for the volume's paravirtualized attachment.
         /// To enable in-transit encryption for block volumes and boot volumes, this field must be set to `true`.
         /// <br/>
         /// Data in transit is transferred over an internal and highly secure network. If you have specific
         /// compliance requirements related to the encryption of the data while it is moving between the
-        /// instance and the boot volume or the block volume, you can enable in-transit encryption. 
+        /// instance and the boot volume or the block volume, you can enable in-transit encryption.
         /// In-transit encryption is not enabled by default.
         /// <br/>
         /// All boot volumes and block volumes are encrypted at rest.

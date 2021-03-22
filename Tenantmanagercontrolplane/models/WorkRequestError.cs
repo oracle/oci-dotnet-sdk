@@ -22,8 +22,8 @@ namespace Oci.TenantmanagercontrolplaneService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
+        /// A machine-usable code for the error that occured. Error codes are listed in
+        /// [API Errors](https://docs.cloud.oracle.com/iaas/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// A human readable description of the issue encountered.
+        /// A human-readable description of the issue encountered.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured. An RFC3339 formatted datetime string.
+        /// The time the error occured. An RFC3339-formatted date and time string.
         /// </value>
         /// <remarks>
         /// Required

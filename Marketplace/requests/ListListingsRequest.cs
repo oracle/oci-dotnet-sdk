@@ -129,6 +129,18 @@ namespace Oci.MarketplaceService.Requests
         public System.Nullable<bool> IsFeatured { get; set; }
         
         /// <value>
+        /// The type of the listing
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listingTypes")]
+        public System.Collections.Generic.List<ListingType> ListingTypes { get; set; }
+        
+        /// <value>
+        /// OS of the listing.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operatingSystems")]
+        public System.Collections.Generic.List<string> OperatingSystems { get; set; }
+        
+        /// <value>
         /// The unique identifier for the compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]

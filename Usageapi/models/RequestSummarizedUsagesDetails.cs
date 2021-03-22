@@ -86,9 +86,15 @@ namespace Oci.UsageapiService.Models
         [JsonProperty(PropertyName = "granularity")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GranularityEnum> Granularity { get; set; }
+        
+        /// <value>
+        /// is aggregated by time. true isAggregateByTime will add up all usage/cost over query time period
+        /// </value>
+        [JsonProperty(PropertyName = "isAggregateByTime")]
+        public System.Nullable<bool> IsAggregateByTime { get; set; }
                 ///
         /// <value>
-        /// The query usage type.
+        /// The query usage type. COST by default if it is missing
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
         /// 
@@ -102,7 +108,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The query usage type.
+        /// The query usage type. COST by default if it is missing
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
         /// 
@@ -113,10 +119,17 @@ namespace Oci.UsageapiService.Models
         
         /// <value>
         /// Aggregate the result by.
-        /// Example:   [&quot;service&quot;]
+        /// Example:   [&quot;tagNamespace&quot;, &quot;tagKey&quot;, &quot;tagValue&quot;, &quot;service&quot;, &quot;skuName&quot;, &quot;skuPartNumber&quot;, &quot;unit&quot;,    &quot;compartmentName&quot;, &quot;compartmentPath&quot;, &quot;compartmentId&quot;, &quot;platform&quot;, &quot;region&quot;, &quot;logicalAd&quot;,    &quot;resourceId&quot;, &quot;tenantId&quot;, &quot;tenantName&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }
+        
+        /// <value>
+        /// GroupBy a specific tagKey. Provide tagNamespace and tagKey in tag object. Only support one tag in the list
+        /// Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
+        /// </value>
+        [JsonProperty(PropertyName = "groupByTag")]
+        public System.Collections.Generic.List<Tag> GroupByTag { get; set; }
         
         /// <value>
         /// The compartment depth level.

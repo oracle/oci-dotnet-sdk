@@ -82,5 +82,33 @@ namespace Oci.MysqlService
             );
             return new Waiter<GetDbSystemRequest, GetDbSystemResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHeatWaveClusterRequest, GetHeatWaveClusterResponse> ForHeatWaveCluster(GetHeatWaveClusterRequest request, params HeatWaveCluster.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForHeatWaveCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHeatWaveClusterRequest, GetHeatWaveClusterResponse> ForHeatWaveCluster(GetHeatWaveClusterRequest request, WaiterConfiguration config, params HeatWaveCluster.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetHeatWaveClusterRequest, GetHeatWaveClusterResponse>(
+                request,
+                request => client.GetHeatWaveCluster(request),
+                response => targetStates.Contains(response.HeatWaveCluster.LifecycleState.Value),
+                targetStates.Contains(HeatWaveCluster.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetHeatWaveClusterRequest, GetHeatWaveClusterResponse>(config, agent);
+        }
     }
 }

@@ -16,16 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// An instance pool is a group of instances within the same region that are created based off of the same
-    /// instance configuration. For more information about instance pools and instance configurations, see
-    /// [Managing Compute Instances](https://docs.cloud.oracle.com/Content/Compute/Concepts/instancemanagement.htm).
+    /// An instance pool is a set of instances within the same region that are managed as a group.
+    /// For more information about instance pools and instance configurations, see
+    /// [Managing Compute Instances](https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/instancemanagement.htm).
     /// 
     /// </summary>
     public class InstancePool 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance pool.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the instance
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the instance
         /// pool.
         /// 
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
-        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
-        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance configuration associated
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance configuration associated
         /// with the instance pool.
         /// 
         /// </value>

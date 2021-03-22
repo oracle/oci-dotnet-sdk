@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MysqlService.Models
 {
     /// <summary>
+    /// DEPRECATED -- please use HeatWave API instead.
     /// A summary of an Analytics Cluster.
     /// 
     /// </summary>

@@ -17,7 +17,8 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// Request to enable a multi-encryption domain policy on the VPNaaS tunnel.
-    /// The cross product of oracleTrafficSelector and cpeTrafficSelector can't be more than 50.
+    /// There can't be more than 50 security associations in use at one time. See [Encryption domain for policy-based
+    /// tunnels](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/ipsecencryptiondomains.htm#spi_policy_based_tunnel) for more.
     /// 
     /// </summary>
     public class CreateIPSecTunnelEncryptionDomainDetails 

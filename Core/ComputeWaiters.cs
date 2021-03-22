@@ -34,6 +34,38 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeComputeCapacityReservationCompartmentRequest, ChangeComputeCapacityReservationCompartmentResponse> ForChangeComputeCapacityReservationCompartment(ChangeComputeCapacityReservationCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeComputeCapacityReservationCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeComputeCapacityReservationCompartmentRequest, ChangeComputeCapacityReservationCompartmentResponse> ForChangeComputeCapacityReservationCompartment(ChangeComputeCapacityReservationCompartmentRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeComputeCapacityReservationCompartmentRequest, ChangeComputeCapacityReservationCompartmentResponse>(() =>
+            {
+                var response = client.ChangeComputeCapacityReservationCompartment(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeDedicatedVmHostCompartmentRequest, ChangeDedicatedVmHostCompartmentResponse> ForChangeDedicatedVmHostCompartment(ChangeDedicatedVmHostCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeDedicatedVmHostCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -98,6 +130,38 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateComputeCapacityReservationRequest, CreateComputeCapacityReservationResponse> ForCreateComputeCapacityReservation(CreateComputeCapacityReservationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateComputeCapacityReservation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateComputeCapacityReservationRequest, CreateComputeCapacityReservationResponse> ForCreateComputeCapacityReservation(CreateComputeCapacityReservationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateComputeCapacityReservationRequest, CreateComputeCapacityReservationResponse>(() =>
+            {
+                var response = client.CreateComputeCapacityReservation(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateDedicatedVmHostRequest, CreateDedicatedVmHostResponse> ForCreateDedicatedVmHost(CreateDedicatedVmHostRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateDedicatedVmHost(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -147,6 +211,38 @@ namespace Oci.CoreService
             return new Waiter<CreateImageRequest, CreateImageResponse>(() =>
             {
                 var response = client.CreateImage(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteComputeCapacityReservationRequest, DeleteComputeCapacityReservationResponse> ForDeleteComputeCapacityReservation(DeleteComputeCapacityReservationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteComputeCapacityReservation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteComputeCapacityReservationRequest, DeleteComputeCapacityReservationResponse> ForDeleteComputeCapacityReservation(DeleteComputeCapacityReservationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteComputeCapacityReservationRequest, DeleteComputeCapacityReservationResponse>(() =>
+            {
+                var response = client.DeleteComputeCapacityReservation(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -246,6 +342,34 @@ namespace Oci.CoreService
                 response => targetStates.Contains(response.BootVolumeAttachment.LifecycleState.Value)
             );
             return new Waiter<GetBootVolumeAttachmentRequest, GetBootVolumeAttachmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeCapacityReservationRequest, GetComputeCapacityReservationResponse> ForComputeCapacityReservation(GetComputeCapacityReservationRequest request, params ComputeCapacityReservation.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForComputeCapacityReservation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeCapacityReservationRequest, GetComputeCapacityReservationResponse> ForComputeCapacityReservation(GetComputeCapacityReservationRequest request, WaiterConfiguration config, params ComputeCapacityReservation.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetComputeCapacityReservationRequest, GetComputeCapacityReservationResponse>(
+                request,
+                request => client.GetComputeCapacityReservation(request),
+                response => targetStates.Contains(response.ComputeCapacityReservation.LifecycleState.Value),
+                targetStates.Contains(ComputeCapacityReservation.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetComputeCapacityReservationRequest, GetComputeCapacityReservationResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -463,6 +587,38 @@ namespace Oci.CoreService
             return new Waiter<LaunchInstanceRequest, LaunchInstanceResponse>(() =>
             {
                 var response = client.LaunchInstance(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeCapacityReservationRequest, UpdateComputeCapacityReservationResponse> ForUpdateComputeCapacityReservation(UpdateComputeCapacityReservationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateComputeCapacityReservation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeCapacityReservationRequest, UpdateComputeCapacityReservationResponse> ForUpdateComputeCapacityReservation(UpdateComputeCapacityReservationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateComputeCapacityReservationRequest, UpdateComputeCapacityReservationResponse>(() =>
+            {
+                var response = client.UpdateComputeCapacityReservation(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

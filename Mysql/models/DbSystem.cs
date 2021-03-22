@@ -17,8 +17,6 @@ namespace Oci.MysqlService.Models
 {
     /// <summary>
     /// A DB System is the core logical unit of MySQL Database Service.
-    /// # NOTE: definitions/DbSystemSnapshot is a snapshot version of DbSystem which is stored during backup. Any
-    /// # addition/deletion of properties should also consider snapshot's definition
     /// 
     /// </summary>
     public class DbSystem 
@@ -72,6 +70,7 @@ namespace Oci.MysqlService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// DEPRECATED -- please use `isHeatWaveClusterAttached` instead.
         /// If the DB System has an Analytics Cluster attached.
         /// 
         /// </value>
@@ -80,6 +79,16 @@ namespace Oci.MysqlService.Models
         
         [JsonProperty(PropertyName = "analyticsCluster")]
         public AnalyticsClusterSummary AnalyticsCluster { get; set; }
+        
+        /// <value>
+        /// If the DB System has a HeatWave Cluster attached.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveClusterAttached")]
+        public System.Nullable<bool> IsHeatWaveClusterAttached { get; set; }
+        
+        [JsonProperty(PropertyName = "heatWaveCluster")]
+        public HeatWaveClusterSummary HeatWaveCluster { get; set; }
         
         /// <value>
         /// The Availability Domain where the primary DB System should be located.

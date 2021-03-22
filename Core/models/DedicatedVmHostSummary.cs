@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A dedicated virtual machine (VM) host that enables you to host multiple instances on a dedicated host instance that is not shared with other tenancies.
+    /// A dedicated virtual machine (VM) host lets you host multiple instances on a dedicated server that is not shared with other tenancies.
     /// 
     /// </summary>
     public class DedicatedVmHostSummary 
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The OCID of the dedicated VM host.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the dedicated VM host.
         /// 
         /// </value>
         /// <remarks>

@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The activation details for the Exadata infrastructure.
+        /// The activation details for the Exadata infrastructure and the additional storage servers requested.
         /// </value>
         /// <remarks>
         /// Required

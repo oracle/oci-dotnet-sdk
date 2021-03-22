@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MysqlService.Models
 {
     /// <summary>
+    /// DEPRECATED -- please use HeatWave API instead.
     /// Schema with estimated memory footprints for each MySQL user table
     /// of the schema when loaded to Analytics Cluster memory.
     /// 
