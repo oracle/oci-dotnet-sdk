@@ -55,6 +55,7 @@ namespace Oci.MysqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// DEPRECATED -- please use `isHeatWaveClusterAttached` instead.
         /// If the DB System has an Analytics Cluster attached.
         /// 
         /// </value>
@@ -63,6 +64,16 @@ namespace Oci.MysqlService.Models
         
         [JsonProperty(PropertyName = "analyticsCluster")]
         public AnalyticsClusterSummary AnalyticsCluster { get; set; }
+        
+        /// <value>
+        /// If the DB System has a HeatWave Cluster attached.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveClusterAttached")]
+        public System.Nullable<bool> IsHeatWaveClusterAttached { get; set; }
+        
+        [JsonProperty(PropertyName = "heatWaveCluster")]
+        public HeatWaveClusterSummary HeatWaveCluster { get; set; }
         
         /// <value>
         /// The Availability Domain where the primary DB System should be located.

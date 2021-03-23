@@ -17,11 +17,11 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// A boot disk image for launching an instance. For more information, see
-    /// [Overview of the Compute Service](https://docs.cloud.oracle.com/Content/Compute/Concepts/computeoverview.htm).
+    /// [Overview of the Compute Service](https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
-    /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you
     /// supply string values using the API.
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
-        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
-        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
@@ -184,9 +184,27 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "agentFeatures")]
         public InstanceAgentFeatures AgentFeatures { get; set; }
+                ///
+        /// <value>
+        /// The listing type of the image. The default value is \"NONE\".
+        /// </value>
+        ///
+        public enum ListingTypeEnum {
+            [EnumMember(Value = "COMMUNITY")]
+            Community,
+            [EnumMember(Value = "NONE")]
+            None
+        };
+
+        /// <value>
+        /// The listing type of the image. The default value is \"NONE\".
+        /// </value>
+        [JsonProperty(PropertyName = "listingType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ListingTypeEnum> ListingType { get; set; }
         
         /// <value>
-        /// The boot volume size for an instance launched from this image, (1 MB = 1048576 bytes).
+        /// The boot volume size for an instance launched from this image (1 MB = 1,048,576 bytes).
         /// Note this is not the same as the size of the image when it was exported or the actual size of the image.
         /// <br/>
         /// Example: 47694

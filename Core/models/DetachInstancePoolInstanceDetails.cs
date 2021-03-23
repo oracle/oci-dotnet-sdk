@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Detach an instance from the pool.
+    /// An instance that is to be detached from an instance pool.
     /// 
     /// </summary>
     public class DetachInstancePoolInstanceDetails 
     {
         
         /// <value>
-        /// The instance ocid to detach.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,14 +33,17 @@ namespace Oci.CoreService.Models
         public string InstanceId { get; set; }
         
         /// <value>
-        /// Decrement the size of the instance pool during detachment.
+        /// Whether to decrease the size of the instance pool when the instance is detached. If `true`, the
+        /// pool size is decreased. If `false`, the pool will provision a new, replacement instance
+        /// using the pool's instance configuration as a template. Default is `true`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDecrementSize")]
         public System.Nullable<bool> IsDecrementSize { get; set; }
         
         /// <value>
-        /// Terminate the instance after it has been detached.
+        /// Whether to permanently terminate (delete) the instance and its attached boot volume
+        /// when detaching it from the instance pool. Default is `false`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTerminate")]

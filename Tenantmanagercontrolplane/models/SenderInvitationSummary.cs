@@ -42,7 +42,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-created name to describe the invitation.
+        /// A user-created name to describe the invitation. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

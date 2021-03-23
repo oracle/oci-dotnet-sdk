@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The name of the dedicated vm host shape. You can enumerate all available shapes by calling
+        /// The name of the dedicated VM host shape. You can enumerate all available shapes by calling
         /// {@link DedicatedVmHostShapes}.
         /// 
         /// </value>

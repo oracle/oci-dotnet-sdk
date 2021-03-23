@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The subnet [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the secondary VNIC.
+        /// The subnet [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the secondary VNIC.
         /// </value>
         /// <remarks>
         /// Required

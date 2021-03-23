@@ -66,6 +66,7 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Adds an Analytics Cluster to the DB System.
         /// 
         /// </summary>
@@ -101,6 +102,46 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"AddAnalyticsCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Adds a HeatWave cluster to the DB System.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/AddHeatWaveCluster.cs.html">here</a> to see an example of how to use AddHeatWaveCluster API.</example>
+        public async Task<AddHeatWaveClusterResponse> AddHeatWaveCluster(AddHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called addHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster/actions/add".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddHeatWaveCluster failed with error: {e.Message}");
                 throw;
             }
         }
@@ -146,6 +187,7 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Deletes the Analytics Cluster including terminating, detaching, removing, finalizing and
         /// otherwise deleting all related resources.
         /// 
@@ -228,6 +270,48 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Deletes the HeatWave cluster including terminating, detaching, removing, finalizing and
+        /// otherwise deleting all related resources.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/DeleteHeatWaveCluster.cs.html">here</a> to see an example of how to use DeleteHeatWaveCluster API.</example>
+        public async Task<DeleteHeatWaveClusterResponse> DeleteHeatWaveCluster(DeleteHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteHeatWaveCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Sends a request to estimate the memory footprints of user tables when loaded to Analytics Cluster memory.
         /// 
         /// </summary>
@@ -268,7 +352,49 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Sends a request to estimate the memory footprints of user tables when loaded to HeatWave cluster memory.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GenerateHeatWaveClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GenerateHeatWaveClusterMemoryEstimate API.</example>
+        public async Task<GenerateHeatWaveClusterMemoryEstimateResponse> GenerateHeatWaveClusterMemoryEstimate(GenerateHeatWaveClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called generateHeatWaveClusterMemoryEstimate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveClusterMemoryEstimate/actions/generate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GenerateHeatWaveClusterMemoryEstimateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateHeatWaveClusterMemoryEstimate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Gets information about the Analytics Cluster.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -307,6 +433,7 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Gets the most recent Analytics Cluster memory estimate that can be used to determine a suitable
         /// Analytics Cluster size.
         /// 
@@ -387,6 +514,86 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Gets information about the HeatWave cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetHeatWaveCluster.cs.html">here</a> to see an example of how to use GetHeatWaveCluster API.</example>
+        public async Task<GetHeatWaveClusterResponse> GetHeatWaveCluster(GetHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetHeatWaveCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the most recent HeatWave cluster memory estimate that can be used to determine a suitable
+        /// HeatWave cluster size.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/GetHeatWaveClusterMemoryEstimate.cs.html">here</a> to see an example of how to use GetHeatWaveClusterMemoryEstimate API.</example>
+        public async Task<GetHeatWaveClusterMemoryEstimateResponse> GetHeatWaveClusterMemoryEstimate(GetHeatWaveClusterMemoryEstimateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getHeatWaveClusterMemoryEstimate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveClusterMemoryEstimate".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetHeatWaveClusterMemoryEstimateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetHeatWaveClusterMemoryEstimate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Get a list of DB Systems in the specified compartment.
         /// The default sort order is by timeUpdated, descending.
         /// 
@@ -428,7 +635,9 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Restarts the Analytics Cluster.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -506,7 +715,48 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Restarts the HeatWave cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/RestartHeatWaveCluster.cs.html">here</a> to see an example of how to use RestartHeatWaveCluster API.</example>
+        public async Task<RestartHeatWaveClusterResponse> RestartHeatWaveCluster(RestartHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called restartHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster/actions/restart".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RestartHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RestartHeatWaveCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Starts the Analytics Cluster.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -584,7 +834,48 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Starts the HeatWave cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StartHeatWaveCluster.cs.html">here</a> to see an example of how to use StartHeatWaveCluster API.</example>
+        public async Task<StartHeatWaveClusterResponse> StartHeatWaveCluster(StartHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called startHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster/actions/start".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StartHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StartHeatWaveCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Stops the Analytics Cluster.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -665,6 +956,46 @@ namespace Oci.MysqlService
         }
 
         /// <summary>
+        /// Stops the HeatWave cluster.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/StopHeatWaveCluster.cs.html">here</a> to see an example of how to use StopHeatWaveCluster API.</example>
+        public async Task<StopHeatWaveClusterResponse> StopHeatWaveCluster(StopHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called stopHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster/actions/stop".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StopHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StopHeatWaveCluster failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// DEPRECATED -- please use HeatWave API instead.
         /// Updates the Analytics Cluster.
         /// 
         /// </summary>
@@ -747,6 +1078,46 @@ namespace Oci.MysqlService
             catch (Exception e)
             {
                 logger.Error($"UpdateDbSystem failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the HeatWave cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/mysql/UpdateHeatWaveCluster.cs.html">here</a> to see an example of how to use UpdateHeatWaveCluster API.</example>
+        public async Task<UpdateHeatWaveClusterResponse> UpdateHeatWaveCluster(UpdateHeatWaveClusterRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateHeatWaveCluster");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/heatWaveCluster".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateHeatWaveClusterResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateHeatWaveCluster failed with error: {e.Message}");
                 throw;
             }
         }

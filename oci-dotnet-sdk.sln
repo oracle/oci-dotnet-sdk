@@ -145,6 +145,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Apmcontrolpla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Apmtraces", "Apmtraces\OCI.DotNetSDK.Apmtraces.csproj", "{C9E99967-067A-48CB-B5B6-A75C88DF8CFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Networkloadbalancer", "Networkloadbalancer\OCI.DotNetSDK.Networkloadbalancer.csproj", "{D5AC27B3-448D-41DD-A7DC-D83589D04CE0}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1601,5 +1603,17 @@ Global
         {C9E99967-067A-48CB-B5B6-A75C88DF8CFF}.Release|x64.Build.0 = Release|Any CPU
         {C9E99967-067A-48CB-B5B6-A75C88DF8CFF}.Release|x86.ActiveCfg = Release|Any CPU
         {C9E99967-067A-48CB-B5B6-A75C88DF8CFF}.Release|x86.Build.0 = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|x64.Build.0 = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Debug|x86.Build.0 = Debug|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x64.ActiveCfg = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x64.Build.0 = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x86.ActiveCfg = Release|Any CPU
+        {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

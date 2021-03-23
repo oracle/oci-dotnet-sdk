@@ -176,5 +176,18 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "isFeatured")]
         public System.Nullable<bool> IsFeatured { get; set; }
         
+        /// <value>
+        /// In which catalog the listing should exist.
+        /// </value>
+        [JsonProperty(PropertyName = "listingType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ListingType> ListingType { get; set; }
+        
+        /// <value>
+        /// List of operating systems supported.
+        /// </value>
+        [JsonProperty(PropertyName = "supportedOperatingSystems")]
+        public System.Collections.Generic.List<OperatingSystem> SupportedOperatingSystems { get; set; }
+        
     }
 }

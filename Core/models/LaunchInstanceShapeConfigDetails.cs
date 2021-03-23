@@ -24,9 +24,6 @@ namespace Oci.CoreService.Models
     /// <br/>
     /// Each shape only supports certain configurable values. If the values that you provide are not valid for the
     /// specified `shape`, an error is returned.
-    /// <br/>
-    /// For more information about customizing the resources that are allocated to a flexible shapes,
-    /// see [Flexible Shapes](https://docs.cloud.oracle.com/Content/Compute/References/computeshapes.htm#flexible).
     /// 
     /// </summary>
     public class LaunchInstanceShapeConfigDetails 

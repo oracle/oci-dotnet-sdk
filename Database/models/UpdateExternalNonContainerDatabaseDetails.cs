@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for updating an external non-container database.
+    /// Details for updating an external non-container database. This API is not currently supported.
     /// 
     /// </summary>
     public class UpdateExternalNonContainerDatabaseDetails 

@@ -52,5 +52,11 @@ namespace Oci.AnnouncementsService.Models
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
         
+        /// <value>
+        /// Additional properties associated with the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalProperties")]
+        public System.Collections.Generic.List<Property> AdditionalProperties { get; set; }
+        
     }
 }

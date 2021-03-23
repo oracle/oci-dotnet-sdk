@@ -61,10 +61,38 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOneTitle")]
         public string TimeOneTitle { get; set; }
+                ///
+        /// <value>
+        /// The type of a time associated with an initial time value. If the `timeOneTitle` attribute is present, then the `timeOneTitle` attribute contains a label of `timeOneType` in English.
+        /// Example: START_TIME
+        /// </value>
+        ///
+        public enum TimeOneTypeEnum {
+            [EnumMember(Value = "ACTION_REQUIRED_BY")]
+            ActionRequiredBy,
+            [EnumMember(Value = "NEW_START_TIME")]
+            NewStartTime,
+            [EnumMember(Value = "ORIGINAL_END_TIME")]
+            OriginalEndTime,
+            [EnumMember(Value = "REPORT_DATE")]
+            ReportDate,
+            [EnumMember(Value = "START_TIME")]
+            StartTime,
+            [EnumMember(Value = "TIME_DETECTED")]
+            TimeDetected
+        };
+
+        /// <value>
+        /// The type of a time associated with an initial time value. If the `timeOneTitle` attribute is present, then the `timeOneTitle` attribute contains a label of `timeOneType` in English.
+        /// Example: START_TIME
+        /// </value>
+        [JsonProperty(PropertyName = "timeOneType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TimeOneTypeEnum> TimeOneType { get; set; }
         
         /// <value>
-        /// The actual value of the first time value for the event. Typically, this is the time an event started, but the meaning
-        /// can vary, depending on the announcement type.
+        /// The actual value of the first time value for the event. Typically, this denotes the time an event started, but the meaning
+        /// can vary, depending on the announcement type. The `timeOneType` attribute describes the meaning.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeOneValue")]
@@ -76,10 +104,30 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeTwoTitle")]
         public string TimeTwoTitle { get; set; }
+                ///
+        /// <value>
+        /// The type of a time associated with second time value. If the `timeTwoTitle` attribute is present, then the `timeTwoTitle` attribute contains a label of `timeTwoType` in English.
+        /// Example: END_TIME
+        /// </value>
+        ///
+        public enum TimeTwoTypeEnum {
+            [EnumMember(Value = "END_TIME")]
+            EndTime,
+            [EnumMember(Value = "NEW_END_TIME")]
+            NewEndTime
+        };
+
+        /// <value>
+        /// The type of a time associated with second time value. If the `timeTwoTitle` attribute is present, then the `timeTwoTitle` attribute contains a label of `timeTwoType` in English.
+        /// Example: END_TIME
+        /// </value>
+        [JsonProperty(PropertyName = "timeTwoType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TimeTwoTypeEnum> TimeTwoType { get; set; }
         
         /// <value>
-        /// The actual value of the second time value. Typically, this is the time an event ended, but the meaning
-        /// can vary, depending on the announcement type.
+        /// The actual value of the second time value. Typically, this denotes the time an event ended, but the meaning
+        /// can vary, depending on the announcement type. The `timeTwoType` attribute describes the meaning.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeTwoValue")]

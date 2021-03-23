@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Instance data along with the lifecycleState of instance to instance pool attachment.
+    /// Information about an instance that belongs to an instance pool.
     /// </summary>
     public class InstancePoolInstance 
     {
         
         /// <value>
-        /// The OCID of the instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the instance pool.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
                 ///
         /// <value>
-        /// the lifecycle state of the instance in the instance pool
+        /// The attachment state of the instance in relation to the instance pool.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// the lifecycle state of the instance in the instance pool
+        /// The attachment state of the instance in relation to the instance pool.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,9 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the
+        /// instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -98,7 +100,9 @@ namespace Oci.CoreService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The OCID of the instance configuration used to create the instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance configuration
+        /// used to create the instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -118,10 +122,8 @@ namespace Oci.CoreService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// The shape of an instance. The shape determines the number of CPUs, amount of memory,
+        /// The shape of the instance. The shape determines the number of CPUs, amount of memory,
         /// and other resources allocated to the instance.
-        /// <br/>
-        /// You can enumerate all available shapes by calling {@link #listShapes(ListShapesRequest) listShapes}.
         /// 
         /// </value>
         /// <remarks>
@@ -132,7 +134,7 @@ namespace Oci.CoreService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The lifecycleState of the underlying instance. Refer lifecycleState in {@link Instance}
+        /// The lifecycle state of the instance. Refer to `lifecycleState` in the {@link Instance} resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -153,7 +155,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The load balancer backends that are configured for the instance pool instance.
+        /// The load balancer backends that are configured for the instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "loadBalancerBackends")]

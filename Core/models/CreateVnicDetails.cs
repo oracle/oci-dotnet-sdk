@@ -45,14 +45,14 @@ namespace Oci.CoreService.Models
         /// about the public IP limits, see
         /// [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
         /// <br/>
-        /// Example: falseIf you specify a vlanId, the assignPublicIp is required to be set to false. See{@link Vlan}.
+        /// Example: falseIf you specify a vlanId, then assignPublicIp must be set to false. See{@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "assignPublicIp")]
         public System.Nullable<bool> AssignPublicIp { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
-        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
@@ -69,7 +69,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
-        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
@@ -96,7 +96,7 @@ namespace Oci.CoreService.Models
         /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// If you provide both, the values must match.
         /// <br/>
-        /// Example: bminstance-1If you specify a vlanId, the hostnameLabel cannot be specified. vnics on a Vlancan not be assigned a hostname  See {@link Vlan}.
+        /// Example: bminstance-1If you specify a vlanId, the hostnameLabel cannot be specified. VNICs on a VLANcan not be assigned a hostname. See {@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }

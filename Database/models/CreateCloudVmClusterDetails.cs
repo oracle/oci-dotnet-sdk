@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for the create cloud VM cluster operation. Applies to Exadata Cloud Service instances only. 
+    /// Details for the create cloud VM cluster operation. Applies to Exadata Cloud Service instances only.
     /// 
     /// </summary>
     public class CreateCloudVmClusterDetails 
@@ -128,8 +128,8 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// A domain name used for the cloud VM cluster. If the Oracle-provided internet and VCN
         /// resolver is enabled for the specified subnet, the domain name for the subnet is used
-        /// (do not provide one). Otherwise, provide a valid DNS domain name. Hyphens (-) are not permitted. 
-        /// Applies to Exadata Cloud Service instances only. 
+        /// (do not provide one). Otherwise, provide a valid DNS domain name. Hyphens (-) are not permitted.
+        /// Applies to Exadata Cloud Service instances only.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "domain")]
@@ -166,7 +166,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// If true, the sparse disk group is configured for the cloud VM cluster. If false, the sparse disk group is not created. 
+        /// If true, the sparse disk group is configured for the cloud VM cluster. If false, the sparse disk group is not created.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isSparseDiskgroupEnabled")]

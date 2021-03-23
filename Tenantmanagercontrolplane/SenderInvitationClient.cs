@@ -105,7 +105,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Creates a sender invitation and asynchronously sends the invitation to recipient.
+        /// Creates a sender invitation and asynchronously sends the invitation to the recipient.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

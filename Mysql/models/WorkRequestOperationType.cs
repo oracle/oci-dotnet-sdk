@@ -41,6 +41,20 @@ namespace Oci.MysqlService.Models
       [EnumMember(Value = "RESTART_ANALYTICS_CLUSTER")]
       RestartAnalyticsCluster,
       [EnumMember(Value = "GENERATE_ANALYTICS_CLUSTER_MEMORY_ESTIMATE")]
-      GenerateAnalyticsClusterMemoryEstimate
+      GenerateAnalyticsClusterMemoryEstimate,
+      [EnumMember(Value = "ADD_HEATWAVE_CLUSTER")]
+      AddHeatwaveCluster,
+      [EnumMember(Value = "UPDATE_HEATWAVE_CLUSTER")]
+      UpdateHeatwaveCluster,
+      [EnumMember(Value = "DELETE_HEATWAVE_CLUSTER")]
+      DeleteHeatwaveCluster,
+      [EnumMember(Value = "START_HEATWAVE_CLUSTER")]
+      StartHeatwaveCluster,
+      [EnumMember(Value = "STOP_HEATWAVE_CLUSTER")]
+      StopHeatwaveCluster,
+      [EnumMember(Value = "RESTART_HEATWAVE_CLUSTER")]
+      RestartHeatwaveCluster,
+      [EnumMember(Value = "GENERATE_HEATWAVE_CLUSTER_MEMORY_ESTIMATE")]
+      GenerateHeatwaveClusterMemoryEstimate
   }
 }

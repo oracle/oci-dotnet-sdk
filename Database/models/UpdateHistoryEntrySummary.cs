@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The record of an maintenance update action on a specified cloud VM cluster. Applies to Exadata Cloud Service instances only. 
+    /// The record of an maintenance update action on a specified cloud VM cluster. Applies to Exadata Cloud Service instances only.
     /// 
     /// </summary>
     public class UpdateHistoryEntrySummary 

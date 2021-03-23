@@ -60,7 +60,9 @@ namespace Oci.MysqlService.Models
             [EnumMember(Value = "DBSYSTEM")]
             Dbsystem,
             [EnumMember(Value = "ANALYTICSCLUSTER")]
-            Analyticscluster
+            Analyticscluster,
+            [EnumMember(Value = "HEATWAVECLUSTER")]
+            Heatwavecluster
         };
 
         /// <value>

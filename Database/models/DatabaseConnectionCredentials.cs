@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Credentials used to connect to the database.
+    /// Credentials used to connect to the database. Currently only the `DETAILS` type is supported for creating MACS connector crendentials.
     /// 
     /// </summary>
     [JsonConverter(typeof(DatabaseConnectionCredentialsModelConverter))]
