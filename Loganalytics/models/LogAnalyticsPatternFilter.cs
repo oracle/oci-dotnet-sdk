@@ -25,37 +25,39 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsSourcePattern Pattern { get; set; }
         
         /// <value>
-        /// agent version
+        /// The agent version.
         /// </value>
         [JsonProperty(PropertyName = "agentVersion")]
         public string AgentVersion { get; set; }
         
         /// <value>
-        /// is in use flag
+        /// A flag indicating whether or not the pattern filter is currently
+        /// in use.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isInUse")]
         public System.Nullable<bool> IsInUse { get; set; }
         
         /// <value>
-        /// operating system
+        /// The operating system.
         /// </value>
         [JsonProperty(PropertyName = "operatingSystem")]
         public string OperatingSystem { get; set; }
         
         /// <value>
-        /// pattern Id
+        /// The pattern unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "patternId")]
         public System.Nullable<long> PatternId { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// version
+        /// The pattern filter version.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }

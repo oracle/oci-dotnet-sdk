@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Forcast configuration of usage/cost.
+    /// Forecast configuration of usage/cost.
     /// </summary>
     public class Forecast 
     {
@@ -25,7 +25,7 @@ namespace Oci.UsageapiService.Models
         /// BASIC uses ETS to project future usage/cost based on history data. The basis for projections will be a rolling set of equivalent historical days for which projection is being made.
         /// </value>
         ///
-        public enum ForcastTypeEnum {
+        public enum ForecastTypeEnum {
             [EnumMember(Value = "BASIC")]
             Basic
         };
@@ -33,17 +33,13 @@ namespace Oci.UsageapiService.Models
         /// <value>
         /// BASIC uses ETS to project future usage/cost based on history data. The basis for projections will be a rolling set of equivalent historical days for which projection is being made.
         /// </value>
-        [JsonProperty(PropertyName = "forcastType")]
+        [JsonProperty(PropertyName = "forecastType")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ForcastTypeEnum> ForcastType { get; set; }
+        public System.Nullable<ForecastTypeEnum> ForecastType { get; set; }
         
         /// <value>
-        /// forecast start time.
+        /// forecast start time. Will default to UTC-1 if not specified
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeForecastStarted is required.")]
         [JsonProperty(PropertyName = "timeForecastStarted")]
         public System.Nullable<System.DateTime> TimeForecastStarted { get; set; }
         

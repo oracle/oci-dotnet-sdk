@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of label operators
+        /// An array of of label operators.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsLabelOperator> Items { get; set; }

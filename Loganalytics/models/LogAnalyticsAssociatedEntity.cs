@@ -22,37 +22,37 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// entity guid
+        /// The entity unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
         
         /// <value>
-        /// entity name
+        /// The entity name.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
         
         /// <value>
-        /// entity type
+        /// The entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// entity type display name
+        /// The entity type display name.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }
         
         /// <value>
-        /// on host
+        /// The host associated with the entity.
         /// </value>
         [JsonProperty(PropertyName = "onHost")]
         public string OnHost { get; set; }
         
         /// <value>
-        /// associationCount
+        /// The association count for the entity.
         /// </value>
         [JsonProperty(PropertyName = "associationCount")]
         public System.Nullable<long> AssociationCount { get; set; }

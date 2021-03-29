@@ -57,7 +57,7 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<bool> IsForce { get; set; }
         
         /// <value>
-        /// Character Encoding
+        /// The character encoding of the uploaded file.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "charEncoding")]
         public string CharEncoding { get; set; }

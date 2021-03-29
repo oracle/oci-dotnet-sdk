@@ -16,19 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// DeleteLogAnalyticsAssociationDetails
+    /// The information required to delete a list of associations.
+    /// 
     /// </summary>
     public class DeleteLogAnalyticsAssociationDetails 
     {
         
         /// <value>
-        /// compartmentId
+        /// The compartment ID
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// list of rule entity association details
+        /// The information required to delete an association.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<DeleteLogAnalyticsAssociation> Items { get; set; }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information required to change a log group compartment.
     /// 
     /// </summary>
     public class ChangeLogAnalyticsLogGroupCompartmentDetails 

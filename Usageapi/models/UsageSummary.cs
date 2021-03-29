@@ -192,6 +192,12 @@ namespace Oci.UsageapiService.Models
         public string Overage { get; set; }
         
         /// <value>
+        /// is forecasted data
+        /// </value>
+        [JsonProperty(PropertyName = "isForecast")]
+        public System.Nullable<bool> IsForecast { get; set; }
+        
+        /// <value>
         /// For grouping, a tag definition. For filtering, a definition and key.
         /// </value>
         [JsonProperty(PropertyName = "tags")]

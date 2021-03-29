@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// Tenant ID
+        /// Tenant ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,6 +92,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }
+        
+        [JsonProperty(PropertyName = "forecast")]
+        public Forecast Forecast { get; set; }
                 ///
         /// <value>
         /// The query usage type. COST by default if it is missing

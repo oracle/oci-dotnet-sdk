@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// id
+        /// The parser filter unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -31,31 +31,32 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsParser Parser { get; set; }
         
         /// <value>
-        /// agent version
+        /// The agent version.
         /// </value>
         [JsonProperty(PropertyName = "agentVersion")]
         public string AgentVersion { get; set; }
         
         /// <value>
-        /// is in use flag
+        /// A flag idicating whether or not hte filter is currently being used.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isInUse")]
         public System.Nullable<long> IsInUse { get; set; }
         
         /// <value>
-        /// operating system
+        /// The operating system.
         /// </value>
         [JsonProperty(PropertyName = "operatingSystem")]
         public string OperatingSystem { get; set; }
         
         /// <value>
-        /// parser Id
+        /// The parser unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "parserId")]
         public System.Nullable<long> ParserId { get; set; }
         
         /// <value>
-        /// version
+        /// The version.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }

@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Apmtraces", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Networkloadbalancer", "Networkloadbalancer\OCI.DotNetSDK.Networkloadbalancer.csproj", "{D5AC27B3-448D-41DD-A7DC-D83589D04CE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Vulnerabilityscanning", "Vulnerabilityscanning\OCI.DotNetSDK.Vulnerabilityscanning.csproj", "{AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1615,5 +1617,17 @@ Global
         {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x64.Build.0 = Release|Any CPU
         {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x86.ActiveCfg = Release|Any CPU
         {D5AC27B3-448D-41DD-A7DC-D83589D04CE0}.Release|x86.Build.0 = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|x64.Build.0 = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Debug|x86.Build.0 = Debug|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x64.ActiveCfg = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x64.Build.0 = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x86.ActiveCfg = Release|Any CPU
+        {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

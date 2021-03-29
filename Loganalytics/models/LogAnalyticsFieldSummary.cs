@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// summary of fields
+    /// A summary of a field.
     /// </summary>
     public class LogAnalyticsFieldSummary 
     {
@@ -30,121 +30,133 @@ namespace Oci.LoganalyticsService.Models
         public string CeeAlias { get; set; }
         
         /// <value>
-        /// data type
+        /// The field data type.
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
         
         /// <value>
-        /// default regular expression
+        /// The field default regular expression.
         /// </value>
         [JsonProperty(PropertyName = "regularExpression")]
         public string RegularExpression { get; set; }
         
         /// <value>
-        /// description
+        /// The field description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The field display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// edit version
+        /// The field edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// facet priority
+        /// The facet priority.
         /// </value>
         [JsonProperty(PropertyName = "facetPriority")]
         public System.Nullable<long> FacetPriority { get; set; }
         
         /// <value>
-        /// internal name
+        /// The field internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// is facet eligible flag
+        /// A flag inidcating whether or not the facet is elibigle for use.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isFacetEligible")]
         public System.Nullable<bool> IsFacetEligible { get; set; }
         
         /// <value>
-        /// is high cardinality flag
+        /// A flag inidcating whether or not the cardinality of the field is high.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isHighCardinality")]
         public System.Nullable<bool> IsHighCardinality { get; set; }
         
         /// <value>
-        /// is larget data flag
+        /// A flag inidcating whether or not the field is a large data field.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isLargeData")]
         public System.Nullable<bool> IsLargeData { get; set; }
         
         /// <value>
-        /// is multi-valued flag
+        /// A flag indicating whether or not the field is multi-valued.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
         
         /// <value>
-        /// is primary flag
+        /// A flag inidcating whether or not this is a primary field.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// is summarizable flag
+        /// A flag inidcating whether or not the field can be summarized.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSummarizable")]
         public System.Nullable<bool> IsSummarizable { get; set; }
         
         /// <value>
-        /// mappable
+        /// The mapped value.
         /// </value>
         [JsonProperty(PropertyName = "mappedValue")]
         public string MappedValue { get; set; }
         
         /// <value>
-        /// metric key eligible
+        /// A flag inidcating whether or not the field is metric key eligible.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMetricKeyEligible")]
         public System.Nullable<bool> IsMetricKeyEligible { get; set; }
         
         /// <value>
-        /// metric value eligible
+        /// A flag inidcating whether or not the field is metric value eligible.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMetricValueEligible")]
         public System.Nullable<bool> IsMetricValueEligible { get; set; }
         
         /// <value>
-        /// range facet eligible
+        /// A flag inidcating whether or not the field is range facet eligible.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "rangeFacetEligible")]
         public System.Nullable<long> RangeFacetEligible { get; set; }
         
         /// <value>
-        /// table eligible
+        /// A flag inidcating whether or not the field is table eligible.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isTableEligible")]
         public System.Nullable<bool> IsTableEligible { get; set; }
         
         /// <value>
-        /// unit type
+        /// The field unit type.
         /// </value>
         [JsonProperty(PropertyName = "unitType")]
         public string UnitType { get; set; }

@@ -41,13 +41,17 @@ namespace Oci.LoganalyticsService.Requests
         public UpsertLogAnalyticsSourceDetails UpsertLogAnalyticsSourceDetails { get; set; }
         
         /// <value>
-        /// create like sourceId
+        /// The unique identifier of the source to use as the reference for a create like
+        /// operation.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "createLikeSourceId")]
         public System.Nullable<int> CreateLikeSourceId { get; set; }
         
         /// <value>
-        /// is incremental
+        /// A flag indicating whether or not the update of a source is incremental or not.  If incremental,
+        /// the name of the source must be specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isIncremental")]
         public System.Nullable<bool> IsIncremental { get; set; }

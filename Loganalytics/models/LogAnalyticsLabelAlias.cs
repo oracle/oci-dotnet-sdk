@@ -22,37 +22,39 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// alias
+        /// The alias.
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
         
         /// <value>
-        /// alias display name
+        /// The alias display name.
         /// </value>
         [JsonProperty(PropertyName = "aliasDisplayName")]
         public string AliasDisplayName { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// label display name
+        /// The label display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// label name
+        /// The label name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// priority
+        /// The label priority. Default value is NONE.
         /// </value>
         ///
         public enum PriorityEnum {
@@ -67,7 +69,7 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// priority
+        /// The label priority. Default value is NONE.
         /// </value>
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]

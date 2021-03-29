@@ -31,7 +31,9 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// label name
+        /// The label name used for filtering.  Only items with, or associated with, the
+        /// specified label name will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelName")]
         public string LabelName { get; set; }
@@ -70,7 +72,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by source displayname
+        /// The attribute used to sort the returned sources
         /// </value>
         ///
         public enum LabelSourceSortByEnum {
@@ -81,7 +83,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by source displayname
+        /// The attribute used to sort the returned sources
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelSourceSortBy")]
         public System.Nullable<LabelSourceSortByEnum> LabelSourceSortBy { get; set; }

@@ -22,25 +22,26 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// is enabled flag
+        /// A flag specifying whether or not the metric source is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMetricSourceEnabled")]
         public System.Nullable<bool> IsMetricSourceEnabled { get; set; }
         
         /// <value>
-        /// metric name
+        /// The metric name.
         /// </value>
         [JsonProperty(PropertyName = "metricName")]
         public string MetricName { get; set; }
         
         /// <value>
-        /// source internal name
+        /// The source internal name.
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
         
         /// <value>
-        /// entity type
+        /// The entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }

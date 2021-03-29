@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The dimension used for filtering. availabe dimension are \"service\", \"skuName\", \"skuPartNumber\", \"unit\", \"compartmentName\", \"compartmentPath\", \"compartmentId\", \"platform\", \"region\", \"logicalAd\", \"resourceId\", \"tenantId\", \"tenantName\"
-    /// Example: [{value: &quot;COMPUTE&quot;, key: &quot;service&quot;}]
+    /// The dimension used for filtering. Availabe dimensions are: \"service\", \"skuName\", \"skuPartNumber\", \"unit\", \"compartmentName\", \"compartmentPath\", \"compartmentId\", \"platform\", \"region\", \"logicalAd\", \"resourceId\", \"tenantId\", \"tenantName\".
+    /// For Example: [{value: &quot;COMPUTE&quot;, key: &quot;service&quot;}]
     /// </summary>
     public class Dimension 
     {

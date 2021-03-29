@@ -22,19 +22,19 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// non out-of-the-box count
+        /// The count of custom (user defined) sources.
         /// </value>
         [JsonProperty(PropertyName = "nonOobCount")]
         public System.Nullable<int> NonOobCount { get; set; }
         
         /// <value>
-        /// count of sources set to auto-associate
+        /// The count of sources set to auto-associate.
         /// </value>
         [JsonProperty(PropertyName = "autoAssociationSourceCount")]
         public System.Nullable<int> AutoAssociationSourceCount { get; set; }
         
         /// <value>
-        /// out-of-the-box count
+        /// The count of built in sources.
         /// </value>
         [JsonProperty(PropertyName = "oobCount")]
         public System.Nullable<int> OobCount { get; set; }

@@ -22,31 +22,31 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// additional info
+        /// Additional information for the test result.
         /// </value>
         [JsonProperty(PropertyName = "additionalInfo")]
         public System.Collections.Generic.Dictionary<string, string> AdditionalInfo { get; set; }
         
         /// <value>
-        /// entries
+        /// The test result log entries.
         /// </value>
         [JsonProperty(PropertyName = "entries")]
         public System.Collections.Generic.List<AbstractParserTestResultLogEntry> Entries { get; set; }
         
         /// <value>
-        /// example content
+        /// The example content.
         /// </value>
         [JsonProperty(PropertyName = "exampleContent")]
         public string ExampleContent { get; set; }
         
         /// <value>
-        /// lines
+        /// The test result log lines.
         /// </value>
         [JsonProperty(PropertyName = "lines")]
         public System.Collections.Generic.List<AbstractParserTestResultLogLine> Lines { get; set; }
         
         /// <value>
-        /// named capture groups
+        /// The named capture groups.
         /// </value>
         [JsonProperty(PropertyName = "namedCaptureGroups")]
         public System.Collections.Generic.List<string> NamedCaptureGroups { get; set; }

@@ -22,25 +22,27 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// edit version
+        /// The edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// label name
+        /// The label name.
         /// </value>
         [JsonProperty(PropertyName = "labelName")]
         public string LabelName { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// column name
+        /// The column name from a SQL query.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

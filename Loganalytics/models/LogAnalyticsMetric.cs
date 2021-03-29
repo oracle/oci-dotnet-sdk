@@ -22,85 +22,90 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// aggregation field
+        /// The aggregation field.
         /// </value>
         [JsonProperty(PropertyName = "aggregationField")]
         public string AggregationField { get; set; }
         
         /// <value>
-        /// bucket metadata
+        /// The bucket metadata.
         /// </value>
         [JsonProperty(PropertyName = "bucketMetadata")]
         public string BucketMetadata { get; set; }
         
         /// <value>
-        /// clock period
+        /// The clock period.
         /// </value>
         [JsonProperty(PropertyName = "clockPeriod")]
         public string ClockPeriod { get; set; }
         
         /// <value>
-        /// description
+        /// The metric description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// edit version
+        /// The metric edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// field name
+        /// The field name.
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
         
         /// <value>
-        /// field value array
+        /// The field values.
         /// </value>
         [JsonProperty(PropertyName = "fieldValues")]
         public System.Collections.Generic.List<string> FieldValues { get; set; }
         
         /// <value>
-        /// grouping fields
+        /// The grouping fields.
         /// </value>
         [JsonProperty(PropertyName = "groupingField")]
         public string GroupingField { get; set; }
         
         /// <value>
-        /// is enabled flag
+        /// A flag inidcating whether or not the metric is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// metric display name
+        /// The metric display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// metric Id
+        /// The metric unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "metricReference")]
         public System.Nullable<long> MetricReference { get; set; }
         
         /// <value>
-        /// name
+        /// The metric name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// metric type
+        /// The metric type, specifying the type of aggreation to perform.  Default value
+        /// is COUNT.
+        /// 
         /// </value>
         ///
         public enum MetricTypeEnum {
@@ -119,20 +124,23 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// metric type
+        /// The metric type, specifying the type of aggreation to perform.  Default value
+        /// is COUNT.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "metricType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MetricTypeEnum> MetricType { get; set; }
         
         /// <value>
-        /// is metric source map enabled flag
+        /// A flag specifying whether or not the metric source is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMetricSourceEnabled")]
         public System.Nullable<bool> IsMetricSourceEnabled { get; set; }
                 ///
         /// <value>
-        /// operator
+        /// The metric operator.
         /// </value>
         ///
         public enum OperatorEnum {
@@ -147,38 +155,39 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// operator
+        /// The metric operator.
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
         
         /// <value>
-        /// sources
+        /// The metric sources.
         /// </value>
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<LogAnalyticsSource> Sources { get; set; }
         
         /// <value>
-        /// entity type
+        /// The entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// last updated date
+        /// The last updated date.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// unit type
+        /// The unit type.
         /// </value>
         [JsonProperty(PropertyName = "unitType")]
         public string UnitType { get; set; }
         
         /// <value>
-        /// user customized
+        /// A flag specifying whether or not this is a custom (user defined) metric.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isUserCustomized")]
         public System.Nullable<bool> IsUserCustomized { get; set; }

@@ -31,7 +31,8 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// parserName
+        /// The parser name used for filtering.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserName")]
         public string ParserName { get; set; }
@@ -50,7 +51,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned items
         /// </value>
         ///
         public enum SortByEnum {
@@ -59,7 +60,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned items
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// association count
+        /// The association count.
         /// </value>
         [JsonProperty(PropertyName = "associationCount")]
         public System.Nullable<int> AssociationCount { get; set; }

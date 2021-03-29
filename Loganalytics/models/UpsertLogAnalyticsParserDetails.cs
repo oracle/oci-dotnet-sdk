@@ -22,133 +22,151 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// content
+        /// The content.
         /// </value>
         [JsonProperty(PropertyName = "content")]
         public string Content { get; set; }
         
         /// <value>
-        /// description
+        /// The parser description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The parser display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// edit version
+        /// The parser edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// encoding
+        /// The encoding.
         /// </value>
         [JsonProperty(PropertyName = "encoding")]
         public string Encoding { get; set; }
         
         /// <value>
-        /// example content
+        /// Example content.
         /// </value>
         [JsonProperty(PropertyName = "exampleContent")]
         public string ExampleContent { get; set; }
         
         /// <value>
-        /// fields Maps
+        /// The parser fields.
         /// </value>
         [JsonProperty(PropertyName = "fieldMaps")]
         public System.Collections.Generic.List<LogAnalyticsParserField> FieldMaps { get; set; }
         
         /// <value>
-        /// footer regular expression
+        /// The footer regular expression.
         /// </value>
         [JsonProperty(PropertyName = "footerContent")]
         public string FooterContent { get; set; }
         
         /// <value>
-        /// header content
+        /// The header content.
         /// </value>
         [JsonProperty(PropertyName = "headerContent")]
         public string HeaderContent { get; set; }
         
         /// <value>
-        /// Name
+        /// The parser internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// is default flag
+        /// A flag indicating if this is a default parser.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// is single line content
+        /// A flag indicating if this is a single line content parser.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSingleLineContent")]
         public System.Nullable<bool> IsSingleLineContent { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// language
+        /// The language.
         /// </value>
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
         
         /// <value>
-        /// log type test request version
+        /// The log type test request version.
         /// </value>
         [JsonProperty(PropertyName = "logTypeTestRequestVersion")]
         public System.Nullable<int> LogTypeTestRequestVersion { get; set; }
         
         /// <value>
-        /// parser ignore line characters
+        /// The line characters for the parser to ignore.
         /// </value>
         [JsonProperty(PropertyName = "parserIgnorelineCharacters")]
         public string ParserIgnorelineCharacters { get; set; }
         
         /// <value>
-        /// sequence
+        /// The parser sequence.
         /// </value>
         [JsonProperty(PropertyName = "parserSequence")]
         public System.Nullable<int> ParserSequence { get; set; }
         
         /// <value>
-        /// time zone
+        /// The time zone.
         /// </value>
         [JsonProperty(PropertyName = "parserTimezone")]
         public string ParserTimezone { get; set; }
         
         /// <value>
-        /// write once
+        /// A flag indicating whther or not the parser is write once.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isParserWrittenOnce")]
         public System.Nullable<bool> IsParserWrittenOnce { get; set; }
         
         /// <value>
-        /// plugin instance list
+        /// The parser function list.
         /// </value>
         [JsonProperty(PropertyName = "parserFunctions")]
         public System.Collections.Generic.List<LogAnalyticsParserFunction> ParserFunctions { get; set; }
         
         /// <value>
-        /// tokenize original text
+        /// A flag indicating whether or not to tokenize the original text.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldTokenizeOriginalText")]
         public System.Nullable<bool> ShouldTokenizeOriginalText { get; set; }
+        
+        /// <value>
+        /// The parser field delimiter.
+        /// </value>
+        [JsonProperty(PropertyName = "fieldDelimiter")]
+        public string FieldDelimiter { get; set; }
+        
+        /// <value>
+        /// The parser field qualifier.
+        /// </value>
+        [JsonProperty(PropertyName = "fieldQualifier")]
+        public string FieldQualifier { get; set; }
                 ///
         /// <value>
-        /// type
+        /// The parser type.  Default value is REGEX.
         /// </value>
         ///
         public enum TypeEnum {
@@ -159,11 +177,13 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "REGEX")]
             Regex,
             [EnumMember(Value = "ODL")]
-            Odl
+            Odl,
+            [EnumMember(Value = "DELIMITED")]
+            Delimited
         };
 
         /// <value>
-        /// type
+        /// The parser type.  Default value is REGEX.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]

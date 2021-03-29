@@ -129,6 +129,20 @@ namespace Oci.LoganalyticsService.Requests
         public string SourceId { get; set; }
         
         /// <value>
+        /// A filter to return only those log analytics entities with the specified auto-creation source.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationSourceType")]
+        public System.Collections.Generic.List<CreationSourceType> CreationSourceType { get; set; }
+        
+        /// <value>
+        /// A filter to return only log analytics entities whose auto-creation source details contains the specified string.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationSourceDetails")]
+        public string CreationSourceDetails { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

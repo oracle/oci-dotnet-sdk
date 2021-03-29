@@ -22,31 +22,34 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// field internal name
+        /// The field internal name.
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
         
         /// <value>
-        /// is enabled flag
+        /// A flag inidcating whether or not the source metadata field is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// key
+        /// The key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
         /// <value>
-        /// source internal name
+        /// The source internal name.
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }

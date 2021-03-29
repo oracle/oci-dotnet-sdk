@@ -22,49 +22,51 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// converted text
+        /// The converted text.
         /// </value>
         [JsonProperty(PropertyName = "convertedText")]
         public string ConvertedText { get; set; }
         
         /// <value>
-        /// parser Id
+        /// The parser unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "dbParserId")]
         public System.Nullable<long> DbParserId { get; set; }
         
         /// <value>
-        /// date time columns
+        /// The date time columns.
         /// </value>
         [JsonProperty(PropertyName = "dbPatternDateTimeColumns")]
         public string DbPatternDateTimeColumns { get; set; }
         
         /// <value>
-        /// date time field
+        /// The date time field.
         /// </value>
         [JsonProperty(PropertyName = "dbPatternDateTimeField")]
         public string DbPatternDateTimeField { get; set; }
         
         /// <value>
-        /// sequence column
+        /// The sequence column.
         /// </value>
         [JsonProperty(PropertyName = "dbPatternSequenceColumn")]
         public string DbPatternSequenceColumn { get; set; }
         
         /// <value>
-        /// field list
+        /// The parser field list.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<LogAnalyticsParserField> Fields { get; set; }
         
         /// <value>
-        /// is include flag
+        /// A flag indicating if this is source pattern is included.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isInclude")]
         public System.Nullable<bool> IsInclude { get; set; }
         
         /// <value>
-        /// is default flag
+        /// A flag indicating if this is the default source pattern.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }
@@ -73,61 +75,66 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsPatternFilter PatternFilter { get; set; }
         
         /// <value>
-        /// alias
+        /// The source pattern alias.
         /// </value>
         [JsonProperty(PropertyName = "alias")]
         public string Alias { get; set; }
         
         /// <value>
-        /// description
+        /// The source pattern description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// is enabled flag
+        /// A flag inidcating whether or not the source pattern is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// pattern Id
+        /// The source pattern unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "patternId")]
         public System.Nullable<long> PatternId { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// suppress agent warning
+        /// A flag indicating whether or not agent warnings are suppressed for
+        /// this source pattern.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isAgentWarningSuppressed")]
         public System.Nullable<bool> IsAgentWarningSuppressed { get; set; }
         
         /// <value>
-        /// pattern text
+        /// The pattern text.
         /// </value>
         [JsonProperty(PropertyName = "patternText")]
         public string PatternText { get; set; }
         
         /// <value>
-        /// pattern type
+        /// The pattern type.
         /// </value>
         [JsonProperty(PropertyName = "patternType")]
         public System.Nullable<long> PatternType { get; set; }
         
         /// <value>
-        /// source entity types
+        /// The source entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public System.Collections.Generic.List<string> EntityType { get; set; }

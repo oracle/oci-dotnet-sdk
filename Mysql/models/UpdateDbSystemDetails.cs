@@ -42,14 +42,34 @@ namespace Oci.MysqlService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The Availability Domain where the primary instance should be located.
+        /// If the policy is to enable high availability of the instance, by
+        /// maintaining secondary/failover capacity as necessary.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHighlyAvailable")]
+        public System.Nullable<bool> IsHighlyAvailable { get; set; }
+        
+        /// <value>
+        /// The availability domain on which to deploy the Read/Write endpoint. This defines the preferred primary instance.
+        /// <br/>
+        /// In a failover scenario, the Read/Write endpoint is redirected to one of the other availability domains
+        /// and the MySQL instance in that domain is promoted to the primary instance.
+        /// This redirection does not affect the IP address of the DB System in any way.
+        /// <br/>
+        /// For a standalone DB System, this defines the availability domain in which the DB System is placed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The name of the Fault Domain the DB System is located in.
+        /// The fault domain on which to deploy the Read/Write endpoint. This defines the preferred primary instance.
+        /// <br/>
+        /// In a failover scenario, the Read/Write endpoint is redirected to one of the other fault domains
+        /// and the MySQL instance in that domain is promoted to the primary instance.
+        /// This redirection does not affect the IP address of the DB System in any way.
+        /// <br/>
+        /// For a standalone DB System, this defines the fault domain in which the DB System is placed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]

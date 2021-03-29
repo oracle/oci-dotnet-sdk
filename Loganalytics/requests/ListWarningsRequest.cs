@@ -69,13 +69,15 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<WarningStateEnum> WarningState { get; set; }
         
         /// <value>
-        /// sourceName
+        /// The source name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceName")]
         public string SourceName { get; set; }
         
         /// <value>
-        /// sourcePattern
+        /// The source pattern used for filtering.  Only warnings associated with a source with the
+        /// specified pattern will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourcePattern")]
         public string SourcePattern { get; set; }
@@ -87,13 +89,17 @@ namespace Oci.LoganalyticsService.Requests
         public string WarningMessage { get; set; }
         
         /// <value>
-        /// entityName
+        /// The entity name used for filtering.  Only warnings associated with an entity with the
+        /// specified name will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityName")]
         public string EntityName { get; set; }
         
         /// <value>
-        /// entity type name
+        /// The entity type used for filtering.  Only associations on an entity with the
+        /// specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityType")]
         public string EntityType { get; set; }
@@ -105,7 +111,10 @@ namespace Oci.LoganalyticsService.Requests
         public string WarningType { get; set; }
         
         /// <value>
-        /// isNoSource
+        /// A flag indicating whether to filter warnings based on source display name or on warning level.
+        /// A value of true will filter based on warning level (rule, source, or pattern), while a
+        /// value of false will filter based on source display name.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isNoSource")]
         public System.Nullable<bool> IsNoSource { get; set; }

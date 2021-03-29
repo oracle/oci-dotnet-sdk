@@ -252,6 +252,100 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
+        /// Creates a replica for the vault in another region in the same realm
+        /// &lt;br/&gt;
+        /// The API is a no-op if called for same region that a vault is already replicated to.
+        /// 409 if called on a vault that is already replicated to a different region. Users need to delete
+        /// existing replica first before calling it with a different region.
+        /// &lt;br/&gt;
+        /// As a provisioning operation, this call is subject to a Key Management limit that applies to
+        /// the total number of requests across all provisioning write operations. Key Management might
+        /// throttle this call to reject an otherwise valid request when the total rate of provisioning
+        /// write operations exceeds 10 requests per second for a given tenancy.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/CreateVaultReplica.cs.html">here</a> to see an example of how to use CreateVaultReplica API.</example>
+        public async Task<CreateVaultReplicaResponse> CreateVaultReplica(CreateVaultReplicaRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createVaultReplica");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20180608/vaults/{vaultId}/actions/createReplica".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateVaultReplicaResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateVaultReplica failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes a vault replica
+        /// &lt;br/&gt;
+        /// As a provisioning operation, this call is subject to a Key Management limit that applies to
+        /// the total number of requests across all provisioning write operations. Key Management might
+        /// throttle this call to reject an otherwise valid request when the total rate of provisioning
+        /// write operations exceeds 10 requests per second for a given tenancy.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/DeleteVaultReplica.cs.html">here</a> to see an example of how to use DeleteVaultReplica API.</example>
+        public async Task<DeleteVaultReplicaResponse> DeleteVaultReplica(DeleteVaultReplicaRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteVaultReplica");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20180608/vaults/{vaultId}/actions/deleteReplica".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteVaultReplicaResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteVaultReplica failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets the specified vault&#39;s configuration information.
         /// &lt;br/&gt;
         /// As a provisioning operation, this call is subject to a Key Management limit that applies to
@@ -332,6 +426,51 @@ namespace Oci.KeymanagementService
             catch (Exception e)
             {
                 logger.Error($"GetVaultUsage failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the replicas for a vault
+        /// &lt;br/&gt;
+        /// As a provisioning operation, this call is subject to a Key Management limit that applies to
+        /// the total number of requests across all provisioning write operations. Key Management might
+        /// throttle this call to reject an otherwise valid request when the total rate of provisioning
+        /// write operations exceeds 10 requests per second for a given tenancy.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/ListVaultReplicas.cs.html">here</a> to see an example of how to use ListVaultReplicas API.</example>
+        public async Task<ListVaultReplicasResponse> ListVaultReplicas(ListVaultReplicasRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listVaultReplicas");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20180608/vaults/{vaultId}/actions/listReplicas".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListVaultReplicasResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListVaultReplicas failed with error: {e.Message}");
                 throw;
             }
         }

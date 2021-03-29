@@ -84,6 +84,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }
+        
+        [JsonProperty(PropertyName = "forecast")]
+        public Forecast Forecast { get; set; }
                 ///
         /// <value>
         /// The query usage type. COST by default if it is missing
@@ -117,8 +120,8 @@ namespace Oci.UsageapiService.Models
         public System.Collections.Generic.List<string> GroupBy { get; set; }
         
         /// <value>
-        /// GroupBy a specific tagKey. Provide tagNamespace and tagKey in tag object. Only support one tag in the list
-        /// Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
+        /// GroupBy a specific tagKey. Provide the tagNamespace and tagKey in the tag object. Only supports one tag in the list.
+        /// For Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupByTag")]
         public System.Collections.Generic.List<Tag> GroupByTag { get; set; }

@@ -22,70 +22,103 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// argument
+        /// The function argument.
         /// </value>
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<LogAnalyticsMetaFunctionArgument> Arguments { get; set; }
         
         /// <value>
-        /// enabled flag
+        /// A flag inidcating whether or not the source function is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         [JsonProperty(PropertyName = "function")]
         public LogAnalyticsMetaFunction Function { get; set; }
+                ///
+        /// <value>
+        /// The source function name
+        /// </value>
+        ///
+        public enum FunctionNameEnum {
+            [EnumMember(Value = "GEOLOCATION")]
+            Geolocation,
+            [EnumMember(Value = "LOOKUP")]
+            Lookup
+        };
+
+        /// <value>
+        /// The source function name
+        /// </value>
+        [JsonProperty(PropertyName = "functionName")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<FunctionNameEnum> FunctionName { get; set; }
         
         /// <value>
-        /// source function Id
+        /// The source function unique identifier as a string.
+        /// </value>
+        [JsonProperty(PropertyName = "functionReference")]
+        public string FunctionReference { get; set; }
+        
+        /// <value>
+        /// The source unique identifier as a string.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceReference")]
+        public string SourceReference { get; set; }
+        
+        /// <value>
+        /// The source function unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "functionId")]
         public System.Nullable<long> FunctionId { get; set; }
         
         /// <value>
-        /// source function order
+        /// The source function order.
         /// </value>
         [JsonProperty(PropertyName = "order")]
         public System.Nullable<long> Order { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// column
+        /// The lookup column.
         /// </value>
         [JsonProperty(PropertyName = "lookupColumn")]
         public string LookupColumn { get; set; }
         
         /// <value>
-        /// column position
+        /// The lookup column position.
         /// </value>
         [JsonProperty(PropertyName = "lookupColumnPosition")]
         public System.Nullable<long> LookupColumnPosition { get; set; }
         
         /// <value>
-        /// lookup display name
+        /// The lookup display name.
         /// </value>
         [JsonProperty(PropertyName = "lookupDisplayName")]
         public string LookupDisplayName { get; set; }
         
         /// <value>
-        /// lookup mode
+        /// The lookup  mode.
         /// </value>
         [JsonProperty(PropertyName = "lookupMode")]
         public System.Nullable<long> LookupMode { get; set; }
         
         /// <value>
-        /// lookup table
+        /// The lookup table.
         /// </value>
         [JsonProperty(PropertyName = "lookupTable")]
         public string LookupTable { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }

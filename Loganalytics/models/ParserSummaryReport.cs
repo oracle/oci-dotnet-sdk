@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// non out-of-the-box count
+        /// The count of custom (user defined) parsers.
         /// </value>
         [JsonProperty(PropertyName = "nonOobCount")]
         public System.Nullable<int> NonOobCount { get; set; }
         
         /// <value>
-        /// out-of-the-box count
+        /// The count of built in parsers.
         /// </value>
         [JsonProperty(PropertyName = "oobCount")]
         public System.Nullable<int> OobCount { get; set; }

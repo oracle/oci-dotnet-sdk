@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of extended field definitions
+        /// An array of extended field definitions.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsSourceExtendedFieldDefinition> Items { get; set; }

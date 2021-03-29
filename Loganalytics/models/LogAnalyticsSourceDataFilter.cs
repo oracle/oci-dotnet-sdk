@@ -22,85 +22,88 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// description
+        /// The filter description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The filter display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// edit version
+        /// The filter edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// enabled
+        /// A flag inidcating whether or not the filter is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// field internal name
+        /// The field internal name.
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
         
         /// <value>
-        /// hash type
+        /// The hash type.
         /// </value>
         [JsonProperty(PropertyName = "hashType")]
         public System.Nullable<int> HashType { get; set; }
         
         /// <value>
-        /// filter Id
+        /// The filter unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "dataFilterId")]
         public System.Nullable<long> DataFilterId { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// regular expression match
+        /// The regular expression for matching.
         /// </value>
         [JsonProperty(PropertyName = "matchRegularExpression")]
         public string MatchRegularExpression { get; set; }
         
         /// <value>
-        /// order
+        /// The filter order.
         /// </value>
         [JsonProperty(PropertyName = "order")]
         public System.Nullable<long> Order { get; set; }
         
         /// <value>
-        /// path
+        /// The filter path.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
         
         /// <value>
-        /// replacement string
+        /// The replacement string.
         /// </value>
         [JsonProperty(PropertyName = "replacementString")]
         public string ReplacementString { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
                 ///
         /// <value>
-        /// filterType
+        /// The filter type.
         /// </value>
         ///
         public enum FilterTypeEnum {
@@ -115,7 +118,7 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// filterType
+        /// The filter type.
         /// </value>
         [JsonProperty(PropertyName = "filterType")]
         [JsonConverter(typeof(StringEnumConverter))]

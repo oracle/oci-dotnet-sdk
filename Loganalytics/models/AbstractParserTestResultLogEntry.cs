@@ -22,43 +22,43 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// extra info attributes
+        /// Extra information attributes.
         /// </value>
         [JsonProperty(PropertyName = "extraInfoAttributes")]
         public System.Collections.Generic.Dictionary<string, string> ExtraInfoAttributes { get; set; }
         
         /// <value>
-        /// field name value map
+        /// The field name value map.
         /// </value>
         [JsonProperty(PropertyName = "fieldNameValueMap")]
         public System.Collections.Generic.Dictionary<string, string> FieldNameValueMap { get; set; }
         
         /// <value>
-        /// field position value map
+        /// The field position value map.
         /// </value>
         [JsonProperty(PropertyName = "fieldPositionValueMap")]
         public System.Collections.Generic.Dictionary<string, string> FieldPositionValueMap { get; set; }
         
         /// <value>
-        /// fields
+        /// The parser fields.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.Dictionary<string, string> Fields { get; set; }
         
         /// <value>
-        /// log entry
+        /// The log entry.
         /// </value>
         [JsonProperty(PropertyName = "logEntry")]
         public string LogEntry { get; set; }
         
         /// <value>
-        /// match status
+        /// The match status.
         /// </value>
         [JsonProperty(PropertyName = "matchStatus")]
         public string MatchStatus { get; set; }
         
         /// <value>
-        /// match status description
+        /// The match status description.
         /// </value>
         [JsonProperty(PropertyName = "matchStatusDescription")]
         public string MatchStatusDescription { get; set; }

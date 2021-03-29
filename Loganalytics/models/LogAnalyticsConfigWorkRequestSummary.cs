@@ -22,19 +22,22 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// workrequest id
+        /// The workrequest unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// compartment id
+        /// The compartment unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// operation type
+        /// The operation type.  There are two classes of operations, association operations and
+        /// lookup operations.  Associations may be created or deleted, and lookup operations include
+        /// append, update and delete.
+        /// 
         /// </value>
         ///
         public enum OperationTypeEnum {
@@ -51,32 +54,37 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// operation type
+        /// The operation type.  There are two classes of operations, association operations and
+        /// lookup operations.  Associations may be created or deleted, and lookup operations include
+        /// append, update and delete.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
         
         /// <value>
-        /// percentage complete
+        /// The completion percentage.
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<long> PercentComplete { get; set; }
         
         /// <value>
-        /// when the work request finished
+        /// The time at which the work request finished.
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
         /// <value>
-        /// when the work request accepted
+        /// The time at which the work request was accepted.
         /// </value>
         [JsonProperty(PropertyName = "timeAccepted")]
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
                 ///
         /// <value>
-        /// status
+        /// The lifecycle status.  Valid values are ACCEPTED, IN_PROGRESS, SUCCEEDED
+        /// or FAILED.
+        /// 
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -91,7 +99,9 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// status
+        /// The lifecycle status.  Valid values are ACCEPTED, IN_PROGRESS, SUCCEEDED
+        /// or FAILED.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

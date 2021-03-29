@@ -46,5 +46,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
+        /// <value>
+        /// The last updated time.
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

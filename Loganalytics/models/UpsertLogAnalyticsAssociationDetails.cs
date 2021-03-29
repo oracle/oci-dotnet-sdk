@@ -16,19 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// UpsertLogAnalyticsAssociationDetails
+    /// The required information to update or create a list of associations.
+    /// 
     /// </summary>
     public class UpsertLogAnalyticsAssociationDetails 
     {
         
         /// <value>
-        /// compartmentId
+        /// The compartment ID
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// list of rule entity association details
+        /// The information required to create or update an association.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<UpsertLogAnalyticsAssociation> Items { get; set; }

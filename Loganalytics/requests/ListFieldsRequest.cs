@@ -31,26 +31,37 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// isMatchAll
+        /// A flag indicating how to handle filtering when multiple filter criteria are specified.
+        /// A value of true will always result in the most expansive list of items being returned.
+        /// For example, if two field lists are supplies as filter criteria, a value of true will
+        /// result in any item matching a field in either list being returned, while a value of
+        /// false will result in a list of items which only have fields contained in both input lists.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMatchAll")]
         public System.Nullable<bool> IsMatchAll { get; set; }
         
         /// <value>
-        /// comma delimited list of source ids
+        /// A list of source IDs used for filtering.  Only fields used by the specified
+        /// sources will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceIds")]
         public string SourceIds { get; set; }
         
         /// <value>
-        /// comma delimited list of source Names
+        /// A list of source names used for filtering.  Only fields used by the specified
+        /// sources will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceNames")]
         public string SourceNames { get; set; }
         
         ///
         /// <value>
-        /// parserType
+        /// The parser type used for filtering.  Only items with, or associated with, parsers
+        /// of the specified type will be returned.
+        /// 
         /// </value>
         ///
         public enum ParserTypeEnum {
@@ -61,23 +72,33 @@ namespace Oci.LoganalyticsService.Requests
             [EnumMember(Value = "XML")]
             Xml,
             [EnumMember(Value = "JSON")]
-            Json
+            Json,
+            [EnumMember(Value = "ODL")]
+            Odl,
+            [EnumMember(Value = "DELIMITED")]
+            Delimited
         };
 
         /// <value>
-        /// parserType
+        /// The parser type used for filtering.  Only items with, or associated with, parsers
+        /// of the specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserType")]
         public System.Nullable<ParserTypeEnum> ParserType { get; set; }
         
         /// <value>
-        /// comma delimited list of parser ids
+        /// A list of parser names used for filtering.  Only fields used by the specified
+        /// parsers will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserIds")]
         public string ParserIds { get; set; }
         
         /// <value>
-        /// comma delimited list of parser names
+        /// A list of parser names used for filtering.  Only fields used by the specified
+        /// parsers will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserNames")]
         public string ParserNames { get; set; }
@@ -128,7 +149,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned fields
         /// </value>
         ///
         public enum SortByEnum {
@@ -139,7 +160,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned fields
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

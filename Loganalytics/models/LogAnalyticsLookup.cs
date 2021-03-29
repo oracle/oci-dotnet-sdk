@@ -22,31 +22,31 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// active edit version
+        /// The active edit version.
         /// </value>
         [JsonProperty(PropertyName = "activeEditVersion")]
         public System.Nullable<long> ActiveEditVersion { get; set; }
         
         /// <value>
-        /// canonical link
+        /// The canonical link.
         /// </value>
         [JsonProperty(PropertyName = "canonicalLink")]
         public string CanonicalLink { get; set; }
         
         /// <value>
-        /// description
+        /// The lookup description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// edit version
+        /// The edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// fields
+        /// The lookup fields.
         /// </value>
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<LookupField> Fields { get; set; }
@@ -82,25 +82,29 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// iname
+        /// The lookup name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// is built in
+        /// A flag indicating if the lookup is custom (user-defined) or
+        /// built in.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isBuiltIn")]
         public System.Nullable<long> IsBuiltIn { get; set; }
         
         /// <value>
-        /// is hidden
+        /// A flag indicating if the lookup is hidden or not.  A hidden lookup will
+        /// not be returned in list operations by default.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isHidden")]
         public System.Nullable<bool> IsHidden { get; set; }
         
         /// <value>
-        /// name
+        /// The lookup display name.
         /// </value>
         [JsonProperty(PropertyName = "lookupDisplayName")]
         public string LookupDisplayName { get; set; }
@@ -112,7 +116,7 @@ namespace Oci.LoganalyticsService.Models
         public StatusSummary StatusSummary { get; set; }
         
         /// <value>
-        /// last updated date
+        /// The last updated date.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

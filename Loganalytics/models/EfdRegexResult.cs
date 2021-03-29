@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// baseFieldName
+        /// The base field name.
         /// </value>
         [JsonProperty(PropertyName = "baseFieldName")]
         public string BaseFieldName { get; set; }
         
         /// <value>
-        /// id
+        /// the unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Nullable<long> Id { get; set; }
@@ -37,43 +37,44 @@ namespace Oci.LoganalyticsService.Models
         public RegexMatchResult MatchResult { get; set; }
         
         /// <value>
-        /// parsedFieldCount
+        /// The parsed field count.
         /// </value>
         [JsonProperty(PropertyName = "parsedFieldCount")]
         public System.Nullable<int> ParsedFieldCount { get; set; }
         
         /// <value>
-        /// parsedFields
+        /// The parsed fields.
         /// </value>
         [JsonProperty(PropertyName = "parsedFields")]
         public System.Collections.Generic.Dictionary<string, string> ParsedFields { get; set; }
         
         /// <value>
-        /// regex
+        /// The regular expression.
         /// </value>
         [JsonProperty(PropertyName = "regex")]
         public string Regex { get; set; }
         
         /// <value>
-        /// status
+        /// The status.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
         
         /// <value>
-        /// statusDescription
+        /// The Status description.
         /// </value>
         [JsonProperty(PropertyName = "statusDescription")]
         public string StatusDescription { get; set; }
         
         /// <value>
-        /// isValidRegexSyntax
+        /// A flag indicating whether or not the regular expression is valid.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isValidRegexSyntax")]
         public System.Nullable<bool> IsValidRegexSyntax { get; set; }
         
         /// <value>
-        /// violations
+        /// The list of violations (if any).
         /// </value>
         [JsonProperty(PropertyName = "violations")]
         public System.Collections.Generic.List<Violation> Violations { get; set; }

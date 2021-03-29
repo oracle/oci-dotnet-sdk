@@ -104,5 +104,29 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        ///
+        /// <value>
+        /// Use this for filtering uploads w.r.t warnings. Only one value is allowed. If no value is specified then ALL is taken as default,
+        /// which means that all the uploads with and without warnings will be returned.
+        /// 
+        /// </value>
+        ///
+        public enum WarningsFilterEnum {
+            [EnumMember(Value = "WITH_WARNINGS")]
+            WithWarnings,
+            [EnumMember(Value = "WITHOUT_WARNINGS")]
+            WithoutWarnings,
+            [EnumMember(Value = "ALL")]
+            All
+        };
+
+        /// <value>
+        /// Use this for filtering uploads w.r.t warnings. Only one value is allowed. If no value is specified then ALL is taken as default,
+        /// which means that all the uploads with and without warnings will be returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "warningsFilter")]
+        public System.Nullable<WarningsFilterEnum> WarningsFilter { get; set; }
     }
 }

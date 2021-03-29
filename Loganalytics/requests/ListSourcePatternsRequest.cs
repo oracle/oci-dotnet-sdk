@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// source name
+        /// The source name.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,7 +60,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by source pattern text
+        /// The attribute used to sort the returned source patterns
         /// </value>
         ///
         public enum SortByEnum {
@@ -69,7 +69,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by source pattern text
+        /// The attribute used to sort the returned source patterns
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

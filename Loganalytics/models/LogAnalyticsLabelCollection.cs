@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// LogAnalytics Label Collection
+    /// A collection of LogAnalytics Labels.
     /// 
     /// </summary>
     public class LogAnalyticsLabelCollection 
     {
         
         /// <value>
-        /// Array of log analytics label summary.
+        /// An array of log analytics label summaries.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsLabelSummary> Items { get; set; }

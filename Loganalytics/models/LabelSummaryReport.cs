@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// non out-of-the-box count
+        /// The count of custom (user defined) labels.
         /// </value>
         [JsonProperty(PropertyName = "nonOobCount")]
         public System.Nullable<int> NonOobCount { get; set; }
         
         /// <value>
-        /// out-of-the-box count
+        /// The count of built in labels.
         /// </value>
         [JsonProperty(PropertyName = "oobCount")]
         public System.Nullable<int> OobCount { get; set; }

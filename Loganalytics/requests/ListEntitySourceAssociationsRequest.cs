@@ -48,20 +48,26 @@ namespace Oci.LoganalyticsService.Requests
         public string EntityId { get; set; }
         
         /// <value>
-        /// entity type name
+        /// The entity type used for filtering.  Only associations on an entity with the
+        /// specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// entity type display name
+        /// The entity type display name used for filtering.  Only items associated with the entity
+        /// with the specified type display name will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }
         
         ///
         /// <value>
-        /// Status
+        /// The life cycle state used for filtering.  Only associations with the specified
+        /// life cycle state will be returned.
+        /// 
         /// </value>
         ///
         public enum LifeCycleStateEnum {
@@ -78,13 +84,15 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Status
+        /// The life cycle state used for filtering.  Only associations with the specified
+        /// life cycle state will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifeCycleState")]
         public System.Nullable<LifeCycleStateEnum> LifeCycleState { get; set; }
         
         /// <value>
-        /// is Show Total
+        /// A flag indicating whether or not to return the total number of items returned.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isShowTotal")]
         public System.Nullable<bool> IsShowTotal { get; set; }
@@ -123,7 +131,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned associations
         /// </value>
         ///
         public enum SortByEnum {
@@ -136,7 +144,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned associations
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

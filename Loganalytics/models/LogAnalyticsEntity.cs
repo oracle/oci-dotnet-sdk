@@ -135,6 +135,9 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }
         
+        [JsonProperty(PropertyName = "creationSource")]
+        public CreationSource CreationSource { get; set; }
+        
         /// <value>
         /// The date and time the resource was created, in the format defined by RFC3339.
         /// 

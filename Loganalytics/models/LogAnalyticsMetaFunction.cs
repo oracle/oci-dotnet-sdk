@@ -22,43 +22,43 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// meta function argument object
+        /// An array of meta function arguments.
         /// </value>
         [JsonProperty(PropertyName = "metaFunctionArgument")]
         public System.Collections.Generic.List<LogAnalyticsMetaFunctionArgument> MetaFunctionArgument { get; set; }
         
         /// <value>
-        /// component
+        /// The component.
         /// </value>
         [JsonProperty(PropertyName = "component")]
         public string Component { get; set; }
         
         /// <value>
-        /// description
+        /// The description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// edit version
+        /// The edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// meta function Id
+        /// The meta function unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "metaFunctionId")]
         public System.Nullable<long> MetaFunctionId { get; set; }
         
         /// <value>
-        /// java class name
+        /// The java class name.
         /// </value>
         [JsonProperty(PropertyName = "javaClassName")]
         public string JavaClassName { get; set; }
         
         /// <value>
-        /// meta function name
+        /// The meta function name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

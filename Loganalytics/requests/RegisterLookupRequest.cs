@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// type - possible values are Lookup or Dictionary
+        /// The lookup type.  Valid values are Lookup or Dictionary.
         /// </value>
         ///
         public enum TypeEnum {
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// type - possible values are Lookup or Dictionary
+        /// The lookup type.  Valid values are Lookup or Dictionary.
         /// </value>
         /// <remarks>
         /// Required
@@ -71,19 +71,21 @@ namespace Oci.LoganalyticsService.Requests
         public string Name { get; set; }
         
         /// <value>
-        /// Description of the fields to get
+        /// The description for a created lookup.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Character Encoding
+        /// The character encoding of the uploaded file.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "charEncoding")]
         public string CharEncoding { get; set; }
         
         /// <value>
-        /// is hidden
+        /// A flag indicating whether or not the new lookup should be hidden.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isHidden")]
         public System.Nullable<bool> IsHidden { get; set; }

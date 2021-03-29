@@ -22,31 +22,31 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// indexes
+        /// The indices associated with regular expression violations.
         /// </value>
         [JsonProperty(PropertyName = "indexes")]
         public System.Collections.Generic.List<Indexes> Indexes { get; set; }
         
         /// <value>
-        /// ruleDescription
+        /// The rule description.
         /// </value>
         [JsonProperty(PropertyName = "ruleDescription")]
         public string RuleDescription { get; set; }
         
         /// <value>
-        /// ruleName
+        /// The rule name.
         /// </value>
         [JsonProperty(PropertyName = "ruleName")]
         public string RuleName { get; set; }
         
         /// <value>
-        /// ruleRemediation
+        /// The rule remediation.
         /// </value>
         [JsonProperty(PropertyName = "ruleRemediation")]
         public string RuleRemediation { get; set; }
                 ///
         /// <value>
-        /// ruleType
+        /// The rule type.  Either WARN or ERROR.
         /// </value>
         ///
         public enum RuleTypeEnum {
@@ -57,7 +57,7 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// ruleType
+        /// The rule type.  Either WARN or ERROR.
         /// </value>
         [JsonProperty(PropertyName = "ruleType")]
         [JsonConverter(typeof(StringEnumConverter))]

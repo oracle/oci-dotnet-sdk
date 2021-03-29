@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// type - possible values are xml or json
+        /// The parser type - possible values are XML or JSON.
         /// </value>
         ///
         public enum ParserTypeEnum {
@@ -53,7 +53,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// type - possible values are xml or json
+        /// The parser type - possible values are XML or JSON.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserType")]
         public System.Nullable<ParserTypeEnum> ParserType { get; set; }

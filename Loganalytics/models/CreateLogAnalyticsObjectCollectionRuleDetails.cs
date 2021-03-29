@@ -141,7 +141,7 @@ namespace Oci.LoganalyticsService.Models
         
         /// <value>
         /// The override is used to modify some important configuration properties for objects matching a specific pattern inside the bucket.
-        /// Supported propeties for override are - logSourceName, charEncoding.
+        /// Supported propeties for override are: logSourceName, charEncoding, entityId.
         /// Supported matchType for override are \"contains\".
         /// 
         /// </value>

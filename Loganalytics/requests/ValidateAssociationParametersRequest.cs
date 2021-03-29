@@ -74,7 +74,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned association parameters
         /// </value>
         ///
         public enum SortByEnum {
@@ -85,7 +85,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned association parameters
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

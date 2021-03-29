@@ -22,25 +22,25 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// parameter list
+        /// An array of plugin parameters.
         /// </value>
         [JsonProperty(PropertyName = "metaPluginParameters")]
         public System.Collections.Generic.List<LogAnalyticsParserMetaPluginParameter> MetaPluginParameters { get; set; }
         
         /// <value>
-        /// plugin description
+        /// The plugin description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// plugin display name
+        /// The plugin display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// plugin internal name
+        /// The plugin internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

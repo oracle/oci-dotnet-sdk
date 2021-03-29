@@ -41,7 +41,8 @@ namespace Oci.LoganalyticsService.Requests
         public LabelNames BasicDetails { get; set; }
         
         /// <value>
-        /// flag for whether or not to include information on deleted labels
+        /// A flag specifying whether or not to include information on deleted labels.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +85,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by label
+        /// The attribute used to sort the returned labels
         /// </value>
         ///
         public enum BasicLabelSortByEnum {
@@ -95,7 +96,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by label
+        /// The attribute used to sort the returned labels
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "basicLabelSortBy")]
         public System.Nullable<BasicLabelSortByEnum> BasicLabelSortBy { get; set; }
