@@ -166,7 +166,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
                 ///
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// The algorithm used by a key's key versions to encrypt or decrypt data.
         /// </value>
         ///
         public enum AlgorithmEnum {
@@ -179,7 +179,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// The algorithm used by a key's key versions to encrypt or decrypt data.
         /// </value>
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(StringEnumConverter))]

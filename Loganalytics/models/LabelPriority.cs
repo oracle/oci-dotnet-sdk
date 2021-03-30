@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Label Priority
+    /// The label priority.
     /// 
     /// </summary>
     public class LabelPriority 
     {
                 ///
         /// <value>
-        /// tag priority
+        /// The label priority. Default value is NONE.
         /// </value>
         ///
         public enum PriorityEnum {
@@ -38,7 +38,7 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// tag priority
+        /// The label priority. Default value is NONE.
         /// </value>
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]

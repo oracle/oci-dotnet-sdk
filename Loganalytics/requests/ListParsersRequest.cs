@@ -31,14 +31,21 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// isMatchAll
+        /// A flag indicating how to handle filtering when multiple filter criteria are specified.
+        /// A value of true will always result in the most expansive list of items being returned.
+        /// For example, if two field lists are supplies as filter criteria, a value of true will
+        /// result in any item matching a field in either list being returned, while a value of
+        /// false will result in a list of items which only have fields contained in both input lists.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMatchAll")]
         public System.Nullable<bool> IsMatchAll { get; set; }
         
         ///
         /// <value>
-        /// source type
+        /// The source type used for filtering.  Only parsers associated with a source of the
+        /// specified type will be returned.
+        /// 
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -53,26 +60,33 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// source type
+        /// The source type used for filtering.  Only parsers associated with a source of the
+        /// specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceType")]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
         
         /// <value>
-        /// parserName
+        /// The parser name used for filtering.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserName")]
         public string ParserName { get; set; }
         
         /// <value>
-        /// search by parser display name or description
+        /// The parser display text used for filtering.  Only parsers with the specified name
+        /// or description will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserDisplayText")]
         public string ParserDisplayText { get; set; }
         
         ///
         /// <value>
-        /// parserType
+        /// The parser type used for filtering.  Only items with, or associated with, parsers
+        /// of the specified type will be returned.
+        /// 
         /// </value>
         ///
         public enum ParserTypeEnum {
@@ -83,18 +97,26 @@ namespace Oci.LoganalyticsService.Requests
             [EnumMember(Value = "XML")]
             Xml,
             [EnumMember(Value = "JSON")]
-            Json
+            Json,
+            [EnumMember(Value = "ODL")]
+            Odl,
+            [EnumMember(Value = "DELIMITED")]
+            Delimited
         };
 
         /// <value>
-        /// parserType
+        /// The parser type used for filtering.  Only items with, or associated with, parsers
+        /// of the specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserType")]
         public System.Nullable<ParserTypeEnum> ParserType { get; set; }
         
         ///
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         ///
@@ -108,7 +130,9 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSystem")]
@@ -148,7 +172,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by parser
+        /// The attribute used to sort the returned parsers
         /// </value>
         ///
         public enum SortByEnum {
@@ -163,7 +187,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by parser
+        /// The attribute used to sort the returned parsers
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

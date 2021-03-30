@@ -198,5 +198,11 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "restoredFromKeyId")]
         public string RestoredFromKeyId { get; set; }
         
+        [JsonProperty(PropertyName = "replicaDetails")]
+        public KeyReplicaDetails ReplicaDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "isPrimary")]
+        public System.Nullable<bool> IsPrimary { get; set; }
+        
     }
 }

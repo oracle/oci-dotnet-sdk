@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// key
+        /// The key.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
         /// <value>
-        /// value
+        /// The value.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// ExportContent
+    /// The content to export.
     /// </summary>
     public class ExportContent 
     {
         
         /// <value>
-        /// fieldNames
+        /// The field names.
         /// </value>
         [JsonProperty(PropertyName = "fieldNames")]
         public System.Collections.Generic.List<string> FieldNames { get; set; }
         
         /// <value>
-        /// parserNames
+        /// The parser names.
         /// </value>
         [JsonProperty(PropertyName = "parserNames")]
         public System.Collections.Generic.List<string> ParserNames { get; set; }
         
         /// <value>
-        /// sourceNames
+        /// The source names.
         /// </value>
         [JsonProperty(PropertyName = "sourceNames")]
         public System.Collections.Generic.List<string> SourceNames { get; set; }

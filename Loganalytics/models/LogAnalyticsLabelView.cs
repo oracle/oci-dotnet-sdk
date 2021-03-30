@@ -22,73 +22,75 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// alias list
+        /// An arrya of label aliases.
         /// </value>
         [JsonProperty(PropertyName = "aliases")]
         public System.Collections.Generic.List<LogAnalyticsLabelAlias> Aliases { get; set; }
         
         /// <value>
-        /// alert rule usage count
+        /// The label alert rule usage count.
         /// </value>
         [JsonProperty(PropertyName = "countUsageInAlertRule")]
         public System.Nullable<long> CountUsageInAlertRule { get; set; }
         
         /// <value>
-        /// source usage count
+        /// The label source usage count.
         /// </value>
         [JsonProperty(PropertyName = "countUsageInSource")]
         public System.Nullable<long> CountUsageInSource { get; set; }
         
         /// <value>
-        /// id
+        /// The label unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public System.Object Id { get; set; }
         
         /// <value>
-        /// suggest type
+        /// The label suggestion type.
         /// </value>
         [JsonProperty(PropertyName = "suggestType")]
         public System.Nullable<long> SuggestType { get; set; }
         
         /// <value>
-        /// label description
+        /// The label description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// label display name
+        /// The label display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// tag edit version
+        /// The label edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// label impact
+        /// The label impact.
         /// </value>
         [JsonProperty(PropertyName = "impact")]
         public string Impact { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// label name
+        /// The label name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// priority
+        /// The label priority.  Default value is NONE.
         /// </value>
         ///
         public enum PriorityEnum {
@@ -103,26 +105,27 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// priority
+        /// The label priority.  Default value is NONE.
         /// </value>
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
         
         /// <value>
-        /// recommendation
+        /// The label recommendation.
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
         
         /// <value>
-        /// type
+        /// The label type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public System.Nullable<long> Type { get; set; }
         
         /// <value>
-        /// user deleted flag
+        /// A flag indicating whether or not the label has been deleted.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isUserDeleted")]
         public System.Nullable<bool> IsUserDeleted { get; set; }

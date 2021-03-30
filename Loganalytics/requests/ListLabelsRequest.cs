@@ -31,20 +31,26 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// label name
+        /// The label name used for filtering.  Only items with, or associated with, the
+        /// specified label name will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelName")]
         public string LabelName { get; set; }
         
         /// <value>
-        /// search by label display name or description
+        /// The label display text used for filtering.  Only labels with the specified name or
+        /// description will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelDisplayText")]
         public string LabelDisplayText { get; set; }
         
         ///
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         ///
@@ -58,7 +64,9 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSystem")]
@@ -66,7 +74,9 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// label priority
+        /// The label priority used for filtering.  Only labels with the specified
+        /// priority will be returned.
+        /// 
         /// </value>
         ///
         public enum LabelPriorityEnum {
@@ -81,19 +91,23 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// label priority
+        /// The label priority used for filtering.  Only labels with the specified
+        /// priority will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelPriority")]
         public System.Nullable<LabelPriorityEnum> LabelPriority { get; set; }
         
         /// <value>
-        /// isCountPop
+        /// A flag indicating whether or not to count the label usage per source and per rule.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCountPop")]
         public System.Nullable<bool> IsCountPop { get; set; }
         
         /// <value>
-        /// isAliasPop
+        /// A flag indicating whether or not return the aliases used by each label.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isAliasPop")]
         public System.Nullable<bool> IsAliasPop { get; set; }
@@ -132,7 +146,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by label
+        /// The attribute used to sort the returned labels
         /// </value>
         ///
         public enum LabelSortByEnum {
@@ -145,7 +159,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by label
+        /// The attribute used to sort the returned labels
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "labelSortBy")]
         public System.Nullable<LabelSortByEnum> LabelSortBy { get; set; }

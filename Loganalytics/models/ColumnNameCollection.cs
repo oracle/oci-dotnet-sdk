@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of column names
+        /// A list of SQL query column names.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ColumnName> Items { get; set; }

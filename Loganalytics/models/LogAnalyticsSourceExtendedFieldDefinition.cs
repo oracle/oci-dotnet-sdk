@@ -25,91 +25,94 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsField Field { get; set; }
         
         /// <value>
-        /// display regular expression
+        /// The regular expression.
         /// </value>
         [JsonProperty(PropertyName = "displayRegularExpression")]
         public string DisplayRegularExpression { get; set; }
         
         /// <value>
-        /// extended fields
+        /// An array of extended fields.
         /// </value>
         [JsonProperty(PropertyName = "extendedFields")]
         public System.Collections.Generic.List<LogAnalyticsExtendedField> ExtendedFields { get; set; }
         
         /// <value>
-        /// base field internal name
+        /// The base field internal name.
         /// </value>
         [JsonProperty(PropertyName = "baseFieldName")]
         public string BaseFieldName { get; set; }
         
         /// <value>
-        /// base field log text
+        /// The base field log text.
         /// </value>
         [JsonProperty(PropertyName = "baseFieldLogText")]
         public string BaseFieldLogText { get; set; }
         
         /// <value>
-        /// conditional data type
+        /// The conditional data type.
         /// </value>
         [JsonProperty(PropertyName = "conditionDataType")]
         public string ConditionDataType { get; set; }
         
         /// <value>
-        /// conditional field
+        /// The onditional field.
         /// </value>
         [JsonProperty(PropertyName = "conditionField")]
         public string ConditionField { get; set; }
         
         /// <value>
-        /// conditional operator
+        /// The conditional operator.
         /// </value>
         [JsonProperty(PropertyName = "conditionOperator")]
         public string ConditionOperator { get; set; }
         
         /// <value>
-        /// conditional value
+        /// The conditional value.
         /// </value>
         [JsonProperty(PropertyName = "conditionValue")]
         public string ConditionValue { get; set; }
         
         /// <value>
-        /// converted regular expression
+        /// The converted regular expression.
         /// </value>
         [JsonProperty(PropertyName = "convertedRegularExpression")]
         public string ConvertedRegularExpression { get; set; }
         
         /// <value>
-        /// enabled
+        /// A flag inidcating whether or not the extended definition is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// id
+        /// The extended field definition unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "extendedFieldDefinitionId")]
         public System.Nullable<long> ExtendedFieldDefinitionId { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// regular expression
+        /// The regular expression.
         /// </value>
         [JsonProperty(PropertyName = "regularExpression")]
         public string RegularExpression { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// last updated date
+        /// The last updated date.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

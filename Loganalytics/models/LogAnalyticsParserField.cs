@@ -25,43 +25,43 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsField Field { get; set; }
         
         /// <value>
-        /// parser field map Id
+        /// The parser field unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "parserFieldId")]
         public System.Nullable<long> ParserFieldId { get; set; }
         
         /// <value>
-        /// field expression
+        /// the parser field expression.
         /// </value>
         [JsonProperty(PropertyName = "parserFieldExpression")]
         public string ParserFieldExpression { get; set; }
         
         /// <value>
-        /// field internal name
+        /// The parser field internal name.
         /// </value>
         [JsonProperty(PropertyName = "parserFieldName")]
         public string ParserFieldName { get; set; }
         
         /// <value>
-        /// internal name
+        /// The storage field name.
         /// </value>
         [JsonProperty(PropertyName = "storageFieldName")]
         public string StorageFieldName { get; set; }
         
         /// <value>
-        /// integrator name
+        /// The integrator name.
         /// </value>
         [JsonProperty(PropertyName = "parserFieldIntegratorName")]
         public string ParserFieldIntegratorName { get; set; }
         
         /// <value>
-        /// parser internal name
+        /// The parser internal name.
         /// </value>
         [JsonProperty(PropertyName = "parserName")]
         public string ParserName { get; set; }
         
         /// <value>
-        /// sequence
+        /// The parser field sequence.
         /// </value>
         [JsonProperty(PropertyName = "parserFieldSequence")]
         public System.Nullable<long> ParserFieldSequence { get; set; }
@@ -70,7 +70,7 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsParser Parser { get; set; }
         
         /// <value>
-        /// structured column information
+        /// The structured column information.
         /// </value>
         [JsonProperty(PropertyName = "structuredColumnInfo")]
         public string StructuredColumnInfo { get; set; }

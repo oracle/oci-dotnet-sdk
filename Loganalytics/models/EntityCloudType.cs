@@ -20,6 +20,8 @@ namespace Oci.LoganalyticsService.Models
       [EnumMember(Value = "CLOUD")]
       Cloud,
       [EnumMember(Value = "NON_CLOUD")]
-      NonCloud
+      NonCloud,
+      [EnumMember(Value = "ALL")]
+      All
   }
 }

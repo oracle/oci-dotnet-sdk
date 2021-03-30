@@ -42,7 +42,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// scope
+        /// The scope used when testing a parser.
         /// </value>
         ///
         public enum ScopeEnum {
@@ -55,13 +55,15 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// scope
+        /// The scope used when testing a parser.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scope")]
         public System.Nullable<ScopeEnum> Scope { get; set; }
         
         /// <value>
-        /// module
+        /// The module to test.  A value of 'ParserFunctionTest' will result in testing of
+        /// the parser functions.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "reqOriginModule")]
         public string ReqOriginModule { get; set; }

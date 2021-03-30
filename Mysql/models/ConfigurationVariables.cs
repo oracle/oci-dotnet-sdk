@@ -108,6 +108,88 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "foreignKeyChecks")]
         public System.Nullable<bool> ForeignKeyChecks { get; set; }
+                ///
+        /// <value>
+        /// - EVENTUAL:
+        ///     Both RO and RW transactions do not wait for preceding transactions to be applied before executing.
+        ///     A RW transaction does not wait for other members to apply a transaction. This means that a transaction
+        ///     could be externalized on one member before the others. This also means that in the event of a primary failover,
+        ///     the new primary can accept new RO and RW transactions before the previous primary transactions are all applied.
+        ///     RO transactions could result in outdated values, RW transactions could result in a rollback due to conflicts.
+        /// - BEFORE_ON_PRIMARY_FAILOVER:
+        ///     New RO or RW transactions with a newly elected primary that is applying backlog from the old
+        ///     primary are held (not applied) until any backlog has been applied. This ensures that when a primary failover happens,
+        ///     intentionally or not, clients always see the latest value on the primary. This guarantees consistency, but means that
+        ///     clients must be able to handle the delay in the event that a backlog is being applied. Usually this delay should be minimal,
+        ///     but does depend on the size of the backlog.
+        /// - BEFORE:
+        ///     A RW transaction waits for all preceding transactions to complete before being applied. A RO transaction waits for all preceding
+        ///     transactions to complete before being executed. This ensures that this transaction reads the latest value by only affecting the
+        ///     latency of the transaction. This reduces the overhead of synchronization on every RW transaction, by ensuring synchronization is
+        ///     used only on RO transactions. This consistency level also includes the consistency guarantees provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// - AFTER:
+        ///     A RW transaction waits until its changes have been applied to all of the other members. This value has no effect on RO transactions.
+        ///     This mode ensures that when a transaction is committed on the local member, any subsequent transaction reads the written value or
+        ///     a more recent value on any group member. Use this mode with a group that is used for predominantly RO operations to ensure that
+        ///     applied RW transactions are applied everywhere once they commit. This could be used by your application to ensure that subsequent
+        ///     reads fetch the latest data which includes the latest writes. This reduces the overhead of synchronization on every RO transaction,
+        ///     by ensuring synchronization is used only on RW transactions. This consistency level also includes the consistency guarantees
+        ///     provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// - BEFORE_AND_AFTER:
+        ///     A RW transaction waits for 1) all preceding transactions to complete before being applied and 2) until its changes have been
+        ///     applied on other members. A RO transaction waits for all preceding transactions to complete before execution takes place.
+        ///     This consistency level also includes the consistency guarantees provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// 
+        /// </value>
+        ///
+        public enum GroupReplicationConsistencyEnum {
+            [EnumMember(Value = "EVENTUAL")]
+            Eventual,
+            [EnumMember(Value = "BEFORE_ON_PRIMARY_FAILOVER")]
+            BeforeOnPrimaryFailover,
+            [EnumMember(Value = "BEFORE")]
+            Before,
+            [EnumMember(Value = "AFTER")]
+            After,
+            [EnumMember(Value = "BEFORE_AND_AFTER")]
+            BeforeAndAfter
+        };
+
+        /// <value>
+        /// - EVENTUAL:
+        ///     Both RO and RW transactions do not wait for preceding transactions to be applied before executing.
+        ///     A RW transaction does not wait for other members to apply a transaction. This means that a transaction
+        ///     could be externalized on one member before the others. This also means that in the event of a primary failover,
+        ///     the new primary can accept new RO and RW transactions before the previous primary transactions are all applied.
+        ///     RO transactions could result in outdated values, RW transactions could result in a rollback due to conflicts.
+        /// - BEFORE_ON_PRIMARY_FAILOVER:
+        ///     New RO or RW transactions with a newly elected primary that is applying backlog from the old
+        ///     primary are held (not applied) until any backlog has been applied. This ensures that when a primary failover happens,
+        ///     intentionally or not, clients always see the latest value on the primary. This guarantees consistency, but means that
+        ///     clients must be able to handle the delay in the event that a backlog is being applied. Usually this delay should be minimal,
+        ///     but does depend on the size of the backlog.
+        /// - BEFORE:
+        ///     A RW transaction waits for all preceding transactions to complete before being applied. A RO transaction waits for all preceding
+        ///     transactions to complete before being executed. This ensures that this transaction reads the latest value by only affecting the
+        ///     latency of the transaction. This reduces the overhead of synchronization on every RW transaction, by ensuring synchronization is
+        ///     used only on RO transactions. This consistency level also includes the consistency guarantees provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// - AFTER:
+        ///     A RW transaction waits until its changes have been applied to all of the other members. This value has no effect on RO transactions.
+        ///     This mode ensures that when a transaction is committed on the local member, any subsequent transaction reads the written value or
+        ///     a more recent value on any group member. Use this mode with a group that is used for predominantly RO operations to ensure that
+        ///     applied RW transactions are applied everywhere once they commit. This could be used by your application to ensure that subsequent
+        ///     reads fetch the latest data which includes the latest writes. This reduces the overhead of synchronization on every RO transaction,
+        ///     by ensuring synchronization is used only on RW transactions. This consistency level also includes the consistency guarantees
+        ///     provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// - BEFORE_AND_AFTER:
+        ///     A RW transaction waits for 1) all preceding transactions to complete before being applied and 2) until its changes have been
+        ///     applied on other members. A RO transaction waits for all preceding transactions to complete before execution takes place.
+        ///     This consistency level also includes the consistency guarantees provided by BEFORE_ON_PRIMARY_FAILOVER.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "groupReplicationConsistency")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<GroupReplicationConsistencyEnum> GroupReplicationConsistency { get; set; }
         
         /// <value>
         /// (\"innodb_ft_enable_stopword\")

@@ -108,13 +108,32 @@ namespace Oci.OcvpService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
         /// the NSX Edge Uplink 2 component of the VMware environment when adding new ESXi hosts to the SDDC.
+        /// <br/>
+        /// **Note:** This VLAN is reserved for future use to deploy public-facing applications on the VMware SDDC.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
         public string NsxEdgeUplink2VlanId { get; set; }
         
         /// <value>
-        /// This id is editable only when hcxEnabled is true
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
+        /// for the vSphere Replication component of the VMware environment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationVlanId")]
+        public string ReplicationVlanId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
+        /// for the Provisioning component of the VMware environment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "provisioningVlanId")]
+        public string ProvisioningVlanId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the HCX
+        /// component of the VMware environment when adding new ESXi hosts to the SDDC. This value can be updated only when `isHcxEnabled` is true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxVlanId")]

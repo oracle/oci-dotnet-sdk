@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// LogGroupSummaryReport
+    /// A LogAnalytics Log Group summary report.
     /// </summary>
     public class LogGroupSummaryReport 
     {
         
         /// <value>
-        /// log group count
+        /// The log group count.
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<int> Count { get; set; }

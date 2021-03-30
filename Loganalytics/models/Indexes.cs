@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// endIndex
+        /// The end index.
         /// </value>
         [JsonProperty(PropertyName = "endIndex")]
         public System.Nullable<int> EndIndex { get; set; }
         
         /// <value>
-        /// startIndex
+        /// The start index.
         /// </value>
         [JsonProperty(PropertyName = "startIndex")]
         public System.Nullable<int> StartIndex { get; set; }

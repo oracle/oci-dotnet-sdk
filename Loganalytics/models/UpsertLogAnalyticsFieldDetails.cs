@@ -22,31 +22,32 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// data type
+        /// The data type.
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
         
         /// <value>
-        /// is multi-valued flag
+        /// A flag indicating whether or not the field is multi-valued.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMultiValued")]
         public System.Nullable<bool> IsMultiValued { get; set; }
         
         /// <value>
-        /// description
+        /// The field description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The field display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// internal name
+        /// The field internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

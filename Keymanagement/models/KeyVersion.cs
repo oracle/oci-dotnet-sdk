@@ -50,7 +50,7 @@ namespace Oci.KeymanagementService.Models
         public string KeyId { get; set; }
         
         /// <value>
-        /// The public key in PEM format which will be populated only in case of RSA and ECDSA keys.
+        /// The public key in PEM format. (This value pertains only to RSA and ECDSA keys.)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicKey")]
@@ -152,6 +152,12 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "restoredFromKeyVersionId")]
         public string RestoredFromKeyVersionId { get; set; }
+        
+        [JsonProperty(PropertyName = "replicaDetails")]
+        public KeyVersionReplicaDetails ReplicaDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "isPrimary")]
+        public System.Nullable<bool> IsPrimary { get; set; }
         
     }
 }

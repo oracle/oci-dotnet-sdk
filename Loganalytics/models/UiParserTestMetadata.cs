@@ -22,19 +22,19 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Last modified time
+        /// The last modified time.
         /// </value>
         [JsonProperty(PropertyName = "lastModifiedTime")]
         public string LastModifiedTime { get; set; }
         
         /// <value>
-        /// Name of log file
+        /// The log file name.
         /// </value>
         [JsonProperty(PropertyName = "logFileName")]
         public string LogFileName { get; set; }
         
         /// <value>
-        /// timeZone
+        /// The time zone.
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public System.Nullable<System.DateTime> TimeZone { get; set; }

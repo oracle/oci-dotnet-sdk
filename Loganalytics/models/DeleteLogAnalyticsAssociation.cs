@@ -22,43 +22,43 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Lama Idf
+        /// The agent unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
         
         /// <value>
-        /// source name
+        /// The source name.
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
         
         /// <value>
-        /// source type internal name
+        /// The source type internal name.
         /// </value>
         [JsonProperty(PropertyName = "sourceTypeName")]
         public string SourceTypeName { get; set; }
         
         /// <value>
-        /// entity GUID
+        /// The entity unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
         
         /// <value>
-        /// entity type internal name
+        /// The entity type internal name.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeName")]
         public string EntityTypeName { get; set; }
         
         /// <value>
-        /// host name
+        /// The host name.
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
         /// <value>
-        /// log group ocid
+        /// The log group unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }

@@ -25,55 +25,58 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsParserMetaPlugin ParserMetaPlugin { get; set; }
         
         /// <value>
-        /// plugin instance Id
+        /// The parser function unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionId")]
         public System.Nullable<long> ParserFunctionId { get; set; }
         
         /// <value>
-        /// plugin instance internal name
+        /// The parser function internal name.
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionName")]
         public string ParserFunctionName { get; set; }
         
         /// <value>
-        /// is enabled flag
+        /// A flag inidcating whether or not the parser function is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// parser Id
+        /// The associated parser unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "parserId")]
         public System.Nullable<long> ParserId { get; set; }
         
         /// <value>
-        /// parser internal name
+        /// The associated parser internal name.
         /// </value>
         [JsonProperty(PropertyName = "parserName")]
         public string ParserName { get; set; }
         
         /// <value>
-        /// plugin type internal name
+        /// The plugin internal name.
         /// </value>
         [JsonProperty(PropertyName = "parserMetaPluginName")]
         public string ParserMetaPluginName { get; set; }
         
         /// <value>
-        /// priority
+        /// The parser function priority.
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionPriority")]
         public System.Nullable<long> ParserFunctionPriority { get; set; }
         
         /// <value>
-        /// parameter map list
+        /// The parser function parameter list.
         /// </value>
         [JsonProperty(PropertyName = "parserFunctionParameters")]
         public System.Collections.Generic.List<LogAnalyticsParserFunctionParameter> ParserFunctionParameters { get; set; }

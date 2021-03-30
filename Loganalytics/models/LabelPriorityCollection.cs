@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of tag priorities
+        /// An array of label priorities.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LabelPriority> Items { get; set; }

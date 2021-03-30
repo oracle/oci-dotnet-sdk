@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// operator display name
+        /// The operator display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// operator internal name
+        /// The operator internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

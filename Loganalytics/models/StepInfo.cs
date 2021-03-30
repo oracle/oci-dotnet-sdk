@@ -22,19 +22,19 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// inputSequenceCurrentMatch
+        /// The currnet input sequence match.
         /// </value>
         [JsonProperty(PropertyName = "inputSequenceCurrentMatch")]
         public string InputSequenceCurrentMatch { get; set; }
         
         /// <value>
-        /// regexEngineClassName
+        /// The regular expression engine class name.
         /// </value>
         [JsonProperty(PropertyName = "regexEngineClassName")]
         public string RegexEngineClassName { get; set; }
         
         /// <value>
-        /// stepCount
+        /// The step count.
         /// </value>
         [JsonProperty(PropertyName = "stepCount")]
         public System.Nullable<int> StepCount { get; set; }

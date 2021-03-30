@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// original log line
+        /// The original log line.
         /// </value>
         [JsonProperty(PropertyName = "originalLogLine")]
         public string OriginalLogLine { get; set; }
         
         /// <value>
-        /// pre-processed log line
+        /// The pre-processed log line.
         /// </value>
         [JsonProperty(PropertyName = "preProcessedLogLine")]
         public string PreProcessedLogLine { get; set; }

@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// sourceName
+        /// The souce name used for filtering associations.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,7 +59,9 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// Status
+        /// The life cycle state used for filtering.  Only associations with the specified
+        /// life cycle state will be returned.
+        /// 
         /// </value>
         ///
         public enum LifeCycleStateEnum {
@@ -76,13 +78,15 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Status
+        /// The life cycle state used for filtering.  Only associations with the specified
+        /// life cycle state will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifeCycleState")]
         public System.Nullable<LifeCycleStateEnum> LifeCycleState { get; set; }
         
         /// <value>
-        /// is Show Total
+        /// A flag indicating whether or not to return the total number of items returned.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isShowTotal")]
         public System.Nullable<bool> IsShowTotal { get; set; }
@@ -127,7 +131,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned associations
         /// </value>
         ///
         public enum SortByEnum {
@@ -140,7 +144,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned associations
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

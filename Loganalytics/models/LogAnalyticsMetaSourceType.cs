@@ -22,49 +22,49 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// built in parser name
+        /// The built in parser name.
         /// </value>
         [JsonProperty(PropertyName = "builtInParserName")]
         public string BuiltInParserName { get; set; }
         
         /// <value>
-        /// type description
+        /// The source type description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The source type display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// entity display name
+        /// The entity display name.
         /// </value>
         [JsonProperty(PropertyName = "entityDisplayName")]
         public string EntityDisplayName { get; set; }
         
         /// <value>
-        /// entity name
+        /// The entity internal name.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
         
         /// <value>
-        /// source type name
+        /// The source type name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// maximum exclude pattern
+        /// The maximum exclude pattern.
         /// </value>
         [JsonProperty(PropertyName = "maximumExcludePattern")]
         public System.Nullable<long> MaximumExcludePattern { get; set; }
         
         /// <value>
-        /// maximum include pattern
+        /// The maximum include pattern.
         /// </value>
         [JsonProperty(PropertyName = "maximumIncludePattern")]
         public System.Nullable<long> MaximumIncludePattern { get; set; }

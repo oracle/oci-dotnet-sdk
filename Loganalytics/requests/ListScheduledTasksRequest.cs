@@ -116,5 +116,20 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// A filter to return only scheduled tasks whose stream action savedSearchId matches the given
+        /// ManagementSavedSearch id [OCID] exactly.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "savedSearchId")]
+        public string SavedSearchId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose display name contains the substring.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
+        public string DisplayNameContains { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// parserName
+        /// The parser name.
         /// </value>
         /// <remarks>
         /// Required

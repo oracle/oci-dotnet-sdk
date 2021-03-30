@@ -62,7 +62,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// work requests sort by
+        /// The attribute used to sort the returned work requests
         /// </value>
         ///
         public enum SortByEnum {
@@ -71,7 +71,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// work requests sort by
+        /// The attribute used to sort the returned work requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

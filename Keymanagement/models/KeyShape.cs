@@ -46,10 +46,10 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
         /// <value>
-        /// The length of the key in bytes, expressed as an integer. Values supported:
-        ///   - AES: 16, 24 or 32
-        ///   - RSA: 256, 384 or 512
-        ///   - ECDSA: 32, 48, 66
+        /// The length of the key in bytes, expressed as an integer. Supported values include the following:
+        ///   - AES: 16, 24, or 32
+        ///   - RSA: 256, 384, or 512
+        ///   - ECDSA: 32, 48, or 66
         /// 
         /// </value>
         /// <remarks>
@@ -60,7 +60,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<int> Length { get; set; }
                 ///
         /// <value>
-        /// Supported curve Ids for ECDSA keys
+        /// Supported curve IDs for ECDSA keys.
         /// </value>
         ///
         public enum CurveIdEnum {
@@ -73,7 +73,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// Supported curve Ids for ECDSA keys
+        /// Supported curve IDs for ECDSA keys.
         /// </value>
         [JsonProperty(PropertyName = "curveId")]
         [JsonConverter(typeof(StringEnumConverter))]

@@ -31,7 +31,8 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// show detail flag
+        /// A boolean indicating whether or not to display detailed field summary information
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isShowDetail")]
         public System.Nullable<bool> IsShowDetail { get; set; }

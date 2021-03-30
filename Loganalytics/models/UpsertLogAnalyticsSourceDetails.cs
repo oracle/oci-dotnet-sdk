@@ -22,169 +22,174 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// source label conditions
+        /// An array of source label conditions.
         /// </value>
         [JsonProperty(PropertyName = "labelConditions")]
         public System.Collections.Generic.List<LogAnalyticsSourceLabelCondition> LabelConditions { get; set; }
         
         /// <value>
-        /// data filter definitions
+        /// An array of data filter definitions.
         /// </value>
         [JsonProperty(PropertyName = "dataFilterDefinitions")]
         public System.Collections.Generic.List<LogAnalyticsSourceDataFilter> DataFilterDefinitions { get; set; }
         
         /// <value>
-        /// DB credential name
+        /// The database credential name.
         /// </value>
         [JsonProperty(PropertyName = "databaseCredential")]
         public string DatabaseCredential { get; set; }
         
         /// <value>
-        /// extended field definition
+        /// An array of extended field definitions.
         /// </value>
         [JsonProperty(PropertyName = "extendedFieldDefinitions")]
         public System.Collections.Generic.List<LogAnalyticsSourceExtendedFieldDefinition> ExtendedFieldDefinitions { get; set; }
         
         /// <value>
-        /// is for cloud flag
+        /// A flag indicating whether or not this is a cloud source.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isForCloud")]
         public System.Nullable<bool> IsForCloud { get; set; }
         
         /// <value>
-        /// labels
+        /// An array of labels.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<LogAnalyticsLabelView> Labels { get; set; }
         
         /// <value>
-        /// metric definitions
+        /// An array of metric definitions.
         /// </value>
         [JsonProperty(PropertyName = "metricDefinitions")]
         public System.Collections.Generic.List<LogAnalyticsMetric> MetricDefinitions { get; set; }
         
         /// <value>
-        /// metric source map
+        /// An array of metrics.
         /// </value>
         [JsonProperty(PropertyName = "metrics")]
         public System.Collections.Generic.List<LogAnalyticsSourceMetric> Metrics { get; set; }
         
         /// <value>
-        /// out-of-the-box source parser list
+        /// An array of built in source parsers.
         /// </value>
         [JsonProperty(PropertyName = "oobParsers")]
         public System.Collections.Generic.List<LogAnalyticsParser> OobParsers { get; set; }
         
         /// <value>
-        /// parameters
+        /// An array of parameters.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<LogAnalyticsParameter> Parameters { get; set; }
         
         /// <value>
-        /// patterns
+        /// An array of patterns.
         /// </value>
         [JsonProperty(PropertyName = "patterns")]
         public System.Collections.Generic.List<LogAnalyticsSourcePattern> Patterns { get; set; }
         
         /// <value>
-        /// description
+        /// The source description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The source display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// source edit version
+        /// The source edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// source functions
+        /// An array of source functions.
         /// </value>
         [JsonProperty(PropertyName = "functions")]
         public System.Collections.Generic.List<LogAnalyticsSourceFunction> Functions { get; set; }
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// source internal name
+        /// The source internal name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// is secure content flag
+        /// A flag indicating whether or not the source content is secure.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSecureContent")]
         public System.Nullable<bool> IsSecureContent { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined object.  A value of true denotes a built in object.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// parser list
+        /// An array of parser.
         /// </value>
         [JsonProperty(PropertyName = "parsers")]
         public System.Collections.Generic.List<LogAnalyticsParser> Parsers { get; set; }
         
         /// <value>
-        /// rule Id
+        /// The rule unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "ruleId")]
         public System.Nullable<long> RuleId { get; set; }
         
         /// <value>
-        /// source type internal name
+        /// The source type internal name.
         /// </value>
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }
         
         /// <value>
-        /// source warning configuration
+        /// The source warning configuration.
         /// </value>
         [JsonProperty(PropertyName = "warningConfig")]
         public System.Nullable<long> WarningConfig { get; set; }
         
         /// <value>
-        /// source metadata fields
+        /// An array of source metadata fields.
         /// </value>
         [JsonProperty(PropertyName = "metadataFields")]
         public System.Collections.Generic.List<LogAnalyticsSourceMetadataField> MetadataFields { get; set; }
         
         /// <value>
-        /// tags
+        /// An array of labels.
         /// </value>
         [JsonProperty(PropertyName = "labelDefinitions")]
         public System.Collections.Generic.List<LogAnalyticsLabelDefinition> LabelDefinitions { get; set; }
         
         /// <value>
-        /// entity types
+        /// An array of entity types.
         /// </value>
         [JsonProperty(PropertyName = "entityTypes")]
         public System.Collections.Generic.List<LogAnalyticsSourceEntityType> EntityTypes { get; set; }
         
         /// <value>
-        /// time zone override
+        /// A flag indicating whether or not the source has a time zone override.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isTimezoneOverride")]
         public System.Nullable<bool> IsTimezoneOverride { get; set; }
         
         /// <value>
-        /// source parser list
+        /// An array of custom parsers.
         /// </value>
         [JsonProperty(PropertyName = "userParsers")]
         public System.Collections.Generic.List<LogAnalyticsParser> UserParsers { get; set; }

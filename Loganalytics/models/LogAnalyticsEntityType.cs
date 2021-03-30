@@ -113,6 +113,28 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+                ///
+        /// <value>
+        /// This field indicates whether logs for entities of this type can be collected using a management agent.
+        /// 
+        /// </value>
+        ///
+        public enum ManagementAgentEligibilityStatusEnum {
+            [EnumMember(Value = "ELIGIBLE")]
+            Eligible,
+            [EnumMember(Value = "INELIGIBLE")]
+            Ineligible,
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
+        };
+
+        /// <value>
+        /// This field indicates whether logs for entities of this type can be collected using a management agent.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "managementAgentEligibilityStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ManagementAgentEligibilityStatusEnum> ManagementAgentEligibilityStatus { get; set; }
         
     }
 }

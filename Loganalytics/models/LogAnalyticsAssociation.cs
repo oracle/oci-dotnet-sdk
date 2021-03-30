@@ -22,49 +22,53 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// failure message
+        /// The failure message.
         /// </value>
         [JsonProperty(PropertyName = "failureMessage")]
         public string FailureMessage { get; set; }
         
         /// <value>
-        /// Lama Idf
+        /// The agent unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
         
         /// <value>
-        /// last attempt date
+        /// The last attempt date.
         /// </value>
         [JsonProperty(PropertyName = "timeLastAttempted")]
         public System.Nullable<System.DateTime> TimeLastAttempted { get; set; }
         
         /// <value>
-        /// retry count
+        /// The number of times the association will be attempted
+        /// before failing.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "retryCount")]
         public System.Nullable<long> RetryCount { get; set; }
         
         /// <value>
-        /// source name
+        /// The source name.
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]
         public string SourceName { get; set; }
         
         /// <value>
-        /// source display name
+        /// The source display name.
         /// </value>
         [JsonProperty(PropertyName = "sourceDisplayName")]
         public string SourceDisplayName { get; set; }
         
         /// <value>
-        /// source type internal name
+        /// The source type internal name.
         /// </value>
         [JsonProperty(PropertyName = "sourceTypeName")]
         public string SourceTypeName { get; set; }
                 ///
         /// <value>
-        /// lifeCycleState
+        /// The lifecycle status.  Valid values are ACCEPTED, IN_PROGRESS, SUCCEEDED
+        /// or FAILED.
+        /// 
         /// </value>
         ///
         public enum LifeCycleStateEnum {
@@ -79,62 +83,64 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// lifeCycleState
+        /// The lifecycle status.  Valid values are ACCEPTED, IN_PROGRESS, SUCCEEDED
+        /// or FAILED.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifeCycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifeCycleStateEnum> LifeCycleState { get; set; }
         
         /// <value>
-        /// entity GUID
+        /// The entity unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
         
         /// <value>
-        /// entity name
+        /// The entity name.
         /// </value>
         [JsonProperty(PropertyName = "entityName")]
         public string EntityName { get; set; }
         
         /// <value>
-        /// entity type internal name
+        /// The entity type internal name.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeName")]
         public string EntityTypeName { get; set; }
         
         /// <value>
-        /// host name
+        /// The host name.
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
         /// <value>
-        /// Agent entity name
+        /// The name of the entity which contains the agent.
         /// </value>
         [JsonProperty(PropertyName = "agentEntityName")]
         public string AgentEntityName { get; set; }
         
         /// <value>
-        /// entity type display name
+        /// The entity type display name.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }
         
         /// <value>
-        /// log group ocid
+        /// The log group unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
         
         /// <value>
-        /// log group name
+        /// The log group name.
         /// </value>
         [JsonProperty(PropertyName = "logGroupName")]
         public string LogGroupName { get; set; }
         
         /// <value>
-        /// log group compartment
+        /// The log group compartment.
         /// </value>
         [JsonProperty(PropertyName = "logGroupCompartment")]
         public string LogGroupCompartment { get; set; }

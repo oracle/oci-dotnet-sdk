@@ -22,82 +22,88 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// override output fields
+        /// The override output fields.
         /// </value>
         [JsonProperty(PropertyName = "isOverrideOutputFields")]
         public System.Nullable<bool> IsOverrideOutputFields { get; set; }
         
         /// <value>
-        /// argument display name
+        /// The argument display name.
         /// </value>
         [JsonProperty(PropertyName = "argumentDisplayName")]
         public string ArgumentDisplayName { get; set; }
         
         /// <value>
-        /// argument example
+        /// The argument example.
         /// </value>
         [JsonProperty(PropertyName = "argumentExample")]
         public string ArgumentExample { get; set; }
         
         /// <value>
-        /// argument service
+        /// The argument service.
         /// </value>
         [JsonProperty(PropertyName = "argumentService")]
         public string ArgumentService { get; set; }
         
         /// <value>
-        /// argument data type
+        /// The argument data type.
         /// </value>
         [JsonProperty(PropertyName = "argumentDataType")]
         public string ArgumentDataType { get; set; }
         
         /// <value>
-        /// argument description
+        /// The argument description.
         /// </value>
         [JsonProperty(PropertyName = "argumentDescription")]
         public string ArgumentDescription { get; set; }
         
         /// <value>
-        /// argument name
+        /// The argument name.
         /// </value>
         [JsonProperty(PropertyName = "argumentName")]
         public string ArgumentName { get; set; }
         
         /// <value>
-        /// argument order
+        /// The argument order.
         /// </value>
         [JsonProperty(PropertyName = "argumentOrder")]
         public System.Nullable<long> ArgumentOrder { get; set; }
         
         /// <value>
-        /// argument type
+        /// The argument type.
         /// </value>
         [JsonProperty(PropertyName = "argumentType")]
         public System.Nullable<long> ArgumentType { get; set; }
         
         /// <value>
-        /// meta function id
+        /// The argument unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "argumentId")]
         public System.Nullable<long> ArgumentId { get; set; }
         
         /// <value>
-        /// column
+        /// The lookup column.
         /// </value>
         [JsonProperty(PropertyName = "argumentLookupColumn")]
         public string ArgumentLookupColumn { get; set; }
         
         /// <value>
-        /// column position
+        /// The lookup column position.
         /// </value>
         [JsonProperty(PropertyName = "argumentLookupColumnPosition")]
         public System.Nullable<long> ArgumentLookupColumnPosition { get; set; }
         
         /// <value>
-        /// value
+        /// The argument value.
         /// </value>
         [JsonProperty(PropertyName = "argumentValue")]
         public string ArgumentValue { get; set; }
+        
+        /// <value>
+        /// The argument unique identifier as a string.
+        /// </value>
+        [JsonProperty(PropertyName = "argumentReference")]
+        public string ArgumentReference { get; set; }
         
     }
 }

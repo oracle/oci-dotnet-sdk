@@ -32,7 +32,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// type - possible values are Lookup or Dictionary
+        /// The lookup type.  Valid values are Lookup or Dictionary.
         /// </value>
         ///
         public enum TypeEnum {
@@ -43,7 +43,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// type - possible values are Lookup or Dictionary
+        /// The lookup type.  Valid values are Lookup or Dictionary.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,14 +53,18 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Search by lookup display name or description.
+        /// The lookup text used for filtering.  Only lookups with the specified name
+        /// or description will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lookupDisplayText")]
         public string LookupDisplayText { get; set; }
         
         ///
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         ///
@@ -74,7 +78,9 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSystem")]
@@ -112,8 +118,8 @@ namespace Oci.LoganalyticsService.Requests
         public enum StatusEnum {
             [EnumMember(Value = "ALL")]
             All,
-            [EnumMember(Value = "SUCCESFUL")]
-            Succesful,
+            [EnumMember(Value = "SUCCESSFUL")]
+            Successful,
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "INPROGRESS")]
@@ -127,7 +133,8 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// is include items
+        /// A flag indicating whether or not to return OMC annotated or hidden lookups.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isHideSpecial")]
         public System.Nullable<bool> IsHideSpecial { get; set; }

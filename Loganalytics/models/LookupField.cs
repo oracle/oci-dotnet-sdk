@@ -22,43 +22,44 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// common field name
+        /// The common field name.
         /// </value>
         [JsonProperty(PropertyName = "commonFieldName")]
         public string CommonFieldName { get; set; }
         
         /// <value>
-        /// default match value
+        /// The default match value.
         /// </value>
         [JsonProperty(PropertyName = "defaultMatchValue")]
         public string DefaultMatchValue { get; set; }
         
         /// <value>
-        /// display name
+        /// The field display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// is common field
+        /// A flag indicating whether or not the lookup field is a common field.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isCommonField")]
         public System.Nullable<bool> IsCommonField { get; set; }
         
         /// <value>
-        /// match operator
+        /// The match operator.
         /// </value>
         [JsonProperty(PropertyName = "matchOperator")]
         public string MatchOperator { get; set; }
         
         /// <value>
-        /// name
+        /// The field name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// position
+        /// THe field position.
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<long> Position { get; set; }

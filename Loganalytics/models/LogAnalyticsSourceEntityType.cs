@@ -22,25 +22,25 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// source Id
+        /// The source unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public System.Nullable<long> SourceId { get; set; }
         
         /// <value>
-        /// Entity type
+        /// The entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// type category
+        /// The type category.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeCategory")]
         public string EntityTypeCategory { get; set; }
         
         /// <value>
-        /// Entity type display name
+        /// The entity type display name.
         /// </value>
         [JsonProperty(PropertyName = "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }

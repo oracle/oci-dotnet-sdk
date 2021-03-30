@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// items
+        /// The regular expression evaluation result of an extended field definition.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<EfdRegexResult> Items { get; set; }

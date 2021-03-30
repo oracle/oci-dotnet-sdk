@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// name of the label to get
+        /// The label name.
         /// </value>
         /// <remarks>
         /// Required

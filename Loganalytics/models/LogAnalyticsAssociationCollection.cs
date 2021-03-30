@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// LogAnalyticsAssociationCollection
+    /// A collection of associations.
     /// </summary>
     public class LogAnalyticsAssociationCollection 
     {
         
         /// <value>
-        /// list of rule entity association details
+        /// An array of associations.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LogAnalyticsAssociation> Items { get; set; }

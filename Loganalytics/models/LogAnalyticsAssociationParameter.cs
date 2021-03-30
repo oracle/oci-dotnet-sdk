@@ -22,43 +22,43 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// agent guid
+        /// The agent unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
         
         /// <value>
-        /// entity type
+        /// The entity type.
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// entity guid
+        /// The entity unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "entityId")]
         public string EntityId { get; set; }
         
         /// <value>
-        /// source name
+        /// The source name.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
         
         /// <value>
-        /// source display name
+        /// The source display name.
         /// </value>
         [JsonProperty(PropertyName = "sourceDisplayName")]
         public string SourceDisplayName { get; set; }
         
         /// <value>
-        /// source type
+        /// The source type.
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         public string SourceType { get; set; }
                 ///
         /// <value>
-        /// status
+        /// The status.  Either FAILED or SUCCEEDED.
         /// </value>
         ///
         public enum StatusEnum {
@@ -69,20 +69,20 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// status
+        /// The status.  Either FAILED or SUCCEEDED.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// missingProperties
+        /// A list of missing properties.
         /// </value>
         [JsonProperty(PropertyName = "missingProperties")]
         public System.Collections.Generic.List<string> MissingProperties { get; set; }
         
         /// <value>
-        /// requiredProperties
+        /// A list of requried properties.
         /// </value>
         [JsonProperty(PropertyName = "requiredProperties")]
         public System.Collections.Generic.List<string> RequiredProperties { get; set; }

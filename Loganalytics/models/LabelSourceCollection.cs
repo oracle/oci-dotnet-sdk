@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// list of fields
+        /// An array labels.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LabelSourceSummary> Items { get; set; }

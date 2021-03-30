@@ -22,55 +22,55 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// createdParserNames
+        /// An array of created parser names.
         /// </value>
         [JsonProperty(PropertyName = "createdParserNames")]
         public System.Collections.Generic.List<string> CreatedParserNames { get; set; }
         
         /// <value>
-        /// updatedParserNames
+        /// An array of updated parser names.
         /// </value>
         [JsonProperty(PropertyName = "updatedParserNames")]
         public System.Collections.Generic.List<string> UpdatedParserNames { get; set; }
         
         /// <value>
-        /// createdSourceNames
+        /// An array of created source names.
         /// </value>
         [JsonProperty(PropertyName = "createdSourceNames")]
         public System.Collections.Generic.List<string> CreatedSourceNames { get; set; }
         
         /// <value>
-        /// updatedSourceNames
+        /// An array of updated source names.
         /// </value>
         [JsonProperty(PropertyName = "updatedSourceNames")]
         public System.Collections.Generic.List<string> UpdatedSourceNames { get; set; }
         
         /// <value>
-        /// createdFieldDisplayNames
+        /// An array of created field display names.
         /// </value>
         [JsonProperty(PropertyName = "createdFieldDisplayNames")]
         public System.Collections.Generic.List<string> CreatedFieldDisplayNames { get; set; }
         
         /// <value>
-        /// updatedFieldDisplayNames
+        /// An array of updated field display names.
         /// </value>
         [JsonProperty(PropertyName = "updatedFieldDisplayNames")]
         public System.Collections.Generic.List<string> UpdatedFieldDisplayNames { get; set; }
         
         /// <value>
-        /// conflictParserNames
+        /// A list of parser names with conflicts.
         /// </value>
         [JsonProperty(PropertyName = "conflictParserNames")]
         public System.Collections.Generic.List<string> ConflictParserNames { get; set; }
         
         /// <value>
-        /// conflictSourceNames
+        /// A list of source names with conflicts.
         /// </value>
         [JsonProperty(PropertyName = "conflictSourceNames")]
         public System.Collections.Generic.List<string> ConflictSourceNames { get; set; }
         
         /// <value>
-        /// conflictFieldDisplayNames
+        /// A list of field display names with conflicts.
         /// </value>
         [JsonProperty(PropertyName = "conflictFieldDisplayNames")]
         public System.Collections.Generic.List<string> ConflictFieldDisplayNames { get; set; }

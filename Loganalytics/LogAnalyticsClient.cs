@@ -105,8 +105,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Append data to a lookup.  The file containing the information to append
-        /// must be provided.
+        /// Add one or more event types to a source. An event type and version can be enabled only on one source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/AddSourceEventTypes.cs.html">here</a> to see an example of how to use AddSourceEventTypes API.</example>
+        public async Task<AddSourceEventTypesResponse> AddSourceEventTypes(AddSourceEventTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called addSourceEventTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/addEventTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddSourceEventTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddSourceEventTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Appends data to the lookup content. The csv file containing the content to be appended is passed in as binary data in the request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -146,7 +185,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get basic information about a specified set of labels
+        /// Lists basic information about a specified set of labels in batch.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -224,6 +264,45 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Update the compartment of the log analytics enterprise manager bridge with the given id.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ChangeLogAnalyticsEmBridgeCompartment.cs.html">here</a> to see an example of how to use ChangeLogAnalyticsEmBridgeCompartment API.</example>
+        public async Task<ChangeLogAnalyticsEmBridgeCompartmentResponse> ChangeLogAnalyticsEmBridgeCompartment(ChangeLogAnalyticsEmBridgeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeLogAnalyticsEmBridgeCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges/{logAnalyticsEmBridgeId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeLogAnalyticsEmBridgeCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeLogAnalyticsEmBridgeCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Update the compartment of the log analytics entity with the given id.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -263,7 +342,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Updates the compartment of the Log-Analytics group with the given id.
+        /// Moves the specified log group to a different compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -422,6 +502,45 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Add configuration for enterprise manager bridge. Enterprise manager bridge is used to automatically add selected entities from enterprise manager cloud control. A corresponding OCI bridge configuration is required in enterprise manager.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/CreateLogAnalyticsEmBridge.cs.html">here</a> to see an example of how to use CreateLogAnalyticsEmBridge API.</example>
+        public async Task<CreateLogAnalyticsEmBridgeResponse> CreateLogAnalyticsEmBridge(CreateLogAnalyticsEmBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createLogAnalyticsEmBridge");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateLogAnalyticsEmBridgeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateLogAnalyticsEmBridge failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Create a new log analytics entity.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -500,7 +619,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Creates a new Log-Analytics group.
+        /// Creates a new log group in the specified compartment with the input display name. You may also specify optional information such as description, defined tags, and free-form tags.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -617,7 +737,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// delete associations
+        /// Deletes the associations between the sources and entities specified.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -656,7 +777,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// delete field with specified name
+        /// Deletes field with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -695,7 +817,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// delete a label
+        /// Deletes label with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -729,6 +852,45 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"DeleteLabel failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete log analytics enterprise manager bridge with the given id.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DeleteLogAnalyticsEmBridge.cs.html">here</a> to see an example of how to use DeleteLogAnalyticsEmBridge API.</example>
+        public async Task<DeleteLogAnalyticsEmBridgeResponse> DeleteLogAnalyticsEmBridge(DeleteLogAnalyticsEmBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteLogAnalyticsEmBridge");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges/{logAnalyticsEmBridgeId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteLogAnalyticsEmBridgeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteLogAnalyticsEmBridge failed with error: {e.Message}");
                 throw;
             }
         }
@@ -812,7 +974,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Deletes the Log-Analytics group with the given id.
+        /// Deletes the specified log group. The log group cannot be part of an active association or have an active upload.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -892,7 +1055,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Delete the specified lookup.
+        /// Deletes lookup with the specified name.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -932,7 +1095,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// delete parser with specified name
+        /// Deletes parser with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1010,7 +1174,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// delete source with specified ID
+        /// Deletes source with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1211,6 +1376,88 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Disables auto association for a log source. In the future, this log source would not be automatically
+        /// associated with any entity that becomes eligible for association. In addition, you may also optionally
+        /// remove all existing associations for this log source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DisableAutoAssociation.cs.html">here</a> to see an example of how to use DisableAutoAssociation API.</example>
+        public async Task<DisableAutoAssociationResponse> DisableAutoAssociation(DisableAutoAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called disableAutoAssociation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/disableAutoAssociation".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableAutoAssociationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableAutoAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Disable one or more event types in a source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/DisableSourceEventTypes.cs.html">here</a> to see an example of how to use DisableSourceEventTypes API.</example>
+        public async Task<DisableSourceEventTypesResponse> DisableSourceEventTypes(DisableSourceEventTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called disableSourceEventTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/disableEventTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableSourceEventTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableSourceEventTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// THis API enables archiving.
         /// 
         /// </summary>
@@ -1246,6 +1493,88 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"EnableArchiving failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables auto association for a log source. This would initiate immediate association of the source
+        /// to any eligible entities it is not already associated with, and would also ensure the log source gets
+        /// associated with entities that are added or become eligible in the future.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/EnableAutoAssociation.cs.html">here</a> to see an example of how to use EnableAutoAssociation API.</example>
+        public async Task<EnableAutoAssociationResponse> EnableAutoAssociation(EnableAutoAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableAutoAssociation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/enableAutoAssociation".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableAutoAssociationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableAutoAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enable one or more event types in a source. An event type and version can be enabled only in one source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/EnableSourceEventTypes.cs.html">here</a> to see an example of how to use EnableSourceEventTypes API.</example>
+        public async Task<EnableSourceEventTypesResponse> EnableSourceEventTypes(EnableSourceEventTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableSourceEventTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/enableEventTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableSourceEventTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableSourceEventTypes failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1371,7 +1700,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// export
+        /// Exports all custom details of the specified sources, parsers, fields and labels, in zip format.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1449,7 +1779,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// structured log fieldpaths
+        /// Extracts the field paths from the example json or xml content.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1488,7 +1819,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// structured log header paths
+        /// Extracts the header paths from the example json or xml content.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1566,7 +1898,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// association summary
+        /// Returns the count of source associations for entities in the specified compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1605,7 +1938,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// extract column names from SQL query
+        /// Extracts column names from the input SQL query.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1644,7 +1978,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// association summary by source
+        /// Returns detailed information about the configuration work request with the specified id.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1683,7 +2018,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get common field with specified name
+        /// Gets detailed information about the field with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1722,7 +2058,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get field summary
+        /// Returns the count of fields. You may optionally specify isShowDetail&#x3D;true to view a summary of each field data type.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1761,7 +2098,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get label with specified name
+        /// Gets detailed information about the label with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1800,7 +2138,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get total count
+        /// Returns the count of labels.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1834,6 +2173,84 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"GetLabelSummary failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve the log analytics enterprise manager bridge with the given id.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetLogAnalyticsEmBridge.cs.html">here</a> to see an example of how to use GetLogAnalyticsEmBridge API.</example>
+        public async Task<GetLogAnalyticsEmBridgeResponse> GetLogAnalyticsEmBridge(GetLogAnalyticsEmBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getLogAnalyticsEmBridge");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges/{logAnalyticsEmBridgeId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetLogAnalyticsEmBridgeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetLogAnalyticsEmBridge failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns log analytics enterprise manager bridges summary report.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetLogAnalyticsEmBridgeSummary.cs.html">here</a> to see an example of how to use GetLogAnalyticsEmBridgeSummary API.</example>
+        public async Task<GetLogAnalyticsEmBridgeSummaryResponse> GetLogAnalyticsEmBridgeSummary(GetLogAnalyticsEmBridgeSummaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getLogAnalyticsEmBridgeSummary");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges/emBridgeSummary".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetLogAnalyticsEmBridgeSummaryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetLogAnalyticsEmBridgeSummary failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1956,7 +2373,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Retrieves the Log-Analytics group with the given id.
+        /// Gets detailed information about the specified log group such as display name, description, defined tags, and free-form tags.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1995,7 +2413,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Returns a count of Log-Analytics groups.
+        /// Returns the count of log groups in a compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2073,7 +2492,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Obtains the lookup with the specified reference.
+        /// Gets detailed information about the lookup with the specified name.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2108,6 +2527,45 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"GetLookup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns the count of user created and oracle defined lookups.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetLookupSummary.cs.html">here</a> to see an example of how to use GetLookupSummary API.</example>
+        public async Task<GetLookupSummaryResponse> GetLookupSummary(GetLookupSummaryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getLookupSummary");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookupSummary".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetLookupSummaryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetLookupSummary failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2153,7 +2611,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get parser with fields by Name
+        /// Gets detailed information about the parser with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2192,7 +2651,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// parser summary
+        /// Returns the count of parsers.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2350,7 +2810,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get source with specified name
+        /// Gets detailed information about the source with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2389,7 +2850,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// source summary
+        /// Returns the count of sources.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2628,7 +3090,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// register custom content
+        /// Imports the specified custom content from the input in zip format.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2667,7 +3130,48 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// list of entities that have been associated to at least one source
+        /// Lists the entities in the specified compartment which are (in)eligible for association with this source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListAssociableEntities.cs.html">here</a> to see an example of how to use ListAssociableEntities API.</example>
+        public async Task<ListAssociableEntitiesResponse> ListAssociableEntities(ListAssociableEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listAssociableEntities");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/associableEntities".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListAssociableEntitiesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAssociableEntities failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the association details of entities in the specified compartment that are associated with at least one source.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2706,7 +3210,48 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// association summary by source
+        /// Gets information related to auto association for the source with the specified name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListAutoAssociations.cs.html">here</a> to see an example of how to use ListAutoAssociations API.</example>
+        public async Task<ListAutoAssociationsResponse> ListAutoAssociations(ListAutoAssociationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listAutoAssociations");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/autoAssociations".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListAutoAssociationsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAutoAssociations failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns the list of configuration work requests such as association or lookup operations, containing detailed information about them. You may paginate or limit the number of results.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2784,7 +3329,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// entity associations summary
+        /// Returns the list of source associations for the specified entity.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2823,7 +3369,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get all common field with specified display name and description
+        /// Returns a list of log fields, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by specifying various options including parser and source names.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2862,7 +3409,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get list of priorities
+        /// Lists the available problem priorities that could be associated with a label.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2901,7 +3449,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get details of sources using the label
+        /// Lists sources using the label, along with configuration details like base field, operator and condition.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2940,7 +3489,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get labels passing specified filter
+        /// Returns a list of labels, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as label name, display name, description and priority.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2974,6 +3524,45 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListLabels failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Return a list of log analytics enterprise manager bridges.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListLogAnalyticsEmBridges.cs.html">here</a> to see an example of how to use ListLogAnalyticsEmBridges API.</example>
+        public async Task<ListLogAnalyticsEmBridgesResponse> ListLogAnalyticsEmBridges(ListLogAnalyticsEmBridgesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listLogAnalyticsEmBridges");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListLogAnalyticsEmBridgesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListLogAnalyticsEmBridges failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3057,7 +3646,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Returns a list of Log-Analytics groups.
+        /// Returns a list of log groups in a compartment. You may limit the number of log groups, provide sorting options, and filter the results by specifying a display name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3135,8 +3725,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Obtains a list of lookups.  The list is filtered according to the filter criteria
-        /// specified by the user, and sorted according to the ordering criteria specified.
+        /// This API returns a list of log sets.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListLogSets.cs.html">here</a> to see an example of how to use ListLogSets API.</example>
+        public async Task<ListLogSetsResponse> ListLogSets(ListLogSetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listLogSets");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/storage/logSets".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListLogSetsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListLogSets failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of lookups, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as lookup name, description and type.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3176,7 +3805,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get all meta source types
+        /// Lists the types of log sources supported.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3256,7 +3886,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get pre-process plugin instance
+        /// Lists the parser functions defined for the specified parser.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3295,7 +3926,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get pre-process Meta plugins
+        /// Lists the parser meta plugins available for defining parser functions.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3334,7 +3966,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// List parsers passing specified filter
+        /// Returns a list of parsers, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as parser name, type, display name and description.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3491,7 +4124,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// association summary by source
+        /// Returns the list of entity associations in the input compartment for the specified source.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3530,7 +4164,48 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get source extended fields for source with specified Id
+        /// Lists the event types mapped to the source with the specified name. The event type string could be the fully qualified name or a prefix that matches the event type.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListSourceEventTypes.cs.html">here</a> to see an example of how to use ListSourceEventTypes API.</example>
+        public async Task<ListSourceEventTypesResponse> ListSourceEventTypes(ListSourceEventTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listSourceEventTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/eventTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListSourceEventTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSourceEventTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the extended field definitions for the source with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3569,7 +4244,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// list source label operators
+        /// Lists the supported conditional operators that could be used for matching log field values to generate a label. You may use patterns to specify a condition. If a log entry matches that condition, it is tagged with the corresponding label.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3608,7 +4284,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get source meta functions
+        /// Lists the functions that could be used to enrich log entries based on meaningful information extracted from the log fields.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3647,7 +4324,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// get source patterns for source with specified Id
+        /// Lists the source patterns for the source with the specified name.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3686,7 +4364,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// source list
+        /// Returns a list of sources, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as display name, description and entity type.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4001,8 +4680,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Obtains a list of warnings.  The list is filtered according to the filter criteria
-        /// specified by the user, and sorted according to the ordering criteria specified.
+        /// Returns a list of collection warnings, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as start time, end time, warning type, warning state, source name, source pattern and entity name.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4480,7 +5158,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// register lookup
+        /// Creates a lookup with the specified name, type and description. The csv file containing the lookup content is passed in as binary data in the request.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4593,6 +5272,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"RemoveEntityAssociations failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Remove one or more event types from a source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/RemoveSourceEventTypes.cs.html">here</a> to see an example of how to use RemoveSourceEventTypes API.</example>
+        public async Task<RemoveSourceEventTypesResponse> RemoveSourceEventTypes(RemoveSourceEventTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called removeSourceEventTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/actions/removeEventTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemoveSourceEventTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveSourceEventTypes failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4719,9 +5438,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Accepts a list of warnings.  Any unsuppressed warnings in the input list will
-        /// be suppressed.  Warnings in the input list which are already suppressed will
-        /// not be modified.
+        /// Supresses a list of warnings. Any unsuppressed warnings in the input list would be suppressed. Warnings in the input list which are already suppressed will not be modified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4761,7 +5478,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// test parser
+        /// Tests the parser definition against the specified example content to ensure fields are successfully extracted.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4800,9 +5518,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Accepts a list of warnings.  Any suppressed warnings in the input list will
-        /// be unsuppressed.  Warnings in the input list which are unsuppressed will
-        /// not be modified.
+        /// Unsupresses a list of warnings. Any suppressed warnings in the input list would be unsuppressed. Warnings in the input list which are already unsuppressed will not be modified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4837,6 +5553,45 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"UnsuppressWarning failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Update log analytics enterprise manager bridge with the given id.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpdateLogAnalyticsEmBridge.cs.html">here</a> to see an example of how to use UpdateLogAnalyticsEmBridge API.</example>
+        public async Task<UpdateLogAnalyticsEmBridgeResponse> UpdateLogAnalyticsEmBridge(UpdateLogAnalyticsEmBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateLogAnalyticsEmBridge");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEmBridges/{logAnalyticsEmBridgeId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateLogAnalyticsEmBridgeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateLogAnalyticsEmBridge failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4920,7 +5675,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Updates the Log-Analytics group with the given id.
+        /// Updates the specified log group&#39;s display name, description, defined tags, and free-form tags.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5038,8 +5794,7 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Updates the specified lookup with the details provided.  This API will not update
-        /// lookup metadata (such as lookup description).
+        /// Updates the lookup content. The csv file containing the content to be updated is passed in as binary data in the request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5158,6 +5913,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Accepts log events for processing by Logging Analytics.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UploadLogEventsFile.cs.html">here</a> to see an example of how to use UploadLogEventsFile API.</example>
+        public async Task<UploadLogEventsFileResponse> UploadLogEventsFile(UploadLogEventsFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called uploadLogEventsFile");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/actions/uploadLogEventsFile".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Properties.Add(Oci.Common.Http.Signing.SigningStrategy.SIGNING_STRATEGY_PROPERTY_NAME_KEY, Oci.Common.Http.Signing.SigningStrategy.EXCLUDE_BODY);
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UploadLogEventsFileResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UploadLogEventsFile failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Accepts log data for processing by Logging Analytics.
         /// 
         /// </summary>
@@ -5199,7 +5995,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// create or update associations for a source
+        /// Creates or updates associations between sources and entities. All entities should belong to the specified input compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5238,7 +6035,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Defines or update a field.
+        /// Creates or updates a field that could be used in parser expressions to extract and assign value. To create a field, specify its display name. A name would be generated for the field. For subsequent calls to update the field, include the name attribute.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5277,7 +6075,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Define or update a label.
+        /// Creates or updates a label that could be used to tag a log entry. You may optionally designate the label as a problem, and assign it a priority. You may also provide its related terms (aliases). To create a label, specify its display name. A name would be generated for the label. For subsequent calls to update the label, include the name attribute.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5316,7 +6115,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Define or update parser
+        /// Creates or updates a parser, which defines how fields are extracted from a log entry.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5355,7 +6155,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Define or update a source
+        /// Creates or updates a log source. You may also specify parsers, labels, extended fields etc., for the source.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5394,7 +6195,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// association parameter validation
+        /// Checks if the passed in entities could be associated with the specified sources. The validation is performed to ensure that the entities have the relevant property values that are used in the corresponding source patterns.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5472,7 +6274,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// Pre-define or update a source
+        /// Checks if the specified input is a valid log source definition.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5511,7 +6314,8 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
-        /// test extended fields
+        /// Checks if the specified input contains valid extended field definitions against the provided example content.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

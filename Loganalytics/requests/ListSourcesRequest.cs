@@ -41,20 +41,26 @@ namespace Oci.LoganalyticsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// entityType
+        /// A filter to return only sources associated with entities of the specified type.
+        /// The match is case-insensitive.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// Search by source display name or description.
+        /// The source display text used for filtering.  Only sources with the specified name
+        /// or description will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceDisplayText")]
         public string SourceDisplayText { get; set; }
         
         ///
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         ///
@@ -68,14 +74,18 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// Is system param of value (all, custom, sourceUsing)
+        /// The system value used for filtering.  Only items with the specified system value
+        /// will be returned.  Valid values are built in, custom (for user defined items), or
+        /// all (for all items, regardless of system value).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSystem")]
         public System.Nullable<IsSystemEnum> IsSystem { get; set; }
         
         /// <value>
-        /// auto association flag
+        /// An auto-associate flag used for filtering.  Only sources which are marked for automatic
+        /// association will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isAutoAssociated")]
         public System.Nullable<bool> IsAutoAssociated { get; set; }
@@ -102,7 +112,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by source
+        /// The attribute used to sort the returned sources
         /// </value>
         ///
         public enum SortByEnum {
@@ -117,7 +127,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by source
+        /// The attribute used to sort the returned sources
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
@@ -143,7 +153,11 @@ namespace Oci.LoganalyticsService.Requests
         public string Name { get; set; }
         
         /// <value>
-        /// is simplified
+        /// A flag specifying whether or not to return all source information, or a subset of the
+        /// information about each source.  A value of true will return only the source unique
+        /// identifier and the source name.  A value of false will return all source information
+        /// (such as author, updated date, system flag, etc.)
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSimplified")]
         public System.Nullable<bool> IsSimplified { get; set; }

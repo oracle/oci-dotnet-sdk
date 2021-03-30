@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// alias list
+        /// The alias list.
         /// </value>
         [JsonProperty(PropertyName = "aliases")]
         public System.Collections.Generic.List<LogAnalyticsLabelAlias> Aliases { get; set; }
@@ -34,43 +34,45 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<long> SuggestType { get; set; }
         
         /// <value>
-        /// description
+        /// The label description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// display name
+        /// The label display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// edit version
+        /// The edit version.
         /// </value>
         [JsonProperty(PropertyName = "editVersion")]
         public System.Nullable<long> EditVersion { get; set; }
         
         /// <value>
-        /// impact
+        /// The label impact.
         /// </value>
         [JsonProperty(PropertyName = "impact")]
         public string Impact { get; set; }
         
         /// <value>
-        /// is system flag
+        /// The system flag.  A value of false denotes a custom, or user
+        /// defined label.  A value of true denotes a built in label.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
         /// <value>
-        /// label identifier
+        /// The label name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// Valid values are (NONE, LOW, HIGH). NONE is default.
+        /// The label priority. Valid values are (NONE, LOW, HIGH). NONE is default.
         /// </value>
         ///
         public enum PriorityEnum {
@@ -85,20 +87,20 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// Valid values are (NONE, LOW, HIGH). NONE is default.
+        /// The label priority. Valid values are (NONE, LOW, HIGH). NONE is default.
         /// </value>
         [JsonProperty(PropertyName = "priority")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
         
         /// <value>
-        /// tag recommendation
+        /// The label recommendation.
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
                 ///
         /// <value>
-        /// Valid values are (INFO, PROBLEM). INFO is default.
+        /// The label type. Valid values are (INFO, PROBLEM). INFO is default.
         /// </value>
         ///
         public enum TypeEnum {
@@ -109,7 +111,7 @@ namespace Oci.LoganalyticsService.Models
         };
 
         /// <value>
-        /// Valid values are (INFO, PROBLEM). INFO is default.
+        /// The label type. Valid values are (INFO, PROBLEM). INFO is default.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]

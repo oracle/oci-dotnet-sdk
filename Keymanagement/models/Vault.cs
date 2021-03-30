@@ -197,5 +197,11 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "wrappingkeyId")]
         public string WrappingkeyId { get; set; }
         
+        [JsonProperty(PropertyName = "replicaDetails")]
+        public VaultReplicaDetails ReplicaDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "isPrimary")]
+        public System.Nullable<bool> IsPrimary { get; set; }
+        
     }
 }

@@ -108,10 +108,12 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
-        /// Creates a software-defined data center (SDDC).
+        /// Creates an Oracle Cloud VMware Solution software-defined data center (SDDC).
         /// &lt;br/&gt;
         /// Use the {@link WorkRequest} operations to track the
         /// creation of the SDDC.
+        /// &lt;br/&gt;
+        /// **Important:** You must configure the SDDC&#39;s networking resources with the security rules detailed in [Security Rules for Oracle Cloud VMware Solution SDDCs](https://docs.cloud.oracle.com/iaas/Content/VMware/Reference/ocvssecurityrules.htm). Otherwise, provisioning the SDDC will fail. The rules are based on the requirements set by VMware.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

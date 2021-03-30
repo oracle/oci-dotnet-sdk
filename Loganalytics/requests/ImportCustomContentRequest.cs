@@ -41,7 +41,9 @@ namespace Oci.LoganalyticsService.Requests
         public System.IO.Stream ImportCustomContentFileBody { get; set; }
         
         /// <value>
-        /// is overwrite
+        /// A flag indicating whether or not to overwrite existing content if a conflict is
+        /// found during import content operation.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isOverwrite")]
         public System.Nullable<bool> IsOverwrite { get; set; }

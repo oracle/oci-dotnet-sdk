@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// log header json paths
+        /// The log header json paths.
         /// </value>
         [JsonProperty(PropertyName = "jsonPaths")]
         public System.Collections.Generic.List<ExtractLogHeaderDetails> JsonPaths { get; set; }
         
         /// <value>
-        /// log field or header values
+        /// The log field or log header values.
         /// </value>
         [JsonProperty(PropertyName = "xmlPaths")]
         public System.Collections.Generic.List<string> XmlPaths { get; set; }

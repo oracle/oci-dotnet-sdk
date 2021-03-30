@@ -28,31 +28,31 @@ namespace Oci.LoganalyticsService.Models
         public LogAnalyticsSourceExtendedFieldDefinition ExtendedFieldDefinition { get; set; }
         
         /// <value>
-        /// Id
+        /// The extended field unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "extendedFieldDefinitionId")]
         public System.Nullable<long> ExtendedFieldDefinitionId { get; set; }
         
         /// <value>
-        /// new field internal name
+        /// The field internal name
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }
         
         /// <value>
-        /// new field internal display name
+        /// The field internal display name.
         /// </value>
         [JsonProperty(PropertyName = "fieldDisplayName")]
         public string FieldDisplayName { get; set; }
         
         /// <value>
-        /// saved regular expression internal name
+        /// The saved regular expression name.
         /// </value>
         [JsonProperty(PropertyName = "savedRegularExpressionName")]
         public string SavedRegularExpressionName { get; set; }
         
         /// <value>
-        /// extended field Id
+        /// The extended field unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "extendedFieldId")]
         public System.Nullable<long> ExtendedFieldId { get; set; }

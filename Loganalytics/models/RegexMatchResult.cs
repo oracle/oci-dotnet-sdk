@@ -22,31 +22,31 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// matchedLogEntryEndIndex
+        /// The matched log entry end index.
         /// </value>
         [JsonProperty(PropertyName = "matchedLogEntryEndIndex")]
         public System.Nullable<int> MatchedLogEntryEndIndex { get; set; }
         
         /// <value>
-        /// regexScore
+        /// The regular expression score.
         /// </value>
         [JsonProperty(PropertyName = "regexScore")]
         public System.Nullable<int> RegexScore { get; set; }
         
         /// <value>
-        /// regexStepsInfo
+        /// The regular expression steps information.
         /// </value>
         [JsonProperty(PropertyName = "regexStepsInfo")]
         public System.Collections.Generic.List<StepInfo> RegexStepsInfo { get; set; }
         
         /// <value>
-        /// stepCount
+        /// The regular expression step count.
         /// </value>
         [JsonProperty(PropertyName = "stepCount")]
         public System.Nullable<int> StepCount { get; set; }
         
         /// <value>
-        /// subRegexesMatchInfo
+        /// The regular expression match information.
         /// </value>
         [JsonProperty(PropertyName = "subRegexesMatchInfo")]
         public System.Collections.Generic.Dictionary<string, MatchInfo> SubRegexesMatchInfo { get; set; }

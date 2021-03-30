@@ -31,7 +31,7 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// sql query to get the columns
+        /// The SQL query from which column names are to be extracted.
         /// </value>
         /// <remarks>
         /// Required

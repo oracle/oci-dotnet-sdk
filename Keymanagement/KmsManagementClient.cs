@@ -516,6 +516,49 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
+        /// When a vault has a replica, each operation on the vault or its resources, such as
+        /// keys, is replicated and has an associated replicationId. Replication status provides
+        /// details about whether the operation associated with the given replicationId has been
+        /// successfully applied across replicas.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/keymanagement/GetReplicationStatus.cs.html">here</a> to see an example of how to use GetReplicationStatus API.</example>
+        public async Task<GetReplicationStatusResponse> GetReplicationStatus(GetReplicationStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getReplicationStatus");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20180608/replicaOperations/{replicationId}/status".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetReplicationStatusResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetReplicationStatus failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets details about the public RSA wrapping key associated with the vault in the endpoint. Each vault has an RSA key-pair that wraps and
         /// unwraps AES key material for import into Key Management.
         /// 
@@ -912,7 +955,7 @@ namespace Oci.KeymanagementService
         /// <summary>
         /// Updates the properties of a master encryption key. Specifically, you can update the
         /// &#x60;displayName&#x60;, &#x60;freeformTags&#x60;, and &#x60;definedTags&#x60; properties. Furthermore,
-        /// the key must in an ENABLED or CREATING state to be updated.
+        /// the key must be in an &#x60;ENABLED&#x60; or &#x60;CREATING&#x60; state to be updated.
         /// &lt;br/&gt;
         /// As a management operation, this call is subject to a Key Management limit that applies to the total number
         /// of requests across all management write operations. Key Management might throttle this call to reject an

@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// log field path values
+        /// The log field path values.
         /// </value>
         [JsonProperty(PropertyName = "paths")]
         public System.Collections.Generic.List<string> Paths { get; set; }

@@ -22,13 +22,13 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// canonical link
+        /// The canonical link.
         /// </value>
         [JsonProperty(PropertyName = "canonicalLink")]
         public string CanonicalLink { get; set; }
         
         /// <value>
-        /// total count
+        /// The total count.
         /// </value>
         [JsonProperty(PropertyName = "totalCount")]
         public System.Nullable<long> TotalCount { get; set; }

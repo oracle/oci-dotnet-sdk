@@ -48,13 +48,17 @@ namespace Oci.LoganalyticsService.Requests
         public string EntityId { get; set; }
         
         /// <value>
-        /// entity type name
+        /// The entity type used for filtering.  Only associations on an entity with the
+        /// specified type will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityType")]
         public string EntityType { get; set; }
         
         /// <value>
-        /// entity type display name
+        /// The entity type display name used for filtering.  Only items associated with the entity
+        /// with the specified type display name will be returned.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityTypeDisplayName")]
         public string EntityTypeDisplayName { get; set; }
@@ -93,7 +97,7 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned entities
         /// </value>
         ///
         public enum SortByEnum {
@@ -106,7 +110,7 @@ namespace Oci.LoganalyticsService.Requests
         };
 
         /// <value>
-        /// sort by field
+        /// The attribute used to sort the returned entities
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

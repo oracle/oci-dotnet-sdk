@@ -164,6 +164,14 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> PortX { get; set; }
         
         /// <value>
+        /// If the policy is to enable high availability of the instance, by
+        /// maintaining secondary/failover capacity as necessary.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHighlyAvailable")]
+        public System.Nullable<bool> IsHighlyAvailable { get; set; }
+        
+        /// <value>
         /// The network endpoints available for this DB System.
         /// 
         /// </value>
