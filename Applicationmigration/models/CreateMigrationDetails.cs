@@ -83,7 +83,7 @@ namespace Oci.ApplicationmigrationService.Models
         
         /// <value>
         /// The pre-existing database type to be used in this migration. Currently, Application migration only supports Oracle Cloud
-        /// Infrastrure databases and this option is currently available only for `JAVA_CLOUD_SERVICE` and `WEBLOGIC_CLOUD_SERVICE` target instance types.
+        /// Infrastructure databases and this option is currently available only for `JAVA_CLOUD_SERVICE` and `WEBLOGIC_CLOUD_SERVICE` target instance types.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "preCreatedTargetDatabaseType")]

@@ -68,6 +68,30 @@ namespace Oci.ObjectstorageService.Models
         public string ObjectName { get; set; }
                 ///
         /// <value>
+        /// Specifies whether a list operation is allowed on a PAR with accessType \"AnyObjectRead\" or \"AnyObjectReadWrite\".
+        /// Deny: Prevents the user from performing a list operation.
+        /// ListObjects: Authorizes the user to perform a list operation.
+        /// 
+        /// </value>
+        ///
+        public enum BucketListingActionEnum {
+            [EnumMember(Value = "Deny")]
+            Deny,
+            [EnumMember(Value = "ListObjects")]
+            ListObjects
+        };
+
+        /// <value>
+        /// Specifies whether a list operation is allowed on a PAR with accessType \"AnyObjectRead\" or \"AnyObjectReadWrite\".
+        /// Deny: Prevents the user from performing a list operation.
+        /// ListObjects: Authorizes the user to perform a list operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bucketListingAction")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BucketListingActionEnum> BucketListingAction { get; set; }
+                ///
+        /// <value>
         /// The operation that can be performed on this resource.
         /// </value>
         ///
@@ -79,7 +103,11 @@ namespace Oci.ObjectstorageService.Models
             [EnumMember(Value = "ObjectReadWrite")]
             ObjectReadWrite,
             [EnumMember(Value = "AnyObjectWrite")]
-            AnyObjectWrite
+            AnyObjectWrite,
+            [EnumMember(Value = "AnyObjectRead")]
+            AnyObjectRead,
+            [EnumMember(Value = "AnyObjectReadWrite")]
+            AnyObjectReadWrite
         };
 
         /// <value>

@@ -160,5 +160,19 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "totalOcpus")]
         public System.Nullable<float> TotalOcpus { get; set; }
         
+        /// <value>
+        /// The current total memory of the dedicated VM host, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalMemoryInGBs")]
+        public System.Nullable<float> TotalMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The current available memory of the dedicated VM host, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "remainingMemoryInGBs")]
+        public System.Nullable<float> RemainingMemoryInGBs { get; set; }
+        
     }
 }

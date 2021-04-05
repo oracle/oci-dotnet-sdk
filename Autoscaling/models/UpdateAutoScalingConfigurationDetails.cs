@@ -50,11 +50,6 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
-        /// <value>
-        /// The minimum period of time to wait between scaling actions. The cooldown period gives the system time
-        /// to stabilize before rescaling. The minimum value is 300 seconds, which is also the default.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "coolDownInSeconds")]
         public System.Nullable<int> CoolDownInSeconds { get; set; }
         

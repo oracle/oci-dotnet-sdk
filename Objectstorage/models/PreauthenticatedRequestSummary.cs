@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ObjectstorageService.Models
 {
     /// <summary>
-    /// Get summary information about pre-authenticated requests.  
+    /// Get summary information about pre-authenticated requests.
     /// 
     /// </summary>
     public class PreauthenticatedRequestSummary 
@@ -49,6 +49,16 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
+        
+        /// <value>
+        /// Specifies whether a list operation is allowed on a PAR with accessType \"AnyObjectRead\" or \"AnyObjectReadWrite\".
+        /// Deny: Prevents the user from performing a list operation.
+        /// ListObjects: Authorizes the user to perform a list operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bucketListingAction")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PreauthenticatedRequest.BucketListingActionEnum> BucketListingAction { get; set; }
                 ///
         /// <value>
         /// The operation that can be performed on this resource.
@@ -62,7 +72,11 @@ namespace Oci.ObjectstorageService.Models
             [EnumMember(Value = "ObjectReadWrite")]
             ObjectReadWrite,
             [EnumMember(Value = "AnyObjectWrite")]
-            AnyObjectWrite
+            AnyObjectWrite,
+            [EnumMember(Value = "AnyObjectRead")]
+            AnyObjectRead,
+            [EnumMember(Value = "AnyObjectReadWrite")]
+            AnyObjectReadWrite
         };
 
         /// <value>

@@ -108,6 +108,45 @@ namespace Oci.ArtifactsService
         }
 
         /// <summary>
+        /// Upload a signature to an image.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/artifacts/CreateContainerImageSignature.cs.html">here</a> to see an example of how to use CreateContainerImageSignature API.</example>
+        public async Task<CreateContainerImageSignatureResponse> CreateContainerImageSignature(CreateContainerImageSignatureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createContainerImageSignature");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/container/imageSignatures".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateContainerImageSignatureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateContainerImageSignature failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Create a new empty container repository. Avoid entering confidential information.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -181,6 +220,45 @@ namespace Oci.ArtifactsService
             catch (Exception e)
             {
                 logger.Error($"DeleteContainerImage failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete a container image signature.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/artifacts/DeleteContainerImageSignature.cs.html">here</a> to see an example of how to use DeleteContainerImageSignature API.</example>
+        public async Task<DeleteContainerImageSignatureResponse> DeleteContainerImageSignature(DeleteContainerImageSignatureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteContainerImageSignature");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/container/imageSignatures/{imageSignatureId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteContainerImageSignatureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteContainerImageSignature failed with error: {e.Message}");
                 throw;
             }
         }
@@ -303,6 +381,45 @@ namespace Oci.ArtifactsService
         }
 
         /// <summary>
+        /// Get container image signature metadata.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/artifacts/GetContainerImageSignature.cs.html">here</a> to see an example of how to use GetContainerImageSignature API.</example>
+        public async Task<GetContainerImageSignatureResponse> GetContainerImageSignature(GetContainerImageSignatureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getContainerImageSignature");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/container/imageSignatures/{imageSignatureId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetContainerImageSignatureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetContainerImageSignature failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Get container repository.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -337,6 +454,45 @@ namespace Oci.ArtifactsService
             catch (Exception e)
             {
                 logger.Error($"GetContainerRepository failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List container image signatures in an image.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/artifacts/ListContainerImageSignatures.cs.html">here</a> to see an example of how to use ListContainerImageSignatures API.</example>
+        public async Task<ListContainerImageSignaturesResponse> ListContainerImageSignatures(ListContainerImageSignaturesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listContainerImageSignatures");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/container/imageSignatures".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListContainerImageSignaturesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListContainerImageSignatures failed with error: {e.Message}");
                 throw;
             }
         }

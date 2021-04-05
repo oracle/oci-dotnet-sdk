@@ -159,5 +159,17 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        /// <value>
+        /// The remaining memory of the dedicated VM host, in GBs.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "remainingMemoryInGBsGreaterThanOrEqualTo")]
+        public System.Nullable<float> RemainingMemoryInGBsGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// The available OCPUs of the dedicated VM host.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "remainingOcpusGreaterThanOrEqualTo")]
+        public System.Nullable<float> RemainingOcpusGreaterThanOrEqualTo { get; set; }
     }
 }

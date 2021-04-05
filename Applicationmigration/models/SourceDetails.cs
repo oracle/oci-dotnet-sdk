@@ -24,7 +24,7 @@ namespace Oci.ApplicationmigrationService.Models
     /// Specify `INTERNAL_COMPUTE` if you have a traditional Oracle Cloud Infrastructure - Classic account and you want to migrate Oracle
     /// Process Cloud Service or Oracle Integration Cloud Service applications.
     /// <br/>
-    /// Specify `OCC` if you have an Oracle Cloud @ Customer account.
+    /// Specify `OCC` if you want to migrate applications from Oracle Cloud@Customer.
     /// 
     /// </summary>
     [JsonConverter(typeof(SourceDetailsModelConverter))]

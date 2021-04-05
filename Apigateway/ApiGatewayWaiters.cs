@@ -82,5 +82,33 @@ namespace Oci.ApigatewayService
             );
             return new Waiter<GetCertificateRequest, GetCertificateResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSdkRequest, GetSdkResponse> ForSdk(GetSdkRequest request, params Sdk.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSdk(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSdkRequest, GetSdkResponse> ForSdk(GetSdkRequest request, WaiterConfiguration config, params Sdk.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSdkRequest, GetSdkResponse>(
+                request,
+                request => client.GetSdk(request),
+                response => targetStates.Contains(response.Sdk.LifecycleState.Value),
+                targetStates.Contains(Sdk.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSdkRequest, GetSdkResponse>(config, agent);
+        }
     }
 }

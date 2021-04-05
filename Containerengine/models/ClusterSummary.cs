@@ -95,5 +95,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "availableKubernetesUpgrades")]
         public System.Collections.Generic.List<string> AvailableKubernetesUpgrades { get; set; }
         
+        /// <value>
+        /// The image verification policy for signature validation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "imagePolicyConfig")]
+        public ImagePolicyConfig ImagePolicyConfig { get; set; }
+        
     }
 }

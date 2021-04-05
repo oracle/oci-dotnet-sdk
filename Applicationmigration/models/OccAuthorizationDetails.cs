@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Credentials to access Oracle Cloud @ Customer, which is the source environment from which you want to migrate the application.
+    /// Credentials to access Oracle Cloud@Customer, which is the source environment from which you want to migrate the application.
     /// 
     /// </summary>
     public class OccAuthorizationDetails : AuthorizationDetails
     {
         
         /// <value>
-        /// User with Compute Operations role in Oracle Cloud @ Customer.
+        /// User with Compute Operations role in Oracle Cloud@Customer.
         /// </value>
         /// <remarks>
         /// Required

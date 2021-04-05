@@ -106,6 +106,28 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "crossConnectMappings")]
         public System.Collections.Generic.List<CrossConnectMapping> CrossConnectMappings { get; set; }
+                ///
+        ///
+        public enum RoutingPolicyEnum {
+            [EnumMember(Value = "ORACLE_SERVICE_NETWORK")]
+            OracleServiceNetwork,
+            [EnumMember(Value = "REGIONAL")]
+            Regional,
+            [EnumMember(Value = "MARKET_LEVEL")]
+            MarketLevel,
+            [EnumMember(Value = "GLOBAL")]
+            Global
+        };
+
+        /// <value>
+        /// The routing policy sets how routing information about the Oracle cloud is shared over a public virtual circuit.
+        /// Policies available are: `ORACLE_SERVICE_NETWORK`, `REGIONAL`, `MARKET_LEVEL`, and `GLOBAL`.
+        /// See [Route Filtering](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/routingonprem.htm#route_filtering) for details.
+        /// By default, routing information is shared for all routes in the same market.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "routingPolicy", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<RoutingPolicyEnum> RoutingPolicy { get; set; }
         
         /// <value>
         /// Deprecated. Instead use `customerAsn`.

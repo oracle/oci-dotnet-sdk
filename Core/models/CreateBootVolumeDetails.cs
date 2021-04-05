@@ -118,5 +118,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
         
+        /// <value>
+        /// The list of boot volume replicas to be enabled for this boot volume
+        /// in the specified destination availability domains.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bootVolumeReplicas")]
+        public System.Collections.Generic.List<BootVolumeReplicaDetails> BootVolumeReplicas { get; set; }
+        
     }
 }

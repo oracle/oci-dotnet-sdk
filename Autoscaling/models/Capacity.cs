@@ -23,21 +23,33 @@ namespace Oci.AutoscalingService.Models
     {
         
         /// <value>
-        /// The maximum number of instances the instance pool is allowed to increase to (scale out).
+        /// For a threshold-based autoscaling policy, this value is the maximum number of instances the instance pool is allowed
+        /// to increase to (scale out).
+        /// <br/>
+        /// For a schedule-based autoscaling policy, this value is not used.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<int> Max { get; set; }
         
         /// <value>
-        /// The minimum number of instances the instance pool is allowed to decrease to (scale in).
+        /// For a threshold-based autoscaling policy, this value is the minimum number of instances the instance pool is allowed
+        /// to decrease to (scale in).
+        /// <br/>
+        /// For a schedule-based autoscaling policy, this value is not used.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "min")]
         public System.Nullable<int> Min { get; set; }
         
         /// <value>
-        /// The initial number of instances to launch in the instance pool immediately after autoscaling is
-        /// enabled. After autoscaling retrieves performance metrics, the number of instances is automatically adjusted from this
-        /// initial number to a number that is based on the limits that you set.
+        /// For a threshold-based autoscaling policy, this value is the initial number of instances to launch in the instance pool
+        /// immediately after autoscaling is enabled. After autoscaling retrieves performance metrics, the number of
+        /// instances is automatically adjusted from this initial number to a number that is based on the limits that
+        /// you set.
+        /// <br/>
+        /// For a schedule-based autoscaling policy, this value is the target pool size to scale to when executing the schedule
+        /// that's defined in the autoscaling policy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "initial")]

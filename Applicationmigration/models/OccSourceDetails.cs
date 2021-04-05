@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApplicationmigrationService.Models
 {
     /// <summary>
-    /// Details about the Oracle Cloud @ Customer account, the source environment from which you want to migrate the application.
+    /// Details about the Oracle Cloud@Customer account, the source environment from which you want to migrate the application.
     /// 
     /// </summary>
     public class OccSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// If you are using a Oracle Cloud @ Customer account with Identity Cloud Service (IDCS), enter the service instance ID.
-        /// For example, if Compute-567890123 is the account name of your Oracle Cloud @ Customer Compute service entitlement,
+        /// If you are using an Oracle Cloud@Customer account with Identity Cloud Service (IDCS), enter the service instance ID.
+        /// For example, if Compute-567890123 is the account name of your Oracle Cloud@Customer Compute service entitlement,
         /// then enter 567890123.
         /// 
         /// </value>

@@ -82,5 +82,14 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "options")]
         public ClusterCreateOptions Options { get; set; }
         
+        /// <value>
+        /// The image verification policy for signature validation. Once a policy is created and enabled with
+        /// one or more kms keys, the policy will ensure all images deployed has been signed with the key(s)
+        /// attached to the policy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "imagePolicyConfig")]
+        public CreateImagePolicyConfigDetails ImagePolicyConfig { get; set; }
+        
     }
 }

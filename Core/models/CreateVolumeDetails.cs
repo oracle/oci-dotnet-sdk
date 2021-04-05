@@ -133,5 +133,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
         
+        /// <value>
+        /// The list of block volume replicas to be enabled for this volume
+        /// in the specified destination availability domains.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockVolumeReplicas")]
+        public System.Collections.Generic.List<BlockVolumeReplicaDetails> BlockVolumeReplicas { get; set; }
+        
     }
 }

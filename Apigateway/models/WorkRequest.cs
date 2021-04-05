@@ -62,7 +62,11 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "DELETE_API")]
             DeleteApi,
             [EnumMember(Value = "VALIDATE_API")]
-            ValidateApi
+            ValidateApi,
+            [EnumMember(Value = "CREATE_SDK")]
+            CreateSdk,
+            [EnumMember(Value = "DELETE_SDK")]
+            DeleteSdk
         };
 
         /// <value>

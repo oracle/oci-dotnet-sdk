@@ -50,7 +50,7 @@ namespace Oci.AutoscalingService.Models
         public string PolicyType { get; set; }
         
         /// <value>
-        /// Boolean field indicated whether this policy is enabled or not.
+        /// Whether the autoscaling policy is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

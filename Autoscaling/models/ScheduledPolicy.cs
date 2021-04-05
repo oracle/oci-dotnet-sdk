@@ -21,12 +21,18 @@ namespace Oci.AutoscalingService.Models
     public class ScheduledPolicy : AutoScalingPolicy
     {
         
+        /// <value>
+        /// The schedule for executing the autoscaling policy.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ExecutionSchedule is required.")]
         [JsonProperty(PropertyName = "executionSchedule")]
         public ExecutionSchedule ExecutionSchedule { get; set; }
+        
+        [JsonProperty(PropertyName = "resourceAction")]
+        public ResourceAction ResourceAction { get; set; }
         
         [JsonProperty(PropertyName = "policyType")]
         private readonly string policyType = "scheduled";
