@@ -99,6 +99,55 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListBlockVolumeReplicas operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListBlockVolumeReplicasResponse> ListBlockVolumeReplicasResponseEnumerator(ListBlockVolumeReplicasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListBlockVolumeReplicasRequest, ListBlockVolumeReplicasResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBlockVolumeReplicas(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the BlockVolumeReplica objects
+        /// contained in responses from the ListBlockVolumeReplicas operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<BlockVolumeReplica> ListBlockVolumeReplicasRecordEnumerator(ListBlockVolumeReplicasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListBlockVolumeReplicasRequest, ListBlockVolumeReplicasResponse, BlockVolumeReplica>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBlockVolumeReplicas(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListBootVolumeBackups operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -143,6 +192,55 @@ namespace Oci.CoreService
                     return request;
                 },
                 request => client.ListBootVolumeBackups(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListBootVolumeReplicas operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListBootVolumeReplicasResponse> ListBootVolumeReplicasResponseEnumerator(ListBootVolumeReplicasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListBootVolumeReplicasRequest, ListBootVolumeReplicasResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBootVolumeReplicas(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the BootVolumeReplica objects
+        /// contained in responses from the ListBootVolumeReplicas operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<BootVolumeReplica> ListBootVolumeReplicasRecordEnumerator(ListBootVolumeReplicasRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListBootVolumeReplicasRequest, ListBootVolumeReplicasResponse, BootVolumeReplica>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBootVolumeReplicas(request, retryConfiguration, cancellationToken),
                 response => response.Items
             );
         }

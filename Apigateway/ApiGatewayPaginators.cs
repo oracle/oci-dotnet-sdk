@@ -147,5 +147,103 @@ namespace Oci.ApigatewayService
             );
         }
 
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListSdkLanguageTypes operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListSdkLanguageTypesResponse> ListSdkLanguageTypesResponseEnumerator(ListSdkLanguageTypesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListSdkLanguageTypesRequest, ListSdkLanguageTypesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSdkLanguageTypes(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SdkLanguageTypeSummary objects
+        /// contained in responses from the ListSdkLanguageTypes operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SdkLanguageTypeSummary> ListSdkLanguageTypesRecordEnumerator(ListSdkLanguageTypesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListSdkLanguageTypesRequest, ListSdkLanguageTypesResponse, SdkLanguageTypeSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSdkLanguageTypes(request, retryConfiguration, cancellationToken),
+                response => response.SdkLanguageTypeCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListSdks operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListSdksResponse> ListSdksResponseEnumerator(ListSdksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListSdksRequest, ListSdksResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSdks(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SdkSummary objects
+        /// contained in responses from the ListSdks operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SdkSummary> ListSdksRecordEnumerator(ListSdksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListSdksRequest, ListSdksResponse, SdkSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSdks(request, retryConfiguration, cancellationToken),
+                response => response.SdkCollection.Items
+            );
+        }
+
     }
 }

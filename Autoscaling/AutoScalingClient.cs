@@ -148,6 +148,14 @@ namespace Oci.AutoscalingService
 
         /// <summary>
         /// Creates an autoscaling policy for the specified autoscaling configuration.
+        /// &lt;br/&gt;
+        /// You can create the following types of autoscaling policies:
+        /// &lt;br/&gt;
+        /// - **Schedule-based:** Autoscaling events take place at the specific times that you schedule.
+        /// - **Threshold-based:** An autoscaling action is triggered when a performance metric meets or exceeds a threshold.
+        /// &lt;br/&gt;
+        /// An autoscaling configuration can either have multiple schedule-based autoscaling policies, or one
+        /// threshold-based autoscaling policy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

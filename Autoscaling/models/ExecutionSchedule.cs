@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// Specifies the execution schedule for a policy.
+    /// An execution schedule for an autoscaling policy.
     /// 
     /// </summary>
     [JsonConverter(typeof(ExecutionScheduleModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.AutoscalingService.Models
         
                 ///
         /// <value>
-        /// Specifies the time zone the schedule is in.
+        /// The time zone for the execution schedule.
         /// </value>
         ///
         public enum TimezoneEnum {
@@ -34,7 +34,7 @@ namespace Oci.AutoscalingService.Models
         };
 
         /// <value>
-        /// Specifies the time zone the schedule is in.
+        /// The time zone for the execution schedule.
         /// </value>
         /// <remarks>
         /// Required

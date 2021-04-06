@@ -20,6 +20,11 @@ namespace Oci.AutoscalingService.Models
     /// <br/>
     /// An autoscaling policy is part of an autoscaling configuration. For more information, see
     /// [Autoscaling](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm).
+    /// <br/>
+    /// You can create the following types of autoscaling policies:
+    ///   
+    ///   - **Schedule-based:** Autoscaling events take place at the specific times that you schedule.
+    ///   - **Threshold-based:** An autoscaling action is triggered when a performance metric meets or exceeds a threshold.
     /// 
     /// </summary>
     [JsonConverter(typeof(AutoScalingPolicyModelConverter))]
@@ -29,10 +34,6 @@ namespace Oci.AutoscalingService.Models
         /// <value>
         /// The capacity requirements of the autoscaling policy.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
         
@@ -63,7 +64,7 @@ namespace Oci.AutoscalingService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Boolean field indicating whether this policy is enabled or not.
+        /// Whether the autoscaling policy is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

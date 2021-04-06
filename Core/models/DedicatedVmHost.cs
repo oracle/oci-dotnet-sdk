@@ -178,5 +178,19 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "remainingOcpus")]
         public System.Nullable<float> RemainingOcpus { get; set; }
         
+        /// <value>
+        /// The total memory of the dedicated VM host, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalMemoryInGBs")]
+        public System.Nullable<float> TotalMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The remaining memory of the dedicated VM host, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "remainingMemoryInGBs")]
+        public System.Nullable<float> RemainingMemoryInGBs { get; set; }
+        
     }
 }

@@ -51,8 +51,11 @@ namespace Oci.AutoscalingService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The minimum period of time to wait between scaling actions. The cooldown period gives the system time to stabilize
-        /// before rescaling. The minimum value is 300 seconds, which is also the default.
+        /// For threshold-based autoscaling policies, this value is the minimum period of time to wait between scaling actions.
+        /// The cooldown period gives the system time to stabilize before rescaling. The minimum value is 300 seconds, which
+        /// is also the default. The cooldown period starts when the instance pool reaches the running state.
+        /// <br/>
+        /// For schedule-based autoscaling policies, this value is not used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "coolDownInSeconds")]
@@ -90,7 +93,7 @@ namespace Oci.AutoscalingService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The date and time the AutoScalingConfiguration was created, in the format defined by RFC3339.
+        /// The date and time the autoscaling configuration was created, in the format defined by RFC3339.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>

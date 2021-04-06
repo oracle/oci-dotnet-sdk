@@ -53,6 +53,9 @@ namespace Oci.ApplicationmigrationService.Models
                 case "INTERNAL_COMPUTE":
                     obj = new InternalAuthorizationDetails();
                     break;
+                case "OCIC_IDCS":
+                    obj = new OcicAuthorizationTokenDetails();
+                    break;
                 case "OCIC":
                     obj = new OcicAuthorizationDetails();
                     break;

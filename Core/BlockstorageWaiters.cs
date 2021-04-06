@@ -34,6 +34,34 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBlockVolumeReplicaRequest, GetBlockVolumeReplicaResponse> ForBlockVolumeReplica(GetBlockVolumeReplicaRequest request, params BlockVolumeReplica.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForBlockVolumeReplica(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBlockVolumeReplicaRequest, GetBlockVolumeReplicaResponse> ForBlockVolumeReplica(GetBlockVolumeReplicaRequest request, WaiterConfiguration config, params BlockVolumeReplica.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetBlockVolumeReplicaRequest, GetBlockVolumeReplicaResponse>(
+                request,
+                request => client.GetBlockVolumeReplica(request),
+                response => targetStates.Contains(response.BlockVolumeReplica.LifecycleState.Value),
+                targetStates.Contains(BlockVolumeReplica.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetBlockVolumeReplicaRequest, GetBlockVolumeReplicaResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetBootVolumeRequest, GetBootVolumeResponse> ForBootVolume(GetBootVolumeRequest request, params BootVolume.LifecycleStateEnum[] targetStates)
         {
             return this.ForBootVolume(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -83,6 +111,34 @@ namespace Oci.CoreService
                 targetStates.Contains(BootVolumeBackup.LifecycleStateEnum.Terminated)
             );
             return new Waiter<GetBootVolumeBackupRequest, GetBootVolumeBackupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBootVolumeReplicaRequest, GetBootVolumeReplicaResponse> ForBootVolumeReplica(GetBootVolumeReplicaRequest request, params BootVolumeReplica.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForBootVolumeReplica(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBootVolumeReplicaRequest, GetBootVolumeReplicaResponse> ForBootVolumeReplica(GetBootVolumeReplicaRequest request, WaiterConfiguration config, params BootVolumeReplica.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetBootVolumeReplicaRequest, GetBootVolumeReplicaResponse>(
+                request,
+                request => client.GetBootVolumeReplica(request),
+                response => targetStates.Contains(response.BootVolumeReplica.LifecycleState.Value),
+                targetStates.Contains(BootVolumeReplica.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetBootVolumeReplicaRequest, GetBootVolumeReplicaResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

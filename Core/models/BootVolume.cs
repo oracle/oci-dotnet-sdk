@@ -213,5 +213,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "autoTunedVpusPerGB")]
         public System.Nullable<long> AutoTunedVpusPerGB { get; set; }
         
+        /// <value>
+        /// The list of boot volume replicas of this boot volume
+        /// </value>
+        [JsonProperty(PropertyName = "bootVolumeReplicas")]
+        public System.Collections.Generic.List<BootVolumeReplicaInfo> BootVolumeReplicas { get; set; }
+        
     }
 }

@@ -1167,6 +1167,45 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Gets information for the specified block volume replica.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetBlockVolumeReplica.cs.html">here</a> to see an example of how to use GetBlockVolumeReplica API.</example>
+        public async Task<GetBlockVolumeReplicaResponse> GetBlockVolumeReplica(GetBlockVolumeReplicaRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getBlockVolumeReplica");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/blockVolumeReplicas/{blockVolumeReplicaId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetBlockVolumeReplicaResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetBlockVolumeReplica failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets information for the specified boot volume.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1280,6 +1319,45 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"GetBootVolumeKmsKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information for the specified boot volume replica.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetBootVolumeReplica.cs.html">here</a> to see an example of how to use GetBootVolumeReplica API.</example>
+        public async Task<GetBootVolumeReplicaResponse> GetBootVolumeReplica(GetBootVolumeReplicaRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getBootVolumeReplica");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/bootVolumeReplicas/{bootVolumeReplicaId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetBootVolumeReplicaResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetBootVolumeReplica failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1601,6 +1679,46 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Lists the block volume replicas in the specified compartment and availability domain.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListBlockVolumeReplicas.cs.html">here</a> to see an example of how to use ListBlockVolumeReplicas API.</example>
+        public async Task<ListBlockVolumeReplicasResponse> ListBlockVolumeReplicas(ListBlockVolumeReplicasRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listBlockVolumeReplicas");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/blockVolumeReplicas".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListBlockVolumeReplicasResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListBlockVolumeReplicas failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists the boot volume backups in the specified compartment. You can filter the results by boot volume.
         /// 
         /// </summary>
@@ -1636,6 +1754,46 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"ListBootVolumeBackups failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the boot volume replicas in the specified compartment and availability domain.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListBootVolumeReplicas.cs.html">here</a> to see an example of how to use ListBootVolumeReplicas API.</example>
+        public async Task<ListBootVolumeReplicasResponse> ListBootVolumeReplicas(ListBootVolumeReplicasRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listBootVolumeReplicas");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/bootVolumeReplicas".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListBootVolumeReplicasResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListBootVolumeReplicas failed with error: {e.Message}");
                 throw;
             }
         }

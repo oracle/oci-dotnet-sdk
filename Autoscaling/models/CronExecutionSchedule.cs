@@ -16,15 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// Specifies the execution schedule of CRON type.
+    /// An autoscaling execution schedule that uses a cron expression.
     /// 
     /// </summary>
     public class CronExecutionSchedule : ExecutionSchedule
     {
         
         /// <value>
-        /// The value representing the execution schedule, as defined by cron format.
-        /// 
+        /// A cron expression that represents the time at which to execute the autoscaling policy.
+        /// <br/>
+        /// Cron expressions have this format: `<second> <minute> <hour> <day of month> <month> <day of week> <year>`
+        /// <br/>
+        /// You can use special characters that are supported with the Quartz cron implementation.
+        /// <br/>
+        /// You must specify `0` as the value for seconds.
+        /// <br/>
+        /// Example: 0 15 10 ? * *
         /// </value>
         /// <remarks>
         /// Required

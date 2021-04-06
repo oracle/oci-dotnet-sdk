@@ -49,6 +49,9 @@ namespace Oci.CoreService.Models
                 case "bootVolume":
                     obj = new BootVolumeSourceFromBootVolumeDetails();
                     break;
+                case "bootVolumeReplica":
+                    obj = new BootVolumeSourceFromBootVolumeReplicaDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

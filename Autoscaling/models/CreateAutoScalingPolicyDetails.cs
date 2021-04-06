@@ -16,12 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// Creation details for an autoscaling policy.
+    /// Creation details for an autoscaling policy. You can create the following types of autoscaling policies:
     /// <br/>
-    /// Each autoscaling configuration can have one autoscaling policy.
-    /// <br/>
-    /// In a threshold-based autoscaling policy, an autoscaling action is triggered when a performance metric meets
+    /// - **Schedule-based:** Autoscaling events take place at the specific times that you schedule.
+    /// - **Threshold-based:** An autoscaling action is triggered when a performance metric meets
     /// or exceeds a threshold.
+    /// <br/>
+    /// An autoscaling configuration can either have multiple schedule-based autoscaling policies, or one
+    /// threshold-based autoscaling policy.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateAutoScalingPolicyDetailsModelConverter))]
@@ -31,10 +33,6 @@ namespace Oci.AutoscalingService.Models
         /// <value>
         /// The capacity requirements of the autoscaling policy.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
         public Capacity Capacity { get; set; }
         
@@ -47,7 +45,7 @@ namespace Oci.AutoscalingService.Models
         
         
         /// <value>
-        /// Boolean field indicating whether this policy is enabled or not.
+        /// Whether the autoscaling policy is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

@@ -48,6 +48,9 @@ namespace Oci.CoreService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "blockVolumeReplica":
+                    obj = new VolumeSourceFromBlockVolumeReplicaDetails();
+                    break;
                 case "volume":
                     obj = new VolumeSourceFromVolumeDetails();
                     break;

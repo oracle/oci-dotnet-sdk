@@ -18,7 +18,7 @@ namespace Oci.AutoscalingService.Models
     /// <summary>
     /// Creation details for a schedule-based autoscaling policy.
     /// <br/>
-    /// In a schedule-based autoscaling policy, an autoscaling action is triggered when execution time is current.
+    /// In a schedule-based autoscaling policy, an autoscaling action is triggered at the scheduled execution time.
     /// 
     /// </summary>
     public class CreateScheduledPolicyDetails : CreateAutoScalingPolicyDetails
@@ -30,6 +30,9 @@ namespace Oci.AutoscalingService.Models
         [Required(ErrorMessage = "ExecutionSchedule is required.")]
         [JsonProperty(PropertyName = "executionSchedule")]
         public ExecutionSchedule ExecutionSchedule { get; set; }
+        
+        [JsonProperty(PropertyName = "resourceAction")]
+        public ResourceAction ResourceAction { get; set; }
         
         [JsonProperty(PropertyName = "policyType")]
         private readonly string policyType = "scheduled";
