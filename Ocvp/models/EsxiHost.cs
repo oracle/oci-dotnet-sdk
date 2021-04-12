@@ -106,6 +106,44 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// Billing option selected during SDDC creation.
+        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CurrentSku is required.")]
+        [JsonProperty(PropertyName = "currentSku")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Sku> CurrentSku { get; set; }
+        
+        /// <value>
+        /// Billing option to switch to once existing billing cycle ends.
+        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NextSku is required.")]
+        [JsonProperty(PropertyName = "nextSku")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Sku> NextSku { get; set; }
+        
+        /// <value>
+        /// Current billing cycle end date. If nextSku is different from existing SKU, then we switch to newSKu
+        /// after this contractEndDate
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BillingContractEndDate is required.")]
+        [JsonProperty(PropertyName = "billingContractEndDate")]
+        public System.Nullable<System.DateTime> BillingContractEndDate { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

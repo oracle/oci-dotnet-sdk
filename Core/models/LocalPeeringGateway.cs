@@ -180,6 +180,16 @@ namespace Oci.CoreService.Models
         public string PeeringStatusDetails { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the peered LPG.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PeerId is required.")]
+        [JsonProperty(PropertyName = "peerId")]
+        public string PeerId { get; set; }
+        
+        /// <value>
         /// The OCID of the route table the LPG is using.
         /// <br/>
         /// For information about why you would associate a route table with an LPG, see

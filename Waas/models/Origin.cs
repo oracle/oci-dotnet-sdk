@@ -32,13 +32,13 @@ namespace Oci.WaasService.Models
         public string Uri { get; set; }
         
         /// <value>
-        /// The HTTP port on the origin that the web application listens on. If unspecified, defaults to `80`.
+        /// The HTTP port on the origin that the web application listens on. If unspecified, defaults to `80`. If `0` is specified - the origin is not used for HTTP traffic.
         /// </value>
         [JsonProperty(PropertyName = "httpPort")]
         public System.Nullable<int> HttpPort { get; set; }
         
         /// <value>
-        /// The HTTPS port on the origin that the web application listens on. If unspecified, defaults to `443`.
+        /// The HTTPS port on the origin that the web application listens on. If unspecified, defaults to `443`. If `0` is specified - the origin is not used for HTTPS traffic.
         /// </value>
         [JsonProperty(PropertyName = "httpsPort")]
         public System.Nullable<int> HttpsPort { get; set; }

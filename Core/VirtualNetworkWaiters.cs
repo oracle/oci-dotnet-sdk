@@ -34,6 +34,38 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddIpv6VcnCidrRequest, AddIpv6VcnCidrResponse> ForAddIpv6VcnCidr(AddIpv6VcnCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForAddIpv6VcnCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddIpv6VcnCidrRequest, AddIpv6VcnCidrResponse> ForAddIpv6VcnCidr(AddIpv6VcnCidrRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<AddIpv6VcnCidrRequest, AddIpv6VcnCidrResponse>(() =>
+            {
+                var response = client.AddIpv6VcnCidr(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<AddVcnCidrRequest, AddVcnCidrResponse> ForAddVcnCidr(AddVcnCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForAddVcnCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -386,6 +418,62 @@ namespace Oci.CoreService
                 response => targetStates.Contains(response.DrgAttachment.LifecycleState.Value)
             );
             return new Waiter<GetDrgAttachmentRequest, GetDrgAttachmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDrgRouteDistributionRequest, GetDrgRouteDistributionResponse> ForDrgRouteDistribution(GetDrgRouteDistributionRequest request, params DrgRouteDistribution.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDrgRouteDistribution(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDrgRouteDistributionRequest, GetDrgRouteDistributionResponse> ForDrgRouteDistribution(GetDrgRouteDistributionRequest request, WaiterConfiguration config, params DrgRouteDistribution.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDrgRouteDistributionRequest, GetDrgRouteDistributionResponse>(
+                request,
+                request => client.GetDrgRouteDistribution(request),
+                response => targetStates.Contains(response.DrgRouteDistribution.LifecycleState.Value),
+                targetStates.Contains(DrgRouteDistribution.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetDrgRouteDistributionRequest, GetDrgRouteDistributionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDrgRouteTableRequest, GetDrgRouteTableResponse> ForDrgRouteTable(GetDrgRouteTableRequest request, params DrgRouteTable.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDrgRouteTable(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDrgRouteTableRequest, GetDrgRouteTableResponse> ForDrgRouteTable(GetDrgRouteTableRequest request, WaiterConfiguration config, params DrgRouteTable.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDrgRouteTableRequest, GetDrgRouteTableResponse>(
+                request,
+                request => client.GetDrgRouteTable(request),
+                response => targetStates.Contains(response.DrgRouteTable.LifecycleState.Value),
+                targetStates.Contains(DrgRouteTable.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetDrgRouteTableRequest, GetDrgRouteTableResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -1030,6 +1118,38 @@ namespace Oci.CoreService
             return new Waiter<RemoveVcnCidrRequest, RemoveVcnCidrResponse>(() =>
             {
                 var response = client.RemoveVcnCidr(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpgradeDrgRequest, UpgradeDrgResponse> ForUpgradeDrg(UpgradeDrgRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpgradeDrg(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpgradeDrgRequest, UpgradeDrgResponse> ForUpgradeDrg(UpgradeDrgRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpgradeDrgRequest, UpgradeDrgResponse>(() =>
+            {
+                var response = client.UpgradeDrg(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

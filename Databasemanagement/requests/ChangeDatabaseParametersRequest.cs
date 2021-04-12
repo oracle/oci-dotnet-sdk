@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ManagedDatabaseId { get; set; }
         
         /// <value>
-        /// The details required to change database parameters' values.
+        /// The details required to change database parameter values.
         /// </value>
         /// <remarks>
         /// Required

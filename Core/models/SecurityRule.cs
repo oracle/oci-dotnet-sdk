@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// Allowed values:
         /// <br/>
-        ///   * An IP address range in CIDR notation. For Example: 192.168.1.0/24 or 2001:0db8:0123:45::/56    Note that IPv6 addressing is currently supported only in certain regions. See    [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a security rule for traffic destined for a particular Service through    a service gateway. For
+        ///   * An IP address range in CIDR notation. For Example: 192.168.1.0/24 or 2001:0db8:0123:45::/56    IPv6 addressing is supported for all commercial and government regions.    See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a security rule for traffic destined for a particular Service through    a service gateway. For
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }
@@ -164,7 +164,7 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// Allowed values:
         /// <br/>
-        ///   * An IP address range in CIDR notation. For Example: 192.168.1.0/24 or 2001:0db8:0123:45::/56    Note that IPv6 addressing is currently supported only in certain regions. See    [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a security rule for traffic coming from a particular Service through    a service gateway. For
+        ///   * An IP address range in CIDR notation. For Example: 192.168.1.0/24 or 2001:0db8:0123:45::/56    IPv6 addressing is supported for all commercial and government regions.    See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a security rule for traffic coming from a particular Service through    a service gateway. For
         /// </value>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }

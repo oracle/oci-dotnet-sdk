@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<BgpManagementEnum> BgpManagement { get; set; }
                 ///
         /// <value>
-        /// The state of the BGP session associated with the virtual circuit.
+        /// The state of the Ipv4 BGP session associated with the virtual circuit.
         /// </value>
         ///
         public enum BgpSessionStateEnum {
@@ -86,11 +86,29 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The state of the BGP session associated with the virtual circuit.
+        /// The state of the Ipv4 BGP session associated with the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "bgpSessionState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BgpSessionStateEnum> BgpSessionState { get; set; }
+                ///
+        /// <value>
+        /// The state of the Ipv6 BGP session associated with the virtual circuit.
+        /// </value>
+        ///
+        public enum BgpIpv6SessionStateEnum {
+            [EnumMember(Value = "UP")]
+            Up,
+            [EnumMember(Value = "DOWN")]
+            Down
+        };
+
+        /// <value>
+        /// The state of the Ipv6 BGP session associated with the virtual circuit.
+        /// </value>
+        [JsonProperty(PropertyName = "bgpIpv6SessionState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BgpIpv6SessionStateEnum> BgpIpv6SessionState { get; set; }
         
         /// <value>
         /// The OCID of the compartment containing the virtual circuit.

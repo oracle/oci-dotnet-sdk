@@ -22,7 +22,7 @@ namespace Oci.CoreService.Models
     /// You can create and assign an IPv6 to any VNIC that is in an IPv6-enabled subnet in an
     /// IPv6-enabled VCN.
     /// <br/>
-    /// **Note:** IPv6 addressing is currently supported only in certain regions. For important
+    /// **Note:** IPv6 addressing is supported for all commercial and government regions. For important
     /// details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
     /// 
     /// </summary>
@@ -82,9 +82,8 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The IPv6 address of the `IPv6` object. The address is within the private IPv6 CIDR block
-        /// of the VNIC's subnet (see the `ipv6CidrBlock` attribute for the {@link Subnet}
-        /// object.
+        /// The IPv6 address of the `IPv6` object. The address is within the IPv6 CIDR block of the VNIC's subnet
+        /// (see the `ipv6CidrBlock` attribute for the {@link Subnet} object.
         /// <br/>
         /// Example: 2001:0db8:0123:1111:abcd:ef01:2345:6789
         /// </value>
@@ -94,16 +93,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
-        
-        /// <value>
-        /// Whether the IPv6 can be used for internet communication. Allowed by default for an IPv6 in
-        /// a public subnet. Never allowed for an IPv6 in a private subnet. If the value is `true`, the
-        /// IPv6 uses its public IP address for internet communication.
-        /// <br/>
-        /// Example: true
-        /// </value>
-        [JsonProperty(PropertyName = "isInternetAccessAllowed")]
-        public System.Nullable<bool> IsInternetAccessAllowed { get; set; }
                 ///
         /// <value>
         /// The IPv6's current state.
@@ -130,27 +119,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
-        
-        /// <value>
-        /// The IPv6 address to be used for internet communication. The address is within the public
-        /// IPv6 CIDR block of the VNIC's subnet (see the `ipv6PublicCidrBlock` attribute for the
-        /// {@link Subnet} object).
-        /// <br/>
-        /// If your organization did NOT assign a custom IPv6 CIDR to the VCN for the private address
-        /// space, Oracle provides the IPv6 CIDR and uses that same CIDR for the private and public
-        /// address space. Therefore the `publicIpAddress` would be the same as the `ipAddress`.
-        /// <br/>
-        /// If your organization assigned a custom IPv6 CIDR to the VCN for the private address space,
-        /// the right 80 bits of the IPv6 public IP (the subnet and address bits) are the same as for
-        /// the `ipAddress`. But the left 48 bits are from the public IPv6 CIDR that Oracle assigned
-        /// to the VCN.
-        /// <br/>
-        /// This is null if the IPv6 is created with `isInternetAccessAllowed` set to `false`.
-        /// <br/>
-        /// Example: 2001:0db8:0123:1111:abcd:ef01:2345:6789
-        /// </value>
-        [JsonProperty(PropertyName = "publicIpAddress")]
-        public string PublicIpAddress { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.

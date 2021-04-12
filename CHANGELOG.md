@@ -4,6 +4,44 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 18.0.0 - 2021-04-13
+### Added
+- Support for the Database Migration service.
+- Support for the Networking Topology service.
+- Support for getting the id of peered VCNs on local peering gateways in the Networking service.
+- Support for burstable instances in the Compute service.
+- Support for preemptible instances in the Compute service.
+- Support for fractional resource usage and availability in the Limits service.
+- Support for streaming analytics in the Service Connector Hub service.
+- Support for flexible routing inside DRGs to enable packet flow between any two attachments in the Networking service. 
+- Support for routing policy to customize dynamic import/export of routes in the Networking service.
+- Support for IPv6, including on FastConnect and IPsec resources, in the Networking service.
+- Support for request validation policies in the API Gateway service.
+- Support for RESP-compliant (e.g. REDIS) response caches, and for configuring response caching per-route in the API Gateway service.
+- Support for flexible billing in the VMWare Solution service.
+- Support for new DNS format for the Web Application Acceleration and Security service.
+- Support for configuring APM tracing on applications and functions in the Functions service.
+- Support for Enterprise Manager external databases and Management Agent Service managed external databases and hosts in the Operations Insights service.
+- Support for getting cluster cache metrics for RAC CDB managed databases in the Database Management service.
+
+### Breaking Changes
+- `VcnId` was made optional in CreateDrgAttachmentDetails model under Core services.
+- The property `IsInternetAccessAllowed` was removed from CreateIpv6Details model under Core services.
+- The property `Ipv6CidrBlock` was removed from CreateVcnDetails model under Core services.
+- The property `PublicIpAddress` and `IsInternetAccessAllowed` were removed from Ipv6 model under Core services.
+- Required property `PeerId` was added to LocalPeeringGateway model under Core services.
+- The property `Ipv6PublicCidrBlock` was removed from Subnet model under Core services.
+- The property `Ipv6PublicCidrBlock` was replaced by `Ipv6CidrBlocks` in Vcn model in Core services.
+- Required property `CurrentSku` was added under CreateEsxiHostDetails under Ocvp service.
+- Required property `InitialSku` was added under CreateSddcDetails under Ocvp service.
+- Required properties `BillingContractEndDate`, `NextSku` & `CurrentSku` were added under EsxiHost under Ocvp service.
+- Required properties `BillingContractEndDate`, `NextSku` & `CurrentSku` were added under EsxiHostSummary under Ocvp service.
+- Required property `InitialSku` was added under Sddc under Ocvp service.
+- Required property `Id` was added under DatabaseDetails under Opsi service.
+- The property `CompartmentId` was made optional in ListDatabaseInsightsRequest under Opsi service.
+- Properties `CompartmentId` and `DatabaseId` were made optional in IngestSqlTextRequest under Opsi service.
+- Properties `CompartmentId` and `DatabaseId` were made optional in IngestSqlPlanLinesRequest under Opsi service.
+
 ## 17.1.0 - 2021-04-06
 ### Added
 - Support for scheduling the suspension and resumption of compute instance pools based on predefined schedules in the Autoscaling service.

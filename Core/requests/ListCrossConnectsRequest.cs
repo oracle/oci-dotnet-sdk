@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the cross-connect group.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cross-connect group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "crossConnectGroupId")]
         public string CrossConnectGroupId { get; set; }

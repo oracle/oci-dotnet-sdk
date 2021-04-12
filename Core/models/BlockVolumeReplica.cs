@@ -168,5 +168,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "blockVolumeId")]
         public string BlockVolumeId { get; set; }
         
+        /// <value>
+        /// The total size of the data transferred from the source block volume to the block volume replica, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalDataTransferredInGBs")]
+        public System.Nullable<long> TotalDataTransferredInGBs { get; set; }
+        
     }
 }

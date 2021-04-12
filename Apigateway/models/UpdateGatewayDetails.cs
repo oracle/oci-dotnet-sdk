@@ -37,6 +37,9 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "certificateId")]
         public string CertificateId { get; set; }
         
+        [JsonProperty(PropertyName = "responseCacheDetails")]
+        public ResponseCacheDetails ResponseCacheDetails { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         /// with no predefined name, type, or namespace. For more information, see

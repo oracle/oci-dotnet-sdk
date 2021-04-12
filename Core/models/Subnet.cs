@@ -116,25 +116,13 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// For an IPv6-enabled subnet, this is the IPv6 CIDR block for the subnet's private IP address
-        /// space. The subnet size is always /64. Note that IPv6 addressing is currently supported only
-        /// in certain regions. See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
+        /// For an IPv6-enabled subnet, this is the IPv6 CIDR block for the subnet's IP address space.
+        /// The subnet size is always /64. See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
         /// <br/>
         /// Example: 2001:0db8:0123:1111::/64
         /// </value>
         [JsonProperty(PropertyName = "ipv6CidrBlock")]
         public string Ipv6CidrBlock { get; set; }
-        
-        /// <value>
-        /// For an IPv6-enabled subnet, this is the IPv6 CIDR block for the subnet's public IP address
-        /// space. The subnet size is always /64. The left 48 bits are inherited from the
-        /// `ipv6PublicCidrBlock` of the {@link Vcn},
-        /// and the remaining 16 bits are from the subnet's `ipv6CidrBlock`.
-        /// <br/>
-        /// Example: 2001:0db8:0123:1111::/64
-        /// </value>
-        [JsonProperty(PropertyName = "ipv6PublicCidrBlock")]
-        public string Ipv6PublicCidrBlock { get; set; }
         
         /// <value>
         /// For an IPv6-enabled subnet, this is the IPv6 address of the virtual router.
@@ -171,6 +159,24 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Whether to disallow ingress internet traffic to VNICs within this subnet. Defaults to false.
+        /// <br/>
+        /// For IPV4, `prohibitInternetIngress` behaves similarly to `prohibitPublicIpOnVnic`.
+        /// If it is set to false, VNICs created in this subnet will automatically be assigned public IP
+        /// addresses unless specified otherwise during instance launch or VNIC creation (with the `assignPublicIp`
+        /// flag in {@link CreateVnicDetails}).
+        /// If `prohibitInternetIngress` is set to true, VNICs created in this subnet cannot have public IP addresses
+        /// (that is, it's a privatesubnet).
+        /// <br/>
+        /// For IPv6, if `prohibitInternetIngress` is set to `true`, internet access is not allowed for any
+        /// IPv6s assigned to VNICs in the subnet. Otherwise, ingress internet traffic is allowed by default.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "prohibitInternetIngress")]
+        public System.Nullable<bool> ProhibitInternetIngress { get; set; }
         
         /// <value>
         /// Whether VNICs within this subnet can have public IP addresses.

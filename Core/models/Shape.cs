@@ -23,6 +23,31 @@ namespace Oci.CoreService.Models
     /// </summary>
     public class Shape 
     {
+                ///
+        ///
+        public enum BaselineOcpuUtilizationsEnum {
+            [EnumMember(Value = "BASELINE_1_8")]
+            Baseline18,
+            [EnumMember(Value = "BASELINE_1_2")]
+            Baseline12,
+            [EnumMember(Value = "BASELINE_1_1")]
+            Baseline11
+        };
+
+        /// <value>
+        /// For a subcore burstable VM, the supported baseline OCPU utilization for instances that use this shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "baselineOcpuUtilizations", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<BaselineOcpuUtilizationsEnum> BaselineOcpuUtilizations { get; set; }
+        
+        /// <value>
+        /// For a subcore burstable VM, the minimum total baseline OCPUs required. The total baseline OCPUs is equal to
+        /// baselineOcpuUtilization chosen multiplied by the number of OCPUs chosen.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "minTotalBaselineOcpusRequired")]
+        public System.Nullable<decimal> MinTotalBaselineOcpusRequired { get; set; }
         
         /// <value>
         /// The name of the shape. You can enumerate all available shapes by calling

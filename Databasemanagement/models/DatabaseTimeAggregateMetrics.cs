@@ -33,5 +33,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "userIoTime")]
         public MetricDataPoint UserIoTime { get; set; }
         
+        [JsonProperty(PropertyName = "cluster")]
+        public MetricDataPoint Cluster { get; set; }
+        
     }
 }

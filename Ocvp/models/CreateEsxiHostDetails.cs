@@ -49,6 +49,29 @@ namespace Oci.OcvpService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Billing option selected during SDDC creation.
+        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CurrentSku is required.")]
+        [JsonProperty(PropertyName = "currentSku")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Sku> CurrentSku { get; set; }
+        
+        /// <value>
+        /// Billing option to switch to once existing billing cycle ends.
+        /// If nextSku is null or empty, currentSku will be used to continue with next billing term.
+        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nextSku")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Sku> NextSku { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

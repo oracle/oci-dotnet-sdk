@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details of the database parameters.
+    /// A collection of database parameters.
     /// </summary>
     public class DatabaseParametersCollection 
     {

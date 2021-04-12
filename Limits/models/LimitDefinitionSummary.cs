@@ -77,5 +77,19 @@ namespace Oci.LimitsService.Models
         [JsonProperty(PropertyName = "isResourceAvailabilitySupported")]
         public System.Nullable<bool> IsResourceAvailabilitySupported { get; set; }
         
+        /// <value>
+        /// Indicates if the limit has been deprecated.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDeprecated")]
+        public System.Nullable<bool> IsDeprecated { get; set; }
+        
+        /// <value>
+        /// Indicates if the customer can request a limit increase for this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isEligibleForLimitIncrease")]
+        public System.Nullable<bool> IsEligibleForLimitIncrease { get; set; }
+        
     }
 }

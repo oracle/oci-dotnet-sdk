@@ -39,5 +39,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "cpuCount")]
         public MetricDataPoint CpuCount { get; set; }
         
+        [JsonProperty(PropertyName = "cluster")]
+        public MetricDataPoint Cluster { get; set; }
+        
     }
 }

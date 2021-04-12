@@ -43,7 +43,7 @@ namespace Oci.WaasService
             {
                 ServiceName = "WAAS",
                 ServiceEndpointPrefix = "waas",
-                ServiceEndpointTemplate = "https://waas.{region}.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://waas.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

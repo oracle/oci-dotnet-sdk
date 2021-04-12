@@ -33,7 +33,9 @@ namespace Oci.SchService.Models
         ///
         public enum KindEnum {
             [EnumMember(Value = "logging")]
-            Logging
+            Logging,
+            [EnumMember(Value = "streaming")]
+            Streaming
         };
 
         
@@ -61,6 +63,9 @@ namespace Oci.SchService.Models
             {
                 case "logging":
                     obj = new LoggingSourceDetails();
+                    break;
+                case "streaming":
+                    obj = new StreamingSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

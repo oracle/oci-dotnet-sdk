@@ -25,5 +25,8 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "headerTransformations")]
         public HeaderTransformationPolicy HeaderTransformations { get; set; }
         
+        [JsonProperty(PropertyName = "responseCacheStore")]
+        public ResponseCacheStorePolicy ResponseCacheStore { get; set; }
+        
     }
 }

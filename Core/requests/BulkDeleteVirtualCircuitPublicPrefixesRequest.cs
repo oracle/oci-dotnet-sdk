@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The OCID of the virtual circuit.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the virtual circuit.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string VirtualCircuitId { get; set; }
         
         /// <value>
-        /// Request with publix prefixes to be deleted from the virtual circuit
+        /// Request with public prefixes to be deleted from the virtual circuit.
         /// </value>
         /// <remarks>
         /// Required

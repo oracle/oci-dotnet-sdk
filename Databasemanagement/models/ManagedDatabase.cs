@@ -117,6 +117,45 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabaseStatus> DatabaseStatus { get; set; }
         
         /// <value>
+        /// The name of the parent Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "parentContainerName")]
+        public string ParentContainerName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
+        /// in which the parent Container Database resides, if the Managed Database
+        /// is a Pluggable Database (PDB).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "parentContainerCompartmentId")]
+        public string ParentContainerCompartmentId { get; set; }
+        
+        /// <value>
+        /// The number of Oracle Real Application Clusters (Oracle RAC) database instances.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceCount")]
+        public System.Nullable<int> InstanceCount { get; set; }
+        
+        /// <value>
+        /// The details of the Oracle Real Application Clusters (Oracle RAC) database instances.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceDetails")]
+        public System.Collections.Generic.List<InstanceDetails> InstanceDetails { get; set; }
+        
+        /// <value>
+        /// The number of PDBs in the Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "pdbCount")]
+        public System.Nullable<int> PdbCount { get; set; }
+        
+        /// <value>
+        /// The status of the PDB in the Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "pdbStatus")]
+        public System.Collections.Generic.List<PdbStatusDetails> PdbStatus { get; set; }
+        
+        /// <value>
         /// The additional details specific to a type of database defined in `{\"key\": \"value\"}` format.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

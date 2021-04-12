@@ -16,15 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A link between a DRG and VCN. For more information, see
-    /// [Overview of the Networking Service](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
+    /// A DRG attachment serves as a link between a DRG and a network resource. A DRG can be attached to a VCN,
+    /// IPSec tunnel, remote peering connection, or virtual circuit.
+    /// <br/>
+    /// For more information, see [Overview of the Networking Service](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
     /// 
     /// </summary>
     public class DrgAttachment 
     {
         
         /// <value>
-        /// The OCID of the compartment containing the DRG attachment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the DRG attachment.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +44,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the DRG.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DRG.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +54,7 @@ namespace Oci.CoreService.Models
         public string DrgId { get; set; }
         
         /// <value>
-        /// The DRG attachment's Oracle ID (OCID).
+        /// The DRG attachment's Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)).
         /// </value>
         /// <remarks>
         /// Required
@@ -96,27 +98,73 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table that is assigned to this attachment.
+        /// <br/>
+        /// The DRG route table manages traffic inside the DRG.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "drgRouteTableId")]
+        public string DrgRouteTableId { get; set; }
+        
+        [JsonProperty(PropertyName = "networkDetails")]
+        public DrgAttachmentNetworkDetails NetworkDetails { get; set; }
+        
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
         /// The OCID of the route table the DRG attachment is using.
         /// <br/>
         /// For information about why you would associate a route table with a DRG attachment, see:
         /// <br/>
         ///   * [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm)
         ///   * [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm)
+        ///   
+        /// This field is deprecated. Instead, use the `networkDetails` field to view the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the attached resource.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
         
         /// <value>
-        /// The OCID of the VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN.
+        /// This field is deprecated. Instead, use the `networkDetails` field to view the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the attached resource.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the export route distribution used to specify how routes in the assigned DRG route table
+        /// are advertised to the attachment.
+        /// If this value is null, no routes are advertised through this attachment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "exportDrgRouteDistributionId")]
+        public string ExportDrgRouteDistributionId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the DRG attachment and attached network live in a different tenancy than the DRG.
+        /// <br/>
+        /// Example: false
+        /// </value>
+        [JsonProperty(PropertyName = "isCrossTenancy")]
+        public System.Nullable<bool> IsCrossTenancy { get; set; }
         
     }
 }

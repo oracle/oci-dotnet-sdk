@@ -134,28 +134,12 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// For an IPv6-enabled VCN, this is the IPv6 CIDR block for the VCN's private IP address space.
-        /// The VCN size is always /48. If you don't provide a value when creating the VCN, Oracle
-        /// provides one and uses that *same* CIDR for the `ipv6PublicCidrBlock`. If you do provide a
-        /// value, Oracle provides a *different* CIDR for the `ipv6PublicCidrBlock`. Note that IPv6
-        /// addressing is currently supported only in certain regions. See
-        /// [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
-        /// Example: 2001:0db8:0123::/48
+        /// For an IPv6-enabled VCN, this is the list of IPv6 CIDR blocks for the VCN's IP address space.
+        /// The CIDRs are provided by Oracle and the sizes are always /56.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "ipv6CidrBlock")]
-        public string Ipv6CidrBlock { get; set; }
-        
-        /// <value>
-        /// For an IPv6-enabled VCN, this is the IPv6 CIDR block for the VCN's public IP address space.
-        /// The VCN size is always /48. This CIDR is always provided by Oracle. If you don't provide a
-        /// custom CIDR for the `ipv6CidrBlock` when creating the VCN, Oracle assigns that value and also
-        /// uses it for `ipv6PublicCidrBlock`. Oracle uses addresses from this block for the `publicIpAddress`
-        /// attribute of an {@link Ipv6} that has internet access allowed.
-        /// <br/>
-        /// Example: 2001:0db8:0123::/48
-        /// </value>
-        [JsonProperty(PropertyName = "ipv6PublicCidrBlock")]
-        public string Ipv6PublicCidrBlock { get; set; }
+        [JsonProperty(PropertyName = "ipv6CidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6CidrBlocks { get; set; }
                 ///
         /// <value>
         /// The VCN's current state.

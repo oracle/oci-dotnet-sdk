@@ -22,17 +22,38 @@ namespace Oci.OpsiService.Requests
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Unique Enterprise Manager bridge identifier
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enterpriseManagerBridgeId")]
+        public string EnterpriseManagerBridgeId { get; set; }
+        
+        /// <value>
+        /// Optional list of database insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public System.Collections.Generic.List<string> Id { get; set; }
+        
+        /// <value>
+        /// Resource Status
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Collections.Generic.List<ResourceStatus> Status { get; set; }
+        
+        /// <value>
+        /// Lifecycle states
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Collections.Generic.List<LifecycleState> LifecycleState { get; set; }
         
         ///
         /// <value>
         /// Filter by one or more database type.
-        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D
+        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
         /// 
         /// </value>
         ///
@@ -44,19 +65,23 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "ADW-D")]
             AdwD,
             [EnumMember(Value = "ATP-D")]
-            AtpD
+            AtpD,
+            [EnumMember(Value = "EXTERNAL-PDB")]
+            ExternalPdb,
+            [EnumMember(Value = "EXTERNAL-NONCDB")]
+            ExternalNoncdb
         };
 
         /// <value>
         /// Filter by one or more database type.
-        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D
+        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseType")]
         public System.Collections.Generic.List<DatabaseTypeEnum> DatabaseType { get; set; }
         
         /// <value>
-        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]

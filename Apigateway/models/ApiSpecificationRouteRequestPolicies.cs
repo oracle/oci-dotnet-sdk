@@ -28,11 +28,23 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "cors")]
         public CorsPolicy Cors { get; set; }
         
+        [JsonProperty(PropertyName = "queryParameterValidations")]
+        public QueryParameterValidationRequestPolicy QueryParameterValidations { get; set; }
+        
+        [JsonProperty(PropertyName = "headerValidations")]
+        public HeaderValidationRequestPolicy HeaderValidations { get; set; }
+        
+        [JsonProperty(PropertyName = "bodyValidation")]
+        public BodyValidationRequestPolicy BodyValidation { get; set; }
+        
         [JsonProperty(PropertyName = "headerTransformations")]
         public HeaderTransformationPolicy HeaderTransformations { get; set; }
         
         [JsonProperty(PropertyName = "queryParameterTransformations")]
         public QueryParameterTransformationPolicy QueryParameterTransformations { get; set; }
+        
+        [JsonProperty(PropertyName = "responseCacheLookup")]
+        public ResponseCacheLookupPolicy ResponseCacheLookup { get; set; }
         
     }
 }

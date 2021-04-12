@@ -42,20 +42,26 @@ namespace Oci.OpsiService.Models
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
                 ///
         /// <value>
-        /// Defines the type of resource metric (CPU, STORAGE)
-        /// 
+        /// Defines the type of resource metric (Example: CPU, STORAGE)
         /// </value>
         ///
         public enum ResourceMetricEnum {
             [EnumMember(Value = "CPU")]
             Cpu,
             [EnumMember(Value = "STORAGE")]
-            Storage
+            Storage,
+            [EnumMember(Value = "IO")]
+            Io,
+            [EnumMember(Value = "MEMORY")]
+            Memory,
+            [EnumMember(Value = "MEMORY_PGA")]
+            MemoryPga,
+            [EnumMember(Value = "MEMORY_SGA")]
+            MemorySga
         };
 
         /// <value>
-        /// Defines the type of resource metric (CPU, STORAGE)
-        /// 
+        /// Defines the type of resource metric (Example: CPU, STORAGE)
         /// </value>
         /// <remarks>
         /// Required

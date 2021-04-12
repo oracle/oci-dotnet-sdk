@@ -41,11 +41,18 @@ namespace Oci.OpsiService.Requests
         public string SqlIdentifier { get; set; }
         
         /// <value>
-        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]
         public System.Collections.Generic.List<string> DatabaseId { get; set; }
+        
+        /// <value>
+        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
         /// Specify time period in ISO 8601 format with respect to current time.

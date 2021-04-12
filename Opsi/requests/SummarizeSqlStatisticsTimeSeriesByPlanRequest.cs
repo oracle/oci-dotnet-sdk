@@ -30,17 +30,6 @@ namespace Oci.OpsiService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Required [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]
-        public string DatabaseId { get; set; }
-        
-        /// <value>
         /// Unique SQL_ID for a SQL Statement.
         /// Example: 6rgjh9bjmy2s7
         /// </value>
@@ -50,6 +39,20 @@ namespace Oci.OpsiService.Requests
         [Required(ErrorMessage = "SqlIdentifier is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sqlIdentifier")]
         public string SqlIdentifier { get; set; }
+        
+        /// <value>
+        /// Optional [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]
+        public string DatabaseId { get; set; }
+        
+        /// <value>
+        /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// Specify time period in ISO 8601 format with respect to current time.

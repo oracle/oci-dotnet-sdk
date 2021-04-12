@@ -22,6 +22,16 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
         /// <remarks>
@@ -62,6 +72,12 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
+        
+        /// <value>
+        /// Array of hostname and instance name.
+        /// </value>
+        [JsonProperty(PropertyName = "instances")]
+        public System.Collections.Generic.List<HostInstanceMap> Instances { get; set; }
         
     }
 }
