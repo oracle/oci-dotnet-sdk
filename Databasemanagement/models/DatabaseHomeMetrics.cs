@@ -28,5 +28,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "databaseHomeMetrics")]
         public DatabaseHomeMetricDefinition DatabaseHomeMetricsProp { get; set; }
         
+        /// <value>
+        /// The metrics for the RAC database instances.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseInstanceHomeMetrics")]
+        public System.Collections.Generic.List<DatabaseInstanceHomeMetricsDefinition> DatabaseInstanceHomeMetrics { get; set; }
+        
     }
 }

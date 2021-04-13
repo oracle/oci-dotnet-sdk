@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The results of database parameters' update.
+    /// The results of database parameter update.
     /// </summary>
     public class UpdateDatabaseParametersResult 
     {

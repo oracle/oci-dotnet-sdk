@@ -11,15 +11,26 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Partial definition of the database insight resource.
+    /// Summary of a database insight resource.
     /// </summary>
+    [JsonConverter(typeof(DatabaseInsightSummaryModelConverter))]
     public class DatabaseInsightSummary 
     {
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
@@ -88,5 +99,79 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        
+        /// <value>
+        /// Processor count. This is the OCPU count for Autonomous Database and CPU core count for other database types.
+        /// </value>
+        [JsonProperty(PropertyName = "processorCount")]
+        public System.Nullable<int> ProcessorCount { get; set; }
+        
+        /// <value>
+        /// Indicates the status of a database insight in Operations Insights
+        /// </value>
+        [JsonProperty(PropertyName = "status")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceStatus> Status { get; set; }
+        
+        /// <value>
+        /// The time the the database insight was first enabled. An RFC3339 formatted datetime string
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The time the database insight was updated. An RFC3339 formatted datetime string
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The current state of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+    }
+
+    public class DatabaseInsightSummaryModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(DatabaseInsightSummary);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(DatabaseInsightSummary);
+            var discriminator = jsonObject["entitySource"].Value<string>();
+            switch (discriminator)
+            {
+                case "MACS_MANAGED_EXTERNAL_DATABASE":
+                    obj = new MacsManagedExternalDatabaseInsightSummary();
+                    break;
+                case "AUTONOMOUS_DATABASE":
+                    obj = new AutonomousDatabaseInsightSummary();
+                    break;
+                case "EM_MANAGED_EXTERNAL_DATABASE":
+                    obj = new EmManagedExternalDatabaseInsightSummary();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

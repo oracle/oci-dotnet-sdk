@@ -31,7 +31,7 @@ namespace Oci.OpsiService.Requests
         
         /// <value>
         /// Filter by resource metric.
-        /// Supported values are CPU and STORAGE.
+        /// Supported values are CPU , STORAGE, MEMORY and IO.
         /// 
         /// </value>
         /// <remarks>
@@ -75,7 +75,7 @@ namespace Oci.OpsiService.Requests
         ///
         /// <value>
         /// Filter by one or more database type.
-        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D
+        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
         /// 
         /// </value>
         ///
@@ -87,23 +87,34 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "ADW-D")]
             AdwD,
             [EnumMember(Value = "ATP-D")]
-            AtpD
+            AtpD,
+            [EnumMember(Value = "EXTERNAL-PDB")]
+            ExternalPdb,
+            [EnumMember(Value = "EXTERNAL-NONCDB")]
+            ExternalNoncdb
         };
 
         /// <value>
         /// Filter by one or more database type.
-        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D
+        /// Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseType")]
         public System.Collections.Generic.List<DatabaseTypeEnum> DatabaseType { get; set; }
         
         /// <value>
-        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]
         public System.Collections.Generic.List<string> DatabaseId { get; set; }
+        
+        /// <value>
+        /// Optional list of database insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
         /// Number of days used for utilization forecast analysis.

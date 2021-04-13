@@ -16,10 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A dynamic routing gateway (DRG), which is a virtual router that provides a path for private
-    /// network traffic between your VCN and your existing network. You use it with other Networking
-    /// Service components to create an IPSec VPN or a connection that uses
-    /// Oracle Cloud Infrastructure FastConnect. For more information, see
+    /// A dynamic routing gateway (DRG) is a virtual router that provides a path for private
+    /// network traffic between networks. You use it with other Networking
+    /// Service components to create a connection to your on-premises network using [VPN Connect](https://docs.cloud.oracle.com/Content/Network/Tasks/managingIPsec.htm) or a connection that uses
+    /// [FastConnect](https://docs.cloud.oracle.com/Content/Network/Concepts/fastconnect.htm). For more information, see
     /// [Overview of the Networking Service](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the DRG.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the DRG.
         /// </value>
         /// <remarks>
         /// Required
@@ -67,7 +67,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The DRG's Oracle ID (OCID).
+        /// The DRG's Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)).
         /// </value>
         /// <remarks>
         /// Required
@@ -109,6 +109,16 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        [JsonProperty(PropertyName = "defaultDrgRouteTables")]
+        public DefaultDrgRouteTables DefaultDrgRouteTables { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of this DRG's default export route distribution for the DRG attachments.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "defaultExportDrgRouteDistributionId")]
+        public string DefaultExportDrgRouteDistributionId { get; set; }
         
     }
 }

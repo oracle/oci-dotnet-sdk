@@ -24,18 +24,42 @@ namespace Oci.LimitsService.Models
     {
         
         /// <value>
-        /// The current usage in the given compartment.
+        /// The current usage in the given compartment. Because we have introduced resources with fractional counts,
+        /// the field will round up to the nearest integer.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "used")]
         public System.Nullable<long> Used { get; set; }
         
         /// <value>
-        /// The count of available resources.
+        /// The count of available resources. Because we have introduced resources with fractional counts,
+        /// the field will round down to the nearest integer.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "available")]
         public System.Nullable<long> Available { get; set; }
+        
+        /// <value>
+        /// The current most accurate usage in the given compartment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fractionalUsage")]
+        public System.Nullable<decimal> FractionalUsage { get; set; }
+        
+        /// <value>
+        /// The most accurate count of available resources.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fractionalAvailability")]
+        public System.Nullable<decimal> FractionalAvailability { get; set; }
+        
+        /// <value>
+        /// The effective quota value for given compartment. This field is only present if there is a
+        /// current quota policy affecting the current resource in the target region or availability domain.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "effectiveQuotaValue")]
+        public System.Nullable<decimal> EffectiveQuotaValue { get; set; }
         
     }
 }

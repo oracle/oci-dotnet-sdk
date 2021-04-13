@@ -32,6 +32,8 @@ namespace Oci.SchService.Models
         /// </value>
         ///
         public enum KindEnum {
+            [EnumMember(Value = "function")]
+            Function,
             [EnumMember(Value = "logRule")]
             LogRule
         };
@@ -59,6 +61,9 @@ namespace Oci.SchService.Models
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
+                case "function":
+                    obj = new FunctionTaskDetails();
+                    break;
                 case "logRule":
                     obj = new LogRuleTaskDetails();
                     break;

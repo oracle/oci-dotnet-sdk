@@ -57,19 +57,6 @@ namespace Oci.CoreService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// Whether the IPv6 can be used for internet communication. Allowed by default for an IPv6 in
-        /// a public subnet. Never allowed for an IPv6 in a private subnet. If the value is `true`, the
-        /// IPv6 uses its public IP address for internet communication.
-        /// <br/>
-        /// If `isInternetAccessAllowed` is set to `false`, the resulting `publicIpAddress` attribute
-        /// for the Ipv6 is null.
-        /// <br/>
-        /// Example: true
-        /// </value>
-        [JsonProperty(PropertyName = "isInternetAccessAllowed")]
-        public System.Nullable<bool> IsInternetAccessAllowed { get; set; }
-        
-        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to assign the IPv6 to. The
         /// IPv6 will be in the VNIC's subnet.
         /// 

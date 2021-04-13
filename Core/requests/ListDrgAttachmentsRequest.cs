@@ -36,7 +36,7 @@ namespace Oci.CoreService.Requests
         public string VcnId { get; set; }
         
         /// <value>
-        /// The OCID of the DRG.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drgId")]
         public string DrgId { get; set; }
@@ -59,5 +59,112 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource (virtual circuit, VCN, IPSec tunnel, or remote peering connection) attached to the DRG.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "networkId")]
+        public string NetworkId { get; set; }
+        
+        ///
+        /// <value>
+        /// The type for the network resource attached to the DRG.
+        /// </value>
+        ///
+        public enum AttachmentTypeEnum {
+            [EnumMember(Value = "VCN")]
+            Vcn,
+            [EnumMember(Value = "VIRTUAL_CIRCUIT")]
+            VirtualCircuit,
+            [EnumMember(Value = "REMOTE_PEERING_CONNECTION")]
+            RemotePeeringConnection,
+            [EnumMember(Value = "IPSEC_TUNNEL")]
+            IpsecTunnel,
+            [EnumMember(Value = "ALL")]
+            All
+        };
+
+        /// <value>
+        /// The type for the network resource attached to the DRG.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "attachmentType")]
+        public System.Nullable<AttachmentTypeEnum> AttachmentType { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table assigned to the DRG attachment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drgRouteTableId")]
+        public string DrgRouteTableId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given display name exactly.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
+        public string DisplayName { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. You can provide one sort order (`sortOrder`). Default order for
+        /// TIMECREATED is descending. Default order for DISPLAYNAME is ascending. The DISPLAYNAME
+        /// sort order is case sensitive.
+        /// <br/>
+        /// **Note:** In general, some \"List\" operations (for example, `ListInstances`) let you
+        /// optionally filter by availability domain if the scope of the resource type is within a
+        /// single availability domain. If you call one of these \"List\" operations without specifying
+        /// an availability domain, the resources are grouped by availability domain, then sorted.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "TIMECREATED")]
+            Timecreated,
+            [EnumMember(Value = "DISPLAYNAME")]
+            Displayname
+        };
+
+        /// <value>
+        /// The field to sort by. You can provide one sort order (`sortOrder`). Default order for
+        /// TIMECREATED is descending. Default order for DISPLAYNAME is ascending. The DISPLAYNAME
+        /// sort order is case sensitive.
+        /// <br/>
+        /// **Note:** In general, some \"List\" operations (for example, `ListInstances`) let you
+        /// optionally filter by availability domain if the scope of the resource type is within a
+        /// single availability domain. If you call one of these \"List\" operations without specifying
+        /// an availability domain, the resources are grouped by availability domain, then sorted.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        ///
+        /// <value>
+        /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). The DISPLAYNAME sort order
+        /// is case sensitive.
+        /// 
+        /// </value>
+        ///
+        public enum SortOrderEnum {
+            [EnumMember(Value = "ASC")]
+            Asc,
+            [EnumMember(Value = "DESC")]
+            Desc
+        };
+
+        /// <value>
+        /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). The DISPLAYNAME sort order
+        /// is case sensitive.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the specified lifecycle
+        /// state. The value is case insensitive.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Nullable<DrgAttachment.LifecycleStateEnum> LifecycleState { get; set; }
     }
 }

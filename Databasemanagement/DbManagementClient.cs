@@ -108,7 +108,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Changes database parameters&#39; values. There are two kinds of database
+        /// Changes database parameter values. There are two kinds of database
         /// parameters:
         /// &lt;br/&gt;
         /// - Dynamic parameters: They can be changed for the current Oracle
@@ -400,6 +400,48 @@ namespace Oci.DatabasemanagementService
             catch (Exception e)
             {
                 logger.Error($"DeleteManagedDatabaseGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the metrics related to cluster cache for the Oracle
+        /// Real Application Clusters (Oracle RAC) database specified
+        /// by managedDatabaseId.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/GetClusterCacheMetric.cs.html">here</a> to see an example of how to use GetClusterCacheMetric API.</example>
+        public async Task<GetClusterCacheMetricResponse> GetClusterCacheMetric(GetClusterCacheMetricRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getClusterCacheMetric");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/clusterCacheMetrics".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetClusterCacheMetricResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetClusterCacheMetric failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1021,7 +1063,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Resets database parameters&#39; values to their default or startup values.
+        /// Resets database parameter values to their default or startup values.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -151,5 +151,19 @@ namespace Oci.WaasService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// This indicates whether trust verification was disabled during the creation of SSL certificate.
+        /// If `true` SSL certificate trust verification was disabled and this SSL certificate is most likely self-signed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isTrustVerificationDisabled")]
+        public System.Nullable<bool> IsTrustVerificationDisabled { get; set; }
+        
+        /// <value>
+        /// The data of the SSL certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateData")]
+        public string CertificateData { get; set; }
+        
     }
 }

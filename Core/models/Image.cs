@@ -73,7 +73,7 @@ namespace Oci.CoreService.Models
         /// A user-friendly name for the image. It does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// <br/>
-        /// You cannot use an Oracle-provided image name as a custom image name.
+        /// You cannot use a platform image name as a custom image name.
         /// <br/>
         /// Example: My custom Oracle Linux image
         /// </value>
@@ -101,7 +101,7 @@ namespace Oci.CoreService.Models
                 ///
         /// <value>
         /// Specifies the configuration mode for launching virtual machine (VM) instances. The configuration modes are:
-        /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for Oracle-provided images.
+        /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for platform images.
         /// * `EMULATED` - VM instances launch with emulated devices, such as the E1000 network driver and emulated SCSI disk controller.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
         /// * `CUSTOM` - VM instances launch with custom configuration settings specified in the `LaunchOptions` parameter.
@@ -121,7 +121,7 @@ namespace Oci.CoreService.Models
 
         /// <value>
         /// Specifies the configuration mode for launching virtual machine (VM) instances. The configuration modes are:
-        /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for Oracle-provided images.
+        /// * `NATIVE` - VM instances launch with iSCSI boot and VFIO devices. The default value for platform images.
         /// * `EMULATED` - VM instances launch with emulated devices, such as the E1000 network driver and emulated SCSI disk controller.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
         /// * `CUSTOM` - VM instances launch with custom configuration settings specified in the `LaunchOptions` parameter.

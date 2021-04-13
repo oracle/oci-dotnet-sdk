@@ -94,6 +94,19 @@ namespace Oci.OcvpService.Models
         public System.Nullable<int> EsxiHostsCount { get; set; }
         
         /// <value>
+        /// Billing option selected during SDDC creation
+        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InitialSku is required.")]
+        [JsonProperty(PropertyName = "initialSku")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Sku> InitialSku { get; set; }
+        
+        /// <value>
         /// Indicates whether to enable HCX for this SDDC.
         /// 
         /// </value>

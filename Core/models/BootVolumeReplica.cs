@@ -175,5 +175,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
         
+        /// <value>
+        /// The total size of the data transferred from the source boot volume to the boot volume replica, in GBs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalDataTransferredInGBs")]
+        public System.Nullable<long> TotalDataTransferredInGBs { get; set; }
+        
     }
 }

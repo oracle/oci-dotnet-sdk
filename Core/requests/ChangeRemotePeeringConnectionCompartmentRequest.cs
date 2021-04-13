@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The OCID of the remote peering connection (RPC).
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the remote peering connection (RPC).
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string RemotePeeringConnectionId { get; set; }
         
         /// <value>
-        /// Request to change the compartment of a Remote Peering Connection.
+        /// Request to change the compartment of a remote peering connection.
         /// </value>
         /// <remarks>
         /// Required

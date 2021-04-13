@@ -128,6 +128,20 @@ namespace Oci.CoreService.Models
         public string Ipv6CidrBlock { get; set; }
         
         /// <value>
+        /// Whether to disallow ingress internet traffic to VNICs within this subnet. Defaults to false.
+        /// <br/>
+        /// For IPv6, if `prohibitInternetIngress` is set to `true`, internet access is not allowed for any
+        /// IPv6s assigned to VNICs in the subnet. Otherwise, ingress internet traffic is allowed by default.
+        /// <br/>
+        /// `prohibitPublicIpOnVnic` will be set to the value of `prohibitInternetIngress` to dictate IPv4
+        /// behavior in this subnet. Only one or the other flag should be specified.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "prohibitInternetIngress")]
+        public System.Nullable<bool> ProhibitInternetIngress { get; set; }
+        
+        /// <value>
         /// Whether VNICs within this subnet can have public IP addresses.
         /// Defaults to false, which means VNICs created in this subnet will
         /// automatically be assigned public IP addresses unless specified
@@ -137,8 +151,8 @@ namespace Oci.CoreService.Models
         /// subnet cannot have public IP addresses (that is, it's a private
         /// subnet).
         /// <br/>
-        /// For IPv6, if `prohibitPublicIpOnVnic` is set to `true`, internet access is not allowed for any
-        /// IPv6s assigned to VNICs in the subnet.
+        /// If you intend to use an IPv6 CIDR block, you should use the flag `prohibitInternetIngress` to
+        /// specify ingress internet traffic behavior of the subnet.
         /// <br/>
         /// Example: true
         /// </value>

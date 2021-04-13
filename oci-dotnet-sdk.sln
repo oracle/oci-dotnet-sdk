@@ -149,6 +149,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Networkloadba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Vulnerabilityscanning", "Vulnerabilityscanning\OCI.DotNetSDK.Vulnerabilityscanning.csproj", "{AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Databasemigration", "Databasemigration\OCI.DotNetSDK.Databasemigration.csproj", "{C06FED1D-1F1F-4954-9B32-9E66A314F79C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1629,5 +1631,17 @@ Global
         {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x64.Build.0 = Release|Any CPU
         {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x86.ActiveCfg = Release|Any CPU
         {AA4D77C9-5353-48BD-91E0-ECD8B977A8A3}.Release|x86.Build.0 = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|x64.Build.0 = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Debug|x86.Build.0 = Debug|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|x64.ActiveCfg = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|x64.Build.0 = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|x86.ActiveCfg = Release|Any CPU
+        {C06FED1D-1F1F-4954-9B32-9E66A314F79C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

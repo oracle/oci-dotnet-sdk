@@ -30,13 +30,13 @@ namespace Oci.CoreService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the DRG.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drgId")]
         public string DrgId { get; set; }
         
         /// <value>
-        /// The OCID of the CPE.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the CPE.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cpeId")]
         public string CpeId { get; set; }

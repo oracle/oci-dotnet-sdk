@@ -56,6 +56,40 @@ namespace Oci.CoreService.Models
         public string CustomerInterfaceIp { get; set; }
         
         /// <value>
+        /// The IPv6 address for the Oracle end of the inside tunnel interface. This IP address is optional.
+        /// <br/>
+        /// If the tunnel's `routing` attribute is set to `BGP`
+        /// (see {@link IPSecConnectionTunnel}), this IP address
+        /// is used for the tunnel's BGP session.
+        /// <br/>
+        /// If `routing` is instead set to `STATIC`, you can set this IP
+        /// address to troubleshoot or monitor the tunnel.
+        /// <br/>
+        /// Only subnet masks from /64 up to /127 are allowed.
+        /// <br/>
+        /// Example: 2001:db8::1/64
+        /// </value>
+        [JsonProperty(PropertyName = "oracleInterfaceIpv6")]
+        public string OracleInterfaceIpv6 { get; set; }
+        
+        /// <value>
+        /// The IPv6 address for the CPE end of the inside tunnel interface. This IP address is optional.
+        /// <br/>
+        /// If the tunnel's `routing` attribute is set to `BGP`
+        /// (see {@link IPSecConnectionTunnel}), this IP address
+        /// is used for the tunnel's BGP session.
+        /// <br/>
+        /// If `routing` is instead set to `STATIC`, you can set this IP
+        /// address to troubleshoot or monitor the tunnel.
+        /// <br/>
+        /// Only subnet masks from /64 up to /127 are allowed.
+        /// <br/>
+        /// Example: 2001:db8::1/64
+        /// </value>
+        [JsonProperty(PropertyName = "customerInterfaceIpv6")]
+        public string CustomerInterfaceIpv6 { get; set; }
+        
+        /// <value>
         /// The Oracle BGP ASN.
         /// 
         /// </value>
@@ -94,6 +128,26 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bgpState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BgpStateEnum> BgpState { get; set; }
+                ///
+        /// <value>
+        /// The state of the BGP IPv6 session.
+        /// 
+        /// </value>
+        ///
+        public enum BgpIpv6StateEnum {
+            [EnumMember(Value = "UP")]
+            Up,
+            [EnumMember(Value = "DOWN")]
+            Down
+        };
+
+        /// <value>
+        /// The state of the BGP IPv6 session.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bgpIpv6State")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BgpIpv6StateEnum> BgpIpv6State { get; set; }
         
     }
 }

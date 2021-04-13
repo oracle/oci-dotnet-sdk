@@ -54,6 +54,40 @@ namespace Oci.CoreService.Models
         public string CustomerInterfaceIp { get; set; }
         
         /// <value>
+        /// The IPv6 address for the Oracle end of the inside tunnel interface. This IP address is optional.
+        /// <br/>
+        /// If the tunnel's `routing` attribute is set to `BGP`
+        /// (see {@link IPSecConnectionTunnel}), this IP address
+        /// is used for the tunnel's BGP session.
+        /// <br/>
+        /// If `routing` is instead set to `STATIC`, you can set this IP
+        /// address to troubleshoot or monitor the tunnel.
+        /// <br/>
+        /// Only subnet masks from /64 up to /127 are allowed.
+        /// <br/>
+        /// Example: 2001:db8::1/64
+        /// </value>
+        [JsonProperty(PropertyName = "oracleInterfaceIpv6")]
+        public string OracleInterfaceIpv6 { get; set; }
+        
+        /// <value>
+        /// The IPv6 address for the CPE end of the inside tunnel interface. This IP address is optional.
+        /// <br/>
+        /// If the tunnel's `routing` attribute is set to `BGP`
+        /// (see {@link IPSecConnectionTunnel}), this IP address
+        /// is used for the tunnel's BGP session.
+        /// <br/>
+        /// If `routing` is instead set to `STATIC`, you can set this IP
+        /// address to troubleshoot or monitor the tunnel.
+        /// <br/>
+        /// Only subnet masks from /64 up to /127 are allowed.
+        /// <br/>
+        /// Example: 2001:db8::1/64
+        /// </value>
+        [JsonProperty(PropertyName = "customerInterfaceIpv6")]
+        public string CustomerInterfaceIpv6 { get; set; }
+        
+        /// <value>
         /// If the tunnel's `routing` attribute is set to `BGP`
         /// (see {@link IPSecConnectionTunnel}), this ASN
         /// is required and used for the tunnel's BGP session. This is the ASN of the network on the
