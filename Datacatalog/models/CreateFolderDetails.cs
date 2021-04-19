@@ -34,6 +34,12 @@ namespace Oci.DatacatalogService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Optional user friendly business name of the folder. If set, this supplements the harvested display name of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "businessName")]
+        public string BusinessName { get; set; }
+        
+        /// <value>
         /// Detailed description of a folder.
         /// </value>
         [JsonProperty(PropertyName = "description")]

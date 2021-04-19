@@ -37,10 +37,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The database version with which the database software image is to be built.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseVersion is required.")]
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
         
@@ -95,10 +91,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The PSU or PBP or Release Updates. To get a list of supported versions, use the {@link #listDbVersions(ListDbVersionsRequest) listDbVersions} operation.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PatchSet is required.")]
         [JsonProperty(PropertyName = "patchSet")]
         public string PatchSet { get; set; }
         

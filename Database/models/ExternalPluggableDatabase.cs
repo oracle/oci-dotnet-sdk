@@ -42,6 +42,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "externalContainerDatabaseId")]
         public string ExternalContainerDatabaseId { get; set; }
         
+        [JsonProperty(PropertyName = "operationsInsightsConfig")]
+        public OperationsInsightsConfig OperationsInsightsConfig { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>

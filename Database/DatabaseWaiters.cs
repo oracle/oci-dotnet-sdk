@@ -1890,6 +1890,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisableExternalNonContainerDatabaseOperationsInsightsRequest, DisableExternalNonContainerDatabaseOperationsInsightsResponse> ForDisableExternalNonContainerDatabaseOperationsInsights(DisableExternalNonContainerDatabaseOperationsInsightsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDisableExternalNonContainerDatabaseOperationsInsights(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisableExternalNonContainerDatabaseOperationsInsightsRequest, DisableExternalNonContainerDatabaseOperationsInsightsResponse> ForDisableExternalNonContainerDatabaseOperationsInsights(DisableExternalNonContainerDatabaseOperationsInsightsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DisableExternalNonContainerDatabaseOperationsInsightsRequest, DisableExternalNonContainerDatabaseOperationsInsightsResponse>(() =>
+            {
+                var response = client.DisableExternalNonContainerDatabaseOperationsInsights(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<DisableExternalPluggableDatabaseDatabaseManagementRequest, DisableExternalPluggableDatabaseDatabaseManagementResponse> ForDisableExternalPluggableDatabaseDatabaseManagement(DisableExternalPluggableDatabaseDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForDisableExternalPluggableDatabaseDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1907,6 +1939,38 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalPluggableDatabaseDatabaseManagementRequest, DisableExternalPluggableDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableExternalPluggableDatabaseDatabaseManagement(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisableExternalPluggableDatabaseOperationsInsightsRequest, DisableExternalPluggableDatabaseOperationsInsightsResponse> ForDisableExternalPluggableDatabaseOperationsInsights(DisableExternalPluggableDatabaseOperationsInsightsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDisableExternalPluggableDatabaseOperationsInsights(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisableExternalPluggableDatabaseOperationsInsightsRequest, DisableExternalPluggableDatabaseOperationsInsightsResponse> ForDisableExternalPluggableDatabaseOperationsInsights(DisableExternalPluggableDatabaseOperationsInsightsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DisableExternalPluggableDatabaseOperationsInsightsRequest, DisableExternalPluggableDatabaseOperationsInsightsResponse>(() =>
+            {
+                var response = client.DisableExternalPluggableDatabaseOperationsInsights(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2018,6 +2082,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnableExternalNonContainerDatabaseOperationsInsightsRequest, EnableExternalNonContainerDatabaseOperationsInsightsResponse> ForEnableExternalNonContainerDatabaseOperationsInsights(EnableExternalNonContainerDatabaseOperationsInsightsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForEnableExternalNonContainerDatabaseOperationsInsights(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnableExternalNonContainerDatabaseOperationsInsightsRequest, EnableExternalNonContainerDatabaseOperationsInsightsResponse> ForEnableExternalNonContainerDatabaseOperationsInsights(EnableExternalNonContainerDatabaseOperationsInsightsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<EnableExternalNonContainerDatabaseOperationsInsightsRequest, EnableExternalNonContainerDatabaseOperationsInsightsResponse>(() =>
+            {
+                var response = client.EnableExternalNonContainerDatabaseOperationsInsights(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<EnableExternalPluggableDatabaseDatabaseManagementRequest, EnableExternalPluggableDatabaseDatabaseManagementResponse> ForEnableExternalPluggableDatabaseDatabaseManagement(EnableExternalPluggableDatabaseDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForEnableExternalPluggableDatabaseDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2035,6 +2131,38 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalPluggableDatabaseDatabaseManagementRequest, EnableExternalPluggableDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableExternalPluggableDatabaseDatabaseManagement(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnableExternalPluggableDatabaseOperationsInsightsRequest, EnableExternalPluggableDatabaseOperationsInsightsResponse> ForEnableExternalPluggableDatabaseOperationsInsights(EnableExternalPluggableDatabaseOperationsInsightsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForEnableExternalPluggableDatabaseOperationsInsights(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnableExternalPluggableDatabaseOperationsInsightsRequest, EnableExternalPluggableDatabaseOperationsInsightsResponse> ForEnableExternalPluggableDatabaseOperationsInsights(EnableExternalPluggableDatabaseOperationsInsightsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<EnableExternalPluggableDatabaseOperationsInsightsRequest, EnableExternalPluggableDatabaseOperationsInsightsResponse>(() =>
+            {
+                var response = client.EnableExternalPluggableDatabaseOperationsInsights(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

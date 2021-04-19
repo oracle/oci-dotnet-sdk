@@ -44,7 +44,8 @@ namespace Oci.DatabaseService.Models
         public string AutonomousContainerDatabaseId { get; set; }
                 ///
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         ///
         public enum RoleEnum {
@@ -57,7 +58,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -120,7 +122,8 @@ namespace Oci.DatabaseService.Models
         public string PeerAutonomousContainerDatabaseId { get; set; }
                 ///
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         ///
         public enum PeerRoleEnum {
@@ -133,7 +136,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

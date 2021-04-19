@@ -159,6 +159,12 @@ namespace Oci.DatacatalogService.Models
         public string JobDefinitionName { get; set; }
         
         /// <value>
+        /// Unique key of the data asset to which this job applies, if the job involves a data asset.
+        /// </value>
+        [JsonProperty(PropertyName = "dataAssetKey")]
+        public string DataAssetKey { get; set; }
+        
+        /// <value>
         /// Error code returned from the latest job execution for this job. Useful when the latest Job execution is in FAILED state.
         /// 
         /// </value>

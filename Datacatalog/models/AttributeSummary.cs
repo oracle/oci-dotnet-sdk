@@ -40,6 +40,12 @@ namespace Oci.DatacatalogService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Optional user friendly business name of the attribute. If set, this supplements the harvested display name of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "businessName")]
+        public string BusinessName { get; set; }
+        
+        /// <value>
         /// Detailed description of the attribute.
         /// </value>
         [JsonProperty(PropertyName = "description")]
@@ -151,6 +157,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
+        
+        /// <value>
+        /// The list of customized properties along with the values for this object
+        /// </value>
+        [JsonProperty(PropertyName = "customPropertyMembers")]
+        public System.Collections.Generic.List<CustomPropertyGetUsage> CustomPropertyMembers { get; set; }
         
         /// <value>
         /// Rule types associated with attribute.

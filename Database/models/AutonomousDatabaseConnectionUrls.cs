@@ -41,5 +41,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "machineLearningUserManagementUrl")]
         public string MachineLearningUserManagementUrl { get; set; }
         
+        /// <value>
+        /// The URL of the Graph Studio for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "graphStudioUrl")]
+        public string GraphStudioUrl { get; set; }
+        
     }
 }

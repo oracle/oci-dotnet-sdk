@@ -87,6 +87,12 @@ namespace Oci.DatacatalogService.Requests
         public string JobDefinitionKey { get; set; }
         
         /// <value>
+        /// Unique data asset key.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataAssetKey")]
+        public string DataAssetKey { get; set; }
+        
+        /// <value>
         /// Schedule specified in the cron expression format that has seven fields for second, minute, hour, day-of-month, month, day-of-week, year.
         /// It can also include special characters like * for all and ? for any. There are also pre-defined schedules that can be specified using
         /// special strings. For example, @hourly will run the job every hour.

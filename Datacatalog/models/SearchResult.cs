@@ -183,6 +183,19 @@ namespace Oci.DatacatalogService.Models
         public string Path { get; set; }
         
         /// <value>
+        /// Optional user friendly business name of the data object. If set, this supplements the harvested display name of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "businessName")]
+        public string BusinessName { get; set; }
+        
+        /// <value>
+        /// The current state of the data object.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
         /// Expression for logical entities against which names of dataObjects will be matched.
         /// </value>
         [JsonProperty(PropertyName = "expression")]

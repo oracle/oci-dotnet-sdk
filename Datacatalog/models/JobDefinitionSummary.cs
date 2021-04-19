@@ -122,5 +122,11 @@ namespace Oci.DatacatalogService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobScheduleType> ScheduleType { get; set; }
         
+        /// <value>
+        /// Unique key of the data asset to which this job applies, if the job involves a data asset.
+        /// </value>
+        [JsonProperty(PropertyName = "dataAssetKey")]
+        public string DataAssetKey { get; set; }
+        
     }
 }

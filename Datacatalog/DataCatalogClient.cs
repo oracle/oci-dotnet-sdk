@@ -4368,6 +4368,45 @@ namespace Oci.DatacatalogService
         }
 
         /// <summary>
+        /// Returns a list of potential string matches for a given input string.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datacatalog/SuggestMatches.cs.html">here</a> to see an example of how to use SuggestMatches API.</example>
+        public async Task<SuggestMatchesResponse> SuggestMatches(SuggestMatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called suggestMatches");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/catalogs/{catalogId}/actions/suggest".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SuggestMatchesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SuggestMatches failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Test the connection by connecting to the data asset using credentials in the metadata.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
