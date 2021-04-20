@@ -299,5 +299,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// Customer Contacts. Setting this to an empty list removes all customer contacts of an Oracle Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
     }
 }

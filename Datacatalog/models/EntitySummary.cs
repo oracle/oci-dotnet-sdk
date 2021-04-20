@@ -43,6 +43,12 @@ namespace Oci.DatacatalogService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Optional user friendly business name of the data entity. If set, this supplements the harvested display name of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "businessName")]
+        public string BusinessName { get; set; }
+        
+        /// <value>
         /// Detailed description of a data entity.
         /// </value>
         [JsonProperty(PropertyName = "description")]
@@ -77,6 +83,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "patternKey")]
         public string PatternKey { get; set; }
+        
+        /// <value>
+        /// The type of data entity object. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
         
         /// <value>
         /// The expression realized after resolving qualifiers . Used in deriving this logical entity

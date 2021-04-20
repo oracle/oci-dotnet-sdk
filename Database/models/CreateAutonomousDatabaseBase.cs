@@ -293,6 +293,12 @@ namespace Oci.DatabaseService.Models
         };
 
         
+        /// <value>
+        /// Customer Contacts.
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
     }
 
     public class CreateAutonomousDatabaseBaseModelConverter : JsonConverter

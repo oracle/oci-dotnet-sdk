@@ -56,6 +56,21 @@ namespace Oci.DatacatalogService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the entire business name given. The match is not case sensitive.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "businessName")]
+        public string BusinessName { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match display name or business name pattern given. The match is not case sensitive.
+        /// For Example : /folders?displayOrBusinessNameContains=Cu.*
+        /// The above would match all folders with display name or business name that starts with \"Cu\".
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayOrBusinessNameContains")]
+        public string DisplayOrBusinessNameContains { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match display name pattern given. The match is not case sensitive.
         /// For Example : /folders?displayNameContains=Cu.*
         /// The above would match all folders with display name that starts with \"Cu\".

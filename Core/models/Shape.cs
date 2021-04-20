@@ -137,6 +137,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "localDiskDescription")]
         public string LocalDiskDescription { get; set; }
         
+        /// <value>
+        /// Whether live migration is supported for this shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isLiveMigrationSupported")]
+        public System.Nullable<bool> IsLiveMigrationSupported { get; set; }
+        
         [JsonProperty(PropertyName = "ocpuOptions")]
         public ShapeOcpuOptions OcpuOptions { get; set; }
         

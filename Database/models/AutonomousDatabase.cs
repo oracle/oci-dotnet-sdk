@@ -617,7 +617,8 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
                 ///
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         ///
         public enum RoleEnum {
@@ -630,7 +631,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -653,6 +655,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
+        
+        /// <value>
+        /// Customer Contacts.
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
         
     }
 }
