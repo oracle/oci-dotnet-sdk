@@ -89,6 +89,7 @@ namespace Oci.Common.Retry
                 {
                     logger.Info($"Checking if {statusCode}: {e.ServiceCode} should be retried.");
                     return retryConfiguration.RetryableStatusCodeFamilies.Contains(responseFamily) ||
+                        retryConfiguration.RetryableErrors.Contains(new Tuple<int, string>(statusCode, "")) ||
                         retryConfiguration.RetryableErrors.Contains(new Tuple<int, string>(statusCode, e.ServiceCode));
                 }
             }

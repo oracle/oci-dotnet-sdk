@@ -66,8 +66,9 @@ namespace Oci.ObjectstorageService.Requests
         ///
         /// <value>
         /// Bucket summary includes the 'namespace', 'name', 'compartmentId', 'createdBy', 'timeCreated',
-        /// and 'etag' fields. This parameter can also include 'approximateCount' (approximate number of objects) and 'approximateSize'
-        /// (total approximate size in bytes of all objects). For example 'approximateCount,approximateSize'.
+        /// and 'etag' fields. This parameter can also include 'approximateCount' (approximate number of objects), 'approximateSize'
+        /// (total approximate size in bytes of all objects) and 'autoTiering' (state of auto tiering on the bucket).
+        /// For example 'approximateCount,approximateSize,autoTiering'.
         /// 
         /// </value>
         ///
@@ -75,13 +76,16 @@ namespace Oci.ObjectstorageService.Requests
             [EnumMember(Value = "approximateCount")]
             ApproximateCount,
             [EnumMember(Value = "approximateSize")]
-            ApproximateSize
+            ApproximateSize,
+            [EnumMember(Value = "autoTiering")]
+            AutoTiering
         };
 
         /// <value>
         /// Bucket summary includes the 'namespace', 'name', 'compartmentId', 'createdBy', 'timeCreated',
-        /// and 'etag' fields. This parameter can also include 'approximateCount' (approximate number of objects) and 'approximateSize'
-        /// (total approximate size in bytes of all objects). For example 'approximateCount,approximateSize'.
+        /// and 'etag' fields. This parameter can also include 'approximateCount' (approximate number of objects), 'approximateSize'
+        /// (total approximate size in bytes of all objects) and 'autoTiering' (state of auto tiering on the bucket).
+        /// For example 'approximateCount,approximateSize,autoTiering'.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]

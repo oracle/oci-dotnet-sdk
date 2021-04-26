@@ -211,6 +211,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbPacks")]
         public string DbPacks { get; set; }
+                ///
+        /// <value>
+        /// The Oracle Database configuration
+        /// </value>
+        ///
+        public enum DatabaseConfigurationEnum {
+            [EnumMember(Value = "RAC")]
+            Rac,
+            [EnumMember(Value = "SINGLE_INSTANCE")]
+            SingleInstance
+        };
+
+        /// <value>
+        /// The Oracle Database configuration
+        /// </value>
+        [JsonProperty(PropertyName = "databaseConfiguration")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseConfigurationEnum> DatabaseConfiguration { get; set; }
         
         [JsonProperty(PropertyName = "databaseManagementConfig")]
         public DatabaseManagementConfig DatabaseManagementConfig { get; set; }

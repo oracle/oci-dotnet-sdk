@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details of the ssh key that will be used.
+    /// Details of the SSH key that will be used.
     /// 
     /// </summary>
     public class UpdateSshDetails 
     {
         
         /// <value>
-        /// Name of the host the sshkey is valid for.
+        /// Name of the host the SSH key is valid for.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
         /// <value>
-        /// Private ssh key string.
+        /// Private SSH key string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sshkey")]

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Database Admin Credentials details.
+    /// Database Administrator Credentials details.
     /// 
     /// </summary>
     public class AdminCredentials 
     {
         
         /// <value>
-        /// Admin username
+        /// Administrator username
         /// 
         /// </value>
         /// <remarks>

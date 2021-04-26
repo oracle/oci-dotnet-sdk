@@ -23,6 +23,8 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "FAIR")]
       Fair,
       [EnumMember(Value = "POOR")]
-      Poor
+      Poor,
+      [EnumMember(Value = "NA")]
+      Na
   }
 }

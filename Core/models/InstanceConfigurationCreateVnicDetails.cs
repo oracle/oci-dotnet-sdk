@@ -32,6 +32,14 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> AssignPublicIp { get; set; }
         
         /// <value>
+        /// Whether the VNIC should be assigned a private DNS record. See the `assignPrivateDnsRecord` attribute of {@link CreateVnicDetails}
+        /// for more information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignPrivateDnsRecord")]
+        public System.Nullable<bool> AssignPrivateDnsRecord { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

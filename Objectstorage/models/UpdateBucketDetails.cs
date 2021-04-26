@@ -137,5 +137,15 @@ namespace Oci.ObjectstorageService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VersioningEnum> Versioning { get; set; }
         
+        /// <value>
+        /// The auto tiering status on the bucket. If in state `InfrequentAccess`, objects are transitioned
+        /// automatically between the 'Standard' and 'InfrequentAccess' tiers based on the access pattern of the objects.
+        /// When auto tiering is `Disabled`, there will be no automatic transitions between storage tiers.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autoTiering")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Bucket.AutoTieringEnum> AutoTiering { get; set; }
+        
     }
 }

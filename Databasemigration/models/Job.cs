@@ -68,7 +68,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<JobTypes> Type { get; set; }
         
         /// <value>
-        /// The time the DB Migration Job was created. An RFC3339 formatted datetime string
+        /// The time the Migration Job was created. An RFC3339 formatted datetime string
         /// 
         /// </value>
         /// <remarks>
@@ -79,7 +79,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DB Migration Job was last updated. An RFC3339 formatted datetime string
+        /// The time the Migration Job was last updated. An RFC3339 formatted datetime string
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]

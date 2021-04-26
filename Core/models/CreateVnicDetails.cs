@@ -51,6 +51,17 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> AssignPublicIp { get; set; }
         
         /// <value>
+        /// Whether the VNIC should be assigned a DNS record. If set to false, there will be no DNS record
+        /// registration for the VNIC. If set to true, the DNS record will be registered. The default
+        /// value is true.
+        /// <br/>
+        /// If you specify a `hostnameLabel`, then `assignPrivateDnsRecord` must be set to true.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignPrivateDnsRecord")]
+        public System.Nullable<bool> AssignPrivateDnsRecord { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

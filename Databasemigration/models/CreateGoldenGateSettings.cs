@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional settings for Oracle GoldenGate processes
+    /// Optional settings for GoldenGate Microservices processes
     /// 
     /// </summary>
     public class CreateGoldenGateSettings 

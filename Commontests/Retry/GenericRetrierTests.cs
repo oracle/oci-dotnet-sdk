@@ -41,8 +41,43 @@ namespace Oci.Common.Retry
             mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
         }
 
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public async void TestNoRetryForNotImplemented()
+        {
+            var retrier = new GenericRetrier(new RetryConfiguration());
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var requestMessage = new HttpRequestMessage();
+
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new HttpResponseMessage()
+                {
+                    StatusCode = System.Net.HttpStatusCode.NotImplemented,
+                    Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage("NotImplemented", "Some Error"))
+                });
+
+            await retrier.MakeRetryingCall(
+                mockCallHttpMethod.Object,
+                requestMessage,
+                default);
+
+            // Verify if httpMethod has been invoked only once.
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
+        }
+
         [Theory]
+        [InlineData(409, "IncorrectState")]
+        [InlineData(429, "RandomError")]
         [InlineData(500, "InternalServerError")]
+        [InlineData(502, null)]
+        [InlineData(504, "")]
+        [InlineData(505, "")]
+        [InlineData(506, "")]
+        [InlineData(507, "")]
+        [InlineData(508, "")]
+        [InlineData(510, "")]
+        [InlineData(511, "")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
         public async void TestRetryForDefaultRetryConfig(int statusCode, string message)
@@ -101,7 +136,7 @@ namespace Oci.Common.Retry
         }
 
         [Theory]
-        [InlineData(404, "NotAuthorizedOrNotFound")]
+        [InlineData(409, "IncorrectState")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
         public async void TestRetryThrowsTimeoutException(int statusCode, string message)

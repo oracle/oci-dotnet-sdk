@@ -106,7 +106,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Used to configure a ODMS Agent Compartment Id.
+        /// Used to configure an ODMS Agent Compartment ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -146,7 +146,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Used to change the Databasee Connection compartment.
+        /// Used to change the Database Connection compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -308,7 +308,7 @@ namespace Oci.DatabasemigrationService
 
         /// <summary>
         /// Create a Migration resource that contains all the details to perform the
-        /// database migration operation like source and destination database
+        /// database migration operation, such as source and destination database
         /// details, credentials, etc.
         /// 
         /// </summary>
@@ -349,7 +349,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Delete the ODMS Agent represented by the given ODMS Agent id.
+        /// Delete the ODMS Agent represented by the specified ODMS Agent ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1270,7 +1270,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Modifies the ODMS Agent represented by the given ODMS agent Id.
+        /// Modifies the ODMS Agent represented by the given ODMS Agent ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1310,7 +1310,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Update a Database Connection resource details.
+        /// Update Database Connection resource details.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1350,7 +1350,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Update a Migration Job resource details.
+        /// Update Migration Job resource details.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1390,7 +1390,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
-        /// Update a Migration resource details.
+        /// Update Migration resource details.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

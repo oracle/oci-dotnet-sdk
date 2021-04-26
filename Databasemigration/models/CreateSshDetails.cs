@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details of the ssh key that will be used. Required for source database Manual and UserManagerOci connection types.
+    /// Details of the SSH key that will be used. Required for source database Manual and UserManagerOci connection types.
     /// Not required for source container database connections.
     /// 
     /// </summary>
@@ -24,7 +24,7 @@ namespace Oci.DatabasemigrationService.Models
     {
         
         /// <value>
-        /// Name of the host the sshkey is valid for.
+        /// Name of the host the SSH key is valid for.
         /// 
         /// </value>
         /// <remarks>
@@ -35,7 +35,7 @@ namespace Oci.DatabasemigrationService.Models
         public string Host { get; set; }
         
         /// <value>
-        /// Private ssh key string.
+        /// Private SSH key string.
         /// 
         /// </value>
         /// <remarks>

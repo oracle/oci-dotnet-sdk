@@ -43,21 +43,21 @@ namespace Oci.DatabasemigrationService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// Name of Microservices deployment to operate on source DB
+        /// Name of GoldenGate deployment to operate on source database
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceMicroservicesDeploymentName")]
         public string SourceMicroservicesDeploymentName { get; set; }
         
         /// <value>
-        /// Name of Microservices deployment to operate on target DB
+        /// Name of GoldenGate deployment to operate on target database
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetMicroservicesDeploymentName")]
         public string TargetMicroservicesDeploymentName { get; set; }
         
         /// <value>
-        /// OCID of Golden Gate compute instance. An empty value will remove the stored computeId.
+        /// OCID of GoldenGate compute instance. An empty value will remove the stored computeId.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeId")]

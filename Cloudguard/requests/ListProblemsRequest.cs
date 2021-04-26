@@ -30,25 +30,25 @@ namespace Oci.CloudguardService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Start time for a filter. If start time is not specified, start time will be set to today's current time - 30 days.
+        /// Start time for a filter. If start time is not specified, start time will be set to current time - 30 days.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastDetectedGreaterThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeLastDetectedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// End time for a filter. If end time is not specified, end time will be set to today's current time.
+        /// End time for a filter. If end time is not specified, end time will be set to current time.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastDetectedLessThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeLastDetectedLessThanOrEqualTo { get; set; }
         
         /// <value>
-        /// Start time for a filter. If start time is not specified, start time will be set to today's current time - 30 days.
+        /// Start time for a filter. If start time is not specified, start time will be set to current time - 30 days.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeFirstDetectedGreaterThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeFirstDetectedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// End time for a filter. If end time is not specified, end time will be set to today's current time.
+        /// End time for a filter. If end time is not specified, end time will be set to current time.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeFirstDetectedLessThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeFirstDetectedLessThanOrEqualTo { get; set; }

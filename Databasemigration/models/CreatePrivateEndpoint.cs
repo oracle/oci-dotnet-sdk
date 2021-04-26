@@ -25,7 +25,7 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the
-        /// private endpoint. Required if the id was not specified.
+        /// private endpoint. 
         /// 
         /// </value>
         /// <remarks>
@@ -37,7 +37,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN where the Private Endpoint will be bound to.
-        /// Required if the id was not specified.
         /// 
         /// </value>
         /// <remarks>
@@ -49,7 +48,7 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer's subnet where the private endpoint VNIC
-        /// will reside.  Required if the id was not specified.
+        /// will reside.
         /// 
         /// </value>
         /// <remarks>

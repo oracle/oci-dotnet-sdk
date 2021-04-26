@@ -53,7 +53,7 @@ namespace Oci.DatabasemigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the registered ODMS Agent. Required for OFFLINE Migrations.
+        /// The OCID of the registered ODMS Agent. Only valid for Offline Logical Migrations.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
@@ -71,7 +71,7 @@ namespace Oci.DatabasemigrationService.Models
         public string SourceDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// The OCID of the Source Container Database Connection. Only used for ONLINE migrations.
+        /// The OCID of the Source Container Database Connection. Only used for Online migrations.
         /// Only Connections of type Non-Autonomous can be used as source container databases.
         /// 
         /// </value>

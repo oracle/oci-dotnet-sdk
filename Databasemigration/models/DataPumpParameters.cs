@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional parameters for Datapump Export and Import. Refer to https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/ODMS_DATAPUMP.html#GUID-62324358-2F26-4A94-B69F-1075D53FA96D__BABDECJE
+    /// Optional parameters for Data Pump Export and Import. Refer to [Configuring Optional Initial Load Advanced Settings](https://docs.us.oracle.com/en/cloud/paas/database-migration/dmsus/working-migration-resources.html#GUID-24BD3054-FDF8-48FF-8492-636C1D4B71ED)
     /// 
     /// </summary>
     public class DataPumpParameters 
     {
         
         /// <value>
-        /// False to force datapump worker process to run on one instance.
+        /// Set to false to force Data Pump worker processes to run on one instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isCluster")]
@@ -46,14 +46,14 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<DataPumpTableExistsAction> TableExistsAction { get; set; }
         
         /// <value>
-        /// Exclude paratemers for export and import.
+        /// Exclude paratemers for Export and Import.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeParameters")]
         public System.Collections.Generic.List<DataPumpExcludeParameters> ExcludeParameters { get; set; }
         
         /// <value>
-        /// Maximum number of worker processes that can be used for a Datapump Import job.
+        /// Maximum number of worker processes that can be used for a Data Pump Import job.
         /// For an Autonomous Database, ODMS will automatically query its CPU core count and set this property.
         /// 
         /// </value>
@@ -61,7 +61,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<int> ImportParallelismDegree { get; set; }
         
         /// <value>
-        /// Maximum number of worker processes that can be used for a Datapump Export job.
+        /// Maximum number of worker processes that can be used for a Data Pump Export job.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "exportParallelismDegree")]

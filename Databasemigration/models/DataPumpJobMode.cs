@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Estimate size of dumps that will be generated.
+  /// Data Pump job modes
     /// 
   /// </summary>
   public enum DataPumpJobMode {

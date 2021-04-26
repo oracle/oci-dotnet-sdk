@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Parameters for Replicat processes.
+    /// Parameters for GoldenGate Replicat processes.
     /// 
     /// </summary>
     public class CreateReplicat 

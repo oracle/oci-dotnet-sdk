@@ -31,14 +31,14 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<int> MapParallelism { get; set; }
         
         /// <value>
-        /// Defines the range in which the Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
+        /// Defines the range in which Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "minApplyParallelism")]
         public System.Nullable<int> MinApplyParallelism { get; set; }
         
         /// <value>
-        /// Defines the range in which the Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
+        /// Defines the range in which Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxApplyParallelism")]
