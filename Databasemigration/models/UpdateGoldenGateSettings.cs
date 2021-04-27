@@ -17,7 +17,7 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Optional settings for Oracle GoldenGate processes
-    /// If an empty object is specified, the stored Golden Gate Settings details will be removed.
+    /// If an empty object is specified, the stored GoldenGate Settings details will be removed.
     /// 
     /// </summary>
     public class UpdateGoldenGateSettings 

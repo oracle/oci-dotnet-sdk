@@ -32,6 +32,34 @@ namespace Oci.CloudguardService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDataMaskRuleRequest, GetDataMaskRuleResponse> ForDataMaskRule(GetDataMaskRuleRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForDataMaskRule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDataMaskRuleRequest, GetDataMaskRuleResponse> ForDataMaskRule(GetDataMaskRuleRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDataMaskRuleRequest, GetDataMaskRuleResponse>(
+                request,
+                request => client.GetDataMaskRule(request),
+                response => targetStates.Contains(response.DataMaskRule.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetDataMaskRuleRequest, GetDataMaskRuleResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDetectorRequest, GetDetectorResponse> ForDetector(GetDetectorRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDetector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

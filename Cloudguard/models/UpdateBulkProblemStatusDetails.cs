@@ -42,5 +42,11 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "problemIds")]
         public System.Collections.Generic.List<string> ProblemIds { get; set; }
         
+        /// <value>
+        /// User defined comment to be passed in to update the problem.
+        /// </value>
+        [JsonProperty(PropertyName = "comment")]
+        public string Comment { get; set; }
+        
     }
 }

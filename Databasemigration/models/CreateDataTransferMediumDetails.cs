@@ -17,7 +17,7 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Data Transfer Medium details for the Migration. If not specified, it will default to Database Link. Only one type
-    /// of medium details can be specified.
+    /// of data transfer medium can be specified.
     /// 
     /// </summary>
     public class CreateDataTransferMediumDetails 

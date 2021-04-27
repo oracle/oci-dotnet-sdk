@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Supported migration types.
+  /// Supported Migration types.
     /// 
   /// </summary>
   public enum MigrationTypes {

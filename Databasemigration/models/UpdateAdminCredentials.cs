@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Database Admin Credentials details. An empty object would result in the removal of the stored details.
+    /// Database Administrator Credentials details. An empty object would result in the removal of the stored details.
     /// 
     /// </summary>
     public class UpdateAdminCredentials 
     {
         
         /// <value>
-        /// Admin username
+        /// Administrator username
         /// 
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         
         /// <value>
-        /// Admin password
+        /// Administrator password
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]

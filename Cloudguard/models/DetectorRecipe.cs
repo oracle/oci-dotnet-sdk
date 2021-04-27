@@ -90,13 +90,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// List of detetor rules for the detector type for recipe
+        /// List of detector rules for the detector type for recipe - user input
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<DetectorRecipeDetectorRule> DetectorRules { get; set; }
         
         /// <value>
-        /// List of detetor rules for the detector type for recipe
+        /// List of effective detector rules for the detector type for recipe after applying defaults
         /// </value>
         [JsonProperty(PropertyName = "effectiveDetectorRules")]
         public System.Collections.Generic.List<DetectorRecipeDetectorRule> EffectiveDetectorRules { get; set; }

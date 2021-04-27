@@ -14,19 +14,26 @@ namespace Oci.Common.Retry
     {
         private static readonly int MAX_DURATION = 60 * 10; // 10 Mins
 
-        /// <summary>The default collection of status codes families (first digit) that can be retried.</summary>
-        public static readonly ReadOnlyCollection<int> RETRYABLE_STATUSCODE_FAMILY = new ReadOnlyCollection<int>(new int[] { 5 });
+        /// <summary>The collection of status codes families (first digit) that can be retried.</summary>
+        public static readonly ReadOnlyCollection<int> RETRYABLE_STATUSCODE_FAMILY = new ReadOnlyCollection<int>(new int[] { });
 
-        /// <summary>The default collection of errors that can be retried.</summary>
+        /// <summary>
+        /// The collection of errors that can be retried. Providing an empty string "" means that the status code would be retried regardless of the Error code.
+        /// </summary>
         public static readonly ReadOnlyCollection<Tuple<int, string>> RETRYABLE_ERRORS = new ReadOnlyCollection<Tuple<int, string>>(
             new Tuple<int, string>[] {
-                new Tuple<int, string>(400, "RelatedResourceNotAuthorizedOrNotFound"),
-                new Tuple<int, string>(401, "NotAuthenticated"),
-                new Tuple<int, string>(404, "NotAuthorizedOrNotFound"),
                 new Tuple<int, string>(409, "IncorrectState"),
-                new Tuple<int, string>(409, "NotAuthorizedOrResourceAlreadyExists"),
-                new Tuple<int, string>(429, "TooManyRequests"),
-                new Tuple<int, string>(500, "InternalServerError"),
+                new Tuple<int, string>(429, ""),
+                new Tuple<int, string>(500, ""),
+                new Tuple<int, string>(502, ""),
+                new Tuple<int, string>(503, ""),
+                new Tuple<int, string>(504, ""),
+                new Tuple<int, string>(505, ""),
+                new Tuple<int, string>(506, ""),
+                new Tuple<int, string>(507, ""),
+                new Tuple<int, string>(508, ""),
+                new Tuple<int, string>(510, ""),
+                new Tuple<int, string>(511, ""),
             }
         );
 

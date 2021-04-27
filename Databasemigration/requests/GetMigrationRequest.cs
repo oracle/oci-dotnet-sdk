@@ -20,7 +20,7 @@ namespace Oci.DatabasemigrationService.Requests
     {
         
         /// <value>
-        /// The OCID of the job
+        /// The OCID of the migration
         /// 
         /// </value>
         /// <remarks>

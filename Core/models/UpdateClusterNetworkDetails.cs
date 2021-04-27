@@ -47,5 +47,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// The instance pools in the cluster network to update.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "instancePools")]
+        public System.Collections.Generic.List<UpdateClusterNetworkInstancePoolDetails> InstancePools { get; set; }
+        
     }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Results of a ODMS Agent Image search. Contains AgentImageSummary items.
+    /// Results of an ODMS Agent Image search. Contains AgentImageSummary items.
     /// 
     /// </summary>
     public class AgentImageCollection 

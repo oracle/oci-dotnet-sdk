@@ -17,14 +17,14 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Defines remapping to be applied to objects as they are processed.
-    /// Refer to https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/ODMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D.
+    /// Refer to [METADATA_REMAP Procedure ](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D)
     /// 
     /// </summary>
     public class MetadataRemap 
     {
                 ///
         /// <value>
-        /// Type of remap. Refer to https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/ODMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D__BABDJGDI
+        /// Type of remap. Refer to [METADATA_REMAP Procedure ](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D)
         /// 
         /// </value>
         ///
@@ -40,7 +40,7 @@ namespace Oci.DatabasemigrationService.Models
         };
 
         /// <value>
-        /// Type of remap. Refer to https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/ODMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D__BABDJGDI
+        /// Type of remap. Refer to [METADATA_REMAP Procedure ](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATAPUMP.html#GUID-0FC32790-91E6-4781-87A3-229DE024CB3D)
         /// 
         /// </value>
         /// <remarks>

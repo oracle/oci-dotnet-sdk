@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// In lieu of a network database link, OCI Object Storage bucket will be used to store Datapump dump files for the migration.
+    /// In lieu of a network database link, OCI Object Storage bucket will be used to store Data Pump dump files for the migration.
     /// 
     /// </summary>
     public class CreateObjectStoreBucket 

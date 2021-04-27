@@ -37,6 +37,8 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "CITY")]
       City,
       [EnumMember(Value = "TAGS")]
-      Tags
+      Tags,
+      [EnumMember(Value = "GENERIC")]
+      Generic
   }
 }

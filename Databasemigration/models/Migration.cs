@@ -77,14 +77,14 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<OdmsJobPhases> WaitAfter { get; set; }
         
         /// <value>
-        /// The OCID of the registered On-Prem ODMS Agent. Required for Offline Migrations.
+        /// The OCID of the registered on-premises ODMS Agent. Only valid for Offline Migrations.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
         
         /// <value>
-        /// OCID of the Secret in the OCI vault containing the Migration credentials. Used to store Golden Gate admin user credentials.
+        /// OCID of the Secret in the OCI vault containing the Migration credentials. Used to store GoldenGate administrator user credentials.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "credentialsSecretId")]
@@ -171,7 +171,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<System.DateTime> TimeLastMigration { get; set; }
         
         /// <value>
-        /// The current state of the Migration Resource.
+        /// The current state of the Migration resource.
         /// 
         /// </value>
         /// <remarks>

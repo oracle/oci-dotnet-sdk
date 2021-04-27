@@ -130,6 +130,24 @@ namespace Oci.CloudguardService.Models
         public string TargetId { get; set; }
         
         /// <value>
+        /// The additional details of the Problem
+        /// </value>
+        [JsonProperty(PropertyName = "additionalDetails")]
+        public System.Collections.Generic.Dictionary<string, string> AdditionalDetails { get; set; }
+        
+        /// <value>
+        /// Description of the problem
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// Recommendation for the problem
+        /// </value>
+        [JsonProperty(PropertyName = "recommendation")]
+        public string Recommendation { get; set; }
+        
+        /// <value>
         /// User Comments
         /// </value>
         [JsonProperty(PropertyName = "comment")]

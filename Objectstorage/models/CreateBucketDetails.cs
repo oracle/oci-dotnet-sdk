@@ -161,5 +161,16 @@ namespace Oci.ObjectstorageService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VersioningEnum> Versioning { get; set; }
         
+        /// <value>
+        /// Set the auto tiering status on the bucket. By default, a bucket is created with auto tiering `Disabled`.
+        /// Use this option to enable auto tiering during bucket creation. Objects in a bucket with auto tiering set to
+        /// `InfrequentAccess` are transitioned automatically between the 'Standard' and 'InfrequentAccess'
+        /// tiers based on the access pattern of the objects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autoTiering")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Bucket.AutoTieringEnum> AutoTiering { get; set; }
+        
     }
 }

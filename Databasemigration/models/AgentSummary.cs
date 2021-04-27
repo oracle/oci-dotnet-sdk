@@ -92,7 +92,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the ODMS On Prem Agent.
+        /// The current state of the ODMS on-premises Agent.
         /// 
         /// </value>
         /// <remarks>

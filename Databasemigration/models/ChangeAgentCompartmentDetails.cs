@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// ChangeAgentCompartmentDetails description
+    /// Change Agent compartment details
     /// 
     /// </summary>
     public class ChangeAgentCompartmentDetails 

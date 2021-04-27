@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Parameters for Extract processes.
+    /// Parameters for GoldenGate Extract processes.
     /// 
     /// </summary>
     public class CreateExtract 
