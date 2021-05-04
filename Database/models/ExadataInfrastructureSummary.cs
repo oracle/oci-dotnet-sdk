@@ -259,6 +259,18 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
+        /// </value>
+        [JsonProperty(PropertyName = "lastMaintenanceRunId")]
+        public string LastMaintenanceRunId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the next maintenance run.
+        /// </value>
+        [JsonProperty(PropertyName = "nextMaintenanceRunId")]
+        public string NextMaintenanceRunId { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

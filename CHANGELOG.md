@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 18.3.0 - 2021-05-04
+### Added
+- Support for the Operator Access Control service.
+- Support for the Service Catalog service.
+- Support for the AI Language service.
+- Support for autonomous database on Exadata Cloud at Customer infrastructure patching in the Database service.
+
 ## 18.2.0 - 2021-04-27
 ### Added
 - VCN id parameters were moved from being required to being optional on all list operations in the Networking service.
