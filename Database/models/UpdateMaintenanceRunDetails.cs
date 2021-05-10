@@ -45,6 +45,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "patchId")]
         public string PatchId { get; set; }
+                ///
+        /// <value>
+        /// Maintenance method, it will be either \"ROLLING\" or \"NONROLLING\". Default value is ROLLING.
+        /// </value>
+        ///
+        public enum PatchingModeEnum {
+            [EnumMember(Value = "ROLLING")]
+            Rolling,
+            [EnumMember(Value = "NONROLLING")]
+            Nonrolling
+        };
+
+        /// <value>
+        /// Maintenance method, it will be either \"ROLLING\" or \"NONROLLING\". Default value is ROLLING.
+        /// </value>
+        [JsonProperty(PropertyName = "patchingMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
         
     }
 }
