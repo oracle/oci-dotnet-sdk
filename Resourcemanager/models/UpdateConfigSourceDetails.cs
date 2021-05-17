@@ -55,6 +55,9 @@ namespace Oci.ResourcemanagerService.Models
                 case "GIT_CONFIG_SOURCE":
                     obj = new UpdateGitConfigSourceDetails();
                     break;
+                case "OBJECT_STORAGE_CONFIG_SOURCE":
+                    obj = new UpdateObjectStorageConfigSourceDetails();
+                    break;
                 case "ZIP_UPLOAD":
                     obj = new UpdateZipUploadConfigSourceDetails();
                     break;

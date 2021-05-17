@@ -1,6 +1,6 @@
 # Contributing to the Oracle Cloud Infrastructure SDK for .NET
 
-_Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved._
+_Copyright (c) 2020, 2021 Oracle and/or its affiliates. All rights reserved._
 
 Pull requests can be made under
 [The Oracle Contributor Agreement](https://www.oracle.com/technetwork/community/oca-486395.html)

@@ -32,7 +32,9 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "ZIP_UPLOAD")]
             ZipUpload,
             [EnumMember(Value = "GIT_CONFIG_SOURCE")]
-            GitConfigSource
+            GitConfigSource,
+            [EnumMember(Value = "OBJECT_STORAGE_CONFIG_SOURCE")]
+            ObjectStorageConfigSource
         };
 
         
@@ -63,6 +65,9 @@ namespace Oci.ResourcemanagerService.Models
                     break;
                 case "ZIP_UPLOAD":
                     obj = new ZipUploadConfigSourceRecord();
+                    break;
+                case "OBJECT_STORAGE_CONFIG_SOURCE":
+                    obj = new ObjectStorageConfigSourceRecord();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

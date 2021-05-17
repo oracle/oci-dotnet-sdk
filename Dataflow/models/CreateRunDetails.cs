@@ -18,17 +18,33 @@ namespace Oci.DataflowService.Models
     /// <summary>
     /// The create run details. The following properties are optional and override the default values
     /// set in the associated application:
+    ///   - applicationId
+    ///   - archiveUri
     ///   - arguments
     ///   - configuration
     ///   - definedTags
+    ///   - displayName
     ///   - driverShape
+    ///   - execute
     ///   - executorShape
     ///   - freeformTags
     ///   - logsBucketUri
     ///   - numExecutors
     ///   - parameters
+    ///   - sparkVersion
     ///   - warehouseBucketUri
-    /// If the optional properties are not specified, they are copied over from the parent application.
+    /// It is expected that either the applicationId or the execute parameter is specified; but not both.
+    /// If both or none are set, a Bad Request (HTTP 400) status will be sent as the response.
+    /// If an appicationId is not specified, then a value for the execute parameter is expected.
+    /// Using data parsed from the value, a new application will be created and assicated with the new run.
+    /// See information on the execute parameter for details on the format of this parameter.
+    /// <br/>
+    /// The optional parameter spark version can only be specified when using the execute parameter.  If it
+    /// is not specified when using the execute parameter, the latest version will be used as default.
+    /// If the execute parameter is not used, the spark version will be taken from the associated application.
+    /// <br/>
+    /// If displayName is not specified, it will be derived from the displayName of associated application or
+    /// set by API using fileUri's application file name.
     /// Once a run is created, its properties (except for definedTags and freeformTags) cannot be changed.
     /// If the parent application's properties (including definedTags and freeformTags) are updated,
     /// the corresponding properties of the run will not update.
@@ -38,15 +54,19 @@ namespace Oci.DataflowService.Models
     {
         
         /// <value>
-        /// The application ID.
+        /// The OCID of the associated application. If this value is set, then no value for the execute parameter is required. If this value is not set, then a value for the execute parameter is required, and a new application is created and associated with the new run.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ApplicationId is required.")]
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
+        
+        /// <value>
+        /// An Oracle Cloud Infrastructure URI of an archive.zip file containing custom dependencies that may be used to support the execution a Python, Java, or Scala application.
+        /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "archiveUri")]
+        public string ArchiveUri { get; set; }
         
         /// <value>
         /// The arguments passed to the running application as command line arguments.  An argument is
@@ -86,13 +106,9 @@ namespace Oci.DataflowService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. It does not have to be unique. Avoid entering confidential information.
+        /// A user-friendly name that does not have to be unique. Avoid entering confidential information. If this value is not specified, it will be derived from the associated application's displayName or set by API using fileUri's application file name.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -102,6 +118,14 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "driverShape")]
         public string DriverShape { get; set; }
+        
+        /// <value>
+        /// The input used for spark-submit command. For more details see https://spark.apache.org/docs/latest/submitting-applications.html#launching-applications-with-spark-submit.
+        /// Supported options include ``--class``, ``--file``, ``--jars``, ``--conf``, ``--py-files``, and main application file with arguments.
+        /// Example: --jars oci://path/to/a.jar,oci://path/to/b.jar --files oci://path/to/a.json,oci://path/to/b.csv --py-files oci://path/to/a.py,oci://path/to/b.py --conf spark.sql.crossJoin.enabled=true --class org.apache.spark.examples.SparkPi oci://path/to/main.jar 10Note: If execute is specified together with applicationId, className, configuration, fileUri, language, arguments, parameters during application create/update, or run create/submit,Data Flow service will use derived information from execute input only.
+        /// </value>
+        [JsonProperty(PropertyName = "execute")]
+        public string Execute { get; set; }
         
         /// <value>
         /// The VM shape for the executors. Sets the executor cores and memory.
@@ -141,6 +165,13 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
+        
+        /// <value>
+        /// The Spark version utilized to run the application. This value may be set if applicationId is not since the Spark version will be taken from the associated application.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sparkVersion")]
+        public string SparkVersion { get; set; }
         
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory

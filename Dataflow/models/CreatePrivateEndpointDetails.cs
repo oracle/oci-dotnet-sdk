@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// The create private endpoint details.
+    /// The details required to create a private endpoint.
     /// 
     /// </summary>
     public class CreatePrivateEndpointDetails 
