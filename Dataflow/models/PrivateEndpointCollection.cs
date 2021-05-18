@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// Results of a query for a list of private endpoints. Contains PrivateEndpointSummary items.
+    /// The results of a query for a list of private endpoints. It contains PrivateEndpointSummary items.
     /// 
     /// </summary>
     public class PrivateEndpointCollection 
     {
         
         /// <value>
-        /// A list of private endpoints
+        /// A list of private endpoints.
         /// 
         /// </value>
         /// <remarks>

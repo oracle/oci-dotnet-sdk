@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// A Data Flow work request object.
+    /// A Data Flow work request summary object.
     /// 
     /// </summary>
     public class WorkRequestSummary 

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// The change private endpoint compartment details.
+    /// The details required to change a private endpoint compartment.
     /// 
     /// </summary>
     public class ChangePrivateEndpointCompartmentDetails 

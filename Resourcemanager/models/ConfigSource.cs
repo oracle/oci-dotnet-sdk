@@ -34,7 +34,9 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "GIT_CONFIG_SOURCE")]
             GitConfigSource,
             [EnumMember(Value = "COMPARTMENT_CONFIG_SOURCE")]
-            CompartmentConfigSource
+            CompartmentConfigSource,
+            [EnumMember(Value = "OBJECT_STORAGE_CONFIG_SOURCE")]
+            ObjectStorageConfigSource
         };
 
         
@@ -71,6 +73,9 @@ namespace Oci.ResourcemanagerService.Models
             {
                 case "GIT_CONFIG_SOURCE":
                     obj = new GitConfigSource();
+                    break;
+                case "OBJECT_STORAGE_CONFIG_SOURCE":
+                    obj = new ObjectStorageConfigSource();
                     break;
                 case "COMPARTMENT_CONFIG_SOURCE":
                     obj = new CompartmentConfigSource();

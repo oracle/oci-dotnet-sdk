@@ -20,7 +20,7 @@ namespace Oci.DataflowService.Requests
     {
         
         /// <value>
-        /// Details to create a private endpoint.
+        /// The parameters required to create a private endpoint.
         /// 
         /// </value>
         /// <remarks>

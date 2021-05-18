@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DataflowService.Models
 {
   /// <summary>
-  /// The operation related to this work request.
+  /// The operation related to a work request.
     /// 
   /// </summary>
   public enum WorkRequestOperation {
