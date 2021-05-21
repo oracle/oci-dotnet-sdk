@@ -22,7 +22,7 @@ namespace Oci.LimitsService.Models
     {
         
         /// <value>
-        /// The service name. Use this when calling the other APIs.
+        /// The service name. Use this when calling other APIs.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

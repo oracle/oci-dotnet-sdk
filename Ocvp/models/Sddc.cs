@@ -124,14 +124,12 @@ namespace Oci.OcvpService.Models
         public System.Nullable<int> EsxiHostsCount { get; set; }
         
         /// <value>
-        /// Billing option selected during SDDC creation
+        /// Billing option selected during SDDC creation.
+        /// Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InitialSku is required.")]
         [JsonProperty(PropertyName = "initialSku")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Sku> InitialSku { get; set; }
@@ -513,6 +511,42 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "hcxOnPremKey")]
         public string HcxOnPremKey { get; set; }
+        
+        /// <value>
+        /// Indicates whether HCX Enterprise is enabled for this SDDC.
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxEnterpriseEnabled")]
+        public System.Nullable<bool> IsHcxEnterpriseEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates whether SDDC is pending downgrade from HCX Enterprise to HCX Advanced.
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxPendingDowngrade")]
+        public System.Nullable<bool> IsHcxPendingDowngrade { get; set; }
+        
+        /// <value>
+        /// The activation licenses to use on the on-premises HCX Enterprise appliance you site pair with HCX Manager in your VMware Solution.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hcxOnPremLicenses")]
+        public System.Collections.Generic.List<HcxLicenseSummary> HcxOnPremLicenses { get; set; }
+        
+        /// <value>
+        /// The date and time current HCX Enterprise billing cycle ends, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeHcxBillingCycleEnd")]
+        public System.Nullable<System.DateTime> TimeHcxBillingCycleEnd { get; set; }
+        
+        /// <value>
+        /// The date and time the SDDC's HCX on-premise license status was updated, in the format defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeHcxLicenseStatusUpdated")]
+        public System.Nullable<System.DateTime> TimeHcxLicenseStatusUpdated { get; set; }
         
         /// <value>
         /// The date and time the SDDC was created, in the format defined by

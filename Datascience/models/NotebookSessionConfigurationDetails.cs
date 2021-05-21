@@ -50,5 +50,8 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         
+        [JsonProperty(PropertyName = "notebookSessionShapeConfigDetails")]
+        public NotebookSessionShapeConfigDetails NotebookSessionShapeConfigDetails { get; set; }
+        
     }
 }

@@ -94,14 +94,12 @@ namespace Oci.OcvpService.Models
         public System.Nullable<int> EsxiHostsCount { get; set; }
         
         /// <value>
-        /// Billing option selected during SDDC creation
+        /// Billing option selected during SDDC creation.
+        /// Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InitialSku is required.")]
         [JsonProperty(PropertyName = "initialSku")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Sku> InitialSku { get; set; }
@@ -120,6 +118,13 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "hcxVlanId")]
         public string HcxVlanId { get; set; }
+        
+        /// <value>
+        /// Indicates whether to enable HCX Enterprise for this SDDC.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHcxEnterpriseEnabled")]
+        public System.Nullable<bool> IsHcxEnterpriseEnabled { get; set; }
         
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for

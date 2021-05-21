@@ -52,7 +52,7 @@ namespace Oci.LimitsService.Requests
         
         ///
         /// <value>
-        /// Filters returned quotas based on whether the given state.
+        /// Filters returned quotas based on the given state.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -61,14 +61,14 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// Filters returned quotas based on whether the given state.
+        /// Filters returned quotas based on the given state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         ///
@@ -80,7 +80,7 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
@@ -88,7 +88,7 @@ namespace Oci.LimitsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Time created is default ordered as descending. Display name is default ordered as ascending.
+        /// The field to sort by. Only one sort order can be provided. Time created is default ordered as descending. Display name is default ordered as ascending.
         /// 
         /// </value>
         ///
@@ -100,7 +100,7 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Time created is default ordered as descending. Display name is default ordered as ascending.
+        /// The field to sort by. Only one sort order can be provided. Time created is default ordered as descending. Display name is default ordered as ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -65,8 +65,8 @@ namespace Oci.LoggingingestionService.Models
         /// <value>
         /// The timestamp for all log entries in this batch. This can be
         /// considered as the default timestamp for each entry, unless it is
-        /// overwritten by the entry time. An RFC3339-formatted date-time
-        /// string.
+        /// overwritten by the entry time. An RFC3339-formatted date-time string
+        /// with milliseconds precision.
         /// 
         /// </value>
         /// <remarks>

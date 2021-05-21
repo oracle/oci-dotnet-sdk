@@ -52,7 +52,7 @@ namespace Oci.LimitsService.Requests
         /// <value>
         /// This field is mandatory if the scopeType of the target resource limit is AD.
         /// Otherwise, this field should be omitted.
-        /// If the above requirements are not met, the API will return a 400 - InvalidParameter response.
+        /// If the above requirements are not met, the API returns a 400 - InvalidParameter response.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]

@@ -64,7 +64,7 @@ namespace Oci.LimitsService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         ///
@@ -76,7 +76,7 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]

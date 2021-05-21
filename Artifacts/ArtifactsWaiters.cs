@@ -82,5 +82,61 @@ namespace Oci.ArtifactsService
             );
             return new Waiter<GetContainerRepositoryRequest, GetContainerRepositoryResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenericArtifactRequest, GetGenericArtifactResponse> ForGenericArtifact(GetGenericArtifactRequest request, params GenericArtifact.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForGenericArtifact(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenericArtifactRequest, GetGenericArtifactResponse> ForGenericArtifact(GetGenericArtifactRequest request, WaiterConfiguration config, params GenericArtifact.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetGenericArtifactRequest, GetGenericArtifactResponse>(
+                request,
+                request => client.GetGenericArtifact(request),
+                response => targetStates.Contains(response.GenericArtifact.LifecycleState.Value),
+                targetStates.Contains(GenericArtifact.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetGenericArtifactRequest, GetGenericArtifactResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRepositoryRequest, GetRepositoryResponse> ForRepository(GetRepositoryRequest request, params Repository.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForRepository(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRepositoryRequest, GetRepositoryResponse> ForRepository(GetRepositoryRequest request, WaiterConfiguration config, params Repository.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetRepositoryRequest, GetRepositoryResponse>(
+                request,
+                request => client.GetRepository(request),
+                response => targetStates.Contains(response.Repository.LifecycleState.Value),
+                targetStates.Contains(Repository.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetRepositoryRequest, GetRepositoryResponse>(config, agent);
+        }
     }
 }

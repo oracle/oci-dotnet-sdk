@@ -32,7 +32,9 @@ namespace Oci.OcvpService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Billing option to switch to once existing billing cycle ends.
+        /// Billing option to switch to after the existing billing cycle ends.
+        /// Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 
         /// </value>

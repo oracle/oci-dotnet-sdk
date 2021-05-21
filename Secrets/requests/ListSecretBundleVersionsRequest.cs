@@ -53,7 +53,7 @@ namespace Oci.SecretsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. You can specify only one sort order. The default 
+        /// The field to sort by. You can specify only one sort order. The default
         /// order for `VERSION_NUMBER` is ascending.
         /// 
         /// </value>
@@ -64,7 +64,7 @@ namespace Oci.SecretsService.Requests
         };
 
         /// <value>
-        /// The field to sort by. You can specify only one sort order. The default 
+        /// The field to sort by. You can specify only one sort order. The default
         /// order for `VERSION_NUMBER` is ascending.
         /// 
         /// </value>
