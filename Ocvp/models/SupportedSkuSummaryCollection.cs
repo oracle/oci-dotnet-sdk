@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// A specific SKU. HOUR, MONTH, ONE_YEAR and THREE_YEARS supported by the Oracle Cloud VMware Solution.
+    /// A specific SKU. Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+    /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
+    /// 
     /// </summary>
     public class SupportedSkuSummaryCollection 
     {

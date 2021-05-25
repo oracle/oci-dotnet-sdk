@@ -183,7 +183,7 @@ namespace Oci.LimitsService
         }
 
         /// <summary>
-        /// Lists all quotas on resources from the given compartment
+        /// Lists all quotas on resources from the given compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -16,27 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// A specific SKU. HOUR, MONTH, ONE_YEAR and THREE_YEARS supported by the Oracle Cloud VMware Solution.
+    /// A specific SKU. Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+    /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
     /// 
     /// </summary>
     public class SupportedSkuSummary 
     {
-                ///
-        /// <value>
-        /// name of SKU
-        /// </value>
-        ///
-        public enum NameEnum {
-            [EnumMember(Value = "HOUR")]
-            Hour,
-            [EnumMember(Value = "MONTH")]
-            Month,
-            [EnumMember(Value = "ONE_YEAR")]
-            OneYear,
-            [EnumMember(Value = "THREE_YEARS")]
-            ThreeYears
-        };
-
+        
         /// <value>
         /// name of SKU
         /// </value>
@@ -46,7 +32,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NameEnum> Name { get; set; }
+        public System.Nullable<Sku> Name { get; set; }
         
     }
 }

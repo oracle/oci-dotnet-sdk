@@ -50,13 +50,11 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// Billing option selected during SDDC creation.
+        /// Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CurrentSku is required.")]
         [JsonProperty(PropertyName = "currentSku")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Sku> CurrentSku { get; set; }

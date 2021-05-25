@@ -31,7 +31,7 @@ namespace Oci.LimitsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The target service name
+        /// The target service name.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +61,7 @@ namespace Oci.LimitsService.Requests
         public System.Nullable<ScopeTypeEnum> ScopeType { get; set; }
         
         /// <value>
-        /// Filter entries by availability domain. This implies that only AD-specific values will be returned.
+        /// Filter entries by availability domain. This implies that only AD-specific values are returned.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]
@@ -75,7 +75,7 @@ namespace Oci.LimitsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. We will be implicitly sorting by availabilityDomain, as a second level field, if available.
+        /// The field to sort by. The sorting is by availabilityDomain, as a second level field, if available.
         /// 
         /// </value>
         ///
@@ -85,7 +85,7 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// The field to sort by. We will be implicitly sorting by availabilityDomain, as a second level field, if available.
+        /// The field to sort by. The sorting is by availabilityDomain, as a second level field, if available.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
@@ -93,7 +93,7 @@ namespace Oci.LimitsService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         ///
@@ -105,7 +105,7 @@ namespace Oci.LimitsService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'. By default it will be ascending.
+        /// The sort order to use, either 'asc' or 'desc'. By default, it is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]

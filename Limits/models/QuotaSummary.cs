@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LimitsService.Models
 {
     /// <summary>
-    /// Entails a subset of all the properties of the corresponding Quota and is recommended to be used in cases requiring
-    /// security of quota details and slightly better API performance.
+    /// Consists of a subset of all the properties of the corresponding quota, and is recommended to be used in cases requiring
+    /// security of quota details, and for slightly better API performance.
     /// 
     /// </summary>
     public class QuotaSummary 
@@ -67,7 +67,7 @@ namespace Oci.LimitsService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Date and time the quota was created, in the format defined by RFC3339.
+        /// Date and time the quota was created, in the format defined by RFC 3339.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>

@@ -23,6 +23,14 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "CREATE_ESXI_HOST")]
       CreateEsxiHost,
       [EnumMember(Value = "DELETE_ESXI_HOST")]
-      DeleteEsxiHost
+      DeleteEsxiHost,
+      [EnumMember(Value = "UPGRADE_HCX")]
+      UpgradeHcx,
+      [EnumMember(Value = "DOWNGRADE_HCX")]
+      DowngradeHcx,
+      [EnumMember(Value = "CANCEL_DOWNGRADE_HCX")]
+      CancelDowngradeHcx,
+      [EnumMember(Value = "REFRESH_HCX_LICENSE_STATUS")]
+      RefreshHcxLicenseStatus
   }
 }

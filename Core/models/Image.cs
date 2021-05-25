@@ -213,6 +213,14 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> SizeInMBs { get; set; }
         
         /// <value>
+        /// The size of the internal storage for this image that is subject to billing (1 GB = 1,073,741,824 bytes).
+        /// <br/>
+        /// Example: 100
+        /// </value>
+        [JsonProperty(PropertyName = "billableSizeInGBs")]
+        public System.Nullable<long> BillableSizeInGBs { get; set; }
+        
+        /// <value>
         /// The date and time the image was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

@@ -41,7 +41,7 @@ namespace Oci.LimitsService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// Reflects the scope of the resource limit: which can be Global (across all regions), regional or ad specific.
+        /// Reflects the scope of the resource limit, whether Global (across all regions), regional, or availability domain-specific.
         /// 
         /// </value>
         ///
@@ -55,7 +55,7 @@ namespace Oci.LimitsService.Models
         };
 
         /// <value>
-        /// Reflects the scope of the resource limit: which can be Global (across all regions), regional or ad specific.
+        /// Reflects the scope of the resource limit, whether Global (across all regions), regional, or availability domain-specific.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeType")]
@@ -70,8 +70,8 @@ namespace Oci.LimitsService.Models
         public System.Nullable<bool> AreQuotasSupported { get; set; }
         
         /// <value>
-        /// Reflects if the GetResourceAvailability API is supported for this limit or not.
-        /// If not, the API will return an empty JSON response.
+        /// Reflects whether or not the GetResourceAvailability API is supported for this limit.
+        /// If not, the API returns an empty JSON response.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isResourceAvailabilitySupported")]
@@ -90,6 +90,13 @@ namespace Oci.LimitsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isEligibleForLimitIncrease")]
         public System.Nullable<bool> IsEligibleForLimitIncrease { get; set; }
+        
+        /// <value>
+        /// The limit for this resource has a dynamic value that is based on consumption across all OCI services.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDynamic")]
+        public System.Nullable<bool> IsDynamic { get; set; }
         
     }
 }

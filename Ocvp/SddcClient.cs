@@ -66,6 +66,46 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
+        /// Cancel the pending SDDC downgrade from HCX Enterprise to HCX Advanced
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/CancelDowngradeHcx.cs.html">here</a> to see an example of how to use CancelDowngradeHcx API.</example>
+        public async Task<CancelDowngradeHcxResponse> CancelDowngradeHcx(CancelDowngradeHcxRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called cancelDowngradeHcx");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sddcs/{sddcId}/actions/cancelDowngradeHcx".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CancelDowngradeHcxResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CancelDowngradeHcx failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves an SDDC into a different compartment within the same tenancy. For information
         /// about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
@@ -198,6 +238,46 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
+        /// Downgrade the specified SDDC from HCX Enterprise to HCX Advanced
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/DowngradeHcx.cs.html">here</a> to see an example of how to use DowngradeHcx API.</example>
+        public async Task<DowngradeHcxResponse> DowngradeHcx(DowngradeHcxRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called downgradeHcx");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sddcs/{sddcId}/actions/downgradeHcx".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DowngradeHcxResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DowngradeHcx failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets the specified SDDC&#39;s information.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -278,8 +358,8 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
-        /// Lists supported SKUs. HHOUR, MONTH, ONE_YEAR and THREE_YEARS supported by the Oracle Cloud
-        /// VMware Solution.
+        /// Lists supported SKUs. Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
+        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -360,6 +440,45 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
+        /// Refresh HCX on-premise licenses status of the specified SDDC.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/RefreshHcxLicenseStatus.cs.html">here</a> to see an example of how to use RefreshHcxLicenseStatus API.</example>
+        public async Task<RefreshHcxLicenseStatusResponse> RefreshHcxLicenseStatus(RefreshHcxLicenseStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called refreshHcxLicenseStatus");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sddcs/{sddcId}/actions/refreshHcxLicenses".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RefreshHcxLicenseStatusResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RefreshHcxLicenseStatus failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the specified SDDC.
         /// &lt;br/&gt;
         /// **Important:** Updating an SDDC affects only certain attributes in the &#x60;Sddc&#x60;
@@ -400,6 +519,46 @@ namespace Oci.OcvpService
             catch (Exception e)
             {
                 logger.Error($"UpdateSddc failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Upgrade the specified SDDC from HCX Advanced to HCX Enterprise.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/UpgradeHcx.cs.html">here</a> to see an example of how to use UpgradeHcx API.</example>
+        public async Task<UpgradeHcxResponse> UpgradeHcx(UpgradeHcxRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called upgradeHcx");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sddcs/{sddcId}/actions/upgradeHcx".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpgradeHcxResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpgradeHcx failed with error: {e.Message}");
                 throw;
             }
         }

@@ -156,5 +156,15 @@ namespace Oci.ArtifactsService.Models
         [JsonProperty(PropertyName = "timeLastPushed")]
         public System.Nullable<System.DateTime> TimeLastPushed { get; set; }
         
+        /// <value>
+        /// Total storage size in GBs that will be charged.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BillableSizeInGBs is required.")]
+        [JsonProperty(PropertyName = "billableSizeInGBs")]
+        public System.Nullable<long> BillableSizeInGBs { get; set; }
+        
     }
 }
