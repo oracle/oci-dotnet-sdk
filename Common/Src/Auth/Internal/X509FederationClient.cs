@@ -16,6 +16,7 @@ using Oci.Common.Auth.Utils;
 using Oci.Common.Http.Internal;
 using Oci.Common.Http.Signing;
 using Oci.Common.Model;
+using Oci.Common.Utils;
 
 namespace Oci.Common.Auth.Internal
 {
@@ -244,7 +245,11 @@ namespace Oci.Common.Auth.Internal
                 }
                 for (int retry = 0; retry < Constants.RETRIES; retry++)
                 {
-                    response = Client.SendAsync(httpRequestMsg).Result;
+                    // A new copy of the request message needs to be created because it is disposed each time it is sent, and
+                    // resending the same request will result in the following error message:
+                    // "The request message was already sent. Cannot send the same request message multiple times."
+                    var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequestMsg);
+                    response = Client.SendAsync(newRequestMessage).Result;
                     if (response.IsSuccessStatusCode)
                     {
                         break;

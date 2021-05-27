@@ -7143,7 +7143,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the network security groups in the specified compartment.
+        /// Lists either the network security groups in the specified compartment, or those associated with the specified VLAN.
+        /// You must specify either a &#x60;vlanId&#x60; or a &#x60;compartmentId&#x60;, but not both. If you specify a &#x60;vlanId&#x60;, all other parameters are ignored.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

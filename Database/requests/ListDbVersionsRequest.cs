@@ -67,5 +67,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isUpgradeSupported")]
         public System.Nullable<bool> IsUpgradeSupported { get; set; }
+        
+        /// <value>
+        /// If true, filters the results to the set of Oracle Database versions that are supported for OCI database software images.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDatabaseSoftwareImageSupported")]
+        public System.Nullable<bool> IsDatabaseSoftwareImageSupported { get; set; }
     }
 }

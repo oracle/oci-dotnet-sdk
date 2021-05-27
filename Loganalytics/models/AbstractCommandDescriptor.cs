@@ -110,7 +110,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "MAP")]
             Map,
             [EnumMember(Value = "NLP")]
-            Nlp
+            Nlp,
+            [EnumMember(Value = "COMPARE")]
+            Compare
         };
 
         
@@ -187,6 +189,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "MULTI_SEARCH":
                     obj = new MultiSearchCommandDescriptor();
+                    break;
+                case "COMPARE":
+                    obj = new CompareCommandDescriptor();
                     break;
                 case "STATS":
                     obj = new StatsCommandDescriptor();

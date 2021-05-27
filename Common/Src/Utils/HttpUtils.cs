@@ -7,6 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
@@ -102,6 +103,34 @@ namespace Oci.Common.Utils
             String ociSdkAppendUserAgent = Environment.GetEnvironmentVariable("OCI_SDK_APPEND_USER_AGENT");
             ociSdkAppendUserAgent = String.IsNullOrEmpty(ociSdkAppendUserAgent) ? "" : $" {ociSdkAppendUserAgent}";
             return $"Oracle-DotNetSDK/{Version.GetVersion()} ({os.Platform}/{os.Version}; {RuntimeInformation.FrameworkDescription}) {additionalUserAgent} {ociSdkAppendUserAgent}";
+        }
+
+        /// <summary>Make a copy of HttpRequestMessage.</summary>
+        /// <param name="request">The source HttpRequestMessage</param>
+        /// <returns>A cloned copy of HttpRequestMessage with exactly the same headers and content.</returns>
+        public static HttpRequestMessage CloneHttpRequestMessage(HttpRequestMessage request)
+        {
+            var clone = new HttpRequestMessage(request.Method, request.RequestUri);
+
+            if (request.Content != null)
+            {
+                clone.Content = request.Content;
+            }
+
+            foreach (var header in request.Headers)
+            {
+                clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
+            }
+
+            if (request.Properties != null)
+            {
+                foreach (var kvp in request.Properties)
+                {
+                    clone.Properties.Add(kvp.Key, kvp.Value);
+                }
+            }
+
+            return clone;
         }
     }
 }

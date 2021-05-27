@@ -86,6 +86,12 @@ namespace Oci.DatabaseService.Models
         };
 
         
+        /// <value>
+        /// If true, the customer acknowledges that the specified Oracle Database software is an older release that is not currently supported by OCI.
+        /// </value>
+        [JsonProperty(PropertyName = "isDesupportedVersion")]
+        public System.Nullable<bool> IsDesupportedVersion { get; set; }
+        
     }
 
     public class CreateDbHomeBaseModelConverter : JsonConverter

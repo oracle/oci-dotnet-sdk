@@ -109,6 +109,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<TaskStatusEnum> TaskStatus { get; set; }
         
         /// <value>
+        /// reason for taskStatus PAUSED.
+        /// </value>
+        [JsonProperty(PropertyName = "pauseReason")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ScheduledTask.PauseReasonEnum> PauseReason { get; set; }
+        
+        /// <value>
         /// most recent Work Request Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the asynchronous request.
         /// </value>
         [JsonProperty(PropertyName = "workRequestId")]
