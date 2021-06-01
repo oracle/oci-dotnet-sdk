@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 19.1.0 - 2021-05-27
+### Added
+- Support for configuration of autonomous database KMS keys in the Database service.
+- Support for creating database software images with any supported RUs in the Database service.
+- Support for creating database software images from an existing database home in the Database service.
+- Support for listing all NSGs associated with a given VLAN in the Networking service.
+- Support for a duration windows, task failure reasons, and next execution times on scheduled tasks in the Logging Analytics service.
+- Support for calling Oracle Cloud Infrastructure services in the sa-vinhedo-1 region.
+
 ## 19.0.0 - 2021-05-25
 ### Added
 - Support for the Generic Artifacts service.
@@ -20,7 +29,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - The type for `Name` property in `SupportedSkuSummary` model was changed from `NameEnum` to `Sku` in the VMware Solution service.
 - The property `InitialSku` in `Sddc` and `CreateSddcDetails` models was made optional in the VMware Solution service.
 - The property `CurrentSku` in `CreateEsxiHostDetails` model was made optional in the VMware Solution service.
-- A required property `BillableSizeInGBs` was added to model `ContainerRepository` and `ContainerRepositorySummary` in the VMware Solution service.
+- A required property `BillableSizeInGBs` was added to model `ContainerRepository` and `ContainerRepositorySummary` in the Artifacts service.
 
 ## 18.5.0 - 2021-05-18
 ### Added

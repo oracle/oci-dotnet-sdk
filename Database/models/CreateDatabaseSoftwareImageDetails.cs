@@ -123,5 +123,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Home.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDbHomeId")]
+        public string SourceDbHomeId { get; set; }
+        
     }
 }

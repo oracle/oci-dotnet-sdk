@@ -54,6 +54,14 @@ namespace Oci.LoganalyticsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MisfirePolicyEnum> MisfirePolicy { get; set; }
         
+        /// <value>
+        /// The date and time the scheduled task should execute first time after create or update;
+        /// thereafter the task will execute as specified in the schedule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfFirstExecution")]
+        public System.Nullable<System.DateTime> TimeOfFirstExecution { get; set; }
+        
     }
 
     public class ScheduleModelConverter : JsonConverter

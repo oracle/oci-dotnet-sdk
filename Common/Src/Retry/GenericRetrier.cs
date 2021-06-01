@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common.Http.Internal;
 using Oci.Common.Model;
+using Oci.Common.Utils;
 using Polly;
 using Polly.Retry;
 using Polly.Timeout;
@@ -62,7 +63,7 @@ namespace Oci.Common.Retry
                     // A new copy of the request message needs to be created because it is disposed each time it is sent, and
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
-                    var newRequestMessage = CloneHttpRequestMessage(requestMessage);
+                    var newRequestMessage = HttpUtils.CloneHttpRequestMessage(requestMessage);
                     return await asyncHttpCall.Invoke(newRequestMessage, cancellationToken).ConfigureAwait(false);
                 });
         }
@@ -96,32 +97,5 @@ namespace Oci.Common.Retry
             return false;
         }
 
-        /// <summary>Make a copy of HttpRequestMessage.</summary>
-        /// <param name="request">The source HttpRequestMessage</param>
-        /// <returns>A cloned copy of HttpRequestMessage with exactly the same headers and content.</returns>
-        private HttpRequestMessage CloneHttpRequestMessage(HttpRequestMessage request)
-        {
-            var clone = new HttpRequestMessage(request.Method, request.RequestUri);
-
-            if (request.Content != null)
-            {
-                clone.Content = request.Content;
-            }
-
-            foreach (var header in request.Headers)
-            {
-                clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
-            }
-
-            if (request.Properties != null)
-            {
-                foreach (var kvp in request.Properties)
-                {
-                    clone.Properties.Add(kvp.Key, kvp.Value);
-                }
-            }
-
-            return clone;
-        }
     }
 }

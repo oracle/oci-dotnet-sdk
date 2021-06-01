@@ -70,7 +70,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
             RoleChangeInProgress,
             [EnumMember(Value = "UPGRADING")]
-            Upgrading
+            Upgrading,
+            [EnumMember(Value = "INACCESSIBLE")]
+            Inaccessible
         };
 
         /// <value>

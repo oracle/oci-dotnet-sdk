@@ -104,6 +104,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsFreeTier { get; set; }
         
         /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
         /// The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
         /// </value>
         [JsonProperty(PropertyName = "adminPassword")]

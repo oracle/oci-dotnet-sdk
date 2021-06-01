@@ -57,5 +57,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isLogSetEnabled")]
         public System.Nullable<bool> IsLogSetEnabled { get; set; }
         
+        /// <value>
+        /// This indicates if data has ever been ingested for the tenancy in Logging Analytics
+        /// </value>
+        [JsonProperty(PropertyName = "isDataEverIngested")]
+        public System.Nullable<bool> IsDataEverIngested { get; set; }
+        
     }
 }

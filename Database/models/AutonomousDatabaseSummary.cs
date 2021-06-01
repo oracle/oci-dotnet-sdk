@@ -86,7 +86,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
             RoleChangeInProgress,
             [EnumMember(Value = "UPGRADING")]
-            Upgrading
+            Upgrading,
+            [EnumMember(Value = "INACCESSIBLE")]
+            Inaccessible
         };
 
         /// <value>
@@ -105,6 +107,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// KMS key lifecycle details.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyLifecycleDetails")]
+        public string KmsKeyLifecycleDetails { get; set; }
         
         /// <value>
         /// The database name.
@@ -147,6 +167,12 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "backupConfig")]
         public AutonomousDatabaseBackupConfig BackupConfig { get; set; }
+        
+        /// <value>
+        /// Key History Entry.
+        /// </value>
+        [JsonProperty(PropertyName = "keyHistoryEntry")]
+        public System.Collections.Generic.List<AutonomousDatabaseKeyHistoryEntry> KeyHistoryEntry { get; set; }
         
         /// <value>
         /// The number of OCPU cores to be made available to the database.

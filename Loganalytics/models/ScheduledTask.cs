@@ -109,6 +109,32 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "taskStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TaskStatusEnum> TaskStatus { get; set; }
+                ///
+        /// <value>
+        /// reason for taskStatus PAUSED.
+        /// </value>
+        ///
+        public enum PauseReasonEnum {
+            [EnumMember(Value = "METRIC_EXTRACTION_NOT_VALID")]
+            MetricExtractionNotValid,
+            [EnumMember(Value = "SAVED_SEARCH_NOT_VALID")]
+            SavedSearchNotValid,
+            [EnumMember(Value = "SAVED_SEARCH_NOT_FOUND")]
+            SavedSearchNotFound,
+            [EnumMember(Value = "QUERY_STRING_NOT_VALID")]
+            QueryStringNotValid,
+            [EnumMember(Value = "USER_ACTION")]
+            UserAction,
+            [EnumMember(Value = "TENANCY_LIFECYCLE")]
+            TenancyLifecycle
+        };
+
+        /// <value>
+        /// reason for taskStatus PAUSED.
+        /// </value>
+        [JsonProperty(PropertyName = "pauseReason")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PauseReasonEnum> PauseReason { get; set; }
         
         /// <value>
         /// most recent Work Request Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the asynchronous request.
@@ -153,6 +179,14 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The date and time the scheduled task will execute next,
+        /// in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfNextExecution")]
+        public System.Nullable<System.DateTime> TimeOfNextExecution { get; set; }
                 ///
         /// <value>
         /// The current state of the scheduled task.
