@@ -118,6 +118,16 @@ namespace Oci.OpsiService.Models
         public System.Nullable<PatternEnum> Pattern { get; set; }
         
         /// <value>
+        /// The name of tablespace.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TablespaceName is required.")]
+        [JsonProperty(PropertyName = "tablespaceName")]
+        public string TablespaceName { get; set; }
+        
+        /// <value>
         /// Time series data used for the forecast analysis.
         /// </value>
         /// <remarks>

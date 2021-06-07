@@ -55,6 +55,13 @@ namespace Oci.OpsiService.Requests
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
+        /// Filter by one or more hostname.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostName")]
+        public System.Collections.Generic.List<string> HostName { get; set; }
+        
+        /// <value>
         /// Specify time period in ISO 8601 format with respect to current time.
         /// Default is last 30 days represented by P30D.
         /// If timeInterval is specified, then timeIntervalStart and timeIntervalEnd will be ignored.

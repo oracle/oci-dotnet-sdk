@@ -22,14 +22,14 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// Whether Oracle Cloud Agent can gather performance metrics and monitor the instance.
+        /// This attribute is not used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMonitoringSupported")]
         public System.Nullable<bool> IsMonitoringSupported { get; set; }
         
         /// <value>
-        /// Whether Oracle Cloud Agent can run all the available management plugins.
+        /// This attribute is not used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isManagementSupported")]

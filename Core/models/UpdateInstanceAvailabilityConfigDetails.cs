@@ -17,7 +17,7 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// Options for defining the availability of a VM instance after a maintenance event that impacts the underlying
-    /// hardware, including whether to live migrate supported VM instances when possible.
+    /// hardware, including whether to live migrate supported VM instances when possible without sending a prior customer notification.
     /// 
     /// </summary>
     public class UpdateInstanceAvailabilityConfigDetails 

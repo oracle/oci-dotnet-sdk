@@ -124,6 +124,22 @@ namespace Oci.OpsiService.Requests
         public System.Nullable<int> ForecastDays { get; set; }
         
         /// <value>
+        /// Filter by one or more hostname.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostName")]
+        public System.Collections.Generic.List<string> HostName { get; set; }
+        
+        /// <value>
+        /// Flag to indicate if database instance level metrics should be returned. The flag is ignored when a host name filter is not applied.
+        /// When a hostname filter is applied this flag will determine whether to return metrics for the instances located on the specified host or for the
+        /// whole database which contains an instance on this host.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDatabaseInstanceLevelMetrics")]
+        public System.Nullable<bool> IsDatabaseInstanceLevelMetrics { get; set; }
+        
+        /// <value>
         /// For list pagination. The value of the `opc-next-page` response header from
         /// the previous \"List\" call. For important details about how pagination works,
         /// see [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
