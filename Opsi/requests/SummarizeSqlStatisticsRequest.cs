@@ -74,6 +74,13 @@ namespace Oci.OpsiService.Requests
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
+        /// Filter by one or more hostname.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostName")]
+        public System.Collections.Generic.List<string> HostName { get; set; }
+        
+        /// <value>
         /// Filter sqls by percentage of db time.
         /// 
         /// </value>

@@ -22,7 +22,7 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
-        /// Name of tablespace
+        /// The name of tablespace.
         /// </value>
         /// <remarks>
         /// Required

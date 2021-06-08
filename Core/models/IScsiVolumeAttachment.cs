@@ -76,6 +76,21 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
         
+        /// <value>
+        /// A list of secondary multipath devices
+        /// </value>
+        [JsonProperty(PropertyName = "multipathDevices")]
+        public System.Collections.Generic.List<MultipathDevice> MultipathDevices { get; set; }
+        
+        /// <value>
+        /// Refer the top-level definition of encryptionInTransitType.
+        /// The default value is NONE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionInTransitType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EncryptionInTransitType> EncryptionInTransitType { get; set; }
+        
         [JsonProperty(PropertyName = "attachmentType")]
         private readonly string attachmentType = "iscsi";
     }

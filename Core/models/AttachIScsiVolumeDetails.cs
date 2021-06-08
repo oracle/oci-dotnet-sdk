@@ -26,6 +26,15 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "useChap")]
         public System.Nullable<bool> UseChap { get; set; }
         
+        /// <value>
+        /// Refer the top-level definition of encryptionInTransitType.
+        /// The default value is NONE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionInTransitType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EncryptionInTransitType> EncryptionInTransitType { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "iscsi";
     }

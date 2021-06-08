@@ -159,6 +159,44 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
         
+        /// <value>
+        /// Whether the attachment is multipath or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isMultipath")]
+        public System.Nullable<bool> IsMultipath { get; set; }
+                ///
+        /// <value>
+        /// The iscsi login state of the volume attachment. For a multipath volume attachment,
+        /// all iscsi sessions need to be all logged-in or logged-out to be in logged-in or logged-out state.
+        /// 
+        /// </value>
+        ///
+        public enum IscsiLoginStateEnum {
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            [EnumMember(Value = "LOGGING_IN")]
+            LoggingIn,
+            [EnumMember(Value = "LOGIN_SUCCEEDED")]
+            LoginSucceeded,
+            [EnumMember(Value = "LOGIN_FAILED")]
+            LoginFailed,
+            [EnumMember(Value = "LOGGING_OUT")]
+            LoggingOut,
+            [EnumMember(Value = "LOGOUT_SUCCEEDED")]
+            LogoutSucceeded,
+            [EnumMember(Value = "LOGOUT_FAILED")]
+            LogoutFailed
+        };
+
+        /// <value>
+        /// The iscsi login state of the volume attachment. For a multipath volume attachment,
+        /// all iscsi sessions need to be all logged-in or logged-out to be in logged-in or logged-out state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "iscsiLoginState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<IscsiLoginStateEnum> IscsiLoginState { get; set; }
+        
     }
 
     public class VolumeAttachmentModelConverter : JsonConverter

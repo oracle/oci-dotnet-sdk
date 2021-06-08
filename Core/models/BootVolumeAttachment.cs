@@ -130,5 +130,14 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
         
+        /// <value>
+        /// Refer the top-level definition of encryptionInTransitType.
+        /// The default value is NONE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionInTransitType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EncryptionInTransitType> EncryptionInTransitType { get; set; }
+        
     }
 }

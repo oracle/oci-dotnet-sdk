@@ -54,6 +54,9 @@ namespace Oci.ApplicationmigrationService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "IMPORT":
+                    obj = new ImportSourceDetails();
+                    break;
                 case "OCC":
                     obj = new OccSourceDetails();
                     break;

@@ -20,14 +20,10 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The availability domain of the boot volume.
+        /// The availability domain of the volume. Omissible for cloning a volume. The new volume will be created in the availability domain of the source volume.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         

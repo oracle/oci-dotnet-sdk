@@ -23,6 +23,8 @@ namespace Oci.ApplicationmigrationService.Models
       [EnumMember(Value = "OCC")]
       Occ,
       [EnumMember(Value = "OCIC_IDCS")]
-      OcicIdcs
+      OcicIdcs,
+      [EnumMember(Value = "IMPORT")]
+      Import
   }
 }
