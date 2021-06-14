@@ -22,7 +22,7 @@ namespace Oci.ManagementdashboardService.Models
     {
         
         /// <value>
-        /// ID of the dashboard.
+        /// ID of the dashboard.  Same as id.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,16 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DashboardId is required.")]
         [JsonProperty(PropertyName = "dashboardId")]
         public string DashboardId { get; set; }
+        
+        /// <value>
+        /// ID of the dashboard.  Same as dashboardId.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// ID of the service (for example, log-analytics) that owns the dashboard. Each service has a unique ID.
@@ -250,6 +260,23 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "SavedSearches is required.")]
         [JsonProperty(PropertyName = "savedSearches")]
         public System.Collections.Generic.List<ManagementSavedSearch> SavedSearches { get; set; }
+        
+        /// <value>
+        /// State of dashboard.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Defines parameters for the dashboard.
+        /// </value>
+        [JsonProperty(PropertyName = "parametersConfig")]
+        public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -116,6 +116,34 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForTargetDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetTargetDatabaseRequest, GetTargetDatabaseResponse>(
+                request,
+                request => client.GetTargetDatabase(request),
+                response => targetStates.Contains(response.TargetDatabase.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, params WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

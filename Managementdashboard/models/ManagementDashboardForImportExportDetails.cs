@@ -212,6 +212,12 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<ManagementSavedSearchForImportDetails> SavedSearches { get; set; }
         
         /// <value>
+        /// Defines parameters for the dashboard.
+        /// </value>
+        [JsonProperty(PropertyName = "parametersConfig")]
+        public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

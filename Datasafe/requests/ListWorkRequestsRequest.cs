@@ -30,6 +30,12 @@ namespace Oci.DatasafeService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// A filter to return only work requests that match the specific operation type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
+        public string OperationType { get; set; }
+        
+        /// <value>
         /// A filter to return only work requests that match the specified resource OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]

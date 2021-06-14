@@ -28,6 +28,14 @@ namespace Oci.DatasafeService.Models
       DataSafeDev3,
       [EnumMember(Value = "DataSafe-dev4")]
       DataSafeDev4,
+      [EnumMember(Value = "DataSafe-dev5")]
+      DataSafeDev5,
+      [EnumMember(Value = "DataSafe-dev6")]
+      DataSafeDev6,
+      [EnumMember(Value = "DataSafe-dev7")]
+      DataSafeDev7,
+      [EnumMember(Value = "DataSafe-dev8")]
+      DataSafeDev8,
       [EnumMember(Value = "DataSafe-lrg1")]
       DataSafeLrg1,
       [EnumMember(Value = "DataSafe-lrg2")]

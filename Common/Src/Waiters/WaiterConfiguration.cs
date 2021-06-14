@@ -11,7 +11,7 @@ namespace Oci.Common.Waiters
     public class WaiterConfiguration
     {
         /// <summary>Maximum number of attempts to be made until the resource reaches a desired state.</summary>
-        public int MaxAttempts { get; set; } = 5;
+        public int MaxAttempts { get; set; } = 7;
 
         /// <summary>
         /// Function which enables the users to configure the sleep time in between the retries.
@@ -19,7 +19,7 @@ namespace Oci.Common.Waiters
         /// Default delay strategy is expotential delay. Set GetNextDelayInSeconds to another delay strategy if
         /// necessary, e.g. DelayStrategy.GetFixedDelayInSeconds.
         /// </summary>
-        public Func<int, double> GetNextDelayInSeconds { get; set; } = DelayStrategy.GetExponentialDelayInSeconds;
+        public Func<int, double> GetNextDelayInSeconds { get; set; } = DelayStrategy.GetExponentialDelayWithDecorrelatedJitter;
 
         public static WaiterConfiguration DefaultWaiterConfiguration = new WaiterConfiguration();
     }

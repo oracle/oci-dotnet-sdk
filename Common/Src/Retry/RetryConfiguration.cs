@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Oci.Common.Utils;
 
 namespace Oci.Common.Retry
 {
@@ -45,5 +46,9 @@ namespace Oci.Common.Retry
 
         /// <summary>The collection of errors that can be retried.</summary>
         public Collection<Tuple<int, string>> RetryableErrors { get; set; } = new Collection<Tuple<int, string>>(RETRYABLE_ERRORS);
+
+        public static RetryConfiguration DefaultRetryConfiguration = new RetryConfiguration();
+
+        public static readonly bool isDefaultRetryEnabled = RetryUtils.IsDefaultRetryConfigurationEnabled();
     }
 }

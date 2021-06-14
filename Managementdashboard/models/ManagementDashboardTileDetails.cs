@@ -147,5 +147,11 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "drilldownConfig")]
         public System.Object DrilldownConfig { get; set; }
         
+        /// <value>
+        /// Specifies the saved search parameters values
+        /// </value>
+        [JsonProperty(PropertyName = "parametersMap")]
+        public System.Object ParametersMap { get; set; }
+        
     }
 }

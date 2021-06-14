@@ -115,5 +115,12 @@ namespace Oci.DataflowService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameStartsWith")]
         public string DisplayNameStartsWith { get; set; }
+        
+        /// <value>
+        /// The Spark version utilized to run the application.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sparkVersion")]
+        public string SparkVersion { get; set; }
     }
 }

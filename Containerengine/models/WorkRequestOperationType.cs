@@ -28,6 +28,8 @@ namespace Oci.ContainerengineService.Models
       NodepoolUpdate,
       [EnumMember(Value = "NODEPOOL_DELETE")]
       NodepoolDelete,
+      [EnumMember(Value = "NODEPOOL_RECONCILE")]
+      NodepoolReconcile,
       [EnumMember(Value = "WORKREQUEST_CANCEL")]
       WorkrequestCancel
   }

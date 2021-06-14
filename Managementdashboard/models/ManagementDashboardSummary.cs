@@ -22,7 +22,7 @@ namespace Oci.ManagementdashboardService.Models
     {
         
         /// <value>
-        /// ID of the dashboard.
+        /// ID of the dashboard.  Same as id.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,16 @@ namespace Oci.ManagementdashboardService.Models
         [Required(ErrorMessage = "DashboardId is required.")]
         [JsonProperty(PropertyName = "dashboardId")]
         public string DashboardId { get; set; }
+        
+        /// <value>
+        /// ID of the dashboard.  Same as dashboardId.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// Display name of the dashboard.
