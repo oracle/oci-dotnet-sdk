@@ -122,6 +122,17 @@ namespace Oci.DataflowService.Models
         public string OwnerUserName { get; set; }
         
         /// <value>
+        /// The Spark version utilized to run the application.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SparkVersion is required.")]
+        [JsonProperty(PropertyName = "sparkVersion")]
+        public string SparkVersion { get; set; }
+        
+        /// <value>
         /// The date and time a application was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2018-04-03T21:10:29.600Z
         /// </value>

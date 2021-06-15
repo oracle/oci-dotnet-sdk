@@ -3,7 +3,7 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
-﻿namespace Oci.Common.Retry
+namespace Oci.Common.Retry
 {
     /// <summary>An implementaion of a retrier class.</summary>
     public class Retrier
@@ -33,6 +33,10 @@
             else if (clientLevelRetry != null)
             {
                 return new GenericRetrier(clientLevelRetry);
+            }
+            else if (RetryConfiguration.isDefaultRetryEnabled)
+            {
+                return new GenericRetrier(RetryConfiguration.DefaultRetryConfiguration);
             }
 
             // no retry by default

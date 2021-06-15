@@ -145,6 +145,18 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
+        /// The number of storage servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "storageCount")]
+        public System.Nullable<int> StorageCount { get; set; }
+        
+        /// <value>
+        /// The number of compute servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<int> ComputeCount { get; set; }
+        
+        /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.
         /// </value>
         /// <remarks>

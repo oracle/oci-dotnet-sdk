@@ -223,6 +223,23 @@ namespace Oci.ManagementdashboardService.Models
         public string WidgetVM { get; set; }
         
         /// <value>
+        /// State of dashboard.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Defines parameters for the saved search.
+        /// </value>
+        [JsonProperty(PropertyName = "parametersConfig")]
+        public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

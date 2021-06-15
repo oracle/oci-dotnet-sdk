@@ -27,6 +27,8 @@ namespace Oci.ManagementdashboardService
 
         public DashxApisPaginators Paginators { get; }
 
+        public DashxApisWaiters Waiters { get; }
+
         /// <summary>
         /// Creates a new service instance using the given authentication provider and/or client configuration and/or endpoint.
         /// A client configuration can also be provided optionally to adjust REST client behaviors.
@@ -60,6 +62,7 @@ namespace Oci.ManagementdashboardService
 
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
             Paginators = new DashxApisPaginators(this);
+            Waiters = new DashxApisWaiters(this);
         }
 
         /// <summary>
@@ -143,7 +146,11 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Creates a new dashboard.  Limit for number of saved searches in a dashboard is 20.
+        /// Creates a new dashboard.  Limit for number of saved searches in a dashboard is 20. To get an example of what needs to be passed to CREATE, one can use GET API.
+        /// oci management-dashboard dashboard get --management-dashboard-id  \&quot;ocid1.managementdashboard.oc1..dashboardId1\&quot; --query data &gt; Create.json
+        /// &lt;br/&gt;
+        /// Modify the Create.json by removing \&quot;id\&quot; attribute and other desired changes, then do
+        /// oci management-dashboard dashboard create  --from-json file://Create.json
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -183,7 +190,11 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Creates a new saved search.
+        /// Creates a new saved search. To get an example of what needs to be passed to CREATE, one can use GET API.
+        /// oci management-dashboard saved-search get --management-saved-search-id ocid1.managementsavedsearch.oc1..savedsearchId1 --query data &gt; Create.json
+        /// &lt;br/&gt;
+        /// Modify the Create.json by removing \&quot;id\&quot; attribute and other desired changes, then do
+        /// oci management-dashboard saved-search create  --from-json file://Create.json
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -301,7 +312,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Exports an array of dashboards and their saved searches.
+        /// Exports an array of dashboards and their saved searches. Export is designed to work with importDashboard. An example using OCI CLI is $oci management-dashboard dashboard export --query data --export-dashboard-id \&quot;{\\\&quot;dashboardIds\\\&quot;:[\\\&quot;ocid1.managementdashboard.oc1..dashboardId1\\\&quot;]}\&quot;  &gt; dashboards.json $oci management-dashboard dashboard import --from-json file://dashboards.json
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -418,7 +429,9 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Imports an array of dashboards and their saved searches.
+        /// Imports an array of dashboards and their saved searches. Import is designed to work with exportDashboard. An example using OCI CLI is 
+        ///     $oci management-dashboard dashboard export --query data --export-dashboard-id \&quot;{\\\&quot;dashboardIds\\\&quot;:[\\\&quot;ocid1.managementdashboard.oc1..dashboardId1\\\&quot;]}\&quot;  &gt; dashboards.json
+        ///     $oci management-dashboard dashboard import --from-json file://dashboards.json
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -458,7 +471,7 @@ namespace Oci.ManagementdashboardService
         }
 
         /// <summary>
-        /// Gets the list of dashboards and their saved searches in a compartment with pagination.  Returned properties are the summary.
+        /// Gets the list of dashboards in a compartment with pagination.  Returned properties are the summary.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

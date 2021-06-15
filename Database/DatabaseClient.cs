@@ -106,6 +106,46 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Makes the storage capacity from additional storage servers available for VM Cluster consumption. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/AddStorageCapacityExadataInfrastructure.cs.html">here</a> to see an example of how to use AddStorageCapacityExadataInfrastructure API.</example>
+        public async Task<AddStorageCapacityExadataInfrastructureResponse> AddStorageCapacityExadataInfrastructure(AddStorageCapacityExadataInfrastructureRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called addStorageCapacityExadataInfrastructure");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInfrastructures/{exadataInfrastructureId}/actions/addStorageCapacity".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddStorageCapacityExadataInfrastructureResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddStorageCapacityExadataInfrastructure failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Initiates a data refresh for an Autonomous Database refreshable clone. Data is refreshed from the source database to the point of a specified timestamp.
         /// 
         /// </summary>

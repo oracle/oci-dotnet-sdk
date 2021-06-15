@@ -75,6 +75,12 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
+        /// The requested number of additional storage servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalStorageCount")]
+        public System.Nullable<int> AdditionalStorageCount { get; set; }
+        
+        /// <value>
         /// The list of DNS server IP addresses. Maximum of 3 allowed.
         /// </value>
         [JsonProperty(PropertyName = "dnsServer")]

@@ -104,6 +104,37 @@ namespace Oci.Common.Retry
         }
 
         [Theory]
+        [InlineData(409, "IncorrectState")]
+        [InlineData(429, "RandomError")]
+        [InlineData(500, "InternalServerError")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public async void TestRetryForGlobalRetryEnabled(int statusCode, string message)
+        {
+            Environment.SetEnvironmentVariable("OCI_SDK_DEFAULT_RETRY_ENABLED", "true");
+            RetryConfiguration.DefaultRetryConfiguration = new RetryConfiguration { GetNextDelayInSeconds = _ => 0 }; // disabling sleep time
+            var retrier = Retrier.GetPreferredRetrier(null, null);
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var requestMessage = new HttpRequestMessage();
+
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+                    .ReturnsAsync(new HttpResponseMessage()
+                    {
+                        StatusCode = (System.Net.HttpStatusCode)statusCode,
+                        Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage(message, "Some Error"))
+                    });
+
+            await retrier.MakeRetryingCall(
+                mockCallHttpMethod.Object,
+                requestMessage,
+                default);
+
+            var maxDefaultRetries = RetryConfiguration.DefaultWaiterConfiguration.MaxAttempts;
+            // verify the number of retries. Total tries = maxDefaultRetries + 1 (original request).
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
+        }
+
+        [Theory]
         [InlineData(406, "CustomError")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]

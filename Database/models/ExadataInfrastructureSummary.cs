@@ -160,6 +160,30 @@ namespace Oci.DatabaseService.Models
         public System.Double MaxDataStorageInTBs { get; set; }
         
         /// <value>
+        /// The number of Exadata storage servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "storageCount")]
+        public System.Nullable<int> StorageCount { get; set; }
+        
+        /// <value>
+        /// The requested number of additional storage servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalStorageCount")]
+        public System.Nullable<int> AdditionalStorageCount { get; set; }
+        
+        /// <value>
+        /// The requested number of additional storage servers activated for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "activatedStorageCount")]
+        public System.Nullable<int> ActivatedStorageCount { get; set; }
+        
+        /// <value>
+        /// The number of compute servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<int> ComputeCount { get; set; }
+        
+        /// <value>
         /// The IP address for the first control plane server.
         /// </value>
         [JsonProperty(PropertyName = "cloudControlPlaneServer1")]

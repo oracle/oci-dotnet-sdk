@@ -45,7 +45,19 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "UPDATE_ONPREM_CONNECTOR_WALLET")]
             UpdateOnpremConnectorWallet,
             [EnumMember(Value = "CHANGE_ONPREM_CONNECTOR_COMPARTMENT")]
-            ChangeOnpremConnectorCompartment
+            ChangeOnpremConnectorCompartment,
+            [EnumMember(Value = "CREATE_TARGET_DATABASE")]
+            CreateTargetDatabase,
+            [EnumMember(Value = "UPDATE_TARGET_DATABASE")]
+            UpdateTargetDatabase,
+            [EnumMember(Value = "ACTIVATE_TARGET_DATABASE")]
+            ActivateTargetDatabase,
+            [EnumMember(Value = "DEACTIVATE_TARGET_DATABASE")]
+            DeactivateTargetDatabase,
+            [EnumMember(Value = "DELETE_TARGET_DATABASE")]
+            DeleteTargetDatabase,
+            [EnumMember(Value = "CHANGE_TARGET_DATABASE_COMPARTMENT")]
+            ChangeTargetDatabaseCompartment
         };
 
         /// <value>
