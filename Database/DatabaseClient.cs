@@ -1745,6 +1745,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Create and start a pluggable database in the specified container database.
+        /// If needed call actions/stop to stop the PDB.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/CreatePluggableDatabase.cs.html">here</a> to see an example of how to use CreatePluggableDatabase API.</example>
+        public async Task<CreatePluggableDatabaseResponse> CreatePluggableDatabase(CreatePluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreatePluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreatePluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates an Exadata Cloud@Customer VM cluster.
         /// 
         /// </summary>
@@ -2519,6 +2560,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"DeleteKeyStore failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete a pluggable database
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DeletePluggableDatabase.cs.html">here</a> to see an example of how to use DeletePluggableDatabase API.</example>
+        public async Task<DeletePluggableDatabaseResponse> DeletePluggableDatabase(DeletePluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deletePluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeletePluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeletePluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4983,6 +5063,45 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Gets information about a specific pluggable database
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetPluggableDatabase.cs.html">here</a> to see an example of how to use GetPluggableDatabase API.</example>
+        public async Task<GetPluggableDatabaseResponse> GetPluggableDatabase(GetPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets information about the VM cluster. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
@@ -6875,6 +6994,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Gets a list of the pluggable databases based on databaseId or compartmentId specified.
+        /// Either one of the query parameters must be provided.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListPluggableDatabases.cs.html">here</a> to see an example of how to use ListPluggableDatabases API.</example>
+        public async Task<ListPluggableDatabasesResponse> ListPluggableDatabases(ListPluggableDatabasesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listPluggableDatabases");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListPluggableDatabasesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListPluggableDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of the VM cluster networks in the specified compartment. Applies to Exadata Cloud@Customer instances only.
         /// 
         /// </summary>
@@ -7031,6 +7191,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ListVmClusters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Clone and start a pluggable database on the same CDB. Only a started pluggable database can be cloned.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/LocalClonePluggableDatabase.cs.html">here</a> to see an example of how to use LocalClonePluggableDatabase API.</example>
+        public async Task<LocalClonePluggableDatabaseResponse> LocalClonePluggableDatabase(LocalClonePluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called localClonePluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/localClone".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<LocalClonePluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"LocalClonePluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }
@@ -7231,6 +7430,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ReinstateDataGuardAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Clone and start a pluggable database on a different CDB. Only a started pluggable database can be cloned.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/RemoteClonePluggableDatabase.cs.html">here</a> to see an example of how to use RemoteClonePluggableDatabase API.</example>
+        public async Task<RemoteClonePluggableDatabaseResponse> RemoteClonePluggableDatabase(RemoteClonePluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called remoteClonePluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/remoteClone".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemoteClonePluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoteClonePluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }
@@ -7674,6 +7912,45 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// start a stopped pluggable database. The openMode of the pluggable database will be READ_WRITE upon completion.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/StartPluggableDatabase.cs.html">here</a> to see an example of how to use StartPluggableDatabase API.</example>
+        public async Task<StartPluggableDatabaseResponse> StartPluggableDatabase(StartPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called startPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/start".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StartPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StartPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Stops the specified Autonomous Database.
         /// 
         /// </summary>
@@ -7709,6 +7986,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"StopAutonomousDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// stop a started pluggable database. The openMode of the pluggable database will be MOUNTED upon completion.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/StopPluggableDatabase.cs.html">here</a> to see an example of how to use StopPluggableDatabase API.</example>
+        public async Task<StopPluggableDatabaseResponse> StopPluggableDatabase(StopPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called stopPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/stop".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<StopPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StopPluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }
@@ -8847,6 +9163,45 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"UpdateMaintenanceRun failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Update a pluggable database
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdatePluggableDatabase.cs.html">here</a> to see an example of how to use UpdatePluggableDatabase API.</example>
+        public async Task<UpdatePluggableDatabaseResponse> UpdatePluggableDatabase(UpdatePluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updatePluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdatePluggableDatabaseResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdatePluggableDatabase failed with error: {e.Message}");
                 throw;
             }
         }

@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for updating an external [Management Agent cloud service (MACS)](https://docs.cloud.oracle.com/iaas/management-agents/index.html) database connection.
+    /// Details for updating an external [Management Agent cloud service (MACS)](https://docs.cloud.oracle.com/iaas/management-agents/index.html)
+    /// database connection.
     /// 
     /// </summary>
     public class UpdateExternalMacsConnectorDetails : UpdateExternalDatabaseConnectorDetails
