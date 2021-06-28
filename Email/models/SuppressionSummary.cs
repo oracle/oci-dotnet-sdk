@@ -24,18 +24,30 @@ namespace Oci.EmailService.Models
         /// <value>
         /// The OCID for the compartment.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
         /// The email address of the suppression.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EmailAddress is required.")]
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
         
         /// <value>
         /// The unique OCID of the suppression.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
                 ///

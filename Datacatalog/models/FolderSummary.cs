@@ -69,6 +69,12 @@ namespace Oci.DatacatalogService.Models
         public string ParentFolderKey { get; set; }
         
         /// <value>
+        /// The type of folder object. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
+        /// <value>
         /// Full path of the folder.
         /// </value>
         [JsonProperty(PropertyName = "path")]

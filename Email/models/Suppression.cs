@@ -27,18 +27,30 @@ namespace Oci.EmailService.Models
         /// OCID.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
         /// Email address of the suppression.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EmailAddress is required.")]
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
         
         /// <value>
         /// The unique ID of the suppression.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
                 ///
@@ -75,6 +87,44 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The last date and time the suppression prevented submission
+        /// in \"YYYY-MM-ddThh:mmZ\"
+        /// format with a Z offset, as defined by RFC 3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastSuppressed")]
+        public System.Nullable<System.DateTime> TimeLastSuppressed { get; set; }
+        
+        /// <value>
+        /// The value of the Message-ID header from the email that triggered a suppression.
+        /// This value is as defined in RFC 5322 section 3.6.4, excluding angle-brackets.
+        /// Not provided for all types of suppressions.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "messageId")]
+        public string MessageId { get; set; }
+        
+        /// <value>
+        /// The specific error message returned by a system that resulted in the suppression.
+        /// This message is usually an SMTP error code with additional descriptive text.
+        /// Not provided for all types of suppressions.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "errorDetail")]
+        public string ErrorDetail { get; set; }
+        
+        /// <value>
+        /// DNS name of the source of the error that caused the suppression.
+        /// Will be set to either the remote-mta or reporting-mta field from a delivery status notification (RFC 3464) when available.
+        /// Not provided for all types of suppressions, and not always known.
+        /// <br/>
+        /// Note: Most SMTP errors that cause suppressions come from software run by email receiving systems rather than from OCI email delivery itself.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "errorSource")]
+        public string ErrorSource { get; set; }
         
     }
 }

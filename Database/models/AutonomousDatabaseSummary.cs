@@ -185,6 +185,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCount { get; set; }
         
         /// <value>
+        /// The number of Fractional OCPU cores to be made available to the database.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<float> OcpuCount { get; set; }
+        
+        /// <value>
         /// The quantity of data in the database, in terabytes.
         /// </value>
         /// <remarks>

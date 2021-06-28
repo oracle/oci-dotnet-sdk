@@ -33,6 +33,13 @@ namespace Oci.ContainerengineService.Models
         public System.Nullable<int> Size { get; set; }
         
         /// <value>
+        /// The OCIDs of the Network Security Group(s) to associate nodes for this node pool with. For more information about NSGs, see {@link NetworkSecurityGroup}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nsgIds")]
+        public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
         /// The placement configurations for the node pool. Provide one placement
         /// configuration for each availability domain in which you intend to launch a node.
         /// <br/>

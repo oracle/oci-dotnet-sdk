@@ -103,6 +103,32 @@ namespace Oci.DatacatalogService.Requests
             Attribute,
             [EnumMember(Value = "FOLDER")]
             Folder,
+            [EnumMember(Value = "ORACLE_ANALYTICS_SERVER")]
+            OracleAnalyticsServer,
+            [EnumMember(Value = "ORACLE_ANALYTICS_CLOUD")]
+            OracleAnalyticsCloud,
+            [EnumMember(Value = "ORACLE_ANALYTICS_SUBJECT_AREA")]
+            OracleAnalyticsSubjectArea,
+            [EnumMember(Value = "ORACLE_ANALYTICS_DASHBOARD")]
+            OracleAnalyticsDashboard,
+            [EnumMember(Value = "ORACLE_ANALYTICS_BUSINESS_MODEL")]
+            OracleAnalyticsBusinessModel,
+            [EnumMember(Value = "ORACLE_ANALYTICS_PHYSICAL_DATABASE")]
+            OracleAnalyticsPhysicalDatabase,
+            [EnumMember(Value = "ORACLE_ANALYTICS_PHYSICAL_SCHEMA")]
+            OracleAnalyticsPhysicalSchema,
+            [EnumMember(Value = "ORACLE_ANALYTICS_PRESENTATION_TABLE")]
+            OracleAnalyticsPresentationTable,
+            [EnumMember(Value = "ORACLE_ANALYTICS_LOGICAL_TABLE")]
+            OracleAnalyticsLogicalTable,
+            [EnumMember(Value = "ORACLE_ANALYTICS_PHYSICAL_TABLE")]
+            OracleAnalyticsPhysicalTable,
+            [EnumMember(Value = "ORACLE_ANALYTICS_ANALYSIS")]
+            OracleAnalyticsAnalysis,
+            [EnumMember(Value = "DATABASE_SCHEMA")]
+            DatabaseSchema,
+            [EnumMember(Value = "TOPIC")]
+            Topic,
             [EnumMember(Value = "CONNECTION")]
             Connection,
             [EnumMember(Value = "GLOSSARY")]

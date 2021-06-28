@@ -112,6 +112,19 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
         
         /// <value>
+        /// The date and time the entity was harvested, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeHarvested")]
+        public System.Nullable<System.DateTime> TimeHarvested { get; set; }
+        
+        /// <value>
+        /// List of objects and their relationships to this entity.
+        /// </value>
+        [JsonProperty(PropertyName = "objectRelationships")]
+        public System.Collections.Generic.List<ObjectRelationship> ObjectRelationships { get; set; }
+        
+        /// <value>
         /// Time that the data entities status was last updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStatusUpdated")]

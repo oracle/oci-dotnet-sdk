@@ -170,5 +170,18 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "associatedRuleTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<RuleType> AssociatedRuleTypes { get; set; }
         
+        /// <value>
+        /// Whether a column is derived or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isDerivedAttribute")]
+        public System.Nullable<bool> IsDerivedAttribute { get; set; }
+        
+        /// <value>
+        /// The last time that any change was made to the attribute. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

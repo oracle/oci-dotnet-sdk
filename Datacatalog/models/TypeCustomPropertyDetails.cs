@@ -27,5 +27,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "customPropertyIds")]
         public System.Collections.Generic.List<string> CustomPropertyIds { get; set; }
         
+        /// <value>
+        /// If an OCI Event will be emitted when the custom property is modified.
+        /// </value>
+        [JsonProperty(PropertyName = "isEventEnabled")]
+        public System.Nullable<bool> IsEventEnabled { get; set; }
+        
     }
 }

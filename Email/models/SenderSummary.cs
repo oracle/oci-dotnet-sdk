@@ -24,42 +24,39 @@ namespace Oci.EmailService.Models
         /// <value>
         /// The OCID for the compartment.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
         /// The email address of the sender.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EmailAddress is required.")]
         [JsonProperty(PropertyName = "emailAddress")]
         public string EmailAddress { get; set; }
         
         /// <value>
         /// The unique ID of the sender.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-                ///
-        /// <value>
-        /// The current status of the approved sender.
-        /// </value>
-        ///
-        public enum LifecycleStateEnum {
-            [EnumMember(Value = "CREATING")]
-            Creating,
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "DELETING")]
-            Deleting,
-            [EnumMember(Value = "DELETED")]
-            Deleted
-        };
-
+        
         /// <value>
         /// The current status of the approved sender.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<Sender.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Date time the approved sender was added, in \"YYYY-MM-ddThh:mmZ\"
@@ -72,6 +69,7 @@ namespace Oci.EmailService.Models
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -80,6 +78,7 @@ namespace Oci.EmailService.Models
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

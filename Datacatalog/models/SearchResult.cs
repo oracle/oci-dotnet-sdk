@@ -196,6 +196,12 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Type name of the attribute. For example - complex, primitive, or array.
+        /// </value>
+        [JsonProperty(PropertyName = "attributeType")]
+        public string AttributeType { get; set; }
+        
+        /// <value>
         /// Expression for logical entities against which names of dataObjects will be matched.
         /// </value>
         [JsonProperty(PropertyName = "expression")]
