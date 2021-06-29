@@ -62,6 +62,25 @@ namespace Oci.DatacatalogService.Models
         public string ParentFolderKey { get; set; }
         
         /// <value>
+        /// The type of folder object. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
+        /// <value>
+        /// The date and time the folder was harvested, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeHarvested")]
+        public System.Nullable<System.DateTime> TimeHarvested { get; set; }
+        
+        /// <value>
+        /// List of objects and their relationships to this folder.
+        /// </value>
+        [JsonProperty(PropertyName = "objectRelationships")]
+        public System.Collections.Generic.List<ObjectRelationship> ObjectRelationships { get; set; }
+        
+        /// <value>
         /// Full path of the folder.
         /// </value>
         [JsonProperty(PropertyName = "path")]

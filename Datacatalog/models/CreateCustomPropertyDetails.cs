@@ -89,6 +89,12 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<bool> IsHiddenInSearch { get; set; }
         
         /// <value>
+        /// If an OCI Event will be emitted when the custom property is modified.
+        /// </value>
+        [JsonProperty(PropertyName = "isEventEnabled")]
+        public System.Nullable<bool> IsEventEnabled { get; set; }
+        
+        /// <value>
         /// Allowed values for the custom property if any
         /// </value>
         [JsonProperty(PropertyName = "allowedValues")]

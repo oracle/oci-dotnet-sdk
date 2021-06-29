@@ -17,6 +17,8 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// Details to create an Oracle Autonomous Database.
+    /// Choose either Fractional ocpuCount or cpuCoreCount.
+    /// Choose either dataStorageSizeInGBs or dataStorageSizeInTBs
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -48,12 +50,14 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The number of OCPU cores to be made available to the database.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
+        
+        /// <value>
+        /// The number of Fractional OCPU cores to be made available to the database.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<float> OcpuCount { get; set; }
                 ///
         /// <value>
         /// The Autonomous Database workload type. The following values are valid:
@@ -95,6 +99,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The size, in gigabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
+        public System.Nullable<int> DataStorageSizeInGBs { get; set; }
         
         /// <value>
         /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.

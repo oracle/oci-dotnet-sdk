@@ -59,6 +59,12 @@ namespace Oci.DatacatalogService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "attributeKey")]
         public string AttributeKey { get; set; }
         
+        /// <value>
+        /// Indicates whether the list of objects and their relationships to this object will be provided in the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isIncludeObjectRelationships")]
+        public System.Nullable<bool> IsIncludeObjectRelationships { get; set; }
+        
         ///
         /// <value>
         /// Specifies the fields to return in an entity attribute response.

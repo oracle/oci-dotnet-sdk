@@ -190,6 +190,24 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeExternal { get; set; }
         
         /// <value>
+        /// The date and time the attribute was harvested, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeHarvested")]
+        public System.Nullable<System.DateTime> TimeHarvested { get; set; }
+        
+        /// <value>
+        /// List of objects and their relationships to this attribute.
+        /// </value>
+        [JsonProperty(PropertyName = "objectRelationships")]
+        public System.Collections.Generic.List<ObjectRelationship> ObjectRelationships { get; set; }
+        
+        /// <value>
+        /// Whether a column is derived or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isDerivedAttribute")]
+        public System.Nullable<bool> IsDerivedAttribute { get; set; }
+        
+        /// <value>
         /// URI to the attribute instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]

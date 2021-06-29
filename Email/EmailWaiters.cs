@@ -32,6 +32,62 @@ namespace Oci.EmailService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDkimRequest, GetDkimResponse> ForDkim(GetDkimRequest request, params Dkim.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDkim(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDkimRequest, GetDkimResponse> ForDkim(GetDkimRequest request, WaiterConfiguration config, params Dkim.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDkimRequest, GetDkimResponse>(
+                request,
+                request => client.GetDkim(request),
+                response => targetStates.Contains(response.Dkim.LifecycleState.Value),
+                targetStates.Contains(Dkim.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetDkimRequest, GetDkimResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailDomainRequest, GetEmailDomainResponse> ForEmailDomain(GetEmailDomainRequest request, params EmailDomain.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForEmailDomain(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailDomainRequest, GetEmailDomainResponse> ForEmailDomain(GetEmailDomainRequest request, WaiterConfiguration config, params EmailDomain.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetEmailDomainRequest, GetEmailDomainResponse>(
+                request,
+                request => client.GetEmailDomain(request),
+                response => targetStates.Contains(response.EmailDomain.LifecycleState.Value),
+                targetStates.Contains(EmailDomain.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetEmailDomainRequest, GetEmailDomainResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSenderRequest, GetSenderResponse> ForSender(GetSenderRequest request, params Sender.LifecycleStateEnum[] targetStates)
         {
             return this.ForSender(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -53,6 +109,33 @@ namespace Oci.EmailService
                 targetStates.Contains(Sender.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetSenderRequest, GetSenderResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, params OperationStatus[] targetStates)
+        {
+            return this.ForWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, WaiterConfiguration config, params OperationStatus[] targetStates)
+        {
+            var agent = new WaiterAgent<GetWorkRequestRequest, GetWorkRequestResponse>(
+                request,
+                request => client.GetWorkRequest(request),
+                response => targetStates.Contains(response.WorkRequest.Status.Value)
+            );
+            return new Waiter<GetWorkRequestRequest, GetWorkRequestResponse>(config, agent);
         }
     }
 }

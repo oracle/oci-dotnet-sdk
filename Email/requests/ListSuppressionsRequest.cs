@@ -111,24 +111,11 @@ namespace Oci.EmailService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
-        ///
-        /// <value>
-        /// The sort order to use, either ascending or descending order.
-        /// 
-        /// </value>
-        ///
-        public enum SortOrderEnum {
-            [EnumMember(Value = "ASC")]
-            Asc,
-            [EnumMember(Value = "DESC")]
-            Desc
-        };
-
         /// <value>
         /// The sort order to use, either ascending or descending order.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
-        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        public System.Nullable<SortOrder> SortOrder { get; set; }
     }
 }

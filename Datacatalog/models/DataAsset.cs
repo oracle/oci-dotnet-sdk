@@ -89,6 +89,13 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The last time that a harvest was performed on the data asset. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeHarvested")]
+        public System.Nullable<System.DateTime> TimeHarvested { get; set; }
+        
+        /// <value>
         /// OCID of the user who created the data asset.
         /// </value>
         [JsonProperty(PropertyName = "createdById")]
