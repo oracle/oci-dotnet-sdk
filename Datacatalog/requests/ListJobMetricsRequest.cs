@@ -163,7 +163,7 @@ namespace Oci.DatacatalogService.Requests
         /// Specifies the fields to return in a job metric summary response.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<FieldsEnum> Fields { get; set; }
         
         ///

@@ -88,7 +88,7 @@ namespace Oci.OpsiService.Requests
         /// Possible value is LINUX.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<PlatformTypeEnum> PlatformType { get; set; }
         
         /// <value>

@@ -11,34 +11,68 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
+using Oci.Common.Http;
 
 namespace Oci.Common.Utils
 {
     /// <summary>A utility class that contains functions related to HTTP calls.</summary>
     public class HttpUtils
     {
+        protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Attempts to encode a query param. If it is a list of values, each item in teh list will be
         /// encoded and then added to a single string, separated by commas.
         /// </summary>
-        /// <param name="queryParam">The query parameter to encode.</param>
+        /// <param name="queryKey">The key for the query</param>
+        /// <param name="queryParam">The query parameter value to encode.</param>
+        /// <param name="collectionFormat">The colleciton format to be used to build the query if queryParam contains a list of values.</param>
         /// <returns>The encoded query parameter in string.</returns>
-        public static string EncodeQueryParam(object queryParam)
+        public static string EncodeQueryParam(string queryKey, object queryParam, CollectionFormatType collectionFormat)
         {
             // List will be converted to comma separated string
             if (queryParam is IList && queryParam.GetType().GetGenericTypeDefinition() == typeof(List<>))
             {
-                List<string> retVal = new List<string>();
+                logger.Info($"collection format is {collectionFormat}");
+
+                List<string> queryValues = new List<string>();
                 foreach (object value in (IList)queryParam)
                 {
-                    retVal.Add(EncodeQueryParamSingleValue(value));
+                    queryValues.Add(EncodeQueryParamSingleValue(value));
                 }
-                return string.Join(",", retVal);
+                if (collectionFormat == CollectionFormatType.Csv)
+                {
+                    return $"{queryKey}={string.Join(",", queryValues)}";
+                }
+                else if (collectionFormat == CollectionFormatType.Pipes)
+                {
+                    return $"{queryKey}={string.Join(Uri.EscapeUriString("|"), queryValues)}";
+                }
+                else if (collectionFormat == CollectionFormatType.Ssv)
+                {
+                    return $"{queryKey}={string.Join(Uri.EscapeUriString(" "), queryValues)}";
+                }
+                else if (collectionFormat == CollectionFormatType.Tsv)
+                {
+                    return $"{queryKey}={string.Join(Uri.EscapeUriString("\t"), queryValues)}";
+                }
+                else if (collectionFormat == CollectionFormatType.Multi)
+                {
+                    List<string> queryStrings = new List<string>();
+                    foreach (string queryValue in queryValues)
+                    {
+                        queryStrings.Add($"{queryKey}={queryValue}");
+                    }
+                    return BuildQueryString(queryStrings);
+                }
+                else
+                {
+                    throw new ArgumentException($"Unknown collection format type {collectionFormat} for query parameter {queryKey}");
+                }
             }
             else
             {
-                return EncodeQueryParamSingleValue(queryParam);
+                return $"{queryKey}={EncodeQueryParamSingleValue(queryParam)}";
             }
         }
 
@@ -81,16 +115,16 @@ namespace Oci.Common.Utils
         /// <summary>Builds the string containing the query in request URL.</summary>
         /// <param name="queries">A Dictionary containing all queries to be send.</param>
         /// <returns>The string representation of the queries in the request URL.</returns>
-        public static string BuildQueryString(Dictionary<string, string> queries)
+        public static string BuildQueryString(List<string> queries)
         {
             if (queries == null || queries.Count == 0)
             {
                 return string.Empty;
             }
             var sb = new StringBuilder("");
-            foreach (KeyValuePair<string, string> keyValue in queries)
+            foreach (string query in queries)
             {
-                sb.AppendFormat("{0}{1}={2}", sb.Length > 1 ? "&" : "", keyValue.Key, keyValue.Value);
+                sb.AppendFormat("{0}{1}", sb.Length > 1 ? "&" : "", query);
             }
             return sb.ToString();
         }

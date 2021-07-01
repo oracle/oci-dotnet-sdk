@@ -39,7 +39,7 @@ namespace Oci.GenericartifactscontentService
             {
                 ServiceName = "GENERICARTIFACTSCONTENT",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://generic.{region}.ocir.io"
+                ServiceEndpointTemplate = "https://generic.artifacts.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

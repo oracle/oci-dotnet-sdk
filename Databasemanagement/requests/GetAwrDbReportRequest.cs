@@ -45,7 +45,7 @@ namespace Oci.DatabasemanagementService.Requests
         /// <value>
         /// The optional multiple value query parameter to filter the database instance numbers.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instNums")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instNums", Oci.Common.Http.CollectionFormatType.Csv)]
         public System.Collections.Generic.List<int> InstNums { get; set; }
         
         /// <value>

@@ -50,7 +50,7 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter rules using a list of ModSecurity rule IDs.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "modSecurityRuleId")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "modSecurityRuleId", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ModSecurityRuleId { get; set; }
         
         ///
@@ -70,7 +70,7 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter rules using a list of actions.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "action")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "action", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ActionEnum> Action { get; set; }
     }
 }

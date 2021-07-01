@@ -65,7 +65,7 @@ namespace Oci.MysqlService.Requests
         /// <value>
         /// The requested Configuration types.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<TypeEnum> Type { get; set; }
         
         /// <value>

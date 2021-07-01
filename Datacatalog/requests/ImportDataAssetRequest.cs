@@ -56,7 +56,7 @@ namespace Oci.DatacatalogService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ImportType is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "importType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "importType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<DataAssetImportExportTypeFilter> ImportType { get; set; }
         
         /// <value>

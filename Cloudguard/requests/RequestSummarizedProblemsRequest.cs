@@ -26,7 +26,7 @@ namespace Oci.CloudguardService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ListDimensions is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listDimensions")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listDimensions", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ProblemDimension> ListDimensions { get; set; }
         
         /// <value>

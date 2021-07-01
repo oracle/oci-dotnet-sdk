@@ -110,7 +110,7 @@ namespace Oci.CloudguardService.Requests
         /// <value>
         /// Comma seperated list of detector rule ids to be passed in to match against Problems.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "detectorRuleIdList")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "detectorRuleIdList", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> DetectorRuleIdList { get; set; }
         
         /// <value>

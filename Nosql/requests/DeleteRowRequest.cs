@@ -38,7 +38,7 @@ namespace Oci.NosqlService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Key is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "key")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "key", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Key { get; set; }
         
         /// <value>

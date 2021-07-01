@@ -21,6 +21,14 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       [EnumMember(Value = "ACCEPT_RECIPIENT_INVITATION")]
       AcceptRecipientInvitation,
       [EnumMember(Value = "CANCEL_SENDER_INVITATION")]
-      CancelSenderInvitation
+      CancelSenderInvitation,
+      [EnumMember(Value = "ACTIVATE_ORDER_EXISTING_TENANCY")]
+      ActivateOrderExistingTenancy,
+      [EnumMember(Value = "REGISTER_DOMAIN")]
+      RegisterDomain,
+      [EnumMember(Value = "RELEASE_DOMAIN")]
+      ReleaseDomain,
+      [EnumMember(Value = "CREATE_CHILD_TENANCY")]
+      CreateChildTenancy
   }
 }

@@ -21,6 +21,10 @@ namespace Oci.OceService.Models
       [EnumMember(Value = "NEW")]
       New,
       [EnumMember(Value = "BYOL")]
-      Byol
+      Byol,
+      [EnumMember(Value = "PREMIUM")]
+      Premium,
+      [EnumMember(Value = "STARTER")]
+      Starter
   }
 }

@@ -52,7 +52,7 @@ namespace Oci.LoganalyticsService.Requests
         /// A filter to return only log analytics enterprise manager bridges matching all the lifecycle states specified for this parameter.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<EmBridgeLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -66,7 +66,7 @@ namespace Oci.LoganalyticsService.Requests
         /// Filter by the processing status of the latest upload from enterprise manager.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "importStatus")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "importStatus", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<EmBridgeLatestImportProcessingStatus> ImportStatus { get; set; }
         
         /// <value>

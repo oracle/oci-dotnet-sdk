@@ -75,7 +75,7 @@ namespace Oci.ObjectstorageService.Requests
         /// of this parameter is 'tags' for now. Example 'tags'.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Csv)]
         public System.Collections.Generic.List<FieldsEnum> Fields { get; set; }
         
         /// <value>

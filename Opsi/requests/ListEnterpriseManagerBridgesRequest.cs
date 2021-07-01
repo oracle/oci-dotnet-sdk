@@ -40,7 +40,7 @@ namespace Oci.OpsiService.Requests
         /// <value>
         /// Lifecycle states
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

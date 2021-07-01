@@ -26,7 +26,7 @@ namespace Oci.CloudguardService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ResponderExecutionsDimensions is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderExecutionsDimensions")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderExecutionsDimensions", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ResponderDimension> ResponderExecutionsDimensions { get; set; }
         
         /// <value>
@@ -44,7 +44,7 @@ namespace Oci.CloudguardService.Requests
         /// If no values are passed, the metric for responder executions of all reponder types are returned
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderTypeFilter")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderTypeFilter", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ResponderType> ResponderTypeFilter { get; set; }
         
         /// <value>
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Requests
         /// If no values are passed, the metric for responder executions of all status are returned
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderExecutionStatusFilter")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderExecutionStatusFilter", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ResponderExecutionStatus> ResponderExecutionStatusFilter { get; set; }
         
         /// <value>

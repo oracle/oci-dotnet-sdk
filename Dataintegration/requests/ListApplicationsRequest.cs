@@ -39,13 +39,13 @@ namespace Oci.DataintegrationService.Requests
         /// Used to filter by the identifier of the published object.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "identifier")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "identifier", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Identifier { get; set; }
         
         /// <value>
         /// Specifies the fields to get for an object.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Fields { get; set; }
         
         /// <value>

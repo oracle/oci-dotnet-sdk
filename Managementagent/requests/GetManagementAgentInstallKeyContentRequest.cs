@@ -38,7 +38,7 @@ namespace Oci.ManagementagentService.Requests
         /// <value>
         /// Filter to return input plugin names uncommented in the output.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pluginName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pluginName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> PluginName { get; set; }
     }
 }

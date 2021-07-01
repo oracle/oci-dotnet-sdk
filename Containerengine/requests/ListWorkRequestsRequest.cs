@@ -62,7 +62,7 @@ namespace Oci.ContainerengineService.Requests
         /// <value>
         /// A work request status to filter on. Can have multiple parameters of this name.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Status { get; set; }
         
         /// <value>

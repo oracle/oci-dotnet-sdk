@@ -92,19 +92,19 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter custom protection rules using a list of custom protection rule OCIDs.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
         /// Filter custom protection rules using a list of display names.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> DisplayName { get; set; }
         
         /// <value>
         /// Filter Custom Protection rules using a list of lifecycle states.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>

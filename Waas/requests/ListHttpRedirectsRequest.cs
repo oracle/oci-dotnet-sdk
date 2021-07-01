@@ -90,19 +90,19 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter redirects using a list of redirect OCIDs.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
         /// Filter redirects using a display name.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> DisplayName { get; set; }
         
         /// <value>
         /// Filter redirects using a list of lifecycle states.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>

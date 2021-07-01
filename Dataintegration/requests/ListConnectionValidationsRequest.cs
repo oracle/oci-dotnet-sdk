@@ -50,7 +50,7 @@ namespace Oci.DataintegrationService.Requests
         /// <value>
         /// Specifies the fields to get for an object.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Fields { get; set; }
         
         /// <value>
