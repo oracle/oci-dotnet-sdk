@@ -84,7 +84,7 @@ namespace Oci.DatabasemanagementService.Requests
         /// <value>
         /// The optional multiple value query parameter to filter the entity name.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Name { get; set; }
         
         /// <value>

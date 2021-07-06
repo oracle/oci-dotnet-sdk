@@ -42,7 +42,7 @@ namespace Oci.MarketplaceService.Requests
         /// <value>
         /// The name of the listing.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Name { get; set; }
         
         /// <value>
@@ -54,7 +54,7 @@ namespace Oci.MarketplaceService.Requests
         /// <value>
         /// OS of the listing.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operatingSystems")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operatingSystems", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> OperatingSystems { get; set; }
         
         ///

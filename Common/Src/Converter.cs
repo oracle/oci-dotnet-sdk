@@ -34,8 +34,8 @@ namespace Oci.Common
             var requestMessage = new HttpRequestMessage();
             requestMessage.Method = method;
             var updatedUri = uri.AbsoluteUri;
-            // Build queries string.
-            var queries = new Dictionary<string, string>();
+            // A list containing all query string.
+            var queriesList = new List<string>();
             PropertyInfo[] props = typeof(T).GetProperties();
             foreach (var prop in props)
             {
@@ -51,8 +51,9 @@ namespace Oci.Common
                     {
                         if (httpRequestAttr.Target == TargetEnum.Query)
                         {
-                            logger.Debug($"Adding query {httpRequestAttr.Name}: {HttpUtils.EncodeQueryParam(prop.GetValue(request))}");
-                            queries.Add(httpRequestAttr.Name, HttpUtils.EncodeQueryParam(prop.GetValue(request)));
+                            var query = HttpUtils.EncodeQueryParam(httpRequestAttr.Name, prop.GetValue(request), httpRequestAttr.CollectionFormat);
+                            logger.Debug($"Adding query {query}");
+                            queriesList.Add(query);
                         }
                         else if (httpRequestAttr.Target == TargetEnum.Header)
                         {
@@ -88,7 +89,7 @@ namespace Oci.Common
                 }
             }
             var uriBuilder = new UriBuilder(updatedUri);
-            uriBuilder.Query = HttpUtils.BuildQueryString(queries);
+            uriBuilder.Query = HttpUtils.BuildQueryString(queriesList);
             requestMessage.RequestUri = uriBuilder.Uri;
             return requestMessage;
         }

@@ -16,7 +16,15 @@ namespace Oci.Common.Http
         public TargetEnum Target { get; set; }
         /// <summary>The name of the target.</summary>
         public string Name { get; set; }
+        /// <summary>The collection format type. Only applicable when Target is Query.</summary>
+        public CollectionFormatType CollectionFormat { get; set; } = CollectionFormatType.Csv;
 
+        public HttpConverterAttribute(TargetEnum target, string name, CollectionFormatType collectionFormat)
+        {
+            Target = target;
+            Name = name;
+            CollectionFormat = collectionFormat;
+        }
         public HttpConverterAttribute(TargetEnum target, string name)
         {
             Target = target;

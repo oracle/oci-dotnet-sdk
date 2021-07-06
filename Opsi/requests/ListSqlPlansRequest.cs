@@ -48,7 +48,7 @@ namespace Oci.OpsiService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "PlanHash is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "planHash")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "planHash", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<long> PlanHash { get; set; }
         
         /// <value>

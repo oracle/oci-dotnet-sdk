@@ -77,7 +77,7 @@ namespace Oci.JmsService.Requests
         /// For example 'approximateJreCount,approximateInstallationCount'.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Csv)]
         public System.Collections.Generic.List<SummarizeManagedInstanceUsageFields> Fields { get; set; }
         
         /// <value>

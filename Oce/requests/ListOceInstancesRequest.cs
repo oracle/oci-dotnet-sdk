@@ -30,6 +30,12 @@ namespace Oci.OceService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The ID of the tenancy in which to list resources.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "tenancyId")]
+        public string TenancyId { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// <br/>
         /// Example: My new resource

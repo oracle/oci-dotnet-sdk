@@ -48,7 +48,7 @@ namespace Oci.AnalyticsService.Requests
         /// One or more work request status values to filter on.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<WorkRequestStatus> Status { get; set; }
         
         /// <value>

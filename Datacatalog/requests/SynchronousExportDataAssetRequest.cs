@@ -56,7 +56,7 @@ namespace Oci.DatacatalogService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "ExportType is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exportType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exportType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<DataAssetImportExportTypeFilter> ExportType { get; set; }
         
         /// <value>

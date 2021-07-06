@@ -88,19 +88,19 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter address lists using a list of address lists OCIDs.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
         /// Filter address lists using a list of names.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Name { get; set; }
         
         /// <value>
         /// Filter address lists using a list of lifecycle states.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>

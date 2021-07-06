@@ -47,7 +47,7 @@ namespace Oci.DataintegrationService.Requests
         /// <value>
         /// Specifies the fields to get for an object.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Fields { get; set; }
         
         /// <value>
@@ -59,19 +59,19 @@ namespace Oci.DataintegrationService.Requests
         /// <value>
         /// Used to filter by the key of the object.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "key")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "key", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Key { get; set; }
         
         /// <value>
         /// Used to filter by the identifier of the object.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "identifier")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "identifier", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Identifier { get; set; }
         
         /// <value>
         /// Used to filter by the object type of the object. It can be suffixed with an optional filter operator InSubtree. If this operator is not specified, then exact match is considered. <br><br><B>Examples:</B><br> <ul> <li><B>?type=DATA_LOADER_TASK&typeInSubtree=false</B> returns all objects of type data loader task</li> <li><B>?type=DATA_LOADER_TASK</B> returns all objects of type data loader task</li> <li><B>?type=DATA_LOADER_TASK&typeInSubtree=true</B> returns all objects of type data loader task</li> </ul>
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Type { get; set; }
         
         /// <value>

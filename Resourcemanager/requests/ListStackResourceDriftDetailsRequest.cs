@@ -52,7 +52,7 @@ namespace Oci.ResourcemanagerService.Requests
         ///   - DELETED
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceDriftStatus")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceDriftStatus", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<StackResourceDriftSummary.ResourceDriftStatusEnum> ResourceDriftStatus { get; set; }
         
         /// <value>

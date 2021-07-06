@@ -73,7 +73,7 @@ namespace Oci.ServicecatalogService.Requests
         /// <value>
         /// Limit results to just this publisher.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "publisherId")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "publisherId", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> PublisherId { get; set; }
         
         /// <value>
@@ -81,7 +81,7 @@ namespace Oci.ServicecatalogService.Requests
         /// one or more matching package types will be returned.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "packageType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "packageType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>
@@ -89,7 +89,7 @@ namespace Oci.ServicecatalogService.Requests
         /// one or more matching pricing models will be returned.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pricing")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pricing", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<PricingTypeEnum> Pricing { get; set; }
         
         /// <value>

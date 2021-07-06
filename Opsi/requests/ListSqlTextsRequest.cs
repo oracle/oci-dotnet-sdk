@@ -37,21 +37,21 @@ namespace Oci.OpsiService.Requests
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "SqlIdentifier is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sqlIdentifier")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sqlIdentifier", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> SqlIdentifier { get; set; }
         
         /// <value>
         /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the assosicated DBaaS entity.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseId", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> DatabaseId { get; set; }
         
         /// <value>
         /// Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database insight resource.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>

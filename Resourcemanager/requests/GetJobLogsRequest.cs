@@ -41,7 +41,7 @@ namespace Oci.ResourcemanagerService.Requests
         /// A filter that returns only logs of a specified type.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LogEntry.TypeEnum> Type { get; set; }
         
         /// <value>

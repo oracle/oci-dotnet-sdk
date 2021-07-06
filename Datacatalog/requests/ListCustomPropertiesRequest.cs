@@ -58,7 +58,7 @@ namespace Oci.DatacatalogService.Requests
         /// Return the custom properties which has specified data types
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataTypes")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataTypes", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<CustomPropertyDataType> DataTypes { get; set; }
         
         ///
@@ -150,7 +150,7 @@ namespace Oci.DatacatalogService.Requests
         /// <value>
         /// A filter to return only resources that match the entire type name given. The match is not case sensitive
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "typeName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "typeName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<TypeNameEnum> TypeName { get; set; }
         
         /// <value>
@@ -210,7 +210,7 @@ namespace Oci.DatacatalogService.Requests
         /// Specifies the fields to return in a custom property summary response.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<FieldsEnum> Fields { get; set; }
         
         ///

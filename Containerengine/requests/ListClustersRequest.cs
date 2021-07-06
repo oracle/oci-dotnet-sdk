@@ -32,7 +32,7 @@ namespace Oci.ContainerengineService.Requests
         /// <value>
         /// A cluster lifecycle state to filter on. Can have multiple parameters of this name.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ClusterLifecycleState> LifecycleState { get; set; }
         
         /// <value>

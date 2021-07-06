@@ -17,4 +17,18 @@ namespace Oci.Common.Http
         /// <summary>Body of a request.</summary>
         Body
     }
+
+    public enum CollectionFormatType
+    {
+        /// <summary>Comma separated values, e.g. queryparam=val1, val2, val3.</summary>
+        Csv,
+        /// <summary>Assign each value to the query param separately, e.g. queryparam=val1&amp;queryparm=val2.</summary>
+        Multi,
+        /// <summary>pipe separated values, e.g. queryparam=val1|val2|val3.</summary>
+        Pipes,
+        /// <summary>Space separated values, e.g. queryparam=val1 val2 val3.</summary>
+        Ssv,
+        /// <summary>Tab separated values, e.g. queryparam=val1\tval2\tval3.</summary>
+        Tsv
+    }
 }

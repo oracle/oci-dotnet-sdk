@@ -68,7 +68,7 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filters logs by access rule key.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "accessRuleKey")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "accessRuleKey", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> AccessRuleKey { get; set; }
         
         ///
@@ -92,31 +92,31 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filters logs by Web Application Firewall action.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "action")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "action", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ActionEnum> Action { get; set; }
         
         /// <value>
         /// Filters logs by client IP address.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clientAddress")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clientAddress", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ClientAddress { get; set; }
         
         /// <value>
         /// Filters logs by country code. Country codes are in ISO 3166-1 alpha-2 format. For a list of codes, see [ISO's website](https://www.iso.org/obp/ui/#search/code/).
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "countryCode")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "countryCode", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> CountryCode { get; set; }
         
         /// <value>
         /// Filter logs by country name.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "countryName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "countryName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> CountryName { get; set; }
         
         /// <value>
         /// Filter logs by device fingerprint.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fingerprint")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fingerprint", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Fingerprint { get; set; }
         
         ///
@@ -146,13 +146,13 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter logs by HTTP method.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpMethod")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "httpMethod", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<HttpMethodEnum> HttpMethod { get; set; }
         
         /// <value>
         /// Filter logs by incident key.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "incidentKey")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "incidentKey", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> IncidentKey { get; set; }
         
         ///
@@ -184,49 +184,49 @@ namespace Oci.WaasService.Requests
         /// <value>
         /// Filter by log type. For more information about WAF logs, see [Logs](https://docs.cloud.oracle.com/iaas/Content/WAF/Tasks/logs.htm).
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LogTypeEnum> LogType { get; set; }
         
         /// <value>
         /// Filter by origin IP address.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "originAddress")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "originAddress", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> OriginAddress { get; set; }
         
         /// <value>
         /// Filter by referrer.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "referrer")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "referrer", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Referrer { get; set; }
         
         /// <value>
         /// Filter by request URL.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "requestUrl")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "requestUrl", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> RequestUrl { get; set; }
         
         /// <value>
         /// Filter by response code.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responseCode")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responseCode", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<int> ResponseCode { get; set; }
         
         /// <value>
         /// Filter by threat feed key.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "threatFeedKey")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "threatFeedKey", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ThreatFeedKey { get; set; }
         
         /// <value>
         /// Filter by user agent.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userAgent")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userAgent", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> UserAgent { get; set; }
         
         /// <value>
         /// Filter by protection rule key.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "protectionRuleKey")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "protectionRuleKey", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ProtectionRuleKey { get; set; }
     }
 }

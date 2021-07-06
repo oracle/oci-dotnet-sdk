@@ -61,7 +61,7 @@ namespace Oci.LoganalyticsService.Requests
         /// one of the entityTypeNames given in the list. The match is case-insensitive.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityTypeName")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityTypeName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> EntityTypeName { get; set; }
         
         /// <value>
@@ -132,7 +132,7 @@ namespace Oci.LoganalyticsService.Requests
         /// A filter to return only those log analytics entities with the specified auto-creation source.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationSourceType")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationSourceType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<CreationSourceType> CreationSourceType { get; set; }
         
         /// <value>
