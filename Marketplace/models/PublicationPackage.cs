@@ -23,13 +23,13 @@ namespace Oci.MarketplaceService.Models
     {
         
         /// <value>
-        /// Description of this package.
+        /// A description of the package.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The ID of the listing this package belongs to.
+        /// The ID of the listing that the specified package belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.MarketplaceService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// The date and time this listing package was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+        /// The date and time the publication package was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
         /// timestamp format.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

@@ -123,7 +123,15 @@ namespace Oci.DnsService.Models
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "CREATING")]
-            Creating
+            Creating,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>

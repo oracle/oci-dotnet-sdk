@@ -20,7 +20,7 @@ namespace Oci.BdsService.Requests
     {
         
         /// <value>
-        /// The OCID of the BDS instance
+        /// The OCID of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.BdsService.Requests
         public string BdsInstanceId { get; set; }
         
         /// <value>
-        /// Unique Oracle-assigned identifier of the autoscaling configuration.
+        /// Unique Oracle-assigned identifier of the autoscale configuration.
         /// </value>
         /// <remarks>
         /// Required

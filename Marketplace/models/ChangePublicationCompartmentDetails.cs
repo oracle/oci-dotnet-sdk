@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// Contains details indicating to which compartment the Publication should be moved
+    /// The model for the parameters needed move a publication from one compartment to another.
     /// </summary>
     public class ChangePublicationCompartmentDetails 
     {
         
         /// <value>
-        /// The unique identifier for the compartment to which the Publication should be moved.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where you want to move the publication.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

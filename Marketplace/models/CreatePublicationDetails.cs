@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// Publication Creation Details
+    /// The model for the parameters needed to create a publication.
     /// </summary>
     public class CreatePublicationDetails 
     {
         
         /// <value>
-        /// In which catalog the listing should exist.
+        /// The publisher category to which the publication belongs. The publisher category informs where the listing appears for use.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +34,7 @@ namespace Oci.MarketplaceService.Models
         public System.Nullable<ListingType> ListingType { get; set; }
         
         /// <value>
-        /// The name of the listing.
+        /// The name of the publication, which is also used in the listing.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +44,7 @@ namespace Oci.MarketplaceService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// short description of the catalog listing
+        /// A short description of the publication to use in the listing.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,13 +54,13 @@ namespace Oci.MarketplaceService.Models
         public string ShortDescription { get; set; }
         
         /// <value>
-        /// short description of the catalog listing
+        /// A long description of the publication to use in the listing.
         /// </value>
         [JsonProperty(PropertyName = "longDescription")]
         public string LongDescription { get; set; }
         
         /// <value>
-        /// Contact information to use to get support from the publisher for the listing.
+        /// Contact information for getting support from the publisher for the listing.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +70,7 @@ namespace Oci.MarketplaceService.Models
         public System.Collections.Generic.List<SupportContact> SupportContacts { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to create the resource within.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the publication.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,7 +87,8 @@ namespace Oci.MarketplaceService.Models
         public CreatePublicationPackage PackageDetails { get; set; }
         
         /// <value>
-        /// Acknowledgement that invoker has the right and authority to share this Community Image in accordance with their agreement with Oracle applicable to the Services and the related Service Specifications
+        /// Whether the publisher acknowledged that they have the right and authority to share the contents of the publication and that they accepted the Oracle terms of use agreements required to create a publication.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

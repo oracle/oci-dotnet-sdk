@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about removed Auto Scaling Configuration
+    /// The information about the removed autoscale configuration.
     /// </summary>
     public class RemoveAutoScalingConfigurationDetails 
     {
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required

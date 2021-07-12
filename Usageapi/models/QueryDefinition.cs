@@ -46,7 +46,7 @@ namespace Oci.UsageapiService.Models
         public CostAnalysisUI CostAnalysisUI { get; set; }
         
         /// <value>
-        /// the version of saved query.
+        /// The saved query version.
         /// </value>
         /// <remarks>
         /// Required

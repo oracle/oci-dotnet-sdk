@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// An object for creating image package
+    /// An object for creating an image publication package.
     /// </summary>
     public class CreateImagePublicationPackage : CreatePublicationPackage
     {
         
         /// <value>
-        /// base image id of the listing
+        /// The unique identifier for the base image of the publication.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }

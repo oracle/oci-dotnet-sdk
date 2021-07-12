@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// A base object for the properties of the package
+    /// A base object for creating a publication package.
     /// </summary>
     [JsonConverter(typeof(CreatePublicationPackageModelConverter))]
     public class CreatePublicationPackage 
     {
         
         /// <value>
-        /// The version of the package
+        /// The package version.
         /// </value>
         /// <remarks>
         /// Required
@@ -41,7 +41,7 @@ namespace Oci.MarketplaceService.Models
         public OperatingSystem OperatingSystem { get; set; }
         
         /// <value>
-        /// End User License Agreeement that a consumer of this listing has to accept
+        /// The end user license agreeement (EULA) that consumers of this listing must accept.
         /// </value>
         /// <remarks>
         /// Required

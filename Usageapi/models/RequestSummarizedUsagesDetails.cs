@@ -88,7 +88,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<GranularityEnum> Granularity { get; set; }
         
         /// <value>
-        /// is aggregated by time. true isAggregateByTime will add up all usage/cost over query time period
+        /// Whether aggregated by time. If isAggregateByTime is true, all usage/cost over the query time period will be added up.
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }
@@ -97,9 +97,12 @@ namespace Oci.UsageapiService.Models
         public Forecast Forecast { get; set; }
                 ///
         /// <value>
-        /// The query usage type. COST by default if it is missing
+        /// The query usage type. COST by default if it is missing.
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
+        /// Credit - Query the credit adjustments data.
+        /// ExpiredCredit - Query the expired credits data.
+        /// AllCredit - Query the credit adjustments and expired credit.
         /// 
         /// </value>
         ///
@@ -107,13 +110,22 @@ namespace Oci.UsageapiService.Models
             [EnumMember(Value = "USAGE")]
             Usage,
             [EnumMember(Value = "COST")]
-            Cost
+            Cost,
+            [EnumMember(Value = "CREDIT")]
+            Credit,
+            [EnumMember(Value = "EXPIREDCREDIT")]
+            Expiredcredit,
+            [EnumMember(Value = "ALLCREDIT")]
+            Allcredit
         };
 
         /// <value>
-        /// The query usage type. COST by default if it is missing
+        /// The query usage type. COST by default if it is missing.
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
+        /// Credit - Query the credit adjustments data.
+        /// ExpiredCredit - Query the expired credits data.
+        /// AllCredit - Query the credit adjustments and expired credit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]
@@ -128,8 +140,8 @@ namespace Oci.UsageapiService.Models
         public System.Collections.Generic.List<string> GroupBy { get; set; }
         
         /// <value>
-        /// GroupBy a specific tagKey. Provide tagNamespace and tagKey in tag object. Only support one tag in the list
-        /// Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
+        /// GroupBy a specific tagKey. Provide the tagNamespace and tagKey in the tag object. Only supports one tag in the list.
+        /// For Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupByTag")]
         public System.Collections.Generic.List<Tag> GroupByTag { get; set; }

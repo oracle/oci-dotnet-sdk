@@ -20,7 +20,7 @@ namespace Oci.MarketplaceService.Requests
     {
         
         /// <value>
-        /// The unique identifier for the listing.
+        /// The unique identifier for the publication.
         /// </value>
         /// <remarks>
         /// Required

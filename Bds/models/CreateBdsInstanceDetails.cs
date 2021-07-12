@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about new BDS instance
+    /// The information about the new cluster.
     /// </summary>
     public class CreateBdsInstanceDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Name of the BDS instance
+        /// Name of the Big Data Service cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Version of the Hadoop distribution
+        /// Version of the Hadoop distribution.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.BdsService.Models
         public string ClusterPublicKey { get; set; }
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.BdsService.Models
         public string ClusterAdminPassword { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether or not the cluster is HA
+        /// Boolean flag specifying whether or not the cluster is highly available (HA).
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsHighAvailability { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether or not the cluster should be setup as secure.
+        /// Boolean flag specifying whether or not the cluster should be set up as secure.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +96,7 @@ namespace Oci.BdsService.Models
         public NetworkConfig NetworkConfig { get; set; }
         
         /// <value>
-        /// The list of nodes in the BDS instance
+        /// The list of nodes in the Big Data Service cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,15 +106,17 @@ namespace Oci.BdsService.Models
         public System.Collections.Generic.List<CreateNodeDetails> Nodes { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Simple key-value pair that is applied without any predefined name, type, or scope.
+        /// Exists for cross-compatibility only. For example, `{\"bar-key\": \"value\"}`
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For example, `{\"foo-namespace\": {\"bar-key\": \"value\"}}`
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about auto scale configuration.
+    /// The information about the autoscale configuration.
     /// </summary>
     public class AutoScalingConfiguration 
     {
         
         /// <value>
-        /// The unique identifier for autoscaling configuration.
+        /// The unique identifier for the autoscale configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name. The name does not have to be unique, and it may be changed. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A node type that is managed by an autoscaling configuration. The only supported type is WORKER.
+        /// A node type that is managed by an autoscale configuration. The only supported type is WORKER.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<Node.NodeTypeEnum> NodeType { get; set; }
                 ///
         /// <value>
-        /// The state of the autoscaling configuration
+        /// The state of the autoscale configuration.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -72,7 +72,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// The state of the autoscaling configuration
+        /// The state of the autoscale configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The time the BDS instance was created. An RFC3339 formatted datetime string
+        /// The time the cluster was created, shown as an RFC 3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -93,8 +93,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the autoscale configuration was updated.
-        /// An RFC3339 formatted datetime string
+        /// The time the autoscale configuration was updated, shown as an RFC 3339 formatted datetime string.
         /// 
         /// </value>
         /// <remarks>

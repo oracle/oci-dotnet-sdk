@@ -129,13 +129,13 @@ namespace Oci.MarketplaceService.Requests
         public System.Nullable<bool> IsFeatured { get; set; }
         
         /// <value>
-        /// The type of the listing
+        /// The type of the listing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listingTypes", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ListingType> ListingTypes { get; set; }
         
         /// <value>
-        /// OS of the listing.
+        /// The operating system of the listing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operatingSystems", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> OperatingSystems { get; set; }

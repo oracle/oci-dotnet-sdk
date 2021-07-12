@@ -20,7 +20,7 @@ namespace Oci.UsageapiService.Requests
     {
         
         /// <value>
-        /// New query details. It is up to 10 saved query.
+        /// New query details. Up to ten saved queries.
         /// </value>
         /// <remarks>
         /// Required

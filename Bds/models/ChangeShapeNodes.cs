@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Inidividual worker nodes groups details
+    /// Individual worker nodes groups details.
     /// </summary>
     public class ChangeShapeNodes 
     {
@@ -40,7 +40,7 @@ namespace Oci.BdsService.Models
         public string Utility { get; set; }
         
         /// <value>
-        /// Change shape of cloudsql node to the desired target shape. Only VM_STANDARD shapes are allowed here.
+        /// Change shape of the Cloud SQL node to the desired target shape. Only VM_STANDARD shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "cloudsql")]
         public string Cloudsql { get; set; }

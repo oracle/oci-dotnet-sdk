@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.MarketplaceService.Models
 {
   /// <summary>
-  /// To which catalog a listing belongs
+  /// Possible values for the publisher category to which a publication can belong. The publisher category informs where the listing appears for use.
+    /// 
   /// </summary>
   public enum ListingType {
       [EnumMember(Value = "COMMUNITY")]

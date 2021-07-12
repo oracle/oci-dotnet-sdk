@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about removed Cloud SQL capability
+    /// The information about the Cloud SQL installation that was removed.
     /// </summary>
     public class RemoveCloudSqlDetails 
     {
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required

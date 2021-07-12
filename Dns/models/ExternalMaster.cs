@@ -17,8 +17,6 @@ namespace Oci.DnsService.Models
 {
     /// <summary>
     /// An external master name server used as the source of zone data.
-    /// May either have a zone-embedded TSIG or reference a TSIG key by OCID,
-    /// but not both.
     /// 
     /// </summary>
     public class ExternalMaster 
@@ -41,9 +39,6 @@ namespace Oci.DnsService.Models
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
-        
-        [JsonProperty(PropertyName = "tsig")]
-        public TSIG Tsig { get; set; }
         
         /// <value>
         /// The OCID of the TSIG key.

@@ -121,7 +121,9 @@ namespace Oci.DnsService.Requests
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -169,5 +171,12 @@ namespace Oci.DnsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "viewId")]
         public string ViewId { get; set; }
+        
+        /// <value>
+        /// Search for zones that are associated with a TSIG key.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "tsigKeyId")]
+        public string TsigKeyId { get; set; }
     }
 }

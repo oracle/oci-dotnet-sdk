@@ -20,14 +20,18 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The availability domain of the VLAN.
+        /// Controls whether the VLAN is regional or specific to an availability domain.
+        /// A regional VLAN has the flexibility to implement failover across availability domains.
+        /// Previously, all VLANs were AD-specific.
+        /// <br/>
+        /// To create a regional VLAN, omit this attribute. Resources created subsequently in this
+        /// VLAN (such as a Compute instance) can be created in any availability domain in the region.
+        /// <br/>
+        /// To create an AD-specific VLAN, use this attribute to specify the availability domain.
+        /// Resources created in this VLAN must be in that availability domain.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         

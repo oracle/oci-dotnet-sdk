@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// the request of generated cost analysis report.
+    /// The request of the generated Cost Analysis report.
     /// </summary>
     public class ReportQuery 
     {
         
         /// <value>
-        /// Tenant ID
+        /// Tenant ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<GranularityEnum> Granularity { get; set; }
         
         /// <value>
-        /// is aggregated by time. true isAggregateByTime will add up all usage/cost over query time period
+        /// Whether aggregated by time. If isAggregateByTime is true, all usage/cost over the query time period will be added up.
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }
@@ -89,9 +89,12 @@ namespace Oci.UsageapiService.Models
         public Forecast Forecast { get; set; }
                 ///
         /// <value>
-        /// The query usage type. COST by default if it is missing
+        /// The query usage type. COST by default if it is missing.
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
+        /// Credit - Query the credit adjustments data.
+        /// ExpiredCredit - Query the expired credits data
+        /// AllCredit - Query the credit adjustments and expired credit
         /// 
         /// </value>
         ///
@@ -99,13 +102,22 @@ namespace Oci.UsageapiService.Models
             [EnumMember(Value = "USAGE")]
             Usage,
             [EnumMember(Value = "COST")]
-            Cost
+            Cost,
+            [EnumMember(Value = "CREDIT")]
+            Credit,
+            [EnumMember(Value = "EXPIREDCREDIT")]
+            Expiredcredit,
+            [EnumMember(Value = "ALLCREDIT")]
+            Allcredit
         };
 
         /// <value>
-        /// The query usage type. COST by default if it is missing
+        /// The query usage type. COST by default if it is missing.
         /// Usage - Query the usage data.
         /// Cost - Query the cost/billing data.
+        /// Credit - Query the credit adjustments data.
+        /// ExpiredCredit - Query the expired credits data
+        /// AllCredit - Query the credit adjustments and expired credit
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]
@@ -136,7 +148,7 @@ namespace Oci.UsageapiService.Models
         public Filter Filter { get; set; }
                 ///
         /// <value>
-        /// the date range for ui, eg LAST_THREE_MONTHS. It is conflict with timeUsageStarted and timeUsageEnded
+        /// The UI date range, for example, LAST_THREE_MONTHS. Conflicts with timeUsageStarted and timeUsageEnded.
         /// </value>
         ///
         public enum DateRangeNameEnum {
@@ -163,7 +175,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// the date range for ui, eg LAST_THREE_MONTHS. It is conflict with timeUsageStarted and timeUsageEnded
+        /// The UI date range, for example, LAST_THREE_MONTHS. Conflicts with timeUsageStarted and timeUsageEnded.
         /// </value>
         [JsonProperty(PropertyName = "dateRangeName")]
         [JsonConverter(typeof(StringEnumConverter))]

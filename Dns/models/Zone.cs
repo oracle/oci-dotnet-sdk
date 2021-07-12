@@ -199,7 +199,9 @@ namespace Oci.DnsService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -233,6 +235,13 @@ namespace Oci.DnsService.Models
         [Required(ErrorMessage = "Nameservers is required.")]
         [JsonProperty(PropertyName = "nameservers")]
         public System.Collections.Generic.List<Nameserver> Nameservers { get; set; }
+        
+        /// <value>
+        /// The OCI nameservers that transfer the zone data with external nameservers.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "zoneTransferServers")]
+        public System.Collections.Generic.List<ZoneTransferServer> ZoneTransferServers { get; set; }
         
     }
 }

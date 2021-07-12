@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// An autoscaling action is triggered when a performance metric meets or exceeds a threshold
+    /// An autoscale action is triggered when a performance metric meets or exceeds a threshold.
     /// </summary>
     public class MetricThresholdRule 
     {
         
         /// <value>
-        /// This value is the minimum period of time metric value meets or exceeds threshold value before action is trigger. The value is in minutes.
+        /// This value is the minimum period of time the metric value meets or exceeds the threshold value before the action is triggered. The value is in minutes.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<int> DurationInMinutes { get; set; }
                 ///
         /// <value>
-        /// The comparison operator to use. Options are greater than (GT), less than (LT).
+        /// The comparison operator to use. Options are greater than (GT) or less than (LT).
         /// </value>
         ///
         public enum OperatorEnum {
@@ -43,7 +43,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// The comparison operator to use. Options are greater than (GT), less than (LT).
+        /// The comparison operator to use. Options are greater than (GT) or less than (LT).
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<OperatorEnum> Operator { get; set; }
         
         /// <value>
-        /// integer non negative value. 0 < value < 100
+        /// Integer non-negative value. 0 < value < 100
         /// </value>
         /// <remarks>
         /// Required

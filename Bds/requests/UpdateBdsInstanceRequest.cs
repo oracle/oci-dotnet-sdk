@@ -20,7 +20,7 @@ namespace Oci.BdsService.Requests
     {
         
         /// <value>
-        /// The OCID of the BDS instance
+        /// The OCID of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.BdsService.Requests
         public string BdsInstanceId { get; set; }
         
         /// <value>
-        /// Details for the to-be-updated BDS instace.
+        /// Details for the cluster to be updated.
         /// </value>
         /// <remarks>
         /// Required

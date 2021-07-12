@@ -30,7 +30,7 @@ namespace Oci.BdsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The state of the BDS instance.
+        /// The state of the cluster.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<BdsInstance.LifecycleStateEnum> LifecycleState { get; set; }

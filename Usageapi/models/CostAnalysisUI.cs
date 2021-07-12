@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
                 ///
         /// <value>
-        /// the type of graph mode.
+        /// The graph type.
         /// </value>
         ///
         public enum GraphEnum {
@@ -35,14 +35,14 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// the type of graph mode.
+        /// The graph type.
         /// </value>
         [JsonProperty(PropertyName = "graph")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GraphEnum> Graph { get; set; }
         
         /// <value>
-        /// is cumulative graph.
+        /// A cumulative graph.
         /// </value>
         [JsonProperty(PropertyName = "isCumulativeGraph")]
         public System.Nullable<bool> IsCumulativeGraph { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about additionally added block volumes
+    /// The information about added block volumes.
     /// </summary>
     public class AddBlockStorageDetails 
     {
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,8 +32,8 @@ namespace Oci.BdsService.Models
         public string ClusterAdminPassword { get; set; }
         
         /// <value>
-        /// The size of block volume in GB that needs to be added to each worker node.
-        /// All the necessary details needed for attachment are managed by service itself.
+        /// The size of block volume in GB to be added to each worker node. All the
+        /// details needed for attaching the block volume are managed by service itself.
         /// 
         /// </value>
         /// <remarks>

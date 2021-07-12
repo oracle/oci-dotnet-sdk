@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Specific info about a node
+    /// Details about a node.
     /// </summary>
     public class Node 
     {
         
         /// <value>
-        /// The OCID of the underlying compute instance
+        /// The OCID of the underlying Oracle Cloud Infrastructure Compute instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string InstanceId { get; set; }
         
         /// <value>
-        /// The name of the node
+        /// The name of the node.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
                 ///
         /// <value>
-        /// The state of the node
+        /// The state of the node.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -63,7 +63,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// The state of the node
+        /// The state of the node.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +74,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
-        /// BDS instance node type
+        /// Cluster node type.
         /// </value>
         ///
         public enum NodeTypeEnum {
@@ -93,7 +93,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// BDS instance node type
+        /// Cluster node type.
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<NodeTypeEnum> NodeType { get; set; }
         
         /// <value>
-        /// Shape of the node
+        /// Shape of the node.
         /// </value>
         /// <remarks>
         /// Required
@@ -120,7 +120,7 @@ namespace Oci.BdsService.Models
         public System.Collections.Generic.List<VolumeAttachmentDetail> AttachedBlockVolumes { get; set; }
         
         /// <value>
-        /// The OCID of the subnet in which the node should be created
+        /// The OCID of the subnet in which the node is to be created.
         /// </value>
         /// <remarks>
         /// Required
@@ -130,7 +130,7 @@ namespace Oci.BdsService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// IP address of the node
+        /// IP address of the node.
         /// </value>
         /// <remarks>
         /// Required
@@ -140,19 +140,19 @@ namespace Oci.BdsService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// The fully-qualified hostname (FQDN) of the node
+        /// The fully-qualified hostname (FQDN) of the node.
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
         
         /// <value>
-        /// The OCID of the image from which the node was created
+        /// The OCID of the image from which the node was created.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
         
         /// <value>
-        /// The fingerprint of the SSH key used for node access
+        /// The fingerprint of the SSH key used for node access.
         /// </value>
         /// <remarks>
         /// Required
@@ -162,7 +162,7 @@ namespace Oci.BdsService.Models
         public string SshFingerprint { get; set; }
         
         /// <value>
-        /// The name of the availability domain the node is running in
+        /// The name of the availability domain in which the node is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -172,7 +172,7 @@ namespace Oci.BdsService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The name of the fault domain the node is running in
+        /// The name of the fault domain in which the node is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -182,7 +182,7 @@ namespace Oci.BdsService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The time the node was created. An RFC3339 formatted datetime string
+        /// The time the node was created, shown as an RFC 3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -192,7 +192,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BDS instance was updated. An RFC3339 formatted datetime string
+        /// The time the cluster was updated, shown as an RFC 3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

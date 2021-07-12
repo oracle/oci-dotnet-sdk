@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Policy definitions for the autoscaling configuration
+    /// Policy definitions for the autoscale configuration.
     /// </summary>
     public class AutoScalePolicy 
     {
                 ///
         /// <value>
-        /// Types of autoscaling policies. SCHEDULE-BASED or  THRESHOLD-BASED, current only supported THRESHOLD-BASED.
+        /// Types of autoscale policies. Options are SCHEDULE-BASED or THRESHOLD-BASED. (Only THRESHOLD-BASED is supported in this release.)
         /// </value>
         ///
         public enum PolicyTypeEnum {
@@ -33,7 +33,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// Types of autoscaling policies. SCHEDULE-BASED or  THRESHOLD-BASED, current only supported THRESHOLD-BASED.
+        /// Types of autoscale policies. Options are SCHEDULE-BASED or THRESHOLD-BASED. (Only THRESHOLD-BASED is supported in this release.)
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<PolicyTypeEnum> PolicyType { get; set; }
         
         /// <value>
-        /// The list of rules for autoscaling. If an action have multiple rules, last rule in the array will be applied.
+        /// The list of rules for autoscaling. If an action has multiple rules, the last rule in the array will be applied.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Additional configuration of customer's network.
+    /// Additional configuration of the user's network.
     /// </summary>
     public class NetworkConfig 
     {

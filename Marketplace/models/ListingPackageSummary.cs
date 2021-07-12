@@ -40,6 +40,9 @@ namespace Oci.MarketplaceService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
+        [JsonProperty(PropertyName = "pricing")]
+        public PricingModel Pricing { get; set; }
+        
         /// <value>
         /// The regions where you can deploy the listing package. (Some packages have restrictions that limit their deployment to United States regions only.)
         /// 

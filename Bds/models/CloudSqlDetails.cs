@@ -40,7 +40,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether or not are Kerberos principals mapped
+        /// Boolean flag specifying whether or not Kerberos principals are mapped
         /// to database users.
         /// 
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsKerberosMappedToDatabaseUsers { get; set; }
         
         /// <value>
-        /// IP address of the Cloud SQL node
+        /// IP address of the Cloud SQL node.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.BdsService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// Details about Kerberos principals
+        /// Details about the Kerberos principals.
         /// </value>
         [JsonProperty(PropertyName = "kerberosDetails")]
         public System.Collections.Generic.List<KerberosDetails> KerberosDetails { get; set; }

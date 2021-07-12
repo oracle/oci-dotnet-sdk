@@ -25,7 +25,8 @@ namespace Oci.DnsService.Models
     {
         
         /// <value>
-        /// An array of NSG OCIDs for the resolver endpoint.
+        /// An array of network security group OCIDs for the resolver endpoint. These must be part of the VCN that the
+        /// resolver endpoint is a part of.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

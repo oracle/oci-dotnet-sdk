@@ -28,43 +28,43 @@ namespace Oci.BdsService.Models
         public string BdaVersion { get; set; }
         
         /// <value>
-        /// Big Data Manager version installed in the cluster
+        /// Big Data Manager version installed in the cluster.
         /// </value>
         [JsonProperty(PropertyName = "bdmVersion")]
         public string BdmVersion { get; set; }
         
         /// <value>
-        /// Big Data Service version installed in the cluster
+        /// Big Data Service version installed in the cluster.
         /// </value>
         [JsonProperty(PropertyName = "bdsVersion")]
         public string BdsVersion { get; set; }
         
         /// <value>
-        /// Oracle Linux version installed in the cluster
+        /// Oracle Linux version installed in the cluster.
         /// </value>
         [JsonProperty(PropertyName = "osVersion")]
         public string OsVersion { get; set; }
         
         /// <value>
-        /// Query Server Database version
+        /// Cloud SQL query server database version.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
         
         /// <value>
-        /// Cloud SQL cell version
+        /// Cloud SQL cell version.
         /// </value>
         [JsonProperty(PropertyName = "bdCellVersion")]
         public string BdCellVersion { get; set; }
         
         /// <value>
-        /// Big Data SQL version
+        /// Big Data SQL version.
         /// </value>
         [JsonProperty(PropertyName = "csqlCellVersion")]
         public string CsqlCellVersion { get; set; }
         
         /// <value>
-        /// The time the cluster was created. An RFC3339 formatted datetime string
+        /// The time the cluster was created, shown as an RFC 3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,27 +74,32 @@ namespace Oci.BdsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BDS instance was automatically, or manually refreshed.
-        /// An RFC3339 formatted datetime string
+        /// The time the cluster was automatically or manually refreshed, shown as an RFC 3339 formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRefreshed")]
         public System.Nullable<System.DateTime> TimeRefreshed { get; set; }
         
         /// <value>
-        /// The URL of a Cloudera Manager
+        /// The URL of Cloudera Manager
         /// </value>
         [JsonProperty(PropertyName = "clouderaManagerUrl")]
         public string ClouderaManagerUrl { get; set; }
         
         /// <value>
-        /// The URL of a Big Data Manager
+        /// The URL of Ambari
+        /// </value>
+        [JsonProperty(PropertyName = "ambariUrl")]
+        public string AmbariUrl { get; set; }
+        
+        /// <value>
+        /// The URL of Big Data Manager.
         /// </value>
         [JsonProperty(PropertyName = "bigDataManagerUrl")]
         public string BigDataManagerUrl { get; set; }
         
         /// <value>
-        /// The URL of a Hue Server
+        /// The URL of the Hue server.
         /// </value>
         [JsonProperty(PropertyName = "hueServerUrl")]
         public string HueServerUrl { get; set; }

@@ -94,13 +94,13 @@ namespace Oci.MarketplaceService.Models
         public PublisherSummary Publisher { get; set; }
         
         /// <value>
-        /// List of operating systems supported.
+        /// The list of operating systems supported by the listing.
         /// </value>
         [JsonProperty(PropertyName = "supportedOperatingSystems")]
         public System.Collections.Generic.List<OperatingSystem> SupportedOperatingSystems { get; set; }
         
         /// <value>
-        /// In which catalog the listing should exist.
+        /// The publisher category to which the listing belongs. The publisher category informs where the listing appears for use.
         /// </value>
         [JsonProperty(PropertyName = "listingType")]
         [JsonConverter(typeof(StringEnumConverter))]

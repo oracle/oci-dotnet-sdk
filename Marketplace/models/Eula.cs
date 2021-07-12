@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// A base object for all types of End User Licenses
+    /// A base object for all types of end user license agreements.
     /// </summary>
     [JsonConverter(typeof(EulaModelConverter))]
     public class Eula 
