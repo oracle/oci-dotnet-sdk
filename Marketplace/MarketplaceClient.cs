@@ -66,7 +66,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Changes the compartment of the Publication
+        /// Moves the specified publication from one compartment to another.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -146,7 +146,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Creates a publication of the given type with an optional default package
+        /// Creates a publication of the specified listing type with an optional default package.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -186,7 +186,7 @@ namespace Oci.MarketplaceService
 
         /// <summary>
         /// Removes a previously accepted terms of use agreement from the list of agreements that Marketplace checks
-        /// before initiating a deployment. Listings in the Marketplace that require acceptance of the specified terms
+        /// before initiating a deployment. Listings in Marketplace that require acceptance of the specified terms
         /// of use can no longer be deployed, but existing deployments aren&#39;t affected.
         /// 
         /// </summary>
@@ -227,7 +227,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Deletes a Publication. This will also remove the associated Listing from Marketplace.
+        /// Deletes a publication, which also removes the associated listing from anywhere it was published, such as Marketplace or Compute.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -454,7 +454,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Get details of a publication
+        /// Gets the details of the specified publication.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -493,7 +493,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Gets the details of a specific package within a given Publication
+        /// Gets the details of a specific package version within a given publication.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -761,7 +761,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Lists the packages in the given Publication
+        /// Lists the packages in the specified publication.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -800,7 +800,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Lists the publications in the given compartment
+        /// Lists the publications in the specified compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -996,6 +996,47 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
+        /// Find listings that match the specified criteria. The search query could be free text
+        /// or structured.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplace/SearchListings.cs.html">here</a> to see an example of how to use SearchListings API.</example>
+        public async Task<SearchListingsResponse> SearchListings(SearchListingsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called searchListings");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/searchListings".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SearchListingsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SearchListings failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the display name or tags associated with a listing&#39;s previously accepted terms of use agreement.
         /// 
         /// </summary>
@@ -1036,7 +1077,7 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Updates details of an existing Publication
+        /// Updates the details of an existing publication.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

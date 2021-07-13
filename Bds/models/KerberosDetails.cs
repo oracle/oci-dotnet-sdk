@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Details about Kerberos principals
+    /// Details about the Kerberos principals.
     /// </summary>
     public class KerberosDetails 
     {
         
         /// <value>
-        /// Name of the Kerberos principal
+        /// Name of the Kerberos principal.
         /// </value>
         /// <remarks>
         /// Required

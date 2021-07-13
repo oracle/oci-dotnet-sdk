@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// An EULA that is provided as text
+    /// An end user license agreement that is provided as text.
     /// </summary>
     public class TextBasedEula : Eula
     {
         
         /// <value>
-        /// text of the eula
+        /// The text of the end user license agreement.
         /// </value>
         [JsonProperty(PropertyName = "licenseText")]
         public string LicenseText { get; set; }

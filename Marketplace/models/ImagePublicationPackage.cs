@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// A package for image publications.
+    /// A publication package for image publications.
     /// </summary>
     public class ImagePublicationPackage : PublicationPackage
     {
@@ -29,13 +29,13 @@ namespace Oci.MarketplaceService.Models
         public string AppCatalogListingId { get; set; }
         
         /// <value>
-        /// The resource version of the listing resource associated with this listing package.
+        /// The resource version of the listing resource associated with this publication package.
         /// </value>
         [JsonProperty(PropertyName = "appCatalogListingResourceVersion")]
         public string AppCatalogListingResourceVersion { get; set; }
         
         /// <value>
-        /// The ID of the image corresponding to the package.
+        /// The ID of the image that corresponds to the package.
         /// </value>
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }

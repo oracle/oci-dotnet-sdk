@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string
+        /// The time the log message was written, shown as an RFC 3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required

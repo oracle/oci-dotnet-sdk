@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about restarted node
+    /// The information about restarted node.
     /// </summary>
     public class RestartNodeDetails 
     {
         
         /// <value>
-        /// OCID of the BDS node which should be restarted
+        /// OCID of the node to be restarted.
         /// </value>
         /// <remarks>
         /// Required

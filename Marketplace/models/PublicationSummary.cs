@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// The model for a summary of an Oracle Cloud Infrastructure publication
+    /// The model for a summary of an Oracle Cloud Infrastructure publication.
     /// </summary>
     public class PublicationSummary 
     {
         
         /// <value>
-        /// the lifecycleState of the listing
+        /// The lifecycle state of the publication.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.MarketplaceService.Models
         public System.Nullable<Publication.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The Compartment id where the listings exists
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where the publication exists.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.MarketplaceService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The unique identifier for the listing in Marketplace.
+        /// The unique identifier for the publication in Marketplace.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.MarketplaceService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the listing.
+        /// The name of the publication, which is also used in the listing.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.MarketplaceService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// A short description of the listing.
+        /// A short description of the publication to use in the listing.
         /// </value>
         [JsonProperty(PropertyName = "shortDescription")]
         public string ShortDescription { get; set; }
@@ -79,13 +79,13 @@ namespace Oci.MarketplaceService.Models
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>
-        /// List of operating systems supprted.
+        /// The list of operating systems supported by the listing.
         /// </value>
         [JsonProperty(PropertyName = "supportedOperatingSystems")]
         public System.Collections.Generic.List<OperatingSystem> SupportedOperatingSystems { get; set; }
         
         /// <value>
-        /// In which catalog the listing should exist.
+        /// The publisher category to which the publication belongs. The publisher category informs where the listing appears for use.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +96,7 @@ namespace Oci.MarketplaceService.Models
         public System.Nullable<ListingType> ListingType { get; set; }
         
         /// <value>
-        /// The date and time this publication was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+        /// The date and time the publication was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)
         /// timestamp format.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about auto scale configuration capability
+    /// The information about the autoscale configuration.
     /// </summary>
     public class AddAutoScalingConfigurationDetails 
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name. The name does not have to be unique, and it may be changed. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A node type that is managed by an autoscaling configuration. The only supported type is WORKER.
+        /// A node type that is managed by an autoscale configuration. The only supported type is WORKER.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,7 +39,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<Node.NodeTypeEnum> NodeType { get; set; }
         
         /// <value>
-        /// Whether the autoscaling configuration is enabled.
+        /// Whether the autoscale configuration is enabled.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required

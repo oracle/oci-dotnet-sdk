@@ -20,7 +20,7 @@ namespace Oci.MarketplaceService.Requests
     {
         
         /// <value>
-        /// The unique identifier for the listing.
+        /// The unique identifier for the publication.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.MarketplaceService.Requests
         public string PublicationId { get; set; }
         
         /// <value>
-        /// Details of the Publication which needs to be updated
+        /// The details for updating the publication.
         /// </value>
         /// <remarks>
         /// Required

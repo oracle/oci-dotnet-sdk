@@ -22,7 +22,7 @@ namespace Oci.MarketplaceService.Models
     {
         
         /// <value>
-        /// Unique identifier for the publisher.
+        /// The unique identifier for the publisher.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Description of the BDS instance
+    /// Description of the cluster.
     /// </summary>
     public class BdsInstance 
     {
         
         /// <value>
-        /// The OCID of the BDS resource
+        /// The OCID of the Big Data Service resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BdsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Name of the BDS instance
+        /// The name of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
                 ///
         /// <value>
-        /// The state of the BDS instance
+        /// The state of the cluster.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -77,7 +77,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// The state of the BDS instance
+        /// The state of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -88,25 +88,27 @@ namespace Oci.BdsService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
-        /// Version of the Hadoop distribution
+        /// Version of the Hadoop distribution.
         /// </value>
         ///
         public enum ClusterVersionEnum {
             [EnumMember(Value = "CDH5")]
             Cdh5,
             [EnumMember(Value = "CDH6")]
-            Cdh6
+            Cdh6,
+            [EnumMember(Value = "ODH1")]
+            Odh1
         };
 
         /// <value>
-        /// Version of the Hadoop distribution
+        /// Version of the Hadoop distribution.
         /// </value>
         [JsonProperty(PropertyName = "clusterVersion")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ClusterVersionEnum> ClusterVersion { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether or not the cluster is HA
+        /// Boolean flag specifying whether or not the cluster is highly available (HA)
         /// </value>
         /// <remarks>
         /// Required
@@ -116,7 +118,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsHighAvailability { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether or not the cluster should be setup as secure.
+        /// Boolean flag specifying whether or not the cluster should be set up as secure.
         /// </value>
         /// <remarks>
         /// Required
@@ -126,7 +128,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsSecure { get; set; }
         
         /// <value>
-        /// Boolean flag specifying whether we configure Cloud SQL or not
+        /// Boolean flag specifying whether or not Cloud SQL should be configured.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +144,7 @@ namespace Oci.BdsService.Models
         public ClusterDetails ClusterDetails { get; set; }
         
         /// <value>
-        /// The list of nodes in the BDS instance
+        /// The list of nodes in the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -155,19 +157,19 @@ namespace Oci.BdsService.Models
         public CloudSqlDetails CloudSqlDetails { get; set; }
         
         /// <value>
-        /// The user who created the BDS instance.
+        /// The user who created the cluster.
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// The time the BDS instance was created. An RFC3339 formatted datetime string
+        /// The time the cluster was created, shown as an RFC 3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BDS instance was updated. An RFC3339 formatted datetime string
+        /// The time the cluster was updated, shown as an RFC 3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
@@ -183,15 +185,17 @@ namespace Oci.BdsService.Models
         public System.Nullable<int> NumberOfNodes { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Simple key-value pair that is applied without any predefined name, type, or scope.
+        /// Exists for cross-compatibility only. For example, `{\"bar-key\": \"value\"}`
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For example, `{\"foo-namespace\": {\"bar-key\": \"value\"}}`
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

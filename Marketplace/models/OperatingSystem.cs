@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// OS used by the listing.
+    /// The operating system used by the listing.
     /// </summary>
     public class OperatingSystem 
     {
         
         /// <value>
-        /// name of the operating system
+        /// The name of the operating system.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

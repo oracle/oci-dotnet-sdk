@@ -20,7 +20,7 @@ namespace Oci.BdsService.Requests
     {
         
         /// <value>
-        /// The OCID of the BDS instance
+        /// The OCID of the cluster.
         /// </value>
         /// <remarks>
         /// Required

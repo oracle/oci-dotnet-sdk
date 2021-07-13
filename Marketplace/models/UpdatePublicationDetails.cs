@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// The updated details of the resource
+    /// The model for the parameters needed to update a publication.
     /// </summary>
     public class UpdatePublicationDetails 
     {
         
         /// <value>
-        /// The name of the listing.
+        /// The name of the publication, which is also used in the listing.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// short description of the catalog listing
+        /// A short description of the publication to use in the listing.
         /// </value>
         [JsonProperty(PropertyName = "shortDescription")]
         public string ShortDescription { get; set; }
         
         /// <value>
-        /// short description of the catalog listing
+        /// A long description of the publication to use in the listing.
         /// </value>
         [JsonProperty(PropertyName = "longDescription")]
         public string LongDescription { get; set; }
         
         /// <value>
-        /// Contact information to use to get support from the publisher for the listing.
+        /// Contact information for getting support from the publisher for the listing.
         /// </value>
         [JsonProperty(PropertyName = "supportContacts")]
         public System.Collections.Generic.List<SupportContact> SupportContacts { get; set; }

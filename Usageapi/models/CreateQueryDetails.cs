@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// New query detail with savedRequestSummarizedUsagesDetails, savedCostAnalysisUI and displayName.
+    /// New query detail with savedRequestSummarizedUsagesDetails, savedCostAnalysisUI, and displayName.
     /// </summary>
     public class CreateQueryDetails 
     {

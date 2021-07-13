@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// A publication package for orchestration.
+    /// A publication package for stack publications.
     /// </summary>
     public class OrchestrationPublicationPackage : PublicationPackage
     {
         
         /// <value>
-        /// Link to the orchestration resource.
+        /// A link to the stack resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceLink")]
         public string ResourceLink { get; set; }
         
         /// <value>
-        /// List of variables for the orchestration resource.
+        /// A list of variables for the stack resource.
         /// </value>
         [JsonProperty(PropertyName = "variables")]
         public System.Collections.Generic.List<OrchestrationVariable> Variables { get; set; }

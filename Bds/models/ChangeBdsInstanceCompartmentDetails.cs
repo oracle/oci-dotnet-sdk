@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Moves a BDS instance into a different compartment.
+    /// Move a Cluster to a Different Compartment
     /// </summary>
     public class ChangeBdsInstanceCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required

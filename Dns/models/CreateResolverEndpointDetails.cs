@@ -26,7 +26,7 @@ namespace Oci.DnsService.Models
     {
         
         /// <value>
-        /// The name of the resolver endpoint. Must be unique within the resolver.
+        /// The name of the resolver endpoint. Must be unique, case-insensitive, within the resolver.
         /// 
         /// </value>
         /// <remarks>
@@ -79,7 +79,7 @@ namespace Oci.DnsService.Models
         
         /// <value>
         /// An IP address to listen to queries on. For VNIC endpoints this IP address must be part of the
-        /// subnet and will be assigned by the system if unspecified.
+        /// subnet and will be assigned by the system if unspecified when isListening is true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "listeningAddress")]

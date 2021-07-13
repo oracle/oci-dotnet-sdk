@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// A rule that defines a specific autoscaling action to take and the metric that triggers that action.
+    /// A rule that defines a specific autoscale action to take and the metric that triggers that action.
     /// </summary>
     public class AutoScalePolicyRule 
     {
                 ///
         /// <value>
-        /// The valid value are - CHANGE_SHAPE_SCALE_UP or CHANGE_SHAPE_SCALE_DOWN
+        /// The valid value are CHANGE_SHAPE_SCALE_UP or CHANGE_SHAPE_SCALE_DOWN.
         /// </value>
         ///
         public enum ActionEnum {
@@ -33,7 +33,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// The valid value are - CHANGE_SHAPE_SCALE_UP or CHANGE_SHAPE_SCALE_DOWN
+        /// The valid value are CHANGE_SHAPE_SCALE_UP or CHANGE_SHAPE_SCALE_DOWN.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Metric and threshold details for triggering an autoscaling action
+    /// Metric and threshold details for triggering an autoscale action.
     /// </summary>
     public class AutoScalePolicyMetricRule 
     {
                 ///
         /// <value>
-        /// Allowed value is CPU_UTILIZATION currently
+        /// Allowed value is CPU_UTILIZATION.
         /// </value>
         ///
         public enum MetricTypeEnum {
@@ -31,7 +31,7 @@ namespace Oci.BdsService.Models
         };
 
         /// <value>
-        /// Allowed value is CPU_UTILIZATION currently
+        /// Allowed value is CPU_UTILIZATION.
         /// </value>
         /// <remarks>
         /// Required

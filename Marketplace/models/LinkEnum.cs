@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.MarketplaceService.Models
 {
   /// <summary>
-  /// Possible values for the link type.
+  /// Possible values for a link type.
   /// </summary>
   public enum LinkEnum {
       [EnumMember(Value = "SELF")]

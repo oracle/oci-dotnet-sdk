@@ -43,7 +43,7 @@ namespace Oci.DnsService
             {
                 ServiceName = "DNS",
                 ServiceEndpointPrefix = "dns",
-                ServiceEndpointTemplate = "https://dns.{region}.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://dns.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -67,7 +67,7 @@ namespace Oci.DnsService
 
         /// <summary>
         /// Moves a resolver into a different compartment along with its protected default view and any endpoints.
-        /// Zones in the default view are not moved.
+        /// Zones in the default view are not moved. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -108,6 +108,7 @@ namespace Oci.DnsService
 
         /// <summary>
         /// Moves a steering policy into a different compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -147,6 +148,7 @@ namespace Oci.DnsService
 
         /// <summary>
         /// Moves a TSIG key into a different compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -185,7 +187,8 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Moves a view into a different compartment. Protected views cannot have their compartment changed.
+        /// Moves a view into a different compartment. Protected views cannot have their compartment changed. Requires a
+        /// &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -225,7 +228,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Moves a zone into a different compartment. Protected zones cannot have their compartment changed.
+        /// Moves a zone into a different compartment. Protected zones cannot have their compartment changed. For private
+        /// zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is provided as a
+        /// path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query parameter is required.
         /// &lt;br/&gt;
         /// **Note:** All SteeringPolicyAttachment objects associated with this zone will also be moved into the provided compartment.
         /// 
@@ -267,7 +272,7 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Creates a new resolver endpoint.
+        /// Creates a new resolver endpoint. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -434,7 +439,7 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Creates a new view in the specified compartment.
+        /// Creates a new view in the specified compartment. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -474,9 +479,11 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Creates a new zone in the specified compartment. If the &#x60;Content-Type&#x60; header for the request is &#x60;text/dns&#x60;, the
-        /// &#x60;compartmentId&#x60; query parameter is required. Additionally, for &#x60;text/dns&#x60;, the &#x60;scope&#x60; and &#x60;viewId&#x60; query
-        /// parameters are required to create a private zone.
+        /// Creates a new zone in the specified compartment. For global zones, if the &#x60;Content-Type&#x60; header for the request
+        /// is &#x60;text/dns&#x60;, the &#x60;compartmentId&#x60; query parameter is required. &#x60;text/dns&#x60; for the &#x60;Content-Type&#x60; header is
+        /// not supported for private zones. Query parameter scope with a value of &#x60;PRIVATE&#x60; is required when creating a
+        /// private zone. Private zones must have a zone type of &#x60;PRIMARY&#x60;. Creating a private zone at or under
+        /// &#x60;oraclevcn.com&#x60; within the default protected view of a VCN-dedicated resolver is not permitted.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -516,7 +523,10 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Deletes all records at the specified zone and domain.
+        /// Deletes all records at the specified zone and domain. For private zones, the scope query parameter is
+        /// required with a value of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used
+        /// for the scope query parameter then the viewId query parameter is required.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -555,7 +565,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Deletes all records in the specified RRSet.
+        /// Deletes all records in the specified RRSet. For private zones, the scope query parameter is required with a
+        /// value of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope
+        /// query parameter then the viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -596,8 +608,9 @@ namespace Oci.DnsService
 
         /// <summary>
         /// Deletes the specified resolver endpoint. Note that attempting to delete a resolver endpoint in the
-        /// DELETED lifecycle state will result in a 404 to be consistent with other operations of the API.
-        /// Resolver endpoints may not be deleted if they are referenced by a resolver rule.
+        /// DELETED lifecycle state will result in a &#x60;404&#x60; response to be consistent with other operations of the API.
+        /// Resolver endpoints may not be deleted if they are referenced by a resolver rule. Requires a &#x60;PRIVATE&#x60; scope
+        /// query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -762,10 +775,10 @@ namespace Oci.DnsService
 
         /// <summary>
         /// Deletes the specified view. Note that attempting to delete a
-        /// view in the DELETED lifecycleState will result in a 404 to be
-        /// consistent with other operations of the API. Views can not be
+        /// view in the DELETED lifecycleState will result in a &#x60;404&#x60; response to be
+        /// consistent with other operations of the API. Views cannot be
         /// deleted if they are referenced by non-deleted zones or resolvers.
-        /// Protected views cannot be deleted.
+        /// Protected views cannot be deleted. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -805,9 +818,10 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Deletes the specified zone and all its steering policy attachments.
-        /// A &#x60;204&#x60; response indicates that the zone has been successfully deleted.
-        /// Protected zones cannot be deleted.
+        /// Deletes the specified zone and all its steering policy attachments. A &#x60;204&#x60; response indicates that the zone has
+        /// been successfully deleted. Protected zones cannot be deleted. For private zones, the scope query parameter is
+        /// required with a value of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used
+        /// for the scope query parameter then the viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -847,9 +861,11 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Gets a list of all records at the specified zone and domain.
-        /// The results are sorted by &#x60;rtype&#x60; in alphabetical order by default. You
-        /// can optionally filter and/or sort the results using the listed parameters.
+        /// Gets a list of all records at the specified zone and domain. The results are sorted by &#x60;rtype&#x60; in
+        /// alphabetical order by default. You can optionally filter and/or sort the results using the listed parameters.
+        /// For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is
+        /// provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query
+        /// parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -889,8 +905,10 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Gets a list of all records in the specified RRSet. The results are
-        /// sorted by &#x60;recordHash&#x60; by default.
+        /// Gets a list of all records in the specified RRSet. The results are sorted by &#x60;recordHash&#x60; by default. For
+        /// private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is
+        /// provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query
+        /// parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -930,9 +948,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Get information about a specific resolver. Note that attempting to get a
-        /// resolver in the DELETED lifecycleState will result in a 404 to be
-        /// consistent with other operations of the API.
+        /// Gets information about a specific resolver. Note that attempting to get a
+        /// resolver in the DELETED lifecycleState will result in a &#x60;404&#x60; response to be
+        /// consistent with other operations of the API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -972,8 +990,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Get information about a specific resolver endpoint. Note that attempting to get a resolver endpoint
-        /// in the DELETED lifecycle state will result in a 404 to be consistent with other operations of the API.
+        /// Gets information about a specific resolver endpoint. Note that attempting to get a resolver endpoint
+        /// in the DELETED lifecycle state will result in a &#x60;404&#x60; response to be consistent with other operations of the
+        /// API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1133,9 +1152,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Get information about a specific view. Note that attempting to get a
-        /// view in the DELETED lifecycleState will result in a 404 to be
-        /// consistent with other operations of the API.
+        /// Gets information about a specific view. Note that attempting to get a
+        /// view in the DELETED lifecycleState will result in a &#x60;404&#x60; response to be
+        /// consistent with other operations of the API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1175,8 +1194,9 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Gets information about the specified zone, including its creation date,
-        /// zone type, and serial.
+        /// Gets information about the specified zone, including its creation date, zone type, and serial. For private
+        /// zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is provided as a
+        /// path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1216,9 +1236,51 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Gets all records in the specified zone. The results are
-        /// sorted by &#x60;domain&#x60; in alphabetical order by default. For more
-        /// information about records, see [Resource Record (RR) TYPEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4).
+        /// Gets the requested zone&#39;s zone file.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/GetZoneContent.cs.html">here</a> to see an example of how to use GetZoneContent API.</example>
+        public async Task<GetZoneContentResponse> GetZoneContent(GetZoneContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getZoneContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/zones/{zoneNameOrId}/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "text/dns");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetZoneContentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetZoneContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets all records in the specified zone. The results are sorted by &#x60;domain&#x60; in alphabetical order by default.
+        /// For more information about records, see [Resource Record (RR) TYPEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4).
+        /// For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is
+        /// provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query
+        /// parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1260,8 +1322,8 @@ namespace Oci.DnsService
         /// <summary>
         /// Gets a list of all endpoints within a resolver. The collection can be filtered by name or lifecycle state.
         /// It can be sorted on creation time or name both in ASC or DESC order. Note that when no lifecycleState
-        /// query parameter is provided that the collection does not include resolver endpoints in the DELETED
-        /// lifecycle state to be consistent with other operations of the API.
+        /// query parameter is provided, the collection does not include resolver endpoints in the DELETED
+        /// lifecycle state to be consistent with other operations of the API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1304,9 +1366,9 @@ namespace Oci.DnsService
         /// Gets a list of all resolvers within a compartment. The collection can
         /// be filtered by display name, id, or lifecycle state. It can be sorted
         /// on creation time or displayName both in ASC or DESC order. Note that
-        /// when no lifecycleState query parameter is provided that the collection
+        /// when no lifecycleState query parameter is provided, the collection
         /// does not include resolvers in the DELETED lifecycleState to be consistent
-        /// with other operations of the API.
+        /// with other operations of the API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1469,9 +1531,9 @@ namespace Oci.DnsService
         /// Gets a list of all views within a compartment. The collection can
         /// be filtered by display name, id, or lifecycle state. It can be sorted
         /// on creation time or displayName both in ASC or DESC order. Note that
-        /// when no lifecycleState query parameter is provided that the collection
+        /// when no lifecycleState query parameter is provided, the collection
         /// does not include views in the DELETED lifecycleState to be consistent
-        /// with other operations of the API.
+        /// with other operations of the API. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1511,8 +1573,50 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Gets a list of all zones in the specified compartment. The collection
-        /// can be filtered by name, time created, scope, associated view, and zone type.
+        /// Gets a list of IP addresses of OCI nameservers for inbound and outbound transfer of zones in the specified
+        /// compartment (which must be the root compartment of a tenancy) that transfer zone data with external master or
+        /// downstream nameservers.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/ListZoneTransferServers.cs.html">here</a> to see an example of how to use ListZoneTransferServers API.</example>
+        public async Task<ListZoneTransferServersResponse> ListZoneTransferServers(ListZoneTransferServersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listZoneTransferServers");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/zoneTransferServers".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListZoneTransferServersResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListZoneTransferServers failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of all zones in the specified compartment. The collection can be filtered by name, time created,
+        /// scope, associated view, and zone type. Filtering by view is only supported for private zones.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1552,10 +1656,11 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates records in the specified zone at a domain. You can update
-        /// one record or all records for the specified zone depending on the changes
-        /// provided in the request body. You can also add or remove records using this
-        /// function.
+        /// Updates records in the specified zone at a domain. You can update one record or all records for the specified
+        /// zone depending on the changes provided in the request body. You can also add or remove records using this
+        /// function. For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone
+        /// name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId
+        /// query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1595,7 +1700,10 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates records in the specified RRSet.
+        /// Updates records in the specified RRSet. For private zones, the scope query parameter is required with a value
+        /// of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query
+        /// parameter then the viewId query parameter is required.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1634,10 +1742,11 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates a collection of records in the specified zone. You can update
-        /// one record or all records for the specified zone depending on the
-        /// changes provided in the request body. You can also add or remove records
-        /// using this function.
+        /// Updates a collection of records in the specified zone. You can update one record or all records for the
+        /// specified zone depending on the changes provided in the request body. You can also add or remove records
+        /// using this function. For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When
+        /// the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the
+        /// viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1677,12 +1786,12 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Replaces records in the specified zone at a domain with the records
-        /// specified in the request body. If a specified record does not exist,
-        /// it will be created. If the record exists, then it will be updated to
-        /// represent the record in the body of the request. If a record in the zone
-        /// does not exist in the request body, the record will be removed from the
-        /// zone.
+        /// Replaces records in the specified zone at a domain with the records specified in the request body. If a
+        /// specified record does not exist, it will be created. If the record exists, then it will be updated to
+        /// represent the record in the body of the request. If a record in the zone does not exist in the request body,
+        /// the record will be removed from the zone. For private zones, the scope query parameter is required with a
+        /// value of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope
+        /// query parameter then the viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1722,7 +1831,10 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Replaces records in the specified RRSet.
+        /// Replaces records in the specified RRSet. For private zones, the scope query parameter is required with a
+        /// value of &#x60;PRIVATE&#x60;. When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope
+        /// query parameter then the viewId query parameter is required.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1761,7 +1873,7 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates the specified resolver with your new information.
+        /// Updates the specified resolver with your new information. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1801,7 +1913,7 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates the specified resolver endpoint with your new information.
+        /// Updates the specified resolver endpoint with your new information. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1961,7 +2073,7 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates the specified view with your new information.
+        /// Updates the specified view with your new information. Requires a &#x60;PRIVATE&#x60; scope query parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2001,9 +2113,11 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Updates the specified secondary zone with your new external master
-        /// server information. For more information about secondary zone, see
-        /// [Manage DNS Service Zone](https://docs.cloud.oracle.com/iaas/Content/DNS/Tasks/managingdnszones.htm).
+        /// Updates the zone with the specified information. Global secondary zones may have their external masters updated.
+        /// For more information about secondary zone, see [Manage DNS Service Zone](https://docs.cloud.oracle.com/iaas/Content/DNS/Tasks/managingdnszones.htm).
+        /// For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;. When the zone name is
+        /// provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then the viewId query
+        /// parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2043,11 +2157,12 @@ namespace Oci.DnsService
         }
 
         /// <summary>
-        /// Replaces records in the specified zone with the records specified in the
-        /// request body. If a specified record does not exist, it will be created.
-        /// If the record exists, then it will be updated to represent the record in
-        /// the body of the request. If a record in the zone does not exist in the
-        /// request body, the record will be removed from the zone.
+        /// Replaces records in the specified zone with the records specified in the request body. If a specified record
+        /// does not exist, it will be created. If the record exists, then it will be updated to represent the record in
+        /// the body of the request. If a record in the zone does not exist in the request body, the record will be
+        /// removed from the zone. For private zones, the scope query parameter is required with a value of &#x60;PRIVATE&#x60;.
+        /// When the zone name is provided as a path parameter and &#x60;PRIVATE&#x60; is used for the scope query parameter then
+        /// the viewId query parameter is required.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -30,7 +30,7 @@ namespace Oci.MarketplaceService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The type of the listing
+        /// The type of the listing.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,19 +40,19 @@ namespace Oci.MarketplaceService.Requests
         public System.Nullable<ListingType> ListingType { get; set; }
         
         /// <value>
-        /// The name of the listing.
+        /// The name of the publication.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Name { get; set; }
         
         /// <value>
-        /// The unique identifier for the listing.
+        /// The unique identifier for the publication.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "publicationId")]
         public string PublicationId { get; set; }
         
         /// <value>
-        /// OS of the listing.
+        /// The operating system of the listing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operatingSystems", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> OperatingSystems { get; set; }

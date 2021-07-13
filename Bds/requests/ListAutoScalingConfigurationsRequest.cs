@@ -30,7 +30,7 @@ namespace Oci.BdsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the BDS instance
+        /// The OCID of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.BdsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The state of the autoscaling configuration.
+        /// The state of the autoscale configuration.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<AutoScalingConfiguration.LifecycleStateEnum> LifecycleState { get; set; }

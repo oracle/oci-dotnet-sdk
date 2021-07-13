@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// A description of workrequest status
+    /// Description of the work request status.
     /// </summary>
     public class WorkRequest 
     {
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,10 +32,7 @@ namespace Oci.BdsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
-        /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
-        /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used
+        /// The OCID of the compartment that contains the work request. Work requests should be scoped to the same compartment as the resource the work request affects. If the work request affects multiple resources, and those resources are not in the same compartment, it is up to the service team to pick the primary resource whose compartment should be used.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +43,7 @@ namespace Oci.BdsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Type of the work request
+        /// The type of this work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +54,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// The status of this work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +75,7 @@ namespace Oci.BdsService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// Percentage of this work request completed.
         /// </value>
         /// <remarks>
         /// Required
@@ -88,8 +85,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the request was created, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the request was created, shown as an RFC 3339 formatted datetime string.
         /// 
         /// </value>
         /// <remarks>
@@ -100,15 +96,14 @@ namespace Oci.BdsService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the request was started, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
-        /// section 14.29.
+        /// The time the request was started, shown as an RFC 3339 formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the object was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// The time the object was finished, shown as an RFC 3339 formatted datetime string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

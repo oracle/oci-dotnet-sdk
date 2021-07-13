@@ -20,7 +20,7 @@ namespace Oci.MarketplaceService.Requests
     {
         
         /// <value>
-        /// Details of Publication to be created including optional default package.
+        /// The details for creating the publication.
         /// </value>
         /// <remarks>
         /// Required

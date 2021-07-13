@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.MarketplaceService.Models
 {
   /// <summary>
-  /// Possible values for eula types
+  /// Possible values for end user license agreement (EULA) formats.
   /// </summary>
   public enum EulaTypeEnum {
       [EnumMember(Value = "TEXT")]

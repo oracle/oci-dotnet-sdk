@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about new node
+    /// The information about the new node.
     /// </summary>
     public class CreateNodeDetails 
     {
         
         /// <value>
-        /// BDS instance node type
+        /// The Big Data Service cluster node type.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<Node.NodeTypeEnum> NodeType { get; set; }
         
         /// <value>
-        /// Shape of the node
+        /// Shape of the node.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,8 +43,8 @@ namespace Oci.BdsService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The size of block volume in GB that needs to be attached to a given node.
-        /// All the necessary details needed for attachment are managed by service itself.
+        /// The size of block volume in GB to be attached to a given node. All the
+        /// details needed for attaching the block volume are managed by service itself.
         /// 
         /// </value>
         /// <remarks>
@@ -55,7 +55,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
         
         /// <value>
-        /// The OCID of the subnet in which the node should be created
+        /// The OCID of the subnet in which the node will be created.
         /// </value>
         /// <remarks>
         /// Required

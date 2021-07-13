@@ -160,7 +160,8 @@ namespace Oci.DnsService
             var agent = new WaiterAgent<GetTsigKeyRequest, GetTsigKeyResponse>(
                 request,
                 request => client.GetTsigKey(request),
-                response => targetStates.Contains(response.TsigKey.LifecycleState.Value)
+                response => targetStates.Contains(response.TsigKey.LifecycleState.Value),
+                targetStates.Contains(TsigKey.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetTsigKeyRequest, GetTsigKeyResponse>(config, agent);
         }

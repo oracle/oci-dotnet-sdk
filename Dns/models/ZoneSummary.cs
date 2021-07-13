@@ -187,7 +187,9 @@ namespace Oci.DnsService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>

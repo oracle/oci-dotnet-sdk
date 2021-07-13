@@ -31,8 +31,8 @@ namespace Oci.DnsService.Models
         public System.Collections.Generic.List<string> DestinationAddresses { get; set; }
         
         /// <value>
-        /// Name of an endpoint, that is a sub-resource of the resolver, to use as the forwarding interface. The
-        /// endpoint must have isForwarding set to true.
+        /// Case-insensitive name of an endpoint, that is a sub-resource of the resolver, to use as the forwarding
+        /// interface. The endpoint must have isForwarding set to true.
         /// 
         /// </value>
         /// <remarks>

@@ -192,7 +192,7 @@ namespace Oci.UsageapiService.Models
         public string Overage { get; set; }
         
         /// <value>
-        /// is forecasted data
+        /// The forecasted data.
         /// </value>
         [JsonProperty(PropertyName = "isForecast")]
         public System.Nullable<bool> IsForecast { get; set; }

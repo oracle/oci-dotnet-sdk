@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// the name of custom table.
+        /// The name of the custom table.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,22 +32,22 @@ namespace Oci.UsageapiService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// row groupBy key list.
+        /// The row groupBy key list.
         /// Example:   [&quot;tagNamespace&quot;, &quot;tagKey&quot;, &quot;tagValue&quot;, &quot;service&quot;, &quot;skuName&quot;, &quot;skuPartNumber&quot;, &quot;unit&quot;,    &quot;compartmentName&quot;, &quot;compartmentPath&quot;, &quot;compartmentId&quot;, &quot;platform&quot;, &quot;region&quot;, &quot;logicalAd&quot;,    &quot;resourceId&quot;, &quot;tenantId&quot;, &quot;tenantName&quot;]
         /// </value>
         [JsonProperty(PropertyName = "rowGroupBy")]
         public System.Collections.Generic.List<string> RowGroupBy { get; set; }
         
         /// <value>
-        /// column groupBy key list.
+        /// The column groupBy key list.
         /// Example:   [&quot;tagNamespace&quot;, &quot;tagKey&quot;, &quot;tagValue&quot;, &quot;service&quot;, &quot;skuName&quot;, &quot;skuPartNumber&quot;, &quot;unit&quot;,    &quot;compartmentName&quot;, &quot;compartmentPath&quot;, &quot;compartmentId&quot;, &quot;platform&quot;, &quot;region&quot;, &quot;logicalAd&quot;,    &quot;resourceId&quot;, &quot;tenantId&quot;, &quot;tenantName&quot;]
         /// </value>
         [JsonProperty(PropertyName = "columnGroupBy")]
         public System.Collections.Generic.List<string> ColumnGroupBy { get; set; }
         
         /// <value>
-        /// GroupBy a specific tagKey. Provide tagNamespace and tagKey in tag object. Only support one tag in the list
-        /// Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
+        /// GroupBy a specific tagKey. Provide the tagNamespace and tagKey in the tag object. Only one tag in the list is supported.
+        /// For Example:   [{&quot;namespace&quot;:&quot;oracle&quot;, &quot;key&quot;:&quot;createdBy&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupByTag")]
         public System.Collections.Generic.List<Tag> GroupByTag { get; set; }
@@ -59,7 +59,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<decimal> CompartmentDepth { get; set; }
         
         /// <value>
-        /// the version of custom table.
+        /// The version of the custom table.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<decimal> Version { get; set; }

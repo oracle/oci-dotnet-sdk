@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 22.0.0 - 2021-07-13
+### Added
+- Support for the AI Anomaly Detection service
+- Support for retrieving a DNS zone as a zone file in the DNS service
+- Support for querying manual adjustments in the Usage service
+- Support for searching Marketplace listings in the Marketplace service
+- Support for new cluster type 'ODH' in the Big Data service
+- Support for availability domain as an optional parameter when creating VLANs in the Networking service
+- Support for search domain type on DHCP options, to support multi-level domain search in the Networking service
+
+### Breaking Changes
+- The property `TSIG` was removed from ExternalMaster model in the DNS service.
+- The models SavedScheduleReport, ScheduleReport, ScheduleReportSummary, UpdateCustomTableDetail and UpdateScheduleReportDetails were removed from the Usage Service.
+
 ## 21.1.0 - 2021-07-06
 ### Added
 - Support for order activation in the Organizations service

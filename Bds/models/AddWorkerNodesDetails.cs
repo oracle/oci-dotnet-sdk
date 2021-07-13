@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// The information about additionaly added nodes
+    /// The information about added nodes.
     /// </summary>
     public class AddWorkerNodesDetails 
     {
         
         /// <value>
-        /// Base-64 encoded password for Cloudera Manager admin user
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BdsService.Models
         public string ClusterAdminPassword { get; set; }
         
         /// <value>
-        /// Number of additional worker nodes for the BDS instance
+        /// Number of additional worker nodes for the cluster.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Query summery in list request.
+    /// Query summery in the list request.
     /// </summary>
     public class QuerySummary 
     {
