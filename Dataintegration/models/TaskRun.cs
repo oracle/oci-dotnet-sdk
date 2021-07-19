@@ -162,6 +162,12 @@ namespace Oci.DataintegrationService.Models
         public string TaskKey { get; set; }
         
         /// <value>
+        /// The external identifier for the task run.
+        /// </value>
+        [JsonProperty(PropertyName = "externalId")]
+        public string ExternalId { get; set; }
+        
+        /// <value>
         /// Holds the particular attempt number.
         /// </value>
         [JsonProperty(PropertyName = "retryAttempt")]
@@ -177,6 +183,12 @@ namespace Oci.DataintegrationService.Models
         public System.Collections.Generic.Dictionary<string, float> Metrics { get; set; }
         
         /// <value>
+        /// A map of the outputs of the run.
+        /// </value>
+        [JsonProperty(PropertyName = "outputs")]
+        public System.Collections.Generic.Dictionary<string, ParameterValue> Outputs { get; set; }
+        
+        /// <value>
         /// An array of execution errors from the run.
         /// </value>
         [JsonProperty(PropertyName = "executionErrors")]
@@ -187,6 +199,26 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "terminationErrors")]
         public System.Collections.Generic.List<string> TerminationErrors { get; set; }
+                ///
+        /// <value>
+        /// The autorization mode for when the task was executed.
+        /// </value>
+        ///
+        public enum AuthModeEnum {
+            [EnumMember(Value = "OBO")]
+            Obo,
+            [EnumMember(Value = "RESOURCE_PRINCIPAL")]
+            ResourcePrincipal,
+            [EnumMember(Value = "USER_CERTIFICATE")]
+            UserCertificate
+        };
+
+        /// <value>
+        /// The autorization mode for when the task was executed.
+        /// </value>
+        [JsonProperty(PropertyName = "authMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AuthModeEnum> AuthMode { get; set; }
         
         /// <value>
         /// The OPC request ID of execution of the task run.
@@ -210,7 +242,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DATA_LOADER_TASK")]
             DataLoaderTask,
             [EnumMember(Value = "PIPELINE_TASK")]
-            PipelineTask
+            PipelineTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         /// <value>

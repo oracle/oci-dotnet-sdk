@@ -21,8 +21,11 @@ namespace Oci.DataintegrationService.Models
     public class Parameter : TypedObject
     {
         
+        /// <value>
+        /// This can either be a string value referencing the type or a BaseType object.
+        /// </value>
         [JsonProperty(PropertyName = "type")]
-        public BaseType Type { get; set; }
+        public System.Object Type { get; set; }
         
         /// <value>
         /// The default value of the parameter.

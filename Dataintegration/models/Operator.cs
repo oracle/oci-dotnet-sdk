@@ -57,10 +57,12 @@ namespace Oci.DataintegrationService.Models
             EndOperator,
             [EnumMember(Value = "PIPELINE_OPERATOR")]
             PipelineOperator,
-            [EnumMember(Value = "REST_OPERATOR")]
-            RestOperator,
             [EnumMember(Value = "TASK_OPERATOR")]
-            TaskOperator
+            TaskOperator,
+            [EnumMember(Value = "EXPRESSION_OPERATOR")]
+            ExpressionOperator,
+            [EnumMember(Value = "LOOKUP_OPERATOR")]
+            LookupOperator
         };
 
         
@@ -176,6 +178,9 @@ namespace Oci.DataintegrationService.Models
                 case "UNION_OPERATOR":
                     obj = new Union();
                     break;
+                case "EXPRESSION_OPERATOR":
+                    obj = new ExpressionOperator();
+                    break;
                 case "INTERSECT_OPERATOR":
                     obj = new Intersect();
                     break;
@@ -187,6 +192,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "FILTER_OPERATOR":
                     obj = new Filter();
+                    break;
+                case "LOOKUP_OPERATOR":
+                    obj = new Lookup();
                     break;
                 case "START_OPERATOR":
                     obj = new StartOperator();

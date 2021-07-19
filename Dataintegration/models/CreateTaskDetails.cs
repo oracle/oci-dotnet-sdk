@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DATA_LOADER_TASK")]
             DataLoaderTask,
             [EnumMember(Value = "PIPELINE_TASK")]
-            PipelineTask
+            PipelineTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         
@@ -144,6 +150,15 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "PIPELINE_TASK":
                     obj = new CreateTaskFromPipelineTask();
+                    break;
+                case "OCI_DATAFLOW_TASK":
+                    obj = new CreateTaskFromOCIDataflowTask();
+                    break;
+                case "SQL_TASK":
+                    obj = new CreateTaskFromSQLTask();
+                    break;
+                case "REST_TASK":
+                    obj = new CreateTaskFromRestTask();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

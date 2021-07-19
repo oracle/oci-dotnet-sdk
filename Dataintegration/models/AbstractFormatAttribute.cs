@@ -36,6 +36,12 @@ namespace Oci.DataintegrationService.Models
         };
 
         
+        /// <value>
+        /// Defines whether a file pattern is supported.
+        /// </value>
+        [JsonProperty(PropertyName = "isFilePattern")]
+        public System.Nullable<bool> IsFilePattern { get; set; }
+        
     }
 
     public class AbstractFormatAttributeModelConverter : JsonConverter
@@ -66,6 +72,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "CSV_FORMAT":
                     obj = new CsvFormatAttribute();
+                    break;
+                case "PARQUET_FORMAT":
+                    obj = new ParquetFormatAttribute();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

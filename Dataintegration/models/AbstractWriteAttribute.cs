@@ -33,12 +33,16 @@ namespace Oci.DataintegrationService.Models
             Oracleatpwriteattribute,
             [EnumMember(Value = "ORACLEADWCWRITEATTRIBUTE")]
             Oracleadwcwriteattribute,
+            [EnumMember(Value = "OBJECTSTORAGEWRITEATTRIBUTE")]
+            Objectstoragewriteattribute,
             [EnumMember(Value = "ORACLE_WRITE_ATTRIBUTE")]
             OracleWriteAttribute,
             [EnumMember(Value = "ORACLE_ATP_WRITE_ATTRIBUTE")]
             OracleAtpWriteAttribute,
             [EnumMember(Value = "ORACLE_ADWC_WRITE_ATTRIBUTE")]
-            OracleAdwcWriteAttribute
+            OracleAdwcWriteAttribute,
+            [EnumMember(Value = "OBJECT_STORAGE_WRITE_ATTRIBUTE")]
+            ObjectStorageWriteAttribute
         };
 
         
@@ -67,11 +71,26 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLEADWCWRITEATTRIBUTE":
                     obj = new OracleAdwcWriteAttribute();
                     break;
+                case "ORACLE_ATP_WRITE_ATTRIBUTE":
+                    obj = new OracleAtpWriteAttributes();
+                    break;
                 case "ORACLEWRITEATTRIBUTE":
                     obj = new OracleWriteAttribute();
                     break;
+                case "ORACLE_WRITE_ATTRIBUTE":
+                    obj = new OracleWriteAttributes();
+                    break;
                 case "ORACLEATPWRITEATTRIBUTE":
                     obj = new OracleAtpWriteAttribute();
+                    break;
+                case "OBJECTSTORAGEWRITEATTRIBUTE":
+                    obj = new ObjectStorageWriteAttribute();
+                    break;
+                case "ORACLE_ADWC_WRITE_ATTRIBUTE":
+                    obj = new OracleAdwcWriteAttributes();
+                    break;
+                case "OBJECT_STORAGE_WRITE_ATTRIBUTE":
+                    obj = new ObjectStorageWriteAttributes();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

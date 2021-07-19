@@ -38,7 +38,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_DATA_ASSET")]
             MysqlDataAsset,
             [EnumMember(Value = "GENERIC_JDBC_DATA_ASSET")]
-            GenericJdbcDataAsset
+            GenericJdbcDataAsset,
+            [EnumMember(Value = "FUSION_APP_DATA_ASSET")]
+            FusionAppDataAsset,
+            [EnumMember(Value = "AMAZON_S3_DATA_ASSET")]
+            AmazonS3DataAsset
         };
 
         
@@ -139,11 +143,17 @@ namespace Oci.DataintegrationService.Models
                 case "GENERIC_JDBC_DATA_ASSET":
                     obj = new DataAssetSummaryFromJdbc();
                     break;
+                case "AMAZON_S3_DATA_ASSET":
+                    obj = new DataAssetSummaryFromAmazonS3();
+                    break;
                 case "ORACLE_OBJECT_STORAGE_DATA_ASSET":
                     obj = new DataAssetSummaryFromObjectStorage();
                     break;
                 case "ORACLE_DATA_ASSET":
                     obj = new DataAssetSummaryFromOracle();
+                    break;
+                case "FUSION_APP_DATA_ASSET":
+                    obj = new DataAssetSummaryFromFusionApp();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

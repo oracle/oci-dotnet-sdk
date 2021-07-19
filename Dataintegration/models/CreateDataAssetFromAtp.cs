@@ -45,6 +45,30 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "walletPasswordSecret")]
         public SensitiveAttribute WalletPasswordSecret { get; set; }
         
+        /// <value>
+        /// The Autonomous Data Warehouse instance region Id.
+        /// </value>
+        [JsonProperty(PropertyName = "regionId")]
+        public string RegionId { get; set; }
+        
+        /// <value>
+        /// The Autonomous Data Warehouse instance tenancy Id.
+        /// </value>
+        [JsonProperty(PropertyName = "tenancyId")]
+        public string TenancyId { get; set; }
+        
+        /// <value>
+        /// The Autonomous Data Warehouse instance compartment Id.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Tha Autonomous Database Id
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDbId")]
+        public string AutonomousDbId { get; set; }
+        
         [JsonProperty(PropertyName = "defaultConnection")]
         public CreateConnectionFromAtp DefaultConnection { get; set; }
         

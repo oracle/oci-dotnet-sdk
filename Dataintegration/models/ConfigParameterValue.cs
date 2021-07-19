@@ -51,5 +51,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "parameterValue")]
         public string ParameterValue { get; set; }
         
+        /// <value>
+        /// The root object value, used in custom parameters.
+        /// </value>
+        [JsonProperty(PropertyName = "rootObjectValue")]
+        public System.Object RootObjectValue { get; set; }
+        
     }
 }

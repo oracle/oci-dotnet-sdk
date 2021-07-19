@@ -38,7 +38,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_DATA_ASSET")]
             MysqlDataAsset,
             [EnumMember(Value = "GENERIC_JDBC_DATA_ASSET")]
-            GenericJdbcDataAsset
+            GenericJdbcDataAsset,
+            [EnumMember(Value = "FUSION_APP_DATA_ASSET")]
+            FusionAppDataAsset,
+            [EnumMember(Value = "AMAZON_S3_DATA_ASSET")]
+            AmazonS3DataAsset
         };
 
         
@@ -134,6 +138,12 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new CreateDataAssetFromAdwc();
+                    break;
+                case "AMAZON_S3_DATA_ASSET":
+                    obj = new CreateDataAssetFromAmazonS3();
+                    break;
+                case "FUSION_APP_DATA_ASSET":
+                    obj = new CreateDataAssetFromFusionApp();
                     break;
                 case "ORACLE_ATP_DATA_ASSET":
                     obj = new CreateDataAssetFromAtp();

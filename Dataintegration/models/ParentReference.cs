@@ -27,5 +27,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "parent")]
         public string Parent { get; set; }
         
+        /// <value>
+        /// Key of the root document object.
+        /// </value>
+        [JsonProperty(PropertyName = "rootDocId")]
+        public string RootDocId { get; set; }
+        
     }
 }

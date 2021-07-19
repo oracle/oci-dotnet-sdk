@@ -96,5 +96,8 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "isFavorite")]
         public System.Nullable<bool> IsFavorite { get; set; }
         
+        [JsonProperty(PropertyName = "countStatistics")]
+        public CountStatistic CountStatistics { get; set; }
+        
     }
 }

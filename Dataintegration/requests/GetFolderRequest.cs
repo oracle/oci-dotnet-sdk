@@ -47,5 +47,21 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        ///
+        /// <value>
+        /// This parameter allows users to specify which view of the object to return. CHILD_COUNT_STATISTICS - This option is used to get statistics on immediate children of the object by their type.
+        /// </value>
+        ///
+        public enum ProjectionEnum {
+            [EnumMember(Value = "CHILD_COUNT_STATISTICS")]
+            ChildCountStatistics
+        };
+
+        /// <value>
+        /// This parameter allows users to specify which view of the object to return. CHILD_COUNT_STATISTICS - This option is used to get statistics on immediate children of the object by their type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "projection", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ProjectionEnum> Projection { get; set; }
     }
 }

@@ -60,6 +60,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         
+        /// <value>
+        /// Optional task schedule key reference.
+        /// </value>
+        [JsonProperty(PropertyName = "taskScheduleKey")]
+        public string TaskScheduleKey { get; set; }
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
         

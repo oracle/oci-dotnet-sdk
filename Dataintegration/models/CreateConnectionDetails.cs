@@ -38,7 +38,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_CONNECTION")]
             MysqlConnection,
             [EnumMember(Value = "GENERIC_JDBC_CONNECTION")]
-            GenericJdbcConnection
+            GenericJdbcConnection,
+            [EnumMember(Value = "BICC_CONNECTION")]
+            BiccConnection,
+            [EnumMember(Value = "AMAZON_S3_CONNECTION")]
+            AmazonS3Connection
         };
 
         
@@ -123,8 +127,14 @@ namespace Oci.DataintegrationService.Models
                 case "MYSQL_CONNECTION":
                     obj = new CreateConnectionFromMySQL();
                     break;
+                case "AMAZON_S3_CONNECTION":
+                    obj = new CreateConnectionFromAmazonS3();
+                    break;
                 case "GENERIC_JDBC_CONNECTION":
                     obj = new CreateConnectionFromJdbc();
+                    break;
+                case "BICC_CONNECTION":
+                    obj = new CreateConnectionFromBICC();
                     break;
                 case "ORACLE_ATP_CONNECTION":
                     obj = new CreateConnectionFromAtp();

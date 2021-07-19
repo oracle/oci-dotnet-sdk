@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to clone a pluggable database remotely.
+        /// Request to clone a pluggable database (PDB) to a different database (CDB) from the source PDB.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Parameters for cloning a pluggable database to the same CDB.
+    /// Parameters for cloning a pluggable database (PDB) within the same database (CDB).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -25,7 +25,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The name for the pluggable database. The name is unique in the context of a {@link Database}. The name must begin with an alphabetic character and can contain a maximum of thirty alphanumeric characters. Special characters are not permitted. The pluggable database name should not be same as the container database name.
+        /// The name for the pluggable database (PDB). The name is unique in the context of a {@link Database}. The name must begin with an alphabetic character and can contain a maximum of thirty alphanumeric characters. Special characters are not permitted. The pluggable database name should not be same as the container database name.
         /// </value>
         /// <remarks>
         /// Required

@@ -1745,8 +1745,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Create and start a pluggable database in the specified container database.
-        /// If needed call actions/stop to stop the PDB.
+        /// Creates and starts a pluggable database in the specified container database.
+        /// Use the [StartPluggableDatabase](#/en/database/latest/PluggableDatabase/StartPluggableDatabase] and [StopPluggableDatabase](#/en/database/latest/PluggableDatabase/StopPluggableDatabase] APIs to start and stop the pluggable database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2565,7 +2565,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Delete a pluggable database
+        /// Deletes the specified pluggable database.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3004,6 +3004,46 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"DownloadExadataInfrastructureConfigFile failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Downloads the network validation report file for the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DownloadValidationReport.cs.html">here</a> to see an example of how to use DownloadValidationReport API.</example>
+        public async Task<DownloadValidationReportResponse> DownloadValidationReport(DownloadValidationReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called downloadValidationReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInfrastructures/{exadataInfrastructureId}/vmClusterNetworks/{vmClusterNetworkId}/actions/downloadValidationReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/octet-stream");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DownloadValidationReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DownloadValidationReport failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5063,7 +5103,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about a specific pluggable database
+        /// Gets information about the specified pluggable database.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5258,6 +5298,86 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"GetVmClusterPatchHistoryEntry failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets information about a specified maintenance update package for a VM cluster. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetVmClusterUpdate.cs.html">here</a> to see an example of how to use GetVmClusterUpdate API.</example>
+        public async Task<GetVmClusterUpdateResponse> GetVmClusterUpdate(GetVmClusterUpdateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getVmClusterUpdate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vmClusters/{vmClusterId}/updates/{updateId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetVmClusterUpdateResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetVmClusterUpdate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the maintenance update history details for the specified update history entry. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetVmClusterUpdateHistoryEntry.cs.html">here</a> to see an example of how to use GetVmClusterUpdateHistoryEntry API.</example>
+        public async Task<GetVmClusterUpdateHistoryEntryResponse> GetVmClusterUpdateHistoryEntry(GetVmClusterUpdateHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getVmClusterUpdateHistoryEntry");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vmClusters/{vmClusterId}/updateHistoryEntries/{updateHistoryEntryId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetVmClusterUpdateHistoryEntryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetVmClusterUpdateHistoryEntry failed with error: {e.Message}");
                 throw;
             }
         }
@@ -6994,8 +7114,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the pluggable databases based on databaseId or compartmentId specified.
-        /// Either one of the query parameters must be provided.
+        /// Gets a list of the pluggable databases in a database or compartment. You must provide either a &#x60;databaseId&#x60; or &#x60;compartmentId&#x60; value.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7155,6 +7274,86 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Gets the history of the maintenance update actions performed on the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListVmClusterUpdateHistoryEntries.cs.html">here</a> to see an example of how to use ListVmClusterUpdateHistoryEntries API.</example>
+        public async Task<ListVmClusterUpdateHistoryEntriesResponse> ListVmClusterUpdateHistoryEntries(ListVmClusterUpdateHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listVmClusterUpdateHistoryEntries");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vmClusters/{vmClusterId}/updateHistoryEntries".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListVmClusterUpdateHistoryEntriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListVmClusterUpdateHistoryEntries failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the maintenance updates that can be applied to the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListVmClusterUpdates.cs.html">here</a> to see an example of how to use ListVmClusterUpdates API.</example>
+        public async Task<ListVmClusterUpdatesResponse> ListVmClusterUpdates(ListVmClusterUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listVmClusterUpdates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vmClusters/{vmClusterId}/updates".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListVmClusterUpdatesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListVmClusterUpdates failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists the VM clusters in the specified compartment. Applies to Exadata Cloud@Customer instances only.
         /// To list the cloud VM clusters in an Exadata Cloud Service instance, use the {@link #listCloudVmClusters(ListCloudVmClustersRequest) listCloudVmClusters} operation.
         /// 
@@ -7196,7 +7395,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Clone and start a pluggable database on the same CDB. Only a started pluggable database can be cloned.
+        /// Clones and starts a pluggable database (PDB) in the same database (CDB) as the source PDB. The source PDB must be in the &#x60;READ_WRITE&#x60; openMode to perform the clone operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7435,7 +7635,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Clone and start a pluggable database on a different CDB. Only a started pluggable database can be cloned.
+        /// Clones a pluggable database (PDB) to a different database from the source PDB. The cloned PDB will be started upon completion of the clone operation. The source PDB must be in the &#x60;READ_WRITE&#x60; openMode when performing the clone.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7912,7 +8113,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// start a stopped pluggable database. The openMode of the pluggable database will be READ_WRITE upon completion.
+        /// Starts a stopped pluggable database. The &#x60;openMode&#x60; value of the pluggable database will be &#x60;READ_WRITE&#x60; upon completion.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7991,7 +8192,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// stop a started pluggable database. The openMode of the pluggable database will be MOUNTED upon completion.
+        /// Stops a pluggable database. The &#x60;openMode&#x60; value of the pluggable database will be &#x60;MOUNTED&#x60; upon completion.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -8677,6 +8878,46 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Updates the Data Guard association the specified database. This API can be used to change the &#x60;protectionMode&#x60; and &#x60;transportType&#x60; of the Data Guard association.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpdateDataGuardAssociation.cs.html">here</a> to see an example of how to use UpdateDataGuardAssociation API.</example>
+        public async Task<UpdateDataGuardAssociationResponse> UpdateDataGuardAssociation(UpdateDataGuardAssociationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateDataGuardAssociation");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databases/{databaseId}/dataGuardAssociations/{dataGuardAssociationId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateDataGuardAssociationResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateDataGuardAssociation failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Update the specified database based on the request parameters provided.
         /// 
         /// </summary>
@@ -9168,7 +9409,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Update a pluggable database
+        /// Updates the specified pluggable database.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -18,14 +18,11 @@ namespace Oci.DataintegrationService.Models
     /// <summary>
     /// Properties to configure when writing to Oracle Autonomous Data Warehouse Cloud.
     /// </summary>
-    public class OracleAdwcWriteAttributes 
+    public class OracleAdwcWriteAttributes : AbstractWriteAttribute
     {
         
-        /// <value>
-        /// The bucket name for the attribute.
-        /// </value>
-        [JsonProperty(PropertyName = "bucketName")]
-        public string BucketName { get; set; }
+        [JsonProperty(PropertyName = "bucketSchema")]
+        public Schema BucketSchema { get; set; }
         
         /// <value>
         /// The file name for the attribute.
@@ -39,5 +36,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "stagingConnection")]
         public Connection StagingConnection { get; set; }
         
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_ADWC_WRITE_ATTRIBUTE";
     }
 }

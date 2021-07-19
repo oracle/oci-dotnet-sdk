@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for updating a pluggable database.
+    /// Details for updating a pluggable database (PDB).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 

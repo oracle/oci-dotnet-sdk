@@ -37,7 +37,7 @@ namespace Oci.DataintegrationService.Models
         /// The type reference.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        public System.Object Type { get; set; }
         
         [JsonProperty(PropertyName = "configValues")]
         public ConfigValues ConfigValues { get; set; }

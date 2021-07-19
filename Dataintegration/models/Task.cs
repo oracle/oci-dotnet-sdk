@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DATA_LOADER_TASK")]
             DataLoaderTask,
             [EnumMember(Value = "PIPELINE_TASK")]
-            PipelineTask
+            PipelineTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         
@@ -114,6 +120,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }
         
+        [JsonProperty(PropertyName = "registryMetadata")]
+        public RegistryMetadata RegistryMetadata { get; set; }
+        
     }
 
     public class TaskModelConverter : JsonConverter
@@ -141,6 +150,15 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "INTEGRATION_TASK":
                     obj = new TaskFromIntegrationTaskDetails();
+                    break;
+                case "SQL_TASK":
+                    obj = new TaskFromSQLTaskDetails();
+                    break;
+                case "REST_TASK":
+                    obj = new TaskFromRestTaskDetails();
+                    break;
+                case "OCI_DATAFLOW_TASK":
+                    obj = new TaskFromOCIDataflowTaskDetails();
                     break;
                 case "DATA_LOADER_TASK":
                     obj = new TaskFromDataLoaderTaskDetails();
