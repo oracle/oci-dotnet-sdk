@@ -30,7 +30,6 @@ namespace Oci.Common.Http
             this.httpClient = new HttpClient(handler);
             this.httpClient.Timeout = TimeSpan.FromMilliseconds(clientConfiguration.TimeoutMillis);
             this.httpClient.MaxResponseContentBufferSize = clientConfiguration.ResponseContentBufferBytes;
-            this.httpClient.DefaultRequestHeaders.ExpectContinue = true;
         }
 
         public RestClient() : this(null as RestClientHandler) { }

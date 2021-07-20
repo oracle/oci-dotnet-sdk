@@ -30,7 +30,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORACLEREADATTRIBUTE")]
             Oraclereadattribute,
             [EnumMember(Value = "ORACLE_READ_ATTRIBUTE")]
-            OracleReadAttribute
+            OracleReadAttribute,
+            [EnumMember(Value = "BICC_READ_ATTRIBUTE")]
+            BiccReadAttribute
         };
 
         
@@ -56,6 +58,12 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "ORACLE_READ_ATTRIBUTE":
+                    obj = new OracleReadAttributes();
+                    break;
+                case "BICC_READ_ATTRIBUTE":
+                    obj = new BiccReadAttributes();
+                    break;
                 case "ORACLEREADATTRIBUTE":
                     obj = new OracleReadAttribute();
                     break;

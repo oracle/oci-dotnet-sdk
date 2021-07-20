@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// A pluggable database (PDB) is portable collection of schemas, schema objects, and non-schema objects that appears to an Oracle client as a non-container database. To use a PDB, it needs to be plugged into a CDB.
-    /// To use any of the API operations, you must be authorized in an IAM policy. If you are not authorized, talk to an administrator. If you are an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// To use any of the API operations, you must be authorized in an IAM policy. If you are not authorized, talk to a tenancy administrator. If you are an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Models
         public string ContainerDatabaseId { get; set; }
         
         /// <value>
-        /// The name for the pluggable database. The name is unique in the context of a {@link Database}. The name must begin with an alphabetic character and can contain a maximum of thirty alphanumeric characters. Special characters are not permitted. The pluggable database name should not be same as the container database name.
+        /// The name for the pluggable database (PDB). The name is unique in the context of a {@link Database}. The name must begin with an alphabetic character and can contain a maximum of thirty alphanumeric characters. Special characters are not permitted. The pluggable database name should not be same as the container database name.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +92,7 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The date and time the pluggable database was created
+        /// The date and time the pluggable database was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +105,8 @@ namespace Oci.DatabaseService.Models
         public PluggableDatabaseConnectionStrings ConnectionStrings { get; set; }
                 ///
         /// <value>
-        /// The mode that pluggableDatabase is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend.
+        /// The mode that pluggable database is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend (within the Oracle Database software).
+        /// 
         /// </value>
         ///
         public enum OpenModeEnum {
@@ -120,7 +121,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The mode that pluggableDatabase is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend.
+        /// The mode that pluggable database is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend (within the Oracle Database software).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -131,8 +133,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
         
         /// <value>
-        /// The restricted mode of pluggableDatabase. If a pluggableDatabase is opened in restricted mode,
-        /// the user needs both Create a session and restricted session privileges to connect to it.
+        /// The restricted mode of the pluggable database. If a pluggable database is opened in restricted mode,
+        /// the user needs both create a session and have restricted session privileges to connect to it.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isRestricted")]

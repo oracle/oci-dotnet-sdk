@@ -23,19 +23,19 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// Host name based PDB Connection String.
+        /// A host name-based PDB connection string.
         /// </value>
         [JsonProperty(PropertyName = "pdbDefault")]
         public string PdbDefault { get; set; }
         
         /// <value>
-        /// IP based PDB Connection String.
+        /// An IP-based PDB connection string.
         /// </value>
         [JsonProperty(PropertyName = "pdbIpDefault")]
         public string PdbIpDefault { get; set; }
         
         /// <value>
-        /// All connection strings to use to connect to the Pluggable Database.
+        /// All connection strings to use to connect to the pluggable database.
         /// </value>
         [JsonProperty(PropertyName = "allConnectionStrings")]
         public System.Collections.Generic.Dictionary<string, string> AllConnectionStrings { get; set; }

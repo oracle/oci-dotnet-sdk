@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DATA_LOADER_TASK")]
             DataLoaderTask,
             [EnumMember(Value = "PIPELINE_TASK")]
-            PipelineTask
+            PipelineTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         
@@ -138,6 +144,15 @@ namespace Oci.DataintegrationService.Models
             {
                 case "INTEGRATION_TASK":
                     obj = new TaskSummaryFromIntegrationTask();
+                    break;
+                case "SQL_TASK":
+                    obj = new TaskSummaryFromSQLTask();
+                    break;
+                case "OCI_DATAFLOW_TASK":
+                    obj = new TaskSummaryFromOCIDataflowTask();
+                    break;
+                case "REST_TASK":
+                    obj = new TaskSummaryFromRestTask();
                     break;
                 case "PIPELINE_TASK":
                     obj = new TaskSummaryFromPipelineTask();

@@ -73,6 +73,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "objectVersion")]
         public System.Nullable<int> ObjectVersion { get; set; }
         
+        /// <value>
+        /// Optional task schedule key reference.
+        /// </value>
+        [JsonProperty(PropertyName = "taskScheduleKey")]
+        public string TaskScheduleKey { get; set; }
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
         

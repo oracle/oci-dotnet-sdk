@@ -27,5 +27,14 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dataFormat")]
         public DataFormat DataFormat { get; set; }
         
+        /// <value>
+        /// The model type for the entity which is referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        public string ModelType { get; set; }
+        
+        [JsonProperty(PropertyName = "parentRef")]
+        public ParentReference ParentRef { get; set; }
+        
     }
 }

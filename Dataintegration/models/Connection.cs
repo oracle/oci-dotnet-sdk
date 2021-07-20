@@ -38,7 +38,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_CONNECTION")]
             MysqlConnection,
             [EnumMember(Value = "GENERIC_JDBC_CONNECTION")]
-            GenericJdbcConnection
+            GenericJdbcConnection,
+            [EnumMember(Value = "BICC_CONNECTION")]
+            BiccConnection,
+            [EnumMember(Value = "AMAZON_S3_CONNECTION")]
+            AmazonS3Connection
         };
 
         
@@ -145,11 +149,17 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLEDB_CONNECTION":
                     obj = new ConnectionFromOracle();
                     break;
+                case "AMAZON_S3_CONNECTION":
+                    obj = new ConnectionFromAmazonS3();
+                    break;
                 case "MYSQL_CONNECTION":
                     obj = new ConnectionFromMySQL();
                     break;
                 case "GENERIC_JDBC_CONNECTION":
                     obj = new ConnectionFromJdbc();
+                    break;
+                case "BICC_CONNECTION":
+                    obj = new ConnectionFromBICC();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

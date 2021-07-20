@@ -18,7 +18,7 @@ namespace Oci.DataintegrationService.Models
     /// <summary>
     /// Properties to configure reading from an Oracle Database.
     /// </summary>
-    public class OracleReadAttributes 
+    public class OracleReadAttributes : AbstractReadAttribute
     {
         
         /// <value>
@@ -27,5 +27,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "fetchSize")]
         public System.Nullable<int> FetchSize { get; set; }
         
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_READ_ATTRIBUTE";
     }
 }

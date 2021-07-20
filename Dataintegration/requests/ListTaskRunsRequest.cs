@@ -49,6 +49,12 @@ namespace Oci.DataintegrationService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// Used to filter by the key of the object.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "key", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> Key { get; set; }
+        
+        /// <value>
         /// Used to filter by the project or the folder object.
         /// 
         /// </value>
@@ -120,5 +126,11 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// This filter parameter can be used to filter by model specific queryable fields of the object <br><br><B>Examples:-</B><br> <ul> <li><B>?filter=status eq Failed</B> returns all objects that have a status field with value Failed</li> </ul>
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filter", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> Filter { get; set; }
     }
 }

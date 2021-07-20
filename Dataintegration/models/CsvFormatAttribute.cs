@@ -52,12 +52,6 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<bool> HasHeader { get; set; }
         
         /// <value>
-        /// Defines whether a file pattern is supported.
-        /// </value>
-        [JsonProperty(PropertyName = "isFilePattern")]
-        public System.Nullable<bool> IsFilePattern { get; set; }
-        
-        /// <value>
         /// Format for timestamp information.
         /// </value>
         [JsonProperty(PropertyName = "timestampFormat")]

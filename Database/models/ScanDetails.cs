@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string Hostname { get; set; }
         
         /// <value>
-        /// The SCAN port. Default is 1521.
+        /// The SCAN TCPIP port. Default is 1521.
         /// </value>
         /// <remarks>
         /// Required

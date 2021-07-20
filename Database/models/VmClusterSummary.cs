@@ -138,7 +138,6 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// Size, in terabytes, of the DATA disk group.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Double DataStorageSizeInTBs { get; set; }
@@ -155,6 +154,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "giVersion")]
         public string GiVersion { get; set; }
+        
+        /// <value>
+        /// Operating system version of the image.
+        /// </value>
+        [JsonProperty(PropertyName = "systemVersion")]
+        public string SystemVersion { get; set; }
         
         /// <value>
         /// The public key portion of one or more key pairs used for SSH access to the VM cluster.

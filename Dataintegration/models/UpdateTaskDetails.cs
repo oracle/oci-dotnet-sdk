@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DATA_LOADER_TASK")]
             DataLoaderTask,
             [EnumMember(Value = "PIPELINE_TASK")]
-            PipelineTask
+            PipelineTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         
@@ -138,8 +144,17 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "REST_TASK":
+                    obj = new UpdateTaskFromRestTask();
+                    break;
                 case "PIPELINE_TASK":
                     obj = new UpdateTaskFromPipelineTask();
+                    break;
+                case "OCI_DATAFLOW_TASK":
+                    obj = new UpdateTaskFromOCIDataflowTask();
+                    break;
+                case "SQL_TASK":
+                    obj = new UpdateTaskFromSQLTask();
                     break;
                 case "DATA_LOADER_TASK":
                     obj = new UpdateTaskFromDataLoaderTask();

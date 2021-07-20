@@ -18,7 +18,7 @@ namespace Oci.DataintegrationService.Models
     /// <summary>
     /// Properties to configure when writing to an Oracle Database.
     /// </summary>
-    public class OracleWriteAttributes 
+    public class OracleWriteAttributes : AbstractWriteAttribute
     {
         
         /// <value>
@@ -39,5 +39,7 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "isolationLevel")]
         public string IsolationLevel { get; set; }
         
+        [JsonProperty(PropertyName = "modelType")]
+        private readonly string modelType = "ORACLE_WRITE_ATTRIBUTE";
     }
 }
