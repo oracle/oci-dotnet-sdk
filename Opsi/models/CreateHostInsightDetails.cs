@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// The information about host to be analyzed.
+    /// The information about the host to be analyzed.
     /// </summary>
     [JsonConverter(typeof(CreateHostInsightDetailsModelConverter))]
     public class CreateHostInsightDetails 

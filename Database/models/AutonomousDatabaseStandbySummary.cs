@@ -88,5 +88,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// The date and time the Autonomous Data Guard role was switched for the standby Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDataGuardRoleChanged")]
+        public System.Nullable<System.DateTime> TimeDataGuardRoleChanged { get; set; }
+        
     }
 }

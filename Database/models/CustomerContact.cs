@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The object holds customer email contact for Oracle Autonomous Databases.
+    /// Customer contact information that will be used by Oracle to provide notifications needed by database and infrastructure administrators.
     /// 
     /// </summary>
     public class CustomerContact 
     {
         
         /// <value>
-        /// The email address of an Oracle Autonomous Database contact.
+        /// The email address used by Oracle to send notifications regarding databases and infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }

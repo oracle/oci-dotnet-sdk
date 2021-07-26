@@ -249,11 +249,17 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// If set to `FALSE` and `peerDbId` is specified, the specified remote region peer database is terminated. If set to `FALSE` and `peerDbId` is not specified, the peer database in the region of the source primary database terminated.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Data Guard standby database located in a different (remote) region from the source primary Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "peerDbId")]
+        public string PeerDbId { get; set; }
         
         /// <value>
         /// A valid Oracle Database version for Autonomous Database.

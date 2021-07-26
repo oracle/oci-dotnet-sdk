@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// The information about host to be analyzed.
+    /// The information about the MACS-managed external host to be analyzed.
     /// </summary>
     public class EnableMacsManagedExternalHostInsightDetails : EnableHostInsightDetails
     {

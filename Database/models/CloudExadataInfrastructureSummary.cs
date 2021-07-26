@@ -173,5 +173,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The list of customer email addresses that receive information from Oracle about the specified OCI Database service resource.
+        /// Oracle uses these email addresses to send notifications about planned and unplanned software maintenance updates, information about system hardware, and other information needed by administrators.
+        /// Up to 10 email addresses can be added to the customer contacts for a cloud Exadata infrastructure instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
     }
 }

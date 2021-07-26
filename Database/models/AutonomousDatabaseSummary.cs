@@ -663,7 +663,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
                 ///
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         ///
@@ -677,7 +677,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
@@ -703,10 +703,52 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
+        /// The list of regions that support the creation of Autonomous Data Guard standby database.
+        /// </value>
+        [JsonProperty(PropertyName = "supportedRegionsToCloneTo")]
+        public System.Collections.Generic.List<string> SupportedRegionsToCloneTo { get; set; }
+        
+        /// <value>
         /// Customer Contacts.
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
+        /// The date and time that Autonomous Data Guard was enabled for an Autonomous Database where the standby was provisioned in the same region as the primary database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLocalDataGuardEnabled")]
+        public System.Nullable<System.DateTime> TimeLocalDataGuardEnabled { get; set; }
+                ///
+        /// <value>
+        /// The Autonomous Data Guard region type of the Autonomous Database. For Autonomous Databases on shared Exadata infrastructure, Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Data Guard association, and cannot be performed when the database using the \"primary\" role is operating in a remote Data Guard standby region.```
+        /// </value>
+        ///
+        public enum DataguardRegionTypeEnum {
+            [EnumMember(Value = "PRIMARY_DG_REGION")]
+            PrimaryDgRegion,
+            [EnumMember(Value = "REMOTE_STANDBY_DG_REGION")]
+            RemoteStandbyDgRegion
+        };
+
+        /// <value>
+        /// The Autonomous Data Guard region type of the Autonomous Database. For Autonomous Databases on shared Exadata infrastructure, Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Data Guard association, and cannot be performed when the database using the \"primary\" role is operating in a remote Data Guard standby region.```
+        /// </value>
+        [JsonProperty(PropertyName = "dataguardRegionType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DataguardRegionTypeEnum> DataguardRegionType { get; set; }
+        
+        /// <value>
+        /// The date and time the Autonomous Data Guard role was switched for the Autonomous Database. For databases that have standbys in both the primary Data Guard region and a remote Data Guard standby region, this is the latest timestamp of either the database using the \"primary\" role in the primary Data Guard region, or database located in the remote Data Guard standby region.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDataGuardRoleChanged")]
+        public System.Nullable<System.DateTime> TimeDataGuardRoleChanged { get; set; }
+        
+        /// <value>
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for shared Exadata infrastructure, standby databases located in the same region as the source primary database do not have OCIDs.
+        /// </value>
+        [JsonProperty(PropertyName = "peerDbIds")]
+        public System.Collections.Generic.List<string> PeerDbIds { get; set; }
         
     }
 }

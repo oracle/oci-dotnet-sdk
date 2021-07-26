@@ -161,7 +161,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -203,7 +202,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -245,7 +243,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -287,7 +284,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -328,7 +324,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -369,7 +364,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -411,7 +405,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1738,7 +1731,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1841,7 +1833,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1885,7 +1876,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1927,7 +1917,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1972,7 +1961,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2019,7 +2007,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2060,7 +2047,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2101,7 +2087,6 @@ namespace Oci.ObjectstorageService
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
-            requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 

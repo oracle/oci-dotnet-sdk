@@ -13,25 +13,30 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.OpsiService.Models
+namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The information about the MACS-managed external host to be analyzed.
+    /// Custom table in the list request.
     /// </summary>
-    public class CreateMacsManagedExternalHostInsightDetails : CreateHostInsightDetails
+    public class CustomTableSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Management Agent
+        /// The custom table OCID.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ManagementAgentId is required.")]
-        [JsonProperty(PropertyName = "managementAgentId")]
-        public string ManagementAgentId { get; set; }
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
         
-        [JsonProperty(PropertyName = "entitySource")]
-        private readonly string entitySource = "MACS_MANAGED_EXTERNAL_HOST";
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SavedCustomTable is required.")]
+        [JsonProperty(PropertyName = "savedCustomTable")]
+        public SavedCustomTable SavedCustomTable { get; set; }
+        
     }
 }

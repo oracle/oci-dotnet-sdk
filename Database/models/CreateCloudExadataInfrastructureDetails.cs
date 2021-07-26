@@ -96,5 +96,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Customer contacts.
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
     }
 }
