@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 23.1.0 - 2021-07-27
+### Added
+- Support for filtering by tag on capacity planning and SQL warehouse list operations in the Operations Insights service
+- Support for creating cross-region autonomous data guards in the Database service
+- Support for the customer contacts feature on cloud exadata infrastructure in the Database service
+- Support for cost analysis custom tables in the Usage service
+
 ## 23.0.0 - 2021-07-20
 ### Added
 - Support for schedules, schedule tasks, REST tasks, operators, S3, and Fusion Apps in the Data Integration service
@@ -11,7 +18,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for downloading network validation reports for Exadata network resources in the Database service
 - Support for patch and upgrade of Grid Infrastructure (GI), and update of DomU OS software for VM clusters in the Database service
 - Support for updating data guard associations in the Database service
-- Limit Expect 100-continue to be enabled for only for Object Storage anf Log Analytics service
+- Limit Expect 100-continue to be enabled for only for Object Storage and Log Analytics service
 
 ### Breaking Changes
 - The property `BucketName` was replaced by `BucketSchema` in the models OracleAdwcWriteAttributes and OracleAtpWriteAttributes under the Data Integration service
@@ -257,6 +264,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for platform configurations on instances in the Compute service
 - Support for providing target tags and target compartments on profiles in the Optimizer service
 - Support for the 'Fix it' feature in the Optimizer service
+- Enable Expect 100-continue for all services
 
 ## 14.1.0 - 2021-02-16
 ### Added

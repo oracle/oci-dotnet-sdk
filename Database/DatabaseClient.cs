@@ -3335,7 +3335,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Initiates a failover the specified Autonomous Database to a standby.
+        /// Initiates a failover the specified Autonomous Database to a standby. To perform a failover to a standby located in a remote region, specify the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the remote standby using the &#x60;peerDbId&#x60; parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8273,7 +8273,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Initiates a switchover of the specified Autonomous Database to the associated standby database. Applicable only to databases with Autonomous Data Guard enabled.
+        /// Initiates a switchover of the specified Autonomous Database to the associated standby database. Applicable only to databases with Autonomous Data Guard enabled. To perform a switchover to a standby located in a remote region, specify the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the remote standby using the &#x60;peerDbId&#x60; parameter.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

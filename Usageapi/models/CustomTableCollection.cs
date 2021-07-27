@@ -13,25 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.OpsiService.Models
+namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The information about the MACS-managed external host to be analyzed.
+    /// A custom table list.
     /// </summary>
-    public class CreateMacsManagedExternalHostInsightDetails : CreateHostInsightDetails
+    public class CustomTableCollection 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Management Agent
+        /// Custom tables list.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ManagementAgentId is required.")]
-        [JsonProperty(PropertyName = "managementAgentId")]
-        public string ManagementAgentId { get; set; }
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<CustomTableSummary> Items { get; set; }
         
-        [JsonProperty(PropertyName = "entitySource")]
-        private readonly string entitySource = "MACS_MANAGED_EXTERNAL_HOST";
     }
 }

@@ -1,7 +1,412 @@
-License notice for .NET Standard 2.0
-------------------------------
-The MIT License (MIT)
+------------------------------- Licenses -------------------------------
+- MIT License
+- New BSD License
+- Apache License, Version 2.0
+- BSD-2-Clause License
+- Creative Commons Zero v1.0
 
+----------------- Third Party & Fourth Party Components ----------------
+.NET Standard
+* Copyright (c) .NET Foundation and Contributors
+* License: MIT License
+* Source code: https://github.com/dotnet/standard
+* Project home: https://docs.microsoft.com/en-us/dotnet/standard/net-standard
+
+Microsoft.CSharp
+* Copyright (c) .NET Foundation and Contributors
+* License: MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://docs.microsoft.com/en-us/dotnet
+
+ASP.NET
+* Copyright (c) .NET Foundation
+* License: Apache License Version 2.0
+* Source code: https://github.com/dotnet/aspnetcore
+* Project home: https://asp.net
+
+Microsoft.EntityFrameworkCore.Relational
+Copyright (c) .NET Foundation
+* License: Apache License Version 2.0
+* Source code: https://github.com/dotnet/efcore
+* Project home: https://docs.microsoft.com/en-us/ef/core/
+
+Slicing-by-8
+* Copyright (c) 2004-2006 Intel Corporation
+* License: BSD-2-Clause License
+* Source code: http://sourceforge.net/projects/slicing-by-8/
+* Project home: http://sourceforge.net/projects/slicing-by-8/
+
+Unicode
+* Copyright © 1991-2021 Unicode
+* License: Unicode Copyright (https://www.unicode.org/license.html)
+* Source code: https://www.unicode.org/Public/
+* Project home: https://www.unicode.org
+
+Zlib
+* Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
+* License: Zlib license (https://zlib.net/zlib_license.html)
+* Source code: https://zlib.net/
+* Project home: https://zlib.net/
+
+Mono
+* Copyright (c) .NET Foundation Contributors
+* License: MIT License
+* Source code: https://github.com/mono/mono
+* Project home: https://www.mono-project.com/
+
+Bit Twiddling Hacks
+* Copyright © 1997-2005 Sean Eron Anderson
+* Project home: https://graphics.stanford.edu/~seander/bithacks.html
+
+Brotli
+* Copyright Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+* License: MIT License
+* Source code: https://github.com/google/brotli
+* Project home: https://github.com/google/brotli
+
+RFC 3492
+* Copyright (C) The Internet Society (2003)
+* Project home: https://datatracker.ietf.org/doc/html/rfc3492
+* License: See License notice below
+
+RFC 4122 - A Universally Unique IDentifier (UUID) URN Namespace
+* Copyright (c) 1990- 1993, 1996 Open Software Foundation, Inc.
+* Copyright (c) 1989 by Hewlett-Packard Company, Palo Alto, Ca. & Digital Equipment Corporation, Maynard, Mass.
+* Copyright (c) 1998 Microsoft.
+* Project home: https://datatracker.ietf.org/doc/html/rfc4122
+* License: See License notice below and BCP 78
+
+LLVM Compiler
+* Copyright (c) 2003-2019 University of Illinois at Urbana-Champaign
+* License: LLVM Compiler License (see notice below)
+* Source code: https://github.com/llvm/llvm-project
+* Project home: https://releases.llvm.org
+
+xxHash
+* Copyright (c) 2012-2020 Yann Collet
+* License: BSD 2-Clause License
+* Source code: https://github.com/Cyan4973/xxHash
+* Project home: www.xxhash.com/
+
+SoftFloat release 3
+* Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 The Regents of the University of California.
+* License: berkeley-softfloat-3 license (see below)
+* Source code: https://github.com/ucb-bar/berkeley-softfloat-3
+* Project home: www.jhauser.us/arithmetic/SoftFloat.html
+
+xoshiro RNGs
+* Written in 2018 by David Blackman and Sebastiano Vigna (vigna@acm.org)
+* License: Creative Commons Zero v1.0
+
+fastmod
+* Copyright 2018 Daniel Lemire
+* License: Apache License Version 2.0
+* Source code: https://github.com/lemire/fastmod
+* Project home: https://github.com/lemire/fastmod
+
+C++ REST SDK
+* Copyright (c) Microsoft Corporation
+* License: MIT License
+* Source code: hhttps://github.com/microsoft/cpprestsdk
+* Project home: https://microsoft.github.io/cpprestsdk/index.html
+
+MessagePack-CSharp
+* Copyright (c) 2017 Yoshifumi Kawai
+* License: MIT License
+* Source code: https://github.com/neuecc/MessagePack-CSharp
+* Project home: https://github.com/neuecc/MessagePack-CSharp
+
+lz4net
+* Copyright (c) 2013-2017, Milosz Krajewski
+* License: BSD-2-Clause License
+* Source code: https://github.com/MiloszKrajewski/lz4net
+* Project home: https://github.com/MiloszKrajewski/lz4net
+
+Nerdbank.Streams
+* Copyright (c) Andrew Arnott
+* License: MIT License
+* Source code: https://github.com/AArnott/Nerdbank.Streams
+* Project home: https://github.com/AArnott/Nerdbank.Streams
+
+RapidJSON
+* Copyright (C) 2015 THL A29 Limited, a Tencent company, and Milo Yip
+* License: MIT License
+* Source code: https://github.com/Tencent/rapidjson/
+* Project home: https://rapidjson.org/
+
+DirectX Math Library
+* Copyright (c) 2011-2020 Microsoft Corp
+* License: MIT License
+* Source code: https://github.com/microsoft/DirectXMath
+* Project home: https://github.com/microsoft/DirectXMath
+
+ldap4net
+* Copyright (c) 2018 Alexander Chermyanin
+* License: MIT License
+* Source code: https://github.com/flamencist/ldap4net
+* Project home: https://github.com/flamencist/ldap4net
+
+musl
+* Copyright © 2005-2020 Rich Felker, et al.
+* License: MIT License
+* Source code: https://github.com/kraj/musl
+* Project home: https://github.com/kraj/musl
+
+mimalloc
+* Copyright (c) 2018-2021 Microsoft Corporation, Daan Leijen
+* License: MIT License
+* Source code: https://github.com/microsoft/mimalloc
+* Project home: https://github.com/microsoft/mimalloc
+
+Newtonsoft.Json
+* Copyright (c) 2007 James Newton-King
+* License: MIT License
+* Source code: https://github.com/JamesNK/Newtonsoft.Json
+* Project home: https://www.newtonsoft.com/json
+
+NLog
+* Copyright (c) 2004-2021 Jaroslaw Kowalski <jaak@jkowalski.net>, Kim Christensen, Julian Verdurmen
+* License: BSD 3-Clause
+* Source code: https://github.com/NLog/NLog
+* Project home: https://nlog-project.org/
+
+Polly
+* Copyright (c) 2015-2020, App vNext
+* License: New BSD License
+* Source code: https://github.com/App-vNext/Polly
+* Project home: http://www.thepollyproject.org/
+
+Portable.BouncyCastle
+* Copyright (c) 2000 - 2017 The Legion of the Bouncy Castle Inc. (http://www.bouncycastle.org) 
+* License: MIT License
+* Source code: https://github.com/novotnyllc/bc-csharp
+* Project home: https://www.bouncycastle.org/csharp/
+
+System.ComponentModel.Annotations
+* Copyright (c) .NET Foundation and Contributors
+* License: MIT License
+* Source code: https://github.com/dotnet/corefx/tree/release/3.1/src/System.ComponentModel.Annotations
+* Project home: https://docs.microsoft.com/en-us/dotnet/
+
+System.IdentityModel.Tokens.Jwt
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+* Project home: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+
+Microsoft.IdentityModel.JsonWebTokens
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code:https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+* Project home: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+
+Microsoft.IdentityModel.Tokens
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+* Project home: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+
+Microsoft.IdentityModel.Logging
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+* Project home: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+
+System.Security.Cryptography.Cng
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Cng
+* Project home: https://dot.net/
+
+-------------------------------- Notices -------------------------------
+
+Apache License Version 2.0, January 2004
+-----------------------------------------
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and distribution
+as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by the copyright owner
+that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all other entities that
+control, are controlled by, or are under common control with that entity. For the
+purposes of this definition, "control" means (i) the power, direct or indirect, to
+cause the direction or management of such entity, whether by contract or otherwise,
+or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or
+(iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity exercising permissions
+granted by this License.
+
+"Source" form shall mean the preferred form for making modifications, including but
+not limited to software source code, documentation source, and configuration files.
+
+"Object" form shall mean any form resulting from mechanical transformation or translation
+of a Source form, including but not limited to compiled object code, generated
+documentation, and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object form, made
+available under the License, as indicated by a copyright notice that is included in or
+attached to the work (an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object form, that is based
+on (or derived from) the Work and for which the editorial revisions, annotations,
+elaborations, or other modifications represent, as a whole, an original work of authorship.
+For the purposes of this License, Derivative Works shall not include works that remain
+separable from, or merely link (or bind by name) to the interfaces of, the Work and
+Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including the original version of
+the Work and any modifications or additions to that Work or Derivative Works thereof,
+that is intentionally submitted to Licensor for inclusion in the Work by the copyright
+owner or by an individual or Legal Entity authorized to submit on behalf of the
+copyright owner. For the purposes of this definition, "submitted" means any form of
+electronic, verbal, or written communication sent to the Licensor or its representatives,
+including but not limited to communication on electronic mailing lists, source code
+control systems, and issue tracking systems that are managed by, or on behalf of,
+the Licensor for the purpose of discussing and improving the Work, but excluding
+communication that is conspicuously marked or otherwise designated in writing by
+the copyright owner as "Not a Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of
+whom a Contribution has been received by Licensor and subsequently incorporated within
+the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of this License,
+each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the Work and such
+Derivative Works in Source or Object form.
+
+3. Grant of Patent License. Subject to the terms and conditions of this License,
+each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+royalty-free, irrevocable (except as stated in this section) patent license to make,
+have made, use, offer to sell, sell, import, and otherwise transfer the Work, where
+such license applies only to those patent claims licensable by such Contributor that
+are necessarily infringed by their Contribution(s) alone or by combination of their
+Contribution(s) with the Work to which such Contribution(s) was submitted. If You
+institute patent litigation against any entity (including a cross-claim or counterclaim
+in a lawsuit) alleging that the Work or a Contribution incorporated within the Work
+constitutes direct or contributory patent infringement, then any patent licenses
+granted to You under this License for that Work shall terminate as of the date such
+litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the Work or Derivative
+Works thereof in any medium, with or without modifications, and in Source or Object
+form, provided that You meet the following conditions:
+
+You must give any other recipients of the Work or Derivative Works a copy of this
+License; and
+You must cause any modified files to carry prominent notices stating that You
+changed the files; and
+You must retain, in the Source form of any Derivative Works that You distribute,
+all copyright, patent, trademark, and attribution notices from the Source form of
+the Work, excluding those notices that do not pertain to any part of the Derivative
+Works; and
+If the Work includes a "NOTICE" text file as part of its distribution, then any
+Derivative Works that You distribute must include a readable copy of the attribution
+notices contained within such NOTICE file, excluding those notices that do not
+pertain to any part of the Derivative Works, in at least one of the following places:
+within a NOTICE text file distributed as part of the Derivative Works; within the
+Source form or documentation, if provided along with the Derivative Works; or,
+within a display generated by the Derivative Works, if and wherever such third-party
+notices normally appear. The contents of the NOTICE file are for informational
+purposes only and do not modify the License. You may add Your own attribution
+notices within Derivative Works that You distribute, alongside or as an addendum
+to the NOTICE text from the Work, provided that such additional attribution notices
+cannot be construed as modifying the License.
+
+You may add Your own copyright statement to Your modifications and may provide additional
+or different license terms and conditions for use, reproduction, or distribution of
+Your modifications, or for any such Derivative Works as a whole, provided Your use,
+reproduction, and distribution of the Work otherwise complies with the conditions
+stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution
+intentionally submitted for inclusion in the Work by You to the Licensor shall be under
+the terms and conditions of this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify the terms of any
+separate license agreement you may have executed with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade names, trademarks,
+service marks, or product names of the Licensor, except as required for reasonable
+and customary use in describing the origin of the Work and reproducing the content of
+the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing,
+Licensor provides the Work (and each Contributor provides its Contributions) on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
+including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for
+determining the appropriateness of using or redistributing the Work and assume any
+risks associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory, whether in tort
+(including negligence), contract, or otherwise, unless required by applicable law
+(such as deliberate and grossly negligent acts) or agreed to in writing, shall any
+Contributor be liable to You for damages, including any direct, indirect, special,
+incidental, or consequential damages of any character arising as a result of this
+License or out of the use or inability to use the Work (including but not limited
+to damages for loss of goodwill, work stoppage, computer failure or malfunction,
+or any and all other commercial damages or losses), even if such Contributor has
+been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing the Work or
+Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance
+of support, warranty, indemnity, or other liability obligations and/or rights
+consistent with this License. However, in accepting such obligations, You may act
+only on Your own behalf and on Your sole responsibility, not on behalf of any other
+Contributor, and only if You agree to indemnify, defend, and hold each Contributor
+harmless for any liability incurred by, or claims asserted against, such Contributor
+by reason of your accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+
+Copyright (c) .NET Foundation and Contributors
+All Rights Reserved
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+License notice for BSD-2-Clause
+-------------------------------
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License notice for The MIT License (MIT)
+----------------------------
 Copyright (c) .NET Foundation and Contributors
 
 All rights reserved.
@@ -24,51 +429,55 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-﻿Microsoft Patent Promise for .NET Libraries and Runtime Components 
+License notice for .NET Standard 2.0
+------------------------------
+MIT License (see above)
 
-Microsoft Corporation and its affiliates ("Microsoft") promise not to assert 
-any .NET Patents against you for making, using, selling, offering for sale, 
-importing, or distributing Covered Code, as part of either a .NET Runtime or 
+Microsoft Patent Promise for .NET Libraries and Runtime Components
+
+Microsoft Corporation and its affiliates ("Microsoft") promise not to assert
+any .NET Patents against you for making, using, selling, offering for sale,
+importing, or distributing Covered Code, as part of either a .NET Runtime or
 as part of any application designed to run on a .NET Runtime. 
 
-If you file, maintain, or voluntarily participate in any claim in a lawsuit 
-alleging direct or contributory patent infringement by any Covered Code, or 
-inducement of patent infringement by any Covered Code, then your rights under 
+If you file, maintain, or voluntarily participate in any claim in a lawsuit
+alleging direct or contributory patent infringement by any Covered Code, or
+inducement of patent infringement by any Covered Code, then your rights under
 this promise will automatically terminate. 
 
-This promise is not an assurance that (i) any .NET Patents are valid or 
-enforceable, or (ii) Covered Code does not infringe patents or other 
-intellectual property rights of any third party. No rights except those 
-expressly stated in this promise are granted, waived, or received by 
-Microsoft, whether by implication, exhaustion, estoppel, or otherwise. 
-This is a personal promise directly from Microsoft to you, and you agree as a 
-condition of benefiting from it that no Microsoft rights are received from 
-suppliers, distributors, or otherwise from any other person in connection with 
-this promise. 
+This promise is not an assurance that (i) any .NET Patents are valid or
+enforceable, or (ii) Covered Code does not infringe patents or other
+intellectual property rights of any third party. No rights except those
+expressly stated in this promise are granted, waived, or received by
+Microsoft, whether by implication, exhaustion, estoppel, or otherwise.
+This is a personal promise directly from Microsoft to you, and you agree as a
+condition of benefiting from it that no Microsoft rights are received from
+suppliers, distributors, or otherwise from any other person in connection with
+this promise.
 
-Definitions: 
+Definitions:
 
-"Covered Code" means those Microsoft .NET libraries and runtime components as 
+"Covered Code" means those Microsoft .NET libraries and runtime components as
 made available by Microsoft at https://github.com/dotnet/runtime.
 
-".NET Patents" are those patent claims, both currently owned by Microsoft and 
-acquired in the future, that are necessarily infringed by Covered Code. .NET 
-Patents do not include any patent claims that are infringed by any Enabling 
-Technology, that are infringed only as a consequence of modification of 
-Covered Code, or that are infringed only by the combination of Covered Code 
-with third party code. 
+".NET Patents" are those patent claims, both currently owned by Microsoft and
+acquired in the future, that are necessarily infringed by Covered Code. .NET
+Patents do not include any patent claims that are infringed by any Enabling
+Technology, that are infringed only as a consequence of modification of
+Covered Code, or that are infringed only by the combination of Covered Code
+with third party code.
 
-".NET Runtime" means any compliant implementation in software of (a) all of 
-the required parts of the mandatory provisions of Standard ECMA-335 – Common 
-Language Infrastructure (CLI); and (b) if implemented, any additional 
-functionality in Microsoft's .NET Framework, as described in Microsoft's API 
-documentation on its MSDN website. For example, .NET Runtimes include 
-Microsoft's .NET Framework and those portions of the Mono Project compliant 
-with (a) and (b). 
+".NET Runtime" means any compliant implementation in software of (a) all of
+the required parts of the mandatory provisions of Standard ECMA-335 – Common
+Language Infrastructure (CLI); and (b) if implemented, any additional
+functionality in Microsoft's .NET Framework, as described in Microsoft's API
+documentation on its MSDN website. For example, .NET Runtimes include
+Microsoft's .NET Framework and those portions of the Mono Project compliant
+with (a) and (b).
 
-"Enabling Technology" means underlying or enabling technology that may be 
-used, combined, or distributed in connection with Microsoft's .NET Framework 
-or other .NET Runtimes, such as hardware, operating systems, and applications 
+"Enabling Technology" means underlying or enabling technology that may be
+used, combined, or distributed in connection with Microsoft's .NET Framework
+or other .NET Runtimes, such as hardware, operating systems, and applications
 that run on .NET Framework or other .NET Runtimes. 
 
 .NET Core uses third-party libraries or other resources that may be
@@ -87,8 +496,7 @@ License notice for ASP.NET
 Copyright (c) .NET Foundation. All rights reserved.
 Licensed under the Apache License, Version 2.0.
 
-Available at
-https://github.com/aspnet/AspNetCore/blob/master/LICENSE.txt
+Apache License Version 2.0 (see above)
 
 License notice for Microsoft.EntityFrameworkCore.Relational
 -------------------------------------------------------------------------
@@ -96,27 +504,24 @@ License notice for Microsoft.EntityFrameworkCore.Relational
 Copyright (c) .NET Foundation. All rights reserved.
 Licensed under the Apache License, Version 2.0.
 
-Available at
-https://licenses.nuget.org/Apache-2.0
+Apache License Version 2.0 (see above)
 
-License notice for Slicing-by-8 
+License notice for Slicing-by-8
 -------------------------------
 
 http://sourceforge.net/projects/slicing-by-8/
 
 Copyright (c) 2004-2006 Intel Corporation - All Rights Reserved
 
-
-This software program is licensed subject to the BSD License,  available at
-http://www.opensource.org/licenses/bsd-license.html.
-
+This software program is licensed subject to the BSD License,
+BSD-2-Clause License (see above)
 
 License notice for Unicode data
 -------------------------------
 
 https://www.unicode.org/license.html
 
-Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+Copyright © 1991-2021 Unicode, Inc. All rights reserved.
 Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -186,26 +591,7 @@ License notice for Mono
 http://www.mono-project.com/docs/about-mono/
 
 Copyright (c) .NET Foundation Contributors
-
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software  and associated documentation files (the Software), to deal
-in the Software without restriction,  including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense,  and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so,  subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for International Organization for Standardization
 -----------------------------------------------------------------
@@ -292,32 +678,32 @@ Status: This license takes effect 13 May, 2015.
 This work is being provided by the copyright holders under the following license.
 License
 
-By obtaining and/or copying this work, you (the licensee) agree that you have read, 
+By obtaining and/or copying this work, you (the licensee) agree that you have read,
 understood, and will comply with the following terms and conditions.
-Permission to copy, modify, and distribute this work, with or without modification, 
-for any purpose and without fee or royalty is hereby granted, provided that you 
-include the following on ALL copies of the work or portions thereof, including 
+Permission to copy, modify, and distribute this work, with or without modification,
+for any purpose and without fee or royalty is hereby granted, provided that you
+include the following on ALL copies of the work or portions thereof, including
 modifications:
 
-The full text of this NOTICE in a location viewable to users of the redistributed or 
+The full text of this NOTICE in a location viewable to users of the redistributed or
 derivative work.
 
-Any pre-existing intellectual property disclaimers, notices, or terms and conditions. 
+Any pre-existing intellectual property disclaimers, notices, or terms and conditions.
 
 If none exist, the W3C Software and Document Short Notice should be included.
-Notice of any changes or modifications, through a copyright statement on the new code 
-or document such as "This software or document includes material copied from or derived 
+Notice of any changes or modifications, through a copyright statement on the new code
+or document such as "This software or document includes material copied from or derived
 from [title and URI of the W3C document]. Copyright © [YEAR] W3C® (MIT, ERCIM, Keio, Beihang)."
 
 Disclaimers
-THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, 
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS 
-FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENT WILL NOT INFRINGE 
+THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS
+FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENT WILL NOT INFRINGE
 ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
-COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL 
+COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL
 DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
-The name and trademarks of copyright holders may NOT be used in advertising or publicity 
-pertaining to the work without specific, written prior permission. Title to copyright in 
+The name and trademarks of copyright holders may NOT be used in advertising or publicity
+pertaining to the work without specific, written prior permission. Title to copyright in
 this work will at all times remain with copyright holders."
 
 License notice for Bit Twiddling Hacks
@@ -419,29 +805,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 
 License notice for Json.NET
 -------------------------------
-
-https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
-
-The MIT License (MIT)
-
-Copyright (c) 2007 James Newton-King
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for vectorized base64 encoding / decoding
 --------------------------------------------------------
@@ -506,6 +870,15 @@ BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
 HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
 MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 
+Regarding this entire document or any portion of it (including the
+pseudocode and C code), the author makes no guarantees and is not
+responsible for any damage resulting from its use.  The author grants
+irrevocable permission to anyone to use, modify, and distribute it in
+any way that does not diminish the rights of anyone else to use,
+modify, and distribute it, provided that redistributed derivative
+works do not contain misleading author or version information.
+Derivative works need not be licensed under similar terms.
+
 License notice for Algorithm from Internet Draft document "UUIDs and GUIDs"
 ---------------------------------------------------------------------------
 
@@ -549,7 +922,7 @@ ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY
 RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
 PARTICULAR PURPOSE.
 
-License notice for Algorithm from RFC 4122 - 
+License notice for Algorithm from RFC 4122 -
 A Universally Unique IDentifier (UUID) URN Namespace
 ----------------------------------------------------
 
@@ -570,8 +943,570 @@ Foundation, Inc., Hewlett-Packard Company, Microsoft, nor Digital
 Equipment Corporation makes any representations about the
 suitability of this software for any purpose."
 
+BCP 78
+-------
+1.  Definitions
+
+   The following definitions are for terms used in the context of this
+   document.  Other terms, including "IESG", "ISOC", "IAB", and "RFC
+   Editor" are defined in [RFC2028].
+
+   a. "Contribution": any submission to the IETF intended by the
+      Contributor for publication as all or part of an Internet-Draft or
+      RFC (except for RFC Editor Contributions described in Section 4
+      below) and any statement made within the context of an IETF
+      activity.  Such statements include oral statements in IETF
+      sessions as well as written and electronic communications, made at
+      any time or place, that are addressed to:
+
+      o the IETF plenary session,
+      o any IETF working group or portion thereof,
+      o any Birds of a Feather (BOF) session,
+      o the IESG, or any member thereof on behalf of the IESG,
+      o the IAB, or any member thereof on behalf of the IAB,
+      o any IETF mailing list, including the IETF list itself, any
+        working group or design team list, or any other list functioning
+        under IETF auspices,
+      o the RFC Editor or the Internet-Drafts function (except for RFC
+        Editor Contributions, as described in Section 4 below).
+
+      Statements made outside of an IETF session, mailing list, or other
+      function, that are clearly not intended to be input to an IETF
+      activity, group, or function are not IETF Contributions in the
+      context of this document.
+
+   b. "Contributor": an individual submitting a Contribution.
+
+   c. "Indirect Contributor": any person who has materially or
+      substantially contributed to a Contribution without being
+      personally involved in its submission to the IETF.
+
+   d. "Copyright": the legal right granted to an author in a document or
+      other work of authorship under applicable law.  A "copyright" is
+      not equivalent to a "right to copy".  Rather a copyright
+      encompasses all of the exclusive rights that an author has in a
+      work, such as the rights to copy, publish, distribute and create
+      derivative works of the work.  An author often cedes these rights
+      to his or her employer or other parties as a condition of
+      employment or compensation.
+
+   e. "IETF": in the context of this document, the IETF includes all
+      individuals who participate in meetings, working groups, mailing
+      lists, functions, and other activities that are organized or
+      initiated by ISOC, the IESG, or the IAB under the general
+      designation of the Internet Engineering Task Force (IETF), but
+      solely to the extent of such participation.
+
+   f. "IETF Documents": RFCs and Internet-Drafts that are used in the
+      IETF Standards Process as defined in 1(g).  This is identical to
+      the "IETF stream" defined in [RFC4844].
+
+   g. "IETF Standards Process": the activities undertaken by the IETF in
+      any of the settings described in 1(a) above.
+
+   h. "IETF Trust": a trust established under the laws of the
+      Commonwealth of Virginia, USA, in order to hold and administer
+      intellectual property rights for the benefit of the IETF.
+
+   i. "Internet-Draft": temporary documents used in the IETF Standards
+      Process.  Internet-Drafts are posted on the IETF web site by the
+      IETF Secretariat.  As noted in Section 2.2 of RFC 2026, Internet-
+      Drafts have a nominal maximum lifetime of six months in the IETF
+      Secretariat's public directory.
+
+   j. "Legend Instructions": the standardized text that is maintained by
+      the IETF Trust and is included in IETF Documents and the
+      instructions and requirements for including that standardized text
+      in IETF Documents.  The text and instructions are posted from time
+      to time at http://trustee.ietf.org/license-info.
+
+   k. "RFC": the publication series used by the IETF among others.  RFCs
+      are published by the RFC Editor.  Although RFCs may be superseded
+      in whole or in part by subsequent RFCs, the text of an RFC is not
+      altered once published in RFC form.  (See [RFC2026] Section 2.1.)
+
+   l. "Reasonably and personally known": something an individual knows
+      personally or, because of the job the individual holds, would
+      reasonably be expected to know.  This wording is used to indicate
+      that an organization cannot purposely keep an individual in the
+      dark about certain information just to avoid the disclosure
+      requirement.
+
+   m. "Non-IETF documents": Internet-Drafts that are submitted to the
+      RFC Editor independently of the IETF Standards Process.  (See
+      Section 4.)
+
+2.  Introduction
+
+   In all matters of copyright and document procedures, the intent is to
+   benefit the Internet community and the public at large, while
+   respecting the legitimate rights of others.
+
+   Under the laws of most countries and current international treaties
+   (for example the "Berne Convention for the Protection of Literary and
+   Artistic Work" [Berne]), authors obtain numerous rights in the works
+   they produce automatically upon producing them.  These rights include
+   copyrights, moral rights, and other rights.  In many cases, if the
+   author produces a work within the scope of his or her employment,
+   most of those rights are usually assigned to the employer, either by
+   operation of law or, in many cases, under contract.  (The Berne
+   Convention names some rights as "inalienable", which means that the
+   author retains them in all cases.)
+
+   In order for Contributions to be used within the IETF Standards
+   Process, including when they are published as Internet-Drafts or
+   RFCs, certain limited rights must be granted to the IETF Trust, which
+   then grants the necessary rights to the IETF.  In addition,
+   Contributors must make representations to the IETF Trust and the IETF
+   regarding their ability to grant these rights.
+
+   Section 1 provides definitions used in these policies.  Sections 3
+   and 4 of this document explain the rationale for these provisions.
+   Sections 1, 2, 5, and 6 of this document are normative, the other
+   sections are informative.  RFC 3979 (BCP 79) [RFC3979] deals with
+   rights, including possible patent rights, in technologies developed
+   or specified as part of the IETF Standards Process.  This document is
+   not intended to address those issues.  This memo obsoletes RFCs 3978
+   [RFC3978] and 4748 [RFC4748] and, with RFC 3979 (BCP 79) and
+   [RFC5377], replaces Section 10 of RFC 2026 [RFC2026].
+
+   This document is not intended as legal advice.  Readers are advised
+   to consult their own legal advisors if they would like a legal
+   interpretation of their rights or the rights of the IETF Trust
+   [RFC4371] in any Contributions they make.
+
+2.1.  No Retroactive Effect
+
+   This memo does not retroactively obtain additional rights from
+   Contributions that predate the date that the IETF Trust announces the
+   adoption of these procedures.
+
+3.  Exposition of Why These Procedures Are the Way They Are
+
+3.1.  Rights Granted in Contributions
+
+   The IETF Trust and the IETF must obtain the right to publish an IETF
+   Contribution as an RFC or an Internet-Draft from the Contributors.
+
+   A primary objective of this policy is to obtain from the document
+   authors only the non-exclusive rights that are needed to develop and
+   publish IETF Documents and to use IETF Contributions in the IETF
+   Standards Process and potentially elsewhere.
+
+   The authors retain all other rights, but cannot withdraw the above
+   rights from the IETF Trust and the IETF.
+
+   It is important to note that under this document, Contributors are
+   required to grant certain rights to the IETF Trust (see Section
+   5.3.), which holds all IETF-related intellectual property on behalf
+   of the IETF community.  The IETF Trust will, in turn, grant a
+   sublicense of these rights to all IETF participants for use in the
+   IETF Standards Process (see Section 5.4.).  This sublicense is
+   necessary for the standards development work of the IETF to continue.
+   In addition, the IETF Trust may grant certain other sublicenses of
+   the rights that it is granted under this document.  In granting such
+   other sublicenses, the IETF Trust will be guided and bound by
+   documents such as [RFC5377].
+
+3.2.  Rights to Use Contributions
+
+   It is important that the IETF receive assurances from all
+   Contributors that they have the authority to grant the IETF the
+   rights that they claim to grant because, under the laws of most
+   countries and applicable international treaties, copyright rights
+   come into existence when a work of authorship is created (but see
+   Section 3.5 below regarding public domain documents), and the IETF
+   cannot make use of IETF Contributions if it does not have sufficient
+   rights with respect to these copyright rights.  The IETF and its
+   participants would run a greater risk of liability to the owners of
+   these rights without this assurance.  To this end, the IETF asks
+   Contributors to give the assurances in Section 5.6 below.  These
+   assurances are requested, however, only to the extent of the
+   Contributor's reasonable and personal knowledge.  (See Section 1(l).)
+
+3.3.  Right to Produce Derivative Works
+
+   The IETF needs to be able to evolve IETF Documents in response to
+   experience gained in the deployment of the technologies described in
+   such IETF Documents, to incorporate developments in research, and to
+   react to changing conditions on the Internet and other IP networks.
+   The IETF may also decide to permit others to develop derivative works
+   based on Contributions.  In order to do this, the IETF must be able
+   to produce derivatives of its documents; thus, the IETF must obtain
+   the right from Contributors to produce derivative works.  Note that
+   the right to produce translations is required before any Contribution
+   can be published as an RFC, to ensure the widest possible
+   distribution of the material in RFCs.  The right to produce
+   derivative works, in addition to translations, is required for all
+   IETF Standards Track documents and for most IETF non-Standards Track
+   documents.  There are two exceptions to this requirement: documents
+   describing proprietary technologies and documents that are
+   republications of the work of other standards organizations.
+
+   The right to produce derivative works must be granted in order for an
+   IETF working group to accept a Contribution as a working group
+   document or otherwise work on it.  For non-working group
+   Contributions where the Contributor requests publication as a
+   Standards Track RFC, the right to produce derivative works must be
+   granted before the IESG will issue an IETF Last Call and, for most
+   non-Standards Track, non-working group Contributions, before the IESG
+   will consider the Internet-Draft for publication.  Occasionally a
+   Contributor may not want to grant publication rights or the right to
+   produce derivative works before finding out if a Contribution has
+   been accepted for development in the IETF Standards Process.  In
+   these cases, the Contributor may include a limitation on the right to
+   make derivative works in the form specified in the Legend
+   Instructions.  A working group can discuss the Contribution with the
+   aim to decide if it should become a working group document, even
+   though the right to produce derivative works or to publish the
+   Contribution as an RFC has not yet been granted.  However, if the
+   Contribution is accepted for development, the Contributor must
+   resubmit the Contribution without the limitation notices before a
+   working group can formally adopt the Contribution as a working group
+   document.  The IETF Trust may establish different policies for
+   granting sublicenses with respect to different types of Contributions
+   and content within Contributions (such as executable code versus
+   descriptive text or references to third-party materials).  The IETF
+   Trust's policies concerning the granting of sublicenses to make
+   derivative works will be guided by RFC [RFC5377].
+
+   The IETF has historically encouraged organizations to publish details
+   of their technologies, even when the technologies are proprietary,
+   because understanding how existing technology is being used helps
+   when developing new technology.  But organizations that publish
+   information about proprietary technologies are frequently not willing
+   to have the IETF produce revisions of the technologies and then
+   possibly claim that the IETF version is the "new version" of the
+
+organization's technology.  Organizations that feel this way can
+   specify that a Contribution be published with the other rights
+   granted under this document but may withhold the right to produce
+   derivative works other than translations.
+
+   In addition, IETF Documents frequently make normative references to
+   standards or recommendations developed by other standards
+   organizations.  Since the publications of some standards
+   organizations are not public documents, it can be quite helpful to
+   the IETF to republish, with the permission of the other standards
+   organization, some of these documents as RFCs so that the IETF
+   community can have open access to them to better understand what they
+   are referring to.  In these cases, the RFCs can be published without
+   the right for the IETF to produce derivative works.  In both of the
+   above cases, in which the production of derivative works is excluded,
+   the Contributor must include a special legend in the Contribution, as
+   specified in the Legend Instructions, in order to notify IETF
+   participants about this restriction.
+
+3.4.  Rights to Use Trademarks
+
+   Contributors may wish to seek trademark or service mark protection on
+   any terms that are coined or used in their Contributions.  The IETF
+   makes no judgment about the validity of any such trademark rights.
+   However, the IETF requires each Contributor, under the licenses
+   described in Section 5.3 below, to grant the IETF Trust a perpetual
+   license to use any such trademarks or service marks solely in
+   exercising rights to reproduce, publish, discuss, and modify the IETF
+   Contribution.  This license does not authorize the IETF or others to
+   use any trademark or service mark in connection with any product or
+   service offering.
+
+3.5.  Contributions Not Subject to Copyright
+
+   Certain documents, including those produced by the U.S. government
+   and those which are in the public domain, may not be protected by the
+   same copyright and other legal rights as other documents.
+   Nevertheless, we ask each Contributor to grant to the IETF the same
+   rights he or she would grant, and to make the same representations,
+   as though the IETF Contribution were protected by the same legal
+   rights as other documents, and as though the Contributor could be
+   able to grant these rights.  We ask for these grants and
+   representations only to the extent that the Contribution may be
+   protected.  We believe they are necessary to protect the ISOC, the
+   IETF Trust, the IETF, the IETF Standards Process, and all IETF
+   participants, and because the IETF does not have the resources or
+   wherewithal to make any independent investigation as to the actual
+   proprietary status of any document submitted to it.
+
+3.6.  Copyright in RFCs
+
+   As noted above, Contributors to the IETF (or their employers) retain
+   ownership of the copyright in their Contributions.  This includes
+   Internet-Drafts and all other Contributions made within the IETF
+   Standards Process (e.g., via e-mail, oral comment, and otherwise).
+   However, it is important that the IETF (through the IETF Trust) own
+   the copyright in documents that are published as RFCs (other than
+   Informational RFCs and RFCs that are submitted as RFC Editor
+   Contributions).  Ownership of the copyright in an RFC does not
+   diminish the Contributors' rights in their underlying contributions,
+   but it does prevent anyone other than the IETF Trust (and its
+   licensees) from republishing or modifying an RFC in RFC format.  In
+   this respect, Contributors are treated the same as anybody else:
+   though they may extract and republish their own Contributions without
+   limitation, they may not do so in the RFC format used by the IETF.
+   And while this principle (which is included in Section 5.9 below) may
+   appear to be new to the IETF, it actually reflects historical
+   practice and has been observed for many years through the inclusion
+   of an ISOC or IETF Trust copyright notice on all RFC documents since
+   the publication of RFC 2026.
+
+4.  Non-IETF Documents
+
+   This document only relates to Contributions made as part of the IETF
+   Processes.  Other documents that are referred to as Internet-Drafts
+   and RFCs may be submitted to and published by the RFC Editor
+   independently of the IETF Standards Process.  Such documents are not
+   covered by this document, unless the controlling entity for that
+   document stream, as described in [RFC4844] chooses to apply these
+   rules.  Non-IETF Contributions must be marked appropriately as
+   described in the Legend Instructions.  See the RFC Editor web page
+   for information about the policies concerning rights in RFC Editor
+   Documents; for other document streams, the controlling entity must be
+   contacted.  See Section 11 for a declaration from the IAB on this
+   matter.
+
+5.  Rights in Contributions
+
+5.1.  General Policy
+
+   By submission of a Contribution, each person actually submitting the
+   Contribution and each named co-Contributor is deemed to have read and
+   understood the rules and requirements set forth in this document.
+   Each Contributor is deemed, by the act of submitting a Contribution,
+   to enter into a legally-binding agreement to comply with the terms
+   and conditions set forth in this document.
+
+The Contributor is further deemed to have agreed that he/she has
+   obtained the necessary permissions to enter into such an agreement
+   from any party that the Contributor reasonably and personally knows
+   may have rights in the Contribution, including, but not limited to,
+   the Contributor's sponsor or employer.
+
+   No further acknowledgment, signature, or other action is required to
+   bind a Contributor to these terms and conditions.  The operation of
+   the IETF and the work conducted by its many participants is dependent
+   on such agreement by each Contributor, and each IETF participant
+   expressly relies on the agreement of each Contributor to the terms
+   and conditions set forth in this document.
+
+5.2.  Confidentiality Obligations
+
+   No information or document that is subject to any requirement of
+   confidentiality or any restriction on its dissemination may be
+   submitted as a Contribution or otherwise considered in any part of
+   the IETF Standards Process, and there must be no assumption of any
+   confidentiality obligation with respect to any Contribution.  Each
+   Contributor agrees that any statement in a Contribution, whether
+   generated automatically or otherwise, that states or implies that the
+   Contribution is confidential or subject to any privilege, can be
+   disregarded for all purposes, and will be of no force or effect.
+
+5.3.  Rights Granted by Contributors to the IETF Trust
+
+   To the extent that a Contribution or any portion thereof is protected
+   by copyright or other rights of authorship, the Contributor and each
+   named co-Contributor grant a perpetual, irrevocable, non-exclusive,
+   royalty-free, world-wide, sublicensable right and license to the IETF
+   Trust under all such copyrights and other rights in the Contribution:
+
+   a. to copy, publish, display, and distribute the Contribution, in
+      whole or in part,
+
+   b. to prepare translations of the Contribution into languages other
+      than English, in whole or in part, and to copy, publish, display,
+      and distribute such translations or portions thereof,
+
+   c. to modify or prepare derivative works (in addition to
+      translations) that are based on or incorporate all or part of the
+      Contribution, and to copy, publish, display, and distribute such
+      derivative works, or portions thereof unless explicitly disallowed
+      in the notices contained in a Contribution (in the form specified
+      by the Legend Instructions), and
+
+   d. to reproduce any trademarks, service marks, or trade names which
+      are included in the Contribution solely in connection with the
+      reproduction, distribution, or publication of the Contribution and
+      derivative works thereof as permitted by this Section 5.3,
+      provided that when reproducing Contributions, trademark and
+      service mark identifiers used in the Contribution, including TM
+      and (R), will be preserved.
+
+5.4.  Sublicenses by the IETF Trust
+
+   The IETF Trust will sublicense the rights granted to it under Section
+   5.3 to all IETF participants for use within the IETF Standards
+   Process.  This license is expressly granted under a license agreement
+   issued by the IETF Trust, which can be found at
+   http://trustee.ietf.org/license-info.
+
+   This license is expressly granted under a license agreement issued by
+   the IETF Trust and must contain a pointer to the full IETF Trust
+   agreement.
+
+   In addition, the IETF Trust may grant additional sublicenses of the
+   licenses granted to it hereunder.  In doing so, the IETF Trust will
+   comply with the guidance provided under RFC 5377 [RFC5377].
+
+5.5.  No Patent License
+
+   The licenses granted in Section 5.3 shall not be deemed to grant any
+   right under any patent, patent application, or other similar
+   intellectual property right disclosed by the Contributor under BCP 79
+   [RFC3979] or otherwise.
+
+5.6.  Representations and Warranties
+
+   With respect to each Contribution, each Contributor represents that,
+   to the best of his or her knowledge and ability:
+
+   a. The Contribution properly acknowledges all Contributors, including
+      Indirect Contributors.
+
+   b. No information in the Contribution is confidential, and the IETF,
+      IETF Trust, ISOC, and its affiliated organizations may freely
+      disclose any information in the Contribution.
+
+   c. There are no limits to the Contributor's ability to make the
+      grants, acknowledgments, and agreements herein that are reasonably
+      and personally known to the Contributor.
+
+   d. The Contributor has not intentionally included in the Contribution
+      any material that is defamatory or untrue or which is illegal
+      under the laws of the jurisdiction in which the Contributor has
+      his or her principal place of business or residence.
+
+   e. All trademarks, trade names, service marks, and other proprietary
+      names used in the Contribution that are reasonably and personally
+      known to the Contributor are clearly designated as such where
+      reasonable.
+
+5.7.  No Duty to Publish
+
+   The Contributor, and each named co-Contributor, acknowledges that the
+   IETF has no duty to publish or otherwise use or disseminate any
+   Contribution.  The IETF reserves the right to withdraw or cease using
+   any Contribution that does not comply with the requirements of this
+   Section 5.
+
+5.8.  Trademarks
+
+   Contributors who claim trademark rights in terms used in their IETF
+   Contributions are requested to state specifically what conditions
+   apply to implementers of the technology relative to the use of such
+   trademarks.  Such statements should be submitted in the same way as
+   is done for other intellectual property claims.  (See [RFC3979]
+   Section 6.)
+
+5.9.  Copyright in RFCs
+
+   Subject to each Contributor's (or its sponsor's) ownership of its
+   underlying Contributions as described in Section 5.6 (which ownership
+   is qualified by the irrevocable licenses granted under Section 5.3),
+   each Contributor hereby acknowledges that the copyright in any RFC in
+   which such Contribution is included, other than an RFC that is an RFC
+   Editor Contribution, shall be owned by the IETF Trust.  Such
+   Contributor shall be deemed to assign to the IETF Trust such
+   Contributor's copyright interest in the collective work constituting
+
+   such RFC upon the submission of such RFC for publication, and
+   acknowledges that a copyright notice acknowledging the IETF Trust's
+   ownership of the copyright in such RFC will be included in the
+   published RFC.
+
+5.10.  Contributors' Retention of Rights
+
+   Although Contributors provide specific rights to the IETF, it is not
+   intended that this should deprive them of their right to exploit
+   their Contributions.  To underscore this principle, the IETF Trust is
+
+   directed to issue a license or assurance to Contributors, which
+   confirms that they may each make use of their Contributions as
+   published in an RFC in any way they wish, subject only to the
+   restriction that no Contributor has the right to represent any
+   document as an RFC, or equivalent of an RFC, if it is not a full and
+   complete copy or translation of the published RFC.
+
+6.  Legends, Notices and Other Standardized Text in IETF Documents
+
+   The IETF requires that certain standardized text be reproduced
+   verbatim in certain IETF Documents (including copies, derivative
+   works, and translations of IETF Documents).  Some of this
+   standardized text may be mandatory (e.g., copyright notices and
+   disclaimers that must be included in all RFCs) and some may be
+   optional (e.g., limitations on the right to make derivative works).
+   The text itself, as well as the rules that explain when and how it
+   must be used, is contained in the Legend Instructions.  The Legend
+   Instructions may be updated from time to time, and the version of the
+   standardized text that must be included in IETF Documents is that
+   which was posted in the Legend Instructions on the date of
+   publication.
+
+   The IETF reserves the right to refuse to publish Contributions that
+   do not include the legends and notices required by the Legend
+   Instructions.
+
+   It is important to note that each Contributor grants the IETF Trust
+   rights pursuant to this document and the policies described herein.
+   The legends and notices included in certain written Contributions
+   such as Internet-Drafts do not themselves convey any rights.  They
+   are simply included to inform the reader (whether or not part of the
+   IETF) about certain legal rights and limitations associated with such
+   documents.
+
+   It is also important to note that additional copyright notices are
+   not permitted in IETF Documents except in the case where such
+   document is the product of a joint development effort between the
+   IETF and another standards development organization or is a
+   republication of the work of another standards development
+   organization.  Such exceptions must be approved on an individual
+   basis by the IAB.
+
+7.  Security Considerations
+
+   This memo relates to the IETF process, not any particular technology.
+   There are security considerations when adopting any technology, but
+   there are no known issues of security with IETF Contribution rights
+   policies.
+
 License notice for The LLVM Compiler Infrastructure
 ---------------------------------------------------
+Apache License Version 2.0
+
+---- LLVM Exceptions to the Apache 2.0 License ----
+
+As an exception, if, as a result of your compiling your source code, portions
+of this Software are embedded into an Object form of such source code, you
+may redistribute such embedded portions in such Object form without complying
+with the conditions of Sections 4(a), 4(b) and 4(d) of the License.
+
+In addition, if you combine or link compiled forms of this Software with
+software that is licensed under the GPLv2 ("Combined Software") and if a
+court of competent jurisdiction determines that the patent provision (Section
+3), the indemnity provision (Section 9) or other Section of the License
+conflicts with the conditions of the GPLv2, you may retroactively and
+prospectively choose to deem waived or otherwise exclude such Section(s) of
+the License, but only in their entirety and only with respect to the Combined
+Software.
+
+==============================================================================
+Software from third parties included in the LLVM Project:
+==============================================================================
+The LLVM Project contains third party software which is under different license
+terms. All such code will be identified clearly using at least one of two
+mechanisms:
+1) It will be in a separate directory tree with its own `LICENSE.txt` or
+   `LICENSE` file at the top containing the specific license and restrictions
+   which apply to that software, or
+2) It will contain specific license and restriction terms at the top of every
+   file.
+
+==============================================================================
+Legacy LLVM License (https://llvm.org/docs/DeveloperPolicy.html#legacy):
+==============================================================================
+University of Illinois/NCSA
+Open Source License
+
+Copyright (c) 2003-2019 University of Illinois at Urbana-Champaign.
+All rights reserved.
 
 Developed by:
 
@@ -707,8 +1642,10 @@ License notice for xxHash
 -------------------------
 
 xxHash Library
-Copyright (c) 2012-2014, Yann Collet
+Copyright (c) 2012-2020 Yann Collet
 All rights reserved.
+
+BSD 2-Clause license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -730,6 +1667,28 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------
+
+xxhsum command line interface
+Copyright (c) 2013-2020 Yann Collet
+All rights reserved.
+
+GPL v2 License
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 License notice for Berkeley SoftFloat Release 3e
 ------------------------------------------------
@@ -773,553 +1732,103 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License notice for Xorshift RNGs
+License notice for xoshiro RNGs
 --------------------------------
 
-George Marsaglia
-2003-07-04
-Journal of Statistical Software
-License: http://creativecommons.org/licenses/by/3.0/
+Written in 2018 by David Blackman and Sebastiano Vigna (vigna@acm.org)
 
-https://www.jstatsoft.org/article/view/v008i14
-https://www.jstatsoft.org/index.php/jss/article/view/v008i14/xorshift.pdf
+To the extent possible under law, the author has dedicated all copyright
+and related and neighboring rights to this software to the public domain
+worldwide. This software is distributed without any warranty.
 
-License
+Creative Commons Zero v1.0
 
-THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS 
-PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR 
-OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS 
-LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES.
+DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP.
+CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS
+MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM THE USE OF
+THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER.
 
-BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE 
-BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED 
-TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION 
-OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+Statement of Purpose
 
-1. Definitions
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator and
+subsequent owner(s) (each and all, an "owner") of an original work of authorship
+and/or a database (each, a "Work"). Certain owners wish to permanently relinquish
+those rights to a Work for the purpose of contributing to a commons of creative,
+cultural and scientific works ("Commons") that the public can reliably and without
+fear of later claims of infringement build upon, modify, incorporate in other works,
+reuse and redistribute as freely as possible in any form whatsoever and for any purposes,
+including without limitation commercial purposes. These owners may contribute to the
+Commons to promote the ideal of a free culture and the further production of creative,
+cultural and scientific works, or to gain reputation or greater distribution for their
+ Work in part through the use and efforts of others.
 
-    "Adaptation" means a work based upon the Work, or upon the Work and other 
-    pre-existing works, such as a translation, adaptation, derivative work, arrangement 
-    of music or other alterations of a literary or artistic work, or phonogram or 
-    performance and includes cinematographic adaptations or any other form in which 
-    the Work may be recast, transformed, or adapted including in any form recognizably 
-    derived from the original, except that a work that constitutes a Collection will 
-    not be considered an Adaptation for the purpose of this License. For the avoidance 
-    of doubt, where the Work is a musical work, performance or phonogram, the 
-    synchronization of the Work in timed-relation with a moving image ("synching") 
-    will be considered an Adaptation for the purpose of this License.
-    "Collection" means a collection of literary or artistic works, such as encyclopedias 
-    and anthologies, or performances, phonograms or broadcasts, or other works or subject 
-    matter other than works listed in Section 1(f) below, which, by reason of the 
-    selection and arrangement of their contents, constitute intellectual creations, in 
-    which the Work is included in its entirety in unmodified form along with one or more 
-    other contributions, each constituting separate and independent works in themselves, 
-    which together are assembled into a collective whole. A work that constitutes a 
-    Collection will not be considered an Adaptation (as defined above) for the purposes 
-    of this License.
-    "Distribute" means to make available to the public the original and copies of the 
-    Work or Adaptation, as appropriate, through sale or other transfer of ownership.
-    "Licensor" means the individual, individuals, entity or entities that offer(s) the 
-    Work under the terms of this License.
-    "Original Author" means, in the case of a literary or artistic work, the individual, 
-    individuals, entity or entities who created the Work or if no individual or entity 
-    can be identified, the publisher; and in addition (i) in the case of a performance 
-    the actors, singers, musicians, dancers, and other persons who act, sing, deliver, 
-    declaim, play in, interpret or otherwise perform literary or artistic works or 
-    expressions of folklore; (ii) in the case of a phonogram the producer being the 
-    person or legal entity who first fixes the sounds of a performance or other sounds; 
-    and, (iii) in the case of broadcasts, the organization that transmits the broadcast.
-    "Work" means the literary and/or artistic work offered under the terms of this License 
-    including without limitation any production in the literary, scientific and artistic 
-    domain, whatever may be the mode or form of its expression including digital form, 
-    such as a book, pamphlet and other writing; a lecture, address, sermon or other work 
-    of the same nature; a dramatic or dramatico-musical work; a choreographic work or 
-    entertainment in dumb show; a musical composition with or without words; a 
-    cinematographic work to which are assimilated works expressed by a process analogous 
-    to cinematography; a work of drawing, painting, architecture, sculpture, engraving or 
-    lithography; a photographic work to which are assimilated works expressed by a process 
-    analogous to photography; a work of applied art; an illustration, map, plan, sketch or 
-    three-dimensional work relative to geography, topography, architecture or science; a 
-    performance; a broadcast; a phonogram; a compilation of data to the extent it is 
-    protected as a copyrightable work; or a work performed by a variety or circus performer 
-    to the extent it is not otherwise considered a literary or artistic work.
-    "You" means an individual or entity exercising rights under this License who has not 
-    previously violated the terms of this License with respect to the Work, or who has 
-    received express permission from the Licensor to exercise rights under this License 
-    despite a previous violation.
-    "Publicly Perform" means to perform public recitations of the Work and to communicate 
-    to the public those public recitations, by any means or process, including by wire or 
-    wireless means or public digital performances; to make available to the public Works 
-    in such a way that members of the public may access these Works from a place and at a 
-    place individually chosen by them; to perform the Work to the public by any means or 
-    process and the communication to the public of the performances of the Work, including 
-    by public digital performance; to broadcast and rebroadcast the Work by any means 
-    including signs, sounds or images.
-    "Reproduce" means to make copies of the Work by any means including without limitation 
-    by sound or visual recordings and the right of fixation and reproducing fixations of 
-    the Work, including storage of a protected performance or phonogram in digital form or 
-    other electronic medium.
+For these and/or other purposes and motivations, and without any expectation of additional
+consideration or compensation, the person associating CC0 with a Work (the "Affirmer"),
+to the extent that he or she is an owner of Copyright and Related Rights in the Work,
+voluntarily elects to apply CC0 to the Work and publicly distribute the Work under its terms,
+with knowledge of his or her Copyright and Related Rights in the Work and the meaning and
+intended legal effect of CC0 on those rights.
 
-2. Fair Dealing Rights. Nothing in this License is intended to reduce, limit, or restrict 
-any uses free from copyright or rights arising from limitations or exceptions that are provided 
-for in connection with the copyright protection under copyright law or other applicable laws.
+1. Copyright and Related Rights. A Work made available under CC0 may be protected by copyright
+and related or neighboring rights ("Copyright and Related Rights"). Copyright and Related Rights
+include, but are not limited to, the following: the right to reproduce, adapt, distribute, perform,
+display, communicate, and translate a Work; moral rights retained by the original author(s) and/or
+performer(s); publicity and privacy rights pertaining to a person's image or likeness depicted in a Work;
+rights protecting against unfair competition in regards to a Work, subject to the limitations in paragraph
+4(a), below; rights protecting the extraction, dissemination, use and reuse of data in a Work;
+database rights (such as those arising under Directive 96/9/EC of the European Parliament
+and of the Council of 11 March 1996 on the legal protection of databases, and under any national
+implementation thereof, including any amended or successor version of such directive); and
+other similar, equivalent or corresponding rights throughout the world based on applicable law or treaty,
+and any national implementations thereof.
 
-3. License Grant. Subject to the terms and conditions of this License, Licensor hereby grants 
-You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable 
-copyright) license to exercise the rights in the Work as stated below:
+2. Waiver. To the greatest extent permitted by, but not in contravention of, applicable law,
+Affirmer hereby overtly, fully, permanently, irrevocably and unconditionally waives, abandons,
+and surrenders all of Affirmer's Copyright and Related Rights and associated claims and causes
+of action, whether now known or unknown (including existing as well as future claims and causes
+of action), in the Work (i) in all territories worldwide, (ii) for the maximum duration provided
+by applicable law or treaty (including future time extensions), (iii) in any current or future
+medium and for any number of copies, and (iv) for any purpose whatsoever, including without
+limitation commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes
+the Waiver for the benefit of each member of the public at large and to the detriment of Affirmer's
+heirs and successors, fully intending that such Waiver shall not be subject to revocation, rescission,
+cancellation, termination, or any other legal or equitable action to disrupt the quiet enjoyment
+of the Work by the public as contemplated by Affirmer's express Statement of Purpose.
 
-    to Reproduce the Work, to incorporate the Work into one or more Collections, and to 
-    Reproduce the Work as incorporated in the Collections;
-    to create and Reproduce Adaptations provided that any such Adaptation, including any 
-    translation in any medium, takes reasonable steps to clearly label, demarcate or otherwise 
-    identify that changes were made to the original Work. For example, a translation could 
-    be marked "The original work was translated from English to Spanish," or a modification 
-    could indicate "The original work has been modified.";
-    to Distribute and Publicly Perform the Work including as incorporated in Collections; and,
-    to Distribute and Publicly Perform Adaptations.
+3. Public License Fallback. Should any part of the Waiver for any reason be judged legally
+invalid or ineffective under applicable law, then the Waiver shall be preserved to the maximum
+extent permitted taking into account Affirmer's express Statement of Purpose. In addition,
+to the extent the Waiver is so judged Affirmer hereby grants to each affected person a royalty-free,
+non transferable, non sublicensable, non exclusive, irrevocable and unconditional license to
+exercise Affirmer's Copyright and Related Rights in the Work (i) in all territories worldwide,
+(ii) for the maximum duration provided by applicable law or treaty (including future time extensions),
+(iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever,
+including without limitation commercial, advertising or promotional purposes (the "License").
+The License shall be deemed effective as of the date CC0 was applied by Affirmer to the Work.
+Should any part of the License for any reason be judged legally invalid or ineffective under
+applicable law, such partial invalidity or ineffectiveness shall not invalidate the remainder
+of the License, and in such case Affirmer hereby affirms that he or she will not (i) exercise
+any of his or her remaining Copyright and Related Rights in the Work or (ii) assert any associated
+claims and causes of action with respect to the Work, in either case contrary to Affirmer's express
+Statement of Purpose.
 
-    For the avoidance of doubt:
-        Non-waivable Compulsory License Schemes. In those jurisdictions in which the right to 
-        collect royalties through any statutory or compulsory licensing scheme cannot be waived, 
-        the Licensor reserves the exclusive right to collect such royalties for any exercise by 
-        You of the rights granted under this License;
-        Waivable Compulsory License Schemes. In those jurisdictions in which the right to collect 
-        royalties through any statutory or compulsory licensing scheme can be waived, the 
-        Licensor waives the exclusive right to collect such royalties for any exercise by You 
-        of the rights granted under this License; and,
-        Voluntary License Schemes. The Licensor waives the right to collect royalties, whether 
-        individually or, in the event that the Licensor is a member of a collecting society that 
-        administers voluntary licensing schemes, via that society, from any exercise by You of 
-        the rights granted under this License.
+4. Limitations and Disclaimers.
 
-The above rights may be exercised in all media and formats whether now known or hereafter devised. 
-The above rights include the right to make such modifications as are technically necessary to exercise 
-the rights in other media and formats. Subject to Section 8(f), all rights not expressly granted by 
-Licensor are hereby reserved.
-
-4. Restrictions. The license granted in Section 3 above is expressly made subject to and limited by 
-the following restrictions:
-
-    You may Distribute or Publicly Perform the Work only under the terms of this License. You must 
-    include a copy of, or the Uniform Resource Identifier (URI) for, this License with every copy of 
-    the Work You Distribute or Publicly Perform. You may not offer or impose any terms on the Work 
-    that restrict the terms of this License or the ability of the recipient of the Work to exercise 
-    the rights granted to that recipient under the terms of the License. You may not sublicense the 
-    Work. You must keep intact all notices that refer to this License and to the disclaimer of 
-    warranties with every copy of the Work You Distribute or Publicly Perform. When You Distribute 
-    or Publicly Perform the Work, You may not impose any effective technological measures on the 
-    Work that restrict the ability of a recipient of the Work from You to exercise the rights granted 
-    to that recipient under the terms of the License. This Section 4(a) applies to the Work as 
-    incorporated in a Collection, but this does not require the Collection apart from the Work itself 
-    to be made subject to the terms of this License. If You create a Collection, upon notice from any 
-    Licensor You must, to the extent practicable, remove from the Collection any credit as required 
-    by Section 4(b), as requested. If You create an Adaptation, upon notice from any Licensor You must, 
-    to the extent practicable, remove from the Adaptation any credit as required by Section 4(b), as 
-    requested.
-    If You Distribute, or Publicly Perform the Work or any Adaptations or Collections, You must, 
-    unless a request has been made pursuant to Section 4(a), keep intact all copyright notices for 
-    the Work and provide, reasonable to the medium or means You are utilizing: (i) the name of the 
-    Original Author (or pseudonym, if applicable) if supplied, and/or if the Original Author and/or 
-    Licensor designate another party or parties (e.g., a sponsor institute, publishing entity, 
-    journal) for attribution ("Attribution Parties") in Licensor's copyright notice, terms of service 
-    or by other reasonable means, the name of such party or parties; (ii) the title of the Work if 
-    supplied; (iii) to the extent reasonably practicable, the URI, if any, that Licensor specifies 
-    to be associated with the Work, unless such URI does not refer to the copyright notice or 
-    licensing information for the Work; and (iv) , consistent with Section 3(b), in the case of an 
-    Adaptation, a credit identifying the use of the Work in the Adaptation (e.g., "French translation 
-    of the Work by Original Author," or "Screenplay based on original Work by Original Author"). 
-    The credit required by this Section 4 (b) may be implemented in any reasonable manner; provided, 
-    however, that in the case of a Adaptation or Collection, at a minimum such credit will appear, 
-    if a credit for all contributing authors of the Adaptation or Collection appears, then as part 
-    of these credits and in a manner at least as prominent as the credits for the other contributing 
-    authors. For the avoidance of doubt, You may only use the credit required by this Section for 
-    the purpose of attribution in the manner set out above and, by exercising Your rights under this 
-    License, You may not implicitly or explicitly assert or imply any connection with, sponsorship 
-    or endorsement by the Original Author, Licensor and/or Attribution Parties, as appropriate, of 
-    You or Your use of the Work, without the separate, express prior written permission of the 
-    Original Author, Licensor and/or Attribution Parties.
-    Except as otherwise agreed in writing by the Licensor or as may be otherwise permitted by 
-    applicable law, if You Reproduce, Distribute or Publicly Perform the Work either by itself or 
-    as part of any Adaptations or Collections, You must not distort, mutilate, modify or take other 
-    derogatory action in relation to the Work which would be prejudicial to the Original Author's 
-    honor or reputation. Licensor agrees that in those jurisdictions (e.g. Japan), in which any 
-    exercise of the right granted in Section 3(b) of this License (the right to make Adaptations) 
-    would be deemed to be a distortion, mutilation, modification or other derogatory action 
-    prejudicial to the Original Author's honor and reputation, the Licensor will waive or not 
-    assert, as appropriate, this Section, to the fullest extent permitted by the applicable national 
-    law, to enable You to reasonably exercise Your right under Section 3(b) of this License (right 
-    to make Adaptations) but not otherwise.
-
-5. Representations, Warranties and Disclaimer
-
-UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND 
-MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY 
-OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A 
-PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE 
-PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE 
-EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
-
-6. Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL 
-LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE 
-OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN 
-ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-
-7. Termination
-
-    This License and the rights granted hereunder will terminate automatically upon any breach 
-    by You of the terms of this License. Individuals or entities who have received Adaptations 
-    or Collections from You under this License, however, will not have their licenses terminated 
-    provided such individuals or entities remain in full compliance with those licenses. 
-    Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this License.
-    Subject to the above terms and conditions, the license granted here is perpetual (for the 
-    duration of the applicable copyright in the Work). Notwithstanding the above, Licensor 
-    reserves the right to release the Work under different license terms or to stop distributing 
-    the Work at any time; provided, however that any such election will not serve to withdraw 
-    this License (or any other license that has been, or is required to be, granted under the 
-    terms of this License), and this License will continue in full force and effect unless 
-    terminated as stated above.
-
-8. Miscellaneous
-
-    Each time You Distribute or Publicly Perform the Work or a Collection, the Licensor offers 
-    to the recipient a license to the Work on the same terms and conditions as the license granted 
-    to You under this License.
-    Each time You Distribute or Publicly Perform an Adaptation, Licensor offers to the recipient 
-    a license to the original Work on the same terms and conditions as the license granted to You 
-    under this License.
-    If any provision of this License is invalid or unenforceable under applicable law, it shall 
-    not affect the validity or enforceability of the remainder of the terms of this License, and 
-    without further action by the parties to this agreement, such provision shall be reformed to 
-    the minimum extent necessary to make such provision valid and enforceable.
-    No term or provision of this License shall be deemed waived and no breach consented to unless 
-    such waiver or consent shall be in writing and signed by the party to be charged with such 
-    waiver or consent.
-    This License constitutes the entire agreement between the parties with respect to the Work 
-    licensed here. There are no understandings, agreements or representations with respect to 
-    the Work not specified here. Licensor shall not be bound by any additional provisions that 
-    may appear in any communication from You. This License may not be modified without the mutual 
-    written agreement of the Licensor and You.
-    The rights granted under, and the subject matter referenced, in this License were drafted 
-    utilizing the terminology of the Berne Convention for the Protection of Literary and Artistic 
-    Works (as amended on September 28, 1979), the Rome Convention of 1961, the WIPO Copyright 
-    Treaty of 1996, the WIPO Performances and Phonograms Treaty of 1996 and the Universal Copyright 
-    Convention (as revised on July 24, 1971). These rights and subject matter take effect in the 
-    relevant jurisdiction in which the License terms are sought to be enforced according to the 
-    corresponding provisions of the implementation of those treaty provisions in the applicable 
-    national law. If the standard suite of rights granted under applicable copyright law includes 
-    additional rights not granted under this License, such additional rights are deemed to be 
-    included in the License; this License is not intended to restrict the license of any rights 
-    under applicable law.
-
-
-License notice for Xorshift (Wikipedia)
----------------------------------------
-
-https://en.wikipedia.org/wiki/Xorshift
-License: https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
-
-License
-	CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. 
-    DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE 
-    COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO 
-    WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES 
-    RESULTING FROM ITS USE.
-
-THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC 
-LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE 
-LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW 
-IS PROHIBITED.
-
-BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY 
-THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A 
-CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR 
-ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
-1. Definitions
-
-    "Adaptation" means a work based upon the Work, or upon the Work and other pre-existing 
-    works, such as a translation, adaptation, derivative work, arrangement of music or 
-    other alterations of a literary or artistic work, or phonogram or performance and 
-    includes cinematographic adaptations or any other form in which the Work may be 
-    recast, transformed, or adapted including in any form recognizably derived from 
-    the original, except that a work that constitutes a Collection will not be considered 
-    an Adaptation for the purpose of this License. For the avoidance of doubt, where 
-    the Work is a musical work, performance or phonogram, the synchronization of the 
-    Work in timed-relation with a moving image ("synching") will be considered an 
-    Adaptation for the purpose of this License.
-    "Collection" means a collection of literary or artistic works, such as encyclopedias 
-    and anthologies, or performances, phonograms or broadcasts, or other works or subject 
-    matter other than works listed in Section 1(f) below, which, by reason of the 
-    selection and arrangement of their contents, constitute intellectual creations, 
-    in which the Work is included in its entirety in unmodified form along with one or 
-    more other contributions, each constituting separate and independent works in 
-    themselves, which together are assembled into a collective whole. A work that 
-    constitutes a Collection will not be considered an Adaptation (as defined below) 
-    for the purposes of this License.
-    "Creative Commons Compatible License" means a license that is listed at 
-    https://creativecommons.org/compatiblelicenses that has been approved by Creative 
-    Commons as being essentially equivalent to this License, including, at a minimum, 
-    because that license: (i) contains terms that have the same purpose, meaning and 
-    effect as the License Elements of this License; and, (ii) explicitly permits the 
-    relicensing of adaptations of works made available under that license under this 
-    License or a Creative Commons jurisdiction license with the same License Elements 
-    as this License.
-    "Distribute" means to make available to the public the original and copies of 
-    the Work or Adaptation, as appropriate, through sale or other transfer of ownership.
-    "License Elements" means the following high-level license attributes as selected 
-    by Licensor and indicated in the title of this License: Attribution, ShareAlike.
-    "Licensor" means the individual, individuals, entity or entities that offer(s) 
-    the Work under the terms of this License.
-    "Original Author" means, in the case of a literary or artistic work, the individual, 
-    individuals, entity or entities who created the Work or if no individual or entity 
-    can be identified, the publisher; and in addition (i) in the case of a performance 
-    the actors, singers, musicians, dancers, and other persons who act, sing, deliver, 
-    declaim, play in, interpret or otherwise perform literary or artistic works or 
-    expressions of folklore; (ii) in the case of a phonogram the producer being 
-    the person or legal entity who first fixes the sounds of a performance or other 
-    sounds; and, (iii) in the case of broadcasts, the organization that transmits 
-    the broadcast.
-    "Work" means the literary and/or artistic work offered under the terms of this 
-    License including without limitation any production in the literary, scientific 
-    and artistic domain, whatever may be the mode or form of its expression including 
-    digital form, such as a book, pamphlet and other writing; a lecture, address, 
-    sermon or other work of the same nature; a dramatic or dramatico-musical work; 
-    a choreographic work or entertainment in dumb show; a musical composition with 
-    or without words; a cinematographic work to which are assimilated works expressed 
-    by a process analogous to cinematography; a work of drawing, painting, 
-    architecture, sculpture, engraving or lithography; a photographic work to which 
-    are assimilated works expressed by a process analogous to photography; a work 
-    of applied art; an illustration, map, plan, sketch or three-dimensional work 
-    relative to geography, topography, architecture or science; a performance; a 
-    broadcast; a phonogram; a compilation of data to the extent it is protected as 
-    a copyrightable work; or a work performed by a variety or circus performer to 
-    the extent it is not otherwise considered a literary or artistic work.
-    "You" means an individual or entity exercising rights under this License who 
-    has not previously violated the terms of this License with respect to the Work, 
-    or who has received express permission from the Licensor to exercise rights 
-    under this License despite a previous violation.
-    "Publicly Perform" means to perform public recitations of the Work and to 
-    communicate to the public those public recitations, by any means or process, 
-    including by wire or wireless means or public digital performances; to make 
-    available to the public Works in such a way that members of the public may 
-    access these Works from a place and at a place individually chosen by them; 
-    to perform the Work to the public by any means or process and the communication 
-    to the public of the performances of the Work, including by public digital 
-    performance; to broadcast and rebroadcast the Work by any means including 
-    signs, sounds or images.
-    "Reproduce" means to make copies of the Work by any means including without 
-    limitation by sound or visual recordings and the right of fixation and reproducing 
-    fixations of the Work, including storage of a protected performance or phonogram 
-    in digital form or other electronic medium.
-
-2. Fair Dealing Rights
-
-Nothing in this License is intended to reduce, limit, or restrict any uses free 
-
-from copyright or rights arising from limitations or exceptions that are provided 
-for in connection with the copyright protection under copyright law or other 
-applicable laws.
-
-3. License Grant
-
-Subject to the terms and conditions of this License, Licensor hereby grants You 
-a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the 
-applicable copyright) license to exercise the rights in the Work as stated below:
-
-    to Reproduce the Work, to incorporate the Work into one or more Collections, 
-    and to Reproduce the Work as incorporated in the Collections;
-    to create and Reproduce Adaptations provided that any such Adaptation, 
-    including any translation in any medium, takes reasonable steps to clearly 
-    label, demarcate or otherwise identify that changes were made to the original 
-    Work. For example, a translation could be marked "The original work was 
-    translated from English to Spanish," or a modification could indicate "The 
-    original work has been modified.";
-    to Distribute and Publicly Perform the Work including as incorporated in 
-    Collections; and, to Distribute and Publicly Perform Adaptations.
-    For the avoidance of doubt:
-        Non-waivable Compulsory License Schemes. In those jurisdictions in which the 
-        right to collect royalties through any statutory or compulsory licensing 
-        scheme cannot be waived, the Licensor reserves the exclusive right to 
-        collect such royalties for any exercise by You of the rights granted 
-        under this License;
-        Waivable Compulsory License Schemes. In those jurisdictions in which 
-        the right to collect royalties through any statutory or compulsory 
-        licensing scheme can be waived, the Licensor waives the exclusive 
-        right to collect such royalties for any exercise by You of the rights 
-        granted under this License; and,
-        Voluntary License Schemes. The Licensor waives the right to collect 
-        royalties, whether individually or, in the event that the Licensor is 
-        a member of a collecting society that administers voluntary licensing 
-        schemes, via that society, from any exercise by You of the rights 
-        granted under this License.
-
-The above rights may be exercised in all media and formats whether now known or 
-hereafter devised. The above rights include the right to make such modifications 
-as are technically necessary to exercise the rights in other media and formats. 
-Subject to Section 8(f), all rights not expressly granted by Licensor are hereby 
-reserved.
-
-4. Restrictions
-
-The license granted in Section 3 above is expressly made subject to and 
-limited by the following restrictions:
-
-    You may Distribute or Publicly Perform the Work only under the terms of 
-    this License. You must include a copy of, or the Uniform Resource Identifier 
-    (URI) for, this License with every copy of the Work You Distribute or 
-    Publicly Perform. You may not offer or impose any terms on the Work that 
-    restrict the terms of this License or the ability of the recipient of the 
-    Work to exercise the rights granted to that recipient under the terms of 
-    the License. You may not sublicense the Work. You must keep intact all 
-    notices that refer to this License and to the disclaimer of warranties 
-    with every copy of the Work You Distribute or Publicly Perform. When You 
-    Distribute or Publicly Perform the Work, You may not impose any effective 
-    technological measures on the Work that restrict the ability of a recipient 
-    of the Work from You to exercise the rights granted to that recipient under 
-    the terms of the License. This Section 4(a) applies to the Work as 
-    incorporated in a Collection, but this does not require the Collection apart 
-    from the Work itself to be made subject to the terms of this License. If 
-    You create a Collection, upon notice from any Licensor You must, to the 
-    extent practicable, remove from the Collection any credit as required by 
-    Section 4(c), as requested. If You create an Adaptation, upon notice from 
-    any Licensor You must, to the extent practicable, remove from the Adaptation 
-    any credit as required by Section 4(c), as requested.
-    You may Distribute or Publicly Perform an Adaptation only under the terms 
-    of: (i) this License; (ii) a later version of this License with the same 
-    License Elements as this License; (iii) a Creative Commons jurisdiction 
-    license (either this or a later license version) that contains the same 
-    License Elements as this License (e.g., Attribution-ShareAlike 3.0 US)); 
-    (iv) a Creative Commons Compatible License. If you license the Adaptation 
-    under one of the licenses mentioned in (iv), you must comply with the terms 
-    of that license. If you license the Adaptation under the terms of any of 
-    the licenses mentioned in (i), (ii) or (iii) (the "Applicable License"), 
-    you must comply with the terms of the Applicable License generally and the 
-    following provisions: (I) You must include a copy of, or the URI for, the 
-    Applicable License with every copy of each Adaptation You Distribute or 
-    Publicly Perform; (II) You may not offer or impose any terms on the 
-    Adaptation that restrict the terms of the Applicable License or the 
-    ability of the recipient of the Adaptation to exercise the rights granted 
-    to that recipient under the terms of the Applicable License; (III) You 
-    must keep intact all notices that refer to the Applicable License and to 
-    the disclaimer of warranties with every copy of the Work as included in 
-    the Adaptation You Distribute or Publicly Perform; (IV) when You Distribute 
-    or Publicly Perform the Adaptation, You may not impose any effective 
-    technological measures on the Adaptation that restrict the ability of a 
-    recipient of the Adaptation from You to exercise the rights granted to that 
-    recipient under the terms of the Applicable License. This Section 4(b) 
-    applies to the Adaptation as incorporated in a Collection, but this does 
-    not require the Collection apart from the Adaptation itself to be made 
-    subject to the terms of the Applicable License.
-    If You Distribute, or Publicly Perform the Work or any Adaptations or 
-    Collections, You must, unless a request has been made pursuant to Section 
-    4(a), keep intact all copyright notices for the Work and provide, 
-    reasonable to the medium or means You are utilizing: (i) the name of the 
-    Original Author (or pseudonym, if applicable) if supplied, and/or if the 
-    Original Author and/or Licensor designate another party or parties (e.g., 
-    a sponsor institute, publishing entity, journal) for attribution ("Attribution 
-    Parties") in Licensor's copyright notice, terms of service or by other 
-    reasonable means, the name of such party or parties; (ii) the title of the 
-    Work if supplied; (iii) to the extent reasonably practicable, the URI, if any, 
-    that Licensor specifies to be associated with the Work, unless such URI does 
-    not refer to the copyright notice or licensing information for the Work; 
-    and (iv) , consistent with Section 3(b), in the case of an Adaptation, a 
-    credit identifying the use of the Work in the Adaptation (e.g., "French 
-    translation of the Work by Original Author," or "Screenplay based on 
-    original Work by Original Author"). The credit required by this Section 
-    4(c) may be implemented in any reasonable manner; provided, however, that 
-    in the case of a Adaptation or Collection, at a minimum such credit will 
-    appear, if a credit for all contributing authors of the Adaptation or 
-    Collection appears, then as part of these credits and in a manner at least 
-    as prominent as the credits for the other contributing authors. For the 
-    avoidance of doubt, You may only use the credit required by this Section 
-    for the purpose of attribution in the manner set out above and, by exercising 
-    Your rights under this License, You may not implicitly or explicitly assert 
-    or imply any connection with, sponsorship or endorsement by the Original Author, 
-    Licensor and/or Attribution Parties, as appropriate, of You or Your use of 
-    the Work, without the separate, express prior written permission of the 
-    Original Author, Licensor and/or Attribution Parties.
-    Except as otherwise agreed in writing by the Licensor or as may be otherwise 
-    permitted by applicable law, if You Reproduce, Distribute or Publicly Perform 
-    the Work either by itself or as part of any Adaptations or Collections, You 
-    must not distort, mutilate, modify or take other derogatory action in 
-    relation to the Work which would be prejudicial to the Original Author's 
-    honor or reputation. Licensor agrees that in those jurisdictions (e.g. Japan), 
-    in which any exercise of the right granted in Section 3(b) of this License 
-    (the right to make Adaptations) would be deemed to be a distortion, 
-    mutilation, modification or other derogatory action prejudicial to the 
-    Original Author's honor and reputation, the Licensor will waive or not 
-    assert, as appropriate, this Section, to the fullest extent permitted by 
-    the applicable national law, to enable You to reasonably exercise Your right 
-    under Section 3(b) of this License (right to make Adaptations) but not otherwise.
-
-5. Representations, Warranties and Disclaimer
-
-UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS 
-THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING 
-THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, 
-WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, 
-NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE 
-PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS 
-DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT 
-APPLY TO YOU.
-6. Limitation on Liability
-
-EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE 
-LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, 
-PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, 
-EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-7. Termination
-
-    This License and the rights granted hereunder will terminate automatically 
-    upon any breach by You of the terms of this License. Individuals or entities 
-    who have received Adaptations or Collections from You under this License, 
-    however, will not have their licenses terminated provided such individuals 
-    or entities remain in full compliance with those licenses. Sections 1, 2, 
-    5, 6, 7, and 8 will survive any termination of this License.
-    Subject to the above terms and conditions, the license granted here is 
-    perpetual (for the duration of the applicable copyright in the Work). 
-    Notwithstanding the above, Licensor reserves the right to release the Work 
-    under different license terms or to stop distributing the Work at any time; 
-    provided, however that any such election will not serve to withdraw this 
-    License (or any other license that has been, or is required to be, granted 
-    under the terms of this License), and this License will continue in full 
-    force and effect unless terminated as stated above.
-
-8. Miscellaneous
-
-    Each time You Distribute or Publicly Perform the Work or a Collection, the 
-    Licensor offers to the recipient a license to the Work on the same terms 
-    and conditions as the license granted to You under this License.
-    Each time You Distribute or Publicly Perform an Adaptation, Licensor offers 
-    to the recipient a license to the original Work on the same terms and 
-    conditions as the license granted to You under this License.
-    If any provision of this License is invalid or unenforceable under applicable 
-    law, it shall not affect the validity or enforceability of the remainder 
-    of the terms of this License, and without further action by the parties to 
-    this agreement, such provision shall be reformed to the minimum extent 
-    necessary to make such provision valid and enforceable.
-    No term or provision of this License shall be deemed waived and no breach 
-    consented to unless such waiver or consent shall be in writing and signed 
-    by the party to be charged with such waiver or consent.
-    This License constitutes the entire agreement between the parties with 
-    respect to the Work licensed here. There are no understandings, agreements 
-    or representations with respect to the Work not specified here. Licensor 
-    shall not be bound by any additional provisions that may appear in any 
-    communication from You. This License may not be modified without the 
-    mutual written agreement of the Licensor and You.
-    The rights granted under, and the subject matter referenced, in this 
-    License were drafted utilizing the terminology of the Berne Convention 
-    for the Protection of Literary and Artistic Works (as amended on September 
-    28, 1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, 
-    the WIPO Performances and Phonograms Treaty of 1996 and the Universal 
-    Copyright Convention (as revised on July 24, 1971). These rights and subject 
-    matter take effect in the relevant jurisdiction in which the License 
-    terms are sought to be enforced according to the corresponding provisions 
-    of the implementation of those treaty provisions in the applicable national 
-    law. If the standard suite of rights granted under applicable copyright 
-    law includes additional rights not granted under this License, such additional 
-    rights are deemed to be included in the License; this License is not intended 
-    to restrict the license of any rights under applicable law.
-
+No trademark or patent rights held by Affirmer are waived, abandoned, surrendered, licensed
+or otherwise affected by this document. Affirmer offers the Work as-is and makes no representations
+or warranties of any kind concerning the Work, express, implied, statutory or otherwise, including
+without limitation warranties of title, merchantability, fitness for a particular purpose, non infringement,
+or the absence of latent or other defects, accuracy, or the present or absence of errors, whether or
+not discoverable, all to the greatest extent permissible under applicable law.
+Affirmer disclaims responsibility for clearing rights of other persons that may apply to the Work
+or any use thereof, including without limitation any person's Copyright and Related Rights in the Work.
+Further, Affirmer disclaims responsibility for obtaining any necessary consents,
+permissions or other rights required for any use of the Work.
+Affirmer understands and acknowledges that Creative Commons is not a party to this document
+and has no duty or obligation with respect to this CC0 or use of the Work.
 
 License for fastmod (https://github.com/lemire/fastmod)
 --------------------------------------
@@ -1330,7 +1839,7 @@ License for fastmod (https://github.com/lemire/fastmod)
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+  Apache License version 2.0 (see above)
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -1340,59 +1849,15 @@ License for fastmod (https://github.com/lemire/fastmod)
 
 License notice for The C++ REST SDK
 -----------------------------------
-
 C++ REST SDK
-
-The MIT License (MIT)
-
-Copyright (c) Microsoft Corporation
-
-All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for MessagePack-CSharp
 -------------------------------------
 
 MessagePack for C#
-
-MIT License
-
 Copyright (c) 2017 Yoshifumi Kawai
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for lz4net
 -------------------------------------
@@ -1403,51 +1868,31 @@ Copyright (c) 2013-2017, Milosz Krajewski
 
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, 
+Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 
-Redistributions of source code must retain the above copyright notice, this list 
+Redistributions of source code must retain the above copyright notice, this list
 of conditions and the following disclaimer.
 
-Redistributions in binary form must reproduce the above copyright notice, this 
-list of conditions and the following disclaimer in the documentation and/or 
+Redistributions in binary form must reproduce the above copyright notice, this
+list of conditions and the following disclaimer in the documentation and/or
 other materials provided with the distribution.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License notice for Nerdbank.Streams
 -----------------------------------
-
-The MIT License (MIT)
-
 Copyright (c) Andrew Arnott
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for RapidJSON
 ----------------------------
@@ -1457,81 +1902,137 @@ Tencent is pleased to support the open source community by making RapidJSON avai
 Copyright (C) 2015 THL A29 Limited, a Tencent company, and Milo Yip. All rights reserved.
 
 Licensed under the MIT License (the "License"); you may not use this file except
-in compliance with the License. You may obtain a copy of the License at
+in compliance with the License.
 
-http://opensource.org/licenses/MIT
+MIT License (MIT) (see above)
 
 Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
 
+License notice for DirectX Math Library
+---------------------------------------
+https://github.com/microsoft/DirectXMath/blob/master/LICENSE
+MIT License (MIT) (see above)
+Copyright (c) 2011-2020 Microsoft Corp
+
+License notice for ldap4net
+---------------------------
+MIT License (MIT) (see above)
+Copyright (c) 2018 Alexander Chermyanin
+
+License notice for vectorized sorting code
+------------------------------------------
+MIT License (MIT) (see above)
+Copyright (c) 2020 Dan Shechter
+
+License notice for musl
+-----------------------
+MIT License (MIT) (see above)
+Copyright © 2005-2020 Rich Felker, et al.
+
+License notice for Sun Microsystems
+-----------------------------------
+Copyright (c) 2002 Sun Microsystems, Inc. All  Rights Reserved.
+
+Redistribution  and use in  source  and binary  forms,  with or
+without modification, are permitted provided that the following
+conditions are met:
+
+ -Redistribution of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+ -Redistribution  in  binary  form  must  reproduce  the  above
+  copyright notice,  this list of conditions and  the following
+  disclaimer  in  the  documentation  and/or  other   materials
+  provided with the distribution.
+
+Neither  the  name  of  Sun Microsystems, Inc.  or the names of
+contributors may be used to endorse or promote products derived
+from this  software without  specific prior written permission.
+
+This  software  is provided  "AS IS," without a warranty of any
+kind.  ALL EXPRESS  OR IMPLIED  CONDITIONS, REPRESENTATIONS AND
+WARRANTIES,  INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY,
+FITNESS  FOR  A  PARTICULAR  PURPOSE  OR  NON-INFRINGEMENT, ARE
+HEREBY  EXCLUDED.    SUN MICROSYSTEMS, INC.  ("SUN")   AND  ITS
+LICENSORS  SHALL  NOT  BE  LIABLE  FOR  ANY DAMAGES SUFFERED BY
+LICENSEE  AS A  RESULT OF USING, MODIFYING OR DISTRIBUTING THIS
+SOFTWARE  OR  ITS  DERIVATIVES.   IN  NO  EVENT WILL SUN OR ITS
+LICENSORS BE LIABLE  FOR  ANY LOST REVENUE,  PROFIT OR DATA, OR
+FOR DIRECT,  INDIRECT,  SPECIAL,  CONSEQUENTIAL,  INCIDENTAL OR
+PUNITIVE DAMAGES,  HOWEVER CAUSED AND  REGARDLESS OF THE THEORY
+OF LIABILITY,  ARISING  OUT  OF  THE USE OF OR INABILITY TO USE
+THIS SOFTWARE,  EVEN IF SUN HAS BEEN ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES.
+
+You acknowledge that this software is not designed, licensed or
+intended  for  use  in  the  design, construction, operation or
+maintenance of any nuclear facility.
+
+License notice for "Faster Unsigned Division by Constants"
+------------------------------
+Reference implementations of computing and using the "magic number" approach to dividing
+by constants, including codegen instructions. The unsigned division incorporates the
+"round down" optimization per ridiculous_fish.
+
+This is free and unencumbered software. Any copyright is dedicated to the Public Domain.
+
+License notice for mimalloc
+-----------------------------------
+MIT License (MIT) (see above)
+Copyright (c) 2019 Microsoft Corporation, Daan Leijen
+
 License notice for NLog
 ------------------------------
-Copyright (c) 2004-2020 Jaroslaw Kowalski <jaak@jkowalski.net>, Kim Christensen, Julian Verdurmen
+Copyright (c) 2004-2021 Jaroslaw Kowalski <jaak@jkowalski.net>, Kim Christensen, Julian Verdurmen
 
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without 
-modification, are permitted provided that the following conditions 
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
 are met:
 
-* Redistributions of source code must retain the above copyright notice, 
-  this list of conditions and the following disclaimer. 
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
 
 * Redistributions in binary form must reproduce the above copyright notice,
   this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution. 
+  and/or other materials provided with the distribution.
 
-* Neither the name of Jaroslaw Kowalski nor the names of its 
+* Neither the name of Jaroslaw Kowalski nor the names of its
   contributors may be used to endorse or promote products derived from this
-  software without specific prior written permission. 
+  software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
 CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 
 License notice for Newtonsoft.Json
 ------------------------------
-The MIT License (MIT)
-
 Copyright (c) 2007 James Newton-King
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of 
-this software and associated documentation files (the "Software"), to deal in the 
-Software without restriction, including without limitation the rights to use, copy, 
-modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
-and to permit persons to whom the Software is furnished to do so, subject to the f
-ollowing conditions:
-
-The above copyright notice and this permission notice shall be included in all 
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The MIT License (MIT) (see above)
 
 License notice for Portable.BouncyCastle
 ------------------------------
 The Bouncy Castle License
-Copyright (c) 2000-2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this 
-software and associated documentation files (the "Software"), to deal in the Software 
-without restriction, including without limitation the rights to use, copy, modify, 
-merge, publish, distribute, sub license, and/or sell copies of the Software, and to 
+Copyright (c) 2000-2017 The Legion of the Bouncy Castle Inc. (http://www.bouncycastle.org)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sub license, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies 
+The above copyright notice and this permission notice shall be included in all copies
 or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
 INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
@@ -1544,7 +2045,7 @@ License notice for Polly
 ------------------------------
 New BSD License
 =
-Copyright (c) 2015-2019, App vNext
+Copyright (c) 2015-2020, App vNext
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1569,338 +2070,10 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License notice for Moq
-------------------------------
-BSD 3-Clause License
-
-Copyright (c) 2007, Clarius Consulting, Manas Technology Solutions, InSTEDD
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-    * Redistributions of source code must retain the above copyright notice,
-    this list of conditions and the following disclaimer.
-
-    * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
-
-    * Neither the names of the copyright holders nor the names of its
-    contributors may be used to endorse or promote products derived from this
-    software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License notice for Xunit
-------------------------------
-Apache License
-
-Version 2.0, January 2004
-
-http://www.apache.org/licenses/
-
-TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-1. Definitions.
-
-"License" shall mean the terms and conditions for use, reproduction, and distribution 
-as defined by Sections 1 through 9 of this document.
-
-"Licensor" shall mean the copyright owner or entity authorized by the copyright owner 
-that is granting the License.
-
-"Legal Entity" shall mean the union of the acting entity and all other entities that 
-control, are controlled by, or are under common control with that entity. For the 
-purposes of this definition, "control" means (i) the power, direct or indirect, to 
-cause the direction or management of such entity, whether by contract or otherwise, 
-or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or 
-(iii) beneficial ownership of such entity.
-
-"You" (or "Your") shall mean an individual or Legal Entity exercising permissions 
-granted by this License.
-
-"Source" form shall mean the preferred form for making modifications, including but 
-not limited to software source code, documentation source, and configuration files.
-
-"Object" form shall mean any form resulting from mechanical transformation or translation 
-of a Source form, including but not limited to compiled object code, generated 
-documentation, and conversions to other media types.
-
-"Work" shall mean the work of authorship, whether in Source or Object form, made 
-available under the License, as indicated by a copyright notice that is included in or 
-attached to the work (an example is provided in the Appendix below).
-
-"Derivative Works" shall mean any work, whether in Source or Object form, that is based 
-on (or derived from) the Work and for which the editorial revisions, annotations, 
-elaborations, or other modifications represent, as a whole, an original work of authorship. 
-For the purposes of this License, Derivative Works shall not include works that remain 
-separable from, or merely link (or bind by name) to the interfaces of, the Work and 
-Derivative Works thereof.
-
-"Contribution" shall mean any work of authorship, including the original version of 
-the Work and any modifications or additions to that Work or Derivative Works thereof, 
-that is intentionally submitted to Licensor for inclusion in the Work by the copyright 
-owner or by an individual or Legal Entity authorized to submit on behalf of the 
-copyright owner. For the purposes of this definition, "submitted" means any form of 
-electronic, verbal, or written communication sent to the Licensor or its representatives, 
-including but not limited to communication on electronic mailing lists, source code 
-control systems, and issue tracking systems that are managed by, or on behalf of, 
-the Licensor for the purpose of discussing and improving the Work, but excluding 
-communication that is conspicuously marked or otherwise designated in writing by 
-the copyright owner as "Not a Contribution."
-
-"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of 
-whom a Contribution has been received by Licensor and subsequently incorporated within 
-the Work.
-
-2. Grant of Copyright License. Subject to the terms and conditions of this License, 
-each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, 
-royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, 
-publicly display, publicly perform, sublicense, and distribute the Work and such 
-Derivative Works in Source or Object form.
-
-3. Grant of Patent License. Subject to the terms and conditions of this License, 
-each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, 
-royalty-free, irrevocable (except as stated in this section) patent license to make, 
-have made, use, offer to sell, sell, import, and otherwise transfer the Work, where 
-such license applies only to those patent claims licensable by such Contributor that 
-are necessarily infringed by their Contribution(s) alone or by combination of their 
-Contribution(s) with the Work to which such Contribution(s) was submitted. If You 
-institute patent litigation against any entity (including a cross-claim or counterclaim 
-in a lawsuit) alleging that the Work or a Contribution incorporated within the Work 
-constitutes direct or contributory patent infringement, then any patent licenses 
-granted to You under this License for that Work shall terminate as of the date such 
-litigation is filed.
-
-4. Redistribution. You may reproduce and distribute copies of the Work or Derivative 
-Works thereof in any medium, with or without modifications, and in Source or Object 
-form, provided that You meet the following conditions:
-
-You must give any other recipients of the Work or Derivative Works a copy of this 
-License; and
-You must cause any modified files to carry prominent notices stating that You 
-changed the files; and
-You must retain, in the Source form of any Derivative Works that You distribute, 
-all copyright, patent, trademark, and attribution notices from the Source form of 
-the Work, excluding those notices that do not pertain to any part of the Derivative 
-Works; and
-If the Work includes a "NOTICE" text file as part of its distribution, then any 
-Derivative Works that You distribute must include a readable copy of the attribution 
-notices contained within such NOTICE file, excluding those notices that do not 
-pertain to any part of the Derivative Works, in at least one of the following places: 
-within a NOTICE text file distributed as part of the Derivative Works; within the 
-Source form or documentation, if provided along with the Derivative Works; or, 
-within a display generated by the Derivative Works, if and wherever such third-party 
-notices normally appear. The contents of the NOTICE file are for informational 
-purposes only and do not modify the License. You may add Your own attribution 
-notices within Derivative Works that You distribute, alongside or as an addendum 
-to the NOTICE text from the Work, provided that such additional attribution notices 
-cannot be construed as modifying the License. 
-
-You may add Your own copyright statement to Your modifications and may provide additional 
-or different license terms and conditions for use, reproduction, or distribution of 
-Your modifications, or for any such Derivative Works as a whole, provided Your use, 
-reproduction, and distribution of the Work otherwise complies with the conditions 
-stated in this License.
-5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution 
-intentionally submitted for inclusion in the Work by You to the Licensor shall be under 
-the terms and conditions of this License, without any additional terms or conditions. 
-Notwithstanding the above, nothing herein shall supersede or modify the terms of any 
-separate license agreement you may have executed with Licensor regarding such Contributions.
-
-6. Trademarks. This License does not grant permission to use the trade names, trademarks, 
-service marks, or product names of the Licensor, except as required for reasonable 
-and customary use in describing the origin of the Work and reproducing the content of 
-the NOTICE file.
-
-7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, 
-Licensor provides the Work (and each Contributor provides its Contributions) on an 
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, 
-including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, 
-MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for 
-determining the appropriateness of using or redistributing the Work and assume any 
-risks associated with Your exercise of permissions under this License.
-
-8. Limitation of Liability. In no event and under no legal theory, whether in tort 
-(including negligence), contract, or otherwise, unless required by applicable law 
-(such as deliberate and grossly negligent acts) or agreed to in writing, shall any 
-Contributor be liable to You for damages, including any direct, indirect, special, 
-incidental, or consequential damages of any character arising as a result of this 
-License or out of the use or inability to use the Work (including but not limited 
-to damages for loss of goodwill, work stoppage, computer failure or malfunction, 
-or any and all other commercial damages or losses), even if such Contributor has 
-been advised of the possibility of such damages.
-
-9. Accepting Warranty or Additional Liability. While redistributing the Work or 
-Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance 
-of support, warranty, indemnity, or other liability obligations and/or rights 
-consistent with this License. However, in accepting such obligations, You may act 
-only on Your own behalf and on Your sole responsibility, not on behalf of any other 
-Contributor, and only if You agree to indemnify, defend, and hold each Contributor 
-harmless for any liability incurred by, or claims asserted against, such Contributor 
-by reason of your accepting any such warranty or additional liability.
-
-END OF TERMS AND CONDITIONS
-
-Copyright (c) .NET Foundation and Contributors
-All Rights Reserved
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-xunit.asserts
-Copyright (c) .NET Foundation and Contributors
-All Rights Reserved
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-xunit.analyzers
-Copyright (c) .NET Foundation and Contributors
-All Rights Reserved
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-License notice for Xunit.runner.visualstudio
-------------------------------
-Unless otherwise noted, the source code here is covered by the following license:
-
-    Copyright (c) .NET Foundation and Contributors
-    All Rights Reserved
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
------------------------
-
-The code in src/xunit.runner.visualstudio/Utility/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions was imported from:
-    https://github.com/dotnet/core-setup/tree/v2.0.1/src/managed/Microsoft.DotNet.PlatformAbstractions
-
-The code in src/xunit.runner.visualstudio/Utility/AssemblyResolution/Microsoft.DotNet.PlatformAbstractions was imported from:
-    https://github.com/dotnet/core-setup/tree/v2.0.1/src/managed/Microsoft.Extensions.DependencyModel
-
-Both sets of code are covered by the following license:
-
-    The MIT License (MIT)
-
-    Copyright (c) 2015 .NET Foundation
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-
-License notice for Microsoft.NET.Test.Sdk
-------------------------------
-Copyright (c) Microsoft Corporation. All rights reserved.
-
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-License notice for Coverlet.collector
-------------------------------
-The MIT License (MIT)
-
-Copyright (c) 2018 Toni Solarin-Sodara
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 License notice for Microsoft.CSharp
 ------------------------------
-The MIT License (MIT)
+MIT License (MIT) (see above)
 
 Copyright (c) .NET Foundation and Contributors
 
@@ -1919,146 +2092,66 @@ The attached notices are provided for information only.
 
 License notice for DirectX Math Library
 ---------------------------------------
-
 https://github.com/microsoft/DirectXMath/blob/master/LICENSE
-
-                               The MIT License (MIT)
-
 Copyright (c) 2011-2020 Microsoft Corp
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this
-software and associated documentation files (the "Software"), to deal in the Software
-without restriction, including without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be included in all copies
-or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for ldap4net
 ---------------------------
-
-The MIT License (MIT)
-
 Copyright (c) 2018 Alexander Chermyanin
+MIT License (MIT) (see above)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this 
-software and associated documentation files (the "Software"), to deal in the Software 
-without restriction, including without limitation the rights to use, copy, modify, 
-merge, publish, distribute, sublicense, and/or sell copies of the Software, and to 
-permit persons to whom the Software is furnished to do so, subject to the following 
-conditions:
+Microsoft Patent Promise for .NET Libraries and Runtime Components
 
-The above copyright notice and this permission notice shall be included in all 
-copies or substantial portions of the Software.
+Microsoft Corporation and its affiliates ("Microsoft") promise not to assert
+any .NET Patents against you for making, using, selling, offering for sale,
+importing, or distributing Covered Code, as part of either a .NET Runtime or
+as part of any application designed to run on a .NET Runtime.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+If you file, maintain, or voluntarily participate in any claim in a lawsuit
+alleging direct or contributory patent infringement by any Covered Code, or
+inducement of patent infringement by any Covered Code, then your rights under
+this promise will automatically terminate.
 
+This promise is not an assurance that (i) any .NET Patents are valid or
+enforceable, or (ii) Covered Code does not infringe patents or other
+intellectual property rights of any third party. No rights except those
+expressly stated in this promise are granted, waived, or received by
+Microsoft, whether by implication, exhaustion, estoppel, or otherwise.
+This is a personal promise directly from Microsoft to you, and you agree as a
+condition of benefiting from it that no Microsoft rights are received from
+suppliers, distributors, or otherwise from any other person in connection with
+this promise.
 
+Definitions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-Microsoft Patent Promise for .NET Libraries and Runtime Components 
-
-Microsoft Corporation and its affiliates ("Microsoft") promise not to assert 
-any .NET Patents against you for making, using, selling, offering for sale, 
-importing, or distributing Covered Code, as part of either a .NET Runtime or 
-as part of any application designed to run on a .NET Runtime. 
-
-If you file, maintain, or voluntarily participate in any claim in a lawsuit 
-alleging direct or contributory patent infringement by any Covered Code, or 
-inducement of patent infringement by any Covered Code, then your rights under 
-this promise will automatically terminate. 
-
-This promise is not an assurance that (i) any .NET Patents are valid or 
-enforceable, or (ii) Covered Code does not infringe patents or other 
-intellectual property rights of any third party. No rights except those 
-expressly stated in this promise are granted, waived, or received by 
-Microsoft, whether by implication, exhaustion, estoppel, or otherwise. 
-This is a personal promise directly from Microsoft to you, and you agree as a 
-condition of benefiting from it that no Microsoft rights are received from 
-suppliers, distributors, or otherwise from any other person in connection with 
-this promise. 
-
-Definitions: 
-
-"Covered Code" means those Microsoft .NET libraries and runtime components as 
+"Covered Code" means those Microsoft .NET libraries and runtime components as
 made available by Microsoft at https://github.com/dotnet/runtime.
 
-".NET Patents" are those patent claims, both currently owned by Microsoft and 
-acquired in the future, that are necessarily infringed by Covered Code. .NET 
-Patents do not include any patent claims that are infringed by any Enabling 
-Technology, that are infringed only as a consequence of modification of 
-Covered Code, or that are infringed only by the combination of Covered Code 
-with third party code. 
+".NET Patents" are those patent claims, both currently owned by Microsoft and
+acquired in the future, that are necessarily infringed by Covered Code. .NET
+Patents do not include any patent claims that are infringed by any Enabling
+Technology, that are infringed only as a consequence of modification of
+Covered Code, or that are infringed only by the combination of Covered Code
+with third party code.
 
-".NET Runtime" means any compliant implementation in software of (a) all of 
-the required parts of the mandatory provisions of Standard ECMA-335 – Common 
-Language Infrastructure (CLI); and (b) if implemented, any additional 
-functionality in Microsoft's .NET Framework, as described in Microsoft's API 
-documentation on its MSDN website. For example, .NET Runtimes include 
-Microsoft's .NET Framework and those portions of the Mono Project compliant 
-with (a) and (b). 
+".NET Runtime" means any compliant implementation in software of (a) all of
+the required parts of the mandatory provisions of Standard ECMA-335 – Common
+Language Infrastructure (CLI); and (b) if implemented, any additional
+functionality in Microsoft's .NET Framework, as described in Microsoft's API
+documentation on its MSDN website. For example, .NET Runtimes include
+Microsoft's .NET Framework and those portions of the Mono Project compliant
+with (a) and (b).
 
-"Enabling Technology" means underlying or enabling technology that may be 
-used, combined, or distributed in connection with Microsoft's .NET Framework 
-or other .NET Runtimes, such as hardware, operating systems, and applications 
-that run on .NET Framework or other .NET Runtimes. 
+"Enabling Technology" means underlying or enabling technology that may be
+used, combined, or distributed in connection with Microsoft's .NET Framework
+or other .NET Runtimes, such as hardware, operating systems, and applications
+that run on .NET Framework or other .NET Runtimes.
 
-License notice for System.ComponentModel.Annotations 
+License notice for System.ComponentModel.Annotations
 ------------------------------
-The MIT License (MIT)
-
 Copyright (c) .NET Foundation and Contributors
-
-All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
 
 .NET Runtime uses third-party libraries or other resources that may be
 distributed under licenses different than the .NET Runtime software.
@@ -2073,292 +2166,17 @@ The attached notices are provided for information only.
 License notice for System.IdentityModel.Tokens.Jwt, Microsoft.IdentityModel.JsonWebTokens,
 Microsoft.IdentityModel.Logging, System.Security.Cryptography.Cng
 ------------------------------
-
-The MIT License (MIT)
-
-Copyright (c) Microsoft Corporation
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
 
 License notice for Microsoft.SourceLink.GitHub
 -------------------------------
-
 https://github.com/dotnet/sourcelink
 
-
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
-
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright [yyyy] [name of copyright owner]
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
+Apache License 2.0 (see above)
 
 License notice for Microsoft.DotNet.ApiCompat
 -------------------------------
-
 https://github.com/dotnet/arcade/tree/master/src/Microsoft.DotNet.ApiCompat
 
-The MIT License (MIT)
-
 Copyright (c) .NET Foundation and Contributors
-
-All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-License notice for Microsoft.DotNet.XUnitExtensions
--------------------------------
-
-https://github.com/dotnet/arcade/tree/master/src/Microsoft.DotNet.XUnitExtensions
-
-The MIT License (MIT)
-
-Copyright (c) .NET Foundation and Contributors
-
-All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT License (MIT) (see above)
