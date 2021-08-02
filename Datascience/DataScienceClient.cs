@@ -1589,10 +1589,10 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
-        /// Updates the properties of a model deployment. Some of the properties of &#x60;modelDeploymentConfigurationDetails&#x60; or &#x60;CategoryLogDetails&#x60; can also be updated with zero down time when
-        /// the model deployment&#39;s lifecycle state is ACTIVE i.e &#x60;instanceShapeName&#x60; can be updated along with &#x60;modelId&#x60;, similarly &#x60;logId&#x60; can be updated along with &#x60;logGroupId&#x60;. But
-        /// &#x60;instanceShapeName&#x60; or &#x60;modelId&#x60; cannot be updated along with &#x60;logId&#x60; or &#x60;logGroupId&#x60;. All of the fields can be updated when the deployment is in the INACTIVE lifecycle state.
-        /// Changes will take effect the next time the model deployment is activated.
+        /// Updates the properties of a model deployment. Some of the properties of &#x60;modelDeploymentConfigurationDetails&#x60; or &#x60;CategoryLogDetails&#x60; can also be updated with zero down time
+        /// when the model deployment\u2019s lifecycle state is ACTIVE or NEEDS_ATTENTION i.e &#x60;instanceShapeName&#x60;, &#x60;instanceCount&#x60; and &#x60;modelId&#x60;, separately &#x60;loadBalancerShape&#x60; or &#x60;CategoryLogDetails&#x60;
+        /// can also be updated independently. All of the fields can be updated when the deployment is in the INACTIVE lifecycle state. Changes will take effect the next time the model
+        /// deployment is activated.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

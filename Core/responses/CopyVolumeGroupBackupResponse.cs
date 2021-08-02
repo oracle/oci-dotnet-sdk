@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class CopyVolumeBackupResponse : Oci.Common.IOciResponse
+    public class CopyVolumeGroupBackupResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
@@ -31,36 +31,11 @@ namespace Oci.CoreService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-
         /// <value>
-        /// The OCID of the work request. Use [GetWorkRequest](https://docs.cloud.oracle.com/api/#/en/workrequests/20160918/WorkRequest/GetWorkRequest)
-        /// with this ID to track the status of the request.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
-        public string OpcWorkRequestId { get; set; }
-
-
-        /// <value>
-        /// Location of the resource.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "location")]
-        public string Location { get; set; }
-
-
-        /// <value>
-        /// Location of the resource.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-location")]
-        public string ContentLocation { get; set; }
-
-        /// <value>
-        /// The returned VolumeBackup instance.
+        /// The returned VolumeGroupBackup instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public VolumeBackup VolumeBackup { get; set; }
+        public VolumeGroupBackup VolumeGroupBackup { get; set; }
 
     }
 }

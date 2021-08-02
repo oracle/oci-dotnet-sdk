@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Options for VM migration during infrastructure maintenance events and for defining 
+    /// Options for VM migration during infrastructure maintenance events and for defining
     /// the availability of a VM instance after a maintenance event that impacts the underlying hardware.
     /// 
     /// </summary>

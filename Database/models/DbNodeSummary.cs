@@ -61,6 +61,42 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupVnicId")]
         public string BackupVnicId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the host IP address associated with the database node.
+        /// <br/>
+        /// **Note:** Applies only to Exadata Cloud Service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hostIpId")]
+        public string HostIpId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup IP address associated with the database node.
+        /// <br/>
+        /// **Note:** Applies only to Exadata Cloud Service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupIpId")]
+        public string BackupIpId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the second VNIC.
+        /// <br/>
+        /// **Note:** Applies only to Exadata Cloud Service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vnic2Id")]
+        public string Vnic2Id { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the second backup VNIC.
+        /// <br/>
+        /// **Note:** Applies only to Exadata Cloud Service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupVnic2Id")]
+        public string BackupVnic2Id { get; set; }
                 ///
         /// <value>
         /// The current state of the database node.

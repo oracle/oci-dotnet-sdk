@@ -747,6 +747,28 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerDbIds")]
         public System.Collections.Generic.List<string> PeerDbIds { get; set; }
+                ///
+        /// <value>
+        /// The maintenance schedule type of the Autonomous Database on shared Exadata infrastructure. The EARLY maintenance schedule of this Autonomous Database
+        /// follows a schedule that applies patches prior to the REGULAR schedule.The REGULAR maintenance schedule of this Autonomous Database follows the normal cycle.
+        /// 
+        /// </value>
+        ///
+        public enum AutonomousMaintenanceScheduleTypeEnum {
+            [EnumMember(Value = "EARLY")]
+            Early,
+            [EnumMember(Value = "REGULAR")]
+            Regular
+        };
+
+        /// <value>
+        /// The maintenance schedule type of the Autonomous Database on shared Exadata infrastructure. The EARLY maintenance schedule of this Autonomous Database
+        /// follows a schedule that applies patches prior to the REGULAR schedule.The REGULAR maintenance schedule of this Autonomous Database follows the normal cycle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousMaintenanceScheduleType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
     }
 }

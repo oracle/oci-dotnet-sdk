@@ -68,5 +68,29 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// An array of custom metadata details for the model.
+        /// </value>
+        [JsonProperty(PropertyName = "customMetadataList")]
+        public System.Collections.Generic.List<Metadata> CustomMetadataList { get; set; }
+        
+        /// <value>
+        /// An array of defined metadata details for the model.
+        /// </value>
+        [JsonProperty(PropertyName = "definedMetadataList")]
+        public System.Collections.Generic.List<Metadata> DefinedMetadataList { get; set; }
+        
+        /// <value>
+        /// Input schema file content in String format
+        /// </value>
+        [JsonProperty(PropertyName = "inputSchema")]
+        public string InputSchema { get; set; }
+        
+        /// <value>
+        /// Output schema file content in String format
+        /// </value>
+        [JsonProperty(PropertyName = "outputSchema")]
+        public string OutputSchema { get; set; }
+        
     }
 }

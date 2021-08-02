@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// Model deployments are interactive coding environments for data scientists.
+    /// Model deployments are used by data scientists to perform predictions from the model hosted on an HTTP server.
     /// 
     /// </summary>
     public class ModelDeployment 
