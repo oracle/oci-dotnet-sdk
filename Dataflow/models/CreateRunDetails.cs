@@ -29,6 +29,7 @@ namespace Oci.DataflowService.Models
     ///   - executorShape
     ///   - freeformTags
     ///   - logsBucketUri
+    ///   - metastoreId
     ///   - numExecutors
     ///   - parameters
     ///   - sparkVersion
@@ -149,6 +150,13 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "logsBucketUri")]
         public string LogsBucketUri { get; set; }
+        
+        /// <value>
+        /// The OCID of OCI Hive Metastore.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "metastoreId")]
+        public string MetastoreId { get; set; }
         
         /// <value>
         /// The number of executor VMs requested.

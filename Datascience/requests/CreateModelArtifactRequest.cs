@@ -60,7 +60,10 @@ namespace Oci.DatascienceService.Requests
         public string OpcRetryToken { get; set; }
         
         /// <value>
-        /// The content disposition of the body.
+        /// This header allows you to specify a filename during upload. This file name is used to dispose of the file contents
+        /// while downloading the file. If this optional field is not populated in the request, then the OCID of the model is used for the file
+        /// name when downloading.
+        /// Example: {&quot;Content-Disposition&quot;: &quot;attachment&quot;           &quot;filename&quot;=&quot;model.tar.gz&quot;           &quot;Content-Length&quot;: &quot;2347&quot;           &quot;Content-Type&quot;: &quot;application/gzip&quot;}
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-disposition")]
         public string ContentDisposition { get; set; }
