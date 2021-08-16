@@ -73,7 +73,7 @@ namespace Oci.ManagementagentService.Models
         public string Version { get; set; }
         
         /// <value>
-        /// true if the agent can be upgraded automatically; false if it must be upgraded manually. true is currently unsupported.
+        /// true if the agent can be upgraded automatically; false if it must be upgraded manually.
         /// </value>
         [JsonProperty(PropertyName = "isAgentAutoUpgradable")]
         public System.Nullable<bool> IsAgentAutoUpgradable { get; set; }
@@ -85,10 +85,22 @@ namespace Oci.ManagementagentService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// The time the Management Agent was last updated. An RFC3339 formatted datetime string
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
         /// Management Agent host machine name
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
+        
+        /// <value>
+        /// Host resource ocid
+        /// </value>
+        [JsonProperty(PropertyName = "hostId")]
+        public string HostId { get; set; }
         
         /// <value>
         /// list of managementAgentPlugins associated with the agent
@@ -131,6 +143,12 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.
+        /// </value>
+        [JsonProperty(PropertyName = "isCustomerDeployed")]
+        public System.Nullable<bool> IsCustomerDeployed { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

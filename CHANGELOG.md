@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 24.0.0 - 2021-08-17
+### Added
+- Support for getting management agent hosts which are eligible to create Operations Insights host resources on, in the Operations Insights service
+- Support for getting summarized agent counts and summarized plugin counts in the Management Agent Cloud service
+
+### Breaking Changes
+- The `PluginName` property's return type was changed from `string` to `List<string>` in `ListManagementAgentsRequest` in the Management Agent Cloud service
+- The `Version` property's return type was changed from `string` to `List<string>` in `ListManagementAgentsRequest` in the Management Agent Cloud service
+- The `PlatformType` property's return type was changed from `PlatformTypes` to `List<PlatformTypes>` in `ListManagementAgentsRequest` in the Management Agent Cloud service
+
 ## 23.2.0 - 2021-08-03
 ### Added
 - Support for manually copying volume group backups across regions in the Block Volume service
