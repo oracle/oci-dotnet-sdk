@@ -20,7 +20,7 @@ namespace Oci.ManagementagentService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment from which the Management Agents to be listed.
+        /// The OCID of the compartment to which a request will be scoped.
         /// </value>
         /// <remarks>
         /// Required

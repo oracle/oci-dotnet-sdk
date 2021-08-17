@@ -9,27 +9,18 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
 
 namespace Oci.ManagementagentService.Models
 {
-    /// <summary>
-    /// Work Submission Identifier
-    /// </summary>
-    public class WorkSubmissionKey 
-    {
-        
-        /// <value>
-        /// Work Submission Identifier
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "WorkSubmissionKeyProp is required.")]
-        [JsonProperty(PropertyName = "workSubmissionKey")]
-        public string WorkSubmissionKeyProp { get; set; }
-        
-    }
+  /// <summary>
+  /// Supported groupBy types for Management Agent.
+  /// </summary>
+  public enum ManagementAgentGroupBy {
+      [EnumMember(Value = "availabilityStatus")]
+      AvailabilityStatus,
+      [EnumMember(Value = "platformType")]
+      PlatformType,
+      [EnumMember(Value = "version")]
+      Version
+  }
 }

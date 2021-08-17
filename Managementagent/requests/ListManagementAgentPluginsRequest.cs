@@ -20,7 +20,7 @@ namespace Oci.ManagementagentService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment from which the Management Agents to be listed.
+        /// The OCID of the compartment to which a request will be scoped.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,5 +94,11 @@ namespace Oci.ManagementagentService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Filter to return only results having the particular platform type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<PlatformTypes> PlatformType { get; set; }
     }
 }

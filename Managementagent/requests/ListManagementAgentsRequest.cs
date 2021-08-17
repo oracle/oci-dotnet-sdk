@@ -20,7 +20,7 @@ namespace Oci.ManagementagentService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment from which the Management Agents to be listed.
+        /// The OCID of the compartment to which a request will be scoped.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,16 +30,16 @@ namespace Oci.ManagementagentService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Filter to return only Management Agents having the particular Plugin installed.
+        /// Filter to return only Management Agents having the particular Plugin installed. A special pluginName of 'None' can be provided and this will return only Management Agents having no plugin installed.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pluginName")]
-        public string PluginName { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pluginName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> PluginName { get; set; }
         
         /// <value>
         /// Filter to return only Management Agents having the particular agent version.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "version")]
-        public string Version { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "version", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> Version { get; set; }
         
         /// <value>
         /// Filter to return only Management Agents having the particular display name.
@@ -54,10 +54,28 @@ namespace Oci.ManagementagentService.Requests
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
-        /// Filter to return only Management Agents having the particular platform type.
+        /// Filter to return only Management Agents in the particular availability status.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType")]
-        public System.Nullable<PlatformTypes> PlatformType { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityStatus")]
+        public System.Nullable<AvailabilityStatus> AvailabilityStatus { get; set; }
+        
+        /// <value>
+        /// Filter to return only Management Agents having the particular agent host id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostId")]
+        public string HostId { get; set; }
+        
+        /// <value>
+        /// Filter to return only results having the particular platform type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<PlatformTypes> PlatformType { get; set; }
+        
+        /// <value>
+        /// true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCustomerDeployed")]
+        public System.Nullable<bool> IsCustomerDeployed { get; set; }
         
         /// <value>
         /// The maximum number of items to return.
@@ -99,7 +117,17 @@ namespace Oci.ManagementagentService.Requests
             [EnumMember(Value = "timeCreated")]
             TimeCreated,
             [EnumMember(Value = "displayName")]
-            DisplayName
+            DisplayName,
+            [EnumMember(Value = "host")]
+            Host,
+            [EnumMember(Value = "availabilityStatus")]
+            AvailabilityStatus,
+            [EnumMember(Value = "platformType")]
+            PlatformType,
+            [EnumMember(Value = "pluginDisplayNames")]
+            PluginDisplayNames,
+            [EnumMember(Value = "version")]
+            Version
         };
 
         /// <value>

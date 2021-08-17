@@ -22,7 +22,7 @@ namespace Oci.ManagementagentService.Models
     {
         
         /// <value>
-        /// true if the agent can be upgraded automatically; false if it must be upgraded manually. true is currently unsupported.
+        /// Setting of this flag is no longer supported.
         /// </value>
         [JsonProperty(PropertyName = "isAgentAutoUpgradable")]
         public System.Nullable<bool> IsAgentAutoUpgradable { get; set; }

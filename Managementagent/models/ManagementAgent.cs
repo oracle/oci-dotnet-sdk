@@ -79,6 +79,12 @@ namespace Oci.ManagementagentService.Models
         public string Host { get; set; }
         
         /// <value>
+        /// Host resource ocid
+        /// </value>
+        [JsonProperty(PropertyName = "hostId")]
+        public string HostId { get; set; }
+        
+        /// <value>
         /// Path where Management Agent is installed
         /// </value>
         [JsonProperty(PropertyName = "installPath")]
@@ -101,7 +107,7 @@ namespace Oci.ManagementagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// true if the agent can be upgraded automatically; false if it must be upgraded manually. true is currently unsupported.
+        /// true if the agent can be upgraded automatically; false if it must be upgraded manually.
         /// </value>
         [JsonProperty(PropertyName = "isAgentAutoUpgradable")]
         public System.Nullable<bool> IsAgentAutoUpgradable { get; set; }
@@ -143,6 +149,12 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.
+        /// </value>
+        [JsonProperty(PropertyName = "isCustomerDeployed")]
+        public System.Nullable<bool> IsCustomerDeployed { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

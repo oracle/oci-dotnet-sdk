@@ -67,7 +67,7 @@ namespace Oci.ManagementagentService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use, either 'ASC' or 'DESC'.
         /// </value>
         ///
         public enum SortOrderEnum {
@@ -78,7 +78,7 @@ namespace Oci.ManagementagentService.Requests
         };
 
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use, either 'ASC' or 'DESC'.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
