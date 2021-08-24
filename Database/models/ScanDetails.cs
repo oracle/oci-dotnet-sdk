@@ -43,6 +43,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> Port { get; set; }
         
         /// <value>
+        /// The SCAN TCPIP port. Default is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcp")]
+        public System.Nullable<int> ScanListenerPortTcp { get; set; }
+        
+        /// <value>
+        /// The SCAN TCPIP SSL port. Default is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
+        public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
+        
+        /// <value>
         /// The list of SCAN IP addresses. Three addresses should be provided.
         /// </value>
         /// <remarks>
