@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatacatalogService.Models
 {
     /// <summary>
-    /// Parse connections from the connection metadata and oracle wallet file.
+    /// Parse connections from the connection metadata and Oracle wallet file.
+    /// An error will be returned if more than one of connectionPayload, walletSecretId or walletSecretName are present in the request.
+    /// 
     /// </summary>
     public class ParseConnectionDetails 
     {
@@ -29,6 +31,18 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "connectionPayload")]
         public System.Byte[] ConnectionPayload { get; set; }
+        
+        /// <value>
+        /// OCID of the OCI Vault secret holding the Oracle wallet to parse.
+        /// </value>
+        [JsonProperty(PropertyName = "walletSecretId")]
+        public string WalletSecretId { get; set; }
+        
+        /// <value>
+        /// Name of the OCI Vault secret holding the Oracle wallet to parse.
+        /// </value>
+        [JsonProperty(PropertyName = "walletSecretName")]
+        public string WalletSecretName { get; set; }
         
     }
 }

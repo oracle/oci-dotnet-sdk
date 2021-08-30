@@ -70,6 +70,12 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<long> Length { get; set; }
         
         /// <value>
+        /// Position of the attribute in the record definition.
+        /// </value>
+        [JsonProperty(PropertyName = "position")]
+        public System.Nullable<int> Position { get; set; }
+        
+        /// <value>
         /// Precision of the attribute value usually applies to float data type.
         /// </value>
         [JsonProperty(PropertyName = "precision")]
@@ -182,6 +188,16 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// A map of maps that contains the properties which are specific to the attribute type. Each attribute type
+        /// definition defines it's set of required and optional properties. The map keys are category names and the
+        /// values are maps of property name to property value. Every property is contained inside of a category. Most
+        /// attributes have required properties within the \"default\" category.
+        /// Example: {&quot;properties&quot;: { &quot;default&quot;: { &quot;key1&quot;: &quot;value1&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
         
     }
 }

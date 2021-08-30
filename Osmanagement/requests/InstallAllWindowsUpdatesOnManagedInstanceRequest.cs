@@ -30,6 +30,12 @@ namespace Oci.OsmanagementService.Requests
         public string ManagedInstanceId { get; set; }
         
         /// <value>
+        /// The type of updates to be applied
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "updateType")]
+        public System.Nullable<PackageUpdateTypes> UpdateType { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

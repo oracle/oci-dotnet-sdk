@@ -209,7 +209,9 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "parentAttributeKey")]
             ParentAttributeKey,
             [EnumMember(Value = "externalParentAttributeKey")]
-            ExternalParentAttributeKey
+            ExternalParentAttributeKey,
+            [EnumMember(Value = "position")]
+            Position
         };
 
         /// <value>
@@ -221,7 +223,7 @@ namespace Oci.DatacatalogService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. Default order for POSITION is ascending. If no value is specified POSITION is default.
         /// 
         /// </value>
         ///
@@ -229,11 +231,13 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "TIMECREATED")]
             Timecreated,
             [EnumMember(Value = "DISPLAYNAME")]
-            Displayname
+            Displayname,
+            [EnumMember(Value = "POSITION")]
+            Position
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. Default order for POSITION is ascending. If no value is specified POSITION is default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -157,8 +157,7 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<bool> IsEventEnabled { get; set; }
         
         /// <value>
-        /// Type or scope of the custom property belongs to. This will be an array of type id it will be belongs to
-        /// 
+        /// The set of object types to which the custom property applies.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Collections.Generic.List<CustomPropertyTypeUsage> Scope { get; set; }
@@ -168,6 +167,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.List<string> AllowedValues { get; set; }
+        
+        /// <value>
+        /// Event configuration for this custom property, against the desired subset of object types to which the property applies.
+        /// </value>
+        [JsonProperty(PropertyName = "events")]
+        public System.Collections.Generic.List<EventConfig> Events { get; set; }
         
         /// <value>
         /// A map of maps that contains the properties which are specific to the asset type. Each data asset type

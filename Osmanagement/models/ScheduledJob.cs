@@ -159,5 +159,11 @@ namespace Oci.OsmanagementService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
+        /// <value>
+        /// true, if the schedule job has its update capabilities restricted. (Used to track Autonomous Scheduled Job)
+        /// </value>
+        [JsonProperty(PropertyName = "isRestricted")]
+        public System.Nullable<bool> IsRestricted { get; set; }
+        
     }
 }

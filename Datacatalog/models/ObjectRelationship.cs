@@ -65,5 +65,23 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// Full path of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "path")]
+        public string Path { get; set; }
+        
+        /// <value>
+        /// Key of the parent object for the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "parentKey")]
+        public string ParentKey { get; set; }
+        
+        /// <value>
+        /// Full path of the parent object.
+        /// </value>
+        [JsonProperty(PropertyName = "parentPath")]
+        public string ParentPath { get; set; }
+        
     }
 }
