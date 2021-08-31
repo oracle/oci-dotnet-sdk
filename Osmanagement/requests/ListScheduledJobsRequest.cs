@@ -122,5 +122,11 @@ namespace Oci.OsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily")]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
+        
+        /// <value>
+        /// If true, will only filter out restricted Autonomous Linux Scheduled Job
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isRestricted")]
+        public System.Nullable<bool> IsRestricted { get; set; }
     }
 }

@@ -22,6 +22,10 @@ namespace Oci.OsmanagementService.Models
       Bugfix,
       [EnumMember(Value = "ENHANCEMENT")]
       Enhancement,
+      [EnumMember(Value = "OTHER")]
+      Other,
+      [EnumMember(Value = "KSPLICE")]
+      Ksplice,
       [EnumMember(Value = "ALL")]
       All
   }

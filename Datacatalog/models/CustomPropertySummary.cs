@@ -163,5 +163,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "isEventEnabled")]
         public System.Nullable<bool> IsEventEnabled { get; set; }
         
+        /// <value>
+        /// Event configuration for this custom property, against the desired subset of object types to which the property applies.
+        /// </value>
+        [JsonProperty(PropertyName = "events")]
+        public System.Collections.Generic.List<EventConfig> Events { get; set; }
+        
     }
 }

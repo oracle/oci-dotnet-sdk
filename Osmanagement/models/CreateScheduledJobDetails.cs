@@ -93,7 +93,7 @@ namespace Oci.OsmanagementService.Models
         /// <value>
         /// The list of managed instance groups this scheduled job operates on
         /// (mutually exclusive with managedInstances). Either this or
-        /// managedInstances must be supplied. 
+        /// managedInstances must be supplied.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceGroups")]

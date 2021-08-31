@@ -108,7 +108,7 @@ namespace Oci.OsmanagementService
         /// <summary>
         /// Adds a child software source to a managed instance. After the software
         /// source has been added, then packages from that software source can be
-        /// installed on the managed instance.    
+        /// installed on the managed instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -148,10 +148,10 @@ namespace Oci.OsmanagementService
         }
 
         /// <summary>
-        /// Adds a Managed Instance to a Managed Instance Group. After the Managed 
+        /// Adds a Managed Instance to a Managed Instance Group. After the Managed
         /// Instance has been added, then operations can be performed on the Managed
         /// Instance Group which will then apply to all Managed Instances in the
-        /// group. 
+        /// group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -235,7 +235,7 @@ namespace Oci.OsmanagementService
 
         /// <summary>
         /// Moves a resource into a different compartment. When provided, If-Match
-        /// is checked against ETag values of the resource. 
+        /// is checked against ETag values of the resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -276,7 +276,7 @@ namespace Oci.OsmanagementService
 
         /// <summary>
         /// Moves a resource into a different compartment. When provided, If-Match
-        /// is checked against ETag values of the resource. 
+        /// is checked against ETag values of the resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -317,7 +317,7 @@ namespace Oci.OsmanagementService
 
         /// <summary>
         /// Moves a resource into a different compartment. When provided, If-Match
-        /// is checked against ETag values of the resource. 
+        /// is checked against ETag values of the resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -645,7 +645,7 @@ namespace Oci.OsmanagementService
         }
 
         /// <summary>
-        /// Removes a Managed Instance from a Managed Instance Group. 
+        /// Removes a Managed Instance from a Managed Instance Group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1080,6 +1080,46 @@ namespace Oci.OsmanagementService
             catch (Exception e)
             {
                 logger.Error($"InstallAllPackageUpdatesOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Install all of the available updates for the Managed Instance Group.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallAllUpdatesOnManagedInstanceGroup.cs.html">here</a> to see an example of how to use InstallAllUpdatesOnManagedInstanceGroup API.</example>
+        public async Task<InstallAllUpdatesOnManagedInstanceGroupResponse> InstallAllUpdatesOnManagedInstanceGroup(InstallAllUpdatesOnManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called installAllUpdatesOnManagedInstanceGroup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstanceGroups/{managedInstanceGroupId}/actions/updates/installAll".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<InstallAllUpdatesOnManagedInstanceGroupResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"InstallAllUpdatesOnManagedInstanceGroup failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2161,6 +2201,46 @@ namespace Oci.OsmanagementService
             catch (Exception e)
             {
                 logger.Error($"SkipNextScheduledJobExecution failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates a specific Managed Instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/UpdateManagedInstance.cs.html">here</a> to see an example of how to use UpdateManagedInstance API.</example>
+        public async Task<UpdateManagedInstanceResponse> UpdateManagedInstance(UpdateManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateManagedInstanceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateManagedInstance failed with error: {e.Message}");
                 throw;
             }
         }

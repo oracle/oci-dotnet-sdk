@@ -149,6 +149,30 @@ namespace Oci.OsmanagementService.Models
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
         /// <value>
+        /// OCID of the ONS topic used to send notification to users
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        /// <value>
+        /// The ksplice effective kernel version
+        /// </value>
+        [JsonProperty(PropertyName = "kspliceEffectiveKernelVersion")]
+        public string KspliceEffectiveKernelVersion { get; set; }
+        
+        /// <value>
+        /// True if user allow data collection for this instance
+        /// </value>
+        [JsonProperty(PropertyName = "isDataCollectionAuthorized")]
+        public System.Nullable<bool> IsDataCollectionAuthorized { get; set; }
+        
+        /// <value>
+        /// if present, indicates the Managed Instance is an autonomous instance. Holds all the Autonomous specific information
+        /// </value>
+        [JsonProperty(PropertyName = "autonomous")]
+        public AutonomousSettings Autonomous { get; set; }
+        
+        /// <value>
         /// Number of security type updates available to be installed
         /// </value>
         [JsonProperty(PropertyName = "securityUpdatesAvailable")]

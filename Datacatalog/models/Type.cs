@@ -109,5 +109,17 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "customProperties")]
         public System.Collections.Generic.List<CustomPropertySummary> CustomProperties { get; set; }
         
+        /// <value>
+        /// Unique key of the parent type.
+        /// </value>
+        [JsonProperty(PropertyName = "parentTypeKey")]
+        public string ParentTypeKey { get; set; }
+        
+        /// <value>
+        /// Name of the parent type.
+        /// </value>
+        [JsonProperty(PropertyName = "parentTypeName")]
+        public string ParentTypeName { get; set; }
+        
     }
 }

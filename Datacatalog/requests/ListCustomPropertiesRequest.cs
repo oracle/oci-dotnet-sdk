@@ -103,6 +103,14 @@ namespace Oci.DatacatalogService.Requests
             Attribute,
             [EnumMember(Value = "FOLDER")]
             Folder,
+            [EnumMember(Value = "ORACLE_ANALYTICS_SUBJECT_AREA_COLUMN")]
+            OracleAnalyticsSubjectAreaColumn,
+            [EnumMember(Value = "ORACLE_ANALYTICS_LOGICAL_COLUMN")]
+            OracleAnalyticsLogicalColumn,
+            [EnumMember(Value = "ORACLE_ANALYTICS_PHYSICAL_COLUMN")]
+            OracleAnalyticsPhysicalColumn,
+            [EnumMember(Value = "ORACLE_ANALYTICS_ANALYSIS_COLUMN")]
+            OracleAnalyticsAnalysisColumn,
             [EnumMember(Value = "ORACLE_ANALYTICS_SERVER")]
             OracleAnalyticsServer,
             [EnumMember(Value = "ORACLE_ANALYTICS_CLOUD")]

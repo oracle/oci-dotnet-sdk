@@ -70,5 +70,17 @@ namespace Oci.DatacatalogService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
+        /// <value>
+        /// Unique key of the parent type.
+        /// </value>
+        [JsonProperty(PropertyName = "parentTypeKey")]
+        public string ParentTypeKey { get; set; }
+        
+        /// <value>
+        /// Name of the parent type.
+        /// </value>
+        [JsonProperty(PropertyName = "parentTypeName")]
+        public string ParentTypeName { get; set; }
+        
     }
 }
