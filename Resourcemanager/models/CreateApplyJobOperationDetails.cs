@@ -22,6 +22,9 @@ namespace Oci.ResourcemanagerService.Models
     public class CreateApplyJobOperationDetails : CreateJobOperationDetails
     {
         
+        [JsonProperty(PropertyName = "terraformAdvancedOptions")]
+        public TerraformAdvancedOptions TerraformAdvancedOptions { get; set; }
+        
         /// <value>
         /// Specifies the source of the execution plan to apply.
         /// Use `AUTO_APPROVED` to run the job without an execution plan.

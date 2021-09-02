@@ -24,6 +24,8 @@ namespace Oci.ResourcemanagerService.Models
         
         /// <value>
         /// Unique identifier for the template category.
+        /// Possible values are `0` (Quick Starts), `1` (Service), `2` (Architecture), and `3` (Private).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

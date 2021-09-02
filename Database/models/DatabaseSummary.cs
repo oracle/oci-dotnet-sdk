@@ -207,5 +207,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
         
+        [JsonProperty(PropertyName = "databaseManagementConfig")]
+        public CloudDatabaseManagementConfig DatabaseManagementConfig { get; set; }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Requests
         /// <value>
         /// The parameter to filter the database by internal ID.
         /// Note that the internal ID of the database can be retrieved from the following endpoint:
-        /// /managedDatabases/{managedDatabaseId}/awrDbs:
+        /// /managedDatabases/{managedDatabaseId}/awrDbs
         /// 
         /// </value>
         /// <remarks>
@@ -124,7 +124,7 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The option to sort information in ascending (\u2018ASC\u2019) or descending (\u2018DESC\u2019) order. Descending order is the the default order.
+        /// The option to sort information in ascending (\u2018ASC\u2019) or descending (\u2018DESC\u2019) order. Descending order is the default order.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

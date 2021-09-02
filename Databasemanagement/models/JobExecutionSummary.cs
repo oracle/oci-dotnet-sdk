@@ -78,6 +78,33 @@ namespace Oci.DatabasemanagementService.Models
         public string ManagedDatabaseName { get; set; }
         
         /// <value>
+        /// The type of Oracle Database installation.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseType> DatabaseType { get; set; }
+        
+        /// <value>
+        /// The subtype of the Oracle Database. Indicates whether the database is a Container Database, Pluggable Database, or a Non-container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSubType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
+        
+        /// <value>
+        /// A list of the supported infrastructure that can be used to deploy the database.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
+        /// Indicates whether the Oracle Database is part of a cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isCluster")]
+        public System.Nullable<bool> IsCluster { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the parent job.
         /// </value>
         /// <remarks>

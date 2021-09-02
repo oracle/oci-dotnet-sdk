@@ -11,6 +11,7 @@ using System.IO;
 using Oci.Common.Model;
 using Oci.Common.Utils;
 
+using Newtonsoft.Json;
 using Xunit;
 
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
@@ -184,6 +185,39 @@ namespace Oci.Common
         public void FromRegionIdOrCodeExceptionTest()
         {
             Assert.Throws<ArgumentException>(() => Region.FromRegionCodeOrId("invalid"));
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void ValidateAllKnownRegions()
+        {
+            var regionsJsonFile = "Regions.json";
+            Assert.True(File.Exists(regionsJsonFile), $"Regions json file \"{regionsJsonFile}\" not found.");
+            try
+            {
+                var content = File.ReadAllText(regionsJsonFile);
+                Assert.True(!String.IsNullOrEmpty(content), $"Regions json file \"{regionsJsonFile}\" is empty.");
+
+                var allRegions = JsonConvert.DeserializeObject<List<RegionSchema>>(content);
+                Assert.True(allRegions != null, $"Failed to get regions information from \"{regionsJsonFile}\".");
+                List<string> region_ids = new List<string>();
+                foreach (var region in Region.Values())
+                {
+                    region_ids.Add(region.RegionId.ToLower());
+                }
+                foreach (RegionSchema region in allRegions)
+                {
+                    if (region != null && region.isValid())
+                    {
+                        Assert.True(region_ids.Contains(region.regionIdentifier.ToLower()), $"Region {region.regionIdentifier} not found in known regions.");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Warn($"Exception in ValidateAllKnownRegions(): {e}");
+            }
         }
 
         private bool AreRegionsSame(Region r1, Region r2)

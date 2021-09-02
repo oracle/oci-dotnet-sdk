@@ -4,8 +4,13 @@
  */
 
 using System;
+using System.IO;
 using System.Diagnostics.CodeAnalysis;
 using System.Collections.Generic;
+
+using Oci.Common.Model;
+
+using Newtonsoft.Json;
 using Xunit;
 
 namespace Oci.Common
@@ -75,6 +80,42 @@ namespace Oci.Common
             var realm = Realm.ValueOf(NEW_REALM_ID);
             Assert.Equal(NEW_REALM_ID, realm.RealmId);
             Assert.Equal(NEW_SECOND_LEVEL_DOMAIN, realm.SecondLevelDomain);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void ValidateAllKnownRealms()
+        {
+            var regionsJsonFile = "Regions.json";
+            Assert.True(File.Exists(regionsJsonFile), $"Regions json file \"{regionsJsonFile}\" not found.");
+            try
+            {
+                var content = File.ReadAllText(regionsJsonFile);
+                Assert.True(!String.IsNullOrEmpty(content), $"Regions json file \"{regionsJsonFile}\" is empty.");
+
+                var allRegions = JsonConvert.DeserializeObject<List<RegionSchema>>(content);
+                Assert.True(allRegions != null, $"Failed to get regions information from \"{regionsJsonFile}\".");
+                List<string> realms = new List<string>();
+                foreach (var region in Region.Values())
+                {
+                    if (!realms.Contains(region.Realm.RealmId.ToLower()))
+                    {
+                        realms.Add(region.Realm.RealmId.ToLower());
+                    }
+                }
+                foreach (RegionSchema region in allRegions)
+                {
+                    if (region != null && region.isValid())
+                    {
+                        Assert.True(realms.Contains(region.realmKey.ToLower()), $"Realm {region.realmKey} not found in known regions.");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Warn($"Exception in ValidateAllKnownRegions(): {e}");
+            }
         }
     }
 }

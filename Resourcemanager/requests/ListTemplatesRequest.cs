@@ -36,6 +36,8 @@ namespace Oci.ResourcemanagerService.Requests
         
         /// <value>
         /// Unique identifier of the template category.
+        /// Possible values are `0` (Quick Starts), `1` (Service), `2` (Architecture), and `3` (Private).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "templateCategoryId")]
         public string TemplateCategoryId { get; set; }
@@ -47,7 +49,10 @@ namespace Oci.ResourcemanagerService.Requests
         public string TemplateId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the specified display name.
+        /// A filter to return only resources that match the given display name exactly.
+        /// Use this filter to list a resource by name.
+        /// Requires `sortBy` set to `DISPLAYNAME`.
+        /// Alternatively, when you know the resource OCID, use the related Get operation.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

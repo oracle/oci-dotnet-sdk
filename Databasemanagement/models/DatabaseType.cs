@@ -13,12 +13,22 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// The type of Oracle Database installation.
+  /// The type of Oracle Database installation:
+    /// <br/>
+    /// - EXTERNAL_SIDB: Single instance external database.
+    /// - EXTERNAL_RAC: Oracle Real Application Clusters (Oracle RAC) external database.
+    /// - CLOUD_SIDB: Single instance database in Oracle Cloud.
+    /// - CLOUD_RAC: Oracle RAC database in Oracle Cloud.
+    /// 
   /// </summary>
   public enum DatabaseType {
       [EnumMember(Value = "EXTERNAL_SIDB")]
       ExternalSidb,
       [EnumMember(Value = "EXTERNAL_RAC")]
-      ExternalRac
+      ExternalRac,
+      [EnumMember(Value = "CLOUD_SIDB")]
+      CloudSidb,
+      [EnumMember(Value = "CLOUD_RAC")]
+      CloudRac
   }
 }

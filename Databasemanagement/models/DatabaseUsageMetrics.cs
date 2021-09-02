@@ -48,6 +48,19 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
+        /// The infrastructure used to deploy the Oracle Database.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
+        /// The Oracle Database version.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseVersion")]
+        public string DatabaseVersion { get; set; }
+        
+        /// <value>
         /// The display name of the Managed Database.
         /// </value>
         [JsonProperty(PropertyName = "databaseName")]

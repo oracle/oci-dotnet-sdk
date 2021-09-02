@@ -22,6 +22,9 @@ namespace Oci.ResourcemanagerService.Models
     public class CreateDestroyJobOperationDetails : CreateJobOperationDetails
     {
         
+        [JsonProperty(PropertyName = "terraformAdvancedOptions")]
+        public TerraformAdvancedOptions TerraformAdvancedOptions { get; set; }
+        
         /// <value>
         /// Specifies the source of the execution plan to apply.
         /// Currently, only `AUTO_APPROVED` is allowed, which indicates that the job

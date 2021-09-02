@@ -18,7 +18,7 @@ namespace Oci.ResourcemanagerService.Models
     /// <summary>
     /// The properties that define a configuration source provider.
     /// For more information, see
-    /// [Managing Configuration Source Providers](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#ManagingConfigurationSourceProviders).
+    /// [Managing Configuration Source Providers](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingconfigurationsourceproviders.htm).
     /// 
     /// </summary>
     [JsonConverter(typeof(ConfigurationSourceProviderModelConverter))]
@@ -60,7 +60,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// The current lifecycle state of the configuration source provider.
         /// For more information about configuration source provider lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#CSPStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__CSPStates).
         /// 
         /// </value>
         ///
@@ -72,7 +72,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// The current lifecycle state of the configuration source provider.
         /// For more information about configuration source provider lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#CSPStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__CSPStates).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

@@ -47,6 +47,12 @@ namespace Oci.ResourcemanagerService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// whether the template will work for free tier tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "isFreeTier")]
+        public System.Nullable<bool> IsFreeTier { get; set; }
+        
+        /// <value>
         /// The date and time at which the template was created.
         /// Format is defined by RFC3339.
         /// Example: 2020-11-25T21:10:29.600Z

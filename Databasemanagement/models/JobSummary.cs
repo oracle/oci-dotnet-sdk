@@ -87,6 +87,9 @@ namespace Oci.DatabasemanagementService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Job.ScheduleTypeEnum> ScheduleType { get; set; }
         
+        [JsonProperty(PropertyName = "scheduleDetails")]
+        public JobScheduleDetails ScheduleDetails { get; set; }
+        
         /// <value>
         /// The type of job.
         /// </value>

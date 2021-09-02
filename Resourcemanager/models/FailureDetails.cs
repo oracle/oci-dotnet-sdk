@@ -39,7 +39,13 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "TERRAFORM_GIT_CLONE_FAILURE")]
             TerraformGitCloneFailure,
             [EnumMember(Value = "TERRAFORM_GIT_CHECKOUT_FAILURE")]
-            TerraformGitCheckoutFailure
+            TerraformGitCheckoutFailure,
+            [EnumMember(Value = "TERRAFORM_OBJECT_STORAGE_CONFIG_SOURCE_EMPTY_BUCKET")]
+            TerraformObjectStorageConfigSourceEmptyBucket,
+            [EnumMember(Value = "TERRAFORM_OBJECT_STORAGE_CONFIG_SOURCE_NO_TF_FILE_PRESENT")]
+            TerraformObjectStorageConfigSourceNoTfFilePresent,
+            [EnumMember(Value = "TERRAFORM_OBJECT_STORAGE_CONFIG_SOURCE_UNSUPPORTED_OBJECT_SIZE")]
+            TerraformObjectStorageConfigSourceUnsupportedObjectSize
         };
 
         /// <value>

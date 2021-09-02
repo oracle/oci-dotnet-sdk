@@ -50,7 +50,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Double MinValue { get; set; }
         
         /// <value>
-        /// The maximum value of the sampling period.v
+        /// The maximum value of the sampling period.
         /// </value>
         [JsonProperty(PropertyName = "maxValue")]
         public System.Double MaxValue { get; set; }

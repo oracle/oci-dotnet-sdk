@@ -21,6 +21,9 @@ namespace Oci.ResourcemanagerService.Models
     /// </summary>
     public class ApplyJobOperationDetails : JobOperationDetails
     {
+        
+        [JsonProperty(PropertyName = "terraformAdvancedOptions")]
+        public TerraformAdvancedOptions TerraformAdvancedOptions { get; set; }
                 ///
         /// <value>
         /// Specifies the source of the execution plan to apply.

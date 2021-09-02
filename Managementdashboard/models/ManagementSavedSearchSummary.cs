@@ -52,6 +52,16 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsOobSavedSearch { get; set; }
         
         /// <value>
+        /// OCID of the compartment in which the saved search resides.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// ID of the service (for example log-analytics) that owns the saved search. Each service has a unique ID.
         /// </value>
         /// <remarks>
@@ -62,14 +72,24 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderId { get; set; }
         
         /// <value>
-        /// OCID of the compartment in which the saved search resides.
+        /// Version of the service that owns this saved search.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
+        [Required(ErrorMessage = "ProviderVersion is required.")]
+        [JsonProperty(PropertyName = "providerVersion")]
+        public string ProviderVersion { get; set; }
+        
+        /// <value>
+        /// Name of the service (for example, Logging Analytics) that owns the saved search.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProviderName is required.")]
+        [JsonProperty(PropertyName = "providerName")]
+        public string ProviderName { get; set; }
         
         /// <value>
         /// Description of the saved search.

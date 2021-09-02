@@ -89,7 +89,9 @@ namespace Oci.DatabasemanagementService.Models
         ///
         public enum ScheduleTypeEnum {
             [EnumMember(Value = "IMMEDIATE")]
-            Immediate
+            Immediate,
+            [EnumMember(Value = "LATER")]
+            Later
         };
 
         /// <value>
@@ -134,6 +136,9 @@ namespace Oci.DatabasemanagementService.Models
         
         [JsonProperty(PropertyName = "resultLocation")]
         public JobExecutionResultLocation ResultLocation { get; set; }
+        
+        [JsonProperty(PropertyName = "scheduleDetails")]
+        public JobScheduleDetails ScheduleDetails { get; set; }
         
         /// <value>
         /// The error message that is returned if the job submission fails. Null is returned in all other scenarios.

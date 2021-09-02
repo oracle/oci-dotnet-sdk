@@ -28,5 +28,11 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// Indicates whether this Terraform version is used by default in {@link #createStack(CreateStackRequest) createStack}.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefault")]
+        public System.Nullable<bool> IsDefault { get; set; }
+        
     }
 }

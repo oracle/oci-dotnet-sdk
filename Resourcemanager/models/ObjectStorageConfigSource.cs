@@ -45,6 +45,8 @@ namespace Oci.ResourcemanagerService.Models
         
         /// <value>
         /// The name of the bucket that contains the Terraform configuration files.
+        /// Maximum file size (applies to each file in the bucket): 100 MB. (In a bucket, a file is an object.)
+        /// 
         /// </value>
         /// <remarks>
         /// Required
