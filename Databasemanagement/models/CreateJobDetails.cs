@@ -91,6 +91,9 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "resultLocation")]
         public JobExecutionResultLocation ResultLocation { get; set; }
         
+        [JsonProperty(PropertyName = "scheduleDetails")]
+        public JobScheduleDetails ScheduleDetails { get; set; }
+        
     }
 
     public class CreateJobDetailsModelConverter : JsonConverter

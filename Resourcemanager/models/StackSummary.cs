@@ -57,7 +57,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// The current lifecycle state of the stack.
         /// For more information about stack lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#StackStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__StackStates).
         /// <br/>
         /// Allowable values:
         /// - CREATING

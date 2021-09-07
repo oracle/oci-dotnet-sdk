@@ -58,7 +58,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// The current lifecycle state of the stack.
         /// For more information about stack lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#StackStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__StackStates).
         /// 
         /// </value>
         ///
@@ -78,7 +78,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// The current lifecycle state of the stack.
         /// For more information about stack lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#StackStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__StackStates).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -91,7 +91,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.
-        /// The maximum size of each variable, including both name and value, is 4096 bytes.
+        /// The maximum size of each variable, including both name and value, is 8192 bytes.
         /// Example: {&quot;CompartmentId&quot;: &quot;compartment-id-value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "variables")]

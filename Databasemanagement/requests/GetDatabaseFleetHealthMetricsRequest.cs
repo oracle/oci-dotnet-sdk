@@ -80,5 +80,17 @@ namespace Oci.DatabasemanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByDatabaseSubType")]
         public string FilterByDatabaseSubType { get; set; }
+        
+        /// <value>
+        /// The filter used to filter the databases in the fleet by a specific Oracle Database deployment type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByDatabaseDeploymentType")]
+        public string FilterByDatabaseDeploymentType { get; set; }
+        
+        /// <value>
+        /// The filter used to filter the databases in the fleet by a specific Oracle Database version.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByDatabaseVersion")]
+        public string FilterByDatabaseVersion { get; set; }
     }
 }

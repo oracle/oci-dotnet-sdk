@@ -48,6 +48,18 @@ namespace Oci.DatabasemanagementService.Requests
         public string Name { get; set; }
         
         /// <value>
+        /// A filter to return Managed Databases with the specified management option.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managementOption")]
+        public System.Nullable<ManagementOption> ManagementOption { get; set; }
+        
+        /// <value>
+        /// A filter to return Managed Databases of the specified deployment type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deploymentType")]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
         /// The page token representing the page, from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 
@@ -86,7 +98,7 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The option to sort information in ascending (\u2018ASC\u2019) or descending (\u2018DESC\u2019) order. Ascending order is the the default order.
+        /// The option to sort information in ascending (\u2018ASC\u2019) or descending (\u2018DESC\u2019) order. Ascending order is the default order.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

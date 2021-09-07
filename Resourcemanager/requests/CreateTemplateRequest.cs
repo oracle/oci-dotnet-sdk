@@ -47,12 +47,5 @@ namespace Oci.ResourcemanagerService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// This is to enable limit/quota support through splat
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "oci-splat-generated-ocids")]
-        public string OciSplatGeneratedOcids { get; set; }
     }
 }

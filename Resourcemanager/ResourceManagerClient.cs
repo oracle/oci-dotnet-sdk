@@ -69,6 +69,9 @@ namespace Oci.ResourcemanagerService
         /// Indicates the intention to cancel the specified job.
         /// Cancellation of the job is not immediate, and may be delayed,
         /// or may not happen at all.
+        /// You can optionally choose forced cancellation by setting &#x60;isForced&#x60; to true.
+        /// A forced cancellation can result in an incorrect state file.
+        /// For example, the state file might not reflect the exact state of the provisioned resources.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -233,7 +236,7 @@ namespace Oci.ResourcemanagerService
         /// <summary>
         /// Creates a configuration source provider in the specified compartment.
         /// For more information, see
-        /// [To create a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#CreateConfigurationSourceProvider).
+        /// [To create a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingconfigurationsourceproviders.htm#CreateConfigurationSourceProvider).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -318,7 +321,7 @@ namespace Oci.ResourcemanagerService
         /// You can also create a stack from an existing compartment.
         /// You can also upload the Terraform configuration from an Object Storage bucket.
         /// For more information, see
-        /// [To create a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#CreateStack).
+        /// [To create a stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#createstack-all).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -358,7 +361,7 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
-        /// Creates a custom template in the specified compartment.
+        /// Creates a private template in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -632,7 +635,47 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
-        /// Returns log entries for the specified job in JSON format.
+        /// Returns the Terraform detailed log content for the specified job in plain text. [Learn about Terraform detailed log.](https://www.terraform.io/docs/internals/debugging.html)
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/resourcemanager/GetJobDetailedLogContent.cs.html">here</a> to see an example of how to use GetJobDetailedLogContent API.</example>
+        public async Task<GetJobDetailedLogContentResponse> GetJobDetailedLogContent(GetJobDetailedLogContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getJobDetailedLogContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}/detailedLogContent".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "text/plain");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetJobDetailedLogContentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetJobDetailedLogContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns console log entries for the specified job in JSON format.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -672,8 +715,7 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
-        /// Returns raw log file for the specified job in text format.
-        /// Returns a maximum of 100,000 log entries.
+        /// Returns a raw log file for the specified job. The raw log file contains console log entries in text format. The maximum number of entries in a file is 100,000.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1325,6 +1367,7 @@ namespace Oci.ResourcemanagerService
 
         /// <summary>
         /// Lists templates according to the specified filter.
+        /// The attributes &#x60;compartmentId&#x60; and &#x60;templateCategoryId&#x60; are required unless &#x60;templateId&#x60; is specified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1526,7 +1569,7 @@ namespace Oci.ResourcemanagerService
         /// <summary>
         /// Updates the properties of the specified configuration source provider.
         /// For more information, see
-        /// [To update a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm#UpdateConfigurationSourceProvider).
+        /// [To edit a configuration source provider](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingconfigurationsourceproviders.htm#EditConfigurationSourceProvider).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

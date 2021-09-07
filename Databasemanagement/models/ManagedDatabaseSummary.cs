@@ -74,6 +74,20 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
+        /// The infrastructure used to deploy the Oracle Database.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
+        /// The management option used when enabling Database Management.
+        /// </value>
+        [JsonProperty(PropertyName = "managementOption")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ManagementOption> ManagementOption { get; set; }
+        
+        /// <value>
         /// Indicates whether the Oracle Database is part of a cluster.
         /// </value>
         /// <remarks>

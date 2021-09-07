@@ -72,6 +72,36 @@ namespace Oci.ManagementdashboardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// ID of the service (for example, log-analytics) that owns the dashboard. Each service has a unique ID.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProviderId is required.")]
+        [JsonProperty(PropertyName = "providerId")]
+        public string ProviderId { get; set; }
+        
+        /// <value>
+        /// Name of the service (for example, Logging Analytics) that owns the dashboard.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProviderName is required.")]
+        [JsonProperty(PropertyName = "providerName")]
+        public string ProviderName { get; set; }
+        
+        /// <value>
+        /// Version of the service that owns the dashboard.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProviderVersion is required.")]
+        [JsonProperty(PropertyName = "providerVersion")]
+        public string ProviderVersion { get; set; }
+        
+        /// <value>
         /// Determines whether the dashboard is an Out-of-the-Box (OOB) dashboard. Note that OOB dashboards are only provided by Oracle and cannot be modified.
         /// </value>
         /// <remarks>

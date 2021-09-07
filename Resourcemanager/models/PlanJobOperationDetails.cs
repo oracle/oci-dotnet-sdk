@@ -22,6 +22,9 @@ namespace Oci.ResourcemanagerService.Models
     public class PlanJobOperationDetails : JobOperationDetails
     {
         
+        [JsonProperty(PropertyName = "terraformAdvancedOptions")]
+        public TerraformAdvancedOptions TerraformAdvancedOptions { get; set; }
+        
         [JsonProperty(PropertyName = "operation")]
         private readonly string operation = "PLAN";
     }

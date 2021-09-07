@@ -52,6 +52,13 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The infrastructure used to deploy the Oracle Database.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
         /// The type of Oracle Database installation.
         /// </value>
         [JsonProperty(PropertyName = "databaseType")]

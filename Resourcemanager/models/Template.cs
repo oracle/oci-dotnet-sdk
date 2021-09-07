@@ -40,6 +40,8 @@ namespace Oci.ResourcemanagerService.Models
         
         /// <value>
         /// Unique identifier for the category where the template is located.
+        /// Possible values are `0` (Quick Starts), `1` (Service), `2` (Architecture), and `3` (Private).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "categoryId")]
         public string CategoryId { get; set; }
@@ -61,6 +63,12 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "longDescription")]
         public string LongDescription { get; set; }
+        
+        /// <value>
+        /// whether the template will work for free tier tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "isFreeTier")]
+        public System.Nullable<bool> IsFreeTier { get; set; }
         
         /// <value>
         /// The date and time at which the template was created.

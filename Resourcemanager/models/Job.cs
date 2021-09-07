@@ -109,7 +109,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// Current state of the specified job.
         /// For more information about job lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#JobStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__JobStates).
         /// 
         /// </value>
         ///
@@ -131,7 +131,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// Current state of the specified job.
         /// For more information about job lifecycle states in Resource Manager, see
-        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#JobStates).
+        /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__JobStates).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -140,6 +140,9 @@ namespace Oci.ResourcemanagerService.Models
         
         [JsonProperty(PropertyName = "failureDetails")]
         public FailureDetails FailureDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "cancellationDetails")]
+        public CancellationDetails CancellationDetails { get; set; }
         
         /// <value>
         /// File path to the directory from which Terraform runs.
@@ -153,7 +156,7 @@ namespace Oci.ResourcemanagerService.Models
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.
-        /// The maximum size of each variable, including both name and value, is 4096 bytes.
+        /// The maximum size of each variable, including both name and value, is 8192 bytes.
         /// Example: {&quot;CompartmentId&quot;: &quot;compartment-id-value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "variables")]

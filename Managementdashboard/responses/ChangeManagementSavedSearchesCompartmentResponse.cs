@@ -16,6 +16,14 @@ namespace Oci.ManagementdashboardService.Responses
     {
 
         /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
+
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 
@@ -31,7 +39,11 @@ namespace Oci.ManagementdashboardService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
         public string OpcWorkRequestId { get; set; }
 
-
+        /// <value>
+        /// The returned ManagementSavedSearch instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public ManagementSavedSearch ManagementSavedSearch { get; set; }
 
     }
 }
