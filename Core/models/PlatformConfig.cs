@@ -24,16 +24,44 @@ namespace Oci.CoreService.Models
     {
                 ///
         /// <value>
-        /// The type of platform being configured. The only supported
-        /// `type` is `AMD_MILAN_BM`.
+        /// The type of platform being configured.
         /// 
         /// </value>
         ///
         public enum TypeEnum {
             [EnumMember(Value = "AMD_MILAN_BM")]
-            AmdMilanBm
+            AmdMilanBm,
+            [EnumMember(Value = "AMD_ROME_BM")]
+            AmdRomeBm,
+            [EnumMember(Value = "INTEL_SKYLAKE_BM")]
+            IntelSkylakeBm,
+            [EnumMember(Value = "AMD_VM")]
+            AmdVm,
+            [EnumMember(Value = "INTEL_VM")]
+            IntelVm
         };
 
+        
+        /// <value>
+        /// Whether Secure Boot is enabled on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSecureBootEnabled")]
+        public System.Nullable<bool> IsSecureBootEnabled { get; set; }
+        
+        /// <value>
+        /// Whether the Trusted Platform Module (TPM) is enabled on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isTrustedPlatformModuleEnabled")]
+        public System.Nullable<bool> IsTrustedPlatformModuleEnabled { get; set; }
+        
+        /// <value>
+        /// Whether the Measured Boot feature is enabled on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMeasuredBootEnabled")]
+        public System.Nullable<bool> IsMeasuredBootEnabled { get; set; }
         
     }
 
@@ -59,6 +87,18 @@ namespace Oci.CoreService.Models
             {
                 case "AMD_MILAN_BM":
                     obj = new AmdMilanBmPlatformConfig();
+                    break;
+                case "AMD_ROME_BM":
+                    obj = new AmdRomeBmPlatformConfig();
+                    break;
+                case "INTEL_SKYLAKE_BM":
+                    obj = new IntelSkylakeBmPlatformConfig();
+                    break;
+                case "AMD_VM":
+                    obj = new AmdVmPlatformConfig();
+                    break;
+                case "INTEL_VM":
+                    obj = new IntelVmPlatformConfig();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

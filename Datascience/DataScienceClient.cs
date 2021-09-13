@@ -183,6 +183,45 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Cancels an IN_PROGRESS job run.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CancelJobRun.cs.html">here</a> to see an example of how to use CancelJobRun API.</example>
+        public async Task<CancelJobRunResponse> CancelJobRun(CancelJobRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called cancelJobRun");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns/{jobRunId}/actions/cancelJobRun".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CancelJobRunResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CancelJobRun failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Cancels a work request that has not started.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -217,6 +256,84 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"CancelWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Changes a job&#39;s compartment
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ChangeJobCompartment.cs.html">here</a> to see an example of how to use ChangeJobCompartment API.</example>
+        public async Task<ChangeJobCompartmentResponse> ChangeJobCompartment(ChangeJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeJobCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeJobCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeJobCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Changes a job run&#39;s compartment
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ChangeJobRunCompartment.cs.html">here</a> to see an example of how to use ChangeJobRunCompartment API.</example>
+        public async Task<ChangeJobRunCompartmentResponse> ChangeJobRunCompartment(ChangeJobRunCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeJobRunCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns/{jobRunId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeJobRunCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeJobRunCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -373,6 +490,124 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"ChangeProjectCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateJob.cs.html">here</a> to see an example of how to use CreateJob API.</example>
+        public async Task<CreateJobResponse> CreateJob(CreateJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateJobResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateJob failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Uploads a job artifact.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateJobArtifact.cs.html">here</a> to see an example of how to use CreateJobArtifact API.</example>
+        public async Task<CreateJobArtifactResponse> CreateJobArtifact(CreateJobArtifactRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createJobArtifact");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}/artifact".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Properties.Add(Oci.Common.Http.Signing.SigningStrategy.SIGNING_STRATEGY_PROPERTY_NAME_KEY, Oci.Common.Http.Signing.SigningStrategy.EXCLUDE_BODY);
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateJobArtifactResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateJobArtifact failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a job run.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateJobRun.cs.html">here</a> to see an example of how to use CreateJobRun API.</example>
+        public async Task<CreateJobRunResponse> CreateJobRun(CreateJobRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createJobRun");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateJobRunResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateJobRun failed with error: {e.Message}");
                 throw;
             }
         }
@@ -730,6 +965,84 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Deletes a job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/DeleteJob.cs.html">here</a> to see an example of how to use DeleteJob API.</example>
+        public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteJobResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteJob failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes a job run.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/DeleteJobRun.cs.html">here</a> to see an example of how to use DeleteJobRun API.</example>
+        public async Task<DeleteJobRunResponse> DeleteJobRun(DeleteJobRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteJobRun");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns/{jobRunId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteJobRunResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteJobRun failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes the specified model.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -881,6 +1194,123 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"DeleteProject failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/GetJob.cs.html">here</a> to see an example of how to use GetJob API.</example>
+        public async Task<GetJobResponse> GetJob(GetJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetJobResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetJob failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Downloads job artifact content for specified job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/GetJobArtifactContent.cs.html">here</a> to see an example of how to use GetJobArtifactContent API.</example>
+        public async Task<GetJobArtifactContentResponse> GetJobArtifactContent(GetJobArtifactContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getJobArtifactContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}/artifact/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/octet-stream");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetJobArtifactContentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetJobArtifactContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a job run.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/GetJobRun.cs.html">here</a> to see an example of how to use GetJobRun API.</example>
+        public async Task<GetJobRunResponse> GetJobRun(GetJobRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getJobRun");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns/{jobRunId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetJobRunResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetJobRun failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1159,6 +1589,45 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Gets job artifact metadata.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/HeadJobArtifact.cs.html">here</a> to see an example of how to use HeadJobArtifact API.</example>
+        public async Task<HeadJobArtifactResponse> HeadJobArtifact(HeadJobArtifactRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called headJobArtifact");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}/artifact/content".Trim('/')));
+            HttpMethod method = new HttpMethod("HEAD");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<HeadJobArtifactResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"HeadJobArtifact failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets model artifact metadata for specified model.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1193,6 +1662,123 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"HeadModelArtifact failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List out job runs.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListJobRuns.cs.html">here</a> to see an example of how to use ListJobRuns API.</example>
+        public async Task<ListJobRunsResponse> ListJobRuns(ListJobRunsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listJobRuns");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListJobRunsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListJobRuns failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List job shapes available in the specified compartment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListJobShapes.cs.html">here</a> to see an example of how to use ListJobShapes API.</example>
+        public async Task<ListJobShapesResponse> ListJobShapes(ListJobShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listJobShapes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobShapes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListJobShapesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListJobShapes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List jobs in the specified compartment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListJobs.cs.html">here</a> to see an example of how to use ListJobs API.</example>
+        public async Task<ListJobsResponse> ListJobs(ListJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listJobs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListJobsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListJobs failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1545,6 +2131,84 @@ namespace Oci.DatascienceService
             catch (Exception e)
             {
                 logger.Error($"ListWorkRequests failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates a job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/UpdateJob.cs.html">here</a> to see an example of how to use UpdateJob API.</example>
+        public async Task<UpdateJobResponse> UpdateJob(UpdateJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobs/{jobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateJobResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateJob failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates a job run.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/UpdateJobRun.cs.html">here</a> to see an example of how to use UpdateJobRun API.</example>
+        public async Task<UpdateJobRunResponse> UpdateJobRun(UpdateJobRunRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateJobRun");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jobRuns/{jobRunId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateJobRunResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateJobRun failed with error: {e.Message}");
                 throw;
             }
         }
