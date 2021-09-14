@@ -72,6 +72,12 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A mapping of each capability name to its ImageCapabilityDescriptor.
+        /// </value>
+        [JsonProperty(PropertyName = "schemaData")]
+        public System.Collections.Generic.Dictionary<string, ImageCapabilitySchemaDescriptor> SchemaData { get; set; }
+        
+        /// <value>
         /// The date and time the compute image capability schema was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

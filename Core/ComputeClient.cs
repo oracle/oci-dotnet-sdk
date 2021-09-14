@@ -66,6 +66,45 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Accept the changes to the PCR values in the Measured Boot Report.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/AcceptShieldedIntegrityPolicy.cs.html">here</a> to see an example of how to use AcceptShieldedIntegrityPolicy API.</example>
+        public async Task<AcceptShieldedIntegrityPolicyResponse> AcceptShieldedIntegrityPolicy(AcceptShieldedIntegrityPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called acceptShieldedIntegrityPolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instances/{instanceId}/actions/acceptShieldedIntegrityPolicy".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AcceptShieldedIntegrityPolicyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AcceptShieldedIntegrityPolicy failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Adds a shape to the compatible shapes list for the image.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1816,6 +1855,45 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"GetInstanceConsoleConnection failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the measured boot report for this Shielded Instance.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetMeasuredBootReport.cs.html">here</a> to see an example of how to use GetMeasuredBootReport API.</example>
+        public async Task<GetMeasuredBootReportResponse> GetMeasuredBootReport(GetMeasuredBootReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getMeasuredBootReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/instances/{instanceId}/measuredBootReport".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetMeasuredBootReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetMeasuredBootReport failed with error: {e.Message}");
                 throw;
             }
         }

@@ -156,5 +156,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "maxVnicAttachmentOptions")]
         public ShapeMaxVnicAttachmentOptions MaxVnicAttachmentOptions { get; set; }
         
+        [JsonProperty(PropertyName = "platformConfigOptions")]
+        public ShapePlatformConfigOptions PlatformConfigOptions { get; set; }
+        
     }
 }

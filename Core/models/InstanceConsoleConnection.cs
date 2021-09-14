@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The SSH public key fingerprint for the console connection.
+        /// The SSH public key's fingerprint for client authentication to the console connection.
         /// </value>
         [JsonProperty(PropertyName = "fingerprint")]
         public string Fingerprint { get; set; }
@@ -96,6 +96,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The SSH public key's fingerprint for the console connection service host.
+        /// </value>
+        [JsonProperty(PropertyName = "serviceHostKeyFingerprint")]
+        public string ServiceHostKeyFingerprint { get; set; }
         
         /// <value>
         /// The SSH connection string for the SSH tunnel used to

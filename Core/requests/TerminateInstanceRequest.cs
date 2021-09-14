@@ -40,7 +40,7 @@ namespace Oci.CoreService.Requests
         
         /// <value>
         /// Specifies whether to delete or preserve the boot volume when terminating an instance.
-        /// The default value is false.
+        /// When set to `true`, the boot volume is preserved. The default value is `false`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveBootVolume")]
