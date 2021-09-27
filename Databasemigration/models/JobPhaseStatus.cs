@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Job Phase status.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Job Phase status.
     /// 
   /// </summary>
   public enum JobPhaseStatus {

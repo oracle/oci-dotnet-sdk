@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
+    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Results of a Migration Phase search. Contains a collection of valid ODMS Job Phases.
     /// 
     /// </summary>

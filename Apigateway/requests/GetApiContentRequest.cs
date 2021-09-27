@@ -45,5 +45,14 @@ namespace Oci.ApigatewayService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// The Range HTTP request header indicates the part of a document that the
+        /// server should return. [RFC 7233](https://tools.ietf.org/html/rfc7233#section-3.1).
+        /// Note that only a single range of bytes is supported.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "range")]
+        public Oci.Common.Model.Range Range { get; set; }
     }
 }

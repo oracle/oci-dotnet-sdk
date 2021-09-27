@@ -31,6 +31,13 @@ namespace Oci.ApigatewayService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// An array of Network Security Groups OCIDs associated with this API Gateway.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
+        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
         /// 
         /// </value>

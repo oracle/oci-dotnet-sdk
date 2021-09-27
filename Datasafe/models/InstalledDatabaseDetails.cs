@@ -28,7 +28,7 @@ namespace Oci.DatasafeService.Models
         public string InstanceId { get; set; }
         
         /// <value>
-        /// A List of either the IP Addresses or FQDN names of the database hosts.
+        /// The list of database host IP Addresses. Fully qualified domain names can be used if connectionType is 'ONPREM_CONNECTOR'.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ipAddresses")]

@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to create an Autonomous Container Database in a specified Autonomous Exadata Infrastructure.
+        /// Request to create an Autonomous Container Database in a specified Autonomous Exadata Infrastructure or in Autonomous VM Cluster.
         /// </value>
         /// <remarks>
         /// Required

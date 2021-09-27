@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Job type.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Job type.
     /// 
   /// </summary>
   public enum JobTypes {

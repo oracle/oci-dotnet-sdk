@@ -66,6 +66,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Aborts a Migration Job (either Evaluation or Migration).
         /// 
         /// </summary>
@@ -106,6 +107,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Used to configure an ODMS Agent Compartment ID.
         /// 
         /// </summary>
@@ -146,6 +148,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Used to change the Database Connection compartment.
         /// 
         /// </summary>
@@ -186,6 +189,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Used to change the Migration compartment.
         /// 
         /// </summary>
@@ -226,6 +230,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Clone a configuration from an existing Migration.
         /// 
         /// </summary>
@@ -266,6 +271,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Create a Database Connection resource that contains the details to connect to either a Source or Target Database
         /// in the migration.
         /// 
@@ -307,6 +313,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Create a Migration resource that contains all the details to perform the
         /// database migration operation, such as source and destination database
         /// details, credentials, etc.
@@ -349,6 +356,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Delete the ODMS Agent represented by the specified ODMS Agent ID.
         /// 
         /// </summary>
@@ -389,6 +397,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Deletes the Database Connection represented by the specified connection ID.
         /// 
         /// </summary>
@@ -429,6 +438,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Deletes the migration job represented by the given job ID.
         /// 
         /// </summary>
@@ -469,6 +479,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Deletes the Migration represented by the specified migration ID.
         /// 
         /// </summary>
@@ -509,6 +520,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Start Validate Migration job.
         /// 
         /// </summary>
@@ -549,6 +561,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Display the ODMS Agent configuration.
         /// 
         /// </summary>
@@ -589,6 +602,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Display Database Connection details.
         /// 
         /// </summary>
@@ -629,6 +643,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Get a migration job.
         /// 
         /// </summary>
@@ -669,6 +684,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Get the migration Job Output content as a String.
         /// 
         /// </summary>
@@ -709,6 +725,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Display Migration details.
         /// 
         /// </summary>
@@ -749,6 +766,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Gets the details of a work request.
         /// 
         /// </summary>
@@ -789,6 +807,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Get details of the ODMS Agent Images available to install on-premises.
         /// 
         /// </summary>
@@ -829,6 +848,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Display the name of all the existing ODMS Agents in the server.
         /// 
         /// </summary>
@@ -869,6 +889,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// List all Database Connections.
         /// 
         /// </summary>
@@ -909,6 +930,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// List the Job Outputs
         /// 
         /// </summary>
@@ -949,6 +971,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// List all the names of the Migration jobs associated to the specified
         /// migration site.
         /// 
@@ -990,6 +1013,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// List all Migrations.
         /// 
         /// </summary>
@@ -1030,6 +1054,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Gets the errors for a work request.
         /// 
         /// </summary>
@@ -1070,6 +1095,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Gets the logs for a work request.
         /// 
         /// </summary>
@@ -1110,6 +1136,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Lists the work requests in a compartment or for a specified resource.
         /// 
         /// </summary>
@@ -1150,6 +1177,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Resume a migration Job.
         /// 
         /// </summary>
@@ -1190,6 +1218,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Display Migration Phases for a specified migration.
         /// 
         /// </summary>
@@ -1230,6 +1259,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Start Migration job.
         /// 
         /// </summary>
@@ -1270,6 +1300,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Modifies the ODMS Agent represented by the given ODMS Agent ID.
         /// 
         /// </summary>
@@ -1310,6 +1341,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Update Database Connection resource details.
         /// 
         /// </summary>
@@ -1350,6 +1382,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Update Migration Job resource details.
         /// 
         /// </summary>
@@ -1390,6 +1423,7 @@ namespace Oci.DatabasemigrationService
         }
 
         /// <summary>
+        /// Note: Deprecated. Use the new resource model APIs instead.
         /// Update Migration resource details.
         /// 
         /// </summary>

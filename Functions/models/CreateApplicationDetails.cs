@@ -65,6 +65,13 @@ namespace Oci.FunctionsService.Models
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s of the Network Security Groups to add the application to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
+        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
+        /// <value>
         /// A syslog URL to which to send all function logs. Supports tcp, udp, and tcp+tls.
         /// The syslog URL must be reachable from all of the subnets configured for the application.
         /// Note: If you enable the OCI Logging service for this application, the syslogUrl value is ignored. Function logs are sent to the OCI Logging service, and not to the syslog URL.
@@ -93,6 +100,9 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        [JsonProperty(PropertyName = "imagePolicyConfig")]
+        public ImagePolicyConfig ImagePolicyConfig { get; set; }
         
     }
 }

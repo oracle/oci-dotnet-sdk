@@ -76,6 +76,13 @@ namespace Oci.ApigatewayService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// An array of Network Security Groups OCIDs associated with this API Gateway.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
+        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
+        /// <value>
         /// The time this resource was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

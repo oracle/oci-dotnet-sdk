@@ -184,6 +184,50 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Moves the specified saved security assessment or future scheduled assessments into a different compartment.
+        /// &lt;br/&gt;
+        /// To start, call first the operation ListSecurityAssessments with filters \&quot;type &#x3D; save_schedule\&quot;. This returns the scheduleAssessmentId. Then, call this changeCompartment with the scheduleAssessmentId.
+        /// &lt;br/&gt;
+        /// The existing saved security assessments created due to the schedule are not moved. However, all new saves will be associated with the new compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ChangeSecurityAssessmentCompartment.cs.html">here</a> to see an example of how to use ChangeSecurityAssessmentCompartment API.</example>
+        public async Task<ChangeSecurityAssessmentCompartmentResponse> ChangeSecurityAssessmentCompartment(ChangeSecurityAssessmentCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeSecurityAssessmentCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeSecurityAssessmentCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeSecurityAssessmentCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves the Data Safe target database to the specified compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -218,6 +262,132 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"ChangeTargetDatabaseCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves the specified saved user assessment or future scheduled assessments into a different compartment.
+        /// To start storing scheduled user assessments on a different compartment, first call the operation ListUserAssessments with
+        /// the filters \&quot;type &#x3D; save_schedule\&quot;. That call returns the scheduleAssessmentId. Then call
+        /// ChangeUserAssessmentCompartment with the scheduleAssessmentId. The existing saved user assessments created per the schedule
+        /// are not be moved. However, all new saves will be associated with the new compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ChangeUserAssessmentCompartment.cs.html">here</a> to see an example of how to use ChangeUserAssessmentCompartment API.</example>
+        public async Task<ChangeUserAssessmentCompartmentResponse> ChangeUserAssessmentCompartment(ChangeUserAssessmentCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeUserAssessmentCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeUserAssessmentCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeUserAssessmentCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Compares two security assessments. For this comparison, a security assessment can be a saved assessment, a latest assessment, or a baseline assessment.
+        /// For example, you can compare saved assessment or a latest assessment against a baseline.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/CompareSecurityAssessment.cs.html">here</a> to see an example of how to use CompareSecurityAssessment API.</example>
+        public async Task<CompareSecurityAssessmentResponse> CompareSecurityAssessment(CompareSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called compareSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/compare".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CompareSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CompareSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Compares two user assessments. For this comparison, a user assessment can be a saved, a latest assessment, or a baseline.
+        /// As an example, it can be used to compare a user assessment saved or a latest assessment with a baseline.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/CompareUserAssessment.cs.html">here</a> to see an example of how to use CompareUserAssessment API.</example>
+        public async Task<CompareUserAssessmentResponse> CompareUserAssessment(CompareUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called compareUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/compare".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CompareUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CompareUserAssessment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -303,6 +473,48 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Creates a new saved security assessment for one or multiple targets in a compartment. When this operation is performed,
+        /// it will save the latest assessments in the specified compartment. If a schedule is passed, it will persist the latest assessments,
+        /// at the defined date and time, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/CreateSecurityAssessment.cs.html">here</a> to see an example of how to use CreateSecurityAssessment API.</example>
+        public async Task<CreateSecurityAssessmentResponse> CreateSecurityAssessment(CreateSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Registers the specified database with Data Safe and creates a Data Safe target database in the Data Safe Console.
         /// 
         /// </summary>
@@ -338,6 +550,48 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"CreateTargetDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new saved user assessment for one or multiple targets in a compartment. It saves the latest assessments in the
+        /// specified compartment. If a scheduled is passed in, this operation persists the latest assessments that exist at the defined
+        /// date and time, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/CreateUserAssessment.cs.html">here</a> to see an example of how to use CreateUserAssessment API.</example>
+        public async Task<CreateUserAssessmentResponse> CreateUserAssessment(CreateUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateUserAssessment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -461,6 +715,49 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Deletes the specified saved security assessment or schedule. To delete a security assessment schedule,
+        /// first call the operation ListSecurityAssessments with filters \&quot;type &#x3D; save_schedule\&quot;.
+        /// That operation returns the scheduleAssessmentId. Then, call DeleteSecurityAssessment with the scheduleAssessmentId.
+        /// If the assessment being deleted is the baseline for that compartment, then it will impact all baselines in the compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/DeleteSecurityAssessment.cs.html">here</a> to see an example of how to use DeleteSecurityAssessment API.</example>
+        public async Task<DeleteSecurityAssessmentResponse> DeleteSecurityAssessment(DeleteSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deregisters the specified database from Data Safe and removes the target database from the Data Safe Console.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -495,6 +792,49 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"DeleteTargetDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified saved user assessment or schedule. To delete a user assessment schedule, first call the operation
+        /// ListUserAssessments with filters \&quot;type &#x3D; save_schedule\&quot;.
+        /// That call returns the scheduleAssessmentId. Then call DeleteUserAssessment with the scheduleAssessmentId.
+        /// If the assessment being deleted is the baseline for that compartment, then it will impact all baselines in the compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/DeleteUserAssessment.cs.html">here</a> to see an example of how to use DeleteUserAssessment API.</example>
+        public async Task<DeleteUserAssessmentResponse> DeleteUserAssessment(DeleteUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteUserAssessment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -535,6 +875,88 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"DownloadPrivilegeScript failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Downloads the report of the specified security assessment. To download the security assessment report, it needs to be generated first.
+        /// Please use GenerateSecurityAssessmentReport to generate a downloadable report in the preferred format (PDF, XLS).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/DownloadSecurityAssessmentReport.cs.html">here</a> to see an example of how to use DownloadSecurityAssessmentReport API.</example>
+        public async Task<DownloadSecurityAssessmentReportResponse> DownloadSecurityAssessmentReport(DownloadSecurityAssessmentReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called downloadSecurityAssessmentReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/downloadReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DownloadSecurityAssessmentReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DownloadSecurityAssessmentReport failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Downloads the report of the specified user assessment. To download the user assessment report, it needs to be generated first.
+        /// Please use GenerateUserAssessmentReport to generate a downloadable report in the preferred format (PDF, XLS).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/DownloadUserAssessmentReport.cs.html">here</a> to see an example of how to use DownloadUserAssessmentReport API.</example>
+        public async Task<DownloadUserAssessmentReportResponse> DownloadUserAssessmentReport(DownloadUserAssessmentReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called downloadUserAssessmentReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/downloadReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DownloadUserAssessmentReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DownloadUserAssessmentReport failed with error: {e.Message}");
                 throw;
             }
         }
@@ -615,6 +1037,88 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"GenerateOnPremConnectorConfiguration failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates the report of the specified security assessment. You can get the report in PDF or XLS format.
+        /// After generating the report, use DownloadSecurityAssessmentReport to download it in the preferred format.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GenerateSecurityAssessmentReport.cs.html">here</a> to see an example of how to use GenerateSecurityAssessmentReport API.</example>
+        public async Task<GenerateSecurityAssessmentReportResponse> GenerateSecurityAssessmentReport(GenerateSecurityAssessmentReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called generateSecurityAssessmentReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/generateReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GenerateSecurityAssessmentReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateSecurityAssessmentReport failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates the report of the specified user assessment. The report is available in PDF or XLS format.
+        /// After generating the report, use DownloadUserAssessmentReport to download it in the preferred format.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GenerateUserAssessmentReport.cs.html">here</a> to see an example of how to use GenerateUserAssessmentReport API.</example>
+        public async Task<GenerateUserAssessmentReportResponse> GenerateUserAssessmentReport(GenerateUserAssessmentReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called generateUserAssessmentReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/generateReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GenerateUserAssessmentReportResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateUserAssessmentReport failed with error: {e.Message}");
                 throw;
             }
         }
@@ -737,6 +1241,84 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Gets the details of the specified security assessment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GetSecurityAssessment.cs.html">here</a> to see an example of how to use GetSecurityAssessment API.</example>
+        public async Task<GetSecurityAssessmentResponse> GetSecurityAssessment(GetSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details of the comparison report on the security assessments submitted for comparison.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GetSecurityAssessmentComparison.cs.html">here</a> to see an example of how to use GetSecurityAssessmentComparison API.</example>
+        public async Task<GetSecurityAssessmentComparisonResponse> GetSecurityAssessmentComparison(GetSecurityAssessmentComparisonRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getSecurityAssessmentComparison");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/comparison/{comparisonSecurityAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetSecurityAssessmentComparisonResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSecurityAssessmentComparison failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns the details of the specified Data Safe target database.
         /// 
         /// </summary>
@@ -772,6 +1354,84 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"GetTargetDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a user assessment by identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GetUserAssessment.cs.html">here</a> to see an example of how to use GetUserAssessment API.</example>
+        public async Task<GetUserAssessmentResponse> GetUserAssessment(GetUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetUserAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details of the comparison report for the user assessments provided.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GetUserAssessmentComparison.cs.html">here</a> to see an example of how to use GetUserAssessmentComparison API.</example>
+        public async Task<GetUserAssessmentComparisonResponse> GetUserAssessmentComparison(GetUserAssessmentComparisonRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getUserAssessmentComparison");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/comparison/{comparisonUserAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetUserAssessmentComparisonResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetUserAssessmentComparison failed with error: {e.Message}");
                 throw;
             }
         }
@@ -856,6 +1516,89 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// List all the findings from all the targets in the specified assessment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListFindings.cs.html">here</a> to see an example of how to use ListFindings API.</example>
+        public async Task<ListFindingsResponse> ListFindings(ListFindingsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listFindings");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/findings".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListFindingsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListFindings failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of grants for a particular user in the specified user assessment. A user grant contains details such as the
+        /// privilege name, type, category, and depth level. The depth level indicates how deep in the hierarchy of roles granted to
+        /// roles a privilege grant is. The userKey in this operation is a system-generated identifier. Perform the operation ListUsers
+        /// to get the userKey for a particular user.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListGrants.cs.html">here</a> to see an example of how to use ListGrants API.</example>
+        public async Task<ListGrantsResponse> ListGrants(ListGrantsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listGrants");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/users/{userKey}/grants".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListGrantsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListGrants failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of on-premises connectors.
         /// 
         /// </summary>
@@ -896,6 +1639,60 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Gets a list of security assessments.
+        /// &lt;br/&gt;
+        /// The ListSecurityAssessments operation returns only the assessments in the specified &#x60;compartmentId&#x60;.
+        /// The list does not include any subcompartments of the compartmentId passed.
+        /// &lt;br/&gt;
+        /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
+        /// requestor has INSPECT permissions on at least one resource directly
+        /// or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+        /// Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+        /// &#x60;compartmentIdInSubtree&#x60; is set to &#x60;true&#x60;.
+        /// &lt;br/&gt;
+        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform ListSecurityAssessments on the
+        /// &#x60;compartmentId&#x60; passed and when it is set to true, the entire hierarchy of compartments can be returned.
+        /// To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+        /// set the parameter &#x60;compartmentIdInSubtree&#x60; to true and &#x60;accessLevel&#x60; to ACCESSIBLE.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListSecurityAssessments.cs.html">here</a> to see an example of how to use ListSecurityAssessments API.</example>
+        public async Task<ListSecurityAssessmentsResponse> ListSecurityAssessments(ListSecurityAssessmentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listSecurityAssessments");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListSecurityAssessmentsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSecurityAssessments failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns the list of registered target databases in Data Safe.
         /// 
         /// </summary>
@@ -931,6 +1728,157 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"ListTargetDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of aggregated user details from the specified user assessment. This provides information about the overall state
+        /// of database user security.  For example, the user details include how many users have the DBA role and how many users are in
+        /// the critical category. This data is especially useful content for dashboards or to support analytics.
+        /// &lt;br/&gt;
+        /// When you perform the ListUserAnalytics operation, if the parameter compartmentIdInSubtree is set to \&quot;true,\&quot; and if the
+        /// parameter accessLevel is set to ACCESSIBLE, then the operation returns compartments in which the requestor has INSPECT
+        /// permissions on at least one resource, directly or indirectly (in subcompartments). If the operation is performed at the
+        /// root compartment. If the requestor does not have access to at least one subcompartment of the compartment specified by
+        /// compartmentId, then \&quot;Not Authorized\&quot; is returned.
+        /// &lt;br/&gt;
+        /// The parameter compartmentIdInSubtree applies when you perform ListUserAnalytics on the compartmentId passed and when it is
+        /// set to true, the entire hierarchy of compartments can be returned.
+        /// &lt;br/&gt;
+        /// To use ListUserAnalytics to get a full list of all compartments and subcompartments in the tenancy from the root compartment,
+        /// set the parameter compartmentIdInSubtree to true and accessLevel to ACCESSIBLE.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListUserAnalytics.cs.html">here</a> to see an example of how to use ListUserAnalytics API.</example>
+        public async Task<ListUserAnalyticsResponse> ListUserAnalytics(ListUserAnalyticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listUserAnalytics");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/userAnalytics".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListUserAnalyticsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListUserAnalytics failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of user assessments.
+        /// &lt;br/&gt;
+        /// The ListUserAssessments operation returns only the assessments in the specified &#x60;compartmentId&#x60;.
+        /// The list does not include any subcompartments of the compartmentId passed.
+        /// &lt;br/&gt;
+        /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
+        /// requestor has INSPECT permissions on at least one resource directly
+        /// or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+        /// Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+        /// &#x60;compartmentIdInSubtree&#x60; is set to &#x60;true&#x60;.
+        /// &lt;br/&gt;
+        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform ListUserAssessments on the
+        /// &#x60;compartmentId&#x60; passed and when it is set to true, the entire hierarchy of compartments can be returned.
+        /// To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+        /// set the parameter &#x60;compartmentIdInSubtree&#x60; to true and &#x60;accessLevel&#x60; to ACCESSIBLE.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListUserAssessments.cs.html">here</a> to see an example of how to use ListUserAssessments API.</example>
+        public async Task<ListUserAssessmentsResponse> ListUserAssessments(ListUserAssessmentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listUserAssessments");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListUserAssessmentsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListUserAssessments failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of users of the specified user assessment. The result contains the database user details for each user, such
+        /// as user type, account status, last login time, user creation time, authentication type, user profile, and the date and time
+        /// of the latest password change. It also contains the user category derived from these user details as well as privileges
+        /// granted to each user.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListUsers.cs.html">here</a> to see an example of how to use ListUsers API.</example>
+        public async Task<ListUsersResponse> ListUsers(ListUsersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listUsers");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/users".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListUsersResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListUsers failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1056,6 +2004,249 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Runs a security assessment, refreshes the latest assessment, and saves it for future reference.
+        /// The assessment runs with a securityAssessmentId of type LATEST. Before you start, first call the ListSecurityAssessments operation with filter \&quot;type &#x3D; latest\&quot; to get the security assessment id for the target&#39;s latest assessment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/RefreshSecurityAssessment.cs.html">here</a> to see an example of how to use RefreshSecurityAssessment API.</example>
+        public async Task<RefreshSecurityAssessmentResponse> RefreshSecurityAssessment(RefreshSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called refreshSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/refresh".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RefreshSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RefreshSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Refreshes the latest assessment and saves it for future reference. This operation runs with a userAssessmentId of type LATEST.
+        /// Before you start, first call the ListUserAssessments operation with filter \&quot;type &#x3D; latest\&quot; to get the user assessment ID for
+        /// the target&#39;s latest assessment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/RefreshUserAssessment.cs.html">here</a> to see an example of how to use RefreshUserAssessment API.</example>
+        public async Task<RefreshUserAssessmentResponse> RefreshUserAssessment(RefreshUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called refreshUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/refresh".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RefreshUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RefreshUserAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Sets the saved security assessment as the baseline in the compartment where the the specified assessment resides. The security assessment needs to be of type &#39;SAVED&#39;.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/SetSecurityAssessmentBaseline.cs.html">here</a> to see an example of how to use SetSecurityAssessmentBaseline API.</example>
+        public async Task<SetSecurityAssessmentBaselineResponse> SetSecurityAssessmentBaseline(SetSecurityAssessmentBaselineRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called setSecurityAssessmentBaseline");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/setBaseline".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SetSecurityAssessmentBaselineResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SetSecurityAssessmentBaseline failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Sets the saved user assessment as the baseline in the compartment where the specified assessment resides. The user assessment needs to be of type &#39;SAVED&#39;.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/SetUserAssessmentBaseline.cs.html">here</a> to see an example of how to use SetUserAssessmentBaseline API.</example>
+        public async Task<SetUserAssessmentBaselineResponse> SetUserAssessmentBaseline(SetUserAssessmentBaselineRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called setUserAssessmentBaseline");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/setBaseline".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SetUserAssessmentBaselineResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SetUserAssessmentBaseline failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Removes the baseline setting for the saved security assessment. The saved security assessment is no longer considered a baseline.
+        /// Sets the if-match parameter to the value of the etag from a previous GET or POST response for that resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/UnsetSecurityAssessmentBaseline.cs.html">here</a> to see an example of how to use UnsetSecurityAssessmentBaseline API.</example>
+        public async Task<UnsetSecurityAssessmentBaselineResponse> UnsetSecurityAssessmentBaseline(UnsetSecurityAssessmentBaselineRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called unsetSecurityAssessmentBaseline");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}/actions/unsetBaseline".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UnsetSecurityAssessmentBaselineResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UnsetSecurityAssessmentBaseline failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Removes the baseline setting for the saved user assessment. The saved user assessment is no longer considered a baseline.
+        /// Sets the if-match parameter to the value of the etag from a previous GET or POST response for that resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/UnsetUserAssessmentBaseline.cs.html">here</a> to see an example of how to use UnsetUserAssessmentBaseline API.</example>
+        public async Task<UnsetUserAssessmentBaselineResponse> UnsetUserAssessmentBaseline(UnsetUserAssessmentBaselineRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called unsetUserAssessmentBaseline");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}/actions/unsetBaseline".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UnsetUserAssessmentBaselineResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UnsetUserAssessmentBaseline failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates one or more attributes of the specified Data Safe private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1174,6 +2365,46 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Updates one or more attributes of the specified security assessment. This operation allows to update the security assessment displayName, description, or schedule.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/UpdateSecurityAssessment.cs.html">here</a> to see an example of how to use UpdateSecurityAssessment API.</example>
+        public async Task<UpdateSecurityAssessmentResponse> UpdateSecurityAssessment(UpdateSecurityAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateSecurityAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/securityAssessments/{securityAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateSecurityAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateSecurityAssessment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates one or more attributes of the specified Data Safe target database.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1208,6 +2439,46 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"UpdateTargetDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates one or more attributes of the specified user assessment. This operation allows to update the user assessment displayName, description, or schedule.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/UpdateUserAssessment.cs.html">here</a> to see an example of how to use UpdateUserAssessment API.</example>
+        public async Task<UpdateUserAssessmentResponse> UpdateUserAssessment(UpdateUserAssessmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateUserAssessment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/userAssessments/{userAssessmentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateUserAssessmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateUserAssessment failed with error: {e.Message}");
                 throw;
             }
         }

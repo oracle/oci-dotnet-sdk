@@ -57,7 +57,53 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DELETE_TARGET_DATABASE")]
             DeleteTargetDatabase,
             [EnumMember(Value = "CHANGE_TARGET_DATABASE_COMPARTMENT")]
-            ChangeTargetDatabaseCompartment
+            ChangeTargetDatabaseCompartment,
+            [EnumMember(Value = "CREATE_USER_ASSESSMENT")]
+            CreateUserAssessment,
+            [EnumMember(Value = "ASSESS_USER_ASSESSMENT")]
+            AssessUserAssessment,
+            [EnumMember(Value = "CREATE_SNAPSHOT_USER_ASSESSMENT")]
+            CreateSnapshotUserAssessment,
+            [EnumMember(Value = "CREATE_SCHEDULE_USER_ASSESSMENT")]
+            CreateScheduleUserAssessment,
+            [EnumMember(Value = "COMPARE_WITH_BASELINE_USER_ASSESSMENT")]
+            CompareWithBaselineUserAssessment,
+            [EnumMember(Value = "DELETE_USER_ASSESSMENT")]
+            DeleteUserAssessment,
+            [EnumMember(Value = "UPDATE_USER_ASSESSMENT")]
+            UpdateUserAssessment,
+            [EnumMember(Value = "CHANGE_USER_ASSESSMENT_COMPARTMENT")]
+            ChangeUserAssessmentCompartment,
+            [EnumMember(Value = "SET_USER_ASSESSMENT_BASELINE")]
+            SetUserAssessmentBaseline,
+            [EnumMember(Value = "UNSET_USER_ASSESSMENT_BASELINE")]
+            UnsetUserAssessmentBaseline,
+            [EnumMember(Value = "GENERATE_USER_ASSESSMENT_REPORT")]
+            GenerateUserAssessmentReport,
+            [EnumMember(Value = "CREATE_SECURITY_ASSESSMENT")]
+            CreateSecurityAssessment,
+            [EnumMember(Value = "CREATE_SECURITY_ASSESSMENT_NOW")]
+            CreateSecurityAssessmentNow,
+            [EnumMember(Value = "ASSESS_SECURITY_ASSESSMENT")]
+            AssessSecurityAssessment,
+            [EnumMember(Value = "CREATE_SNAPSHOT_SECURITY_ASSESSMENT")]
+            CreateSnapshotSecurityAssessment,
+            [EnumMember(Value = "CREATE_SCHEDULE_SECURITY_ASSESSMENT")]
+            CreateScheduleSecurityAssessment,
+            [EnumMember(Value = "COMPARE_WITH_BASELINE_SECURITY_ASSESSMENT")]
+            CompareWithBaselineSecurityAssessment,
+            [EnumMember(Value = "DELETE_SECURITY_ASSESSMENT")]
+            DeleteSecurityAssessment,
+            [EnumMember(Value = "UPDATE_SECURITY_ASSESSMENT")]
+            UpdateSecurityAssessment,
+            [EnumMember(Value = "CHANGE_SECURITY_ASSESSMENT_COMPARTMENT")]
+            ChangeSecurityAssessmentCompartment,
+            [EnumMember(Value = "SET_SECURITY_ASSESSMENT_BASELINE")]
+            SetSecurityAssessmentBaseline,
+            [EnumMember(Value = "UNSET_SECURITY_ASSESSMENT_BASELINE")]
+            UnsetSecurityAssessmentBaseline,
+            [EnumMember(Value = "GENERATE_SECURITY_ASSESSMENT_REPORT")]
+            GenerateSecurityAssessmentReport
         };
 
         /// <value>

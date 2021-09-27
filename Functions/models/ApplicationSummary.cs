@@ -62,6 +62,13 @@ namespace Oci.FunctionsService.Models
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s of the Network Security Groups to add the application to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
+        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
         [JsonProperty(PropertyName = "traceConfig")]
         public ApplicationTraceConfig TraceConfig { get; set; }
         
@@ -98,6 +105,9 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        [JsonProperty(PropertyName = "imagePolicyConfig")]
+        public ImagePolicyConfig ImagePolicyConfig { get; set; }
         
     }
 }

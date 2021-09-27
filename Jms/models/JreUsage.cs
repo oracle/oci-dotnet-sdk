@@ -52,6 +52,12 @@ namespace Oci.JmsService.Models
         public string Version { get; set; }
         
         /// <value>
+        /// The operating systems that have this Java Runtime installed.
+        /// </value>
+        [JsonProperty(PropertyName = "operatingSystems")]
+        public System.Collections.Generic.List<OperatingSystem> OperatingSystems { get; set; }
+        
+        /// <value>
         /// The approximate count of installations that are installations of this Java Runtime.
         /// </value>
         [JsonProperty(PropertyName = "approximateInstallationCount")]

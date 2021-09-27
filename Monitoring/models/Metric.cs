@@ -40,9 +40,8 @@ namespace Oci.MonitoringService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// Resource group provided with the posted metric. A resource group is a custom string that can be used as a filter. Only one resource group can be applied per metric.
+        /// Resource group provided with the posted metric. A resource group is a custom string that you can match when retrieving custom metrics. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
-        /// Avoid entering confidential information.
         /// <br/>
         /// Example: frontend-fleet
         /// </value>

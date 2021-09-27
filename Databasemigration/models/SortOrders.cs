@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Sort orders.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Sort orders.
     /// 
   /// </summary>
   public enum SortOrders {

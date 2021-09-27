@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Possible lifecycle states.
     /// 
   /// </summary>
   public enum LifecycleStates {

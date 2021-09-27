@@ -59,7 +59,7 @@ namespace Oci.JmsService.Models
         public FleetAgentOsConfiguration WindowsConfiguration { get; set; }
         
         /// <value>
-        /// The date and time of the last modification to the Fleet Agent Configuration (formatted according to RFC3339).
+        /// The date and time of the last modification to the Fleet Agent Configuration (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         /// <remarks>

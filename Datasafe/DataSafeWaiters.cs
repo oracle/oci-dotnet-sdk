@@ -116,6 +116,60 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse> ForSecurityAssessment(GetSecurityAssessmentRequest request, params SecurityAssessmentLifecycleState[] targetStates)
+        {
+            return this.ForSecurityAssessment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse> ForSecurityAssessment(GetSecurityAssessmentRequest request, WaiterConfiguration config, params SecurityAssessmentLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse>(
+                request,
+                request => client.GetSecurityAssessment(request),
+                response => targetStates.Contains(response.SecurityAssessment.LifecycleState.Value)
+            );
+            return new Waiter<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityAssessmentComparisonRequest, GetSecurityAssessmentComparisonResponse> ForSecurityAssessmentComparison(GetSecurityAssessmentComparisonRequest request, params SecurityAssessmentComparison.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSecurityAssessmentComparison(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityAssessmentComparisonRequest, GetSecurityAssessmentComparisonResponse> ForSecurityAssessmentComparison(GetSecurityAssessmentComparisonRequest request, WaiterConfiguration config, params SecurityAssessmentComparison.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSecurityAssessmentComparisonRequest, GetSecurityAssessmentComparisonResponse>(
+                request,
+                request => client.GetSecurityAssessmentComparison(request),
+                response => targetStates.Contains(response.SecurityAssessmentComparison.LifecycleState.Value)
+            );
+            return new Waiter<GetSecurityAssessmentComparisonRequest, GetSecurityAssessmentComparisonResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, params LifecycleState[] targetStates)
         {
             return this.ForTargetDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -137,6 +191,60 @@ namespace Oci.DatasafeService
                 targetStates.Contains(LifecycleState.Deleted)
             );
             return new Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetUserAssessmentRequest, GetUserAssessmentResponse> ForUserAssessment(GetUserAssessmentRequest request, params UserAssessmentLifecycleState[] targetStates)
+        {
+            return this.ForUserAssessment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetUserAssessmentRequest, GetUserAssessmentResponse> ForUserAssessment(GetUserAssessmentRequest request, WaiterConfiguration config, params UserAssessmentLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetUserAssessmentRequest, GetUserAssessmentResponse>(
+                request,
+                request => client.GetUserAssessment(request),
+                response => targetStates.Contains(response.UserAssessment.LifecycleState.Value)
+            );
+            return new Waiter<GetUserAssessmentRequest, GetUserAssessmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetUserAssessmentComparisonRequest, GetUserAssessmentComparisonResponse> ForUserAssessmentComparison(GetUserAssessmentComparisonRequest request, params UserAssessmentComparison.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForUserAssessmentComparison(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetUserAssessmentComparisonRequest, GetUserAssessmentComparisonResponse> ForUserAssessmentComparison(GetUserAssessmentComparisonRequest request, WaiterConfiguration config, params UserAssessmentComparison.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetUserAssessmentComparisonRequest, GetUserAssessmentComparisonResponse>(
+                request,
+                request => client.GetUserAssessmentComparison(request),
+                response => targetStates.Contains(response.UserAssessmentComparison.LifecycleState.Value)
+            );
+            return new Waiter<GetUserAssessmentComparisonRequest, GetUserAssessmentComparisonResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

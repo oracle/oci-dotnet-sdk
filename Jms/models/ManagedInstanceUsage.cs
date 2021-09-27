@@ -53,6 +53,9 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
         
+        [JsonProperty(PropertyName = "operatingSystem")]
+        public OperatingSystem OperatingSystem { get; set; }
+        
         /// <value>
         /// The approximate count of applications reported by this managed instance.
         /// </value>

@@ -749,6 +749,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerDbIds")]
         public System.Collections.Generic.List<string> PeerDbIds { get; set; }
+        
+        /// <value>
+        /// Indicates whether the Autonomous Database requires mTLS connections.
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
+        public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
                 ///
         /// <value>
         /// The maintenance schedule type of the Autonomous Database on shared Exadata infrastructure. The EARLY maintenance schedule of this Autonomous Database

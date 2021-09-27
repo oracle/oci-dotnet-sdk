@@ -88,7 +88,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the request was created (formatted according to RFC3339).
+        /// The date and time the request was created (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         /// <remarks>
@@ -99,14 +99,14 @@ namespace Oci.JmsService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the work request transitioned from _ACCEPTED_ to _IN_PROGRESS_ (formatted according to RFC3339).
+        /// The date and time the work request transitioned from _ACCEPTED_ to _IN_PROGRESS_ (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the work request reached a terminal state, either _FAILED_ or _SUCCEEDED_ (formatted according to RFC3339).
+        /// The date and time the work request reached a terminal state, either _FAILED_ or _SUCCEEDED_ (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

@@ -54,5 +54,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "allConnectionStrings")]
         public System.Collections.Generic.Dictionary<string, string> AllConnectionStrings { get; set; }
         
+        /// <value>
+        /// A list of connection string profiles to allow clients to group, filter and select connection string values based on structured metadata.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "profiles")]
+        public System.Collections.Generic.List<DatabaseConnectionStringProfile> Profiles { get; set; }
+        
     }
 }

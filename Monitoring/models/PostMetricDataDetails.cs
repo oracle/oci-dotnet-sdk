@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// An array of metric objects containing raw metric data points to be posted to the Monitoring service.  
+    /// An array of metric objects containing raw metric data points to be posted to the Monitoring service.
     /// 
     /// </summary>
     public class PostMetricDataDetails 
     {
         
         /// <value>
-        /// A metric object containing raw metric data points to be posted to the Monitoring service. 
+        /// A metric object containing raw metric data points to be posted to the Monitoring service.
         /// 
         /// </value>
         /// <remarks>

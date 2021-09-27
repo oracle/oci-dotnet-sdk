@@ -20,7 +20,7 @@ namespace Oci.MonitoringService.Requests
     {
         
         /// <value>
-        /// An array of metric objects containing raw metric data points to be posted to the Monitoring service.  
+        /// An array of metric objects containing raw metric data points to be posted to the Monitoring service.
         /// 
         /// </value>
         /// <remarks>

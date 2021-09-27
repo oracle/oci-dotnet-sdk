@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// IMPORT: Specifies the action to be performed when data is loaded into a preexisting table.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// IMPORT: Specifies the action to be performed when data is loaded into a preexisting table.
     /// 
   /// </summary>
   public enum DataPumpTableExistsAction {

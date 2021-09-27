@@ -53,7 +53,8 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The `DB_UNIQUE_NAME` of the Oracle Database being backed up.
+        /// **Deprecated.** The `DB_UNIQUE_NAME` value is set by Oracle Cloud Infrastructure.  Do not specify a value for this parameter. Specifying a value for this field will cause Terraform operations to fail.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }

@@ -22,8 +22,8 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.cloud.oracle.com/Content/API/References/apierrors.htm)
+        /// A machine-usable code for the error that occured. Error codes are listed at
+        /// [API Errors](https://docs.cloud.oracle.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +44,7 @@ namespace Oci.JmsService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The date and time the error occured (formatted according to RFC3339).
+        /// The date and time the error occured (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         /// <remarks>
         /// Required

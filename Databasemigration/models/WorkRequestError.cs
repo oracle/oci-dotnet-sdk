@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
+    /// Note: Deprecated. Use the new resource model APIs instead.
     /// An error encountered while executing an operation that is tracked by a work request.
     /// 
     /// </summary>
