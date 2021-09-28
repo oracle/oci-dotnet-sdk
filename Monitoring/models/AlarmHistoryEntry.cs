@@ -24,7 +24,7 @@ namespace Oci.MonitoringService.Models
     {
         
         /// <value>
-        /// Description for this alarm history entry. Avoid entering confidential information.
+        /// Description for this alarm history entry.
         /// <br/>
         /// Example 1 - alarm state history entry: `The alarm state is FIRING`
         /// <br/>

@@ -27,6 +27,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "approximateInstallationCount")]
       ApproximateInstallationCount,
       [EnumMember(Value = "approximateManagedInstanceCount")]
-      ApproximateManagedInstanceCount
+      ApproximateManagedInstanceCount,
+      [EnumMember(Value = "osName")]
+      OsName
   }
 }

@@ -56,6 +56,12 @@ namespace Oci.JmsService.Models
         public string ApplicationType { get; set; }
         
         /// <value>
+        /// The operating systems running this application.
+        /// </value>
+        [JsonProperty(PropertyName = "operatingSystems")]
+        public System.Collections.Generic.List<OperatingSystem> OperatingSystems { get; set; }
+        
+        /// <value>
         /// The approximate count of installations running this application.
         /// </value>
         [JsonProperty(PropertyName = "approximateInstallationCount")]

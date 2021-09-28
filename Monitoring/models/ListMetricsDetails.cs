@@ -17,8 +17,8 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// The request details for retrieving metric definitions. Specify optional properties to filter the returned results.
-    /// Use an asterisk (&#42;) as a wildcard character, placed anywhere in the string. 
-    /// For example, to search for all metrics with names that begin with \"disk\", specify \"name\" as \"disk&#42;\". 
+    /// Use an asterisk (&#42;) as a wildcard character, placed anywhere in the string.
+    /// For example, to search for all metrics with names that begin with \"disk\", specify \"name\" as \"disk&#42;\".
     /// If no properties are specified, then all metric definitions within the request scope are returned.
     /// 
     /// </summary>
@@ -42,9 +42,8 @@ namespace Oci.MonitoringService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// Resource group that you want to use as a filter. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
+        /// Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
-        /// Avoid entering confidential information.
         /// <br/>
         /// Example: frontend-fleet
         /// </value>
@@ -55,7 +54,7 @@ namespace Oci.MonitoringService.Models
         /// Qualifiers that you want to use when searching for metric definitions.
         /// Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.
         /// <br/>
-        /// Example: { &quot;resourceId&quot;: &quot;<var>&lt;instance_OCID&gt;</var>&quot; }
+        /// Example: &quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;
         /// </value>
         [JsonProperty(PropertyName = "dimensionFilters")]
         public System.Collections.Generic.Dictionary<string, string> DimensionFilters { get; set; }

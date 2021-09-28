@@ -83,17 +83,17 @@ namespace Oci.JmsService.Requests
         /// For example 'approximateJreCount,approximateInstallationCount'.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Csv)]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<SummarizeApplicationUsageFields> Fields { get; set; }
         
         /// <value>
-        /// The start of the time period during which resources are searched (formatted according to RFC3339).
+        /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// The end of the time period during which resources are searched (formatted according to RFC3339).
+        /// The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
@@ -120,7 +120,7 @@ namespace Oci.JmsService.Requests
         /// The field to sort application views. Only one sort order may be provided.
         /// Default order for _timeFirstSeen_, _timeLastSeen_, _approximateJreCount_, _approximateInstallationCount_
         /// and _approximateManagedInstanceCount_  is **descending**.
-        /// Default order for _displayName_ is **ascending**.
+        /// Default order for _displayName_ and _osName_ is **ascending**.
         /// If no value is specified _timeLastSeen_ is default.
         /// 
         /// </value>
@@ -132,5 +132,11 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The operating system type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
     }
 }

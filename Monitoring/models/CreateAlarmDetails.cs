@@ -17,8 +17,6 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// The configuration details for creating an alarm.
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateAlarmDetails 
@@ -87,7 +85,7 @@ namespace Oci.MonitoringService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// Resource group that you want to use as a filter. The alarm retrieves metric data associated with the specified resource group only. Only one resource group can be applied per metric.
+        /// Resource group that you want to match. A null value returns only metric data that has no resource groups. The alarm retrieves metric data associated with the specified resource group only. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
         /// Avoid entering confidential information.
         /// <br/>
@@ -97,14 +95,15 @@ namespace Oci.MonitoringService.Models
         public string ResourceGroup { get; set; }
         
         /// <value>
-        /// The Monitoring Query Language (MQL) expression to evaluate for the alarm. The Alarms feature of 
-        /// the Monitoring service interprets results for each returned time series as Boolean values, 
-        /// where zero represents false and a non-zero value represents true. A true value means that the trigger 
-        /// rule condition has been met. The query must specify a metric, statistic, interval, and trigger 
-        /// rule (threshold or absence). Supported values for interval: `1m`-`60m` (also `1h`). You can optionally 
-        /// specify dimensions and grouping functions. Supported grouping functions: `grouping()`, `groupBy()`. 
+        /// The Monitoring Query Language (MQL) expression to evaluate for the alarm. The Alarms feature of
+        /// the Monitoring service interprets results for each returned time series as Boolean values,
+        /// where zero represents false and a non-zero value represents true. A true value means that the trigger
+        /// rule condition has been met. The query must specify a metric, statistic, interval, and trigger
+        /// rule (threshold or absence). Supported values for interval depend on the specified time range. More
+        /// interval values are supported for smaller time ranges. You can optionally
+        /// specify dimensions and grouping functions. Supported grouping functions: `grouping()`, `groupBy()`.
         /// For details about Monitoring Query Language (MQL), see [Monitoring Query Language (MQL) Reference](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Reference/mql.htm).
-        /// For available dimensions, review the metric definition for the supported service. 
+        /// For available dimensions, review the metric definition for the supported service.
         /// See [Supported Services](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#SupportedServices).
         /// <br/>
         /// Example of threshold alarm:
@@ -139,19 +138,19 @@ namespace Oci.MonitoringService.Models
         public string Resolution { get; set; }
         
         /// <value>
-        /// The period of time that the condition defined in the alarm must persist before the alarm state 
-        /// changes from \"OK\" to \"FIRING\". For example, a value of 5 minutes means that the 
-        /// alarm must persist in breaching the condition for five minutes before the alarm updates its 
-        /// state to \"FIRING\". 
+        /// The period of time that the condition defined in the alarm must persist before the alarm state
+        /// changes from \"OK\" to \"FIRING\". For example, a value of 5 minutes means that the
+        /// alarm must persist in breaching the condition for five minutes before the alarm updates its
+        /// state to \"FIRING\".
         /// <br/>
         /// The duration is specified as a string in ISO 8601 format (`PT10M` for ten minutes or `PT1H`
         /// for one hour). Minimum: PT1M. Maximum: PT1H. Default: PT1M.
         /// <br/>
         /// Under the default value of PT1M, the first evaluation that breaches the alarm updates the
-        /// state to \"FIRING\". 
+        /// state to \"FIRING\".
         /// <br/>
-        /// The alarm updates its status to \"OK\" when the breaching condition has been clear for 
-        /// the most recent minute. 
+        /// The alarm updates its status to \"OK\" when the breaching condition has been clear for
+        /// the most recent minute.
         /// <br/>
         /// Example: PT5M
         /// </value>
@@ -180,11 +179,39 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
+                ///
+        /// <value>
+        /// The format to use for notification messages sent from this alarm. The formats are:
+        /// * `RAW` - Raw JSON blob. Default value.
+        /// * `PRETTY_JSON`: JSON with new lines and indents.
+        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Applies only to messages sent through the Notifications service to the following subscription types: Email.
+        /// 
+        /// </value>
+        ///
+        public enum MessageFormatEnum {
+            [EnumMember(Value = "RAW")]
+            Raw,
+            [EnumMember(Value = "PRETTY_JSON")]
+            PrettyJson,
+            [EnumMember(Value = "ONS_OPTIMIZED")]
+            OnsOptimized
+        };
+
+        /// <value>
+        /// The format to use for notification messages sent from this alarm. The formats are:
+        /// * `RAW` - Raw JSON blob. Default value.
+        /// * `PRETTY_JSON`: JSON with new lines and indents.
+        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Applies only to messages sent through the Notifications service to the following subscription types: Email.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "messageFormat")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
         /// <value>
-        /// A list of destinations to which the notifications for this alarm will be delivered. 
+        /// A list of destinations to which the notifications for this alarm will be delivered.
         /// Each destination is represented by an [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) related to the supported destination service.
-        /// For example, a destination using the Notifications service is represented by a topic OCID. 
+        /// For example, a destination using the Notifications service is represented by a topic OCID.
         /// Supported destination services: Notifications Service. Limit: One destination per supported destination service.
         /// 
         /// </value>

@@ -340,5 +340,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
         
+        /// <value>
+        /// Indicates whether the Autonomous Database requires mTLS connections.
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
+        public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
+        
     }
 }

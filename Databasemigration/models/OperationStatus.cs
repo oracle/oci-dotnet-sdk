@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Possible operation status.
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Possible operation status.
     /// 
   /// </summary>
   public enum OperationStatus {

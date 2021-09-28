@@ -186,6 +186,14 @@ namespace Oci.ObjectstorageService.Requests
         public string OpcSseCustomerKeySha256 { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a master encryption key used to call the Key
+        /// Management service to generate a data encryption key or to encrypt or decrypt a data encryption key.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-sse-kms-key-id")]
+        public string OpcSseKmsKeyId { get; set; }
+        
+        /// <value>
         /// The storage tier that the object should be stored in. If not specified, the object will be stored in
         /// the same storage tier as the bucket.
         /// 

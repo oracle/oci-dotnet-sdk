@@ -64,7 +64,7 @@ namespace Oci.JmsService.Models
         public string Path { get; set; }
         
         /// <value>
-        /// The Operating System for the installation.
+        /// The Operating System for the installation. Deprecated, use `operatingSystem` instead.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +74,7 @@ namespace Oci.JmsService.Models
         public string Os { get; set; }
         
         /// <value>
-        /// The architecture of the operating system for the installation.
+        /// The architecture of the operating system for the installation. Deprecated, use `operatingSystem` instead.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,6 +82,9 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "Architecture is required.")]
         [JsonProperty(PropertyName = "architecture")]
         public string Architecture { get; set; }
+        
+        [JsonProperty(PropertyName = "operatingSystem")]
+        public OperatingSystem OperatingSystem { get; set; }
         
         /// <value>
         /// The approximate count of applications running on this installation

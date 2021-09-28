@@ -57,7 +57,9 @@ namespace Oci.ObjectstorageService.Models
         public string NewObjIfMatchETag { get; set; }
         
         /// <value>
-        /// The if-none-match entity tag (ETag) of the new object.
+        /// The if-none-match entity tag (ETag) of the new object. The only valid value is '*', which indicates
+        /// request should fail if the new object already exists.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "newObjIfNoneMatchETag")]
         public string NewObjIfNoneMatchETag { get; set; }

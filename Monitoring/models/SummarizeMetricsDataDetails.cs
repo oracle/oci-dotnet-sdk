@@ -36,9 +36,8 @@ namespace Oci.MonitoringService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// Resource group that you want to use as a filter. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
+        /// Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
         /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
-        /// Avoid entering confidential information.
         /// <br/>
         /// Example: frontend-fleet
         /// </value>
@@ -47,15 +46,16 @@ namespace Oci.MonitoringService.Models
         
         /// <value>
         /// The Monitoring Query Language (MQL) expression to use when searching for metric data points to
-        /// aggregate. The query must specify a metric, statistic, and interval. Supported values for 
-        /// interval: `1m`-`60m` (also `1h`). You can optionally specify dimensions and grouping functions.
+        /// aggregate. The query must specify a metric, statistic, and interval.
+        /// Supported values for interval depend on the specified time range. More interval values are supported for smaller time ranges.
+        /// You can optionally specify dimensions and grouping functions.
         /// Supported grouping functions: `grouping()`, `groupBy()`.
         /// <br/>
         /// Construct your query to avoid exceeding limits on returned data. See {@link MetricData}.
         /// <br/>
-        /// For details about Monitoring Query Language (MQL), see 
+        /// For details about Monitoring Query Language (MQL), see
         /// [Monitoring Query Language (MQL) Reference](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Reference/mql.htm).
-        /// For available dimensions, review the metric definition for the supported service. 
+        /// For available dimensions, review the metric definition for the supported service.
         /// See [Supported Services](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#SupportedServices).
         /// <br/>
         /// Example: CpuUtilization[1m].sum()
@@ -92,7 +92,7 @@ namespace Oci.MonitoringService.Models
         /// frequency at which aggregated data points are returned. For example, use a query interval of
         /// 5 minutes with a resolution of 1 minute to retrieve five-minute aggregations at a one-minute
         /// frequency. The resolution must be equal or less than the interval in the query. The default
-        /// resolution is 1m (one minute). Supported values: `1m`-`60m` (also `1h`).
+        /// resolution is 1m (one minute). Supported values: `1m`-`60m`, `1h`-`24h`, `1d`.
         /// <br/>
         /// Example: 5m
         /// </value>

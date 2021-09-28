@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
+    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Connect Descriptor details. If a Private Endpoint was specified in the Connection, the host entry should be a valid IP address.
     /// 
     /// </summary>

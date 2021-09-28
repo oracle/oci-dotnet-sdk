@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Data Pump job modes
+  /// Note: Deprecated. Use the new resource model APIs instead.
+    /// Data Pump job modes
     /// 
   /// </summary>
   public enum DataPumpJobMode {

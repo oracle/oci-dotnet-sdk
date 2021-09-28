@@ -111,8 +111,8 @@ namespace Oci.MonitoringService
         /// Creates a new alarm in the specified compartment.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -156,8 +156,8 @@ namespace Oci.MonitoringService
         /// Deletes the specified alarm.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -201,8 +201,8 @@ namespace Oci.MonitoringService
         /// Gets the specified alarm.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -246,8 +246,8 @@ namespace Oci.MonitoringService
         /// Get the history of the specified alarm.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -291,8 +291,8 @@ namespace Oci.MonitoringService
         /// Lists the alarms for the specified compartment.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -336,8 +336,8 @@ namespace Oci.MonitoringService
         /// List the status of each alarm in the specified compartment.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -426,18 +426,18 @@ namespace Oci.MonitoringService
         /// For more information about publishing metrics, see [Publishing Custom Metrics](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/publishingcustommetrics.htm).
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// Per-call limits information follows. 
+        /// Per-call limits information follows.
         /// &lt;br/&gt;
         /// * Dimensions per metric group*. Maximum: 20. Minimum: 1.
         /// * Unique metric streams*. Maximum: 50.
         /// * Transactions Per Second (TPS) per-tenancy limit for this operation: 50.
         /// &lt;br/&gt;
-        /// *A metric group is the combination of a given metric, metric namespace, and tenancy for the purpose of determining limits. 
-        /// A dimension is a qualifier provided in a metric definition. 
-        /// A metric stream is an individual set of aggregated data for a metric, typically specific to a resource. 
+        /// *A metric group is the combination of a given metric, metric namespace, and tenancy for the purpose of determining limits.
+        /// A dimension is a qualifier provided in a metric definition.
+        /// A metric stream is an individual set of aggregated data for a metric, typically specific to a resource.
         /// For more information about metric-related concepts, see [Monitoring Concepts](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#concepts).
         /// &lt;br/&gt;
-        /// The endpoints for this operation differ from other Monitoring operations. Replace the string &#x60;telemetry&#x60; with &#x60;telemetry-ingestion&#x60; in the endpoint, as in the following example: 
+        /// The endpoints for this operation differ from other Monitoring operations. Replace the string &#x60;telemetry&#x60; with &#x60;telemetry-ingestion&#x60; in the endpoint, as in the following example:
         /// &lt;br/&gt;
         /// https://telemetry-ingestion.eu-frankfurt-1.oraclecloud.com
         /// 
@@ -482,8 +482,8 @@ namespace Oci.MonitoringService
         /// Removes any existing suppression for the specified alarm.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>
@@ -571,8 +571,8 @@ namespace Oci.MonitoringService
         /// Updates the specified alarm.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
-        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations. 
-        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests, 
+        /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        /// Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
         /// or transactions, per second (TPS) for a given tenancy.
         /// 
         /// </summary>

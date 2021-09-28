@@ -86,6 +86,7 @@ namespace Oci.MonitoringService.Models
         
         /// <value>
         /// Timestamp for the transition of the alarm state. For example, the time when the alarm transitioned from OK to Firing.
+        /// Note: A three-minute lag for this value accounts for any late-arriving metrics.
         /// <br/>
         /// Example: 2019-02-01T01:02:29.600Z
         /// </value>

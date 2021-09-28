@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
+    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Parameters for Replicat processes.
     /// If an empty object is specified, the stored Replicat details will be removed.
     /// 

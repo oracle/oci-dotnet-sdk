@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
+    /// Note: Deprecated. Use the new resource model APIs instead.
     /// OCI Private Endpoint configuration details.
     /// Not required for source container database connections, it will default to the specified Source Database Connection Private Endpoint.
     /// 

@@ -344,6 +344,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
+        /// Indicates whether the Autonomous Database requires mTLS connections.
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
+        public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
                 ///
         /// <value>
         /// The maintenance schedule type of the Autonomous Database on shared Exadata infrastructure. The EARLY maintenance schedule of this Autonomous Database

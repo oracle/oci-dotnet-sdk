@@ -32,7 +32,7 @@ namespace Oci.JmsService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The date and time the log message was written (formatted according to RFC3339).
+        /// The date and time the log message was written (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         /// <remarks>
         /// Required
