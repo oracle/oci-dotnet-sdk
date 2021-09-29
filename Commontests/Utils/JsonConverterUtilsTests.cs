@@ -5,6 +5,7 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -30,14 +31,15 @@ namespace Oci.Common.Utils
         }
 
         [Theory]
-        [InlineData("11/24/2020 15:05:15Z", "{\"DateTimeValue\":\"2020-11-24T15:05:15.000Z\"}")]
+        [InlineData("11/24/2020 15:05:15Z", "{\"DateTimeValue\":\"2020-11-24T15:05:15.000Z\"}", "en-US")]
+        [InlineData("24/11/2020 15:05:15Z", "{\"DateTimeValue\":\"2020-11-24T15:05:15.000Z\"}", "en-IE")]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
-        public void SerializeDateTime(string value, string expectedValue)
+        public void SerializeDateTime(string value, string expectedValue, string dateTimeCultureCode)
         {
             var objWithDateTime = new ClassWithDateTime
             {
-                DateTimeValue = DateTime.Parse(value)
+                DateTimeValue = DateTime.Parse(value, new CultureInfo(dateTimeCultureCode))
             };
             var objJson = JsonConvert.SerializeObject(objWithDateTime, new JsonSerializerSettings { ContractResolver = new CustomResolver(), NullValueHandling = NullValueHandling.Ignore });
             Assert.Equal(expectedValue, objJson);
