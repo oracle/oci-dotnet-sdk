@@ -30,6 +30,16 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "DELETED")]
       Deleted,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
+      [EnumMember(Value = "IN_PROGRESS")]
+      InProgress,
+      [EnumMember(Value = "CANCELING")]
+      Canceling,
+      [EnumMember(Value = "CANCELED")]
+      Canceled,
+      [EnumMember(Value = "SUCCEEDED")]
+      Succeeded
   }
 }

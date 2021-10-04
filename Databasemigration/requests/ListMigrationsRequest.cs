@@ -89,11 +89,11 @@ namespace Oci.DatabasemigrationService.Requests
         public System.Nullable<SortOrders> SortOrder { get; set; }
         
         /// <value>
-        /// The current state of the Database Migration Deployment.
+        /// The lifecycle state of the Migration.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
         /// The lifecycle detailed status of the Migration.

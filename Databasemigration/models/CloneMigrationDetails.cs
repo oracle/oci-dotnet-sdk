@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Details that will override an existing Migration configuration that will be cloned.
     /// 
     /// </summary>
@@ -75,11 +74,18 @@ namespace Oci.DatabasemigrationService.Models
         public string TargetDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// Database objects to exclude from migration.
+        /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeObjects")]
         public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
+        
+        /// <value>
+        /// Database objects to include from migration, cannot be specified alongside 'excludeObjects'
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "includeObjects")]
+        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
         [JsonProperty(PropertyName = "vaultDetails")]
         public CreateVaultDetails VaultDetails { get; set; }

@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Estimate size of dumps that will be generated.
+  /// Estimate size of dumps that will be generated.
     /// 
   /// </summary>
   public enum DataPumpEstimate {

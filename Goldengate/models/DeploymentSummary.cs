@@ -81,6 +81,14 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Possible GGS lifecycle sub-states.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleSubState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
+        
+        /// <value>
         /// Describes the object's current state in detail. For example, it can be used to provide actionable information for a resource in a Failed state.
         /// 
         /// </value>
@@ -186,6 +194,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "isLatestVersion")]
         public System.Nullable<bool> IsLatestVersion { get; set; }
+        
+        /// <value>
+        /// The date the existing version in use will no longer be considered as usable and an upgrade will be required.  This date is typically 6 months after the version was released for use by GGS.  The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpgradeRequired")]
+        public System.Nullable<System.DateTime> TimeUpgradeRequired { get; set; }
         
         /// <value>
         /// The deployment type.

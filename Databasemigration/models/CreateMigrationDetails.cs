@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Create Migration resource parameters.
     /// 
     /// </summary>
@@ -93,15 +92,28 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public CreateDataTransferMediumDetails DataTransferMediumDetails { get; set; }
         
+        [JsonProperty(PropertyName = "dumpTransferDetails")]
+        public CreateDumpTransferDetails DumpTransferDetails { get; set; }
+        
         [JsonProperty(PropertyName = "datapumpSettings")]
         public CreateDataPumpSettings DatapumpSettings { get; set; }
         
+        [JsonProperty(PropertyName = "advisorSettings")]
+        public CreateAdvisorSettings AdvisorSettings { get; set; }
+        
         /// <value>
-        /// Database objects to exclude from migration.
+        /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeObjects")]
         public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
+        
+        /// <value>
+        /// Database objects to include from migration, cannot be specified alongside 'excludeObjects'
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "includeObjects")]
+        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public CreateGoldenGateDetails GoldenGateDetails { get; set; }

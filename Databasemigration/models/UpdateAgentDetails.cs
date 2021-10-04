@@ -16,19 +16,11 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// ODMS Agent Details
     /// 
     /// </summary>
     public class UpdateAgentDetails 
     {
-        
-        /// <value>
-        /// The OCID of the compartment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
         
         /// <value>
         /// ODMS Agent name

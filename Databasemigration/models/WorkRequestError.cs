@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// An error encountered while executing an operation that is tracked by a work request.
     /// 
     /// </summary>
@@ -53,9 +52,9 @@ namespace Oci.DatabasemigrationService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "TimeStamp is required.")]
-        [JsonProperty(PropertyName = "timeStamp")]
-        public System.Nullable<System.DateTime> TimeStamp { get; set; }
+        [Required(ErrorMessage = "Timestamp is required.")]
+        [JsonProperty(PropertyName = "timestamp")]
+        public System.Nullable<System.DateTime> Timestamp { get; set; }
         
     }
 }

@@ -228,10 +228,50 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> SqlWarnings { get; set; }
         
         /// <value>
-        /// (\"binlog_expire_logs_seconds\") DEPRECATED -- variable should not be settable and will be ignored
+        /// Sets the binary log expiration period in seconds.
+        /// binlogExpireLogsSeconds corresponds to the MySQL binary logging system variable [binlog_expire_logs_seconds](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_expire_logs_seconds).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "binlogExpireLogsSeconds")]
         public System.Nullable<int> BinlogExpireLogsSeconds { get; set; }
+                ///
+        /// <value>
+        /// Configures the amount of table metadata added to the binary log when using row-based logging.
+        /// binlogRowMetadata corresponds to the MySQL binary logging system variable [binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata).
+        /// 
+        /// </value>
+        ///
+        public enum BinlogRowMetadataEnum {
+            [EnumMember(Value = "FULL")]
+            Full,
+            [EnumMember(Value = "MINIMAL")]
+            Minimal
+        };
+
+        /// <value>
+        /// Configures the amount of table metadata added to the binary log when using row-based logging.
+        /// binlogRowMetadata corresponds to the MySQL binary logging system variable [binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "binlogRowMetadata")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BinlogRowMetadataEnum> BinlogRowMetadata { get; set; }
+        
+        /// <value>
+        /// When set to PARTIAL_JSON, this enables use of a space-efficient binary log format for updates that modify only a small portion of a JSON document.
+        /// binlogRowValueOptions corresponds to the MySQL binary logging system variable [binlog_row_value_options](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_value_options).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "binlogRowValueOptions")]
+        public string BinlogRowValueOptions { get; set; }
+        
+        /// <value>
+        /// Enables compression for transactions that are written to binary log files on this server.
+        /// binlogTransactionCompression corresponds to the MySQL binary logging system variable [binlog_transaction_compression](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_compression).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "binlogTransactionCompression")]
+        public System.Nullable<bool> BinlogTransactionCompression { get; set; }
         
         /// <value>
         /// (\"innodb_buffer_pool_size\")

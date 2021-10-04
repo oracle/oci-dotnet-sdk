@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Reflection;
 using Oci.Common.Http;
 using Oci.Common.Http.Internal;
+using Oci.Common.Http.Signing.Internal;
 using Oci.Common.Utils;
 
 namespace Oci.Common
@@ -21,6 +22,11 @@ namespace Oci.Common
     public class Converter
     {
         protected static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly HashSet<string> settableContentHeaders = new HashSet<string>()
+        {
+            Constants.CONTENT_LENGTH,
+            Constants.CONTENT_TYPE
+        };
 
         /// <summary> Converts SDK request object into HttpRequestMessage.</summary>
         /// <param name="uri">The uri of this http request.</param>
@@ -37,6 +43,7 @@ namespace Oci.Common
             // A list containing all query string.
             var queriesList = new List<string>();
             PropertyInfo[] props = typeof(T).GetProperties();
+            var contentHeaders = new Dictionary<string, string>();
             foreach (var prop in props)
             {
                 if (prop.GetValue(request) == null)
@@ -72,7 +79,16 @@ namespace Oci.Common
                                 logger.Debug($"Adding header {httpRequestAttr.Name}: {prop.GetValue(request)}");
                                 // To avoid validating header name formatting (.Net HttpClient has some strict validation rules and not all OCI service headers satisfy them.),
                                 // call TryAddWithoutValidation instead of Add.
-                                requestMessage.Headers.TryAddWithoutValidation(httpRequestAttr.Name, HeaderUtils.FromValue(prop.GetValue(request)));
+                                var headerName = httpRequestAttr.Name;
+                                var headerValue = HeaderUtils.FromValue(prop.GetValue(request));
+                                if (settableContentHeaders.Contains(headerName.ToLower()))
+                                {
+                                    contentHeaders.Add(headerName.ToLower(), headerValue);
+                                }
+                                else
+                                {
+                                    requestMessage.Headers.TryAddWithoutValidation(headerName, headerValue);
+                                }
                             }
                         }
                         else if (httpRequestAttr.Target == TargetEnum.Body)
@@ -88,6 +104,7 @@ namespace Oci.Common
                     }
                 }
             }
+            ContentHelper.UpdateHttpContent(requestMessage.Content, contentHeaders);
             var uriBuilder = new UriBuilder(updatedUri);
             uriBuilder.Query = HttpUtils.BuildQueryString(queriesList);
             requestMessage.RequestUri = uriBuilder.Uri;

@@ -47,5 +47,12 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "hasPlugins")]
         public System.Nullable<bool> HasPlugins { get; set; }
         
+        /// <value>
+        /// The install type, either AGENT or GATEWAY
+        /// </value>
+        [JsonProperty(PropertyName = "installType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<InstallTypes> InstallType { get; set; }
+        
     }
 }

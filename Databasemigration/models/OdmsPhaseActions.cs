@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Possible ODMS Job Phase actions.
+  /// Possible ODMS Job Phase actions.
     /// 
   /// </summary>
   public enum OdmsPhaseActions {

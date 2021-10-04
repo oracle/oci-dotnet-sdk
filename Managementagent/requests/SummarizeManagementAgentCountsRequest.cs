@@ -46,6 +46,12 @@ namespace Oci.ManagementagentService.Requests
         public System.Nullable<bool> HasPlugins { get; set; }
         
         /// <value>
+        /// A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "installType")]
+        public System.Nullable<InstallTypes> InstallType { get; set; }
+        
+        /// <value>
         /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]

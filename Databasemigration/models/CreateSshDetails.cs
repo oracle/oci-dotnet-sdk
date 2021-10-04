@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Details of the SSH key that will be used. Required for source database Manual and UserManagerOci connection types.
     /// Not required for source container database connections.
     /// 

@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Migration resource
     /// 
     /// </summary>
@@ -130,15 +129,29 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public DataTransferMediumDetails DataTransferMediumDetails { get; set; }
         
+        [JsonProperty(PropertyName = "dumpTransferDetails")]
+        public DumpTransferDetails DumpTransferDetails { get; set; }
+        
         [JsonProperty(PropertyName = "datapumpSettings")]
         public DataPumpSettings DatapumpSettings { get; set; }
         
+        [JsonProperty(PropertyName = "advisorSettings")]
+        public AdvisorSettings AdvisorSettings { get; set; }
+        
         /// <value>
         /// Database objects to exclude from migration.
+        /// If 'includeObjects' are specified, only exclude object types can be specified with general wildcards (.*) for owner and objectName.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeObjects")]
         public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
+        
+        /// <value>
+        /// Database objects to include from migration.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "includeObjects")]
+        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public GoldenGateDetails GoldenGateDetails { get; set; }
@@ -181,7 +194,7 @@ namespace Oci.DatabasemigrationService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
         /// Additional status related to the execution and current state of the Migration.

@@ -78,6 +78,12 @@ namespace Oci.ManagementagentService.Requests
         public System.Nullable<bool> IsCustomerDeployed { get; set; }
         
         /// <value>
+        /// A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "installType")]
+        public System.Nullable<InstallTypes> InstallType { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

@@ -38,6 +38,13 @@ namespace Oci.DatabasemigrationService.Requests
         public string ResourceId { get; set; }
         
         /// <value>
+        /// A filter to return only resources their lifecycleState matches the given OperationStatus.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<OperationStatus> Status { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// 
         /// </value>
@@ -53,21 +60,17 @@ namespace Oci.DatabasemigrationService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
-        /// Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
         /// 
         /// </value>
         ///
         public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
+            [EnumMember(Value = "timeAccepted")]
+            TimeAccepted
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
-        /// Default order for displayName is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
@@ -79,13 +82,6 @@ namespace Oci.DatabasemigrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }
-        
-        /// <value>
-        /// A filter to return only resources that match the entire display name given.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
-        public string DisplayName { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a

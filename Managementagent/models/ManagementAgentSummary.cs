@@ -73,7 +73,18 @@ namespace Oci.ManagementagentService.Models
         public string Version { get; set; }
         
         /// <value>
-        /// true if the agent can be upgraded automatically; false if it must be upgraded manually.
+        /// Version of the deployment artifact instantiated by this Management Agent.
+        /// The format for Standalone resourceMode is YYMMDD.HHMM, and the format for other modes
+        /// (whose artifacts are based upon Standalone but can advance independently)
+        /// is YYMMDD.HHMM.VVVVVVVVVVVV.
+        /// VVVVVVVVVVVV is always a numeric value between 000000000000 and 999999999999
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceArtifactVersion")]
+        public string ResourceArtifactVersion { get; set; }
+        
+        /// <value>
+        /// true if the agent can be upgraded automatically; false if it must be upgraded manually. This flag is derived from the tenancy level auto upgrade preference.
         /// </value>
         [JsonProperty(PropertyName = "isAgentAutoUpgradable")]
         public System.Nullable<bool> IsAgentAutoUpgradable { get; set; }
@@ -149,6 +160,13 @@ namespace Oci.ManagementagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "isCustomerDeployed")]
         public System.Nullable<bool> IsCustomerDeployed { get; set; }
+        
+        /// <value>
+        /// The install type, either AGENT or GATEWAY
+        /// </value>
+        [JsonProperty(PropertyName = "installType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<InstallTypes> InstallType { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

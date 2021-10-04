@@ -16,8 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Database objects to exclude from migration
+    /// Database objects to include or exclude from migration
     /// 
     /// </summary>
     public class DatabaseObject 
@@ -44,6 +43,14 @@ namespace Oci.DatabasemigrationService.Models
         [Required(ErrorMessage = "ObjectName is required.")]
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
+        
+        /// <value>
+        /// Type of object to exclude.
+        /// If not specified, matching owners and object names of type TABLE would be excluded.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
         
     }
 }

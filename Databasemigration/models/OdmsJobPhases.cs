@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Possible ODMS Job Phases.
+  /// Possible ODMS Job Phases.
     /// 
   /// </summary>
   public enum OdmsJobPhases {
@@ -22,6 +21,8 @@ namespace Oci.DatabasemigrationService.Models
       OdmsValidateTgt,
       [EnumMember(Value = "ODMS_VALIDATE_SRC")]
       OdmsValidateSrc,
+      [EnumMember(Value = "ODMS_VALIDATE_PREMIGRATION_ADVISOR")]
+      OdmsValidatePremigrationAdvisor,
       [EnumMember(Value = "ODMS_VALIDATE_GG_HUB")]
       OdmsValidateGgHub,
       [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_SETTINGS")]
@@ -30,6 +31,10 @@ namespace Oci.DatabasemigrationService.Models
       OdmsValidateDatapumpSettingsSrc,
       [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_SETTINGS_TGT")]
       OdmsValidateDatapumpSettingsTgt,
+      [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_SRC")]
+      OdmsValidateDatapumpSrc,
+      [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_ESTIMATE_SRC")]
+      OdmsValidateDatapumpEstimateSrc,
       [EnumMember(Value = "ODMS_VALIDATE")]
       OdmsValidate,
       [EnumMember(Value = "ODMS_PREPARE")]

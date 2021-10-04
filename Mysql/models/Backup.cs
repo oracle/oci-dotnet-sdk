@@ -146,18 +146,22 @@ namespace Oci.MysqlService.Models
         public System.Nullable<BackupTypeEnum> BackupType { get; set; }
                 ///
         /// <value>
-        /// If the backup was created automatically, or by a manual request.
+        /// Indicates how the backup was created: manually, automatic, or by an Operator.
+        /// 
         /// </value>
         ///
         public enum CreationTypeEnum {
             [EnumMember(Value = "MANUAL")]
             Manual,
             [EnumMember(Value = "AUTOMATIC")]
-            Automatic
+            Automatic,
+            [EnumMember(Value = "OPERATOR")]
+            Operator
         };
 
         /// <value>
-        /// If the backup was created automatically, or by a manual request.
+        /// Indicates how the backup was created: manually, automatic, or by an Operator.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
