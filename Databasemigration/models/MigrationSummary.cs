@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Migration resource
     /// 
     /// </summary>
@@ -149,7 +148,7 @@ namespace Oci.DatabasemigrationService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
         /// Additional status related to the execution and current state of the Migration.

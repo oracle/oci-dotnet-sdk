@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// ODMS Agent token details.
     /// 
     /// </summary>

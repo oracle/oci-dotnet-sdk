@@ -31,6 +31,13 @@ namespace Oci.GoldengateService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The ID of the resource in which to list resources.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// 
         /// </value>

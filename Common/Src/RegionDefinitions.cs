@@ -52,5 +52,6 @@ namespace Oci.Common
 
         // OC8
         public static readonly Region AP_CHIYODA_1 = Register("ap-chiyoda-1", Realm.OC8, "nja");
+        public static readonly Region AP_IBARAKI_1 = Register("ap-ibaraki-1", Realm.OC8, "ukb");
     }
 }

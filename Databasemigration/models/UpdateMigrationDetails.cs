@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Update Migration resource parameters.
     /// 
     /// </summary>
@@ -71,16 +70,30 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public UpdateDataTransferMediumDetails DataTransferMediumDetails { get; set; }
         
+        [JsonProperty(PropertyName = "dumpTransferDetails")]
+        public UpdateDumpTransferDetails DumpTransferDetails { get; set; }
+        
         [JsonProperty(PropertyName = "datapumpSettings")]
         public UpdateDataPumpSettings DatapumpSettings { get; set; }
         
+        [JsonProperty(PropertyName = "advisorSettings")]
+        public UpdateAdvisorSettings AdvisorSettings { get; set; }
+        
         /// <value>
-        /// Database objects to exclude from migration.
+        /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'.
         /// If specified, the list will be replaced entirely. Empty list will remove stored excludeObjects details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeObjects")]
         public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
+        
+        /// <value>
+        /// Database objects to include from migration, cannot be specified alongside 'excludeObjects'.
+        /// If specified, the list will be replaced entirely. Empty list will remove stored includeObjects details.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "includeObjects")]
+        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public UpdateGoldenGateDetails GoldenGateDetails { get; set; }

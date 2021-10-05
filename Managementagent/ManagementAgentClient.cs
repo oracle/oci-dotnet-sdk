@@ -263,6 +263,47 @@ namespace Oci.ManagementagentService
         }
 
         /// <summary>
+        /// Get the AutoUpgradable configuration for all agents in a tenancy.
+        /// The supplied compartmentId must be a tenancy root.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementagent/GetAutoUpgradableConfig.cs.html">here</a> to see an example of how to use GetAutoUpgradableConfig API.</example>
+        public async Task<GetAutoUpgradableConfigResponse> GetAutoUpgradableConfig(GetAutoUpgradableConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getAutoUpgradableConfig");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managementAgents/actions/getAutoUpgradableConfig".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetAutoUpgradableConfigResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetAutoUpgradableConfig failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets complete details of the inventory of a given agent id
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -734,6 +775,47 @@ namespace Oci.ManagementagentService
             catch (Exception e)
             {
                 logger.Error($"ListWorkRequests failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Sets the AutoUpgradable configuration for all agents in a tenancy.
+        /// The supplied compartmentId must be a tenancy root.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/managementagent/SetAutoUpgradableConfig.cs.html">here</a> to see an example of how to use SetAutoUpgradableConfig API.</example>
+        public async Task<SetAutoUpgradableConfigResponse> SetAutoUpgradableConfig(SetAutoUpgradableConfigRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called setAutoUpgradableConfig");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managementAgents/actions/setAutoUpgradableConfig".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SetAutoUpgradableConfigResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SetAutoUpgradableConfig failed with error: {e.Message}");
                 throw;
             }
         }

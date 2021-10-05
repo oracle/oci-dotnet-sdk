@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Supported Import/Export exclude parameters
+  /// Supported Import/Export exclude parameters
     /// 
   /// </summary>
   public enum DataPumpExcludeParameters {

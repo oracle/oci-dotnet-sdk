@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Data Transfer Medium details for the Migration. If not specified, it will default to Database Link. Only one type
     /// of data transfer medium can be specified.
     /// 

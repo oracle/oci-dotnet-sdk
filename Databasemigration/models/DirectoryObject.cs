@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Directory object details, used to define either import or export directory objects in Data Pump Settings.
     /// 
     /// </summary>

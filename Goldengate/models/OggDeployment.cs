@@ -45,6 +45,13 @@ namespace Oci.GoldengateService.Models
         public string AdminUsername { get; set; }
         
         /// <value>
+        /// Version of OGG
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "oggVersion")]
+        public string OggVersion { get; set; }
+        
+        /// <value>
         /// A PEM-encoded SSL certificate.
         /// 
         /// </value>

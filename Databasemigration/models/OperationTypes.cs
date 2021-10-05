@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Possible operation types.
+  /// Possible operation types.
     /// 
   /// </summary>
   public enum OperationTypes {

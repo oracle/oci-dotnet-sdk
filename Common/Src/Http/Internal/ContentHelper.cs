@@ -3,11 +3,13 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
+using Oci.Common.Http.Signing.Internal;
 using Oci.Common.Utils;
 
 namespace Oci.Common.Http.Internal
@@ -56,6 +58,20 @@ namespace Oci.Common.Http.Internal
             jtw.Flush();
             stream.Seek(0, SeekOrigin.Begin);
             logger.Trace($"request content: {new StreamReader(stream, Encoding.UTF8).ReadToEnd()}");
+        }
+
+        /// <summary>Updates the HttpContent with user defined values.</summary>
+        /// <param name="httpContent">The httpContent to be updated.</param>
+        public static void UpdateHttpContent(HttpContent httpContent, Dictionary<string, string> contentHeaders)
+        {
+            if (contentHeaders.ContainsKey(Constants.CONTENT_LENGTH))
+            {
+                httpContent.Headers.ContentLength = long.Parse(contentHeaders[Constants.CONTENT_LENGTH]);
+            }
+            if (contentHeaders.ContainsKey(Constants.CONTENT_TYPE))
+            {
+                httpContent.Headers.ContentType = new MediaTypeHeaderValue(contentHeaders[Constants.CONTENT_TYPE]);
+            }
         }
     }
 }

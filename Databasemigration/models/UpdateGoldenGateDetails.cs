@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Details about Oracle GoldenGate Microservices. If an empty object is specified, the stored Golden Gate details will be removed.
     /// 
     /// </summary>

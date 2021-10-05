@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// Note: Deprecated. Use the new resource model APIs instead.
-    /// Possible operation status.
+  /// Possible operation status.
     /// 
   /// </summary>
   public enum OperationStatus {
@@ -22,6 +21,8 @@ namespace Oci.DatabasemigrationService.Models
       Accepted,
       [EnumMember(Value = "IN_PROGRESS")]
       InProgress,
+      [EnumMember(Value = "WAITING")]
+      Waiting,
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "SUCCEEDED")]

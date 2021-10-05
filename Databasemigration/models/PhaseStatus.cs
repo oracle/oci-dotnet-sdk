@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Job phase status details.
     /// 
     /// </summary>
@@ -57,6 +56,23 @@ namespace Oci.DatabasemigrationService.Models
         [Required(ErrorMessage = "DurationInMs is required.")]
         [JsonProperty(PropertyName = "durationInMs")]
         public System.Nullable<int> DurationInMs { get; set; }
+        
+        /// <value>
+        /// True if a Pre-Migration Advisor report is available for this phase. False or null if no report is available.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAdvisorReportAvailable")]
+        public System.Nullable<bool> IsAdvisorReportAvailable { get; set; }
+        
+        /// <value>
+        /// Summary of phase status results.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "extract")]
+        public System.Collections.Generic.List<PhaseExtractEntry> Extract { get; set; }
+        
+        [JsonProperty(PropertyName = "logLocation")]
+        public LogLocationBucketDetails LogLocation { get; set; }
         
         /// <value>
         /// Percent progress of job phase.

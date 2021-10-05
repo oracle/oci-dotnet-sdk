@@ -16,7 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Note: Deprecated. Use the new resource model APIs instead.
     /// Optional details for updating a network database link from OCI database to on-premise database.
     /// 
     /// </summary>
@@ -27,12 +26,11 @@ namespace Oci.DatabasemigrationService.Models
         /// Name of database link from OCI database to on-premise database. ODMS will create link, if the link does not already exist.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
+        [JsonProperty(PropertyName = "walletBucket")]
+        public UpdateObjectStoreBucket WalletBucket { get; set; }
         
     }
 }

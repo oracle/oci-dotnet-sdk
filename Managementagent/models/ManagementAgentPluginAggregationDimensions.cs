@@ -27,5 +27,11 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "pluginName")]
         public string PluginName { get; set; }
         
+        /// <value>
+        /// Management Agent Plugin Display Name
+        /// </value>
+        [JsonProperty(PropertyName = "pluginDisplayName")]
+        public string PluginDisplayName { get; set; }
+        
     }
 }

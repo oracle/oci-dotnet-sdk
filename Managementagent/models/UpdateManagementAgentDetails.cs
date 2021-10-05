@@ -22,12 +22,6 @@ namespace Oci.ManagementagentService.Models
     {
         
         /// <value>
-        /// Setting of this flag is no longer supported.
-        /// </value>
-        [JsonProperty(PropertyName = "isAgentAutoUpgradable")]
-        public System.Nullable<bool> IsAgentAutoUpgradable { get; set; }
-        
-        /// <value>
         /// New displayName of Agent.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

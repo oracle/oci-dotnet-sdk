@@ -38,11 +38,25 @@ namespace Oci.GoldengateService.Requests
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter to return only the resources that match the 'lifecycleSubState' given.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleSubState")]
+        public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
+        
+        /// <value>
         /// A filter to return only the resources that match the entire 'displayName' given.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// A filter to return only the resources that match the 'fqdn' given.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fqdn")]
+        public string Fqdn { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

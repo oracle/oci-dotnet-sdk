@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 27.0.0 - 2021-10-05
+### Added
+- Support for configuring Binlog variables in the MySQL Database service.
+- Support new response value "OPERATOR" for backup creationType in list and get MDS backup API in the MySQL Database service.
+- Support for SetAutoUpgradableConfig and GetAutoUpgradableConfig operations in Management Agent Cloud service.
+- Support for additional installType filter for List Management Agents, Images and Count API operations in Management Agent Cloud service.
+- Support for list and read DeploymentUpgrade, cancel and restore DeploymentBackup in the Golden Gate service.
+- Support for non-autonomous databases targets, executing Pre-Migration advisor, uploading Datapump logs into Object Storage bucket, and filtering Database Objects in the Database Migration service.
+- Support for calling Oracle Cloud Infrastructure services in the ap-ibaraki-1 region.
+
+### Breaking Changes
+- `IsAgentAutoUpgradable` property was removed from UpdateManagementAgentDetails model in Management Agent Cloud service.
+- The data type for `targetStates` was changed from `LifecycleStates` to `MigrationLifecycleStates` in DatabaseMigrationWaiters in the Database Migration service.
+- The property `DisplayName` was removed from ListWorkRequestsRequest, ListWorkRequestLogsRequest & ListWorkRequestErrorsRequest in the Database Migration service.
+- The `SortByEnum` enum's members `TimeCreated` and `DisplayName` were replaced by `TimeAccepted` in ListWorkRequestsRequest in the Database Migration service.
+- The `SortByEnum` enum's members `TimeCreated` and `DisplayName` were replaced by `Timestamp` in ListWorkRequestLogsRequest & ListWorkRequestErrorsRequest in the Database Migration service.
+- The type for property `LifecycleState` was changed from `LifecycleStates` to `MigrationLifecycleStates` in ListMigrationsRequest in the Database Migration service.
+- The property `TimeStamp` was renamed to `Timestamp` in WorkRequestLogEntry & WorkRequestError in the Database Migration service.
+- The property `CompartmentId` was removed from UpdateAgentDetails in the Database Migration service.
+
+### Fixed
+- Fixed `ContentType` and `ContentLength` properties not being used in `PutObject` API in Object Storage Service.
+
 ## 26.0.0 - 2021-09-28
 ### Added
 - Support for autonomous databases and clones on shared infrastructure not requiring mTLS in the Database service

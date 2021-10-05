@@ -116,7 +116,7 @@ namespace Oci.DatabasemigrationService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetMigrationRequest, GetMigrationResponse> ForMigration(GetMigrationRequest request, params LifecycleStates[] targetStates)
+        public Waiter<GetMigrationRequest, GetMigrationResponse> ForMigration(GetMigrationRequest request, params MigrationLifecycleStates[] targetStates)
         {
             return this.ForMigration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -128,13 +128,13 @@ namespace Oci.DatabasemigrationService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetMigrationRequest, GetMigrationResponse> ForMigration(GetMigrationRequest request, WaiterConfiguration config, params LifecycleStates[] targetStates)
+        public Waiter<GetMigrationRequest, GetMigrationResponse> ForMigration(GetMigrationRequest request, WaiterConfiguration config, params MigrationLifecycleStates[] targetStates)
         {
             var agent = new WaiterAgent<GetMigrationRequest, GetMigrationResponse>(
                 request,
                 request => client.GetMigration(request),
                 response => targetStates.Contains(response.Migration.LifecycleState.Value),
-                targetStates.Contains(LifecycleStates.Deleted)
+                targetStates.Contains(MigrationLifecycleStates.Deleted)
             );
             return new Waiter<GetMigrationRequest, GetMigrationResponse>(config, agent);
         }

@@ -107,5 +107,11 @@ namespace Oci.ManagementagentService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "installType")]
+        public System.Nullable<InstallTypes> InstallType { get; set; }
     }
 }
