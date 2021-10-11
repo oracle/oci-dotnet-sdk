@@ -20,7 +20,7 @@ namespace Oci.OcvpService.Requests
     {
         
         /// <value>
-        /// The HCX on-premise license keys to be reserved when downgrade from HCX Enterprise to HCX Advanced.
+        /// The HCX on-premise license keys to be reserved when downgrading from HCX Enterprise to HCX Advanced.
         /// </value>
         /// <remarks>
         /// Required

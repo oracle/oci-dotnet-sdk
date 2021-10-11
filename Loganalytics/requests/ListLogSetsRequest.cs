@@ -67,5 +67,12 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        /// <value>
+        /// If this filter is present, each of the logsets returned must contain the value of this filter.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logSetNameContains", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> LogSetNameContains { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace Oci.ApmsyntheticsService.Requests
         public string VantagePoint { get; set; }
         
         /// <value>
-        /// The result type har or screenshot or log.
+        /// The result type har, screenshot, log or network.
         /// 
         /// </value>
         /// <remarks>

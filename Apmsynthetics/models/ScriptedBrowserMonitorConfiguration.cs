@@ -27,6 +27,9 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "isCertificateValidationEnabled")]
         public System.Nullable<bool> IsCertificateValidationEnabled { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "configType")]
         private readonly string configType = "SCRIPTED_BROWSER_CONFIG";
     }

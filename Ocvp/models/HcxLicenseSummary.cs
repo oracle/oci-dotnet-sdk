@@ -23,7 +23,7 @@ namespace Oci.OcvpService.Models
     {
         
         /// <value>
-        /// HCX on-premise license key value
+        /// HCX on-premise license key value.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.OcvpService.Models
         public string ActivationKey { get; set; }
         
         /// <value>
-        /// status of HCX on-premise license
+        /// status of HCX on-premise license.
         /// </value>
         /// <remarks>
         /// Required

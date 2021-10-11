@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OcvpService.Models
 {
   /// <summary>
-  /// HCX on-premise license status
+  /// HCX on-premise license status.
   /// </summary>
   public enum HcxLicenseStatus {
       [EnumMember(Value = "AVAILABLE")]

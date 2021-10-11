@@ -21,6 +21,9 @@ namespace Oci.ApmsyntheticsService.Models
     public class ScriptedRestMonitorConfiguration : MonitorConfiguration
     {
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "configType")]
         private readonly string configType = "SCRIPTED_REST_CONFIG";
     }

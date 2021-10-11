@@ -82,6 +82,12 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<int> RepeatIntervalInSeconds { get; set; }
         
         /// <value>
+        /// If runOnce is enabled, then the monitor will run once.
+        /// </value>
+        [JsonProperty(PropertyName = "isRunOnce")]
+        public System.Nullable<bool> IsRunOnce { get; set; }
+        
+        /// <value>
         /// Timeout in seconds. Timeout cannot be more than 30% of repeatIntervalInSeconds time for monitors.
         /// Also, timeoutInSeconds should be a multiple of 60. Monitor will be allowed to run only for timeoutInSeconds time. It would be terminated after that.
         /// 

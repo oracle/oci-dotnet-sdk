@@ -110,7 +110,7 @@ namespace Oci.OcvpService.Models
         public string HcxFqdn { get; set; }
         
         /// <value>
-        /// HCX enabled or not
+        /// Indicates whether HCX is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isHcxEnabled")]
         public System.Nullable<bool> IsHcxEnabled { get; set; }

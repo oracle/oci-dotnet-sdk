@@ -35,6 +35,9 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "verifyTexts")]
         public System.Collections.Generic.List<VerifyText> VerifyTexts { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "configType")]
         private readonly string configType = "BROWSER_CONFIG";
     }

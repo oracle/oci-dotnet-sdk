@@ -25,6 +25,8 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "IN_PROGRESS")]
       InProgress,
       [EnumMember(Value = "RELATED")]
-      Related
+      Related,
+      [EnumMember(Value = "FAILED")]
+      Failed
   }
 }

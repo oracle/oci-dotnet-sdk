@@ -83,6 +83,9 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "verifyResponseCodes")]
         public System.Collections.Generic.List<string> VerifyResponseCodes { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "configType")]
         private readonly string configType = "REST_CONFIG";
     }
