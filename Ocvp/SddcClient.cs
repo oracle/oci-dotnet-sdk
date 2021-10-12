@@ -66,7 +66,7 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
-        /// Cancel the pending SDDC downgrade from HCX Enterprise to HCX Advanced
+        /// Cancel the pending SDDC downgrade from HCX Enterprise to HCX Advanced.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -238,7 +238,10 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
-        /// Downgrade the specified SDDC from HCX Enterprise to HCX Advanced
+        /// Downgrade the specified SDDC from HCX Enterprise to HCX Advanced. 
+        /// Downgrading from HCX Enterprise to HCX Advanced reduces the number of provided license keys from 10 to 3.
+        /// Downgrade remains in a &#x60;PENDING&#x60; state until the end of the current billing cycle. You can use {@link #cancelDowngradeHcx(CancelDowngradeHcxRequest) cancelDowngradeHcx} 
+        /// to cancel the downgrade while it&#39;s still in a &#x60;PENDING&#x60; state. 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -358,8 +361,7 @@ namespace Oci.OcvpService
         }
 
         /// <summary>
-        /// Lists supported SKUs. Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
-        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
+        /// Lists supported SKUs.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

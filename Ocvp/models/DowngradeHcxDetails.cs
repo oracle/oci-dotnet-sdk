@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// The HCX on-premise licenses to be reserved when downgrade from HCX Enterprise to HCX Advanced.
+    /// The HCX on-premise license keys to be reserved when downgrading from HCX Enterprise to HCX Advanced.
+    /// Downgrading from HCX Enterprise to HCX Advanced reduces the number of provided license keys from 10 to 3.
+    /// 
     /// </summary>
     public class DowngradeHcxDetails 
     {
         
         /// <value>
-        /// The HCX on-premise licenses keys to be reserved when downgrade from HCX Enterprise to HCX Advanced.
+        /// The HCX on-premise license keys to be reserved when downgrading from HCX Enterprise to HCX Advanced.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

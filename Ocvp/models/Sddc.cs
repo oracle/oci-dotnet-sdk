@@ -124,9 +124,7 @@ namespace Oci.OcvpService.Models
         public System.Nullable<int> EsxiHostsCount { get; set; }
         
         /// <value>
-        /// Billing option selected during SDDC creation.
-        /// Oracle Cloud Infrastructure VMware Solution supports the following billing interval SKUs:
-        /// HOUR, MONTH, ONE_YEAR, and THREE_YEARS.
+        /// The billing option selected during SDDC creation.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 
         /// </value>
@@ -505,8 +503,9 @@ namespace Oci.OcvpService.Models
         public System.Nullable<bool> IsHcxEnabled { get; set; }
         
         /// <value>
-        /// The activation key to use on the on-premises HCX Enterprise appliance you site pair with HCX Manager in your VMware Solution.
-        /// Your implementation might need more than one activation key. To obtain additional keys, contact Oracle Support.
+        /// The activation keys to use on the on-premises HCX Enterprise appliances you site pair with HCX Manager in your VMware Solution.
+        /// The number of keys provided depends on the HCX license type. HCX Advanced provides 3 activation keys. 
+        /// HCX Enterprise provides 10 activation keys.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hcxOnPremKey")]
