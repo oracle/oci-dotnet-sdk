@@ -20,6 +20,10 @@ namespace Oci.Common.Http.Signing.Internal
         public static readonly string DATE = "date";
         public static readonly string CONTENT_LENGTH = "content-length";
         public static readonly string CONTENT_TYPE = "content-type";
+        public static readonly string CONTENT_DISPOSITION = "content-disposition";
+        public static readonly string CONTENT_ENCODING = "content-encoding";
+        public static readonly string CONTENT_LANGUAGE = "content-language";
+        public static readonly string CONTENT_MD5 = "content-md5";
         public static readonly string X_CONTENT_SHA256 = "x-content-sha256";
         public static readonly string HOST = "host";
 

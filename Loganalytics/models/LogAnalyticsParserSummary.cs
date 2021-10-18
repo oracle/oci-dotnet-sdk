@@ -230,5 +230,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isUserDeleted")]
         public System.Nullable<bool> IsUserDeleted { get; set; }
         
+        /// <value>
+        /// A flag indicating whether the XML parser should consider the namespace(s) while processing the log data.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isNamespaceAware")]
+        public System.Nullable<bool> IsNamespaceAware { get; set; }
+        
     }
 }

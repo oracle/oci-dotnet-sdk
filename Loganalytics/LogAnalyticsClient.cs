@@ -2759,6 +2759,46 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Lists the preferences of the tenant. Currently, only \&quot;DEFAULT_HOMEPAGE\&quot; is supported.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetPreferences.cs.html">here</a> to see an example of how to use GetPreferences API.</example>
+        public async Task<GetPreferencesResponse> GetPreferences(GetPreferencesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getPreferences");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/preferences".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetPreferencesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetPreferences failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns the intermediate results for a query that was specified to run asynchronously if the query has not completed,
         /// otherwise the final query results identified by a queryWorkRequestId returned when submitting the query execute asynchronously.
         /// 
@@ -3075,6 +3115,46 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"GetStorageWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// This API retrieves details of the configured bucket that stores unprocessed payloads.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetUnprocessedDataBucket.cs.html">here</a> to see an example of how to use GetUnprocessedDataBucket API.</example>
+        public async Task<GetUnprocessedDataBucketResponse> GetUnprocessedDataBucket(GetUnprocessedDataBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getUnprocessedDataBucket");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/unprocessedDataBucket".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetUnprocessedDataBucketResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetUnprocessedDataBucket failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5353,6 +5433,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Removes the tenant preferences. Currently, only \&quot;DEFAULT_HOMEPAGE\&quot; is supported.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/RemovePreferences.cs.html">here</a> to see an example of how to use RemovePreferences API.</example>
+        public async Task<RemovePreferencesResponse> RemovePreferences(RemovePreferencesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called removePreferences");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/preferences/actions/removePreferences".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Expect", "100-continue");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemovePreferencesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemovePreferences failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Remove one or more event types from a source.
         /// 
         /// </summary>
@@ -5471,6 +5592,48 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"Run failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// This API configures a bucket to store unprocessed payloads.
+        /// While processing there could be reasons a payload cannot be processed (mismatched structure, corrupted archive format, etc),
+        /// if configured the payload would be uploaded to the bucket for verification.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/SetUnprocessedDataBucket.cs.html">here</a> to see an example of how to use SetUnprocessedDataBucket API.</example>
+        public async Task<SetUnprocessedDataBucketResponse> SetUnprocessedDataBucket(SetUnprocessedDataBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called setUnprocessedDataBucket");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/actions/setUnprocessedDataBucket".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<SetUnprocessedDataBucketResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SetUnprocessedDataBucket failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5917,6 +6080,47 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"UpdateLookupData failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the tenant preferences. Currently, only \&quot;DEFAULT_HOMEPAGE\&quot; is supported.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpdatePreferences.cs.html">here</a> to see an example of how to use UpdatePreferences API.</example>
+        public async Task<UpdatePreferencesResponse> UpdatePreferences(UpdatePreferencesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updatePreferences");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/preferences/actions/updatePreferences".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Expect", "100-continue");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdatePreferencesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdatePreferences failed with error: {e.Message}");
                 throw;
             }
         }

@@ -49,7 +49,9 @@ namespace Oci.LoganalyticsService.Requests
             [EnumMember(Value = "XML")]
             Xml,
             [EnumMember(Value = "JSON")]
-            Json
+            Json,
+            [EnumMember(Value = "DELIMITED")]
+            Delimited
         };
 
         /// <value>

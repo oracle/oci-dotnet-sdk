@@ -92,5 +92,14 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// A value of `100-continue` requests preliminary verification of the request method, path, and headers before the request body is sent.
+        /// If no error results from such verification, the server will send a 100 (Continue) interim response to indicate readiness for the request body.
+        /// The only allowed value for this parameter is \"100-Continue\" (case-insensitive).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "expect")]
+        public string Expect { get; set; }
     }
 }

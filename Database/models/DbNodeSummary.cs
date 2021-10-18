@@ -197,5 +197,29 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "additionalDetails")]
         public string AdditionalDetails { get; set; }
         
+        /// <value>
+        /// The number of CPU cores enabled on the Db node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCount")]
+        public System.Nullable<int> CpuCoreCount { get; set; }
+        
+        /// <value>
+        /// The allocated memory in GBs on the Db node.
+        /// </value>
+        [JsonProperty(PropertyName = "memorySizeInGBs")]
+        public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
+        /// <value>
+        /// The allocated local node storage in GBs on the Db node.
+        /// </value>
+        [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
+        public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exacc Db server associated with the database node.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServerId")]
+        public string DbServerId { get; set; }
+        
     }
 }

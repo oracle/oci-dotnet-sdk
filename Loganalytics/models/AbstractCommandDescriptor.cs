@@ -35,6 +35,8 @@ namespace Oci.LoganalyticsService.Models
             Search,
             [EnumMember(Value = "STATS")]
             Stats,
+            [EnumMember(Value = "GEO_STATS")]
+            GeoStats,
             [EnumMember(Value = "TIME_STATS")]
             TimeStats,
             [EnumMember(Value = "SORT")]
@@ -216,6 +218,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "FIELD_SUMMARY":
                     obj = new FieldSummaryCommandDescriptor();
+                    break;
+                case "GEO_STATS":
+                    obj = new GeoStatsCommandDescriptor();
                     break;
                 case "MAP":
                     obj = new MapCommandDescriptor();

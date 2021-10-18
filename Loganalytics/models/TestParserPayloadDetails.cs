@@ -198,5 +198,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
+        /// <value>
+        /// A flag indicating whether the XML parser should consider the namespace(s) while processing the log data.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isNamespaceAware")]
+        public System.Nullable<bool> IsNamespaceAware { get; set; }
+        
     }
 }

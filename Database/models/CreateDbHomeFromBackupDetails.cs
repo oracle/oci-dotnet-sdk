@@ -30,6 +30,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the image to be used to restore a database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>
