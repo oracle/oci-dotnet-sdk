@@ -37,6 +37,13 @@ namespace Oci.LoganalyticsService.Models
         public string Priority { get; set; }
         
         /// <value>
+        /// List of fields to search for terms or phrases to highlight.  If not specified all string fields are scanned.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "matchOnly")]
+        public System.Collections.Generic.List<string> MatchOnly { get; set; }
+        
+        /// <value>
         /// List of fields to search for terms or phrases to highlight.
         /// 
         /// </value>

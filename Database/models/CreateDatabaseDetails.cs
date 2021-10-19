@@ -123,5 +123,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Specifies a prefix for the `Oracle SID` of the database to be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sidPrefix")]
+        public string SidPrefix { get; set; }
+        
     }
 }

@@ -68,6 +68,12 @@ namespace Oci.LoganalyticsService.Models
         public string SourceReference { get; set; }
         
         /// <value>
+        /// Features of the source function to use for enrichment.
+        /// </value>
+        [JsonProperty(PropertyName = "features")]
+        public System.Collections.Generic.List<string> Features { get; set; }
+        
+        /// <value>
         /// The source function unique identifier.
         /// </value>
         [JsonProperty(PropertyName = "functionId")]

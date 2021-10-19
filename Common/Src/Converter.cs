@@ -25,7 +25,11 @@ namespace Oci.Common
         private static readonly HashSet<string> settableContentHeaders = new HashSet<string>()
         {
             Constants.CONTENT_LENGTH,
-            Constants.CONTENT_TYPE
+            Constants.CONTENT_TYPE,
+            Constants.CONTENT_DISPOSITION,
+            Constants.CONTENT_ENCODING,
+            Constants.CONTENT_LANGUAGE,
+            Constants.CONTENT_MD5
         };
 
         /// <summary> Converts SDK request object into HttpRequestMessage.</summary>
@@ -104,7 +108,7 @@ namespace Oci.Common
                     }
                 }
             }
-            ContentHelper.UpdateHttpContent(requestMessage.Content, contentHeaders);
+            ContentHelper.UpdateSettableHttpContentHeaders(requestMessage.Content, contentHeaders);
             var uriBuilder = new UriBuilder(updatedUri);
             uriBuilder.Query = HttpUtils.BuildQueryString(queriesList);
             requestMessage.RequestUri = uriBuilder.Uri;

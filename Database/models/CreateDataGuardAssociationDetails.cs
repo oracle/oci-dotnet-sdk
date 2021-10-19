@@ -135,6 +135,20 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<TransportTypeEnum> TransportType { get; set; }
         
         
+        /// <value>
+        /// Specifies the `DB_UNIQUE_NAME` of the peer database to be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "peerDbUniqueName")]
+        public string PeerDbUniqueName { get; set; }
+        
+        /// <value>
+        /// Specifies a prefix for the `Oracle SID` of the database to be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "peerSidPrefix")]
+        public string PeerSidPrefix { get; set; }
+        
     }
 
     public class CreateDataGuardAssociationDetailsModelConverter : JsonConverter

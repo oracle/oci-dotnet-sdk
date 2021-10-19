@@ -60,17 +60,22 @@ namespace Oci.Common.Http.Internal
             logger.Trace($"request content: {new StreamReader(stream, Encoding.UTF8).ReadToEnd()}");
         }
 
-        /// <summary>Updates the HttpContent with user defined values.</summary>
+        /// <summary>Updates the Settable HttpContent Header with values provided in Request.</summary>
         /// <param name="httpContent">The httpContent to be updated.</param>
-        public static void UpdateHttpContent(HttpContent httpContent, Dictionary<string, string> contentHeaders)
+        public static void UpdateSettableHttpContentHeaders(HttpContent httpContent, Dictionary<string, string> contentHeaders)
         {
-            if (contentHeaders.ContainsKey(Constants.CONTENT_LENGTH))
+            foreach (var contentHeader in contentHeaders)
             {
-                httpContent.Headers.ContentLength = long.Parse(contentHeaders[Constants.CONTENT_LENGTH]);
-            }
-            if (contentHeaders.ContainsKey(Constants.CONTENT_TYPE))
-            {
-                httpContent.Headers.ContentType = new MediaTypeHeaderValue(contentHeaders[Constants.CONTENT_TYPE]);
+                // The ContentType is already set in CreateHttpContent method, adding it via TryAddWithoutValidation
+                // will send two ContentType headers so we override ContentType value instead if provided.
+                if (contentHeader.Key.Equals(Constants.CONTENT_TYPE))
+                {
+                    httpContent.Headers.ContentType = new MediaTypeHeaderValue(contentHeader.Value);
+                }
+                else
+                {
+                    httpContent.Headers.TryAddWithoutValidation(contentHeader.Key.ToUpper(), contentHeader.Value);
+                }
             }
         }
     }

@@ -33,5 +33,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "xmlPaths")]
         public System.Collections.Generic.List<string> XmlPaths { get; set; }
         
+        /// <value>
+        /// The log header values.
+        /// </value>
+        [JsonProperty(PropertyName = "headerPaths")]
+        public System.Collections.Generic.List<string> HeaderPaths { get; set; }
+        
     }
 }

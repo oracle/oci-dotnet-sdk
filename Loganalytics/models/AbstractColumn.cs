@@ -81,6 +81,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<bool> IsMultiValued { get; set; }
         
         /// <value>
+        /// A flag indicating whether or not the field is a case sensitive field.  Only applies to string fields.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCaseSensitive")]
+        public System.Nullable<bool> IsCaseSensitive { get; set; }
+        
+        /// <value>
         /// Identifies if this column can be used as a grouping field in any grouping command.
         /// 
         /// </value>

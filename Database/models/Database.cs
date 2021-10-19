@@ -123,6 +123,8 @@ namespace Oci.DatabaseService.Models
             BackupInProgress,
             [EnumMember(Value = "UPGRADING")]
             Upgrading,
+            [EnumMember(Value = "CONVERTING")]
+            Converting,
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]
@@ -200,8 +202,21 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
         
+        /// <value>
+        /// True if the database is a container database.
+        /// </value>
+        [JsonProperty(PropertyName = "isCdb")]
+        public System.Nullable<bool> IsCdb { get; set; }
+        
         [JsonProperty(PropertyName = "databaseManagementConfig")]
         public CloudDatabaseManagementConfig DatabaseManagementConfig { get; set; }
+        
+        /// <value>
+        /// Specifies a prefix for the `Oracle SID` of the database to be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sidPrefix")]
+        public string SidPrefix { get; set; }
         
     }
 }

@@ -188,6 +188,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
+        /// The list of Db server.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
