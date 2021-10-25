@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// Order Details for Console plugin display
+    /// Order details.
     /// </summary>
     public class Order 
     {
         
         /// <value>
-        /// Immutable and unique order number holding customer subscription information
+        /// Immutable and unique order number holding customer subscription information.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DataCenterRegion { get; set; }
         
         /// <value>
-        /// Admin e-mail owning subscription.
+        /// Administrator email owning the subscription.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string AdminEmail { get; set; }
         
         /// <value>
-        /// State of order.
+        /// State of the order.
         /// </value>
         /// <remarks>
         /// Required

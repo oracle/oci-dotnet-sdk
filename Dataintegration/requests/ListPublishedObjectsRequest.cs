@@ -52,6 +52,18 @@ namespace Oci.DataintegrationService.Requests
         public string Name { get; set; }
         
         /// <value>
+        /// This parameter can be used to filter objects by the names starting with the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameStartsWith")]
+        public string NameStartsWith { get; set; }
+        
+        /// <value>
+        /// This parameter can be used to filter objects by the names that match partially or fully with the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameContains")]
+        public string NameContains { get; set; }
+        
+        /// <value>
         /// Used to filter by the identifier of the published object.
         /// 
         /// </value>

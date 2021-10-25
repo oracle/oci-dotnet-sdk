@@ -99,6 +99,13 @@ namespace Oci.OpsiService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Id { get; set; }
         
+        /// <value>
+        /// Optional list of exadata insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ExadataInsightId { get; set; }
+        
         ///
         /// <value>
         /// Choose the type of statistic metric data to be used for forecasting.

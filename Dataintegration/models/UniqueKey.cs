@@ -92,6 +92,9 @@ namespace Oci.DataintegrationService.Models
                 case "PRIMARY_KEY":
                     obj = new PrimaryKey();
                     break;
+                case "UNIQUE_KEY":
+                    obj = new UniqueDataKey();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

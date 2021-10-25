@@ -49,6 +49,27 @@ namespace Oci.OpsiService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// Filter by one or more Enterprise Manager entity types. Currently, the supported types are \"oracle_pdb\", \"oracle_database\", \"host\", \"oracle_dbmachine\", \"oracle_exa_cloud_service\", and \"oracle_oci_exadata_cloud_service\". If this parameter is not specified, targets of all supported entity types are returned by default.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enterpriseManagerEntityType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> EnterpriseManagerEntityType { get; set; }
+        
+        /// <value>
+        /// Used in combination with enterpriseManagerParentEntityIdentifier to return the members of a particular Enterprise Manager parent entity. Both enterpriseManagerIdentifier and enterpriseManagerParentEntityIdentifier must be specified to identify a particular Enterprise Manager parent entity.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enterpriseManagerIdentifier")]
+        public string EnterpriseManagerIdentifier { get; set; }
+        
+        /// <value>
+        /// Used in combination with enterpriseManagerIdentifier to return the members of a particular Enterprise Manager parent entity. Both enterpriseManagerIdentifier and enterpriseManagerParentEntityIdentifier must be specified to identify a particular  Enterprise Manager parent entity.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enterpriseManagerParentEntityIdentifier")]
+        public string EnterpriseManagerParentEntityIdentifier { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// A single subscription's details
+    /// A single subscription's details.
     /// </summary>
     public class SubscriptionInfo 
     {
         
         /// <value>
-        /// Subscription id.
+        /// Subscription ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string SpmSubscriptionId { get; set; }
         
         /// <value>
-        /// Service name for subscription
+        /// Service name for subscription.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Service { get; set; }
         
         /// <value>
-        /// Subscription start date. An RFC3339 formatted datetime string
+        /// Subscription start date. An RFC 3339-formatted date and time string.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<System.DateTime> StartDate { get; set; }
         
         /// <value>
-        /// Subscription end date. An RFC3339 formatted datetime string
+        /// Subscription end date. An RFC 3339-formatted date and time string.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<System.DateTime> EndDate { get; set; }
         
         /// <value>
-        /// List of SKUs the subscription contains
+        /// List of SKUs the subscription contains.
         /// </value>
         /// <remarks>
         /// Required

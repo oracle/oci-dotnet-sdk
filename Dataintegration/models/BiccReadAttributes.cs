@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Properties to configure reading from an Oracle Database.
+    /// Properties to configure reading from BICC.
     /// </summary>
     public class BiccReadAttributes : AbstractReadAttribute
     {

@@ -47,6 +47,22 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MOVE_HOST_INSIGHT")]
       MoveHostInsight,
       [EnumMember(Value = "DELETE_HOST_INSIGHT")]
-      DeleteHostInsight
+      DeleteHostInsight,
+      [EnumMember(Value = "CREATE_EXADATA_INSIGHT")]
+      CreateExadataInsight,
+      [EnumMember(Value = "ENABLE_EXADATA_INSIGHT")]
+      EnableExadataInsight,
+      [EnumMember(Value = "DISABLE_EXADATA_INSIGHT")]
+      DisableExadataInsight,
+      [EnumMember(Value = "UPDATE_EXADATA_INSIGHT")]
+      UpdateExadataInsight,
+      [EnumMember(Value = "MOVE_EXADATA_INSIGHT")]
+      MoveExadataInsight,
+      [EnumMember(Value = "DELETE_EXADATA_INSIGHT")]
+      DeleteExadataInsight,
+      [EnumMember(Value = "ADD_EXADATA_INSIGHT_MEMBERS")]
+      AddExadataInsightMembers,
+      [EnumMember(Value = "EXADATA_AUTO_SYNC")]
+      ExadataAutoSync
   }
 }

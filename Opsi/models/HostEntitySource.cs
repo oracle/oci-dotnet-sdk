@@ -17,6 +17,8 @@ namespace Oci.OpsiService.Models
   /// </summary>
   public enum HostEntitySource {
       [EnumMember(Value = "MACS_MANAGED_EXTERNAL_HOST")]
-      MacsManagedExternalHost
+      MacsManagedExternalHost,
+      [EnumMember(Value = "EM_MANAGED_EXTERNAL_HOST")]
+      EmManagedExternalHost
   }
 }

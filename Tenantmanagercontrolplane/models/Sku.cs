@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// A single Subscription SKU
+    /// A single subscription SKU.
     /// </summary>
     public class Sku 
     {
         
         /// <value>
-        /// SKU number
+        /// SKU number.
         /// </value>
         [JsonProperty(PropertyName = "number")]
         public string Number { get; set; }
         
         /// <value>
-        /// SKU name
+        /// SKU name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// SKU quantity
+        /// SKU quantity.
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public System.Nullable<int> Quantity { get; set; }

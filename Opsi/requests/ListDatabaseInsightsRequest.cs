@@ -168,6 +168,13 @@ namespace Oci.OpsiService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
+        /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId")]
+        public string ExadataInsightId { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 

@@ -31,6 +31,12 @@ namespace Oci.DataintegrationService.Models
         public string Type { get; set; }
         
         /// <value>
+        /// Specifies whether to use inferred expression output type as output type of the derived field. Default value of this flag is false.
+        /// </value>
+        [JsonProperty(PropertyName = "isUseInferredType")]
+        public System.Nullable<bool> IsUseInferredType { get; set; }
+        
+        /// <value>
         /// Labels are keywords or labels that you can add to data assets, dataflows and so on. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]

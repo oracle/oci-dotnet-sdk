@@ -22,6 +22,18 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
+        /// The Autonomous Transaction Processing instance service name.
+        /// </value>
+        [JsonProperty(PropertyName = "tnsAlias")]
+        public string TnsAlias { get; set; }
+        
+        /// <value>
+        /// Array of service names that are available for selection in the tnsAlias property.
+        /// </value>
+        [JsonProperty(PropertyName = "tnsNames")]
+        public System.Collections.Generic.List<string> TnsNames { get; set; }
+        
+        /// <value>
         /// The user name for the connection.
         /// </value>
         [JsonProperty(PropertyName = "username")]

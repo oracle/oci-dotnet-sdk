@@ -22,6 +22,12 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
+        /// The Oracle Object storage Region ie. us-ashburn-1
+        /// </value>
+        [JsonProperty(PropertyName = "ociRegion")]
+        public string OciRegion { get; set; }
+        
+        /// <value>
         /// The Oracle Object storage URL.
         /// </value>
         [JsonProperty(PropertyName = "url")]

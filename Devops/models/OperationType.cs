@@ -53,6 +53,40 @@ namespace Oci.DevopsService.Models
       [EnumMember(Value = "UPDATE_DEPLOYMENT")]
       UpdateDeployment,
       [EnumMember(Value = "DELETE_DEPLOYMENT")]
-      DeleteDeployment
+      DeleteDeployment,
+      [EnumMember(Value = "CREATE_BUILD_PIPELINE")]
+      CreateBuildPipeline,
+      [EnumMember(Value = "UPDATE_BUILD_PIPELINE")]
+      UpdateBuildPipeline,
+      [EnumMember(Value = "DELETE_BUILD_PIPELINE")]
+      DeleteBuildPipeline,
+      [EnumMember(Value = "CREATE_BUILD_PIPELINE_STAGE")]
+      CreateBuildPipelineStage,
+      [EnumMember(Value = "UPDATE_BUILD_PIPELINE_STAGE")]
+      UpdateBuildPipelineStage,
+      [EnumMember(Value = "DELETE_BUILD_PIPELINE_STAGE")]
+      DeleteBuildPipelineStage,
+      [EnumMember(Value = "CREATE_CONNECTION")]
+      CreateConnection,
+      [EnumMember(Value = "UPDATE_CONNECTION")]
+      UpdateConnection,
+      [EnumMember(Value = "DELETE_CONNECTION")]
+      DeleteConnection,
+      [EnumMember(Value = "CREATE_TRIGGER")]
+      CreateTrigger,
+      [EnumMember(Value = "UPDATE_TRIGGER")]
+      UpdateTrigger,
+      [EnumMember(Value = "DELETE_TRIGGER")]
+      DeleteTrigger,
+      [EnumMember(Value = "EXECUTE_TRIGGER")]
+      ExecuteTrigger,
+      [EnumMember(Value = "CREATE_REPOSITORY")]
+      CreateRepository,
+      [EnumMember(Value = "UPDATE_REPOSITORY")]
+      UpdateRepository,
+      [EnumMember(Value = "DELETE_REPOSITORY")]
+      DeleteRepository,
+      [EnumMember(Value = "MIRROR_REPOSITORY")]
+      MirrorRepository
   }
 }

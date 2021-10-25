@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Details for the MYSQL data asset type.
+    /// Details for the FUSION_APP data asset type.
     /// </summary>
     public class DataAssetFromFusionApp : DataAsset
     {
         
         /// <value>
-        /// The service url of the Bi Server.
+        /// The service url of the BI Server.
         /// </value>
         [JsonProperty(PropertyName = "serviceUrl")]
         public string ServiceUrl { get; set; }

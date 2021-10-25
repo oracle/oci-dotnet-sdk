@@ -51,6 +51,22 @@ namespace Oci.LoadbalancerService.Models
         public System.Nullable<bool> VerifyPeerCertificate { get; set; }
         
         /// <value>
+        /// Ids for OCI certificates service CA or CA bundles for the load balancer to trust.
+        /// <br/>
+        /// Example: [ocid1.cabundle.oc1.us-ashburn-1.amaaaaaaav3bgsaagl4zzyqdop5i2vuwoqewdvauuw34llqa74otq2jdsfyq]
+        /// </value>
+        [JsonProperty(PropertyName = "trustedCertificateAuthorityIds")]
+        public System.Collections.Generic.List<string> TrustedCertificateAuthorityIds { get; set; }
+        
+        /// <value>
+        /// Ids for OCI certificates service certificates. Currently only a single Id may be passed.
+        /// <br/>
+        /// Example: [ocid1.certificate.oc1.us-ashburn-1.amaaaaaaav3bgsaa5o2q7rh5nfmkkukfkogasqhk6af2opufhjlqg7m6jqzq]
+        /// </value>
+        [JsonProperty(PropertyName = "certificateIds")]
+        public System.Collections.Generic.List<string> CertificateIds { get; set; }
+        
+        /// <value>
         /// A friendly name for the certificate bundle. It must be unique and it cannot be changed.
         /// Valid certificate bundle names include only alphanumeric characters, dashes, and underscores.
         /// Certificate bundle names cannot contain spaces. Avoid entering confidential information.

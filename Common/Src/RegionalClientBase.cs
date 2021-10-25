@@ -43,7 +43,17 @@ namespace Oci.Common
         public void SetRegion(string regionId)
         {
             regionId = regionId.ToLower(new CultureInfo("en"));
-            SetRegion(Region.FromRegionId(regionId));
+            try
+            {
+                Region regionToUse = Region.FromRegionId(regionId);
+                SetRegion(regionToUse);
+            }
+            catch (ArgumentException)
+            {
+                logger.Info($"Unknown regionId {regionId}, falling back to default endpoint format");
+                String endpoint = Region.FormatDefaultRegionEndpoint(this.service, regionId);
+                SetEndpoint(endpoint);
+            }
         }
     }
 }

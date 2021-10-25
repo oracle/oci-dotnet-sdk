@@ -117,6 +117,13 @@ namespace Oci.OpsiService.Requests
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
+        /// Optional list of exadata insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ExadataInsightId { get; set; }
+        
+        /// <value>
         /// For list pagination. The value of the `opc-next-page` response header from
         /// the previous \"List\" call. For important details about how pagination works,
         /// see [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).

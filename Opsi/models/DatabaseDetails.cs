@@ -79,5 +79,11 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "instances")]
         public System.Collections.Generic.List<HostInstanceMap> Instances { get; set; }
         
+        /// <value>
+        /// Name of the CDB.Only applies to PDB.
+        /// </value>
+        [JsonProperty(PropertyName = "cdbName")]
+        public string CdbName { get; set; }
+        
     }
 }

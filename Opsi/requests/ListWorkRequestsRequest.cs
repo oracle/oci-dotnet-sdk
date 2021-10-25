@@ -20,16 +20,6 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 
@@ -55,5 +45,60 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The ID of the asynchronous work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public string Id { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources their lifecycleState matches the given OperationStatus.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<OperationStatus> Status { get; set; }
+        
+        /// <value>
+        /// The ID of the resource affected by the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
+        /// The ID of the related resource for the resource affected by the work request, e.g. the related Exadata Insight OCID of the Database Insight work request
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "relatedResourceId")]
+        public string RelatedResourceId { get; set; }
+        
+        /// <value>
+        /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeAccepted")]
+            TimeAccepted
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
     }
 }

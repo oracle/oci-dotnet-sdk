@@ -20,6 +20,8 @@ namespace Oci.OpsiService.Models
       Accepted,
       [EnumMember(Value = "IN_PROGRESS")]
       InProgress,
+      [EnumMember(Value = "WAITING")]
+      Waiting,
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "SUCCEEDED")]

@@ -133,6 +133,17 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> BillingContractEndDate { get; set; }
         
         /// <value>
+        /// The availability domain of the ESXi host.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ComputeAvailabilityDomain is required.")]
+        [JsonProperty(PropertyName = "computeAvailabilityDomain")]
+        public string ComputeAvailabilityDomain { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
