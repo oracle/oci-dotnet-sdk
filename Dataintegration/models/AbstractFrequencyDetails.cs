@@ -32,7 +32,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DAILY")]
             Daily,
             [EnumMember(Value = "MONTHLY")]
-            Monthly
+            Monthly,
+            [EnumMember(Value = "WEEKLY")]
+            Weekly,
+            [EnumMember(Value = "MONTHLY_RULE")]
+            MonthlyRule,
+            [EnumMember(Value = "CUSTOM")]
+            Custom
         };
 
                 ///
@@ -46,7 +52,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DAILY")]
             Daily,
             [EnumMember(Value = "MONTHLY")]
-            Monthly
+            Monthly,
+            [EnumMember(Value = "WEEKLY")]
+            Weekly,
+            [EnumMember(Value = "CUSTOM")]
+            Custom
         };
 
         /// <value>
@@ -81,8 +91,17 @@ namespace Oci.DataintegrationService.Models
                 case "MONTHLY":
                     obj = new MonthlyFrequencyDetails();
                     break;
+                case "CUSTOM":
+                    obj = new CustomFrequencyDetails();
+                    break;
                 case "DAILY":
                     obj = new DailyFrequencyDetails();
+                    break;
+                case "WEEKLY":
+                    obj = new WeeklyFrequencyDetails();
+                    break;
+                case "MONTHLY_RULE":
+                    obj = new MonthlyRuleFrequencyDetails();
                     break;
                 case "HOURLY":
                     obj = new HourlyFrequencyDetails();

@@ -132,5 +132,11 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filter", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Filter { get; set; }
+        
+        /// <value>
+        /// This parameter can be used to filter objects by the names starting with the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameStartsWith")]
+        public string NameStartsWith { get; set; }
     }
 }

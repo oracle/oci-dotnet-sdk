@@ -25,12 +25,12 @@ namespace Oci.Common.Internal
         /// <summary>Creates the service endpoint</summary>
         /// <param name="service">The service.</param>
         /// <param name="regionId">The region id.</param>
-        /// <param name="realm">The realm this region belongs to.</param>
+        /// <param name="secondLevelDomain">The second level domain for the realm this region belongs to.</param>
         /// <returns>The endpoint (protocol + FQDN) for this service.</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static string CreateEndpoint(Service service, string regionId, Realm realm)
+        public static string CreateEndpoint(Service service, string regionId, string secondLevelDomain)
         {
-            if (service == null || regionId == null || realm == null)
+            if (service == null || String.IsNullOrWhiteSpace(regionId) || String.IsNullOrWhiteSpace(secondLevelDomain))
             {
                 throw new ArgumentNullException();
             }
@@ -51,7 +51,22 @@ namespace Oci.Common.Internal
                 regionIdToUse = regionId;
             }
 
-            return BuildEndpoint(endpointTemplateToUse, regionIdToUse, service.ServiceEndpointPrefix, realm.SecondLevelDomain);
+            return BuildEndpoint(endpointTemplateToUse, regionIdToUse, service.ServiceEndpointPrefix, secondLevelDomain);
+        }
+
+        /// <summary>Creates the service endpoint</summary>
+        /// <param name="service">The service.</param>
+        /// <param name="regionId">The region id.</param>
+        /// <param name="realm">The realm this region belongs to.</param>
+        /// <returns>The endpoint (protocol + FQDN) for this service.</returns>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static string CreateEndpoint(Service service, string regionId, Realm realm)
+        {
+            if (realm == null)
+            {
+                throw new ArgumentNullException();
+            }
+            return CreateEndpoint(service, regionId, realm.SecondLevelDomain);
         }
 
         /// <summary>Creates the service endpoint from region.</summary>

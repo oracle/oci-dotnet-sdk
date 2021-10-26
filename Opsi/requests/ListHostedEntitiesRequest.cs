@@ -92,6 +92,13 @@ namespace Oci.OpsiService.Requests
         public System.Collections.Generic.List<PlatformTypeEnum> PlatformType { get; set; }
         
         /// <value>
+        /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId")]
+        public string ExadataInsightId { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of results per page, or items to
         /// return in a paginated \"List\" call.
         /// For important details about how pagination works, see

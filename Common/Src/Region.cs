@@ -31,6 +31,7 @@ namespace Oci.Common
         private static readonly Dictionary<string, Region> KNOWN_REGIONS = new Dictionary<string, Region>();
         private static readonly string OCI_REGION_METADATA_ENV_VAR_NAME = "OCI_REGION_METADATA";
         private static readonly string REGIONS_CONFIG_FILE_PATH = Path.Combine("~", ".oci", "regions-config.json");
+        public static readonly string OCI_DEFAULT_REALM = "OCI_DEFAULT_REALM";
         private static volatile bool HasUsedEnvVar = false;
         private static volatile bool HasUsedConfigFile = false;
         private static volatile bool HasUsedInstanceMetadataService = false;
@@ -129,17 +130,33 @@ namespace Oci.Common
         public static string FormatDefaultRegionEndpoint(Service service, string regionId)
         {
             // Try to get a real region first.
-            Region region = FromRegionId(regionId);
+            Region region = MaybeFromRegionId(regionId);
             if (region != null)
             {
                 return FormatDefaultRegionEndpoint(service, region);
             }
             else
             {
+                string customSecondLevelDomain = Environment.GetEnvironmentVariable(OCI_DEFAULT_REALM);
+                if (!String.IsNullOrWhiteSpace(customSecondLevelDomain))
+                {
+                    // Read a user settable second level domain for the endpoint
+                    logger.Info($"Read the second level domain:{customSecondLevelDomain} from the {OCI_DEFAULT_REALM} environment variable");
+                    return EndpointBuilder.CreateEndpoint(service, regionId, customSecondLevelDomain);
+                }
                 // Else we need to fall back to OC1 SLD.
                 logger.Debug($"Unknown regionId '{regionId}', will assume it's in Realm OC1");
                 return EndpointBuilder.CreateEndpoint(service, regionId, Realm.OC1);
             }
+        }
+
+        /// <summary>Returns the Region object from the canonical public region id.</summary>
+        /// <param name="regionId">The region id.</param>
+        /// <returns>The region object.</returns>
+        /// <exception>Returns null when region id is not found.</exception>
+        public static Region MaybeFromRegionId(string regionId)
+        {
+            return GetRegionAndRegisterIfNeccessary(regionId);
         }
 
         /// <summary>Returns the Region object from the canonical public region id.</summary>

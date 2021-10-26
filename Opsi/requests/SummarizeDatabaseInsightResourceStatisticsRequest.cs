@@ -117,6 +117,20 @@ namespace Oci.OpsiService.Requests
         public System.Collections.Generic.List<string> Id { get; set; }
         
         /// <value>
+        /// Optional list of exadata insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ExadataInsightId { get; set; }
+        
+        /// <value>
+        /// Filter by one or more cdb name.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cdbName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> CdbName { get; set; }
+        
+        /// <value>
         /// Percentile values of daily usage to be used for computing the aggregate resource usage.
         /// 
         /// </value>

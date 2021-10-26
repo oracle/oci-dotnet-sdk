@@ -84,6 +84,16 @@ namespace Oci.OpsiService.Models
         public string DatabaseVersion { get; set; }
         
         /// <value>
+        /// Name of the CDB.Only applies to PDB.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CdbName is required.")]
+        [JsonProperty(PropertyName = "cdbName")]
+        public string CdbName { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>

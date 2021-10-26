@@ -76,5 +76,11 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "usageChangePercent")]
         public System.Double UsageChangePercent { get; set; }
         
+        /// <value>
+        /// Array of instance metrics
+        /// </value>
+        [JsonProperty(PropertyName = "instanceMetrics")]
+        public System.Collections.Generic.List<InstanceMetrics> InstanceMetrics { get; set; }
+        
     }
 }

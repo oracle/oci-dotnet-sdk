@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// An attribute within a key.
+    /// An attribute within a key, the attribute property is being deprecated.
     /// </summary>
     public class KeyAttribute 
     {
@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
+        
+        [JsonProperty(PropertyName = "shapeField")]
+        public ShapeField ShapeField { get; set; }
         
         [JsonProperty(PropertyName = "attribute")]
         public ShapeField Attribute { get; set; }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// A description of work request status.
+    /// A description of the work request status.
     /// </summary>
     public class WorkRequest 
     {
@@ -33,7 +33,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<OperationType> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// Status of the current work request.
         /// </value>
         /// <remarks>
         /// Required

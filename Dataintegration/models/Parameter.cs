@@ -79,6 +79,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "typeName")]
         public string TypeName { get; set; }
         
+        /// <value>
+        /// The param name for which parameter is created for for eg. driver Shape, Operation etc.
+        /// </value>
+        [JsonProperty(PropertyName = "usedFor")]
+        public string UsedFor { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "PARAMETER";
     }

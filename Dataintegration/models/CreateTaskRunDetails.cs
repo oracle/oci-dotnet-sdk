@@ -66,6 +66,38 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "taskScheduleKey")]
         public string TaskScheduleKey { get; set; }
         
+        /// <value>
+        /// Reference Task Run Id to be used for re-run
+        /// </value>
+        [JsonProperty(PropertyName = "refTaskRunId")]
+        public string RefTaskRunId { get; set; }
+                ///
+        /// <value>
+        /// Supported re-run types
+        /// </value>
+        ///
+        public enum ReRunTypeEnum {
+            [EnumMember(Value = "BEGINNING")]
+            Beginning,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "STEP")]
+            Step
+        };
+
+        /// <value>
+        /// Supported re-run types
+        /// </value>
+        [JsonProperty(PropertyName = "reRunType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ReRunTypeEnum> ReRunType { get; set; }
+        
+        /// <value>
+        /// Step Id for running from a certain step.
+        /// </value>
+        [JsonProperty(PropertyName = "stepId")]
+        public string StepId { get; set; }
+        
         [JsonProperty(PropertyName = "registryMetadata")]
         public RegistryMetadata RegistryMetadata { get; set; }
         

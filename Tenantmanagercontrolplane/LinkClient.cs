@@ -66,7 +66,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Terminate the link.
+        /// Starts the link termination workflow.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

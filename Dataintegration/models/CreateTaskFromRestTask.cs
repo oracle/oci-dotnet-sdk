@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The information about the Generic REST task.
+    /// The information about the Generic REST task. The endpoint and cancelEndpoint  properties are deprecated, use the properties executeRestCallConfig, cancelRestCallConfig and pollRestCallConfig for execute, cancel and polling of the calls.
     /// </summary>
     public class CreateTaskFromRestTask : CreateTaskDetails
     {
@@ -28,7 +28,7 @@ namespace Oci.DataintegrationService.Models
         public Expression Endpoint { get; set; }
                 ///
         /// <value>
-        /// The REST method to use.
+        /// The REST method to use. This property is deprecated, use ExecuteRestCallConfig's methodType property instead.
         /// </value>
         ///
         public enum MethodTypeEnum {
@@ -45,37 +45,36 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// The REST method to use.
+        /// The REST method to use. This property is deprecated, use ExecuteRestCallConfig's methodType property instead.
         /// </value>
         [JsonProperty(PropertyName = "methodType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MethodTypeEnum> MethodType { get; set; }
         
-        /// <value>
-        /// The headers for the REST call.
-        /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Object Headers { get; set; }
         
         /// <value>
-        /// JSON data for payload body.
+        /// JSON data for payload body. This property is deprecated, use ExecuteRestCallConfig's payload config param instead.
         /// </value>
         [JsonProperty(PropertyName = "jsonData")]
         public string JsonData { get; set; }
                 ///
         /// <value>
-        /// The invocation type to be used for Generic REST invocation.
+        /// The REST invocation pattern to use. ASYNC_OCI_WORKREQUEST is being deprecated as well as cancelEndpoint/MethodType.
         /// </value>
         ///
         public enum ApiCallModeEnum {
             [EnumMember(Value = "SYNCHRONOUS")]
             Synchronous,
             [EnumMember(Value = "ASYNC_OCI_WORKREQUEST")]
-            AsyncOciWorkrequest
+            AsyncOciWorkrequest,
+            [EnumMember(Value = "ASYNC_GENERIC")]
+            AsyncGeneric
         };
 
         /// <value>
-        /// The invocation type to be used for Generic REST invocation.
+        /// The REST invocation pattern to use. ASYNC_OCI_WORKREQUEST is being deprecated as well as cancelEndpoint/MethodType.
         /// </value>
         [JsonProperty(PropertyName = "apiCallMode")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -107,6 +106,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "cancelMethodType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CancelMethodTypeEnum> CancelMethodType { get; set; }
+        
+        [JsonProperty(PropertyName = "executeRestCallConfig")]
+        public ExecuteRestCallConfig ExecuteRestCallConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "cancelRestCallConfig")]
+        public CancelRestCallConfig CancelRestCallConfig { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "REST_TASK";

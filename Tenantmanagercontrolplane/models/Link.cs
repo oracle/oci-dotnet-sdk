@@ -42,7 +42,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string ParentTenancyId { get; set; }
         
         /// <value>
-        /// OCID of the child tenancy
+        /// OCID of the child tenancy.
         /// </value>
         /// <remarks>
         /// Required

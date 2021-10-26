@@ -55,5 +55,30 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeAccepted")]
+            TimeAccepted
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
     }
 }

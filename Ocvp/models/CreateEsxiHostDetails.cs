@@ -68,6 +68,15 @@ namespace Oci.OcvpService.Models
         public System.Nullable<Sku> NextSku { get; set; }
         
         /// <value>
+        /// The availability domain to create the ESXi host in.
+        /// If keep empty, for AD-specific SDDC, new ESXi host will be created in the same availability domain;
+        /// for multi-AD SDDC, new ESXi host will be auto assigned to the next availability domain following evenly distribution strategy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeAvailabilityDomain")]
+        public string ComputeAvailabilityDomain { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

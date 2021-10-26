@@ -22,6 +22,8 @@ namespace Oci.OpsiService.Models
       Gb,
       [EnumMember(Value = "MBPS")]
       Mbps,
+      [EnumMember(Value = "IOPS")]
+      Iops,
       [EnumMember(Value = "PERCENT")]
       Percent
   }

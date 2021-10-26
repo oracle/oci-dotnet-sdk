@@ -110,35 +110,17 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["deployStageType"].Value<string>();
             switch (discriminator)
             {
-                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT":
-                    obj = new ComputeInstanceGroupBlueGreenTrafficShiftDeployStageExecutionProgress();
-                    break;
-                case "COMPUTE_INSTANCE_GROUP_CANARY_DEPLOYMENT":
-                    obj = new ComputeInstanceGroupCanaryDeployStageExecutionProgress();
+                case "MANUAL_APPROVAL":
+                    obj = new ManualApprovalDeployStageExecutionProgress();
                     break;
                 case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
                     obj = new ComputeInstanceGroupDeployStageExecutionProgress();
                     break;
-                case "LOAD_BALANCER_TRAFFIC_SHIFT":
-                    obj = new LoadBalancerTrafficShiftDeployStageExecutionProgress();
-                    break;
-                case "WAIT":
-                    obj = new WaitDeployStageExecutionProgress();
-                    break;
-                case "COMPUTE_INSTANCE_GROUP_CANARY_TRAFFIC_SHIFT":
-                    obj = new ComputeInstanceGroupCanaryTrafficShiftDeployStageExecutionProgress();
-                    break;
-                case "RUN_VALIDATION_TEST_ON_COMPUTE_INSTANCE":
-                    obj = new RunValidationTestOnComputeInstanceDeployStageExecutionProgress();
-                    break;
-                case "MANUAL_APPROVAL":
-                    obj = new ManualApprovalDeployStageExecutionProgress();
-                    break;
-                case "RUN_DEPLOYMENT_PIPELINE":
-                    obj = new RunPipelineDeployStageExecutionProgress();
-                    break;
                 case "OKE_DEPLOYMENT":
                     obj = new OkeDeployStageExecutionProgress();
+                    break;
+                case "LOAD_BALANCER_TRAFFIC_SHIFT":
+                    obj = new LoadBalancerTrafficShiftDeployStageExecutionProgress();
                     break;
                 case "DEPLOY_FUNCTION":
                     obj = new FunctionDeployStageExecutionProgress();
@@ -146,11 +128,8 @@ namespace Oci.DevopsService.Models
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStageExecutionProgress();
                     break;
-                case "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL":
-                    obj = new ComputeInstanceGroupCanaryApprovalDeployStageExecutionProgress();
-                    break;
-                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT":
-                    obj = new ComputeInstanceGroupBlueGreenDeployStageExecutionProgress();
+                case "WAIT":
+                    obj = new WaitDeployStageExecutionProgress();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

@@ -33,6 +33,8 @@ namespace Oci.DataintegrationService.Models
             TableEntity,
             [EnumMember(Value = "FILE_ENTITY")]
             FileEntity,
+            [EnumMember(Value = "SQL_ENTITY")]
+            SqlEntity,
             [EnumMember(Value = "DATA_STORE_ENTITY")]
             DataStoreEntity
         };
@@ -65,6 +67,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "VIEW_ENTITY":
                     obj = new DataEntityFromViewEntityDetails();
+                    break;
+                case "SQL_ENTITY":
+                    obj = new DataEntityFromSqlEntityDetails();
                     break;
                 case "DATA_STORE_ENTITY":
                     obj = new DataEntityFromDataStoreEntityDetails();

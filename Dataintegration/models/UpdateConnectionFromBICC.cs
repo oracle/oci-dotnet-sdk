@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The details to update an Oracle Database data asset connection.
+    /// The details to update a FUSION_APP BICC connection.
     /// </summary>
     public class UpdateConnectionFromBICC : UpdateConnectionDetails
     {

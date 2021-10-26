@@ -42,9 +42,9 @@ namespace Oci.OcvpService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The availability domain the ESXi hosts are running in.
+        /// The availability domain the ESXi hosts are running in. For Multi-AD SDDC, it is `multi-AD`.
         /// <br/>
-        /// Example: Uocm:PHX-AD-1
+        /// Example: Uocm:PHX-AD-1, multi-AD
         /// </value>
         /// <remarks>
         /// Required

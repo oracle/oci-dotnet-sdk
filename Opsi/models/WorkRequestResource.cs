@@ -62,5 +62,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
         
+        /// <value>
+        /// Additional information that helps to explain the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
     }
 }

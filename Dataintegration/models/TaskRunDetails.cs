@@ -156,6 +156,38 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         
+        /// <value>
+        /// Reference Task Run Id to be used for re-run
+        /// </value>
+        [JsonProperty(PropertyName = "refTaskRunId")]
+        public string RefTaskRunId { get; set; }
+                ///
+        /// <value>
+        /// Supported re-run types
+        /// </value>
+        ///
+        public enum ReRunTypeEnum {
+            [EnumMember(Value = "BEGINNING")]
+            Beginning,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "STEP")]
+            Step
+        };
+
+        /// <value>
+        /// Supported re-run types
+        /// </value>
+        [JsonProperty(PropertyName = "reRunType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ReRunTypeEnum> ReRunType { get; set; }
+        
+        /// <value>
+        /// Step Id for running from a certain step.
+        /// </value>
+        [JsonProperty(PropertyName = "stepId")]
+        public string StepId { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public ObjectMetadata Metadata { get; set; }
         

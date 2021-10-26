@@ -220,6 +220,24 @@ namespace Oci.Common
             }
         }
 
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void testCustomSecondLevelDomain()
+        {
+            Environment.SetEnvironmentVariable(Region.OCI_DEFAULT_REALM, "foobar.com");
+            Service service = new Service
+            {
+                ServiceName = "AUDIT",
+                ServiceEndpointPrefix = "audit",
+                ServiceEndpointTemplate = "https://audit.{region}.{secondLevelDomain}"
+            };
+            const string expectedEndpoint = "https://audit.xyz.foobar.com";
+            Assert.Equal(Region.FormatDefaultRegionEndpoint(service, "xyz"), expectedEndpoint);
+            Assert.Throws<ArgumentNullException>(() => Region.FormatDefaultRegionEndpoint(service, ""));
+            Assert.Throws<ArgumentNullException>(() => Region.FormatDefaultRegionEndpoint(null, "xyz"));
+        }
+
         private bool AreRegionsSame(Region r1, Region r2)
         {
             if (!r1.RegionId.Equals(r2.RegionId))

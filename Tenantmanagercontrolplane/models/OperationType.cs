@@ -22,6 +22,8 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       AcceptRecipientInvitation,
       [EnumMember(Value = "CANCEL_SENDER_INVITATION")]
       CancelSenderInvitation,
+      [EnumMember(Value = "COMPLETE_ORDER_ACTIVATION")]
+      CompleteOrderActivation,
       [EnumMember(Value = "ACTIVATE_ORDER_EXISTING_TENANCY")]
       ActivateOrderExistingTenancy,
       [EnumMember(Value = "REGISTER_DOMAIN")]
@@ -29,6 +31,12 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       [EnumMember(Value = "RELEASE_DOMAIN")]
       ReleaseDomain,
       [EnumMember(Value = "CREATE_CHILD_TENANCY")]
-      CreateChildTenancy
+      CreateChildTenancy,
+      [EnumMember(Value = "ASSIGN_DEFAULT_SUBSCRIPTION")]
+      AssignDefaultSubscription,
+      [EnumMember(Value = "MANUAL_LINK_CREATION")]
+      ManualLinkCreation,
+      [EnumMember(Value = "TERMINATE_ORGANIZATION_TENANCY")]
+      TerminateOrganizationTenancy
   }
 }

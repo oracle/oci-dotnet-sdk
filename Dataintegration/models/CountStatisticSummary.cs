@@ -39,7 +39,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "TASK")]
             Task,
             [EnumMember(Value = "APPLICATION")]
-            Application
+            Application,
+            [EnumMember(Value = "FUNCTION_LIBRARY")]
+            FunctionLibrary,
+            [EnumMember(Value = "USER_DEFINED_FUNCTION")]
+            UserDefinedFunction
         };
 
         /// <value>

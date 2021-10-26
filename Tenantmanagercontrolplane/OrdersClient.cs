@@ -60,7 +60,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Triggers an order activation workflow on behalf of the tenant given by compartment id in the body.
+        /// Triggers an order activation workflow on behalf of the tenant, given by compartment ID in the body.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

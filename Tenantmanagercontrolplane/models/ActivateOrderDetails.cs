@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// The parameters for activating an order subscription in a tenancy
+    /// The parameters for activating an order subscription in a tenancy.
     /// </summary>
     public class ActivateOrderDetails 
     {
         
         /// <value>
-        /// Tenant Id to activate the Order.
+        /// Tenant ID to activate the order.
         /// </value>
         /// <remarks>
         /// Required
