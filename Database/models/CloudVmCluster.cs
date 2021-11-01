@@ -389,5 +389,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "zoneId")]
         public string ZoneId { get; set; }
         
+        /// <value>
+        /// The TCP Single Client Access Name (SCAN) port. The default port is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcp")]
+        public System.Nullable<int> ScanListenerPortTcp { get; set; }
+        
+        /// <value>
+        /// The TCPS Single Client Access Name (SCAN) port. The default port is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
+        public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
+        
     }
 }

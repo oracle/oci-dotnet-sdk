@@ -42,7 +42,8 @@ namespace Oci.IdentityService
             service = new Service
             {
                 ServiceName = "IDENTITY",
-                ServiceEndpointPrefix = "identity"
+                ServiceEndpointPrefix = "identity",
+                ServiceEndpointTemplate = "https://identity.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -62,6 +63,62 @@ namespace Oci.IdentityService
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
             Paginators = new IdentityPaginators(this);
             Waiters = new IdentityWaiters(this);
+        }
+
+        /// <summary>
+        /// If the domain&#39;s {@code lifecycleState} is INACTIVE,
+        /// 1. Set the {@code lifecycleDetails} to ACTIVATING and asynchronously starts enabling
+        ///    the domain and return 202 ACCEPTED.
+        ///     1.1 Sets the domain status to ENABLED and set specified domain&#39;s
+        ///         {@code lifecycleState} to ACTIVE and set the {@code lifecycleDetails} to null.
+        /// &lt;br/&gt;
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status. Deactivate a domain can be done using HTTP POST
+        /// /domains/{domainId}/actions/deactivate.
+        /// &lt;br/&gt;
+        /// - If the domain&#39;s {@code lifecycleState} is ACTIVE, returns 202 ACCEPTED with no action
+        ///   taken on service side.
+        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT or domain&#39;s {@code lifecycleState} is not INACTIVE,
+        ///   returns 400 BAD REQUEST.
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If the authenticated user is part of the domain to be activated, returns 400 BAD REQUEST
+        /// - If error occurs while activating domain, returns 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ActivateDomain.cs.html">here</a> to see an example of how to use ActivateDomain API.</example>
+        public async Task<ActivateDomainResponse> ActivateDomain(ActivateDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called activateDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}/actions/activate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ActivateDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ActivateDomain failed with error: {e.Message}");
+                throw;
+            }
         }
 
         /// <summary>
@@ -450,6 +507,111 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Change the containing compartment for a domain.
+        /// &lt;br/&gt;
+        /// This is an asynchronous call where the Domain&#39;s compartment is changed and is updated with the new compartment information.
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// The compartment change is complete when accessed via domain URL and
+        /// also returns new compartment OCID.
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
+        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
+        /// - If error occurs while changing compartment for domain, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ChangeDomainCompartment.cs.html">here</a> to see an example of how to use ChangeDomainCompartment API.</example>
+        public async Task<ChangeDomainCompartmentResponse> ChangeDomainCompartment(ChangeDomainCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeDomainCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeDomainCompartmentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeDomainCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// If the domain&#39;s {@code lifecycleState} is ACTIVE, validates the requested {@code licenseType} update
+        /// is allowed and
+        /// 1. Set the {@code lifecycleDetails} to UPDATING
+        /// 2. Asynchronously starts updating the domain and return 202 ACCEPTED.
+        ///     2.1 Successfully updates specified domain&#39;s {@code licenseType}.
+        /// 3. On completion set the {@code lifecycleDetails} to null.
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// - If license type update is successful, return 202 ACCEPTED
+        /// - If requested {@code licenseType} validation fails, returns 400 Bad request.
+        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
+        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND
+        /// - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ChangeDomainLicenseType.cs.html">here</a> to see an example of how to use ChangeDomainLicenseType API.</example>
+        public async Task<ChangeDomainLicenseTypeResponse> ChangeDomainLicenseType(ChangeDomainLicenseTypeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called changeDomainLicenseType");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}/actions/changeLicenseType".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ChangeDomainLicenseTypeResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeDomainLicenseType failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Moves the specified tag namespace to the specified compartment within the same tenancy.
         /// &lt;br/&gt;
         /// To move the tag namespace, you must have the manage tag-namespaces permission on both compartments.
@@ -652,6 +814,61 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Creates a new domain in the tenancy with domain home in {@code homeRegion}. This is an asynchronous call - where, at start,
+        /// {@code lifecycleState} of this domain is set to CREATING and {@code lifecycleDetails} to UPDATING. On domain creation completion
+        /// this Domain&#39;s {@code lifecycleState} will be set to ACTIVE and {@code lifecycleDetails} to null.
+        /// &lt;br/&gt;
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// After creating a &#x60;Domain&#x60;, make sure its &#x60;lifecycleState&#x60; changes from CREATING to ACTIVE
+        /// before using it.
+        /// If the domain&#39;s {@code displayName} already exists, returns 400 BAD REQUEST.
+        /// If any one of admin related fields are provided and one of the following 3 fields
+        /// - {@code adminEmail}, {@code adminLastName} and {@code adminUserName} - is not provided,
+        /// returns 400 BAD REQUEST.
+        /// - If {@code isNotificationBypassed} is NOT provided when admin information is provided,
+        /// returns 400 BAD REQUEST.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/CreateDomain.cs.html">here</a> to see an example of how to use CreateDomain API.</example>
+        public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateDomain failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a new dynamic group in your tenancy.
         /// &lt;br/&gt;
         /// You must specify your tenancy&#39;s OCID as the compartment ID in the request object (remember that the tenancy
@@ -769,6 +986,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Creates a new identity provider in your tenancy. For more information, see
         /// [Identity Providers and Federation](https://docs.cloud.oracle.com/Content/Identity/Concepts/federation.htm).
         /// &lt;br/&gt;
@@ -826,6 +1045,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Creates a single mapping between an IdP group and an IAM Service
         /// {@link Group}.
         /// 
@@ -1482,6 +1703,63 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// If the domain&#39;s {@code lifecycleState} is ACTIVE and no active Apps are present in domain,
+        /// 1. Set the {@code lifecycleDetails} to DEACTIVATING and asynchronously starts disabling
+        ///    the domain and return 202 ACCEPTED.
+        ///     1.1 Sets the domain status to DISABLED and set specified domain&#39;s
+        ///         {@code lifecycleState} to INACTIVE and set the {@code lifecycleDetails} to null.
+        /// &lt;br/&gt;
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status. Activate a domain can be done using HTTP POST
+        /// /domains/{domainId}/actions/activate.
+        /// &lt;br/&gt;
+        /// - If the domain&#39;s {@code lifecycleState} is INACTIVE, returns 202 ACCEPTED with no action
+        ///   taken on service side.
+        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT or domain&#39;s {@code lifecycleState}
+        ///   is not ACTIVE, returns 400 BAD REQUEST.
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If any active Apps in domain, returns 400 BAD REQUEST.
+        /// - If the authenticated user is part of the domain to be activated, returns 400 BAD REQUEST
+        /// - If error occurs while deactivating domain, returns 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/DeactivateDomain.cs.html">here</a> to see an example of how to use DeactivateDomain API.</example>
+        public async Task<DeactivateDomainResponse> DeactivateDomain(DeactivateDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deactivateDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}/actions/deactivate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeactivateDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeactivateDomain failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes the specified API signing key for the specified user.
         /// &lt;br/&gt;
         /// Every user has permission to use this operation to delete a key for *their own user ID*. An
@@ -1647,6 +1925,62 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Soft Deletes a domain.
+        /// &lt;br/&gt;
+        /// This is an asynchronous API, where, if the domain&#39;s {@code lifecycleState} is INACTIVE and
+        /// no active Apps are present in underlying stripe,
+        ///   1. Sets the specified domain&#39;s {@code lifecycleState} to DELETING.
+        ///   2. Domains marked as DELETING will be cleaned up by a periodic task unless customer request it to be undo via ticket.
+        ///   3. Work request is created and returned as opc-work-request-id along with 202 ACCEPTED.
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// - If the domain&#39;s {@code lifecycleState} is DELETING, returns 202 Accepted as a deletion
+        ///   is already in progress for this domain.
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT, returns 400 BAD REQUEST.
+        /// - If any active Apps in domain, returns 400 BAD REQUEST.
+        /// - If the authenticated user is part of the domain to be deleted, returns 400 BAD REQUEST.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/DeleteDomain.cs.html">here</a> to see an example of how to use DeleteDomain API.</example>
+        public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteDomain failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes the specified dynamic group.
         /// 
         /// </summary>
@@ -1727,6 +2061,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Deletes the specified identity provider. The identity provider must not have
         /// any group mappings (see {@link IdpGroupMapping}).
         /// 
@@ -1768,7 +2104,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Deletes the specified group mapping.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2233,6 +2572,58 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Replicate domain to a new region. This is an asynchronous call - where, at start,
+        /// {@code state} of this domain in replica region is set to ENABLING_REPLICATION.
+        /// On domain replication completion the {@code state} will be set to REPLICATION_ENABLED.
+        /// &lt;br/&gt;
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// If the replica region&#39;s {@code state} is already ENABLING_REPLICATION or REPLICATION_ENABLED,
+        /// returns 409 CONFLICT.
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If home region is same as replication region, return 400 BAD REQUEST.
+        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/EnableReplicationToRegion.cs.html">here</a> to see an example of how to use EnableReplicationToRegion API.</example>
+        public async Task<EnableReplicationToRegionResponse> EnableReplicationToRegion(EnableReplicationToRegionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called enableReplicationToRegion");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}/actions/enableReplicationToRegion".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableReplicationToRegionResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableReplicationToRegion failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Generate seed for the MFA TOTP device.
         /// 
         /// </summary>
@@ -2361,6 +2752,49 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Get the specified domain&#39;s information.
+        /// &lt;br/&gt;
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/GetDomain.cs.html">here</a> to see an example of how to use GetDomain API.</example>
+        public async Task<GetDomainResponse> GetDomain(GetDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetDomain failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets the specified dynamic group&#39;s information.
         /// 
         /// </summary>
@@ -2445,7 +2879,54 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Gets details on a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+        /// iam work request id that can be provided in this API to track the current status of the operation.
+        /// &lt;br/&gt;
+        /// - If workrequest exists, returns 202 ACCEPTED
+        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/GetIamWorkRequest.cs.html">here</a> to see an example of how to use GetIamWorkRequest API.</example>
+        public async Task<GetIamWorkRequestResponse> GetIamWorkRequest(GetIamWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getIamWorkRequest");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/iamWorkRequests/{iamWorkRequestId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetIamWorkRequestResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetIamWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Gets the specified identity provider&#39;s information.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2484,7 +2965,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Gets the specified group mapping.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2762,7 +3246,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets details on a specified work request. The workRequestID is returned in the opc-workrequest-id header
-        /// for any asynchronous operation in the Identity and Access Management service.
+        /// for any asynchronous operation in tagging service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2961,7 +3445,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Gets details on a specified work request. The workRequestID is returned in the opc-workrequest-id header
-        /// for any asynchronous operation in the Identity and Access Management service.
+        /// for any asynchronous operation in the compartment service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2996,6 +3480,52 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"GetWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List the allowed domain license types supported by OCI
+        /// If {@code currentLicenseTypeName} provided, returns allowed license types a domain with the specified license type name can migrate to.
+        /// If {@code name} is provided, it filters and returns resources that match the given license type name.
+        /// Otherwise, returns all valid license types that are currently supported.
+        /// &lt;br/&gt;
+        /// - If license type details are retrieved sucessfully, return 202 ACCEPTED.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListAllowedDomainLicenseTypes.cs.html">here</a> to see an example of how to use ListAllowedDomainLicenseTypes API.</example>
+        public async Task<ListAllowedDomainLicenseTypesResponse> ListAllowedDomainLicenseTypes(ListAllowedDomainLicenseTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listAllowedDomainLicenseTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/allowedDomainLicenseTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListAllowedDomainLicenseTypesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAllowedDomainLicenseTypes failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3354,6 +3884,47 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// List all domains that are homed or have a replica region in current region.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListDomains.cs.html">here</a> to see an example of how to use ListDomains API.</example>
+        public async Task<ListDomainsResponse> ListDomains(ListDomainsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listDomains");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListDomainsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDomains failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists the dynamic groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
         /// See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#five).
@@ -3480,7 +4051,141 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Gets error details for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+        /// iam work request id that can be provided in this API to track the current status of the operation.
+        /// &lt;br/&gt;
+        /// - If workrequest exists, returns 202 ACCEPTED
+        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListIamWorkRequestErrors.cs.html">here</a> to see an example of how to use ListIamWorkRequestErrors API.</example>
+        public async Task<ListIamWorkRequestErrorsResponse> ListIamWorkRequestErrors(ListIamWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listIamWorkRequestErrors");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/iamWorkRequests/{iamWorkRequestId}/errors".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListIamWorkRequestErrorsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListIamWorkRequestErrors failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets logs for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+        /// iam work request id that can be provided in this API to track the current status of the operation.
+        /// &lt;br/&gt;
+        /// - If workrequest exists, returns 202 ACCEPTED
+        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListIamWorkRequestLogs.cs.html">here</a> to see an example of how to use ListIamWorkRequestLogs API.</example>
+        public async Task<ListIamWorkRequestLogsResponse> ListIamWorkRequestLogs(ListIamWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listIamWorkRequestLogs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/iamWorkRequests/{iamWorkRequestId}/logs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListIamWorkRequestLogsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListIamWorkRequestLogs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List the IAM work requests in compartment
+        /// &lt;br/&gt;
+        /// - If IAM workrequest  details are retrieved sucessfully, return 202 ACCEPTED.
+        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListIamWorkRequests.cs.html">here</a> to see an example of how to use ListIamWorkRequests API.</example>
+        public async Task<ListIamWorkRequestsResponse> ListIamWorkRequests(ListIamWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listIamWorkRequests");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/iamWorkRequests".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListIamWorkRequestsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListIamWorkRequests failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Lists the identity provider groups.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3519,6 +4224,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Lists all the identity providers in your tenancy. You must specify the identity provider type (e.g., &#x60;SAML2&#x60; for
         /// identity providers using the SAML2.0 protocol). You must specify your tenancy&#39;s OCID as the value for the
         /// compartment ID (remember that the tenancy is simply the root compartment).
@@ -3562,6 +4269,8 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Lists the group mappings for the specified identity provider.
         /// 
         /// </summary>
@@ -4627,6 +5336,57 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Updates domain information and associated stripe. This is an asynchronous call where
+        /// the associated stripe and domain are updated.
+        /// &lt;br/&gt;
+        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
+        /// the async operation&#39;s status.
+        /// &lt;br/&gt;
+        /// - If the {@code displayName} is not unique within the tenancy, returns 400 BAD REQUEST.
+        /// - If any field other than {@code description} is requested to be updated for DEFAULT domain,
+        /// returns 400 BAD REQUEST.
+        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
+        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
+        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/UpdateDomain.cs.html">here</a> to see an example of how to use UpdateDomain API.</example>
+        public async Task<UpdateDomainResponse> UpdateDomain(UpdateDomainRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateDomain");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/domains/{domainId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateDomainResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateDomain failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the specified dynamic group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4705,7 +5465,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Updates the specified identity provider.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4744,7 +5507,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/Content/Identity/Reference/deprecatediamapis.htm).
+        /// &lt;br/&gt;
         /// Updates the specified group mapping.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
