@@ -187,6 +187,18 @@ namespace Oci.DatabaseService.Models
         public string TimeZone { get; set; }
         
         /// <value>
+        /// The TCP Single Client Access Name (SCAN) port. The default port is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcp")]
+        public System.Nullable<int> ScanListenerPortTcp { get; set; }
+        
+        /// <value>
+        /// The TCPS Single Client Access Name (SCAN) port. The default port is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
+        public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
+        
+        /// <value>
         /// A list of the [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the network security groups (NSGs) that this resource belongs to. Setting this to an empty array after the list is created removes the resource from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
         /// - Autonomous Databases with private access require at least 1 Network Security Group (NSG). The nsgIds array cannot be empty.

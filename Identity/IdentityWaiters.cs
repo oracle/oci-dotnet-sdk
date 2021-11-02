@@ -60,6 +60,33 @@ namespace Oci.IdentityService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDomainRequest, GetDomainResponse> ForDomain(GetDomainRequest request, params Domain.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDomain(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDomainRequest, GetDomainResponse> ForDomain(GetDomainRequest request, WaiterConfiguration config, params Domain.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDomainRequest, GetDomainResponse>(
+                request,
+                request => client.GetDomain(request),
+                response => targetStates.Contains(response.Domain.LifecycleState.Value)
+            );
+            return new Waiter<GetDomainRequest, GetDomainResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDynamicGroupRequest, GetDynamicGroupResponse> ForDynamicGroup(GetDynamicGroupRequest request, params DynamicGroup.LifecycleStateEnum[] targetStates)
         {
             return this.ForDynamicGroup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -109,6 +136,33 @@ namespace Oci.IdentityService
                 targetStates.Contains(Group.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetGroupRequest, GetGroupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIamWorkRequestRequest, GetIamWorkRequestResponse> ForIamWorkRequest(GetIamWorkRequestRequest request, params IamWorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForIamWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIamWorkRequestRequest, GetIamWorkRequestResponse> ForIamWorkRequest(GetIamWorkRequestRequest request, WaiterConfiguration config, params IamWorkRequest.StatusEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetIamWorkRequestRequest, GetIamWorkRequestResponse>(
+                request,
+                request => client.GetIamWorkRequest(request),
+                response => targetStates.Contains(response.IamWorkRequest.Status.Value)
+            );
+            return new Waiter<GetIamWorkRequestRequest, GetIamWorkRequestResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
