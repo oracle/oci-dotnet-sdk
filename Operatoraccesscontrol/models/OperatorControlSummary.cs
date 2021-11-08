@@ -54,6 +54,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<bool> IsFullyPreApproved { get; set; }
         
         /// <value>
+        /// resourceType for which the OperatorControl is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
+        
+        /// <value>
         /// Time when the operator control was created, expressed in [RFC 3339] (https://tools.ietf.org/html/rfc3339) timestamp format. Example: '2020-05-22T21:10:29.600Z'
         /// </value>
         [JsonProperty(PropertyName = "timeOfCreation")]

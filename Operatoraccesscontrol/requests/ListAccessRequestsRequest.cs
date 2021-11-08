@@ -36,10 +36,34 @@ namespace Oci.OperatoraccesscontrolService.Requests
         public string ResourceName { get; set; }
         
         /// <value>
+        /// A filter to return only lists of resources that match the entire given service type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources whose lifecycleState matches the given AccessRequest lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<AccessRequestLifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Query start time in UTC in ISO 8601 format(inclusive).
+        /// Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ).
+        /// timeIntervalStart and timeIntervalEnd parameters are used together.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
+        public System.Nullable<System.DateTime> TimeStart { get; set; }
+        
+        /// <value>
+        /// Query start time in UTC in ISO 8601 format(inclusive).
+        /// Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ).
+        /// timeIntervalStart and timeIntervalEnd parameters are used together.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
+        public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

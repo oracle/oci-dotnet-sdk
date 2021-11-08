@@ -24,6 +24,10 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// <value>
         /// Name of the operator control.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OperatorControlName is required.")]
         [JsonProperty(PropertyName = "operatorControlName")]
         public string OperatorControlName { get; set; }
         
@@ -42,6 +46,10 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// <value>
         /// List of user groups who can approve an access request associated with a target resource under the governance of this operator control.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ApproverGroupsList is required.")]
         [JsonProperty(PropertyName = "approverGroupsList")]
         public System.Collections.Generic.List<string> ApproverGroupsList { get; set; }
         
@@ -58,6 +66,10 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// will be auto-approved.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsFullyPreApproved is required.")]
         [JsonProperty(PropertyName = "isFullyPreApproved")]
         public System.Nullable<bool> IsFullyPreApproved { get; set; }
         

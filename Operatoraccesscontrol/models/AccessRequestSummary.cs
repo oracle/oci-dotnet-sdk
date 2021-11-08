@@ -72,6 +72,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ResourceName { get; set; }
         
         /// <value>
+        /// resourceType for which the AccessRequest is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
+        
+        /// <value>
         /// The current state of the AccessRequest.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -89,6 +96,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfModification")]
         public System.Nullable<System.DateTime> TimeOfModification { get; set; }
+        
+        /// <value>
+        /// The time when access request is scheduled to be approved in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.Example: '2020-05-22T21:10:29.600Z'
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfUserCreation")]
+        public System.Nullable<System.DateTime> TimeOfUserCreation { get; set; }
         
         /// <value>
         /// Duration in hours for which access is sought on the target resource.

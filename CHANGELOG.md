@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 29.0.0 - 2021-11-09
+### Added
+ - Support for drill down metadata in the Management Dashboard service
+ - Support for operator access control on dedicated autonomous databases in the Operator Access Control service
+
+### Breaking Changes
+ - The `ResourceType`, and `IsEnforcedAlways` fields changed from optional to required in the CreateOperatorControlAssignmentDetails model in the Operatoraccesscontrol service
+ - The `ApproverGroupsList` field changed from optional to required in the CreateOperatorControlDetails model in the Operatoraccesscontrol service
+ - The `IsFullyPreApproved`, and `requiredIsEnforcedAlways` fields changed from optional to required in the UpdateOperatorControlAssignmentDetails model in the Operatoraccesscontrol service
+ - The `OperatorControlName`, `ApproverGroupsList`, and `IsFullyPreApproved` fields changed from optional to required in the UpdateOperatorControlDetails model in the Operatoraccesscontrol service
+ - The `ResourceType` type changed from `string` to `System.Nullable<ResourceTypes>` in the OperatorControlAssignmentSummary model in the Operatoraccesscontrol service
+
+### Fixed
+ - Refreshing Instance Principals tokens after they expire
+
 ## 28.1.0 - 2021-11-02
 ### Added
 - Support for the Database Tools service

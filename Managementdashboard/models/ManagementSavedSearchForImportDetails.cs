@@ -202,5 +202,11 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "parametersConfig")]
         public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
         
+        /// <value>
+        /// Drill-down configuration to define the destination of a drill-down action.
+        /// </value>
+        [JsonProperty(PropertyName = "drilldownConfig")]
+        public System.Collections.Generic.List<System.Object> DrilldownConfig { get; set; }
+        
     }
 }

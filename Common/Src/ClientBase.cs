@@ -4,8 +4,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using Oci.Common.Auth;
 using Oci.Common.Http;
 using Oci.Common.Http.Signing;
@@ -16,11 +14,7 @@ namespace Oci.Common
     public abstract class ClientBase : IDisposable
     {
         bool disposed = false;
-        private readonly Dictionary<SigningStrategy, RequestSigner> availableRequestSigners;
-        private readonly RequestSigner requestSigner;
-
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        protected RestClientHandler clientHandler;
         protected readonly RestClient restClient;
         protected Service service;
         protected string userAgent = null;
@@ -52,10 +46,7 @@ namespace Oci.Common
         public ClientBase(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner)
         {
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
-            this.clientHandler = new RestClientHandler(RequestReceptor);
-            this.restClient = new RestClient(clientHandler, clientConfigurationToUse);
-            this.requestSigner = requestSigner;
-            this.availableRequestSigners = GetAvailableRequestSigners(authProvider);
+            this.restClient = new RestClient(authProvider, clientConfigurationToUse, requestSigner);
             this.restClient.SetDefaultUserAgent(GetUserAgent(clientConfigurationToUse.ClientUserAgent));
         }
 
@@ -101,28 +92,6 @@ namespace Oci.Common
                 userAgent = HttpUtils.BuildUserAgent(clientUserAgent);
             }
             return userAgent;
-        }
-
-        internal void RequestReceptor(HttpRequestMessage requestMessage)
-        {
-            RequestSigner requestSignerToUse = requestSigner;
-            if (requestMessage.Properties.TryGetValue(SigningStrategy.SIGNING_STRATEGY_PROPERTY_NAME_KEY, out var signingStrategy))
-            {
-                requestSignerToUse = availableRequestSigners.TryGetValue((SigningStrategy)signingStrategy, out var desiredSigner) ?
-                    desiredSigner : requestSignerToUse;
-            }
-
-            requestSignerToUse.SignRequest(requestMessage);
-        }
-
-        private Dictionary<SigningStrategy, RequestSigner> GetAvailableRequestSigners(IBasicAuthenticationDetailsProvider authProvider)
-        {
-            var signers = new Dictionary<SigningStrategy, RequestSigner>();
-            foreach (SigningStrategy strategy in SigningStrategy.Values)
-            {
-                signers.Add(strategy, new DefaultRequestSigner(authProvider, strategy));
-            }
-            return signers;
         }
     }
 }

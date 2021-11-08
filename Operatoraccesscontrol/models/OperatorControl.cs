@@ -79,11 +79,25 @@ namespace Oci.OperatoraccesscontrolService.Models
         
         /// <value>
         /// Whether all the operator actions have been pre-approved. If yes, all access requests associated with a resource governed by this operator control 
-        /// will be auto-approved.      
+        /// will be auto-approved.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isFullyPreApproved")]
         public System.Nullable<bool> IsFullyPreApproved { get; set; }
+        
+        /// <value>
+        /// List of emailId.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "emailIdList")]
+        public System.Collections.Generic.List<string> EmailIdList { get; set; }
+        
+        /// <value>
+        /// resourceType for which the OperatorControl is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
         /// System message that would be displayed to the operator users on accessing the target resource under the governance of this operator control.

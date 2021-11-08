@@ -42,6 +42,12 @@ namespace Oci.OperatoraccesscontrolService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only lists of resources that match the entire given service type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

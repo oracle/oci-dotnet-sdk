@@ -89,6 +89,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// resourceType for which the AccessRequest is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
+        
+        /// <value>
         /// List of operator actions for which approval is sought by the operator user.
         /// </value>
         [JsonProperty(PropertyName = "actionRequestsList")]
@@ -151,6 +158,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfModification")]
         public System.Nullable<System.DateTime> TimeOfModification { get; set; }
+        
+        /// <value>
+        /// The time when access request is scheduled to be approved in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.Example: '2020-05-22T21:10:29.600Z'
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfUserCreation")]
+        public System.Nullable<System.DateTime> TimeOfUserCreation { get; set; }
         
         /// <value>
         /// The OCID of the user that last modified the access request.

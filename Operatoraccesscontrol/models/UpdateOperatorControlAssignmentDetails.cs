@@ -36,6 +36,10 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// <value>
         /// If true, then the target resource is always governed by the operator control. Otherwise governance is time-based as specified by timeAssignmentTo and timeAssignmentFrom.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnforcedAlways is required.")]
         [JsonProperty(PropertyName = "isEnforcedAlways")]
         public System.Nullable<bool> IsEnforcedAlways { get; set; }
         
@@ -44,6 +48,36 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
+        
+        /// <value>
+        /// If set, then the audit logs will be forwarded to the relevant remote logging server
+        /// </value>
+        [JsonProperty(PropertyName = "isLogForwarded")]
+        public System.Nullable<bool> IsLogForwarded { get; set; }
+        
+        /// <value>
+        /// The address of the remote syslog server where the audit logs will be forwarded to. Address in host or IP format.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerAddress")]
+        public string RemoteSyslogServerAddress { get; set; }
+        
+        /// <value>
+        /// The listening port of the remote syslog server. The port range is 0 - 65535. Only TCP supported.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerPort")]
+        public System.Nullable<int> RemoteSyslogServerPort { get; set; }
+        
+        /// <value>
+        /// The CA certificate of the remote syslog server. Identity of the remote syslog server will be asserted based on this certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerCACert")]
+        public string RemoteSyslogServerCACert { get; set; }
+        
+        /// <value>
+        /// The boolean if true would autoApprove during maintenance.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoApproveDuringMaintenance")]
+        public System.Nullable<bool> IsAutoApproveDuringMaintenance { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

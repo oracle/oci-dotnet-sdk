@@ -22,7 +22,13 @@ namespace Oci.OperatoraccesscontrolService.Models
       Applied,
       [EnumMember(Value = "APPLYFAILED")]
       Applyfailed,
+      [EnumMember(Value = "UPDATING")]
+      Updating,
+      [EnumMember(Value = "DELETING")]
+      Deleting,
       [EnumMember(Value = "DELETED")]
-      Deleted
+      Deleted,
+      [EnumMember(Value = "DELETIONFAILED")]
+      Deletionfailed
   }
 }

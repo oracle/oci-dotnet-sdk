@@ -218,6 +218,12 @@ namespace Oci.ManagementdashboardService.Models
         public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
         
         /// <value>
+        /// Drill-down configuration to define the destination of a drill-down action.
+        /// </value>
+        [JsonProperty(PropertyName = "drilldownConfig")]
+        public System.Collections.Generic.List<System.Object> DrilldownConfig { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
