@@ -52,12 +52,6 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Type of the target resource being governed by the operator control.
-        /// </value>
-        [JsonProperty(PropertyName = "resourceType")]
-        public string ResourceType { get; set; }
-        
-        /// <value>
         /// The OCID of the compartment that contains the operator control assignment.
         /// </value>
         /// <remarks>
@@ -66,6 +60,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// resourceType for which the OperatorControlAssignment is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
         /// The time at which the target resource will be brought under the governance of the operator control in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format. Example: '2020-05-22T21:10:29.600Z'
@@ -90,6 +91,36 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfAssignment")]
         public System.Nullable<System.DateTime> TimeOfAssignment { get; set; }
+        
+        /// <value>
+        /// The code identifying the error occurred during Assignment operation.
+        /// </value>
+        [JsonProperty(PropertyName = "errorCode")]
+        public System.Nullable<int> ErrorCode { get; set; }
+        
+        /// <value>
+        /// The message describing the error occurred during Assignment operation.
+        /// </value>
+        [JsonProperty(PropertyName = "errorMessage")]
+        public string ErrorMessage { get; set; }
+        
+        /// <value>
+        /// If set, then the audit logs are being forwarded to the relevant remote logging server
+        /// </value>
+        [JsonProperty(PropertyName = "isLogForwarded")]
+        public System.Nullable<bool> IsLogForwarded { get; set; }
+        
+        /// <value>
+        /// The address of the remote syslog server where the audit logs are being forwarded to. Address in host or IP format.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerAddress")]
+        public string RemoteSyslogServerAddress { get; set; }
+        
+        /// <value>
+        /// The listening port of the remote syslog server. The port range is 0 - 65535.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerPort")]
+        public System.Nullable<int> RemoteSyslogServerPort { get; set; }
         
         /// <value>
         /// The current lifcycle state of the OperatorControl.

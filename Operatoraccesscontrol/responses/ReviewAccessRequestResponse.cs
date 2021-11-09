@@ -12,7 +12,7 @@ using Oci.OperatoraccesscontrolService.Models;
 
 namespace Oci.OperatoraccesscontrolService.Responses
 {
-    public class CreateOperatorControlAssignmentResponse : Oci.Common.IOciResponse
+    public class ReviewAccessRequestResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
@@ -24,14 +24,6 @@ namespace Oci.OperatoraccesscontrolService.Responses
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the asynchronous request. You can use this to query status of the asynchronous operation.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
-        public string OpcWorkRequestId { get; set; }
-
-
-        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 
@@ -40,10 +32,10 @@ namespace Oci.OperatoraccesscontrolService.Responses
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned OperatorControlAssignment instance.
+        /// The returned AccessRequest instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public OperatorControlAssignment OperatorControlAssignment { get; set; }
+        public AccessRequest AccessRequest { get; set; }
 
     }
 }

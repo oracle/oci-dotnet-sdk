@@ -64,13 +64,6 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ResourceName { get; set; }
         
         /// <value>
-        /// Type of the target resource.
-        /// </value>
-        [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ResourceTypes> ResourceType { get; set; }
-        
-        /// <value>
         /// The OCID of the compartment that contains the target resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceCompartmentId")]
@@ -81,6 +74,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// resourceType for which the OperatorControlAssignment is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
         /// The time at which the target resource will be brought under the governance of the operator control expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format. 
@@ -144,6 +144,48 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "detachmentDescription")]
         public string DetachmentDescription { get; set; }
+        
+        /// <value>
+        /// If set indicates that the audit logs are being forwarded to the relevant remote logging server
+        /// </value>
+        [JsonProperty(PropertyName = "isLogForwarded")]
+        public System.Nullable<bool> IsLogForwarded { get; set; }
+        
+        /// <value>
+        /// The address of the remote syslog server where the audit logs are being forwarded to. Address in host or IP format.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerAddress")]
+        public string RemoteSyslogServerAddress { get; set; }
+        
+        /// <value>
+        /// The listening port of the remote syslog server. The port range is 0 - 65535. Only TCP supported.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerPort")]
+        public System.Nullable<int> RemoteSyslogServerPort { get; set; }
+        
+        /// <value>
+        /// The CA certificate of the remote syslog server.
+        /// </value>
+        [JsonProperty(PropertyName = "remoteSyslogServerCACert")]
+        public string RemoteSyslogServerCACert { get; set; }
+        
+        /// <value>
+        /// The boolean if true would autoApprove during maintenance.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoApproveDuringMaintenance")]
+        public System.Nullable<bool> IsAutoApproveDuringMaintenance { get; set; }
+        
+        /// <value>
+        /// The code identifying the error occurred during Assignment operation.
+        /// </value>
+        [JsonProperty(PropertyName = "errorCode")]
+        public System.Nullable<int> ErrorCode { get; set; }
+        
+        /// <value>
+        /// The message describing the error occurred during Assignment operation.
+        /// </value>
+        [JsonProperty(PropertyName = "errorMessage")]
+        public string ErrorMessage { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

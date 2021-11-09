@@ -38,7 +38,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name of the operator action.
+        /// Unique name of the operator action.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,10 +48,23 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string Name { get; set; }
         
         /// <value>
+        /// Display Name of the operator action.
+        /// </value>
+        [JsonProperty(PropertyName = "customerDisplayName")]
+        public string CustomerDisplayName { get; set; }
+        
+        /// <value>
         /// Name of the infrastructure layer associated with the operator action.
         /// </value>
         [JsonProperty(PropertyName = "component")]
         public string Component { get; set; }
+        
+        /// <value>
+        /// resourceType for which the OperatorAction is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
         /// Description of the operator action in terms of associated risk profile, and characteristics of the operating system commands made

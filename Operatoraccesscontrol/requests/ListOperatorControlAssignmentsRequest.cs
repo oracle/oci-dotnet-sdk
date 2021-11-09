@@ -42,6 +42,12 @@ namespace Oci.OperatoraccesscontrolService.Requests
         public string ResourceName { get; set; }
         
         /// <value>
+        /// A filter to return only lists of resources that match the entire given service type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources whose lifecycleState matches the given OperatorControlAssignment lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

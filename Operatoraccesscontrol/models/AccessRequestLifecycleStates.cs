@@ -55,6 +55,10 @@ namespace Oci.OperatoraccesscontrolService.Models
       [EnumMember(Value = "COMPLETED")]
       Completed,
       [EnumMember(Value = "EXPIRED")]
-      Expired
+      Expired,
+      [EnumMember(Value = "APPROVEDFORFUTURE")]
+      Approvedforfuture,
+      [EnumMember(Value = "INREVIEW")]
+      Inreview
   }
 }

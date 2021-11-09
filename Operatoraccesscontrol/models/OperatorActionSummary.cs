@@ -54,6 +54,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// resourceType for which the OperatorAction is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceTypes> ResourceType { get; set; }
+        
+        /// <value>
         /// The current lifecycle state of the operator action.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

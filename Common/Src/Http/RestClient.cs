@@ -6,12 +6,16 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Oci.Common.Auth;
 using Oci.Common.Http.Internal;
+using Oci.Common.Http.Signing;
 using Oci.Common.Model;
+using Oci.Common.Utils;
 
 namespace Oci.Common.Http
 {
@@ -19,12 +23,27 @@ namespace Oci.Common.Http
     public class RestClient
     {
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly int MAX_RETRIES_FOR_TOKEN_REFRESH = 2;
+        private readonly Dictionary<SigningStrategy, RequestSigner> availableRequestSigners;
+        private RequestSigner requestSigner;
+        private readonly IBasicAuthenticationDetailsProvider authProvider;
 
+        private void RefreshSigner()
+        {
+            ((AbstractRequestingAuthenticationDetailsProvider)this.authProvider).Refresh();
+            if (this.requestSigner is DefaultRequestSigner)
+            {
+                this.requestSigner = new DefaultRequestSigner(this.authProvider);
+            }
+        }
+
+        /// This is DEPRECATED. Please use the RestClient constructor using IBasicAuthenticationDetailsProvider.
         public RestClient(RestClientHandler handler)
         {
             this.httpClient = new HttpClient(handler);
         }
 
+        /// This is DEPRECATED. Please use the RestClient constructor using IBasicAuthenticationDetailsProvider.
         public RestClient(RestClientHandler handler, ClientConfiguration clientConfiguration)
         {
             this.httpClient = new HttpClient(handler);
@@ -32,7 +51,22 @@ namespace Oci.Common.Http
             this.httpClient.MaxResponseContentBufferSize = clientConfiguration.ResponseContentBufferBytes;
         }
 
-        public RestClient() : this(null as RestClientHandler) { }
+        public RestClient(IBasicAuthenticationDetailsProvider authProvider, RequestSigner requestSigner)
+        {
+            this.authProvider = authProvider;
+            this.restClientHandler = new RestClientHandler(RequestReceptor);
+            this.httpClient = new HttpClient(restClientHandler);
+            this.requestSigner = requestSigner;
+            this.availableRequestSigners = GetAvailableRequestSigners(this.authProvider);
+        }
+
+        public RestClient(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner) : this(authProvider, requestSigner)
+        {
+            this.httpClient.Timeout = TimeSpan.FromMilliseconds(clientConfiguration.TimeoutMillis);
+            this.httpClient.MaxResponseContentBufferSize = clientConfiguration.ResponseContentBufferBytes;
+        }
+
+        public RestClient() : this(null as IBasicAuthenticationDetailsProvider, null as RequestSigner) { }
 
         /// <summary>Disposes the HTTP client</summary>
         public void Dispose()
@@ -71,7 +105,33 @@ namespace Oci.Common.Http
         /// <returns>A Task of HttpResponseMessage returned.</returns>
         public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, CancellationToken cancellationToken = default)
         {
-            return await this.httpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false);
+            if (this.authProvider is AbstractRequestingAuthenticationDetailsProvider)
+            {
+                int attempts = 0;
+                HttpResponseMessage responseMessage = null;
+                while (attempts < MAX_RETRIES_FOR_TOKEN_REFRESH)
+                {
+                    ++attempts;
+                    // A new copy of the request message needs to be created because it is disposed each time it is sent, and
+                    // resending the same request will result in the following error message:
+                    // "The request message was already sent. Cannot send the same request message multiple times."
+                    var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequest);
+                    responseMessage = await this.httpClient.SendAsync(newRequestMessage, cancellationToken).ConfigureAwait(false);
+                    if (!responseMessage.IsSuccessStatusCode && responseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        this.RefreshSigner();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                return responseMessage;
+            }
+            else
+            {
+                return await this.httpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false);
+            }
         }
 
         /// <summary>Check if the HttpResponseMessage is a successful response.</summary>
@@ -109,6 +169,28 @@ namespace Oci.Common.Http
             }
         }
 
+        internal void RequestReceptor(HttpRequestMessage requestMessage)
+        {
+            RequestSigner requestSignerToUse = this.requestSigner;
+            if (requestMessage.Properties.TryGetValue(SigningStrategy.SIGNING_STRATEGY_PROPERTY_NAME_KEY, out var signingStrategy))
+            {
+                requestSignerToUse = this.availableRequestSigners.TryGetValue((SigningStrategy)signingStrategy, out var desiredSigner) ?
+                    desiredSigner : requestSignerToUse;
+            }
+
+            requestSignerToUse.SignRequest(requestMessage);
+        }
+
+        private Dictionary<SigningStrategy, RequestSigner> GetAvailableRequestSigners(IBasicAuthenticationDetailsProvider authProvider)
+        {
+            var signers = new Dictionary<SigningStrategy, RequestSigner>();
+            foreach (SigningStrategy strategy in SigningStrategy.Values)
+            {
+                signers.Add(strategy, new DefaultRequestSigner(authProvider, strategy));
+            }
+            return signers;
+        }
         private readonly HttpClient httpClient = null;
+        private readonly RestClientHandler restClientHandler = null;
     }
 }

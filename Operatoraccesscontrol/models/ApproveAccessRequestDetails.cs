@@ -42,5 +42,11 @@ namespace Oci.OperatoraccesscontrolService.Models
         [JsonProperty(PropertyName = "additionalMessage")]
         public string AdditionalMessage { get; set; }
         
+        /// <value>
+        /// The time when access request is scheduled to be approved in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.Example: '2020-05-22T21:10:29.600Z'
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfUserCreation")]
+        public System.Nullable<System.DateTime> TimeOfUserCreation { get; set; }
+        
     }
 }
