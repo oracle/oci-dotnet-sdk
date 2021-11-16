@@ -29,8 +29,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
-        /// entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// The OCID of the VNIC to assign the private IP to. The VNIC and private IP
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to assign the private IP to. The VNIC and private IP
         /// must be in the same subnet.
         /// 
         /// </value>
@@ -82,7 +82,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// Use this attribute only with the Oracle Cloud VMware Solution.
         /// <br/>
-        /// The OCID of the VLAN from which the private IP is to be drawn. The IP address,
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN from which the private IP is to be drawn. The IP address,
         /// *if supplied*, must be valid for the given VLAN. See {@link Vlan}.
         /// 
         /// </value>

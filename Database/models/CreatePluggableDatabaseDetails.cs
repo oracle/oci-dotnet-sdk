@@ -47,22 +47,22 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// A strong password for PDB Admin. The password must be at least nine characters and contain at least two uppercase, two lowercase, two numbers, and two special characters. The special characters must be _, \\#, or -.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PdbAdminPassword is required.")]
         [JsonProperty(PropertyName = "pdbAdminPassword")]
         public string PdbAdminPassword { get; set; }
         
         /// <value>
         /// The existing TDE wallet password of the CDB.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TdeWalletPassword is required.")]
         [JsonProperty(PropertyName = "tdeWalletPassword")]
         public string TdeWalletPassword { get; set; }
+        
+        /// <value>
+        /// The locked mode of the pluggable database admin account. If false, the user needs to provide the PDB Admin Password to connect to it.
+        /// If true, the pluggable database will be locked and user cannot login to it.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shouldPdbAdminAccountBeLocked")]
+        public System.Nullable<bool> ShouldPdbAdminAccountBeLocked { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

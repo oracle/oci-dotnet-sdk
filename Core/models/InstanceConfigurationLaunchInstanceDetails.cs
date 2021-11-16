@@ -40,7 +40,10 @@ namespace Oci.CoreService.Models
         public string CapacityReservationId { get; set; }
         
         /// <value>
-        /// The OCID of the compartment.
+        /// The OCID of the compartment containing the instance. 
+        /// Instances created from instance configurations are placed in the same compartment 
+        /// as the instance that was used to create the instance configuration.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -60,8 +63,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// Example: My bare metal instance
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

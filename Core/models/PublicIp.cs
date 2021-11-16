@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the entity the public IP is assigned to, or in the process of
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the entity the public IP is assigned to, or in the process of
         /// being assigned to.
         /// 
         /// </value>
@@ -71,7 +71,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the public IP. For an ephemeral public IP, this is
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the public IP. For an ephemeral public IP, this is
         /// the compartment of its assigned entity (which can be a private IP or a regional entity such
         /// as a NAT gateway). For a reserved public IP that is currently assigned,
         /// its compartment can be different from the assigned private IP's.
@@ -90,8 +90,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
-        /// entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -107,7 +107,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The public IP's Oracle ID (OCID).
+        /// The public IP's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -199,7 +199,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// Deprecated. Use `assignedEntityId` instead.
         /// <br/>
-        /// The OCID of the private IP that the public IP is currently assigned to, or in the
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private IP that the public IP is currently assigned to, or in the
         /// process of being assigned to.
         /// <br/>
         /// **Note:** This is `null` if the public IP is not assigned to a private IP, or is

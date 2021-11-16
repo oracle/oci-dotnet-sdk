@@ -35,7 +35,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the cross-connect group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the cross-connect group.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The display name of a user-friendly name. Does not have to be unique, and it's changeable.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -111,6 +111,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public MacsecProperties MacsecProperties { get; set; }
         
     }
 }

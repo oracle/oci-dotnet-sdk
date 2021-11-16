@@ -38,13 +38,13 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the cross-connect group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the cross-connect group.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the cross-connect group this cross-connect belongs to (if any).
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect group this cross-connect belongs to (if any).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "crossConnectGroupId")]
@@ -144,6 +144,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public MacsecProperties MacsecProperties { get; set; }
         
     }
 }

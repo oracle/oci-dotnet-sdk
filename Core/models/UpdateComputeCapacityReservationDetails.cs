@@ -32,8 +32,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name for the compute capacity reservation. Does not have to be unique, and it's
-        /// changeable. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsDefaultReservation { get; set; }
         
         /// <value>
-        /// The reservation configurations for the capacity reservation.
+        /// The capacity configurations for the capacity reservation.
         /// <br/>
         /// To use the reservation for the desired shape, specify the shape, count, and
         /// optionally the fault domain where you want this configuration.

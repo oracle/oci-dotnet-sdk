@@ -24,7 +24,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the IPSec connection.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the IPSec connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The IPSec connection's Oracle ID (OCID).
+        /// The IPSec connection's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         /// <remarks>
         /// Required

@@ -15,7 +15,11 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.CoreService.Models
 {
-    
+    /// <summary>
+    /// The details of the volume to create. For CreateVolume operation, this field is required in the request,
+    /// see {@link #createVolume(CreateVolumeRequest) createVolume}.
+    /// 
+    /// </summary>
     public class CreateVolumeDetails 
     {
         

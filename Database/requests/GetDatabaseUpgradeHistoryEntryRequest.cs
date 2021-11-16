@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string DatabaseId { get; set; }
         
         /// <value>
-        /// The database upgrade History [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The database/db system upgrade History [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required

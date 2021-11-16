@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A template that contains the settings to use when defining the instance reservation configuration.
+    /// A template that contains the settings to use when defining the instance capacity configuration.
     /// 
     /// </summary>
     public class InstanceReservationConfigDetails 
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         public InstanceReservationShapeConfigDetails InstanceShapeConfig { get; set; }
         
         /// <value>
-        /// The fault domain to use for instances created using this reservation configuration.
+        /// The fault domain to use for instances created using this capacity configuration.
         /// For more information, see [Fault Domains](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#fault).
         /// If you do not specify the fault domain, the capacity is available for an instance
         /// that does not specify a fault domain. To change the fault domain for a reservation,
@@ -55,7 +55,7 @@ namespace Oci.CoreService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The amount of capacity to reserve in this reservation configuration.
+        /// The total number of instances that can be launched from the capacity configuration.
         /// </value>
         /// <remarks>
         /// Required

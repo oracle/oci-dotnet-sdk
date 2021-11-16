@@ -111,7 +111,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<BgpIpv6SessionStateEnum> BgpIpv6SessionState { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the virtual circuit.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -194,7 +194,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the customer's {@link Drg}
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the customer's {@link Drg}
         /// that this virtual circuit uses. Applicable only to private virtual circuits.
         /// 
         /// </value>
@@ -202,7 +202,7 @@ namespace Oci.CoreService.Models
         public string GatewayId { get; set; }
         
         /// <value>
-        /// The virtual circuit's Oracle ID (OCID).
+        /// The virtual circuit's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -257,7 +257,7 @@ namespace Oci.CoreService.Models
         public string ProviderName { get; set; }
         
         /// <value>
-        /// The OCID of the service offered by the provider (if the customer is connecting via a provider).
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service offered by the provider (if the customer is connecting via a provider).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerServiceId")]
@@ -381,6 +381,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
+        /// <value>
+        /// The layer 3 IP MTU to use on this virtual circuit.
+        /// </value>
+        [JsonProperty(PropertyName = "ipMtu")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
     }
 }

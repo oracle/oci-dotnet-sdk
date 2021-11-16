@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string IpscId { get; set; }
         
         /// <value>
-        /// Details object for updating a IPSec connection.
+        /// Details object for updating an IPSec connection.
         /// </value>
         /// <remarks>
         /// Required

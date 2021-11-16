@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The OCID of the set of DHCP options the subnet will use.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the set of DHCP options the subnet will use.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dhcpOptionsId")]
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the route table the subnet will use.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the subnet will use.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]

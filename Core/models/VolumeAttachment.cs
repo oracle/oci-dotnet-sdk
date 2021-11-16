@@ -61,10 +61,9 @@ namespace Oci.CoreService.Models
         public string Device { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it cannot be changed.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// Example: My volume attachment
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

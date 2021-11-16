@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OptimizerService.Models
 {
     /// <summary>
-    /// Optional. The target tags supported by a profile override for a recommendation.
+    /// Optional. The tags specified in the profile override for a recommendation.
     /// 
     /// </summary>
     public class TargetTags 
     {
         
         /// <value>
-        /// The list of target tags attached to the current profile override.
+        /// The list of tags specified in the current profile override.
         /// </value>
         /// <remarks>
         /// Required

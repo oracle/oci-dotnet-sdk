@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the set of DHCP options.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the set of DHCP options.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Oracle ID (OCID) for the set of DHCP options.
+        /// Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)) for the set of DHCP options.
         /// </value>
         /// <remarks>
         /// Required
@@ -131,7 +131,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The OCID of the VCN the set of DHCP options belongs to.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN the set of DHCP options belongs to.
         /// </value>
         /// <remarks>
         /// Required

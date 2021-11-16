@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the route table.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the route table.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The route table's Oracle ID (OCID).
+        /// The route table's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         /// <remarks>
         /// Required

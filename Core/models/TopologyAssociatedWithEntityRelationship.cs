@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Defines the `associatedWith` relationship between virtual network topology entities. An `AssociatedWith` relationship
+    /// Defines the `AssociatedWith` relationship between virtual network topology entities. An `AssociatedWith` relationship
     /// is defined when there is no obvious `contains` relationship but entities are still related.
     /// For example, a DRG is associated with a VCN because a DRG is not managed by VCN but can be
     /// attached to a VCN.
@@ -24,6 +24,9 @@ namespace Oci.CoreService.Models
     /// </summary>
     public class TopologyAssociatedWithEntityRelationship : TopologyEntityRelationship
     {
+        
+        [JsonProperty(PropertyName = "associatedWithDetails")]
+        public TopologyAssociatedWithRelationshipDetails AssociatedWithDetails { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "ASSOCIATED_WITH";

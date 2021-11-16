@@ -22,7 +22,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the cross-connect.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         public string CrossConnectId { get; set; }
                 ///
         /// <value>
-        /// Whether Oracle's side of the interface is up or down.
+        /// Indicates whether Oracle's side of the interface is up or down.
         /// </value>
         ///
         public enum InterfaceStateEnum {
@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Whether Oracle's side of the interface is up or down.
+        /// Indicates whether Oracle's side of the interface is up or down.
         /// </value>
         [JsonProperty(PropertyName = "interfaceState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -61,13 +61,9 @@ namespace Oci.CoreService.Models
         /// Status indicator corresponding to the light level.
         /// <br/>
         ///   * **NO_LIGHT:** No measurable light
-        /// <br/>
         ///   * **LOW_WARN:** There's measurable light but it's too low
-        /// <br/>
         ///   * **HIGH_WARN:** Light level is too high
-        /// <br/>
         ///   * **BAD:** There's measurable light but the signal-to-noise ratio is bad
-        /// <br/>
         ///   * **GOOD:** Good light level
         /// 
         /// </value>
@@ -89,19 +85,63 @@ namespace Oci.CoreService.Models
         /// Status indicator corresponding to the light level.
         /// <br/>
         ///   * **NO_LIGHT:** No measurable light
-        /// <br/>
         ///   * **LOW_WARN:** There's measurable light but it's too low
-        /// <br/>
         ///   * **HIGH_WARN:** Light level is too high
-        /// <br/>
         ///   * **BAD:** There's measurable light but the signal-to-noise ratio is bad
-        /// <br/>
         ///   * **GOOD:** Good light level
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lightLevelIndicator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LightLevelIndicatorEnum> LightLevelIndicator { get; set; }
+                ///
+        /// <value>
+        /// Encryption status of this cross connect.
+        /// <br/>
+        /// Possible values:
+        /// * **UP:** Traffic is encrypted over this cross-connect
+        /// * **DOWN:** Traffic is not encrypted over this cross-connect
+        /// * **CIPHER_MISMATCH:** The MACsec encryption cipher doesn't match the cipher on the CPE
+        /// * **CKN_MISMATCH:** The MACsec Connectivity association Key Name (CKN) doesn't match the CKN on the CPE
+        /// * **CAK_MISMATCH:** The MACsec Connectivity Association Key (CAK) doesn't match the CAK on the CPE
+        /// 
+        /// </value>
+        ///
+        public enum EncryptionStatusEnum {
+            [EnumMember(Value = "UP")]
+            Up,
+            [EnumMember(Value = "DOWN")]
+            Down,
+            [EnumMember(Value = "CIPHER_MISMATCH")]
+            CipherMismatch,
+            [EnumMember(Value = "CKN_MISMATCH")]
+            CknMismatch,
+            [EnumMember(Value = "CAK_MISMATCH")]
+            CakMismatch
+        };
+
+        /// <value>
+        /// Encryption status of this cross connect.
+        /// <br/>
+        /// Possible values:
+        /// * **UP:** Traffic is encrypted over this cross-connect
+        /// * **DOWN:** Traffic is not encrypted over this cross-connect
+        /// * **CIPHER_MISMATCH:** The MACsec encryption cipher doesn't match the cipher on the CPE
+        /// * **CKN_MISMATCH:** The MACsec Connectivity association Key Name (CKN) doesn't match the CKN on the CPE
+        /// * **CAK_MISMATCH:** The MACsec Connectivity Association Key (CAK) doesn't match the CAK on the CPE
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EncryptionStatusEnum> EncryptionStatus { get; set; }
+        
+        /// <value>
+        /// The light levels of the cross-connect (in dBm).
+        /// <br/>
+        /// Example: [14.0, -14.0, 2.1, -10.1]
+        /// </value>
+        [JsonProperty(PropertyName = "lightLevelsInDBm")]
+        public System.Collections.Generic.List<float> LightLevelsInDBm { get; set; }
         
     }
 }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OptimizerService.Models
 {
     /// <summary>
-    /// Optional. The target compartments supported by a profile override for a recommendation.
+    /// Optional. The compartments specified in the profile override for a recommendation.
     /// 
     /// </summary>
     public class TargetCompartments 
     {
         
         /// <value>
-        /// The list of target compartment OCIDs attached to the current profile override.
+        /// The list of OCIDs attached to the compartments specified in the current profile override.
         /// </value>
         /// <remarks>
         /// Required

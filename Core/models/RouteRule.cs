@@ -81,7 +81,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
         
         /// <value>
-        /// The OCID for the route rule's target. For information about the type of
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the route rule's target. For information about the type of
         /// targets you can specify, see
         /// [Route Tables](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm).
         /// 

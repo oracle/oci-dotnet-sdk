@@ -61,8 +61,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// Example: My console history metadata
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -43,7 +43,8 @@ namespace Oci.CoreService.Models
         public string ComputeGlobalImageCapabilitySchemaId { get; set; }
         
         /// <value>
-        /// The display name of the version
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

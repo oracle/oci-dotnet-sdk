@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to contain the subnet.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the subnet.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The OCID of the set of DHCP options the subnet will use. If you don't
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the set of DHCP options the subnet will use. If you don't
         /// provide a value, the subnet uses the VCN's default set of DHCP options.
         /// 
         /// </value>
@@ -160,7 +160,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> ProhibitPublicIpOnVnic { get; set; }
         
         /// <value>
-        /// The OCID of the route table the subnet will use. If you don't provide a value,
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the subnet will use. If you don't provide a value,
         /// the subnet uses the VCN's default route table.
         /// 
         /// </value>
@@ -178,7 +178,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> SecurityListIds { get; set; }
         
         /// <value>
-        /// The OCID of the VCN to contain the subnet.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN to contain the subnet.
         /// </value>
         /// <remarks>
         /// Required

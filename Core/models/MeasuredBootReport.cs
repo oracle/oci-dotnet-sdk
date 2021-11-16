@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The Measured Boot report for a shielded instance.
+    /// The measured boot report for a shielded instance.
     /// </summary>
     public class MeasuredBootReport 
     {
         
         /// <value>
-        /// Whether the verification succeeded and the new values matched the expected values.
+        /// Whether the verification succeeded, and the new values match the expected values.
         /// 
         /// </value>
         /// <remarks>

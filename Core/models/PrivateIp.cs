@@ -65,7 +65,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the private IP.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the private IP.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -80,8 +80,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
-        /// entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -113,7 +113,7 @@ namespace Oci.CoreService.Models
         public string HostnameLabel { get; set; }
         
         /// <value>
-        /// The private IP's Oracle ID (OCID).
+        /// The private IP's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -142,7 +142,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Applicable only if the `PrivateIp` object is being used with a VLAN as part of
-        /// the Oracle Cloud VMware Solution. The `vlanId` is the OCID of the VLAN. See
+        /// the Oracle Cloud VMware Solution. The `vlanId` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN. See
         /// {@link Vlan}.
         /// 
         /// </value>
@@ -150,7 +150,7 @@ namespace Oci.CoreService.Models
         public string VlanId { get; set; }
         
         /// <value>
-        /// The OCID of the subnet the VNIC is in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.
         /// <br/>
         /// However, if the `PrivateIp` object is being used with a VLAN as part of
         /// the Oracle Cloud VMware Solution, the `subnetId` is null.
@@ -168,7 +168,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The OCID of the VNIC the private IP is assigned to. The VNIC and private IP
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC the private IP is assigned to. The VNIC and private IP
         /// must be in the same subnet.
         /// However, if the `PrivateIp` object is being used with a VLAN as part of
         /// the Oracle Cloud VMware Solution, the `vnicId` is null.

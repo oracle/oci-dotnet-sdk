@@ -63,6 +63,12 @@ namespace Oci.OptimizerService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// The time period over which to collect data for the recommendations, measured in number of days.
+        /// </value>
+        [JsonProperty(PropertyName = "aggregationIntervalInDays")]
+        public System.Nullable<int> AggregationIntervalInDays { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

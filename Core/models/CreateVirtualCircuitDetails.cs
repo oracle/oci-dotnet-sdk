@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string BandwidthShapeName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to contain the virtual circuit.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the virtual circuit.
         /// 
         /// </value>
         /// <remarks>
@@ -99,7 +99,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -115,7 +116,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// For private virtual circuits only. The OCID of the {@link Drg}
+        /// For private virtual circuits only. The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the {@link Drg}
         /// that this virtual circuit uses.
         /// 
         /// </value>
@@ -132,7 +133,7 @@ namespace Oci.CoreService.Models
         public string ProviderName { get; set; }
         
         /// <value>
-        /// The OCID of the service offered by the provider (if you're connecting
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service offered by the provider (if you're connecting
         /// via a provider). To get a list of the available service offerings, see
         /// {@link #listFastConnectProviderServices(ListFastConnectProviderServicesRequest) listFastConnectProviderServices}.
         /// 
@@ -199,6 +200,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
+        /// <value>
+        /// The layer 3 IP MTU to use with this virtual circuit.
+        /// </value>
+        [JsonProperty(PropertyName = "ipMtu")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
     }
 }

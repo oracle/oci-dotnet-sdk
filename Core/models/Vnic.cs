@@ -55,7 +55,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the VNIC.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the VNIC.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +74,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -107,7 +107,7 @@ namespace Oci.CoreService.Models
         public string HostnameLabel { get; set; }
         
         /// <value>
-        /// The OCID of the VNIC.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC.
         /// </value>
         /// <remarks>
         /// Required
@@ -178,7 +178,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
-        /// belonging to a subnet), the `vlanId` is the OCID of the VLAN the VNIC is in. See
+        /// belonging to a subnet), the `vlanId` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN the VNIC is in. See
         /// {@link Vlan}. If the VNIC is instead in a subnet, `subnetId` has a value.
         /// 
         /// </value>
@@ -218,7 +218,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> SkipSourceDestCheck { get; set; }
         
         /// <value>
-        /// The OCID of the subnet the VNIC is in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }

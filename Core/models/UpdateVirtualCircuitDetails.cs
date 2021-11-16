@@ -99,10 +99,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// To be updated only by the customer who owns the virtual circuit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -118,7 +116,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the {@link Drg}
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the {@link Drg}
         /// that this private virtual circuit uses.
         /// <br/>
         /// To be updated only by the customer who owns the virtual circuit.
@@ -175,6 +173,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "referenceComment")]
         public string ReferenceComment { get; set; }
+        
+        /// <value>
+        /// The layer 3 IP MTU to use on this virtual circuit.
+        /// </value>
+        [JsonProperty(PropertyName = "ipMtu")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
     }
 }

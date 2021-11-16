@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the RPC.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the RPC.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the DRG that this RPC belongs to.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG that this RPC belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -81,7 +81,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the RPC.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the RPC.
         /// </value>
         /// <remarks>
         /// Required
@@ -129,7 +129,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// If this RPC is peered, this value is the OCID of the other RPC.
+        /// If this RPC is peered, this value is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the other RPC.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerId")]
@@ -144,7 +144,7 @@ namespace Oci.CoreService.Models
         public string PeerRegionName { get; set; }
         
         /// <value>
-        /// If this RPC is peered, this value is the OCID of the other RPC's tenancy.
+        /// If this RPC is peered, this value is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the other RPC's tenancy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerTenancyId")]

@@ -51,7 +51,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the VCN.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,20 +61,20 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID for the VCN's default set of DHCP options.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the VCN's default set of DHCP options.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "defaultDhcpOptionsId")]
         public string DefaultDhcpOptionsId { get; set; }
         
         /// <value>
-        /// The OCID for the VCN's default route table.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the VCN's default route table.
         /// </value>
         [JsonProperty(PropertyName = "defaultRouteTableId")]
         public string DefaultRouteTableId { get; set; }
         
         /// <value>
-        /// The OCID for the VCN's default security list.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the VCN's default security list.
         /// </value>
         [JsonProperty(PropertyName = "defaultSecurityListId")]
         public string DefaultSecurityListId { get; set; }
@@ -124,7 +124,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The VCN's Oracle ID (OCID).
+        /// The VCN's Oracle ID ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)).
         /// </value>
         /// <remarks>
         /// Required

@@ -23,7 +23,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the VCN in the association.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN in the association.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         public string VcnId { get; set; }
         
         /// <value>
-        /// The OCID of the DNS resolver in the association.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DNS resolver in the association.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dnsResolverId")]

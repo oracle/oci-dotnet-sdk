@@ -31,8 +31,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// Example: My custom Oracle Linux image
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
