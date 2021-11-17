@@ -183,6 +183,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Usage", "Usag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Databasetools", "Databasetools\OCI.DotNetSDK.Databasetools.csproj", "{925FF5FC-03B2-4E3B-B7FA-11E557933649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Servicemanagerproxy", "Servicemanagerproxy\OCI.DotNetSDK.Servicemanagerproxy.csproj", "{169FA01D-7F29-4E8F-ADD6-A88909BB3F63}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1867,5 +1869,17 @@ Global
         {925FF5FC-03B2-4E3B-B7FA-11E557933649}.Release|x64.Build.0 = Release|Any CPU
         {925FF5FC-03B2-4E3B-B7FA-11E557933649}.Release|x86.ActiveCfg = Release|Any CPU
         {925FF5FC-03B2-4E3B-B7FA-11E557933649}.Release|x86.Build.0 = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|x64.Build.0 = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Debug|x86.Build.0 = Debug|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|Any CPU.Build.0 = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x64.ActiveCfg = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x64.Build.0 = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x86.ActiveCfg = Release|Any CPU
+        {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

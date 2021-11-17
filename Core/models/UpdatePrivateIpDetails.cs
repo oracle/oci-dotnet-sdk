@@ -29,8 +29,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
-        /// entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         public string HostnameLabel { get; set; }
         
         /// <value>
-        /// The OCID of the VNIC to reassign the private IP to. The VNIC must
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to reassign the private IP to. The VNIC must
         /// be in the same subnet as the current VNIC.
         /// 
         /// </value>

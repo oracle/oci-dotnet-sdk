@@ -71,7 +71,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name for the VNIC. Does not have to be unique.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -162,7 +162,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> SkipSourceDestCheck { get; set; }
         
         /// <value>
-        /// The OCID of the subnet to create the VNIC in. When launching an instance,
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet to create the VNIC in. When launching an instance,
         /// use this `subnetId` instead of the deprecated `subnetId` in
         /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// At least one of them is required; if you provide both, the values must match.
@@ -177,7 +177,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Provide this attribute only if you are an Oracle Cloud VMware Solution
-        /// customer and creating a secondary VNIC in a VLAN. The value is the OCID of the VLAN.
+        /// customer and creating a secondary VNIC in a VLAN. The value is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
         /// See {@link Vlan}.
         /// <br/>
         /// Provide a `vlanId` instead of a `subnetId`. If you provide both a

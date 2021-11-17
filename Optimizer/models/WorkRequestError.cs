@@ -22,7 +22,7 @@ namespace Oci.OptimizerService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured.
+        /// A machine-usable code for the error that occurred.
         /// 
         /// </value>
         /// <remarks>

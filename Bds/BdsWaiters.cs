@@ -60,6 +60,34 @@ namespace Oci.BdsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBdsApiKeyRequest, GetBdsApiKeyResponse> ForBdsApiKey(GetBdsApiKeyRequest request, params BdsApiKey.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForBdsApiKey(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBdsApiKeyRequest, GetBdsApiKeyResponse> ForBdsApiKey(GetBdsApiKeyRequest request, WaiterConfiguration config, params BdsApiKey.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetBdsApiKeyRequest, GetBdsApiKeyResponse>(
+                request,
+                request => client.GetBdsApiKey(request),
+                response => targetStates.Contains(response.BdsApiKey.LifecycleState.Value),
+                targetStates.Contains(BdsApiKey.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetBdsApiKeyRequest, GetBdsApiKeyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetBdsInstanceRequest, GetBdsInstanceResponse> ForBdsInstance(GetBdsInstanceRequest request, params BdsInstance.LifecycleStateEnum[] targetStates)
         {
             return this.ForBdsInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

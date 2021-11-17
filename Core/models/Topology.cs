@@ -30,7 +30,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "NETWORKING")]
             Networking,
             [EnumMember(Value = "VCN")]
-            Vcn
+            Vcn,
+            [EnumMember(Value = "SUBNET")]
+            Subnet
         };
 
         
@@ -91,6 +93,9 @@ namespace Oci.CoreService.Models
                     break;
                 case "NETWORKING":
                     obj = new NetworkingTopology();
+                    break;
+                case "SUBNET":
+                    obj = new SubnetTopology();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

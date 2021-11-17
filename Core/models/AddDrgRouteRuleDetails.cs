@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Details needed when adding a DRG route rule. 
+    /// Details needed when adding a DRG route rule.
     /// 
     /// </summary>
     public class AddDrgRouteRuleDetails 

@@ -18,7 +18,7 @@ namespace Oci.CoreService.Models
     /// <summary>
     /// A connection between a DRG and CPE. This connection consists of multiple IPSec
     /// tunnels. Creating this connection is one of the steps required when setting up
-    /// an IPSec VPN.
+    /// a Site-to-Site VPN.
     /// <br/>
     /// **Important:**  Each tunnel in an IPSec connection can use either static routing or BGP dynamic
     /// routing (see the {@link IPSecConnectionTunnel} object's
@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
     /// if that tunnel's `routing` attribute = `STATIC`. Otherwise the static routes are ignored.
     /// <br/>
     /// For more information about the workflow for setting up an IPSec connection, see
-    /// [IPSec VPN](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingIPsec.htm).
+    /// [Site-to-Site VPN Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/overviewIPsec.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
@@ -43,7 +43,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the IPSec connection.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the IPSec connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the {@link Cpe} object.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the {@link Cpe} object.
         /// </value>
         /// <remarks>
         /// Required

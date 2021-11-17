@@ -163,5 +163,13 @@ namespace Oci.OptimizerService.Models
         [JsonProperty(PropertyName = "supportedLevels")]
         public SupportedLevels SupportedLevels { get; set; }
         
+        /// <value>
+        /// Additional metadata key/value pairs for the recommendation.
+        /// <br/>
+        /// For Example: {&quot;EstimatedSaving&quot;: &quot;200&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "extendedMetadata")]
+        public System.Collections.Generic.Dictionary<string, string> ExtendedMetadata { get; set; }
+        
     }
 }

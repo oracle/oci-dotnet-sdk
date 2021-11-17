@@ -135,6 +135,30 @@ namespace Oci.RoverService.Models
         public System.Nullable<System.DateTime> TimeReturnWindowEnds { get; set; }
         
         /// <value>
+        /// The flag indicating that customer requests data to be imported to OCI upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "isImportRequested")]
+        public System.Nullable<bool> IsImportRequested { get; set; }
+        
+        /// <value>
+        /// An OCID of a compartment where data will be imported to upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "importCompartmentId")]
+        public string ImportCompartmentId { get; set; }
+        
+        /// <value>
+        /// Name of a bucket where files from NFS share will be imported to upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "importFileBucket")]
+        public string ImportFileBucket { get; set; }
+        
+        /// <value>
+        /// Validation code returned by data validation tool. Required for return shipping label generation if data import was requested.
+        /// </value>
+        [JsonProperty(PropertyName = "dataValidationCode")]
+        public string DataValidationCode { get; set; }
+        
+        /// <value>
         /// The public key of the resource principal
         /// </value>
         [JsonProperty(PropertyName = "publicKey")]

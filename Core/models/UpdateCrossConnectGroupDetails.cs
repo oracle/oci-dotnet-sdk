@@ -37,8 +37,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A reference name or identifier for the physical fiber connection that this cross-connect
-        /// group uses.
+        /// A reference name or identifier for the physical fiber connection this cross-connect group uses.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "customerReferenceName")]
@@ -52,6 +51,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public UpdateMacsecProperties MacsecProperties { get; set; }
         
     }
 }

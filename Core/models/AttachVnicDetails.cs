@@ -27,7 +27,7 @@ namespace Oci.CoreService.Models
         public CreateVnicDetails CreateVnicDetails { get; set; }
         
         /// <value>
-        /// A user-friendly name for the attachment. Does not have to be unique, and it cannot be changed.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>

@@ -22,8 +22,8 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The display name of the block volume replica. You may optionally specify a *display name* for
-        /// the block volume replica, otherwise a default is provided.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

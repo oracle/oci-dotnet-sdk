@@ -20,8 +20,8 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment to contain the public IP. For ephemeral public IPs,
-        /// you must set this to the private IP's compartment OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the public IP. For ephemeral public IPs,
+        /// you must set this to the private IP's compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -41,8 +41,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid
-        /// entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -86,7 +86,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
         
         /// <value>
-        /// The OCID of the private IP to assign the public IP to.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private IP to assign the public IP to.
         /// <br/>
         /// Required for an ephemeral public IP because it must always be assigned to a private IP
         /// (specifically a *primary* private IP).

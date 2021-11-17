@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the route table the service gateway will use.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the service gateway will use.
         /// <br/>
         /// If you don't specify a route table here, the service gateway is created without an associated route
         /// table. The Networking service does NOT automatically associate the attached VCN's default route table

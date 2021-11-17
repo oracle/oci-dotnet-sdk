@@ -17,6 +17,8 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// Details used in a request to update a route distribution.
+    /// <br/>
+    /// You cannot assign a table to a virtual circuit or IPSec tunnel attachment if there is a static route rule for an RPC attachment.
     /// 
     /// </summary>
     public class UpdateDrgRouteDistributionDetails 
@@ -34,8 +36,6 @@ namespace Oci.CoreService.Models
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// You cannot assign a table to a virtual circuit or IPSec connection attachment if there is a static route rule for an RPC attachment.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

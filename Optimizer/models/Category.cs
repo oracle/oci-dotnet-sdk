@@ -43,7 +43,7 @@ namespace Oci.OptimizerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The name assigned to the category. Avoid entering confidential information.
+        /// The name assigned to the category.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.OptimizerService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Text describing the category. Avoid entering confidential information.
+        /// Text describing the category.
         /// </value>
         /// <remarks>
         /// Required
@@ -122,6 +122,14 @@ namespace Oci.OptimizerService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Additional metadata key/value pairs for the category.
+        /// <br/>
+        /// For Example: {&quot;EstimatedSaving&quot;: &quot;200&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "extendedMetadata")]
+        public System.Collections.Generic.Dictionary<string, string> ExtendedMetadata { get; set; }
         
     }
 }

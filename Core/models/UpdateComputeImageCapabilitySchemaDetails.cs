@@ -23,7 +23,8 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// A user-friendly name for the compute image capability schema
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

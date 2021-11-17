@@ -21,13 +21,14 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The device name.
+        /// The device name. To retrieve a list of devices for a given instance, see {@link #listInstanceDevices(ListInstanceDevicesRequest) listInstanceDevices}.
         /// </value>
         [JsonProperty(PropertyName = "device")]
         public string Device { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it cannot be changed. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

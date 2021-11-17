@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the service offered by the provider.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service offered by the provider.
         /// 
         /// </value>
         /// <remarks>

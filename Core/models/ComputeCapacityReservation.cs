@@ -56,8 +56,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name for the compute capacity reservation.
-        /// It does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -91,7 +91,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsDefaultReservation { get; set; }
         
         /// <value>
-        /// The reservation configurations for the capacity reservation.
+        /// The capacity configurations for the capacity reservation.
         /// <br/>
         /// To use the reservation for the desired shape, specify the shape, count, and
         /// optionally the fault domain where you want this configuration.
@@ -133,7 +133,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The number of instances for which capacity will be held with this
         /// compute capacity reservation. This number is the sum of the values of the `reservedCount` fields
-        /// for all of the instance reservation configurations under this reservation.
+        /// for all of the instance capacity configurations under this reservation.
         /// The purpose of this field is to calculate the percentage usage of the reservation.
         /// 
         /// </value>
@@ -163,7 +163,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The total number of instances currently consuming space in
         /// this compute capacity reservation. This number is the sum of the values of the `usedCount` fields
-        /// for all of the instance reservation configurations under this reservation.
+        /// for all of the instance capacity configurations under this reservation.
         /// The purpose of this field is to calculate the percentage usage of the reservation.
         /// 
         /// </value>

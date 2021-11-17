@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to contain the VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the VCN.
         /// </value>
         /// <remarks>
         /// Required

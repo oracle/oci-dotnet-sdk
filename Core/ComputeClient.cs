@@ -66,7 +66,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Accept the changes to the PCR values in the Measured Boot Report.
+        /// Accept the changes to the PCR values in the measured boot report.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1860,7 +1860,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the measured boot report for this Shielded Instance.
+        /// Gets the measured boot report for this shielded instance.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2043,6 +2043,8 @@ namespace Oci.CoreService
         /// crash dump file when it crashes. The crash dump captures information about the state of the OS at the time of
         /// the crash. After the OS restarts, you can analyze the crash dump to diagnose the issue. For more information, see
         /// [Sending a Diagnostic Interrupt](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/sendingdiagnosticinterrupt.htm).
+        /// &lt;br/&gt;
+        /// 
         /// &lt;br/&gt;
         /// 
         /// For more information about managing instance lifecycle states, see
@@ -2808,14 +2810,17 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the available images in the specified compartment, including
+        /// Lists a subset of images available in the specified compartment, including
         /// [platform images](https://docs.cloud.oracle.com/iaas/Content/Compute/References/images.htm) and
-        /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm) that have
-        /// been created.
+        /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm). 
+        /// The list of platform images includes the three most recently published versions 
+        /// of each major distribution.
         /// &lt;br/&gt;
-        /// The list of images that&#39;s returned is ordered to first show all
-        /// platform images, then all custom images. The order of images might
-        /// change when new images are released.
+        /// The list of images returned is ordered to first show the recent platform images,
+        /// then all of the custom images.
+        /// &lt;br/&gt;
+        /// **Caution:** Platform images are refreshed regularly. When new images are released, older versions are replaced. 
+        /// The image OCIDs remain available, but when the platform image is replaced, the image OCIDs are no longer returned as part of the platform image list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3191,10 +3196,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the display name, defined tag, and freeform tag fields for the specified compute capacity reservation.
-        /// Fields that are not provided in the request will not be updated. Avoid entering confidential information.
-        /// &lt;br/&gt;
-        /// The update also modifies the reservation configurations of the specified compute capacity reservation.
+        /// Updates the specified capacity reservation and its associated capacity configurations.
+        /// Fields that are not provided in the request will not be updated. Capacity configurations that are not included will be deleted. 
+        /// Avoid entering confidential information.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

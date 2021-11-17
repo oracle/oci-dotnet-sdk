@@ -20,7 +20,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment to contain the cross-connect group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the cross-connect group.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,6 +62,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public CreateMacsecProperties MacsecProperties { get; set; }
         
     }
 }

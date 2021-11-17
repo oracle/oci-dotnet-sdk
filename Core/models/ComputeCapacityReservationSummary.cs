@@ -39,10 +39,9 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name for the capacity reservation. Does not have to be unique, and it's changeable.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
-        /// <br/>
-        /// Example: My Reservation
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -85,7 +84,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The number of instances for which capacity will be held in this
         /// compute capacity reservation. This number is the sum of the values of the `reservedCount` fields
-        /// for all of the instance reservation configurations under this reservation.
+        /// for all of the instance capacity configurations under this reservation.
         /// The purpose of this field is to calculate the percentage usage of the reservation.
         /// 
         /// </value>
@@ -95,7 +94,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The total number of instances currently consuming space in
         /// this compute capacity reservation. This number is the sum of the values of the `usedCount` fields
-        /// for all of the instance reservation configurations under this reservation.
+        /// for all of the instance capacity configurations under this reservation.
         /// The purpose of this field is to calculate the percentage usage of the reservation.
         /// 
         /// </value>

@@ -197,6 +197,55 @@ namespace Oci.OptimizerService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListProfileLevels operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListProfileLevelsResponse> ListProfileLevelsResponseEnumerator(ListProfileLevelsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListProfileLevelsRequest, ListProfileLevelsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProfileLevels(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ProfileLevelSummary objects
+        /// contained in responses from the ListProfileLevels operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ProfileLevelSummary> ListProfileLevelsRecordEnumerator(ListProfileLevelsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListProfileLevelsRequest, ListProfileLevelsResponse, ProfileLevelSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProfileLevels(request, retryConfiguration, cancellationToken),
+                response => response.ProfileLevelCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListProfiles operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -340,6 +389,55 @@ namespace Oci.OptimizerService
                 },
                 request => client.ListRecommendations(request, retryConfiguration, cancellationToken),
                 response => response.RecommendationCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListResourceActionQueryableFields operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListResourceActionQueryableFieldsResponse> ListResourceActionQueryableFieldsResponseEnumerator(ListResourceActionQueryableFieldsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListResourceActionQueryableFieldsRequest, ListResourceActionQueryableFieldsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListResourceActionQueryableFields(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the QueryableFieldSummary objects
+        /// contained in responses from the ListResourceActionQueryableFields operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<QueryableFieldSummary> ListResourceActionQueryableFieldsRecordEnumerator(ListResourceActionQueryableFieldsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListResourceActionQueryableFieldsRequest, ListResourceActionQueryableFieldsResponse, QueryableFieldSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListResourceActionQueryableFields(request, retryConfiguration, cancellationToken),
+                response => response.QueryableFieldCollection.Items
             );
         }
 

@@ -32,10 +32,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The password to open the TDE wallet.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "BackupTDEPassword is required.")]
         [JsonProperty(PropertyName = "backupTDEPassword")]
         public string BackupTDEPassword { get; set; }
         

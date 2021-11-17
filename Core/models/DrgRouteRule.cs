@@ -174,5 +174,12 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RouteProvenanceEnum> RouteProvenance { get; set; }
         
+        /// <value>
+        /// Additional properties for the route, computed by the service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attributes")]
+        public System.Object Attributes { get; set; }
+        
     }
 }

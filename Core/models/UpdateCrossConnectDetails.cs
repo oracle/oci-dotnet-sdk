@@ -59,12 +59,14 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsActive { get; set; }
         
         /// <value>
-        /// A reference name or identifier for the physical fiber connection that this cross-connect
-        /// uses.
+        /// A reference name or identifier for the physical fiber connection this cross-connect uses.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "customerReferenceName")]
         public string CustomerReferenceName { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public UpdateMacsecProperties MacsecProperties { get; set; }
         
     }
 }

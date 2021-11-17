@@ -1826,7 +1826,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Creates and starts a pluggable database in the specified container database.
-        /// Use the [StartPluggableDatabase](#/en/database/latest/PluggableDatabase/StartPluggableDatabase] and [StopPluggableDatabase](#/en/database/latest/PluggableDatabase/StopPluggableDatabase] APIs to start and stop the pluggable database.
+        /// Use the {@link #startPluggableDatabase(StartPluggableDatabaseRequest) startPluggableDatabase} and {@link #stopPluggableDatabase(StopPluggableDatabaseRequest) stopPluggableDatabase} APIs to start and stop the pluggable database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

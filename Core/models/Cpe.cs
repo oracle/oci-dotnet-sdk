@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// An object you create when setting up an IPSec VPN between your on-premises network
+    /// An object you create when setting up a Site-to-Site VPN between your on-premises network
     /// and VCN. The `Cpe` is a virtual representation of your customer-premises equipment,
-    /// which is the actual router on-premises at your site at your end of the IPSec VPN connection.
+    /// which is the actual router on-premises at your site at your end of the Site-to-Site VPN IPSec connection.
     /// For more information,
     /// see [Overview of the Networking Service](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
     /// <br/>
@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment containing the CPE.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the CPE.
         /// </value>
         /// <remarks>
         /// Required
@@ -90,7 +90,7 @@ namespace Oci.CoreService.Models
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the CPE's device type.
         /// The Networking service maintains a general list of CPE device types (for example,
         /// Cisco ASA). For each type, Oracle provides CPE configuration content that can help
-        /// a network engineer configure the CPE. The OCID uniquely identifies the type of
+        /// a network engineer configure the CPE. The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) uniquely identifies the type of
         /// device. To get the OCIDs for the device types on the list, see
         /// {@link #listCpeDeviceShapes(ListCpeDeviceShapesRequest) listCpeDeviceShapes}.
         /// <br/>

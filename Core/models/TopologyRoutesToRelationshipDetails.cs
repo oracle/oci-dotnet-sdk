@@ -55,6 +55,26 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "RouteTableId is required.")]
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
+                ///
+        /// <value>
+        /// A route rule can be `STATIC` if manually added to the route table or `DYNAMIC` if imported from another route table.
+        /// 
+        /// </value>
+        ///
+        public enum RouteTypeEnum {
+            [EnumMember(Value = "STATIC")]
+            Static,
+            [EnumMember(Value = "DYNAMIC")]
+            Dynamic
+        };
+
+        /// <value>
+        /// A route rule can be `STATIC` if manually added to the route table or `DYNAMIC` if imported from another route table.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "routeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RouteTypeEnum> RouteType { get; set; }
         
     }
 }

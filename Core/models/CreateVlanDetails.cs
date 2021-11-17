@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         public string CidrBlock { get; set; }
         
         /// <value>
-        /// The OCID of the compartment to contain the VLAN.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the VLAN.
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +71,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A descriptive name. Does not have to be unique, and it's changeable.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -97,7 +97,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
-        /// The OCID of the route table the VLAN will use. If you don't provide a value,
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the VLAN will use. If you don't provide a value,
         /// the VLAN uses the VCN's default route table.
         /// 
         /// </value>
@@ -105,7 +105,7 @@ namespace Oci.CoreService.Models
         public string RouteTableId { get; set; }
         
         /// <value>
-        /// The OCID of the VCN to contain the VLAN.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN to contain the VLAN.
         /// </value>
         /// <remarks>
         /// Required

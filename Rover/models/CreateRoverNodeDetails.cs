@@ -15,9 +15,7 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.RoverService.Models
 {
-    /// <summary>
-    /// The information requied to create a RoverNode.
-    /// </summary>
+    
     public class CreateRoverNodeDetails 
     {
         
@@ -153,6 +151,30 @@ namespace Oci.RoverService.Models
         /// </value>
         [JsonProperty(PropertyName = "oracleShippingTrackingUrl")]
         public string OracleShippingTrackingUrl { get; set; }
+        
+        /// <value>
+        /// The flag indicating that customer requests data to be imported to OCI upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "isImportRequested")]
+        public System.Nullable<bool> IsImportRequested { get; set; }
+        
+        /// <value>
+        /// An OCID of a compartment where data will be imported to upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "importCompartmentId")]
+        public string ImportCompartmentId { get; set; }
+        
+        /// <value>
+        /// Name of a bucket where files from NFS share will be imported to upon Rover node return.
+        /// </value>
+        [JsonProperty(PropertyName = "importFileBucket")]
+        public string ImportFileBucket { get; set; }
+        
+        /// <value>
+        /// Validation code returned by data validation tool. Required for return shipping label generation if data import was requested.
+        /// </value>
+        [JsonProperty(PropertyName = "dataValidationCode")]
+        public string DataValidationCode { get; set; }
         
         /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no

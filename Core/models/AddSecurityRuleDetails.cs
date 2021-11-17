@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         ///     {@link Service} (the rule is for traffic destined for a
         ///     particular `Service` through a service gateway).
         /// <br/>
-        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `destination` is the OCID of a
+        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `destination` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a
         ///     {@link NetworkSecurityGroup}.
         /// 
         /// </value>
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         ///     {@link Service} (the rule is for traffic destined for a
         ///     particular `Service` through a service gateway).
         /// <br/>
-        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `destination` is the OCID of a
+        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `destination` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a
         ///     {@link NetworkSecurityGroup}.
         /// 
         /// </value>
@@ -157,7 +157,7 @@ namespace Oci.CoreService.Models
         ///     {@link Service} (the rule is for traffic coming from a
         ///     particular `Service` through a service gateway).
         /// <br/>
-        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `source` is the OCID of a
+        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `source` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a
         ///     {@link NetworkSecurityGroup}.
         /// 
         /// </value>
@@ -180,7 +180,7 @@ namespace Oci.CoreService.Models
         ///     {@link Service} (the rule is for traffic coming from a
         ///     particular `Service` through a service gateway).
         /// <br/>
-        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `source` is the OCID of a
+        ///   * `NETWORK_SECURITY_GROUP`: If the rule's `source` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a
         ///     {@link NetworkSecurityGroup}.
         /// 
         /// </value>

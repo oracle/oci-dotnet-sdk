@@ -28,7 +28,7 @@ namespace Oci.RoverService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Number of nodes desired in the cluster, between 5 and 15.
+        /// Number of nodes desired in the cluster, in standalone clusters, between 5 and 15 inclusive. In station clusters, between 15 and 30 inclusive.
         /// </value>
         [JsonProperty(PropertyName = "clusterSize")]
         public System.Nullable<int> ClusterSize { get; set; }
@@ -121,6 +121,30 @@ namespace Oci.RoverService.Models
         /// </value>
         [JsonProperty(PropertyName = "timePickupExpected")]
         public System.Nullable<System.DateTime> TimePickupExpected { get; set; }
+        
+        /// <value>
+        /// The flag indicating that customer requests data to be imported to OCI upon Rover cluster return.
+        /// </value>
+        [JsonProperty(PropertyName = "isImportRequested")]
+        public System.Nullable<bool> IsImportRequested { get; set; }
+        
+        /// <value>
+        /// An OCID of a compartment where data will be imported to upon Rover cluster return.
+        /// </value>
+        [JsonProperty(PropertyName = "importCompartmentId")]
+        public string ImportCompartmentId { get; set; }
+        
+        /// <value>
+        /// Name of a bucket where files from NFS share will be imported to upon Rover cluster return.
+        /// </value>
+        [JsonProperty(PropertyName = "importFileBucket")]
+        public string ImportFileBucket { get; set; }
+        
+        /// <value>
+        /// Validation code returned by data validation tool. Required for return shipping label generation if data import was requested.
+        /// </value>
+        [JsonProperty(PropertyName = "dataValidationCode")]
+        public string DataValidationCode { get; set; }
         
         /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no

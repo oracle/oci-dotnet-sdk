@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Data that defines the instance reservation configuration.
+    /// Data that defines the capacity configuration.
     /// 
     /// </summary>
     public class InstanceReservationConfig 
     {
         
         /// <value>
-        /// The fault domain of this reservation configuration.
-        /// If a value is not supplied, this reservation configuration is applicable to all fault domains in the specified availability domain.
+        /// The fault domain of this capacity configuration.
+        /// If a value is not supplied, this capacity configuration is applicable to all fault domains in the specified availability domain.
         /// For more information, see [Capacity Reservations](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/reserve-capacity.htm).
         /// 
         /// </value>
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         public InstanceReservationShapeConfigDetails InstanceShapeConfig { get; set; }
         
         /// <value>
-        /// The amount of capacity reserved in this configuration.
+        /// The total number of instances that can be launched from the capacity configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> ReservedCount { get; set; }
         
         /// <value>
-        /// The amount of capacity in use out of the total capacity reserved in this reservation configuration.
+        /// The amount of capacity in use out of the total capacity reserved in this capacity configuration.
         /// </value>
         /// <remarks>
         /// Required
