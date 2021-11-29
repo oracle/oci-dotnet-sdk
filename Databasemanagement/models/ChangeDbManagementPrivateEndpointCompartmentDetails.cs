@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details used to change the compartment of a Database Management private endpoint.
+    /// The details used to move the Database Management private endpoint to another compartment.
     /// </summary>
     public class ChangeDbManagementPrivateEndpointCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the new compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to which the Database Management private endpoint needs to be moved.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

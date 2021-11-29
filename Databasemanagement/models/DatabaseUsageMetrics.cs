@@ -41,7 +41,9 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
-        /// The subtype of the Oracle Database. Indicates whether the database is a Container Database, Pluggable Database, or a Non-container Database.
+        /// The subtype of the Oracle Database. Indicates whether the database is a Container Database,
+        /// Pluggable Database, Non-container Database, Autonomous Database, or Autonomous Container Database.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -59,6 +61,13 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
+        
+        /// <value>
+        /// The workload type of the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "workloadType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<WorkloadType> WorkloadType { get; set; }
         
         /// <value>
         /// The display name of the Managed Database.

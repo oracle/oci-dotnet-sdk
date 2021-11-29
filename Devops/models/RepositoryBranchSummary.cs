@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Branch related information
+    /// Branch related information.
     /// </summary>
     public class RepositoryBranchSummary : RepositoryRefSummary
     {

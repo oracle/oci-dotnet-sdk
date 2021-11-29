@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Ref object with name and commitId
+    /// Reference object with name and commit ID.
     /// </summary>
     [JsonConverter(typeof(RepositoryRefModelConverter))]
     public class RepositoryRef 
     {
         
         /// <value>
-        /// Unique Ref name inside a repository
+        /// Unique reference name inside a repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DevopsService.Models
         public string RefName { get; set; }
                 ///
         /// <value>
-        /// The type of Ref (Branch or Tag)
+        /// The type of reference (Branch or Tag).
         /// </value>
         ///
         public enum RefTypeEnum {
@@ -45,7 +45,7 @@ namespace Oci.DevopsService.Models
 
         
         /// <value>
-        /// Unique full ref name inside a repository
+        /// Unique full reference name inside a repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         public string FullRefName { get; set; }
         
         /// <value>
-        /// The OCID of the repository containing the ref.
+        /// The OCID of the repository containing the reference.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Details about a line within the diff.
+    /// Details about a line within the difference.
     /// </summary>
     public class DiffLineDetails 
     {
@@ -40,7 +40,7 @@ namespace Oci.DevopsService.Models
         public string LineContent { get; set; }
                 ///
         /// <value>
-        /// Indicates whether a line in a conflicted section of the diff is from the base version, the target version, or if its just a marker indicating the beginning, middle, or end of a conflicted section.
+        /// Indicates whether a line in a conflicted section of the difference is from the base version, the target version, or if its just a marker indicating the beginning, middle, or end of a conflicted section.
         /// </value>
         ///
         public enum ConflictMarkerEnum {
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// Indicates whether a line in a conflicted section of the diff is from the base version, the target version, or if its just a marker indicating the beginning, middle, or end of a conflicted section.
+        /// Indicates whether a line in a conflicted section of the difference is from the base version, the target version, or if its just a marker indicating the beginning, middle, or end of a conflicted section.
         /// </value>
         [JsonProperty(PropertyName = "conflictMarker")]
         [JsonConverter(typeof(StringEnumConverter))]

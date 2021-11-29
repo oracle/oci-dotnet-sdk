@@ -82,5 +82,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "memoryAggregateMetrics")]
         public MemoryAggregateMetrics MemoryAggregateMetrics { get; set; }
         
+        [JsonProperty(PropertyName = "cpuUtilizationAggregateMetrics")]
+        public CpuUtilizationAggregateMetrics CpuUtilizationAggregateMetrics { get; set; }
+        
     }
 }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies an array of Artifacts that need to be pushed to the artifactory stores.
+    /// Specifies an array of artifacts that need to be pushed to the artifactory stores.
     /// </summary>
     public class DeliverArtifactCollection 
     {
         
         /// <value>
-        /// Collection of Artifacts that were generated in the Build Stage and need to be pushed to the artifactory stores. In case of UPDATE operation, replaces existing artifacts list. Merging with existing artifacts is not supported.
+        /// Collection of artifacts that were generated in the Build stage and need to be pushed to the artifactory stores. In case of UPDATE operation, replaces existing artifacts list. Merging with existing artifacts is not supported.
         /// </value>
         /// <remarks>
         /// Required

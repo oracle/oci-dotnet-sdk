@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about new BuildRun.
+    /// Information about the new build run.
     /// </summary>
     public class CreateBuildRunDetails 
     {
         
         /// <value>
-        /// BuildRun identifier which can be renamed and is not necessarily unique
+        /// Build run display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Pipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// A single step in a BuildPipeline. A stage takes a specific designated action. There are
-    /// many types of stages. For eg. `Build` stage, `Deliver Artifact` Stage.
+    /// A single node in a build pipeline. A stage takes a specific designated action. 
+    /// There are many types of stages such as 'Build' and 'Deliver Artifacts'.
     /// 
     /// </summary>
     [JsonConverter(typeof(BuildPipelineStageModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,19 +35,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Stage identifier which can be renamed and is not necessarily unique
+        /// Stage display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the BuildStage
+        /// Optional description about the build stage.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Build Pipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         /// <remarks>
         /// Required
@@ -67,7 +67,7 @@ namespace Oci.DevopsService.Models
         public string BuildPipelineId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment where the pipeline is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -77,8 +77,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// List of stage types. It includes 'Wait stage', 'Build Stage', 'Deliver Artifact Stage'
-        /// and 'Trigger Deployment Stage'.
+        /// Defines the stage type, which is one of the following: Build, Deliver Artifacts, Wait, and Trigger Deployment.
         /// 
         /// </value>
         ///
@@ -95,19 +94,19 @@ namespace Oci.DevopsService.Models
 
         
         /// <value>
-        /// The time at which the Stage was created. An RFC3339 formatted datetime string
+        /// The time the stage was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time at which the Stage was updated. An RFC3339 formatted datetime string
+        /// The time the stage was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the Stage.
+        /// The current state of the stage.
         /// 
         /// </value>
         ///
@@ -127,7 +126,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current state of the Stage.
+        /// The current state of the stage.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

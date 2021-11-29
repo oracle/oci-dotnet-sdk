@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Description of Repository.
+    /// Repositories containing the source code to build and deploy.
     /// </summary>
     public class Repository 
     {
@@ -38,7 +38,7 @@ namespace Oci.DevopsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The OCID of the repository's Compartment.
+        /// The OCID of the repository's compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,13 +48,13 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Tenancy unique namespace
+        /// Tenancy unique namespace.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
         
         /// <value>
-        /// The OCID of the Project containing the repository.
+        /// The OCID of the DevOps project containing the repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,39 +64,39 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Project unique Name under namespace
+        /// Unique project name in a namespace.
         /// </value>
         [JsonProperty(PropertyName = "projectName")]
         public string ProjectName { get; set; }
         
         /// <value>
-        /// ssh url user utilized to git clone, pull and push
+        /// SSH URL that you use to git clone, pull and push.
         /// </value>
         [JsonProperty(PropertyName = "sshUrl")]
         public string SshUrl { get; set; }
         
         /// <value>
-        /// http url user utilized to git clone, pull and push
+        /// HTTP URL that you use to git clone, pull and push.
         /// </value>
         [JsonProperty(PropertyName = "httpUrl")]
         public string HttpUrl { get; set; }
         
         /// <value>
-        /// The description of this repository. Avoid entering confidential information
+        /// Details of the repository. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The default branch of the repository
+        /// The default branch of the repository.
         /// </value>
         [JsonProperty(PropertyName = "defaultBranch")]
         public string DefaultBranch { get; set; }
                 ///
         /// <value>
-        /// Type of repository
-        /// MIRRORED - Repository was created by mirroring an existing repository.
-        /// HOSTED - Repository was created and hosted using OCI Devops Code Repository.
+        /// Type of repository:
+        /// Mirrored - Repository created by mirroring an existing repository.
+        /// Hosted - Repository created and hosted using OCI DevOps code repository.
         /// 
         /// </value>
         ///
@@ -108,9 +108,9 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// Type of repository
-        /// MIRRORED - Repository was created by mirroring an existing repository.
-        /// HOSTED - Repository was created and hosted using OCI Devops Code Repository.
+        /// Type of repository:
+        /// Mirrored - Repository created by mirroring an existing repository.
+        /// Hosted - Repository created and hosted using OCI DevOps code repository.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
@@ -121,19 +121,19 @@ namespace Oci.DevopsService.Models
         public MirrorRepositoryConfig MirrorRepositoryConfig { get; set; }
         
         /// <value>
-        /// The time the the Repository was created. An RFC3339 formatted datetime string
+        /// The time the repository was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Repository was updated. An RFC3339 formatted datetime string
+        /// The time the repository was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the Repository.
+        /// The current state of the repository.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -146,7 +146,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current state of the Repository.
+        /// The current state of the repository.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -185,9 +185,9 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// Trigger Build Events supported for this repository
-        /// PUSH - Build is triggered when a push event occurs
-        /// COMMIT_UPDATES - Build is triggered when new commits are mirrored into repository
+        /// Trigger build events supported for this repository:
+        /// Push - Build is triggered when a push event occurs.
+        /// Commit updates - Build is triggered when new commits are mirrored into a repository.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "triggerBuildEvents", ItemConverterType = typeof(StringEnumConverter))]

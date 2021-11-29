@@ -25,7 +25,7 @@ namespace Oci.DatabasemanagementService.Responses
 
 
         /// <value>
-        /// some decimal number representing the number of seconds the client should wait before polling this endpoint again
+        /// A decimal number representing the number of seconds the client should wait before polling this work request again
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "retry-after")]
         public System.Nullable<float> RetryAfter { get; set; }

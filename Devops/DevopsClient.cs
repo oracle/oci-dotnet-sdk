@@ -105,7 +105,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Cancels the Build Run based on build run id provided in request
+        /// Cancels the build run based on the build run ID provided in the request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -222,7 +222,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new BuildPipeline.
+        /// Creates a new build pipeline.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -262,7 +262,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new Stage.
+        /// Creates a new stage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -302,7 +302,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Starts a build pipeline run for a predefined build pipeline
+        /// Starts a build pipeline run for a predefined build pipeline.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -342,7 +342,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new Connection.
+        /// Creates a new connection.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -616,7 +616,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new Repository.
+        /// Creates a new repository.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -656,7 +656,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new Trigger.
+        /// Creates a new trigger.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -696,7 +696,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a BuildPipeline resource by identifier
+        /// Deletes a build pipeline resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -735,7 +735,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a Stage based on stage id provided in request
+        /// Deletes a stage based on the stage ID provided in the request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -774,7 +774,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a Connection resource by identifier
+        /// Deletes a connection resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1047,7 +1047,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a Repository resource by identifier
+        /// Deletes a repository resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1086,7 +1086,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a Trigger resource by identifier
+        /// Deletes a trigger resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1125,7 +1125,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a BuildPipeline by identifier
+        /// Retrieves a build pipeline by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1164,7 +1164,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Stage based on the stage id provided in request
+        /// Retrieves a stage based on the stage ID provided in the request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1203,7 +1203,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns the details of a build exection for a given build run id.
+        /// Returns the details of a build run for a given build run ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1243,7 +1243,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Repository&#39;s Commit by commitId
+        /// Retrieves a repository&#39;s commit by commit ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1282,7 +1282,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Compares two revisions for their differences. Supports comparison between two refs or commits.
+        /// Compares two revisions for their differences. Supports comparison between two references or commits.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1322,7 +1322,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Connection by identifier
+        /// Retrieves a connection by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1596,7 +1596,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns either current mirror record or last successful mirror record for a specific mirror repository
+        /// Returns either current mirror record or last successful mirror record for a specific mirror repository.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1636,7 +1636,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Get blob of specific branch name/commit id and file path
+        /// Retrieves blob of specific branch name/commit ID and file path.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1676,7 +1676,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Get contents of a specified Object
+        /// Retrieve contents of a specified object.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1755,7 +1755,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Repository&#39;s Ref by its name with preference for branches over tags if the name is ambiguous. Can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;.
+        /// Retrieves a repository&#39;s reference by its name with preference for branches over tags if the name is ambiguous. This can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1794,7 +1794,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Repository by identifier
+        /// Retrieves a repository by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1833,7 +1833,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Return the archived repository information
+        /// Returns the archived repository information.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1873,7 +1873,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Get lines of a specified file. Supports starting line number and limit.
+        /// Retrieve lines of a specified file. Supports starting line number and limit.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1913,7 +1913,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Gets a Trigger by identifier
+        /// Retrieves a trigger by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1991,7 +1991,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Get a list of all the authors
+        /// Retrieve a list of all the authors.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2031,7 +2031,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns summary of list of all Stages in a compartment or buildPipeline
+        /// Returns a list of all stages in a compartment or build pipeline.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2071,7 +2071,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of BuildPipelines.
+        /// Returns a list of build pipelines.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2111,7 +2111,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of build runs summary.
+        /// Returns a list of build run summary.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2151,7 +2151,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Compares two revisions and lists the differences. Supports comparison between two refs or commits.
+        /// Compares two revisions and lists the differences. Supports comparison between two references or commits.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2191,7 +2191,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of Commits.
+        /// Returns a list of commits.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2231,7 +2231,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of Connections.
+        /// Returns a list of connections.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2466,7 +2466,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of mirror entry in history within 30 days
+        /// Returns a list of mirror entry in history within 30 days.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2506,7 +2506,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Fetches a list of files and directories in a repository.
+        /// Retrieves a list of files and directories in a repository.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2585,7 +2585,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of Refs.
+        /// Returns a list of references.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2625,7 +2625,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of Repositories given a compartmentId or a projectId.
+        /// Returns a list of repositories given a compartment ID or a project ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2665,7 +2665,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Returns a list of Triggers.
+        /// Returns a list of triggers.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2822,7 +2822,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Synchronize a mirrored repository to the latest version from external providers
+        /// Synchronize a mirrored repository to the latest version from external providers.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2862,7 +2862,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new Ref or updates an existing one.
+        /// Creates a new reference or updates an existing one.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2902,7 +2902,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the BuildPipeline
+        /// Updates the build pipeline.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2941,7 +2941,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the Stage based on the stage id provided in request
+        /// Updates the stage based on the stage ID provided in the request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2980,7 +2980,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the BuildRun
+        /// Updates the build run.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3019,7 +3019,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the Connection
+        /// Updates the connection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3292,7 +3292,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the Repository
+        /// Updates the repository.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3331,7 +3331,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Updates the Trigger
+        /// Updates the trigger.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

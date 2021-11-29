@@ -23,7 +23,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Stage identifier which can be renamed and is not necessarily unique
+        /// Stage display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Build Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Build Pipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,7 +59,7 @@ namespace Oci.DevopsService.Models
         public string BuildPipelineId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment where the pipeline is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,19 +70,19 @@ namespace Oci.DevopsService.Models
         
         
         /// <value>
-        /// The time at which the Stage was created. An RFC3339 formatted datetime string
+        /// The time the stage was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time at which the Stage was updated. An RFC3339 formatted datetime string
+        /// The time the stage was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Stage.
+        /// The current state of the stage.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -96,7 +96,7 @@ namespace Oci.DevopsService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Optional description about the BuildStage
+        /// Optional description about the build stage.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

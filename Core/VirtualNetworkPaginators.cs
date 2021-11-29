@@ -932,6 +932,104 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListIPSecConnectionTunnelRoutes operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListIPSecConnectionTunnelRoutesResponse> ListIPSecConnectionTunnelRoutesResponseEnumerator(ListIPSecConnectionTunnelRoutesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListIPSecConnectionTunnelRoutesRequest, ListIPSecConnectionTunnelRoutesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListIPSecConnectionTunnelRoutes(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the TunnelRouteSummary objects
+        /// contained in responses from the ListIPSecConnectionTunnelRoutes operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<TunnelRouteSummary> ListIPSecConnectionTunnelRoutesRecordEnumerator(ListIPSecConnectionTunnelRoutesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListIPSecConnectionTunnelRoutesRequest, ListIPSecConnectionTunnelRoutesResponse, TunnelRouteSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListIPSecConnectionTunnelRoutes(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListIPSecConnectionTunnelSecurityAssociations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListIPSecConnectionTunnelSecurityAssociationsResponse> ListIPSecConnectionTunnelSecurityAssociationsResponseEnumerator(ListIPSecConnectionTunnelSecurityAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListIPSecConnectionTunnelSecurityAssociationsRequest, ListIPSecConnectionTunnelSecurityAssociationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListIPSecConnectionTunnelSecurityAssociations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the TunnelSecurityAssociationSummary objects
+        /// contained in responses from the ListIPSecConnectionTunnelSecurityAssociations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<TunnelSecurityAssociationSummary> ListIPSecConnectionTunnelSecurityAssociationsRecordEnumerator(ListIPSecConnectionTunnelSecurityAssociationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListIPSecConnectionTunnelSecurityAssociationsRequest, ListIPSecConnectionTunnelSecurityAssociationsResponse, TunnelSecurityAssociationSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListIPSecConnectionTunnelSecurityAssociations(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListIPSecConnectionTunnels operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

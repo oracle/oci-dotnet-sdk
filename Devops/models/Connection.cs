@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The properties that define a connection
+    /// The properties that define a connection to external repositories.
     /// </summary>
     [JsonConverter(typeof(ConnectionModelConverter))]
     public class Connection 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,19 +33,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Optional description about the connection
+        /// Optional description about the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Connection identifier which can be renamed and is not necessarily unique
+        /// Connection display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment containing the connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -77,19 +77,19 @@ namespace Oci.DevopsService.Models
 
         
         /// <value>
-        /// The time the Connection was created. An RFC3339 formatted datetime string
+        /// The time the connection was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time at which the Connection was updated. An RFC3339 formatted datetime string
+        /// The time the connection was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the Connection.
+        /// The current state of the connection.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -98,7 +98,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current state of the Connection.
+        /// The current state of the connection.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

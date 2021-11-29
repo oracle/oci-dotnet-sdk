@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Details of the Artifact delivered via DeliverArtifactStage.
+    /// Details of the artifacts delivered through the Deliver Artifacts stage.
     /// </summary>
     [JsonConverter(typeof(DeliveredArtifactModelConverter))]
     public class DeliveredArtifact 
     {
         
         /// <value>
-        /// The OCID of the deploy artifact definition
+        /// The OCID of the deployment artifact definition.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DevopsService.Models
         public string DeployArtifactId { get; set; }
         
         /// <value>
-        /// Name of the output artifact defined in the build spec
+        /// Name of the output artifact defined in the build specification file.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DevopsService.Models
         public string OutputArtifactName { get; set; }
                 ///
         /// <value>
-        /// Type of Artifact Delivered
+        /// Type of artifact delivered.
         /// </value>
         ///
         public enum ArtifactTypeEnum {

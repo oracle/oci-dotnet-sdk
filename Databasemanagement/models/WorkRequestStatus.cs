@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// Status of work request operation
+  /// The status of work request operation.
   /// </summary>
   public enum WorkRequestStatus {
       [EnumMember(Value = "ACCEPTED")]

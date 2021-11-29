@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Attributes to filter Gitlab events
+    /// Attributes to filter GitLab events.
     /// </summary>
     public class GitlabFilterAttributes 
     {
         
         /// <value>
-        /// Branch for push event; source branch for pull requests
+        /// Branch for push event; source branch for pull requests.
         /// </value>
         [JsonProperty(PropertyName = "headRef")]
         public string HeadRef { get; set; }
         
         /// <value>
-        /// The target branch for pull requests; not applicable for push
+        /// The target branch for pull requests; not applicable for push requests.
         /// </value>
         [JsonProperty(PropertyName = "baseRef")]
         public string BaseRef { get; set; }

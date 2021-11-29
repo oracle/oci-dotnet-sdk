@@ -20,7 +20,7 @@ namespace Oci.ApmcontrolplaneService.Requests
     {
         
         /// <value>
-        /// Details for the new APM Domain.
+        /// Details for the new APM domain.
         /// </value>
         /// <remarks>
         /// Required

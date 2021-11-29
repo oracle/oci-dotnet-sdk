@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about cancel BuildRun.
+    /// Information about canceling the build run.
     /// </summary>
     public class CancelBuildRunDetails 
     {
         
         /// <value>
-        /// The reason for canceling the run.
+        /// The reason for canceling the build run.
         /// </value>
         /// <remarks>
         /// Required

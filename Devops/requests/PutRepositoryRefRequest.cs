@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DevopsService.Requests
         public string RepositoryId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given Ref name.
+        /// A filter to return only resources that match the given reference name.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DevopsService.Requests
         public string RefName { get; set; }
         
         /// <value>
-        /// The information to create a Ref with the type specified in the query
+        /// The information to create a reference with the type specified in the query.
         /// </value>
         /// <remarks>
         /// Required

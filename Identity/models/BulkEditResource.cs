@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The type of resource. See {@link #bulkEditResourceTypes(BulkEditResourceTypesRequest) bulkEditResourceTypes}.
+        /// The type of resource. See {@link #listBulkEditTagsResourceTypes(ListBulkEditTagsResourceTypesRequest) listBulkEditTagsResourceTypes}.
         /// </value>
         /// <remarks>
         /// Required

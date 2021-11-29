@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmcontrolplaneService.Models
 {
     /// <summary>
-    /// A description of workrequest status
+    /// A description of work request.
     /// </summary>
     public class WorkRequest 
     {
         
         /// <value>
-        /// Type of the work request
+        /// The type of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request.
+        /// The OCID of the compartment that contains the work request.
         /// 
         /// </value>
         /// <remarks>
@@ -65,7 +65,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The resources affected by this work request.
+        /// The resources affected by the work request.
         /// </value>
         /// <remarks>
         /// Required

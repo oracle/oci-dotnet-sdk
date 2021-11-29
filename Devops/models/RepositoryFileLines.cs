@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing the lines of a file in a repository
+    /// Object containing the lines of a file in a repository.
     /// </summary>
     public class RepositoryFileLines 
     {
         
         /// <value>
-        /// The list of lines in the file
+        /// The list of lines in the file.
         /// </value>
         /// <remarks>
         /// Required

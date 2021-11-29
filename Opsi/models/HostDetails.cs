@@ -32,6 +32,16 @@ namespace Oci.OpsiService.Models
         public string Id { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// The host name. The host name is unique amongst the hosts managed by the same management agent.
         /// </value>
         /// <remarks>

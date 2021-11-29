@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DevopsService.Requests
         public string RepositoryId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given Ref name.
+        /// A filter to return only resources that match the given reference name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "refName")]
         public string RefName { get; set; }

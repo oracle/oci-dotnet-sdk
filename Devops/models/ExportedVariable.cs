@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Values for Exported variables.
+    /// Values for exported variables.
     /// </summary>
     public class ExportedVariable 
     {
         
         /// <value>
-        /// Name of the parameter (Case-sensitive).
+        /// Name of the parameter (case-sensitive). Parameter name must be ^[a-zA-Z][a-zA-Z_0-9]*$.
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +33,7 @@ namespace Oci.DevopsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// value of the argument
+        /// Value of the argument.
         /// </value>
         /// <remarks>
         /// Required

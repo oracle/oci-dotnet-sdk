@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing summary of authors in a repository
+    /// Object containing summary of authors in a repository.
     /// </summary>
     public class RepositoryAuthorSummary 
     {
         
         /// <value>
-        /// Author name
+        /// Author name.
         /// </value>
         /// <remarks>
         /// Required

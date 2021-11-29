@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,15 +30,15 @@ namespace Oci.DevopsService.Requests
         public string RepositoryId { get; set; }
         
         /// <value>
-        /// The name of branch/tag or commit hash it points to. If names conflict order of preference is commit > branch > tag.
-        /// You can disambiguate with \"heads/foobar\" and \"tags/foobar\". Repository's default branch will be used if left blank.
+        /// The name of branch/tag or commit hash it points to. If names conflict, order of preference is commit > branch > tag.
+        /// You can disambiguate with \"heads/foobar\" and \"tags/foobar\". If left blank repository's default branch will be used.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "ref")]
         public string Ref { get; set; }
         
         /// <value>
-        /// Flag to determine if files should be retrived recursively. false by default
+        /// Flag to determine if files must be retrived recursively. Flag is False by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pathsInSubtree")]
         public System.Nullable<bool> PathsInSubtree { get; set; }

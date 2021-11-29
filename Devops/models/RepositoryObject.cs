@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing information about files and directories in a repository
+    /// Object containing information about files and directories in a repository.
     /// </summary>
     public class RepositoryObject 
     {
@@ -46,7 +46,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Size in Bytes
+        /// Size in bytes.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<long> SizeInBytes { get; set; }
         
         /// <value>
-        /// SHA-1 hash of git object
+        /// SHA-1 hash of git object.
         /// </value>
         /// <remarks>
         /// Required
@@ -66,7 +66,7 @@ namespace Oci.DevopsService.Models
         public string Sha { get; set; }
         
         /// <value>
-        /// flag to determine is the object contains binary file content or not.
+        /// Flag to determine if the object contains binary file content or not.
         /// </value>
         [JsonProperty(PropertyName = "isBinary")]
         public System.Nullable<bool> IsBinary { get; set; }

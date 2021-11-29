@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Requests
         public string ProjectId { get; set; }
         
         /// <value>
-        /// A filter to return only Triggers that matches the given lifecycleState
+        /// A filter to return only triggers that matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Trigger.LifecycleStateEnum> LifecycleState { get; set; }
@@ -44,7 +44,7 @@ namespace Oci.DevopsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique Trigger identifier
+        /// Unique trigger identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

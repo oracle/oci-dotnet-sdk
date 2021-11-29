@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies Trigger Deployment Pipleline stage which runs another pipeline of the application.
+    /// Specifies the Trigger Deployment stage, which runs another pipeline of the application.
     /// </summary>
     public class TriggerDeploymentStage : BuildPipelineStage
     {
         
         /// <value>
-        /// A target Pipeline ocid that will be run in this stage.
+        /// A target deployment pipeline OCID that will run in this stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string DeployPipelineId { get; set; }
         
         /// <value>
-        /// A boolean flag specifies whether the parameters should be passed during the deployment trigger.
+        /// A boolean flag that specifies whether all the parameters must be passed when the deployment is triggered.
         /// </value>
         /// <remarks>
         /// Required

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// Type of work request operation
+  /// The type of work request operation.
   /// </summary>
   public enum WorkRequestOperationType {
       [EnumMember(Value = "CREATE_DB_MANAGEMENT_PRIVATE_ENDPOINT")]

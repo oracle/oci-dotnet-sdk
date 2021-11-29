@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required

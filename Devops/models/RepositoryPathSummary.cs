@@ -16,43 +16,43 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing information about files and directories in a repository
+    /// Object containing information about files and directories in a repository.
     /// </summary>
     public class RepositoryPathSummary 
     {
         
         /// <value>
-        /// File or Directory
+        /// File or directory.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Size of file or directory
+        /// Size of file or directory.
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
         public System.Nullable<long> SizeInBytes { get; set; }
         
         /// <value>
-        /// Name of file or directory
+        /// Name of file or directory.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Path to file or directory in a repository
+        /// Path to file or directory in a repository.
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
         
         /// <value>
-        /// SHA-1 checksum of blob or tree
+        /// SHA-1 checksum of blob or tree.
         /// </value>
         [JsonProperty(PropertyName = "sha")]
         public string Sha { get; set; }
         
         /// <value>
-        /// The giturl of the submodule
+        /// The git URL of the submodule.
         /// </value>
         [JsonProperty(PropertyName = "submoduleGitUrl")]
         public string SubmoduleGitUrl { get; set; }

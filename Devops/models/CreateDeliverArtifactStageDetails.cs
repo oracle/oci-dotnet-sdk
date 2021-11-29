@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the DeliverArtifact Stage.
+    /// Specifies the Deliver Artifacts stage.
     /// </summary>
     public class CreateDeliverArtifactStageDetails : CreateBuildPipelineStageDetails
     {

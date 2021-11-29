@@ -50,6 +50,55 @@ namespace Oci.BlockchainService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListBlockchainPlatformPatches operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListBlockchainPlatformPatchesResponse> ListBlockchainPlatformPatchesResponseEnumerator(ListBlockchainPlatformPatchesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListBlockchainPlatformPatchesRequest, ListBlockchainPlatformPatchesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBlockchainPlatformPatches(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the BlockchainPlatformPatchSummary objects
+        /// contained in responses from the ListBlockchainPlatformPatches operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<BlockchainPlatformPatchSummary> ListBlockchainPlatformPatchesRecordEnumerator(ListBlockchainPlatformPatchesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListBlockchainPlatformPatchesRequest, ListBlockchainPlatformPatchesResponse, BlockchainPlatformPatchSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListBlockchainPlatformPatches(request, retryConfiguration, cancellationToken),
+                response => response.BlockchainPlatformPatchCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListBlockchainPlatforms operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

@@ -62,6 +62,18 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Identifier for the sighting type
+        /// </value>
+        [JsonProperty(PropertyName = "sightingType")]
+        public string SightingType { get; set; }
+        
+        /// <value>
+        /// Name of the sighting type
+        /// </value>
+        [JsonProperty(PropertyName = "sightingTypeDisplayName")]
+        public string SightingTypeDisplayName { get; set; }
+        
+        /// <value>
         /// Name of the Impacted Resource
         /// </value>
         /// <remarks>

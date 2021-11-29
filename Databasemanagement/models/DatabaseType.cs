@@ -14,11 +14,12 @@ namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
   /// The type of Oracle Database installation:
-    /// <br/>
     /// - EXTERNAL_SIDB: Single instance external database.
     /// - EXTERNAL_RAC: Oracle Real Application Clusters (Oracle RAC) external database.
     /// - CLOUD_SIDB: Single instance database in Oracle Cloud.
     /// - CLOUD_RAC: Oracle RAC database in Oracle Cloud.
+    /// - SHARED: Autonomous shared database in Oracle Cloud.
+    /// - DEDICATED: Autonomous dedicated database in Oracle Cloud.
     /// 
   /// </summary>
   public enum DatabaseType {
@@ -29,6 +30,10 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "CLOUD_SIDB")]
       CloudSidb,
       [EnumMember(Value = "CLOUD_RAC")]
-      CloudRac
+      CloudRac,
+      [EnumMember(Value = "SHARED")]
+      Shared,
+      [EnumMember(Value = "DEDICATED")]
+      Dedicated
   }
 }

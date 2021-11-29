@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Details of OCIR Artifact delivered via DeliverArtifactStage.
+    /// Details of the container registry artifacts delivered through the Deliver Artifacts stage.
     /// </summary>
     public class ContainerRegistryDeliveredArtifact : DeliveredArtifact
     {
         
         /// <value>
-        /// The Hash of the OCIR artifact pushed by the DeliverArtifactStage
+        /// The hash of the container registry artifact pushed by the Deliver Artifacts stage.
         /// </value>
         /// <remarks>
         /// Required

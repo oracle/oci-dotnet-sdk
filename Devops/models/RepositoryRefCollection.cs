@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of a Ref search.
+    /// Result of a reference search.
     /// </summary>
     public class RepositoryRefCollection 
     {
         
         /// <value>
-        /// List of Refs.
+        /// List of references.
         /// </value>
         /// <remarks>
         /// Required

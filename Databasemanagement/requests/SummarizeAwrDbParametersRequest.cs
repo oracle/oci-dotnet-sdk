@@ -150,7 +150,7 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<ValueModifiedEnum> ValueModified { get; set; }
         
         /// <value>
-        /// The page token representing the page, from where the next set of paginated results
+        /// The page token representing the page from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 
         /// </value>

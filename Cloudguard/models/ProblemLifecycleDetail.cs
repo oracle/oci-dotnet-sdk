@@ -21,6 +21,8 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "RESOLVED")]
       Resolved,
       [EnumMember(Value = "DISMISSED")]
-      Dismissed
+      Dismissed,
+      [EnumMember(Value = "DELETED")]
+      Deleted
   }
 }

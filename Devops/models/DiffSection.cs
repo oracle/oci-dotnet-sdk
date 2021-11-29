@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Details about a section of changes within a DiffChunk.
+    /// Details about a section of changes within a difference chunk.
     /// </summary>
     public class DiffSection 
     {

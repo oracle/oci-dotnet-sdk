@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies details of build run through Gitlab.
+    /// Specifies details of build run through GitLab.
     /// </summary>
     public class GitlabBuildRunSource : BuildRunSource
     {
         
         /// <value>
-        /// The Trigger that invoked this build run
+        /// The trigger that invoked the build run.
         /// </value>
         /// <remarks>
         /// Required

@@ -66,7 +66,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Moves a APM Domain into a different compartment. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves an APM domain into a different compartment. When provided, If-Match is checked against ETag values of the APM domain.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -105,7 +105,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Creates a new APM Domain.
+        /// Creates a new APM domain.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -145,9 +145,9 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Delete the specified APM domain asynchronously. The APM domain is placed in the &#39;Deleting&#39; state and will stop
+        /// Deletes the specified APM domain asynchronously. The APM domain is placed in the &#39;Deleting&#39; state and will stop
         /// accepting any operation requests. All resources associated with the APM domain are eventually recovered. Use the
-        /// returned work request to track the progress of the background activity to complete deleting the domain.
+        /// returned work request ID to track the progress of the background activity to complete deleting the APM domain.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -228,7 +228,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Gets details of APM Domain by identifier
+        /// Gets the details of the APM domain specified by OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -306,7 +306,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Returns a (paginated) list of work requests related to a specific APM Domain.
+        /// Returns a (paginated) list of work requests related to a specific APM domain.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -346,7 +346,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Lists all APM Domains for the specified tenant compartment.
+        /// Lists all APM domains for the specified tenant compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -386,7 +386,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Lists all Data Keys for the specified APM Domain. The caller may filter the list by specifying the &#39;dataKeyType&#39;
+        /// Lists all Data Keys for the specified APM domain. The caller may filter the list by specifying the &#39;dataKeyType&#39;
         /// query parameter.
         /// 
         /// </summary>
@@ -427,7 +427,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Returns a (paginated) list of errors for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -467,7 +467,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for a given work request.
+        /// Returns a (paginated) list of logs for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -588,7 +588,7 @@ namespace Oci.ApmcontrolplaneService
         }
 
         /// <summary>
-        /// Update the APM domain when it is ready and active.
+        /// Updates the APM domain.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

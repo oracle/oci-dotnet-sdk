@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Summary of the BuildPipeline.
+    /// Summary of the build pipeline.
     /// </summary>
     public class BuildPipelineSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Optional description about the BuildPipeline
+        /// Optional description about the build pipeline.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// BuildPipeline identifier which can be renamed and is not necessarily unique.
+        /// Build pipeline display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment where the build pipeline is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,19 +64,19 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// The time the the BuildPipeline was created. An RFC3339 formatted datetime string
+        /// The time the build pipeline was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BuildPipeline was updated. An RFC3339 formatted datetime string
+        /// The time the build pipeline was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the BuildPipeline.
+        /// The current state of the build pipeline.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

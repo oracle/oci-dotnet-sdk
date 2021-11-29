@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details for the new Repository.
+        /// Details for the new repository.
         /// </value>
         /// <remarks>
         /// Required

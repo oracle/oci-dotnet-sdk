@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies details of build run through Devops Code Repository.
+    /// Specifies details of build run through DevOps code repository.
     /// </summary>
     public class DevopsCodeRepositoryBuildRunSource : BuildRunSource
     {
         
         /// <value>
-        /// The Trigger that invoked this build run
+        /// The trigger that invoked the build run.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,7 +39,7 @@ namespace Oci.DevopsService.Models
         public TriggerInfo TriggerInfo { get; set; }
         
         /// <value>
-        /// The Devops Code Repository RepoId that invoked this build run
+        /// The DevOps code repository identifier that invoked the build run.
         /// </value>
         /// <remarks>
         /// Required

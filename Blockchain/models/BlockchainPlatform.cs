@@ -76,6 +76,12 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Platform Version
+        /// </value>
+        [JsonProperty(PropertyName = "platformVersion")]
+        public string PlatformVersion { get; set; }
+        
+        /// <value>
         /// The version of the Platform Instance.
         /// </value>
         [JsonProperty(PropertyName = "serviceVersion")]

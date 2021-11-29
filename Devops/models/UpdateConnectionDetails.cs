@@ -24,13 +24,13 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Optional description about the Connection
+        /// Optional description about the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Optional Connection display name
+        /// Optional connection display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

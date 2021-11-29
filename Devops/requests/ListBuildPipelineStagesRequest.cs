@@ -26,7 +26,7 @@ namespace Oci.DevopsService.Requests
         public string Id { get; set; }
         
         /// <value>
-        /// The ID of the parent build pipeline.
+        /// The OCID of the parent build pipeline.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "buildPipelineId")]
         public string BuildPipelineId { get; set; }
@@ -38,7 +38,7 @@ namespace Oci.DevopsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return the stages that match with the given lifecycleState.
+        /// A filter to return the stages that matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<BuildPipelineStage.LifecycleStateEnum> LifecycleState { get; set; }

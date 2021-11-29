@@ -45,5 +45,16 @@ namespace Oci.BlockchainService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or
+        /// server error without risk of executing that same action again. Retry tokens expire after 24
+        /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+        /// has been deleted and purged from the system, then a retry of the original creation request
+        /// might be rejected.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
+        public string OpcRetryToken { get; set; }
     }
 }

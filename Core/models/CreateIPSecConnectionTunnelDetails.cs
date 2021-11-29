@@ -81,6 +81,53 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "bgpSessionConfig")]
         public CreateIPSecTunnelBgpSessionDetails BgpSessionConfig { get; set; }
+                ///
+        /// <value>
+        /// Whether Oracle side is the initiator for negotiation.
+        /// </value>
+        ///
+        public enum OracleInitiationEnum {
+            [EnumMember(Value = "INITIATOR_OR_RESPONDER")]
+            InitiatorOrResponder,
+            [EnumMember(Value = "RESPONDER_ONLY")]
+            ResponderOnly
+        };
+
+        /// <value>
+        /// Whether Oracle side is the initiator for negotiation.
+        /// </value>
+        [JsonProperty(PropertyName = "oracleInitiation")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OracleInitiationEnum> OracleInitiation { get; set; }
+                ///
+        /// <value>
+        /// Whether NAT-T Enabled on the tunnel
+        /// </value>
+        ///
+        public enum NatTranslationEnabledEnum {
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            [EnumMember(Value = "AUTO")]
+            Auto
+        };
+
+        /// <value>
+        /// Whether NAT-T Enabled on the tunnel
+        /// </value>
+        [JsonProperty(PropertyName = "natTranslationEnabled")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NatTranslationEnabledEnum> NatTranslationEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "phaseOneConfig")]
+        public PhaseOneConfigDetails PhaseOneConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "phaseTwoConfig")]
+        public PhaseTwoConfigDetails PhaseTwoConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "dpdConfig")]
+        public DpdConfig DpdConfig { get; set; }
         
         [JsonProperty(PropertyName = "encryptionDomainConfig")]
         public CreateIPSecTunnelEncryptionDomainDetails EncryptionDomainConfig { get; set; }

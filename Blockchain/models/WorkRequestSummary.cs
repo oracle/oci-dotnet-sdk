@@ -30,6 +30,8 @@ namespace Oci.BlockchainService.Models
             CreatePlatform,
             [EnumMember(Value = "UPDATE_PLATFORM")]
             UpdatePlatform,
+            [EnumMember(Value = "UPGRADE_PLATFORM")]
+            UpgradePlatform,
             [EnumMember(Value = "DELETE_PLATFORM")]
             DeletePlatform,
             [EnumMember(Value = "SCALE_PLATFORM")]

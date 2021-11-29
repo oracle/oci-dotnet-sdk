@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The containing collection for the predecessors of a Stage.
+    /// The collection containing the predecessors of a stage.
     /// </summary>
     public class BuildPipelineStagePredecessorCollection 
     {
         
         /// <value>
-        /// A list of BuildPipelineStagePredecessors for a stage.
+        /// A list of build pipeline stage predecessors for a stage.
         /// </value>
         /// <remarks>
         /// Required

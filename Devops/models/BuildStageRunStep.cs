@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The details about each step in Build Stage.
+    /// The details about each step in a Build stage.
     /// </summary>
     public class BuildStageRunStep 
     {

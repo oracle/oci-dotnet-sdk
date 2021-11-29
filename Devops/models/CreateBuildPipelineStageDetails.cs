@@ -16,27 +16,27 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about new Stage.
+    /// The information about a new stage.
     /// </summary>
     [JsonConverter(typeof(CreateBuildPipelineStageDetailsModelConverter))]
     public class CreateBuildPipelineStageDetails 
     {
         
         /// <value>
-        /// Stage identifier which can be renamed and is not necessarily unique
+        /// Stage display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the Stage
+        /// Optional description about the stage.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         
         /// <value>
-        /// buildPipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         /// <remarks>
         /// Required

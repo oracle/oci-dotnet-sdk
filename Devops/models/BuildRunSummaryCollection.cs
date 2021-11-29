@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// List of BuildRunSummary.
+    /// List of build run summary.
     /// </summary>
     public class BuildRunSummaryCollection 
     {
         
         /// <value>
-        /// Array of BuildRunSummary items.
+        /// Array of build run summary items.
         /// </value>
         /// <remarks>
         /// Required

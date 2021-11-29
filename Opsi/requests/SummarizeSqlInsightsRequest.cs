@@ -189,5 +189,12 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "freeformTagExists", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> FreeformTagExists { get; set; }
+        
+        /// <value>
+        /// A flag to search all resources within a given compartment and all sub-compartments.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
     }
 }

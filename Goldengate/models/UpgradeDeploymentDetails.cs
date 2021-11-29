@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// The information about the Patch for a Deployment.
+    /// The information about the Upgrade for a Deployment.
     /// </summary>
     [JsonConverter(typeof(UpgradeDeploymentDetailsModelConverter))]
     public class UpgradeDeploymentDetails 

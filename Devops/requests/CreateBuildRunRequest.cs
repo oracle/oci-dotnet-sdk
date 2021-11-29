@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details the input parameters required to create a new build run.
+        /// Parameter details required to create a new build run.
         /// </value>
         /// <remarks>
         /// Required

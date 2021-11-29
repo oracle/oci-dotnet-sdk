@@ -23,20 +23,20 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Trigger Identifier
+        /// Trigger display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the Trigger
+        /// Optional description about the trigger.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         
         /// <value>
-        /// The list of actions that are to be performed for this Trigger
+        /// The list of actions that are to be performed for this trigger.
         /// </value>
         [JsonProperty(PropertyName = "actions")]
         public System.Collections.Generic.List<TriggerAction> Actions { get; set; }

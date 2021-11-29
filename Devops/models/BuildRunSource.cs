@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The source from which this Build Run was triggered
+    /// The source from which the build run is triggered.
     /// </summary>
     [JsonConverter(typeof(BuildRunSourceModelConverter))]
     public class BuildRunSource 
     {
                 ///
         /// <value>
-        /// Source from which this build run was triggered
+        /// The source from which the build run is triggered.
         /// </value>
         ///
         public enum SourceTypeEnum {

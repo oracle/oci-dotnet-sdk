@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies wait criteria for wait stage.
+    /// Specifies wait criteria for the Wait stage.
     /// </summary>
     [JsonConverter(typeof(UpdateWaitCriteriaDetailsModelConverter))]
     public class UpdateWaitCriteriaDetails 
     {
                 ///
         /// <value>
-        /// wait criteria sub type
+        /// Wait criteria type.
         /// </value>
         ///
         public enum WaitTypeEnum {

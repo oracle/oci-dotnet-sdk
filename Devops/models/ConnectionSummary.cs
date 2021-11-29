@@ -23,7 +23,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,19 +33,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Connection identifier which can be renamed and is not necessarily unique.
+        /// Connection display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the connection
+        /// Optional description about the connection.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment containing the connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -66,13 +66,13 @@ namespace Oci.DevopsService.Models
         
         
         /// <value>
-        /// The time the the connection was created. An RFC3339 formatted datetime string
+        /// The time the connection was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the connection was updated. An RFC3339 formatted daservertetime string
+        /// The time the connection was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

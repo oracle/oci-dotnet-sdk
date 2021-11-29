@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details for the new Trigger.
+        /// Details for the new trigger.
         /// </value>
         /// <remarks>
         /// Required

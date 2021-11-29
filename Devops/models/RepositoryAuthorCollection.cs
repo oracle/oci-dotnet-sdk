@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of List Authors.
+    /// Result of list authors.
     /// </summary>
     public class RepositoryAuthorCollection 
     {

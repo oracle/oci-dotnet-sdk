@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Trigger specific to Gitlab
+    /// Trigger specific to GitLab.
     /// </summary>
     public class GitlabTrigger : Trigger
     {
         
         /// <value>
-        /// The endpoint which listens to Trigger events
+        /// The endpoint that listens to trigger events.
         /// </value>
         /// <remarks>
         /// Required

@@ -42,13 +42,13 @@ namespace Oci.DatabasemanagementService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The ID of the asynchronous work request.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the asynchronous work request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workRequestId")]
         public string WorkRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their status matches the given WorkRequestStatus.
+        /// A filter that returns the resources whose status matches the given WorkRequestStatus.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
@@ -61,7 +61,7 @@ namespace Oci.DatabasemanagementService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// The field to sort by. Only one sort order may be provided and the default order for timeAccepted is descending.
         /// 
         /// </value>
         ///
@@ -71,14 +71,14 @@ namespace Oci.DatabasemanagementService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// The field to sort by. Only one sort order may be provided and the default order for timeAccepted is descending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The page token representing the page, from where the next set of paginated results
+        /// The page token representing the page from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 
         /// </value>
@@ -86,7 +86,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The maximum number of records returned in paginated response.
+        /// The maximum number of records returned in the paginated response.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

@@ -180,6 +180,74 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeStatusUpdated")]
         public System.Nullable<System.DateTime> TimeStatusUpdated { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether Oracle can either initiate the tunnel or respond, or respond only.
+        /// </value>
+        ///
+        public enum OracleCanInitiateEnum {
+            [EnumMember(Value = "INITIATOR_OR_RESPONDER")]
+            InitiatorOrResponder,
+            [EnumMember(Value = "RESPONDER_ONLY")]
+            ResponderOnly
+        };
+
+        /// <value>
+        /// Indicates whether Oracle can either initiate the tunnel or respond, or respond only.
+        /// </value>
+        [JsonProperty(PropertyName = "oracleCanInitiate")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OracleCanInitiateEnum> OracleCanInitiate { get; set; }
+                ///
+        /// <value>
+        /// Whether NAT-T Enabled on the tunnel
+        /// </value>
+        ///
+        public enum NatTranslationEnabledEnum {
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            [EnumMember(Value = "AUTO")]
+            Auto
+        };
+
+        /// <value>
+        /// Whether NAT-T Enabled on the tunnel
+        /// </value>
+        [JsonProperty(PropertyName = "natTranslationEnabled")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NatTranslationEnabledEnum> NatTranslationEnabled { get; set; }
+                ///
+        /// <value>
+        /// dpd mode
+        /// </value>
+        ///
+        public enum DpdModeEnum {
+            [EnumMember(Value = "INITIATE_AND_RESPOND")]
+            InitiateAndRespond,
+            [EnumMember(Value = "RESPOND_ONLY")]
+            RespondOnly
+        };
+
+        /// <value>
+        /// dpd mode
+        /// </value>
+        [JsonProperty(PropertyName = "dpdMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DpdModeEnum> DpdMode { get; set; }
+        
+        /// <value>
+        /// Dead peer detection (DPD) timeout in seconds.
+        /// </value>
+        [JsonProperty(PropertyName = "dpdTimeoutInSec")]
+        public System.Nullable<int> DpdTimeoutInSec { get; set; }
+        
+        [JsonProperty(PropertyName = "phaseOneDetails")]
+        public TunnelPhaseOneDetails PhaseOneDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "phaseTwoDetails")]
+        public TunnelPhaseTwoDetails PhaseTwoDetails { get; set; }
         
     }
 }

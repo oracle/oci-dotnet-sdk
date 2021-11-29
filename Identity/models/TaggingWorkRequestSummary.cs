@@ -44,7 +44,9 @@ namespace Oci.IdentityService.Models
             [EnumMember(Value = "BULK_DELETE_TAG_DEFINITION")]
             BulkDeleteTagDefinition,
             [EnumMember(Value = "BULK_EDIT_OF_TAGS")]
-            BulkEditOfTags
+            BulkEditOfTags,
+            [EnumMember(Value = "IMPORT_STANDARD_TAGS")]
+            ImportStandardTags
         };
 
         /// <value>

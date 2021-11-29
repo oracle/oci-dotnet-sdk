@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Summary of the BuildRun.
+    /// Summary of the build run.
     /// </summary>
     public class BuildRunSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment where the build is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// BuildRun identifier which can be renamed and is not necessarily unique
+        /// Build run display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Pipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         /// <remarks>
         /// Required
@@ -81,19 +81,19 @@ namespace Oci.DevopsService.Models
         public BuildRunProgressSummary BuildRunProgressSummary { get; set; }
         
         /// <value>
-        /// The time the the BuildRun was created. An RFC3339 formatted datetime string
+        /// The time the build run was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BuildRun was updated. An RFC3339 formatted datetime string
+        /// The time the build run was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the BuildRun.
+        /// The current state of the build run.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

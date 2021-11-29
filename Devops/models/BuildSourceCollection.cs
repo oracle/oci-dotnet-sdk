@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Collection of Build Sources.
+    /// Collection of build sources.
     /// </summary>
     public class BuildSourceCollection 
     {
         
         /// <value>
-        /// Collection of Build sources. In case of UPDATE operation, replaces existing Build sources list. Merging with existing Build Sources is not supported.
+        /// Collection of build sources. In case of UPDATE operation, replaces existing build sources list. Merging with existing build sources is not supported.
         /// </value>
         /// <remarks>
         /// Required

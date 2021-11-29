@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details for the new Connection.
+        /// Details for the new connection.
         /// </value>
         /// <remarks>
         /// Required

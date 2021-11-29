@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies Trigger Deployment Pipleline stage specific exeution details.
+    /// Specifies Trigger Deployment Pipleline stage specific run details.
     /// </summary>
     public class TriggerDeploymentPipelineStageRunProgress : BuildPipelineStageRunProgress
     {
@@ -28,7 +28,7 @@ namespace Oci.DevopsService.Models
         public DeployArtifactOverrideArgumentCollection ArtifactOverrideParameters { get; set; }
         
         /// <value>
-        /// Identifier of the Deployment Trigerred.
+        /// Identifier of the deployment triggered.
         /// </value>
         [JsonProperty(PropertyName = "deploymentId")]
         public string DeploymentId { get; set; }

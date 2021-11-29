@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the list of Artifacts delivered via DeliverArtifactStage
+    /// Specifies the list of artifacts delivered through the Deliver Artifacts stage.
     /// </summary>
     public class DeliveredArtifactCollection 
     {
         
         /// <value>
-        /// List of Artifacts delivered via DeliverArtifactStage
+        /// List of artifacts delivered through the Deliver Artifacts stage.
         /// </value>
         /// <remarks>
         /// Required

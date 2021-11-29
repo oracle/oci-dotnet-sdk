@@ -16,26 +16,26 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Build Stage.
+    /// Specifies the build stage.
     /// </summary>
     public class UpdateBuildStageDetails : UpdateBuildPipelineStageDetails
     {
         
         /// <value>
-        /// Image name for the Build Environment
+        /// Image name for the build environment.
         /// </value>
         [JsonProperty(PropertyName = "image")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BuildStage.ImageEnum> Image { get; set; }
         
         /// <value>
-        /// The path to the build specification file for this Environment. The default location if not specified is build_spec.yaml
+        /// The path to the build specification file for this environment. The default location of the file if not specified is build_spec.yaml.
         /// </value>
         [JsonProperty(PropertyName = "buildSpecFile")]
         public string BuildSpecFile { get; set; }
         
         /// <value>
-        /// Timeout for the Build Stage Execution. Value in seconds.
+        /// Timeout for the build stage execution. Specify value in seconds.
         /// </value>
         [JsonProperty(PropertyName = "stageExecutionTimeoutInSeconds")]
         public System.Nullable<int> StageExecutionTimeoutInSeconds { get; set; }
@@ -44,7 +44,7 @@ namespace Oci.DevopsService.Models
         public BuildSourceCollection BuildSourceCollection { get; set; }
         
         /// <value>
-        /// Name of the BuildSource in which the build_spec.yml file need to be located. If not specified, the 1st entry in the BuildSource collection will be chosen as Primary.
+        /// Name of the build source where the build_spec.yml file is located. If not specified, the first entry in the build source collection is chosen as primary build source.
         /// </value>
         [JsonProperty(PropertyName = "primaryBuildSource")]
         public string PrimaryBuildSource { get; set; }

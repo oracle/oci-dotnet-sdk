@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing information about a mirror record
+    /// Object containing information about a mirror record.
     /// </summary>
     public class RepositoryMirrorRecordSummary 
     {
@@ -60,7 +60,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<MirrorStatusEnum> MirrorStatus { get; set; }
         
         /// <value>
-        /// Workrequest Id to track current mirror operation
+        /// Workrequest ID to track current mirror operation.
         /// </value>
         [JsonProperty(PropertyName = "workRequestId")]
         public string WorkRequestId { get; set; }
@@ -78,7 +78,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time complete a mirror operation.
+        /// The time to complete a mirror operation.
         /// </value>
         [JsonProperty(PropertyName = "timeCompleted")]
         public System.Nullable<System.DateTime> TimeCompleted { get; set; }

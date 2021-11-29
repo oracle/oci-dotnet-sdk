@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmcontrolplaneService.Models
 {
     /// <summary>
-    /// Details of an APM Domain.
+    /// Details of an APM domain.
     /// </summary>
     public class ApmDomain 
     {
         
         /// <value>
-        /// Where APM Agents upload their observations and metrics.
+        /// The endpoint where the APM agents upload their observations and metrics.
         /// </value>
         [JsonProperty(PropertyName = "dataUploadEndpoint")]
         public string DataUploadEndpoint { get; set; }
@@ -38,7 +38,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// APM Domain display name, can be updated.
+        /// Display name of the APM domain, which can be updated.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,13 +48,13 @@ namespace Oci.ApmcontrolplaneService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the APM Domain.
+        /// Description of the APM domain.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the compartment corresponding to the APM Domain.
+        /// The OCID of the compartment corresponding to the APM domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,7 +64,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the APM Domain.
+        /// The current lifecycle state of the APM domain.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -77,13 +77,13 @@ namespace Oci.ApmcontrolplaneService.Models
         public System.Nullable<bool> IsFreeTier { get; set; }
         
         /// <value>
-        /// The time the the APM Domain was created. An RFC3339 formatted datetime string
+        /// The time the APM domain was created, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the APM Domain was updated. An RFC3339 formatted datetime string
+        /// The time the APM domain was updated, expressed in RFC 3339 timestamp format.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

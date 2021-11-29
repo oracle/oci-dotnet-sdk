@@ -20,7 +20,7 @@ namespace Oci.ApmcontrolplaneService.Requests
     {
         
         /// <value>
-        /// OCID of the APM Domain
+        /// The OCID of the APM domain
         /// </value>
         /// <remarks>
         /// Required
@@ -34,5 +34,17 @@ namespace Oci.ApmcontrolplaneService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
+        public string Page { get; set; }
+        
+        /// <value>
+        /// The maximum number of items to return.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
+        public System.Nullable<int> Limit { get; set; }
     }
 }

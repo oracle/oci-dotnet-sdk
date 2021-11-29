@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information to be updated for the given BuildPipeline.
+    /// The information to be updated for the given build pipeline.
     /// </summary>
     public class UpdateBuildPipelineDetails 
     {
         
         /// <value>
-        /// Optional description about the BuildPipeline
+        /// Optional description about the build pipeline.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// BuildPipeline display name
+        /// Build pipeline display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

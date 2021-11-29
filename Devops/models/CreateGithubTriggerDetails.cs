@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The Trigger for Github as the caller
+    /// The trigger for GitHub as the caller.
     /// </summary>
     public class CreateGithubTriggerDetails : CreateTriggerDetails
     {
