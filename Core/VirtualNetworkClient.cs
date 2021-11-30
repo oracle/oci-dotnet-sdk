@@ -3999,6 +3999,46 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// The allowed parameters for IKE IPSec
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetAllowedIkeIPSecParameters.cs.html">here</a> to see an example of how to use GetAllowedIkeIPSecParameters API.</example>
+        public async Task<GetAllowedIkeIPSecParametersResponse> GetAllowedIkeIPSecParameters(GetAllowedIkeIPSecParametersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getAllowedIkeIPSecParameters");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/ipsecAlgorithms".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetAllowedIkeIPSecParametersResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetAllowedIkeIPSecParameters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets the &#x60;ByoipRange&#x60; resource. You must specify the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
@@ -4821,6 +4861,46 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"GetIPSecConnectionTunnel failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get the identified error for the specified IPSec Tunnel ID.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/GetIPSecConnectionTunnelError.cs.html">here</a> to see an example of how to use GetIPSecConnectionTunnelError API.</example>
+        public async Task<GetIPSecConnectionTunnelErrorResponse> GetIPSecConnectionTunnelError(GetIPSecConnectionTunnelErrorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getIPSecConnectionTunnelError");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/ipsecConnections/{ipscId}/tunnels/{tunnelId}/error".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetIPSecConnectionTunnelErrorResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetIPSecConnectionTunnelError failed with error: {e.Message}");
                 throw;
             }
         }
@@ -6846,6 +6926,86 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"ListFastConnectProviderVirtualCircuitBandwidthShapes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// The routes advertised to the Customer and the routes received from the Customer.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListIPSecConnectionTunnelRoutes.cs.html">here</a> to see an example of how to use ListIPSecConnectionTunnelRoutes API.</example>
+        public async Task<ListIPSecConnectionTunnelRoutesResponse> ListIPSecConnectionTunnelRoutes(ListIPSecConnectionTunnelRoutesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listIPSecConnectionTunnelRoutes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/ipsecConnections/{ipscId}/tunnels/{tunnelId}/routes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListIPSecConnectionTunnelRoutesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListIPSecConnectionTunnelRoutes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the tunnel Security Associations information for the specified IPSec Tunnel ID.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListIPSecConnectionTunnelSecurityAssociations.cs.html">here</a> to see an example of how to use ListIPSecConnectionTunnelSecurityAssociations API.</example>
+        public async Task<ListIPSecConnectionTunnelSecurityAssociationsResponse> ListIPSecConnectionTunnelSecurityAssociations(ListIPSecConnectionTunnelSecurityAssociationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listIPSecConnectionTunnelSecurityAssociations");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/ipsecConnections/{ipscId}/tunnels/{tunnelId}/tunnelSecurityAssociations".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListIPSecConnectionTunnelSecurityAssociationsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListIPSecConnectionTunnelSecurityAssociations failed with error: {e.Message}");
                 throw;
             }
         }

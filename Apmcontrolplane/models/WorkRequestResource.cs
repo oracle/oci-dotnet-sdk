@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmcontrolplaneService.Models
 {
     /// <summary>
-    /// A resource created or operated on by a work request.
+    /// The details of the resource that the work request affects.
     /// </summary>
     public class WorkRequestResource 
     {
@@ -57,7 +57,7 @@ namespace Oci.ApmcontrolplaneService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// The URI path that the user can do a GET on to access the resource metadata
+        /// The URI path that the user can do a GET on to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }

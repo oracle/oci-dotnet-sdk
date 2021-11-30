@@ -74,13 +74,13 @@ namespace Oci.DevopsService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// The number of lines added in whole diff.
+        /// The number of lines added in whole difference.
         /// </value>
         [JsonProperty(PropertyName = "addedLinesCount")]
         public System.Nullable<int> AddedLinesCount { get; set; }
         
         /// <value>
-        /// The number of lines deleted in whole diff.
+        /// The number of lines deleted in whole difference.
         /// </value>
         [JsonProperty(PropertyName = "deletedLinesCount")]
         public System.Nullable<int> DeletedLinesCount { get; set; }

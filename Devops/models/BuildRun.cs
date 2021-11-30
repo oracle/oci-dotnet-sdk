@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Each time we attempt to run a BuildPipeline we create one BuildRun. A BuildRun may be happening now, or it may be a record of the run that happened in the past. The set of BuildRuns constitutes a BuildPipeline's history.
+    /// Each time you attempt to run a build pipeline you create one build run. 
+    /// A build can be running currently, or it can be a record of the run that happened in the past.
+    /// The set of build runs constitutes a build pipeline's history.
+    /// 
     /// </summary>
     public class BuildRun 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,25 +35,25 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// BuildRun identifier which can be renamed and is not necessarily unique
+        /// Build run display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment where the build is running.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         [JsonProperty(PropertyName = "projectId")]
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Pipeline Identifier
+        /// The OCID of the build pipeline.
         /// </value>
         [JsonProperty(PropertyName = "buildPipelineId")]
         public string BuildPipelineId { get; set; }
@@ -66,19 +69,19 @@ namespace Oci.DevopsService.Models
         public BuildRunArgumentCollection BuildRunArguments { get; set; }
         
         /// <value>
-        /// The time the the BuildRun was created. An RFC3339 formatted datetime string
+        /// The time the build run was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the BuildRun was updated. An RFC3339 formatted datetime string
+        /// The time the build run was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the BuildRun.
+        /// The current state of the build run.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -97,7 +100,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current state of the BuildRun.
+        /// The current state of the build run.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

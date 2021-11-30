@@ -22,25 +22,25 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Repository Identifier
+        /// Unique name of a repository.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// The description of this repository. Avoid entering confidential information
+        /// Details of the repository. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The default branch of the repository
+        /// The default branch of the repository.
         /// </value>
         [JsonProperty(PropertyName = "defaultBranch")]
         public string DefaultBranch { get; set; }
         
         /// <value>
-        /// Type of repository
+        /// Type of repository.
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
         [JsonConverter(typeof(StringEnumConverter))]

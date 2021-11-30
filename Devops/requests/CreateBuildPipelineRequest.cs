@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details for the new BuildPipeline.
+        /// Details for the new build pipeline.
         /// </value>
         /// <remarks>
         /// Required

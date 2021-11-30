@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Attributes to filter Devops Code Repository events
+    /// Attributes to filter DevOps code repository events.
     /// </summary>
     public class DevopsCodeRepositoryFilterAttributes 
     {
         
         /// <value>
-        /// Branch for push event
+        /// Branch for push event.
         /// </value>
         [JsonProperty(PropertyName = "headRef")]
         public string HeadRef { get; set; }

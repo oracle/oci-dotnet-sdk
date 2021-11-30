@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -31,9 +31,9 @@ namespace Oci.DevopsService.Requests
         
         ///
         /// <value>
-        /// The field of mirror record type. Only one mirror record type may be provided.
+        /// The field of mirror record type. Only one mirror record type can be provided:
         /// current - The current mirror record.
-        /// lastSuccessful - The last successful mirror record
+        /// lastSuccessful - The last successful mirror record.
         /// 
         /// </value>
         ///
@@ -45,9 +45,9 @@ namespace Oci.DevopsService.Requests
         };
 
         /// <value>
-        /// The field of mirror record type. Only one mirror record type may be provided.
+        /// The field of mirror record type. Only one mirror record type can be provided:
         /// current - The current mirror record.
-        /// lastSuccessful - The last successful mirror record
+        /// lastSuccessful - The last successful mirror record.
         /// 
         /// </value>
         /// <remarks>

@@ -76,6 +76,12 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<bool> IsByol { get; set; }
         
         /// <value>
+        /// Platform version
+        /// </value>
+        [JsonProperty(PropertyName = "platformVersion")]
+        public string PlatformVersion { get; set; }
+        
+        /// <value>
         /// IDCS access token with Identity Domain Administrator role
         /// </value>
         /// <remarks>

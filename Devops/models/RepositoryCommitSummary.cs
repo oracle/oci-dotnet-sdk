@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Commit summary with commit information
+    /// Commit summary with commit information.
     /// </summary>
     public class RepositoryCommitSummary 
     {
         
         /// <value>
-        /// Commit hash pointed to by Ref name
+        /// Commit hash pointed to by reference name.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DevopsService.Models
         public string CommitMessage { get; set; }
         
         /// <value>
-        /// The name of the author of the repository.
+        /// Name of the author of the repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DevopsService.Models
         public string AuthorName { get; set; }
         
         /// <value>
-        /// The email of the author of the repository.
+        /// Email of the author of the repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.DevopsService.Models
         public string AuthorEmail { get; set; }
         
         /// <value>
-        /// The name of who create the commit.
+        /// Name of who creates the commit.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DevopsService.Models
         public string CommitterName { get; set; }
         
         /// <value>
-        /// The email of who create the commit.
+        /// Email of who creates the commit.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.DevopsService.Models
         public string CommitterEmail { get; set; }
         
         /// <value>
-        /// An array of parent commit ids of created commit.
+        /// An array of parent commit IDs of created commit.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,7 +102,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Tree information for the specified commit
+        /// Tree information for the specified commit.
         /// </value>
         /// <remarks>
         /// Required

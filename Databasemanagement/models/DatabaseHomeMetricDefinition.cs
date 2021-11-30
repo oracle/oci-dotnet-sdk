@@ -59,5 +59,14 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "dbStorageAggregateMetrics")]
         public DatabaseStorageAggregateMetrics DbStorageAggregateMetrics { get; set; }
         
+        [JsonProperty(PropertyName = "cpuUtilizationAggregateMetrics")]
+        public CpuUtilizationAggregateMetrics CpuUtilizationAggregateMetrics { get; set; }
+        
+        [JsonProperty(PropertyName = "statementsAggregateMetrics")]
+        public StatementsAggregateMetrics StatementsAggregateMetrics { get; set; }
+        
+        [JsonProperty(PropertyName = "failedConnectionsAggregateMetrics")]
+        public FailedConnectionsAggregateMetrics FailedConnectionsAggregateMetrics { get; set; }
+        
     }
 }

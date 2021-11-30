@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Artifact info that need to be pushed to the artifactory stores.
+    /// Artifact information that need to be pushed to the artifactory stores.
     /// </summary>
     public class DeliverArtifact 
     {
         
         /// <value>
-        /// Name of the artifact specified in the build_spec.yml file.
+        /// Name of the artifact specified in the build_spec.yaml file.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string ArtifactName { get; set; }
         
         /// <value>
-        /// Artifact Identifier which contains the Artifact Definition.
+        /// Artifact identifier that contains the artifact definition.
         /// </value>
         /// <remarks>
         /// Required

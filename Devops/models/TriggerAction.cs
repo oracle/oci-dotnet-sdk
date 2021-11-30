@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The action to be performed
+    /// The trigger action to be performed.
     /// </summary>
     [JsonConverter(typeof(TriggerActionModelConverter))]
     public class TriggerAction 
     {
                 ///
         /// <value>
-        /// The type of action that will be taken (allowed value - TRIGGER_BUILD_PIPELINE)
+        /// The type of action that will be taken. Allowed value is TRIGGER_BUILD_PIPELINE.
         /// </value>
         ///
         public enum TypeEnum {

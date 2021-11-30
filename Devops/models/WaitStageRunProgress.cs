@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies wait stage specific run details.
+    /// Specifies Wait stage specific run details.
     /// </summary>
     public class WaitStageRunProgress : BuildPipelineStageRunProgress
     {

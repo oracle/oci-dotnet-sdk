@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The filters for the trigger
+    /// The filters for the trigger.
     /// </summary>
     [JsonConverter(typeof(FilterModelConverter))]
     public class Filter 

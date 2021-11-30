@@ -38,7 +38,7 @@ namespace Oci.DevopsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only Connections that matches the given lifecycleState
+        /// A filter to return only connections that matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Connection.LifecycleStateEnum> LifecycleState { get; set; }
@@ -50,7 +50,7 @@ namespace Oci.DevopsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the connection type given.
+        /// A filter to return only resources that match the given connection type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "connectionType")]
         public System.Nullable<Connection.ConnectionTypeEnum> ConnectionType { get; set; }

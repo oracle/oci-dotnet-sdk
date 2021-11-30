@@ -23,13 +23,13 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Stage identifier which can be renamed and is not necessarily unique
+        /// Stage display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the BuildStage
+        /// Optional description about the build stage.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Trigger Create response specific to Gitlab
+    /// Trigger create response specific to GitLab.
     /// </summary>
     public class DevopsCodeRepositoryTriggerCreateResult : TriggerCreateResult
     {
         
         /// <value>
-        /// The id of the OCI Devops Repository
+        /// The OCID of the DevOps code repository.
         /// </value>
         /// <remarks>
         /// Required

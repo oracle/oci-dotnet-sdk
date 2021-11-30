@@ -14,7 +14,7 @@ namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
   /// The subtype of the Oracle Database. Indicates whether the database is a Container Database,
-    /// Pluggable Database, or a Non-container Database.
+    /// Pluggable Database, Non-container Database, Autonomous Database, or Autonomous Container Database.
     /// 
   /// </summary>
   public enum DatabaseSubType {
@@ -23,6 +23,10 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "PDB")]
       Pdb,
       [EnumMember(Value = "NON_CDB")]
-      NonCdb
+      NonCdb,
+      [EnumMember(Value = "ACD")]
+      Acd,
+      [EnumMember(Value = "ADB")]
+      Adb
   }
 }

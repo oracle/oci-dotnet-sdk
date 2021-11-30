@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Gitlab Build Source for Build Stage
+    /// GitLab build source for Build stage.
     /// </summary>
     public class GitlabBuildSource : BuildSource
     {
         
         /// <value>
-        /// Connection identifier pertinent to GITLAB source provider
+        /// Connection identifier pertinent to GitLab source provider.
         /// </value>
         /// <remarks>
         /// Required

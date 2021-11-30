@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Summary of a Ref
+    /// Summary of a reference.
     /// </summary>
     [JsonConverter(typeof(RepositoryRefSummaryModelConverter))]
     public class RepositoryRefSummary 
     {
         
         /// <value>
-        /// Ref name inside a repository
+        /// Reference name inside a repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,7 +34,7 @@ namespace Oci.DevopsService.Models
         
         
         /// <value>
-        /// Unique full ref name inside a repository
+        /// Unique full reference name inside a repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.DevopsService.Models
         public string FullRefName { get; set; }
         
         /// <value>
-        /// The OCID of the repository containing the ref.
+        /// The OCID of the repository containing the reference.
         /// </value>
         /// <remarks>
         /// Required

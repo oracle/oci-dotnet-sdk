@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DevopsService.Requests
         public string RepositoryId { get; set; }
         
         /// <value>
-        /// The commit or ref name to compare changes against
+        /// The commit or reference name to compare changes against.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DevopsService.Requests
         public string BaseVersion { get; set; }
         
         /// <value>
-        /// The commit or ref name where changes are coming from
+        /// The commit or reference name where changes are coming from.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.DevopsService.Requests
         public string TargetVersion { get; set; }
         
         /// <value>
-        /// boolean for whether to use merge base or most recent revision
+        /// Boolean value to indicate whether to use merge base or most recent revision.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isComparisonFromMergeBase")]
         public System.Nullable<bool> IsComparisonFromMergeBase { get; set; }

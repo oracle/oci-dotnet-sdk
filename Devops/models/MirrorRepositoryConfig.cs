@@ -28,7 +28,7 @@ namespace Oci.DevopsService.Models
         public string ConnectorId { get; set; }
         
         /// <value>
-        /// Url of external repository we'd like to mirror
+        /// URL of external repository you want to mirror.
         /// </value>
         [JsonProperty(PropertyName = "repositoryUrl")]
         public string RepositoryUrl { get; set; }

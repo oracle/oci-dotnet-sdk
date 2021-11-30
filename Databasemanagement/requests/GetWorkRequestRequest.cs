@@ -20,7 +20,7 @@ namespace Oci.DatabasemanagementService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the async Work Request.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the asynchronous work request.
         /// </value>
         /// <remarks>
         /// Required

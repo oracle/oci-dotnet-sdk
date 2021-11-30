@@ -49,7 +49,8 @@ namespace Oci.ApmcontrolplaneService
             var agent = new WaiterAgent<GetApmDomainRequest, GetApmDomainResponse>(
                 request,
                 request => client.GetApmDomain(request),
-                response => targetStates.Contains(response.ApmDomain.LifecycleState.Value)
+                response => targetStates.Contains(response.ApmDomain.LifecycleState.Value),
+                targetStates.Contains(LifecycleStates.Deleted)
             );
             return new Waiter<GetApmDomainRequest, GetApmDomainResponse>(config, agent);
         }

@@ -19,6 +19,8 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "LINUX")]
       Linux,
       [EnumMember(Value = "WINDOWS")]
-      Windows
+      Windows,
+      [EnumMember(Value = "SOLARIS")]
+      Solaris
   }
 }

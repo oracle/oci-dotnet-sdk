@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies details of build runs triggered manually through API.
+    /// Specifies details of build runs triggered manually through the API.
     /// </summary>
     public class ManualBuildRunSource : BuildRunSource
     {

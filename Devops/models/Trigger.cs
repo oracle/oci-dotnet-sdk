@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Description of Trigger.
+    /// Trigger the deployment pipeline to deploy the artifact.
     /// </summary>
     [JsonConverter(typeof(TriggerModelConverter))]
     public class Trigger 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,19 +33,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name for Trigger.
+        /// Trigger display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description about the Trigger
+        /// Description about the trigger.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Project to which the Trigger belongs
+        /// The OCID of the DevOps project to which the trigger belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Compartment to which the Trigger belongs
+        /// The OCID of the compartment that contains the trigger.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Source of the Trigger (allowed values are - GITHUB, GITLAB)
+        /// Source of the trigger. Allowed values are, GITHUB, GITLAB and DEVOPS_CODE_REPOSITORY.
         /// </value>
         ///
         public enum TriggerSourceEnum {
@@ -79,19 +79,19 @@ namespace Oci.DevopsService.Models
 
         
         /// <value>
-        /// The time the the Trigger was created. An RFC3339 formatted datetime string
+        /// The time the trigger was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Trigger was updated. An RFC3339 formatted datetime string
+        /// The time the trigger was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the Trigger.
+        /// The current state of the trigger.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -100,7 +100,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current state of the Trigger.
+        /// The current state of the trigger.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -113,7 +113,7 @@ namespace Oci.DevopsService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The list of actions that are to be performed for this Trigger
+        /// The list of actions that are to be performed for this trigger.
         /// </value>
         /// <remarks>
         /// Required

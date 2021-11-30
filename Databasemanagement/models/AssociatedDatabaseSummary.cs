@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Summary of a Database currently using a Private Endpoint.
+    /// The summary of a database currently using a Database Management private endpoint.
     /// </summary>
     public class AssociatedDatabaseSummary 
     {
         
         /// <value>
-        /// The OCID of the database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The compartment ID of the database.
+        /// The compartment [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time when the database was registered for Database Management.
+        /// The time when Database Management was enabled for the database.
         /// </value>
         /// <remarks>
         /// Required

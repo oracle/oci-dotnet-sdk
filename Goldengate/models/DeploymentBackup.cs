@@ -96,6 +96,20 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeOfBackup { get; set; }
         
         /// <value>
+        /// The time of the resource backup finish. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeBackupFinished")]
+        public System.Nullable<System.DateTime> TimeBackupFinished { get; set; }
+        
+        /// <value>
+        /// The size of the backup stored in object storage (in bytes)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sizeInBytes")]
+        public System.Nullable<decimal> SizeInBytes { get; set; }
+        
+        /// <value>
         /// Possible Deployment backup types.
         /// 
         /// </value>

@@ -46,7 +46,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<int> TargetSpan { get; set; }
         
         /// <value>
-        /// List of DiffSection.
+        /// List of difference section.
         /// </value>
         [JsonProperty(PropertyName = "diffSections")]
         public System.Collections.Generic.List<DiffSection> DiffSections { get; set; }

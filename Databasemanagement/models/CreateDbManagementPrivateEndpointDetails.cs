@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// The display name for the private endpoint. It is changeable.
+        /// The display name of the Database Management private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The OCID of the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,13 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the subnet.
+        /// Specifies whether the Database Management private endpoint will be used for Oracle Databases in a cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isCluster")]
+        public System.Nullable<bool> IsCluster { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +64,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCIDs of the network security groups that the private endpoint belongs to.
+        /// The OCIDs of the Network Security Groups to which the Database Management private endpoint belongs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The filter for Github events
+    /// The filter for GitHub events.
     /// </summary>
     public class GithubFilter : Filter
     {
@@ -36,7 +36,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The events, example PUSH, PULL_REQUEST_MERGE etc.
+        /// The events, for example, PUSH, PULL_REQUEST_MERGE.
         /// </value>
         [JsonProperty(PropertyName = "events", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<EventsEnum> Events { get; set; }

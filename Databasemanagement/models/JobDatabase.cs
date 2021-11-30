@@ -68,5 +68,12 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "isCluster")]
         public System.Nullable<bool> IsCluster { get; set; }
         
+        /// <value>
+        /// The workload type of the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "workloadType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<WorkloadType> WorkloadType { get; set; }
+        
     }
 }

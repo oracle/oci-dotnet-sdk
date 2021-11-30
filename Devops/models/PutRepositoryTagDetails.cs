@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information needed to create a lightweight Tag
+    /// The information needed to create a lightweight tag.
     /// </summary>
     public class PutRepositoryTagDetails : PutRepositoryRefDetails
     {

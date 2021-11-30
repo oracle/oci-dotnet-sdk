@@ -105,6 +105,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<bool> IsCluster { get; set; }
         
         /// <value>
+        /// The workload type of the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "workloadType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<WorkloadType> WorkloadType { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the parent job.
         /// </value>
         /// <remarks>

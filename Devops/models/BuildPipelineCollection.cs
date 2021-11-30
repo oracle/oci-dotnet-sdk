@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Results of an pipeline search.
+    /// Results of a pipeline search.
     /// </summary>
     public class BuildPipelineCollection 
     {
         
         /// <value>
-        /// Array of BuildPipelineSummary items.
+        /// Array of build pipeline summary items.
         /// </value>
         /// <remarks>
         /// Required

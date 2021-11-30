@@ -883,6 +883,55 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListStandardTagNamespaces operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListStandardTagNamespacesResponse> ListStandardTagNamespacesResponseEnumerator(ListStandardTagNamespacesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListStandardTagNamespacesRequest, ListStandardTagNamespacesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListStandardTagNamespaces(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the StandardTagNamespaceTemplateSummary objects
+        /// contained in responses from the ListStandardTagNamespaces operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<StandardTagNamespaceTemplateSummary> ListStandardTagNamespacesRecordEnumerator(ListStandardTagNamespacesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListStandardTagNamespacesRequest, ListStandardTagNamespacesResponse, StandardTagNamespaceTemplateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListStandardTagNamespaces(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListTagDefaults operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

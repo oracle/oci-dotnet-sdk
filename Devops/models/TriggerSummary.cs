@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Summary of the Trigger.
+    /// Summary of the trigger.
     /// </summary>
     [JsonConverter(typeof(TriggerSummaryModelConverter))]
     public class TriggerSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,19 +33,19 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name for Trigger.
+        /// Trigger display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description about the Trigger
+        /// Description about the trigger.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Project to which the Trigger belongs
+        /// The OCID of the DevOps project to which the trigger belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Compartment to which the Trigger belongs
+        /// The OCID of the compartment that contains the trigger.
         /// </value>
         /// <remarks>
         /// Required
@@ -66,19 +66,19 @@ namespace Oci.DevopsService.Models
         
         
         /// <value>
-        /// The time the the Trigger was created. An RFC3339 formatted datetime string
+        /// The time the trigger was created. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Trigger was updated. An RFC3339 formatted datetime string
+        /// The time the trigger was updated. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Trigger.
+        /// The current state of the trigger.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

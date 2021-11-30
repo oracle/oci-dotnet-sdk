@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Results of a repository search. Contains RepositorySummary items and other information, such as metadata.
+    /// Results of a repository search. Contains repository summary items and other information, such as metadata.
     /// </summary>
     public class RepositoryCollection 
     {

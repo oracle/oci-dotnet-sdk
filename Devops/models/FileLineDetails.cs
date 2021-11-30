@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Object containing the details of a line in a file
+    /// Object containing the details of a line in a file.
     /// </summary>
     public class FileLineDetails 
     {
         
         /// <value>
-        /// The line number
+        /// The line number.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<int> LineNumber { get; set; }
         
         /// <value>
-        /// The content of the line
+        /// The content of the line.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A resource created or operated on by a work request.
+    /// The resource that is created or operated on by a work request.
     /// </summary>
     public class WorkRequestResource 
     {
         
         /// <value>
-        /// The entity type the work request is affects.
+        /// The resource type the work request affects.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,7 +47,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<WorkRequestResourceActionType> ActionType { get; set; }
         
         /// <value>
-        /// The identifier of the resource the work request affects.
+        /// The OCID or other unique identifier of the resource the work request affects.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// The URI path that the user can do a GET on to access the resource metadata
+        /// The URI path that is used in a GET request to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }

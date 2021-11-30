@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DevopsService.Requests
         public string FilePath { get; set; }
         
         /// <value>
-        /// Retrive file lines from specific revision.
+        /// Retrieve file lines from specific revision.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.DevopsService.Requests
         public string Revision { get; set; }
         
         /// <value>
-        /// Line number from where to start returning file lines. 1 indexed.
+        /// Line number from where to start returning file lines.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "startLineNumber")]
         public System.Nullable<int> StartLineNumber { get; set; }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Parameter name for which the values will be supplied at the time of BuildRun.
+    /// Parameter name for which the values will be supplied at the time of running the build.
     /// </summary>
     public class BuildPipelineParameter 
     {
         
         /// <value>
-        /// Name of the parameter (Case-sensitive).
-        /// Example: 'Pipeline_param' is not same as 'pipeline_Param'
+        /// Name of the parameter (case-sensitive). Parameter name must be ^[a-zA-Z][a-zA-Z_0-9]*$.
+        /// Example: 'Build_Pipeline_param' is not same as 'build_pipeline_Param'
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.DevopsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Default value of the parameter
+        /// Default value of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
         
         /// <value>
-        /// Description of the parameter
+        /// Description of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Github Build Source for Build Stage
+    /// GitHub build source for Build stage.
     /// </summary>
     public class GithubBuildSource : BuildSource
     {
         
         /// <value>
-        /// Connection identifier pertinent to GITHUB source provider
+        /// Connection identifier pertinent to GitHub source provider.
         /// </value>
         /// <remarks>
         /// Required

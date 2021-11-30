@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Update Trigger specific to Github
+    /// Update trigger specific to GitHub.
     /// </summary>
     public class UpdateGithubTriggerDetails : UpdateTriggerDetails
     {

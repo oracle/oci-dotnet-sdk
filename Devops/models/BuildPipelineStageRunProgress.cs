@@ -16,39 +16,39 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The details about the run progress of a Stage in a BuildRun.
+    /// The details about the run progress of a stage in a build run.
     /// </summary>
     [JsonConverter(typeof(BuildPipelineStageRunProgressModelConverter))]
     public class BuildPipelineStageRunProgress 
     {
         
         /// <value>
-        /// BuildRun identifier which can be renamed and is not necessarily unique
+        /// Build Run display name, which can be renamed and is not necessarily unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "stageDisplayName")]
         public string StageDisplayName { get; set; }
         
         
         /// <value>
-        /// Stage id
+        /// The stage OCID.
         /// </value>
         [JsonProperty(PropertyName = "buildPipelineStageId")]
         public string BuildPipelineStageId { get; set; }
         
         /// <value>
-        /// The time the Stage was started executing. An RFC3339 formatted datetime string
+        /// The time the stage started executing. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the Stage was finished executing. An RFC3339 formatted datetime string
+        /// The time the stage finished executing. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
                 ///
         /// <value>
-        /// The current status of the Stage.
+        /// The current status of the stage.
         /// </value>
         ///
         public enum StatusEnum {
@@ -67,7 +67,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The current status of the Stage.
+        /// The current status of the stage.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]

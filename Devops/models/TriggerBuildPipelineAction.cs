@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The action to trigger a build pipeline
+    /// The action to trigger a build pipeline.
     /// </summary>
     public class TriggerBuildPipelineAction : TriggerAction
     {
         
         /// <value>
-        /// The id of the build pipeline to be triggered
+        /// The OCID of the build pipeline to be triggered.
         /// </value>
         /// <remarks>
         /// Required

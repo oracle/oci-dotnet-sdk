@@ -46,13 +46,13 @@ namespace Oci.DatabasemanagementService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The maximum number of records returned in paginated response.
+        /// The maximum number of records returned in the paginated response.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The page token representing the page, from where the next set of paginated results
+        /// The page token representing the page from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 
         /// </value>
@@ -67,7 +67,7 @@ namespace Oci.DatabasemanagementService.Requests
         
         ///
         /// <value>
-        /// The field to sort Databases using a specific Database Management Private Endpoint
+        /// The option to sort databases using a specific Database Management private endpoint.
         /// 
         /// </value>
         ///
@@ -77,7 +77,7 @@ namespace Oci.DatabasemanagementService.Requests
         };
 
         /// <value>
-        /// The field to sort Databases using a specific Database Management Private Endpoint
+        /// The option to sort databases using a specific Database Management private endpoint.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

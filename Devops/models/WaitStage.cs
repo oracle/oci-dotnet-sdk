@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Wait Stage. User can specify variable wait times or an absolute duration.
+    /// Specifies the Wait stage. You can specify variable wait times or an absolute duration.
     /// </summary>
     public class WaitStage : BuildPipelineStage
     {

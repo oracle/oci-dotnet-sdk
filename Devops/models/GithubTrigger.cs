@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Trigger specific to Github
+    /// Trigger specific to GitHub.
     /// </summary>
     public class GithubTrigger : Trigger
     {
         
         /// <value>
-        /// The endpoint which listens to Trigger events
+        /// The endpoint that listens to trigger events.
         /// </value>
         /// <remarks>
         /// Required

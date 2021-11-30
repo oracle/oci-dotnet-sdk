@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about new BuildPipeline to be created.
+    /// Information about the new build pipeline to be created.
     /// </summary>
     public class CreateBuildPipelineDetails 
     {
         
         /// <value>
-        /// Optional description about the BuildPipeline
+        /// Optional description about the build pipeline.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// BuildPipeline display name
+        /// Build pipeline display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Project Identifier
+        /// The OCID of the DevOps project.
         /// </value>
         /// <remarks>
         /// Required

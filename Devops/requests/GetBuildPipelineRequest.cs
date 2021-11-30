@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique BuildPipeline identifier
+        /// Unique build pipeline identifier.
         /// </value>
         /// <remarks>
         /// Required

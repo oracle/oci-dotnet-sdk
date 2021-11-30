@@ -20,6 +20,7 @@ namespace Oci.DatabasemanagementService.Models
     /// - VM: Virtual machines in Oracle Cloud.
     /// - EXADATA: Exadata infrastructure in Oracle Cloud.
     /// - EXADATA_CC: Exadata Cloud@Customer infrastructure in customer's data center.
+    /// - AUTONOMOUS: Oracle Autonomous Cloud infrastructure
     /// 
   /// </summary>
   public enum DeploymentType {
@@ -32,6 +33,8 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "EXADATA")]
       Exadata,
       [EnumMember(Value = "EXADATA_CC")]
-      ExadataCc
+      ExadataCc,
+      [EnumMember(Value = "AUTONOMOUS")]
+      Autonomous
   }
 }

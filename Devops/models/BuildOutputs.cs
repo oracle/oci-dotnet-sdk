@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Outputs from the Build
+    /// Outputs from the build.
     /// </summary>
     public class BuildOutputs 
     {

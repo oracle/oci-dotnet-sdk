@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Summary of the Gitlab Trigger.
+    /// Summary of the GitLab trigger.
     /// </summary>
     public class GitlabTriggerSummary : TriggerSummary
     {

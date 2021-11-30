@@ -16,26 +16,26 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about new Trigger.
+    /// Information about the new trigger.
     /// </summary>
     [JsonConverter(typeof(CreateTriggerDetailsModelConverter))]
     public class CreateTriggerDetails 
     {
         
         /// <value>
-        /// Name of the Trigger
+        /// Trigger display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description about the Trigger
+        /// Optional description about the trigger.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Project to which the Trigger will belong
+        /// The OCID of the DevOps project to which the trigger belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.DevopsService.Models
         
         
         /// <value>
-        /// The list of actions that are to be performed for this Trigger
+        /// The list of actions that are to be performed for this trigger.
         /// </value>
         /// <remarks>
         /// Required

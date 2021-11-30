@@ -41,9 +41,13 @@ namespace Oci.GoldengateService.Models
       GoldengateDeploymentStop,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_PATCH")]
       GoldengateDeploymentPatch,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE")]
+      GoldengateDeploymentUpgrade,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_CREATE")]
       GoldengateDeploymentBackupCreate,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_DELETE")]
-      GoldengateDeploymentBackupDelete
+      GoldengateDeploymentBackupDelete,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_CANCEL")]
+      GoldengateDeploymentBackupCancel
   }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Details of UIM Artifact delivered via DeliverArtifactStage.
+    /// Details of the generic artifacts delivered through the Deliver Artifacts stage.
     /// </summary>
     public class GenericDeliveredArtifact : DeliveredArtifact
     {
@@ -28,7 +28,7 @@ namespace Oci.DevopsService.Models
         public string ArtifactRepositoryId { get; set; }
         
         /// <value>
-        /// The OCID of the artifact pushed by the DeliverArtifactStage
+        /// The OCID of the artifact pushed by the Deliver Artifacts stage.
         /// </value>
         /// <remarks>
         /// Required

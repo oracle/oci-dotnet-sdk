@@ -42,19 +42,26 @@ namespace Oci.DatabasemanagementService.Requests
         public string VcnId { get; set; }
         
         /// <value>
+        /// The option to filter Database Management private endpoints that can used for Oracle Databases in a cluster. This should be used along with the vcnId query parameter.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCluster")]
+        public System.Nullable<bool> IsCluster { get; set; }
+        
+        /// <value>
         /// The lifecycle state of a resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
-        /// The maximum number of records returned in paginated response.
+        /// The maximum number of records returned in the paginated response.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The page token representing the page, from where the next set of paginated results
+        /// The page token representing the page from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 
         /// </value>

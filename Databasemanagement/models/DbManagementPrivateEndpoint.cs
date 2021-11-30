@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A Database Management private endpoint that allows Database Management services to connect to databases in a customer's virtual cloud network (VCN).
+    /// A Database Management private endpoint allows Database Management to connect to databases in a Virtual Cloud Network (VCN).
     /// </summary>
     public class DbManagementPrivateEndpoint 
     {
         
         /// <value>
-        /// The OCID of the Database Management private endpoint.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The display name of the private endpoint.
+        /// The display name of the Database Management private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The OCID of the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,13 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the VCN.
+        /// Specifies whether the Database Management private endpoint can be used for Oracle Databases in a cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isCluster")]
+        public System.Nullable<bool> IsCluster { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +68,7 @@ namespace Oci.DatabasemanagementService.Models
         public string VcnId { get; set; }
         
         /// <value>
-        /// The OCID of the subnet.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,33 +78,33 @@ namespace Oci.DatabasemanagementService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The private IP addresses assigned to the private endpoint.
+        /// The IP addresses assigned to the Database Management private endpoint.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
         
         /// <value>
-        /// The description of the private endpoint.
+        /// The description of the Database Management private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The date and time the private endpoint was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the Database Managament private endpoint was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The current state of the private endpoint.
+        /// The current lifecycle state of the Database Management private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
-        /// The OCIDs of the network security groups that the private endpoint belongs to.
+        /// The OCIDs of the Network Security Groups to which the Database Management private endpoint belongs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

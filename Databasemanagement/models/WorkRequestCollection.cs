@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Lists all work requests in a given compartment. Contains WorkRequestSummary items.
+    /// Lists all work requests in a specific compartment. This contains WorkRequestSummary items.
     /// 
     /// </summary>
     public class WorkRequestCollection 
     {
         
         /// <value>
-        /// Collection of work requests
+        /// A collection of work requests.
         /// </value>
         /// <remarks>
         /// Required

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.ApmcontrolplaneService.Models
 {
   /// <summary>
-  /// Possible lifecycle states for an APM Domain.
+  /// Possible lifecycle states for an APM domain.
   /// </summary>
   public enum LifecycleStates {
       [EnumMember(Value = "CREATING")]
@@ -24,6 +24,8 @@ namespace Oci.ApmcontrolplaneService.Models
       Active,
       [EnumMember(Value = "DELETING")]
       Deleting,
+      [EnumMember(Value = "DELETED")]
+      Deleted,
       [EnumMember(Value = "FAILED")]
       Failed
   }

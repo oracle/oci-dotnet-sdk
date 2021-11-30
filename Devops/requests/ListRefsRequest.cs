@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Repository identifier.
+        /// Unique repository identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -31,7 +31,7 @@ namespace Oci.DevopsService.Requests
         
         ///
         /// <value>
-        /// Ref type to distinguish between branch and tag. If it is not specified, return all refs.
+        /// Reference type to distinguish between branch and tag. If it is not specified, all references are returned.
         /// </value>
         ///
         public enum RefTypeEnum {
@@ -42,13 +42,13 @@ namespace Oci.DevopsService.Requests
         };
 
         /// <value>
-        /// Ref type to distinguish between branch and tag. If it is not specified, return all refs.
+        /// Reference type to distinguish between branch and tag. If it is not specified, all references are returned.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "refType")]
         public System.Nullable<RefTypeEnum> RefType { get; set; }
         
         /// <value>
-        /// Commit id in a repository
+        /// Commit ID in a repository.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "commitId")]
         public string CommitId { get; set; }
@@ -66,7 +66,7 @@ namespace Oci.DevopsService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given Ref name.
+        /// A filter to return only resources that match the given reference name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "refName")]
         public string RefName { get; set; }
@@ -79,7 +79,7 @@ namespace Oci.DevopsService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for refName is ascending. Default order for refType is ascending. If no value is specified refName is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for reference name is ascending. Default order for reference type is ascending. If no value is specified reference name is default.
         /// 
         /// </value>
         ///
@@ -91,7 +91,7 @@ namespace Oci.DevopsService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for refName is ascending. Default order for refType is ascending. If no value is specified refName is default.
+        /// The field to sort by. Only one sort order may be provided. Default order for reference name is ascending. Default order for reference type is ascending. If no value is specified reference name is default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

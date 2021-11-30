@@ -38,7 +38,7 @@ namespace Oci.DevopsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only BuildPipelines that matches the given lifecycleState
+        /// A filter to return only build pipelines that matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<BuildPipeline.LifecycleStateEnum> LifecycleState { get; set; }

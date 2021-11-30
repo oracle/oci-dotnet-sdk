@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details of a datafile.
+    /// The details of a data file.
     /// </summary>
     public class Datafile 
     {
         
         /// <value>
-        /// The filename (including the path) of the datafile or tempfile.
+        /// The filename (including the path) of the data file or temp file.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The status of the file. INVALID status is used when the file number is not in use, for example, a file in a tablespace that was dropped.
+        /// The status of the file. INVALID status is used when the file number is not in use, for example, a file in a tablespace that was removed.
         /// </value>
         ///
         public enum StatusEnum {
@@ -49,7 +49,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The status of the file. INVALID status is used when the file number is not in use, for example, a file in a tablespace that was dropped.
+        /// The status of the file. INVALID status is used when the file number is not in use, for example, a file in a tablespace that was removed.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -80,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<OnlineStatusEnum> OnlineStatus { get; set; }
         
         /// <value>
-        /// Indicates whether the datafile is auto-extensible.
+        /// Indicates whether the data file is auto-extensible.
         /// </value>
         [JsonProperty(PropertyName = "isAutoExtensible")]
         public System.Nullable<bool> IsAutoExtensible { get; set; }
@@ -156,13 +156,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<decimal> IncrementBy { get; set; }
         
         /// <value>
-        /// The free space available in the datafile in KB.
+        /// The free space available in the data file in KB.
         /// </value>
         [JsonProperty(PropertyName = "freeSpaceKB")]
         public System.Nullable<decimal> FreeSpaceKB { get; set; }
         
         /// <value>
-        /// The total space used in the datafile in KB.
+        /// The total space used in the data file in KB.
         /// </value>
         [JsonProperty(PropertyName = "usedSpaceKB")]
         public System.Nullable<decimal> UsedSpaceKB { get; set; }

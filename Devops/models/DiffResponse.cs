@@ -22,13 +22,13 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Boolean for whether all changes are included in the response.
+        /// Boolean value to indicate if all changes are included in the response.
         /// </value>
         [JsonProperty(PropertyName = "areAllChangesIncluded")]
         public System.Nullable<bool> AreAllChangesIncluded { get; set; }
         
         /// <value>
-        /// Count of each type of change in diff.
+        /// Count of each type of change in difference.
         /// </value>
         [JsonProperty(PropertyName = "changeTypeCount")]
         public System.Collections.Generic.Dictionary<string, int> ChangeTypeCount { get; set; }
@@ -52,19 +52,19 @@ namespace Oci.DevopsService.Models
         public System.Nullable<int> CommitsBehindCount { get; set; }
         
         /// <value>
-        /// The number of lines added in whole diff.
+        /// The number of lines added in whole difference.
         /// </value>
         [JsonProperty(PropertyName = "addedLinesCount")]
         public System.Nullable<int> AddedLinesCount { get; set; }
         
         /// <value>
-        /// The number of lines deleted in whole diff.
+        /// The number of lines deleted in whole difference.
         /// </value>
         [JsonProperty(PropertyName = "deletedLinesCount")]
         public System.Nullable<int> DeletedLinesCount { get; set; }
         
         /// <value>
-        /// List of changes in the diff.
+        /// List of changes in the difference.
         /// </value>
         /// <remarks>
         /// Required

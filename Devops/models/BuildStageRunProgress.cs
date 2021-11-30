@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Run details for Build Stage.
+    /// Specifies the run details for Build stage.
     /// </summary>
     public class BuildStageRunProgress : BuildPipelineStageRunProgress
     {
@@ -76,7 +76,7 @@ namespace Oci.DevopsService.Models
         public string PrimaryBuildSource { get; set; }
         
         /// <value>
-        /// The details about all the steps in a Build Stage
+        /// The details about all the steps in a Build stage
         /// </value>
         [JsonProperty(PropertyName = "steps")]
         public System.Collections.Generic.List<BuildStageRunStep> Steps { get; set; }

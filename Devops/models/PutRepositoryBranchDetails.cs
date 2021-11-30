@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information needed to create a branch
+    /// The information needed to create a branch.
     /// </summary>
     public class PutRepositoryBranchDetails : PutRepositoryRefDetails
     {

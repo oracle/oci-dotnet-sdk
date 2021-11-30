@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmcontrolplaneService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information that can be updated by update APM domain operation.
     /// </summary>
     public class UpdateApmDomainDetails 
     {
         
         /// <value>
-        /// Display name of the APM Domain
+        /// Display name of the APM domain.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the APM Domain
+        /// Description of the APM domain.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

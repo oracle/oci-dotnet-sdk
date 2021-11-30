@@ -20,7 +20,7 @@ namespace Oci.ApmcontrolplaneService.Requests
     {
         
         /// <value>
-        /// OCID of the APM Domain
+        /// The OCID of the APM domain
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.ApmcontrolplaneService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// The information to be updated for the APM Domain.
+        /// The information to be updated for the APM domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,9 +40,8 @@ namespace Oci.ApmcontrolplaneService.Requests
         public UpdateApmDomainDetails UpdateApmDomainDetails { get; set; }
         
         /// <value>
-        /// For optimistic concurrency control. In the PUT or DELETE call
-        /// for a resource, set the `if-match` parameter to the value of the
-        /// etag from a previous GET or POST response for that resource.
+        /// For optimistic concurrency control. Set the `if-match` parameter
+        /// to the value of the etag from a previous GET or POST response for that resource.
         /// The resource will be updated or deleted only if the etag you
         /// provide matches the resource's current etag value.
         /// 

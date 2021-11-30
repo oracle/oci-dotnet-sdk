@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information about new Repository.
+    /// Information about the new repository.
     /// </summary>
     public class CreateRepositoryDetails 
     {
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The OCID of the Project containing the repository.
+        /// The OCID of the DevOps project containing the repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.DevopsService.Models
         public string DefaultBranch { get; set; }
         
         /// <value>
-        /// Type of repository
+        /// Type of repository.
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -58,7 +58,7 @@ namespace Oci.DevopsService.Models
         public MirrorRepositoryConfig MirrorRepositoryConfig { get; set; }
         
         /// <value>
-        /// The description of this repository. Avoid entering confidential information
+        /// Details of the repository. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

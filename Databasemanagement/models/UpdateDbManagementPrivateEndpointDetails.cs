@@ -34,7 +34,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCIDs of the network security groups that the private endpoint belongs to.
+        /// The OCIDs of the Network Security Groups to which the Database Management private endpoint belongs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the absolute wait criteria, user can specify fixed length of wait duration.
+    /// Specifies the absolute wait criteria. You can specify fixed length of wait duration.
     /// </summary>
     public class UpdateAbsoluteWaitCriteriaDetails : UpdateWaitCriteriaDetails
     {
         
         /// <value>
         /// The absolute wait duration.
-        /// Minimum waitDuration should be 5 seconds.
-        /// Maximum waitDuration can be up to 2 days.
+        /// Minimum wait duration must be 5 seconds.
+        /// Maximum wait duration can be up to 2 days.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "waitDuration")]

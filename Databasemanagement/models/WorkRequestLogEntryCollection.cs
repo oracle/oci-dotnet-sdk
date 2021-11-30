@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Results of a work request log search. Contains both WorkRequestLog items and other data.
+    /// The results of a work request log search. This contains WorkRequestLog items and other data.
     /// 
     /// </summary>
     public class WorkRequestLogEntryCollection 
     {
         
         /// <value>
-        /// Collection of work request logs
+        /// A collection of work request logs.
         /// </value>
         /// <remarks>
         /// Required

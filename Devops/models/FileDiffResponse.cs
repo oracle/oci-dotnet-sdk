@@ -22,25 +22,25 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The path on the baseVersion to the changed object.
+        /// The path on the base version to the changed object.
         /// </value>
         [JsonProperty(PropertyName = "oldPath")]
         public string OldPath { get; set; }
         
         /// <value>
-        /// The path on the targetVersion to the changed object.
+        /// The path on the target version to the changed object.
         /// </value>
         [JsonProperty(PropertyName = "newPath")]
         public string NewPath { get; set; }
         
         /// <value>
-        /// The ID of the changed object on the baseVersion.
+        /// The ID of the changed object on the base version.
         /// </value>
         [JsonProperty(PropertyName = "oldId")]
         public string OldId { get; set; }
         
         /// <value>
-        /// The ID of the changed object on the targetVersion.
+        /// The ID of the changed object on the target version.
         /// </value>
         [JsonProperty(PropertyName = "newId")]
         public string NewId { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of a compare diff.
+    /// Result of a compare difference.
     /// </summary>
     public class DiffCollection 
     {
         
         /// <value>
-        /// List of objects describing diffs for all changed files.
+        /// List of objects describing differences for all changed files.
         /// </value>
         /// <remarks>
         /// Required

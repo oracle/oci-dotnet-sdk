@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies list of parameters present in BuildPipeline.
-    /// In case of UPDATE operation, replaces existing parameters list. Merging with existing parameters is not supported.
+    /// Specifies list of parameters present in a build pipeline.
+    /// An UPDATE operation replaces the existing parameters list entirely.
     /// 
     /// </summary>
     public class BuildPipelineParameterCollection 
     {
         
         /// <value>
-        /// List of Parameters defined for a BuildPipeline.
+        /// List of parameters defined for a build pipeline.
         /// </value>
         /// <remarks>
         /// Required

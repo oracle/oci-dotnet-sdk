@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details the input parameters required to cancel a build run.
+        /// Parameter details required to cancel a build run.
         /// </value>
         /// <remarks>
         /// Required

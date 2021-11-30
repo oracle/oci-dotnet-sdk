@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmcontrolplaneService.Models
 {
     /// <summary>
-    /// The information about new APM Domain.
+    /// The information about the new APM domain.
     /// </summary>
     public class CreateApmDomainDetails 
     {
         
         /// <value>
-        /// Display name of the APM Domain
+        /// Display name of the APM domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.ApmcontrolplaneService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the APM Domain
+        /// Description of the APM domain.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the compartment corresponding to the APM Domain.
+        /// The OCID of the compartment corresponding to the APM domain.
         /// </value>
         /// <remarks>
         /// Required

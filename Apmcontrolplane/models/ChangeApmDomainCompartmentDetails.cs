@@ -22,7 +22,7 @@ namespace Oci.ApmcontrolplaneService.Models
     {
         
         /// <value>
-        /// The OCID of the destination compartment for the APM Domain.
+        /// The OCID of the destination compartment for the APM domain.
         /// </value>
         /// <remarks>
         /// Required

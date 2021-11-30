@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Results of a trigger search. Contains boh TriggerSummary items and other information, such as metadata.
+    /// Results of a trigger search. Contains boh trigger summary items and other information such as metadata.
     /// </summary>
     public class TriggerCollection 
     {

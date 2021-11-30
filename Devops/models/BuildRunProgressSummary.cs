@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The summary run progress details of a BuildRun.
+    /// The summary run progress details of a build run.
     /// </summary>
     public class BuildRunProgressSummary 
     {
         
         /// <value>
-        /// The time the the BuildRun is started. An RFC3339 formatted datetime string
+        /// The time the build run started. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the BuildRun is finished. An RFC3339 formatted datetime string
+        /// The time the build run finished. Format defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }

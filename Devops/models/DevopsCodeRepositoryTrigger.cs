@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Trigger specific to OCI Devops Repository Service
+    /// Trigger specific to OCI DevOps Code Repository service.
     /// </summary>
     public class DevopsCodeRepositoryTrigger : Trigger
     {
         
         /// <value>
-        /// The OCID of OCI Devops Repository
+        /// The OCID of the DevOps code repository.
         /// </value>
         /// <remarks>
         /// Required

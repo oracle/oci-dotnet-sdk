@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of a List Paths in a repository
+    /// Result of list paths in a repository.
     /// </summary>
     public class RepositoryPathCollection 
     {
         
         /// <value>
-        /// List of objects describings files or directories in a repository.
+        /// List of objects describing files or directories in a repository.
         /// </value>
         /// <remarks>
         /// Required

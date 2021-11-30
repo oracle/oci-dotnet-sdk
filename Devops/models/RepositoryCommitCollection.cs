@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of a Commit search.
+    /// Result of a commit search.
     /// </summary>
     public class RepositoryCommitCollection 
     {

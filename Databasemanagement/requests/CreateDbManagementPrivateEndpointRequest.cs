@@ -20,7 +20,7 @@ namespace Oci.DatabasemanagementService.Requests
     {
         
         /// <value>
-        /// Details to create a new private endpoint.
+        /// Details used to create a new Database Management private endpoint.
         /// </value>
         /// <remarks>
         /// Required

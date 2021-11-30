@@ -29,11 +29,20 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
-        /// The subtype of the Oracle Database. Indicates whether the database is a Container Database, Pluggable Database, or a Non-container Database.
+        /// The subtype of the Oracle Database. Indicates whether the database is a Container Database,
+        /// Pluggable Database, Non-container Database, Autonomous Database, or Autonomous Container Database.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
+        
+        /// <value>
+        /// The infrastructure used to deploy the Oracle Database.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         /// <value>
         /// The number of databases in the fleet.

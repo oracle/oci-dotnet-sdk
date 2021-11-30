@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Build Source required for Build Stage.
+    /// Build source required for the Build stage.
     /// </summary>
     [JsonConverter(typeof(BuildSourceModelConverter))]
     public class BuildSource 
     {
         
         /// <value>
-        /// Name of the Build source. This must be unique within a BuildSourceCollection. The name can be used by customers to locate the working directory pertinent to this repository.
+        /// Name of the build source. This must be unique within a build source collection. The name can be used by customers to locate the working directory pertinent to this repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DevopsService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The type of Source Provider.
+        /// The type of source provider.
         /// </value>
         ///
         public enum ConnectionTypeEnum {
@@ -47,7 +47,7 @@ namespace Oci.DevopsService.Models
 
         
         /// <value>
-        /// Url for repository
+        /// URL for the repository.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.DevopsService.Models
         public string RepositoryUrl { get; set; }
         
         /// <value>
-        /// branch name
+        /// Branch name.
         /// </value>
         /// <remarks>
         /// Required

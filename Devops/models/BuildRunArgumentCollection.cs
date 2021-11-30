@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies list of arguments passed along with the BuildRun.
+    /// Specifies list of arguments passed along with the build run.
     /// 
     /// </summary>
     public class BuildRunArgumentCollection 
     {
         
         /// <value>
-        /// List of arguments provided at the time of BuildRun.
+        /// List of arguments provided at the time of running the build.
         /// </value>
         /// <remarks>
         /// Required

@@ -50,7 +50,7 @@ namespace Oci.DevopsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only Build Runs that matches the given lifecycleState.
+        /// A filter to return only build runs that matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<BuildRun.LifecycleStateEnum> LifecycleState { get; set; }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies list of Exported Variables.
+    /// Specifies list of exported variables.
     /// 
     /// </summary>
     public class ExportedVariableCollection 
     {
         
         /// <value>
-        /// List of exported variables
+        /// List of exported variables.
         /// </value>
         /// <remarks>
         /// Required

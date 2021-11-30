@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Result of a stages search.
+    /// Result of a stage search.
     /// </summary>
     public class BuildPipelineStageCollection 
     {
         
         /// <value>
-        /// Summary of list of stages found for the search
+        /// Summary of the list of stages found for the search.
         /// </value>
         /// <remarks>
         /// Required

@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string DbManagementPrivateEndpointId { get; set; }
         
         /// <value>
-        /// The details used to change the compartment of a Database Management private endpoint.
+        /// The details used to move the Database Management private endpoint to another compartment.
         /// </value>
         /// <remarks>
         /// Required

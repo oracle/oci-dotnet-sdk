@@ -54,6 +54,12 @@ namespace Oci.OpsiService.Models
         public string DatabaseId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// SQL Text
         /// </value>
         /// <remarks>

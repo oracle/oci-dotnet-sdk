@@ -535,6 +535,45 @@ namespace Oci.BlockchainService
         }
 
         /// <summary>
+        /// List Blockchain Platform Patches
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/ListBlockchainPlatformPatches.cs.html">here</a> to see an example of how to use ListBlockchainPlatformPatches API.</example>
+        public async Task<ListBlockchainPlatformPatchesResponse> ListBlockchainPlatformPatches(ListBlockchainPlatformPatchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listBlockchainPlatformPatches");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/blockchainPlatforms/{blockchainPlatformId}/patches".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListBlockchainPlatformPatchesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListBlockchainPlatformPatches failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns a list Blockchain Platform Instances in a compartment
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1040,6 +1079,45 @@ namespace Oci.BlockchainService
             catch (Exception e)
             {
                 logger.Error($"UpdatePeer failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Upgrade a Blockchain Platform version
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/blockchain/UpgradeBlockchainPlatform.cs.html">here</a> to see an example of how to use UpgradeBlockchainPlatform API.</example>
+        public async Task<UpgradeBlockchainPlatformResponse> UpgradeBlockchainPlatform(UpgradeBlockchainPlatformRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called upgradeBlockchainPlatform");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/blockchainPlatforms/{blockchainPlatformId}/actions/upgrade".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpgradeBlockchainPlatformResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpgradeBlockchainPlatform failed with error: {e.Message}");
                 throw;
             }
         }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The information needed to create a ref. If the ref already exists, it can be used to update it.
+    /// The information needed to create a reference. If the reference already exists, then it can be used to update the reference.
     /// </summary>
     [JsonConverter(typeof(PutRepositoryRefDetailsModelConverter))]
     public class PutRepositoryRefDetails 
     {
                 ///
         /// <value>
-        /// The type of Ref (Branch or Tag)
+        /// The type of reference (Branch or Tag).
         /// </value>
         ///
         public enum RefTypeEnum {

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Devops Code Repository Build Source for Build Stage
+    /// DevOps code repository build source for Build stage.
     /// </summary>
     public class DevopsCodeRepositoryBuildSource : BuildSource
     {
         
         /// <value>
-        /// The Devops Code Repository Id
+        /// The DevOps code repository ID.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Commit details that need to be used for the BuildRun
+    /// Commit details that need to be used for the build run.
     /// </summary>
     public class CommitInfo 
     {
         
         /// <value>
-        /// Repository URL
+        /// Repository URL.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DevopsService.Models
         public string RepositoryBranch { get; set; }
         
         /// <value>
-        /// Commit Hash pertinent to the repository URL and Branch specified.
+        /// Commit hash pertinent to the repository URL and the specified branch.
         /// </value>
         /// <remarks>
         /// Required

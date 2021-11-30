@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A Summary of Work Request
+    /// A Summary of the work request.
     /// </summary>
     public class WorkRequestSummary 
     {
         
         /// <value>
-        /// Type of the work request
+        /// The type of work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<WorkRequestOperationType> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// The status of the current work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,10 +54,8 @@ namespace Oci.DatabasemanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
-        /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
-        /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used
+        /// The OCID of the compartment that contains the work request. Work requests should be scoped to the same compartment as the resource the work request affects.
+        /// If the work request affects multiple resources that are not in the same compartment then the system picks the primary resource whose compartment should be used.
         /// 
         /// </value>
         /// <remarks>
@@ -68,7 +66,7 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// The completed percentage of the operation tracked by the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -78,9 +76,9 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the request was created, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
-        /// The precision for the time object is milliseconds.
+        /// The date and time the work request was accepted, as described in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// The precision for this time object is in milliseconds.
         /// 
         /// </value>
         /// <remarks>
@@ -91,16 +89,15 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the request was started, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
-        /// section 14.29. The precision for the time object is milliseconds.
+        /// The date and time the work request transitioned from ACCEPTED to IN_PROGRESS, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339). The precision for this time object is in milliseconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the object was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
-        /// The precision for the time object is milliseconds.
+        /// The date and time the work request reached a terminal state, either FAILED or SUCCEEDED, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// The precision for this time object is in milliseconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// unique Connection identifier
+        /// Unique connection identifier.
         /// </value>
         /// <remarks>
         /// Required

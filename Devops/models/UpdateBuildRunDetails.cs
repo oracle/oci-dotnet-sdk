@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The build Run information to be updated.
+    /// The build run information to be updated.
     /// </summary>
     public class UpdateBuildRunDetails 
     {
         
         /// <value>
-        /// BuildRun display name
+        /// Build run display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -52,7 +52,7 @@ namespace Oci.IdentityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The region's name. See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
+        /// The region's name identifier. See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
         /// for the full list of supported region names.
         /// <br/>
         /// Example: us-phoenix-1

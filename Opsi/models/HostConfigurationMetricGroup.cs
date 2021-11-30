@@ -48,7 +48,7 @@ namespace Oci.OpsiService.Models
         
         /// <value>
         /// Collection timestamp
-        /// Example: &quot;2020-05-06T00:00:00.000Z&quot;    
+        /// Example: &quot;2020-05-06T00:00:00.000Z&quot;
         /// </value>
         /// <remarks>
         /// Required

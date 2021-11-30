@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Commit object with commit information
+    /// Commit object with commit information.
     /// </summary>
     public class RepositoryCommit 
     {
         
         /// <value>
-        /// Commit hash pointed to by Ref name
+        /// Commit hash pointed to by reference name.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,31 +42,31 @@ namespace Oci.DevopsService.Models
         public string CommitMessage { get; set; }
         
         /// <value>
-        /// The name of the author of the repository.
+        /// Name of the author of the repository.
         /// </value>
         [JsonProperty(PropertyName = "authorName")]
         public string AuthorName { get; set; }
         
         /// <value>
-        /// The email of the author of the repository.
+        /// Email of the author of the repository.
         /// </value>
         [JsonProperty(PropertyName = "authorEmail")]
         public string AuthorEmail { get; set; }
         
         /// <value>
-        /// The name of who create the commit.
+        /// Name of who creates the commit.
         /// </value>
         [JsonProperty(PropertyName = "committerName")]
         public string CommitterName { get; set; }
         
         /// <value>
-        /// The email of who create the commit.
+        /// Email of who creates the commit.
         /// </value>
         [JsonProperty(PropertyName = "committerEmail")]
         public string CommitterEmail { get; set; }
         
         /// <value>
-        /// An array of parent commit ids of created commit.
+        /// An array of parent commit IDs of created commit.
         /// </value>
         [JsonProperty(PropertyName = "parentCommitIds")]
         public System.Collections.Generic.List<string> ParentCommitIds { get; set; }
@@ -78,7 +78,7 @@ namespace Oci.DevopsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Tree information for the specified commit
+        /// Tree information for the specified commit.
         /// </value>
         [JsonProperty(PropertyName = "treeId")]
         public string TreeId { get; set; }
