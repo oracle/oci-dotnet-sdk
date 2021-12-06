@@ -121,5 +121,11 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// The security status of the Java Runtime.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jreSecurityStatus")]
+        public System.Nullable<JreSecurityStatus> JreSecurityStatus { get; set; }
     }
 }

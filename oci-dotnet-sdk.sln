@@ -185,6 +185,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Databasetools
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Servicemanagerproxy", "Servicemanagerproxy\OCI.DotNetSDK.Servicemanagerproxy.csproj", "{169FA01D-7F29-4E8F-ADD6-A88909BB3F63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Appmgmtcontrol", "Appmgmtcontrol\OCI.DotNetSDK.Appmgmtcontrol.csproj", "{B00A7846-E3F9-4139-A145-E9087CFDBC9B}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1881,5 +1883,17 @@ Global
         {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x64.Build.0 = Release|Any CPU
         {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x86.ActiveCfg = Release|Any CPU
         {169FA01D-7F29-4E8F-ADD6-A88909BB3F63}.Release|x86.Build.0 = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|x64.Build.0 = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Debug|x86.Build.0 = Debug|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|x64.ActiveCfg = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|x64.Build.0 = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|x86.ActiveCfg = Release|Any CPU
+        {B00A7846-E3F9-4139-A145-E9087CFDBC9B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -17,6 +17,7 @@ namespace Oci.JmsService.Models
 {
     /// <summary>
     /// Operating System of the platform on which the Java Runtime was reported.
+    /// 
     /// </summary>
     public class OperatingSystem 
     {

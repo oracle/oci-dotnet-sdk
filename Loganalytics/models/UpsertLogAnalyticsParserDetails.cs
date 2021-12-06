@@ -196,5 +196,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isNamespaceAware")]
         public System.Nullable<bool> IsNamespaceAware { get; set; }
         
+        /// <value>
+        /// An array of categories to assign to the parser. Specifying the name attribute for each category would suffice.
+        /// Oracle-defined category assignments cannot be removed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
+        
     }
 }

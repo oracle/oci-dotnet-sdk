@@ -53,6 +53,13 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
         
+        /// <value>
+        /// The host [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related managed instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hostId")]
+        public string HostId { get; set; }
+        
         [JsonProperty(PropertyName = "operatingSystem")]
         public OperatingSystem OperatingSystem { get; set; }
         

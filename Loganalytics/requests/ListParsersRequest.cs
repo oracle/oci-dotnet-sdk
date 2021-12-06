@@ -112,6 +112,12 @@ namespace Oci.LoganalyticsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parserType")]
         public System.Nullable<ParserTypeEnum> ParserType { get; set; }
         
+        /// <value>
+        /// A comma-separated list of categories used for filtering
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "categories")]
+        public string Categories { get; set; }
+        
         ///
         /// <value>
         /// The system value used for filtering.  Only items with the specified system value

@@ -121,6 +121,19 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyVersionId")]
+        public string KmsKeyVersionId { get; set; }
+        
+        /// <value>
+        /// Key History Entry.
+        /// </value>
+        [JsonProperty(PropertyName = "keyHistoryEntry")]
+        public System.Collections.Generic.List<AutonomousDatabaseKeyHistoryEntry> KeyHistoryEntry { get; set; }
                 ///
         /// <value>
         /// The current state of the Autonomous Container Database.

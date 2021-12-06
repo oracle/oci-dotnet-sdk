@@ -194,5 +194,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "userParsers")]
         public System.Collections.Generic.List<LogAnalyticsParser> UserParsers { get; set; }
         
+        /// <value>
+        /// An array of categories to assign to the source. Specifying the name attribute for each category would suffice.
+        /// Oracle-defined category assignments cannot be removed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
+        
     }
 }
