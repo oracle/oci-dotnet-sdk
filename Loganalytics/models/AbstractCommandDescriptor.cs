@@ -59,6 +59,10 @@ namespace Oci.LoganalyticsService.Models
             Eval,
             [EnumMember(Value = "EXTRACT")]
             Extract,
+            [EnumMember(Value = "JSON_EXTRACT")]
+            JsonExtract,
+            [EnumMember(Value = "XML_EXTRACT")]
+            XmlExtract,
             [EnumMember(Value = "EVENT_STATS")]
             EventStats,
             [EnumMember(Value = "BUCKET")]
@@ -222,6 +226,9 @@ namespace Oci.LoganalyticsService.Models
                 case "GEO_STATS":
                     obj = new GeoStatsCommandDescriptor();
                     break;
+                case "JSON_EXTRACT":
+                    obj = new JsonExtractCommandDescriptor();
+                    break;
                 case "MAP":
                     obj = new MapCommandDescriptor();
                     break;
@@ -311,6 +318,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "RENAME":
                     obj = new RenameCommandDescriptor();
+                    break;
+                case "XML_EXTRACT":
+                    obj = new XmlExtractCommandDescriptor();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

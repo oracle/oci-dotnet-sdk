@@ -133,6 +133,12 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
+        /// A comma-separated list of categories used for filtering
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "categories")]
+        public string Categories { get; set; }
+        
+        /// <value>
         /// A flag indicating whether or not to return OMC annotated or hidden lookups.
         /// 
         /// </value>

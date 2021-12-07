@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// LoganParserDetails
+    /// LogAnalyticsParser
     /// </summary>
     public class LogAnalyticsParser 
     {
@@ -235,6 +235,14 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isNamespaceAware")]
         public System.Nullable<bool> IsNamespaceAware { get; set; }
+        
+        /// <value>
+        /// An array of categories assigned to this parser.
+        /// The isSystem flag denotes if each category assignment is user-created or Oracle-defined.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
         
     }
 }

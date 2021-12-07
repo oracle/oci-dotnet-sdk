@@ -121,5 +121,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// An array of categories assigned to this lookup.
+        /// The isSystem flag denotes if each category assignment is user-created or Oracle-defined.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
+        
     }
 }

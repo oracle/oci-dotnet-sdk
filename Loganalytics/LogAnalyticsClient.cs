@@ -511,6 +511,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Returns the difference between the two input payloads, including intraline differences.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/CompareContent.cs.html">here</a> to see an example of how to use CompareContent API.</example>
+        public async Task<CompareContentResponse> CompareContent(CompareContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called compareContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/search/actions/compareContent".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Expect", "100-continue");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CompareContentResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CompareContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Add configuration for enterprise manager bridge. Enterprise manager bridge is used to automatically add selected entities from enterprise manager cloud control. A corresponding OCI bridge configuration is required in enterprise manager.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1966,6 +2007,46 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Gets detailed information about the category with the specified name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/GetCategory.cs.html">here</a> to see an example of how to use GetCategory API.</example>
+        public async Task<GetCategoryResponse> GetCategory(GetCategoryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called getCategory");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/{categoryName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetCategoryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetCategory failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Extracts column names from the input SQL query.
         /// 
         /// </summary>
@@ -3399,6 +3480,46 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Returns a list of categories, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as category name or description.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListCategories.cs.html">here</a> to see an example of how to use ListCategories API.</example>
+        public async Task<ListCategoriesResponse> ListCategories(ListCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listCategories");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListCategoriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCategories failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns the list of configuration work requests such as association or lookup operations, containing detailed information about them. You may paginate or limit the number of results.
         /// 
         /// </summary>
@@ -3751,6 +3872,45 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListLogAnalyticsEntities failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Return a log analytics entity topology collection that contains a set of log analytics entities and a set of relationships between those, for the input source entity.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListLogAnalyticsEntityTopology.cs.html">here</a> to see an example of how to use ListLogAnalyticsEntityTopology API.</example>
+        public async Task<ListLogAnalyticsEntityTopologyResponse> ListLogAnalyticsEntityTopology(ListLogAnalyticsEntityTopologyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listLogAnalyticsEntityTopology");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/logAnalyticsEntities/{logAnalyticsEntityId}/entityTopology".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListLogAnalyticsEntityTopologyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListLogAnalyticsEntityTopology failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4229,6 +4389,47 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ListRecalledData failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of resources and their category assignments.
+        /// You may limit the number of results, provide sorting order, and filter by information such as resource type.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/ListResourceCategories.cs.html">here</a> to see an example of how to use ListResourceCategories API.</example>
+        public async Task<ListResourceCategoriesResponse> ListResourceCategories(ListResourceCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listResourceCategories");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/resourceCategories".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListResourceCategoriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListResourceCategories failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5474,6 +5675,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Removes the category assignments of DASHBOARD and SAVEDSEARCH resources.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/RemoveResourceCategories.cs.html">here</a> to see an example of how to use RemoveResourceCategories API.</example>
+        public async Task<RemoveResourceCategoriesResponse> RemoveResourceCategories(RemoveResourceCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called removeResourceCategories");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/actions/removeResourceCategories".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Expect", "100-continue");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemoveResourceCategoriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveResourceCategories failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Remove one or more event types from a source.
         /// 
         /// </summary>
@@ -6126,6 +6368,47 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Updates the category assignments of DASHBOARD and SAVEDSEARCH resources.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/UpdateResourceCategories.cs.html">here</a> to see an example of how to use UpdateResourceCategories API.</example>
+        public async Task<UpdateResourceCategoriesResponse> UpdateResourceCategories(UpdateResourceCategoriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called updateResourceCategories");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/actions/updateResourceCategories".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Expect", "100-continue");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateResourceCategoriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateResourceCategories failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Update the scheduled task. Schedules may be updated only for taskType SAVED_SEARCH and PURGE.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6692,6 +6975,49 @@ namespace Oci.LoganalyticsService
             catch (Exception e)
             {
                 logger.Error($"ValidateSourceMapping failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Verify the accelerated saved search task specified by {scheduledTaskId}.
+        /// For internal use only.
+        /// Optionally specify whether to return accelerated search results; the default is false.
+        /// The ScheduledTask taskType must be ACCELERATION.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/loganalytics/Verify.cs.html">here</a> to see an example of how to use Verify API.</example>
+        public async Task<VerifyResponse> Verify(VerifyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called verify");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/scheduledTasks/{scheduledTaskId}/actions/verify".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<VerifyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"Verify failed with error: {e.Message}");
                 throw;
             }
         }

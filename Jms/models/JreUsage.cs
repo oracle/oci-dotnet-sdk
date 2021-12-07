@@ -22,6 +22,43 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
+        /// The internal identifier of the Java Runtime.
+        /// </value>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related fleet.  This property value is present only for /actions/listJreUsage.
+        /// </value>
+        [JsonProperty(PropertyName = "fleetId")]
+        public string FleetId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related managed instance. This property value is present only for /actions/listJreUsage.
+        /// </value>
+        [JsonProperty(PropertyName = "managedInstanceId")]
+        public string ManagedInstanceId { get; set; }
+        
+        /// <value>
+        /// The security status of the Java Runtime.
+        /// </value>
+        [JsonProperty(PropertyName = "securityStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<JreSecurityStatus> SecurityStatus { get; set; }
+        
+        /// <value>
+        /// The release date of the Java Runtime (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [JsonProperty(PropertyName = "releaseDate")]
+        public System.Nullable<System.DateTime> ReleaseDate { get; set; }
+        
+        /// <value>
+        /// The End of Support Life (EOSL) date of the Java Runtime (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [JsonProperty(PropertyName = "endOfSupportLifeDate")]
+        public System.Nullable<System.DateTime> EndOfSupportLifeDate { get; set; }
+        
+        /// <value>
         /// The vendor of the Java Runtime.
         /// </value>
         /// <remarks>

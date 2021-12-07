@@ -125,6 +125,26 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
+                ///
+        /// <value>
+        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// 
+        /// </value>
+        ///
+        public enum SessionModeEnum {
+            [EnumMember(Value = "DIRECT")]
+            Direct,
+            [EnumMember(Value = "REDIRECT")]
+            Redirect
+        };
+
+        /// <value>
+        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sessionMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SessionModeEnum> SessionMode { get; set; }
         
         /// <value>
         /// The wallet contents Oracle GoldenGate uses to make connections to a database.  This attribute is expected to be base64 encoded.

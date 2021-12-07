@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// LoganParserDetails
+    /// LogAnalyticsParserSummary
     /// </summary>
     public class LogAnalyticsParserSummary 
     {

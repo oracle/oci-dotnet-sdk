@@ -126,7 +126,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "USER_ACTION")]
             UserAction,
             [EnumMember(Value = "TENANCY_LIFECYCLE")]
-            TenancyLifecycle
+            TenancyLifecycle,
+            [EnumMember(Value = "PURGE_RESOURCE_NOT_FOUND")]
+            PurgeResourceNotFound
         };
 
         /// <value>

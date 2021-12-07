@@ -153,6 +153,12 @@ namespace Oci.LoganalyticsService.Requests
         public string Name { get; set; }
         
         /// <value>
+        /// A comma-separated list of categories used for filtering
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "categories")]
+        public string Categories { get; set; }
+        
+        /// <value>
         /// A flag specifying whether or not to return all source information, or a subset of the
         /// information about each source.  A value of true will return only the source unique
         /// identifier and the source name.  A value of false will return all source information

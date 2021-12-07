@@ -54,7 +54,7 @@ namespace Oci.JmsService.Models
         public string JreVersion { get; set; }
         
         /// <value>
-        /// The file system path of the installation.
+        /// The file system path of the Java installation.
         /// </value>
         /// <remarks>
         /// Required

@@ -244,5 +244,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "eventTypes")]
         public System.Collections.Generic.List<EventType> EventTypes { get; set; }
         
+        /// <value>
+        /// An array of categories assigned to this source.
+        /// The isSystem flag denotes if each category assignment is user-created or Oracle-defined.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
+        
     }
 }
