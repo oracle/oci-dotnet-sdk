@@ -30,6 +30,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCount { get; set; }
         
         /// <value>
+        /// The number of OCPU cores to enable for the VM cluster. Only 1 decimal place is allowed for the fractional part.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<float> OcpuCount { get; set; }
+        
+        /// <value>
         /// The memory to be allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]
@@ -46,6 +52,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Double DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size to be allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
+        public System.Double DataStorageSizeInGBs { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the VM cluster. The default is BRING_YOUR_OWN_LICENSE.

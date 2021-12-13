@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AilanguageService.Models
 {
     /// <summary>
-    /// Aspect object.
+    /// Sentiment aspect object.
     /// </summary>
     public class SentimentAspect 
     {
@@ -28,7 +28,7 @@ namespace Oci.AilanguageService.Models
         public System.Nullable<int> Offset { get; set; }
         
         /// <value>
-        /// Length of text.
+        /// Length of aspect text.
         /// </value>
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<int> Length { get; set; }
@@ -46,8 +46,8 @@ namespace Oci.AilanguageService.Models
         public string Sentiment { get; set; }
         
         /// <value>
-        /// Scores for each sentiment.
-        /// Example: &quot;{\\&quot;positive\\&quot;: 1.0, \\&quot;negative\\&quot;: 0.0}&quot;
+        /// Scores or confidences for each sentiment.
+        /// Example: {&quot;positive&quot;: 1.0, &quot;negative&quot;: 0.0}
         /// </value>
         [JsonProperty(PropertyName = "scores")]
         public System.Collections.Generic.Dictionary<string, System.Double> Scores { get; set; }

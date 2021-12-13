@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The function task. Batch input can be limited by either size or time. The first limit reached determines the boundary of the batch.
+    /// The Functions task. 
+    /// Batch input for a function can be limited by either size or time. The first limit reached determines the boundary of the batch.
+    /// For configuration instructions, see
+    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
     /// 
     /// </summary>
     public class FunctionTaskDetails : TaskDetails

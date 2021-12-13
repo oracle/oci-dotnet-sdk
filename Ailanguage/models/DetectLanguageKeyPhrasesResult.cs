@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// List of keyPhrases.
+        /// List of detected keyPhrases.
         /// </value>
         /// <remarks>
         /// Required

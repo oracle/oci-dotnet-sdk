@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatacatalogService.Models
 {
     /// <summary>
-    /// Summary of a pattern. A Pattern is defined using an expression and can be used as data selectors or filters
-    /// to provide a singular view of an entity across multiple physical data artifacts.
+    /// Summary of a pattern. A pattern is a data selector or filter which can provide a singular,
+    /// logical entity view aggregating multiple physical data artifacts for ease of use.
     /// 
     /// </summary>
     public class PatternSummary 
@@ -61,10 +61,22 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The expression used in the pattern that may include qualifiers.
+        /// Input string which drives the selection process, allowing for fine-grained control using qualifiers.
+        /// Refer to the user documentation for details of the format and examples. A pattern cannot include both
+        /// a prefix and an expression.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
+        
+        /// <value>
+        /// Input string which drives the selection process.
+        /// Refer to the user documentation for details of the format and examples. A pattern cannot include both
+        /// a prefix and an expression.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "filePathPrefix")]
+        public string FilePathPrefix { get; set; }
         
         /// <value>
         /// State of the pattern.

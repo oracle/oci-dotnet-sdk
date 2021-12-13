@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemanagerproxyService.Models
 {
     /// <summary>
-    /// Model describing service environment details.
+    /// Summary of service environment details.
     /// </summary>
     public class ServiceEnvironmentSummary 
     {
         
         /// <value>
-        /// Unqiue identifier for the entitlement related to the environment.
+        /// Unqiue identifier for the entitlement related to the environment. 
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +35,9 @@ namespace Oci.ServicemanagerproxyService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The subscription Id corresponding to the service environment Id.
+        /// The unique subscription ID associated with the service environment ID.
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -55,7 +59,7 @@ namespace Oci.ServicemanagerproxyService.Models
         public System.Nullable<ServiceEntitlementRegistrationStatus> Status { get; set; }
         
         /// <value>
-        /// Compartment Id associated with the service.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,15 +88,19 @@ namespace Oci.ServicemanagerproxyService.Models
         public System.Collections.Generic.List<ServiceEnvironmentEndPointOverview> ServiceEnvironmentEndpoints { get; set; }
         
         /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Defined tags for this resource. Each key is predefined and scoped to a
+        /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no
+        /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;CostCenter&quot;: &quot;42&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }

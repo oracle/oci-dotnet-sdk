@@ -16,8 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatacatalogService.Models
 {
     /// <summary>
-    /// Results of a patterns listing.  A Pattern is defined using an expression and can be used as data selectors or filters
-    /// to provide a singular view of an entity across multiple physical data artifacts.
+    /// Results of a pattern listing. Patterns are used in entity harvesting.
     /// 
     /// </summary>
     public class PatternCollection 

@@ -20,7 +20,7 @@ namespace Oci.ServicemanagerproxyService.Requests
     {
         
         /// <value>
-        /// The unique identifier for the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,13 +30,18 @@ namespace Oci.ServicemanagerproxyService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The Id associated with the service environment.
+        /// The unique identifier associated with the service environment. 
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceEnvironmentId")]
         public string ServiceEnvironmentId { get; set; }
         
         /// <value>
-        /// The service definition type of the environment.
+        /// The environment's service definition type. 
+        /// For example, \"RGBUOROMS\" is the service definition type for \"Oracle Retail Order Management Cloud Service\".
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceEnvironmentType")]
         public string ServiceEnvironmentType { get; set; }

@@ -98,6 +98,12 @@ namespace Oci.IdentityService.Models
         public System.Nullable<bool> EmailVerified { get; set; }
         
         /// <value>
+        /// DB username of the DB credential. Has to be unique across the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "dbUserName")]
+        public string DbUserName { get; set; }
+        
+        /// <value>
         /// The OCID of the `IdentityProvider` this user belongs to.
         /// </value>
         [JsonProperty(PropertyName = "identityProviderId")]

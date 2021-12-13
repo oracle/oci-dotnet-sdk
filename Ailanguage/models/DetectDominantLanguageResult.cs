@@ -22,10 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Results are sorted in descending order of the scores. Most likely language is on top.
-        /// languages: [{\"name\": \"Bosnian\",\"code\": \"bs\",\"score\": 0.6942308391868572},
-        ///            {\"name\": \"Croatian\",\"code\": \"hr\",\"score\": 0.15768701487872652},
-        ///            {\"name\": \"Serbo-Croatian\",\"code\": \"sh\",\"score\": 0.1480651612334694}]
+        /// List of detected languages with results sorted in descending order of the scores. Most likely language is on top.
         /// 
         /// </value>
         /// <remarks>

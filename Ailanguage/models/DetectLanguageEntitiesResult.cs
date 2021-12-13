@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// List of entities.
+        /// List of detected entities.
         /// </value>
         /// <remarks>
         /// Required

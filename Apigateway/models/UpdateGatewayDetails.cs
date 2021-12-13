@@ -67,5 +67,11 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// An array of CA bundles that should be used on the Gateway for TLS validation.
+        /// </value>
+        [JsonProperty(PropertyName = "caBundles")]
+        public System.Collections.Generic.List<CaBundle> CaBundles { get; set; }
+        
     }
 }

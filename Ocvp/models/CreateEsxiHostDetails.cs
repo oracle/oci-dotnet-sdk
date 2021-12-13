@@ -77,6 +77,16 @@ namespace Oci.OcvpService.Models
         public string ComputeAvailabilityDomain { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the esxi host that
+        /// is failed. It is an optional param, when user supplies this param, new Esxi
+        /// Host will be created to replace the failed one, and failedEsxiHostId field
+        /// will be udpated in the newly created EsxiHost.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "failedEsxiHostId")]
+        public string FailedEsxiHostId { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

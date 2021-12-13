@@ -213,5 +213,14 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "customProperties")]
         public System.Collections.Generic.List<FacetedSearchCustomProperty> CustomProperties { get; set; }
         
+        /// <value>
+        /// A map of maps that contains the properties which are specific to the element type in the search result.
+        /// The map keys are category names and the values are maps of property name to property value. Every property
+        /// is contained inside of a category. Most element types have required properties within the \"default\" category.
+        /// Example: {&quot;properties&quot;: { &quot;default&quot;: { &quot;key1&quot;: &quot;value1&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
+        
     }
 }

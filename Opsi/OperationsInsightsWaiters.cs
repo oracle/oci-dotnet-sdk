@@ -32,6 +32,34 @@ namespace Oci.OpsiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAwrHubRequest, GetAwrHubResponse> ForAwrHub(GetAwrHubRequest request, params AwrHubLifecycleState[] targetStates)
+        {
+            return this.ForAwrHub(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAwrHubRequest, GetAwrHubResponse> ForAwrHub(GetAwrHubRequest request, WaiterConfiguration config, params AwrHubLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAwrHubRequest, GetAwrHubResponse>(
+                request,
+                request => client.GetAwrHub(request),
+                response => targetStates.Contains(response.AwrHub.LifecycleState.Value),
+                targetStates.Contains(AwrHubLifecycleState.Deleted)
+            );
+            return new Waiter<GetAwrHubRequest, GetAwrHubResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDatabaseInsightRequest, GetDatabaseInsightResponse> ForDatabaseInsight(GetDatabaseInsightRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDatabaseInsight(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -137,6 +165,62 @@ namespace Oci.OpsiService
                 targetStates.Contains(LifecycleState.Deleted)
             );
             return new Waiter<GetHostInsightRequest, GetHostInsightResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsWarehouseRequest, GetOperationsInsightsWarehouseResponse> ForOperationsInsightsWarehouse(GetOperationsInsightsWarehouseRequest request, params OperationsInsightsWarehouseLifecycleState[] targetStates)
+        {
+            return this.ForOperationsInsightsWarehouse(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsWarehouseRequest, GetOperationsInsightsWarehouseResponse> ForOperationsInsightsWarehouse(GetOperationsInsightsWarehouseRequest request, WaiterConfiguration config, params OperationsInsightsWarehouseLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOperationsInsightsWarehouseRequest, GetOperationsInsightsWarehouseResponse>(
+                request,
+                request => client.GetOperationsInsightsWarehouse(request),
+                response => targetStates.Contains(response.OperationsInsightsWarehouse.LifecycleState.Value),
+                targetStates.Contains(OperationsInsightsWarehouseLifecycleState.Deleted)
+            );
+            return new Waiter<GetOperationsInsightsWarehouseRequest, GetOperationsInsightsWarehouseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsWarehouseUserRequest, GetOperationsInsightsWarehouseUserResponse> ForOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserRequest request, params OperationsInsightsWarehouseUserLifecycleState[] targetStates)
+        {
+            return this.ForOperationsInsightsWarehouseUser(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsWarehouseUserRequest, GetOperationsInsightsWarehouseUserResponse> ForOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserRequest request, WaiterConfiguration config, params OperationsInsightsWarehouseUserLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOperationsInsightsWarehouseUserRequest, GetOperationsInsightsWarehouseUserResponse>(
+                request,
+                request => client.GetOperationsInsightsWarehouseUser(request),
+                response => targetStates.Contains(response.OperationsInsightsWarehouseUser.LifecycleState.Value),
+                targetStates.Contains(OperationsInsightsWarehouseUserLifecycleState.Deleted)
+            );
+            return new Waiter<GetOperationsInsightsWarehouseUserRequest, GetOperationsInsightsWarehouseUserResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

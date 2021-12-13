@@ -133,6 +133,30 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> BillingContractEndDate { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the esxi host that
+        /// is failed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "failedEsxiHostId")]
+        public string FailedEsxiHostId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the esxi host that
+        /// is newly created to replace the failed node.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replacementEsxiHostId")]
+        public string ReplacementEsxiHostId { get; set; }
+        
+        /// <value>
+        /// The date and time when the new esxi host should start billing cycle.
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// Example: 2021-07-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "gracePeriodEndDate")]
+        public System.Nullable<System.DateTime> GracePeriodEndDate { get; set; }
+        
+        /// <value>
         /// The availability domain of the ESXi host.
         /// 
         /// </value>

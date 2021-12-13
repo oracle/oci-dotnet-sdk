@@ -55,6 +55,7 @@ namespace Oci.OpsiService.Models
                 ///
         /// <value>
         /// Platform type.
+        /// 
         /// </value>
         ///
         public enum PlatformTypeEnum {
@@ -64,6 +65,7 @@ namespace Oci.OpsiService.Models
 
         /// <value>
         /// Platform type.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

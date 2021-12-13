@@ -125,7 +125,9 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "parentAttributeKey")]
             ParentAttributeKey,
             [EnumMember(Value = "externalParentAttributeKey")]
-            ExternalParentAttributeKey
+            ExternalParentAttributeKey,
+            [EnumMember(Value = "typeKey")]
+            TypeKey
         };
 
         /// <value>

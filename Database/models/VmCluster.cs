@@ -125,6 +125,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpusEnabled { get; set; }
         
         /// <value>
+        /// The number of enabled OCPU cores.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpusEnabled")]
+        public System.Nullable<float> OcpusEnabled { get; set; }
+        
+        /// <value>
         /// The memory allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]
@@ -141,6 +147,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Double DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// Size, in gigabytes, of the DATA disk group.
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
+        public System.Double DataStorageSizeInGBs { get; set; }
         
         /// <value>
         /// The shape of the Exadata infrastructure. The shape determines the amount of CPU, storage, and memory resources allocated to the instance.

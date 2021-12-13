@@ -44,7 +44,13 @@ namespace Oci.DatacatalogService.Models
         public string Expression { get; set; }
         
         /// <value>
-        /// Collection of logical entities derived from the expression applied to a list of file paths.
+        /// The prefix used in the pattern validation.
+        /// </value>
+        [JsonProperty(PropertyName = "filePathPrefix")]
+        public string FilePathPrefix { get; set; }
+        
+        /// <value>
+        /// Collection of logical entities derived from the pattern, as applied to a list of file paths.
         /// </value>
         [JsonProperty(PropertyName = "derivedLogicalEntities")]
         public System.Collections.Generic.List<DerivedLogicalEntities> DerivedLogicalEntities { get; set; }

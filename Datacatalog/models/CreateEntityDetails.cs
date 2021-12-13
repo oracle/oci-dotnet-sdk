@@ -40,6 +40,12 @@ namespace Oci.DatacatalogService.Models
         public string BusinessName { get; set; }
         
         /// <value>
+        /// The type of data entity object. Type key's can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
+        /// <value>
         /// Detailed description of a data entity.
         /// </value>
         [JsonProperty(PropertyName = "description")]

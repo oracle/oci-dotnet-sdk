@@ -46,7 +46,7 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<bool> IsAllowedToHaveChildTerms { get; set; }
         
         /// <value>
-        /// The terms parent term key. Will be null if the term has no parent term.
+        /// The parent key of the term. In the case of a root-level category only, the term would have no parent and this should be left unset.
         /// </value>
         [JsonProperty(PropertyName = "parentTermKey")]
         public string ParentTermKey { get; set; }

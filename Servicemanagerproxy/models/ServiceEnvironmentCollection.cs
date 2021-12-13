@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemanagerproxyService.Models
 {
     /// <summary>
-    /// Collection of Service environements.
+    /// Collection of service environments. 
+    /// <br/>
+    /// **Note:** Service URL formats may vary from the provided example.
+    /// 
     /// </summary>
     public class ServiceEnvironmentCollection 
     {

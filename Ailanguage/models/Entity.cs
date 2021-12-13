@@ -28,7 +28,7 @@ namespace Oci.AilanguageService.Models
         public System.Nullable<int> Offset { get; set; }
         
         /// <value>
-        /// Length of text
+        /// Length of entity text
         /// </value>
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<int> Length { get; set; }
@@ -52,7 +52,8 @@ namespace Oci.AilanguageService.Models
         public System.Nullable<bool> IsPii { get; set; }
         
         /// <value>
-        /// Score or confidence for prediction.
+        /// Score or confidence of extracted entity type.
+        /// Example: 0.9999856066867399
         /// </value>
         [JsonProperty(PropertyName = "score")]
         public System.Double Score { get; set; }

@@ -114,6 +114,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
         
         /// <value>
+        /// The OCID of the cloud Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "cloudAutonomousVmClusterId")]
+        public string CloudAutonomousVmClusterId { get; set; }
+        
+        /// <value>
         /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]

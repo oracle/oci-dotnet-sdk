@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Document text for detect text labels.
+        /// Document text for detect text classes.
         /// </value>
         /// <remarks>
         /// Required

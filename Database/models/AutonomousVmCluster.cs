@@ -136,6 +136,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpusEnabled { get; set; }
         
         /// <value>
+        /// The number of enabled OCPU cores.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpusEnabled")]
+        public System.Nullable<float> OcpusEnabled { get; set; }
+        
+        /// <value>
         /// The numnber of CPU cores available.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
@@ -158,6 +164,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
         public System.Double DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The total data storage allocated in GBs
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
+        public System.Double DataStorageSizeInGBs { get; set; }
         
         /// <value>
         /// The data storage available in TBs

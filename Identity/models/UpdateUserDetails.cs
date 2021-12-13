@@ -32,6 +32,12 @@ namespace Oci.IdentityService.Models
         public string Email { get; set; }
         
         /// <value>
+        /// DB username of the DB credential. Has to be unique across the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "dbUserName")]
+        public string DbUserName { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

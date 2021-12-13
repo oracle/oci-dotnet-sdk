@@ -33,6 +33,7 @@ namespace Oci.OpsiService.Models
                 ///
         /// <value>
         /// Platform type.
+        /// 
         /// </value>
         ///
         public enum PlatformTypeEnum {
@@ -42,6 +43,7 @@ namespace Oci.OpsiService.Models
 
         /// <value>
         /// Platform type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "platformType")]
         [JsonConverter(typeof(StringEnumConverter))]

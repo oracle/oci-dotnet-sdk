@@ -63,7 +63,8 @@ namespace Oci.ServicemanagerproxyService
         }
 
         /// <summary>
-        /// Gets details of the service environment specified by the serviceEnvironmentId.
+        /// Get the detailed information for a specific service environment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -102,9 +103,8 @@ namespace Oci.ServicemanagerproxyService
         }
 
         /// <summary>
-        /// List details of environments which the service is authorized to view.
-        /// This includes the service instance endpoints and service definition
-        /// details.
+        /// List the details of Software as a Service (SaaS) environments provisioned by Service Manager.
+        /// Information includes the service instance endpoints and service definition details.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
