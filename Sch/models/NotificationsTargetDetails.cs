@@ -17,6 +17,8 @@ namespace Oci.SchService.Models
 {
     /// <summary>
     /// The topic used for the Notifications target.
+    /// For configuration instructions, see
+    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
     /// 
     /// </summary>
     public class NotificationsTargetDetails : TargetDetails

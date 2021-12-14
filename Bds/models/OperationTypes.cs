@@ -41,6 +41,22 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "AUTOSCALE_CONFIG")]
       AutoscaleConfig,
       [EnumMember(Value = "AUTOSCALE_RUN")]
-      AutoscaleRun
+      AutoscaleRun,
+      [EnumMember(Value = "CREATE_API_KEY")]
+      CreateApiKey,
+      [EnumMember(Value = "DELETE_API_KEY")]
+      DeleteApiKey,
+      [EnumMember(Value = "TEST_OBJECT_STORE_CONNECTION")]
+      TestObjectStoreConnection,
+      [EnumMember(Value = "CREATE_METASTORE_CONFIG")]
+      CreateMetastoreConfig,
+      [EnumMember(Value = "DELETE_METASTORE_CONFIG")]
+      DeleteMetastoreConfig,
+      [EnumMember(Value = "UPDATE_METASTORE_CONFIG")]
+      UpdateMetastoreConfig,
+      [EnumMember(Value = "ACTIVATE_METASTORE_CONFIG")]
+      ActivateMetastoreConfig,
+      [EnumMember(Value = "TEST_METASTORE_CONFIG")]
+      TestMetastoreConfig
   }
 }

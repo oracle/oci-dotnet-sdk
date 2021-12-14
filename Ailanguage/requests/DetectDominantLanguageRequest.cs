@@ -21,7 +21,7 @@ namespace Oci.AilanguageService.Requests
         
         /// <value>
         /// The details to make a language detection detect call.
-        /// Example: {&quot;text&quot;: &quot;If an emerging growth company, indicate by check mark if the registrant has elected not            to use the extended transition period for complying&quot;}
+        /// 
         /// </value>
         /// <remarks>
         /// Required

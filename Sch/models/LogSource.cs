@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The log source.
+    /// The logs for this Logging source.
     /// 
     /// </summary>
     public class LogSource 

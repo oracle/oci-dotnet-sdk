@@ -120,6 +120,12 @@ namespace Oci.DatacatalogService.Models
         public string ExternalDataType { get; set; }
         
         /// <value>
+        /// The type of the attribute. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
+        /// <value>
         /// The minimum count for the number of instances of a given type stored in this collection type attribute,applicable if this attribute is a complex type.
         /// </value>
         [JsonProperty(PropertyName = "minCollectionCount")]

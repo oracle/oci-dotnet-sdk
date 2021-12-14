@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemanagerproxyService.Models
 {
     /// <summary>
-    /// Model for details associated with service
+    /// Details for a service definition.
+    /// 
     /// </summary>
     public class ServiceDefinition 
     {
         
         /// <value>
-        /// The service definition type.
+        /// The service definition type. For example, a service definition type \"RGBUOROMS\" 
+        /// would be for the service \"Oracle Retail Order Management Cloud Service\".
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +35,8 @@ namespace Oci.ServicemanagerproxyService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Display name of the service.
+        /// Display name of the service. For example, \"Oracle Retail Order Management Cloud Service\".
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +46,8 @@ namespace Oci.ServicemanagerproxyService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Short display name of the service.
+        /// Short display name of the service. For example, \"Retail Order Management\".
+        /// 
         /// </value>
         /// <remarks>
         /// Required

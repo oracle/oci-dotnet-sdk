@@ -352,7 +352,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Edits the specified list of tag key definitions for the selected resources. 
+        /// Edits the specified list of tag key definitions for the selected resources.
         /// This operation triggers a process that edits the tags on all selected resources. The possible actions are:
         /// &lt;br/&gt;
         ///   * Add a defined tag when the tag does not already exist on the resource.
@@ -362,9 +362,9 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// See {@link #bulkEditOperationDetails(BulkEditOperationDetailsRequest) bulkEditOperationDetails} for more information.
         /// &lt;br/&gt;
-        /// The edits can include a combination of operations and tag sets. 
+        /// The edits can include a combination of operations and tag sets.
         /// However, multiple operations cannot apply to one key definition in the same request.
-        /// For example, if one request adds &#x60;tag set-1&#x60; to a resource and sets a tag value to &#x60;tag set-2&#x60;, 
+        /// For example, if one request adds &#x60;tag set-1&#x60; to a resource and sets a tag value to &#x60;tag set-2&#x60;,
         /// &#x60;tag set-1&#x60; and &#x60;tag set-2&#x60; cannot have any common tag definitions.
         /// 
         /// </summary>
@@ -809,6 +809,46 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"CreateCustomerSecretKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new DB credential for the specified user.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/CreateDbCredential.cs.html">here</a> to see an example of how to use CreateDbCredential API.</example>
+        public async Task<CreateDbCredentialResponse> CreateDbCredential(CreateDbCredentialRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called createDbCredential");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/users/{userId}/dbCredentials/".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateDbCredentialResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateDbCredential failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1920,6 +1960,46 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"DeleteCustomerSecretKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes the specified DB credential for the specified user.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/DeleteDbCredential.cs.html">here</a> to see an example of how to use DeleteDbCredential API.</example>
+        public async Task<DeleteDbCredentialResponse> DeleteDbCredential(DeleteDbCredentialRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called deleteDbCredential");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/users/{userId}/dbCredentials/{dbCredentialId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DeleteDbCredentialResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteDbCredential failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3960,6 +4040,46 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"ListCustomerSecretKeys failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the DB credentials for the specified user. The returned object contains the credential&#39;s OCID
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/ListDbCredentials.cs.html">here</a> to see an example of how to use ListDbCredentials API.</example>
+        public async Task<ListDbCredentialsResponse> ListDbCredentials(ListDbCredentialsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            logger.Trace("Called listDbCredentials");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/users/{userId}/dbCredentials/".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListDbCredentialsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDbCredentials failed with error: {e.Message}");
                 throw;
             }
         }

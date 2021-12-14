@@ -17,6 +17,8 @@ namespace Oci.SchService.Models
 {
     /// <summary>
     /// The metric and metric namespace used for the Monitoring target.
+    /// For configuration instructions, see
+    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
     /// 
     /// </summary>
     public class MonitoringTargetDetails : TargetDetails
@@ -56,6 +58,13 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "Metric is required.")]
         [JsonProperty(PropertyName = "metric")]
         public string Metric { get; set; }
+        
+        /// <value>
+        /// List of dimension names and values.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dimensions")]
+        public System.Collections.Generic.List<DimensionDetails> Dimensions { get; set; }
         
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "monitoring";

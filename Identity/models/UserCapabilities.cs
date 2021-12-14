@@ -46,6 +46,13 @@ namespace Oci.IdentityService.Models
         public System.Nullable<bool> CanUseSmtpCredentials { get; set; }
         
         /// <value>
+        /// Indicates if the user can use DB passwords.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "canUseDbCredentials")]
+        public System.Nullable<bool> CanUseDbCredentials { get; set; }
+        
+        /// <value>
         /// Indicates if the user can use SigV4 symmetric keys.
         /// </value>
         [JsonProperty(PropertyName = "canUseCustomerSecretKeys")]

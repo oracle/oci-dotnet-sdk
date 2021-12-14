@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The logging source.
+    /// The Logging source.
+    /// For configuration instructions, see
+    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
     /// 
     /// </summary>
     public class LoggingSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// The resources affected by this work request.
+        /// The logs for this Logging source.
         /// 
         /// </value>
         /// <remarks>

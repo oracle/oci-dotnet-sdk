@@ -346,5 +346,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
         public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
         
+        /// <value>
+        /// list of scheduled operations
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledOperations")]
+        public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
+        
     }
 }

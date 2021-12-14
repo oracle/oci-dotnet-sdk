@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// List of aspects.
+        /// List of detected aspects.
         /// </value>
         /// <remarks>
         /// Required

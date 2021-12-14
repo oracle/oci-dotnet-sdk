@@ -20,7 +20,10 @@ namespace Oci.ServicemanagerproxyService.Requests
     {
         
         /// <value>
-        /// The Id associated with the service environment.
+        /// The unique identifier associated with the service environment. 
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +33,7 @@ namespace Oci.ServicemanagerproxyService.Requests
         public string ServiceEnvironmentId { get; set; }
         
         /// <value>
-        /// The unique identifier for the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the compartment.
         /// </value>
         /// <remarks>
         /// Required

@@ -811,5 +811,11 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
+        /// <value>
+        /// list of scheduled operations
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledOperations")]
+        public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
+        
     }
 }

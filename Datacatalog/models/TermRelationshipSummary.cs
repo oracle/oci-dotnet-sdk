@@ -71,6 +71,12 @@ namespace Oci.DatacatalogService.Models
         public string RelatedTermPath { get; set; }
         
         /// <value>
+        /// Glossary key of the related term.
+        /// </value>
+        [JsonProperty(PropertyName = "relatedTermGlossaryKey")]
+        public string RelatedTermGlossaryKey { get; set; }
+        
+        /// <value>
         /// URI to the term relationship instance in the API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
@@ -99,6 +105,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "parentTermPath")]
         public string ParentTermPath { get; set; }
+        
+        /// <value>
+        /// Glossary key of the parent term.
+        /// </value>
+        [JsonProperty(PropertyName = "parentTermGlossaryKey")]
+        public string ParentTermGlossaryKey { get; set; }
         
         /// <value>
         /// The date and time the term relationship was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).

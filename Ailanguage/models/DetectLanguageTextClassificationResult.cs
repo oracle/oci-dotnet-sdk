@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AilanguageService.Models
 {
     /// <summary>
-    /// Result of text labels detect call.
+    /// Result of text classification detect call.
     /// </summary>
     public class DetectLanguageTextClassificationResult 
     {
         
         /// <value>
-        /// List of categories
+        /// List of detected text classes.
         /// </value>
         /// <remarks>
         /// Required

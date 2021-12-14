@@ -22,7 +22,8 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Language Name
+        /// Full language name.
+        /// Example: English, Hindi, and so on
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.AilanguageService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Detected language code with standard [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+        /// Detected language code as per [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard.
         /// Example: en, fr, hi etc.
         /// </value>
         /// <remarks>
@@ -43,7 +44,8 @@ namespace Oci.AilanguageService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// Score or confidence for prediction.
+        /// Score or confidence of detected language code.
+        /// Example: 0.9999856066867399
         /// </value>
         /// <remarks>
         /// Required

@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatacatalogService.Models
 {
     /// <summary>
-    /// Pattern representation. A Pattern is defined using an expression and can be used as data selectors or filters
-    /// to provide a singular view of an entity across multiple physical data artifacts.
+    /// A pattern is a data selector or filter which can provide a singular,
+    /// logical entity view aggregating multiple physical data artifacts for ease of use.
     /// 
     /// </summary>
     public class Pattern 
@@ -54,7 +54,7 @@ namespace Oci.DatacatalogService.Models
         public string CatalogId { get; set; }
         
         /// <value>
-        /// The current state of the data asset.
+        /// The current state of the pattern.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -87,14 +87,25 @@ namespace Oci.DatacatalogService.Models
         public string UpdatedById { get; set; }
         
         /// <value>
-        /// The expression used in the pattern that may include qualifiers. Refer to the user documentation for details of the format and examples.
+        /// Input string which drives the selection process, allowing for fine-grained control using qualifiers.
+        /// Refer to the user documentation for details of the format and examples. A pattern cannot include both
+        /// a prefix and an expression.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
         
         /// <value>
-        /// List of file paths against which the expression can be tried, as a check. This documents, for reference
+        /// Input string which drives the selection process.
+        /// Refer to the user documentation for details of the format and examples. A pattern cannot include both
+        /// a prefix and an expression.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "filePathPrefix")]
+        public string FilePathPrefix { get; set; }
+        
+        /// <value>
+        /// List of file paths against which the pattern can be tried, as a check. This documents, for reference
         /// purposes, some example objects a pattern is meant to work with. If isEnableCheckFailureLimit is set to true,
         /// this will be run as a validation during the request, such that if the check fails the request fails. If
         /// isEnableCheckFailureLimit instead is set to (the default) false, a pattern will still be created or updated even
@@ -105,7 +116,7 @@ namespace Oci.DatacatalogService.Models
         public System.Collections.Generic.List<string> CheckFilePathList { get; set; }
         
         /// <value>
-        /// Indicates whether the expression check, against the checkFilePathList, will fail the request if the count of
+        /// Indicates whether the pattern check, against the checkFilePathList, will fail the request if the count of
         /// UNMATCHED files is above the checkFailureLimit.
         /// 
         /// </value>

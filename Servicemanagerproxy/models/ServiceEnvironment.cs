@@ -16,13 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemanagerproxyService.Models
 {
     /// <summary>
-    /// Model describing service environment properties.
+    /// Detailed information about a service environment. 
+    /// <br/>
+    /// **Note:** Service URL formats may vary from the provided example.
+    /// 
     /// </summary>
     public class ServiceEnvironment 
     {
         
         /// <value>
-        /// Unqiue identifier for the entitlement related to the environment.
+        /// Unqiue identifier for the entitlement related to the environment. 
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +38,9 @@ namespace Oci.ServicemanagerproxyService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The subscription Id corresponding to the service environment Id.
+        /// The unique subscription ID associated with the service environment ID.
+        /// <br/>
+        /// **Note:** Not an [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -55,7 +62,7 @@ namespace Oci.ServicemanagerproxyService.Models
         public System.Nullable<ServiceEntitlementRegistrationStatus> Status { get; set; }
         
         /// <value>
-        /// Compartment Id associated with the service.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the compartment.
         /// </value>
         /// <remarks>
         /// Required

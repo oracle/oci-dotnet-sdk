@@ -24,7 +24,7 @@ namespace Oci.IdentityService.Models
         /// <br/>
         /// * `ADD_WHERE_ABSENT` adds a defined tag only if the tag does not already exist on the resource.
         /// * `SET_WHERE_PRESENT` updates the value for a defined tag only if the tag is present on the resource.
-        /// * `ADD_OR_SET` combines the first two operations to add a defined tag if it does not already exist on the resource 
+        /// * `ADD_OR_SET` combines the first two operations to add a defined tag if it does not already exist on the resource
         /// or update the value for a defined tag only if the tag is present on the resource.
         /// * `REMOVE` removes the defined tag from the resource. The tag is removed from the resource regardless of the tag value.
         /// 
@@ -46,7 +46,7 @@ namespace Oci.IdentityService.Models
         /// <br/>
         /// * `ADD_WHERE_ABSENT` adds a defined tag only if the tag does not already exist on the resource.
         /// * `SET_WHERE_PRESENT` updates the value for a defined tag only if the tag is present on the resource.
-        /// * `ADD_OR_SET` combines the first two operations to add a defined tag if it does not already exist on the resource 
+        /// * `ADD_OR_SET` combines the first two operations to add a defined tag if it does not already exist on the resource
         /// or update the value for a defined tag only if the tag is present on the resource.
         /// * `REMOVE` removes the defined tag from the resource. The tag is removed from the resource regardless of the tag value.
         /// 

@@ -55,6 +55,20 @@ namespace Oci.DatacatalogService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Property that identifies if the object is a physical object (materialized) or virtual/logical object
+        /// defined on other objects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isLogical")]
+        public System.Nullable<bool> IsLogical { get; set; }
+        
+        /// <value>
+        /// Property that identifies if an object is a sub object of a physical or materialized parent object.
+        /// </value>
+        [JsonProperty(PropertyName = "isPartition")]
+        public System.Nullable<bool> IsPartition { get; set; }
+        
+        /// <value>
         /// Unique key of the parent data asset.
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
@@ -134,6 +148,16 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A map of maps that contains the properties which are specific to the entity type. Each entity type
+        /// definition defines it's set of required and optional properties. The map keys are category names and the
+        /// values are maps of property name to property value. Every property is contained inside of a category. Most
+        /// data entities have required properties within the \"default\" category.
+        /// Example: {&quot;properties&quot;: { &quot;default&quot;: { &quot;key1&quot;: &quot;value1&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, string>> Properties { get; set; }
         
     }
 }

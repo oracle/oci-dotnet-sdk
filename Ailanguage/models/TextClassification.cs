@@ -32,7 +32,8 @@ namespace Oci.AilanguageService.Models
         public string Label { get; set; }
         
         /// <value>
-        /// Score of the given text.
+        /// Score or confidence of extracted text label.
+        /// Example: 0.9999856066867399
         /// </value>
         /// <remarks>
         /// Required

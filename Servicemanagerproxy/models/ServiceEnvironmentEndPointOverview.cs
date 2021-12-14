@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemanagerproxyService.Models
 {
     /// <summary>
-    /// Model describing the properties of service environment endPoint overview.
+    /// An overview of service environment endpoints. 
     /// 
     /// </summary>
     public class ServiceEnvironmentEndPointOverview 
     {
                 ///
         /// <value>
-        /// Service Environemnt EndPoint type.
+        /// Service environment endpoint type.
         /// </value>
         ///
         public enum EnvironmentTypeEnum {
@@ -32,11 +32,13 @@ namespace Oci.ServicemanagerproxyService.Models
             [EnumMember(Value = "INSTANCE_URL_TEST")]
             InstanceUrlTest,
             [EnumMember(Value = "INSTANCE_URL_DEV")]
-            InstanceUrlDev
+            InstanceUrlDev,
+            [EnumMember(Value = "OTHER")]
+            Other
         };
 
         /// <value>
-        /// Service Environemnt EndPoint type.
+        /// Service environment endpoint type.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,7 +49,7 @@ namespace Oci.ServicemanagerproxyService.Models
         public System.Nullable<EnvironmentTypeEnum> EnvironmentType { get; set; }
         
         /// <value>
-        /// Service Environemnt Instance EndPoint url.
+        /// Service environment instance URL.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,6 +57,12 @@ namespace Oci.ServicemanagerproxyService.Models
         [Required(ErrorMessage = "Url is required.")]
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+        
+        /// <value>
+        /// Description of the environment link
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
     }
 }

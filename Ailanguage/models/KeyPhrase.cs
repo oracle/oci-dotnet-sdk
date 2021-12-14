@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AilanguageService.Models
 {
     /// <summary>
-    /// Key phrase and score for the given text.
+    /// Key phrase for the given text.
     /// </summary>
     public class KeyPhrase 
     {
         
         /// <value>
-        /// Key phrase of the the given text.
+        /// Key phrase exreacted from given text.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,8 @@ namespace Oci.AilanguageService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Score of the given key phrase.
+        /// Score or confidence of the key phrase.
+        /// Example: 0.9999856066867399
         /// </value>
         /// <remarks>
         /// Required

@@ -30,5 +30,8 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "cors")]
         public CorsPolicy Cors { get; set; }
         
+        [JsonProperty(PropertyName = "mutualTls")]
+        public MutualTlsDetails MutualTls { get; set; }
+        
     }
 }

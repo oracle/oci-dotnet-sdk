@@ -124,5 +124,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceLevelAgreementType")]
         public string ServiceLevelAgreementType { get; set; }
+        
+        /// <value>
+        /// The cloud Autonomous VM Cluster [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cloudAutonomousVmClusterId")]
+        public string CloudAutonomousVmClusterId { get; set; }
     }
 }

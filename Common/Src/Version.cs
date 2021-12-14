@@ -8,7 +8,7 @@ namespace Oci.Common
     public class Version
     {
         public static string MAJOR = "29";
-        public static string MINOR = "3";
+        public static string MINOR = "4";
         public static string PATCH = "0";
         public static string TAG = "";
 

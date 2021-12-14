@@ -63,6 +63,32 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "ADD_EXADATA_INSIGHT_MEMBERS")]
       AddExadataInsightMembers,
       [EnumMember(Value = "EXADATA_AUTO_SYNC")]
-      ExadataAutoSync
+      ExadataAutoSync,
+      [EnumMember(Value = "UPDATE_OPSI_WAREHOUSE")]
+      UpdateOpsiWarehouse,
+      [EnumMember(Value = "CREATE_OPSI_WAREHOUSE")]
+      CreateOpsiWarehouse,
+      [EnumMember(Value = "MOVE_OPSI_WAREHOUSE")]
+      MoveOpsiWarehouse,
+      [EnumMember(Value = "DELETE_OPSI_WAREHOUSE")]
+      DeleteOpsiWarehouse,
+      [EnumMember(Value = "ROTATE_OPSI_WAREHOUSE_WALLET")]
+      RotateOpsiWarehouseWallet,
+      [EnumMember(Value = "UPDATE_OPSI_WAREHOUSE_USER")]
+      UpdateOpsiWarehouseUser,
+      [EnumMember(Value = "CREATE_OPSI_WAREHOUSE_USER")]
+      CreateOpsiWarehouseUser,
+      [EnumMember(Value = "MOVE_OPSI_WAREHOUSE_USER")]
+      MoveOpsiWarehouseUser,
+      [EnumMember(Value = "DELETE_OPSI_WAREHOUSE_USER")]
+      DeleteOpsiWarehouseUser,
+      [EnumMember(Value = "UPDATE_AWRHUB")]
+      UpdateAwrhub,
+      [EnumMember(Value = "CREATE_AWRHUB")]
+      CreateAwrhub,
+      [EnumMember(Value = "MOVE_AWRHUB")]
+      MoveAwrhub,
+      [EnumMember(Value = "DELETE_AWRHUB")]
+      DeleteAwrhub
   }
 }

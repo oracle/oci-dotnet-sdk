@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.ServicemanagerproxyService.Models
 {
   /// <summary>
-  /// Service Entitlement Registration status
+  /// Service Entitlement registration status
   /// </summary>
   public enum ServiceEntitlementRegistrationStatus {
       [EnumMember(Value = "INITIALIZED")]

@@ -222,6 +222,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCount { get; set; }
         
         /// <value>
+        /// The number of OCPU cores to enable on the cloud VM cluster. Only 1 decimal place is allowed for the fractional part.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<float> OcpuCount { get; set; }
+        
+        /// <value>
         /// The cluster name for cloud VM cluster. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
         /// 
         /// </value>
