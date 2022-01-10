@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -78,35 +78,6 @@ namespace Oci.ObjectstorageService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "delimiter")]
         public string Delimiter { get; set; }
         
-        ///
-        /// <value>
-        /// Object summary by default includes only the 'name' field. Use this parameter to also
-        /// include 'size' (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time),
-        /// 'timeModified' (object modification date and time), 'storageTier' and 'archivalState' fields.
-        /// Specify the value of this parameter as a comma-separated, case-insensitive list of those field names. 
-        /// For example 'name,etag,timeCreated,md5,timeModified,storageTier,archivalState'.
-        /// 
-        /// </value>
-        ///
-        public enum FieldsEnum {
-            [EnumMember(Value = "name")]
-            Name,
-            [EnumMember(Value = "size")]
-            Size,
-            [EnumMember(Value = "etag")]
-            Etag,
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "md5")]
-            Md5,
-            [EnumMember(Value = "timeModified")]
-            TimeModified,
-            [EnumMember(Value = "storageTier")]
-            StorageTier,
-            [EnumMember(Value = "archivalState")]
-            ArchivalState
-        };
-
         /// <value>
         /// Object summary by default includes only the 'name' field. Use this parameter to also
         /// include 'size' (object size in bytes), 'etag', 'md5', 'timeCreated' (object creation date and time),
@@ -116,7 +87,7 @@ namespace Oci.ObjectstorageService.Requests
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields")]
-        public System.Nullable<FieldsEnum> Fields { get; set; }
+        public string Fields { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

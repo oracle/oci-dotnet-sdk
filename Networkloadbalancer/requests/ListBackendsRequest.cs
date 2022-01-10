@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -81,5 +81,27 @@ namespace Oci.NetworkloadbalancerService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order can be provided. The default order for timeCreated is descending.
+        /// The default order for displayName is ascending. If no value is specified, then timeCreated is the default.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeCreated")]
+            TimeCreated,
+            [EnumMember(Value = "displayName")]
+            DisplayName
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order can be provided. The default order for timeCreated is descending.
+        /// The default order for displayName is ascending. If no value is specified, then timeCreated is the default.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -13,7 +13,9 @@ using System.Runtime.Serialization;
 namespace Oci.NetworkloadbalancerService.Models
 {
   /// <summary>
-  /// Protocols supported for the listener of the network load balancer.
+  /// This object is deprecated.
+    /// Protocols supported for the listener of the network load balancer.
+    /// 
   /// </summary>
   public enum NetworkLoadBalancersProtocolSummary {
       [EnumMember(Value = "ANY")]
@@ -21,6 +23,8 @@ namespace Oci.NetworkloadbalancerService.Models
       [EnumMember(Value = "TCP")]
       Tcp,
       [EnumMember(Value = "UDP")]
-      Udp
+      Udp,
+      [EnumMember(Value = "TCP_AND_UDP")]
+      TcpAndUdp
   }
 }

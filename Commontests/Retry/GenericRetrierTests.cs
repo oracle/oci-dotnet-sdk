@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -26,19 +26,20 @@ namespace Oci.Common.Retry
         public async void TestNoRetryForSuccessFulResponse()
         {
             var retrier = new GenericRetrier(new RetryConfiguration());
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.OK });
 
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default);
 
             // Verify if httpMethod has been invoked only once.
-            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
         }
 
         [Fact]
@@ -47,10 +48,10 @@ namespace Oci.Common.Retry
         public async void TestNoRetryForNotImplemented()
         {
             var retrier = new GenericRetrier(new RetryConfiguration());
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new HttpResponseMessage()
                 {
                     StatusCode = System.Net.HttpStatusCode.NotImplemented,
@@ -60,10 +61,11 @@ namespace Oci.Common.Retry
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default);
 
             // Verify if httpMethod has been invoked only once.
-            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
         }
 
         [Theory]
@@ -83,10 +85,10 @@ namespace Oci.Common.Retry
         public async void TestRetryForDefaultRetryConfig(int statusCode, string message)
         {
             var retrier = new GenericRetrier(new RetryConfiguration { GetNextDelayInSeconds = _ => 0 });  // disabling sleep time
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new HttpResponseMessage()
                 {
                     StatusCode = (System.Net.HttpStatusCode)statusCode,
@@ -96,11 +98,12 @@ namespace Oci.Common.Retry
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default);
 
             var maxDefaultRetries = RetryConfiguration.DefaultWaiterConfiguration.MaxAttempts;
             // verify the number of retries. Total tries = maxDefaultRetries + 1 (original request).
-            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
         }
 
         [Theory]
@@ -114,10 +117,10 @@ namespace Oci.Common.Retry
             Environment.SetEnvironmentVariable("OCI_SDK_DEFAULT_RETRY_ENABLED", "true");
             RetryConfiguration.DefaultRetryConfiguration = new RetryConfiguration { GetNextDelayInSeconds = _ => 0 }; // disabling sleep time
             var retrier = Retrier.GetPreferredRetrier(null, null);
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                     .ReturnsAsync(new HttpResponseMessage()
                     {
                         StatusCode = (System.Net.HttpStatusCode)statusCode,
@@ -127,11 +130,12 @@ namespace Oci.Common.Retry
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default);
 
             var maxDefaultRetries = RetryConfiguration.DefaultWaiterConfiguration.MaxAttempts;
             // verify the number of retries. Total tries = maxDefaultRetries + 1 (original request).
-            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(maxDefaultRetries + 1));
         }
 
         [Theory]
@@ -148,10 +152,10 @@ namespace Oci.Common.Retry
             };
 
             var retrier = new GenericRetrier(customConfig);
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new HttpResponseMessage()
                 {
                     StatusCode = (System.Net.HttpStatusCode)statusCode,
@@ -161,9 +165,10 @@ namespace Oci.Common.Retry
             await retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default);
 
-            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()), Times.Exactly(customConfig.MaxAttempts + 1));
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(customConfig.MaxAttempts + 1));
         }
 
         [Theory]
@@ -180,10 +185,10 @@ namespace Oci.Common.Retry
             };
 
             var retrier = new GenericRetrier(customConfig);
-            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>>>();
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
             var requestMessage = new HttpRequestMessage();
 
-            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new HttpResponseMessage()
                 {
                     StatusCode = (System.Net.HttpStatusCode)statusCode,
@@ -193,6 +198,7 @@ namespace Oci.Common.Retry
             await Assert.ThrowsAsync<OciException>(() => retrier.MakeRetryingCall(
                 mockCallHttpMethod.Object,
                 requestMessage,
+                default,
                 default));
         }
 

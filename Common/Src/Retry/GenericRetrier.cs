@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -29,8 +29,9 @@ namespace Oci.Common.Retry
         }
 
         public Task<HttpResponseMessage> MakeRetryingCall(
-            Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>> asyncHttpCall,
+            Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>> asyncHttpCall,
             HttpRequestMessage requestMessage,
+            HttpCompletionOption completionOption,
             CancellationToken cancellationToken)
         {
 
@@ -64,7 +65,7 @@ namespace Oci.Common.Retry
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
                     var newRequestMessage = HttpUtils.CloneHttpRequestMessage(requestMessage);
-                    return await asyncHttpCall.Invoke(newRequestMessage, cancellationToken).ConfigureAwait(false);
+                    return await asyncHttpCall.Invoke(newRequestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 });
         }
 
