@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -71,9 +71,10 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/AcceptRecipientInvitation.cs.html">here</a> to see an example of how to use AcceptRecipientInvitation API.</example>
-        public async Task<AcceptRecipientInvitationResponse> AcceptRecipientInvitation(AcceptRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<AcceptRecipientInvitationResponse> AcceptRecipientInvitation(AcceptRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called acceptRecipientInvitation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recipientInvitations/{recipientInvitationId}/actions/accept".Trim('/')));
@@ -87,11 +88,11 @@ namespace Oci.TenantmanagercontrolplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -110,9 +111,10 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/GetRecipientInvitation.cs.html">here</a> to see an example of how to use GetRecipientInvitation API.</example>
-        public async Task<GetRecipientInvitationResponse> GetRecipientInvitation(GetRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetRecipientInvitationResponse> GetRecipientInvitation(GetRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getRecipientInvitation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recipientInvitations/{recipientInvitationId}".Trim('/')));
@@ -126,11 +128,11 @@ namespace Oci.TenantmanagercontrolplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -149,9 +151,10 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/IgnoreRecipientInvitation.cs.html">here</a> to see an example of how to use IgnoreRecipientInvitation API.</example>
-        public async Task<IgnoreRecipientInvitationResponse> IgnoreRecipientInvitation(IgnoreRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IgnoreRecipientInvitationResponse> IgnoreRecipientInvitation(IgnoreRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ignoreRecipientInvitation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recipientInvitations/{recipientInvitationId}/actions/ignore".Trim('/')));
@@ -165,11 +168,11 @@ namespace Oci.TenantmanagercontrolplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -189,9 +192,10 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/ListRecipientInvitations.cs.html">here</a> to see an example of how to use ListRecipientInvitations API.</example>
-        public async Task<ListRecipientInvitationsResponse> ListRecipientInvitations(ListRecipientInvitationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListRecipientInvitationsResponse> ListRecipientInvitations(ListRecipientInvitationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listRecipientInvitations");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recipientInvitations".Trim('/')));
@@ -205,11 +209,11 @@ namespace Oci.TenantmanagercontrolplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -228,9 +232,10 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/UpdateRecipientInvitation.cs.html">here</a> to see an example of how to use UpdateRecipientInvitation API.</example>
-        public async Task<UpdateRecipientInvitationResponse> UpdateRecipientInvitation(UpdateRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateRecipientInvitationResponse> UpdateRecipientInvitation(UpdateRecipientInvitationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateRecipientInvitation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recipientInvitations/{recipientInvitationId}".Trim('/')));
@@ -244,11 +249,11 @@ namespace Oci.TenantmanagercontrolplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 

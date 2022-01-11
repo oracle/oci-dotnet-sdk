@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -69,7 +69,7 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<int> Weight { get; set; }
         
         /// <value>
-        /// Whether the network load balancer should drain this server. Servers marked \"isDrain\" receive no 
+        /// Whether the network load balancer should drain this server. Servers marked \"isDrain\" receive no
         /// incoming traffic.
         /// <br/>
         /// Example: false

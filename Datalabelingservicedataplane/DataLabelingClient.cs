@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -72,9 +72,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/CreateAnnotation.cs.html">here</a> to see an example of how to use CreateAnnotation API.</example>
-        public async Task<CreateAnnotationResponse> CreateAnnotation(CreateAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateAnnotationResponse> CreateAnnotation(CreateAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createAnnotation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotations".Trim('/')));
@@ -88,11 +89,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -112,9 +113,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/CreateRecord.cs.html">here</a> to see an example of how to use CreateRecord API.</example>
-        public async Task<CreateRecordResponse> CreateRecord(CreateRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateRecordResponse> CreateRecord(CreateRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createRecord");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records".Trim('/')));
@@ -128,11 +130,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -152,9 +154,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/DeleteAnnotation.cs.html">here</a> to see an example of how to use DeleteAnnotation API.</example>
-        public async Task<DeleteAnnotationResponse> DeleteAnnotation(DeleteAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteAnnotationResponse> DeleteAnnotation(DeleteAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteAnnotation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotations/{annotationId}".Trim('/')));
@@ -168,11 +171,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -192,9 +195,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/DeleteRecord.cs.html">here</a> to see an example of how to use DeleteRecord API.</example>
-        public async Task<DeleteRecordResponse> DeleteRecord(DeleteRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteRecordResponse> DeleteRecord(DeleteRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteRecord");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records/{recordId}".Trim('/')));
@@ -208,11 +212,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -232,9 +236,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/GetAnnotation.cs.html">here</a> to see an example of how to use GetAnnotation API.</example>
-        public async Task<GetAnnotationResponse> GetAnnotation(GetAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetAnnotationResponse> GetAnnotation(GetAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getAnnotation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotations/{annotationId}".Trim('/')));
@@ -248,11 +253,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -271,9 +276,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/GetDataset.cs.html">here</a> to see an example of how to use GetDataset API.</example>
-        public async Task<GetDatasetResponse> GetDataset(GetDatasetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetDatasetResponse> GetDataset(GetDatasetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getDataset");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/datasets/{datasetId}".Trim('/')));
@@ -287,11 +293,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -311,9 +317,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/GetRecord.cs.html">here</a> to see an example of how to use GetRecord API.</example>
-        public async Task<GetRecordResponse> GetRecord(GetRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetRecordResponse> GetRecord(GetRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getRecord");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records/{recordId}".Trim('/')));
@@ -327,11 +334,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -351,9 +358,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/GetRecordContent.cs.html">here</a> to see an example of how to use GetRecordContent API.</example>
-        public async Task<GetRecordContentResponse> GetRecordContent(GetRecordContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetRecordContentResponse> GetRecordContent(GetRecordContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getRecordContent");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records/{recordId}/content".Trim('/')));
@@ -367,11 +375,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -391,9 +399,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/GetRecordPreviewContent.cs.html">here</a> to see an example of how to use GetRecordPreviewContent API.</example>
-        public async Task<GetRecordPreviewContentResponse> GetRecordPreviewContent(GetRecordPreviewContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetRecordPreviewContentResponse> GetRecordPreviewContent(GetRecordPreviewContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getRecordPreviewContent");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records/{recordId}/preview/content".Trim('/')));
@@ -407,11 +416,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -431,9 +440,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/ListAnnotations.cs.html">here</a> to see an example of how to use ListAnnotations API.</example>
-        public async Task<ListAnnotationsResponse> ListAnnotations(ListAnnotationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListAnnotationsResponse> ListAnnotations(ListAnnotationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listAnnotations");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotations".Trim('/')));
@@ -447,11 +457,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -471,9 +481,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/ListRecords.cs.html">here</a> to see an example of how to use ListRecords API.</example>
-        public async Task<ListRecordsResponse> ListRecords(ListRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListRecordsResponse> ListRecords(ListRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listRecords");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records".Trim('/')));
@@ -487,11 +498,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -511,9 +522,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/SummarizeAnnotationAnalytics.cs.html">here</a> to see an example of how to use SummarizeAnnotationAnalytics API.</example>
-        public async Task<SummarizeAnnotationAnalyticsResponse> SummarizeAnnotationAnalytics(SummarizeAnnotationAnalyticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeAnnotationAnalyticsResponse> SummarizeAnnotationAnalytics(SummarizeAnnotationAnalyticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeAnnotationAnalytics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotationAnalytics".Trim('/')));
@@ -527,11 +539,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -551,9 +563,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/SummarizeRecordAnalytics.cs.html">here</a> to see an example of how to use SummarizeRecordAnalytics API.</example>
-        public async Task<SummarizeRecordAnalyticsResponse> SummarizeRecordAnalytics(SummarizeRecordAnalyticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeRecordAnalyticsResponse> SummarizeRecordAnalytics(SummarizeRecordAnalyticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeRecordAnalytics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/recordAnalytics".Trim('/')));
@@ -567,11 +580,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -591,9 +604,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/UpdateAnnotation.cs.html">here</a> to see an example of how to use UpdateAnnotation API.</example>
-        public async Task<UpdateAnnotationResponse> UpdateAnnotation(UpdateAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateAnnotationResponse> UpdateAnnotation(UpdateAnnotationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateAnnotation");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/annotations/{annotationId}".Trim('/')));
@@ -607,11 +621,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -631,9 +645,10 @@ namespace Oci.DatalabelingservicedataplaneService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datalabelingservicedataplane/UpdateRecord.cs.html">here</a> to see an example of how to use UpdateRecord API.</example>
-        public async Task<UpdateRecordResponse> UpdateRecord(UpdateRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateRecordResponse> UpdateRecord(UpdateRecordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateRecord");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/records/{recordId}".Trim('/')));
@@ -647,11 +662,11 @@ namespace Oci.DatalabelingservicedataplaneService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 

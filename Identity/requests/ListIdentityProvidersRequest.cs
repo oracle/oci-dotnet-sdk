@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -19,16 +19,6 @@ namespace Oci.IdentityService.Requests
     public class ListIdentityProvidersRequest : Oci.Common.IOciRequest
     {
         
-        ///
-        /// <value>
-        /// The protocol used for federation.
-        /// </value>
-        ///
-        public enum ProtocolEnum {
-            [EnumMember(Value = "SAML2")]
-            Saml2
-        };
-
         /// <value>
         /// The protocol used for federation.
         /// </value>
@@ -37,7 +27,7 @@ namespace Oci.IdentityService.Requests
         /// </remarks>
         [Required(ErrorMessage = "Protocol is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "protocol")]
-        public System.Nullable<ProtocolEnum> Protocol { get; set; }
+        public string Protocol { get; set; }
         
         /// <value>
         /// The OCID of the compartment (remember that the tenancy is simply the root compartment).

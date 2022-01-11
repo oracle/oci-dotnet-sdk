@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -69,9 +69,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/CreateMonitor.cs.html">here</a> to see an example of how to use CreateMonitor API.</example>
-        public async Task<CreateMonitorResponse> CreateMonitor(CreateMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateMonitorResponse> CreateMonitor(CreateMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createMonitor");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors".Trim('/')));
@@ -85,11 +86,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -109,9 +110,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/CreateScript.cs.html">here</a> to see an example of how to use CreateScript API.</example>
-        public async Task<CreateScriptResponse> CreateScript(CreateScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateScriptResponse> CreateScript(CreateScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createScript");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/scripts".Trim('/')));
@@ -125,11 +127,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -148,9 +150,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/DeleteMonitor.cs.html">here</a> to see an example of how to use DeleteMonitor API.</example>
-        public async Task<DeleteMonitorResponse> DeleteMonitor(DeleteMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteMonitorResponse> DeleteMonitor(DeleteMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteMonitor");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors/{monitorId}".Trim('/')));
@@ -164,11 +167,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -187,9 +190,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/DeleteScript.cs.html">here</a> to see an example of how to use DeleteScript API.</example>
-        public async Task<DeleteScriptResponse> DeleteScript(DeleteScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteScriptResponse> DeleteScript(DeleteScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteScript");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/scripts/{scriptId}".Trim('/')));
@@ -203,11 +207,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -226,9 +230,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/GetMonitor.cs.html">here</a> to see an example of how to use GetMonitor API.</example>
-        public async Task<GetMonitorResponse> GetMonitor(GetMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetMonitorResponse> GetMonitor(GetMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getMonitor");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors/{monitorId}".Trim('/')));
@@ -242,11 +247,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -266,9 +271,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/GetMonitorResult.cs.html">here</a> to see an example of how to use GetMonitorResult API.</example>
-        public async Task<GetMonitorResultResponse> GetMonitorResult(GetMonitorResultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetMonitorResultResponse> GetMonitorResult(GetMonitorResultRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getMonitorResult");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors/{monitorId}/results/{executionTime}".Trim('/')));
@@ -282,11 +288,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -305,9 +311,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/GetScript.cs.html">here</a> to see an example of how to use GetScript API.</example>
-        public async Task<GetScriptResponse> GetScript(GetScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetScriptResponse> GetScript(GetScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getScript");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/scripts/{scriptId}".Trim('/')));
@@ -321,11 +328,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -345,9 +352,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/ListMonitors.cs.html">here</a> to see an example of how to use ListMonitors API.</example>
-        public async Task<ListMonitorsResponse> ListMonitors(ListMonitorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListMonitorsResponse> ListMonitors(ListMonitorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listMonitors");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors".Trim('/')));
@@ -361,11 +369,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -385,9 +393,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/ListPublicVantagePoints.cs.html">here</a> to see an example of how to use ListPublicVantagePoints API.</example>
-        public async Task<ListPublicVantagePointsResponse> ListPublicVantagePoints(ListPublicVantagePointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListPublicVantagePointsResponse> ListPublicVantagePoints(ListPublicVantagePointsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listPublicVantagePoints");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/publicVantagePoints".Trim('/')));
@@ -401,11 +410,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -425,9 +434,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/ListScripts.cs.html">here</a> to see an example of how to use ListScripts API.</example>
-        public async Task<ListScriptsResponse> ListScripts(ListScriptsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListScriptsResponse> ListScripts(ListScriptsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listScripts");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/scripts".Trim('/')));
@@ -441,11 +451,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -464,9 +474,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/UpdateMonitor.cs.html">here</a> to see an example of how to use UpdateMonitor API.</example>
-        public async Task<UpdateMonitorResponse> UpdateMonitor(UpdateMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateMonitorResponse> UpdateMonitor(UpdateMonitorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateMonitor");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitors/{monitorId}".Trim('/')));
@@ -480,11 +491,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -503,9 +514,10 @@ namespace Oci.ApmsyntheticsService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmsynthetics/UpdateScript.cs.html">here</a> to see an example of how to use UpdateScript API.</example>
-        public async Task<UpdateScriptResponse> UpdateScript(UpdateScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateScriptResponse> UpdateScript(UpdateScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateScript");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/scripts/{scriptId}".Trim('/')));
@@ -519,11 +531,11 @@ namespace Oci.ApmsyntheticsService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -103,7 +103,7 @@ namespace Oci.Common.Http
         /// <param name="httpRequest">The HttpRequestMessage to be sent.</param>
         /// <param name="cancellationToken">The CancellationToken to be used.</param>
         /// <returns>A Task of HttpResponseMessage returned.</returns>
-        public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, CancellationToken cancellationToken = default)
+        public async Task<HttpResponseMessage> HttpSend(HttpRequestMessage httpRequest, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead, CancellationToken cancellationToken = default)
         {
             if (this.authProvider is AbstractRequestingAuthenticationDetailsProvider)
             {
@@ -116,7 +116,7 @@ namespace Oci.Common.Http
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
                     var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequest);
-                    responseMessage = await this.httpClient.SendAsync(newRequestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await this.httpClient.SendAsync(newRequestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                     if (!responseMessage.IsSuccessStatusCode && responseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                     {
                         this.RefreshSigner();
@@ -130,7 +130,7 @@ namespace Oci.Common.Http
             }
             else
             {
-                return await this.httpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false);
+                return await this.httpClient.SendAsync(httpRequest, completionOption, cancellationToken).ConfigureAwait(false);
             }
         }
 

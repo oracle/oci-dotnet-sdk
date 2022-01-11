@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -71,9 +71,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/AddExadataInsightMembers.cs.html">here</a> to see an example of how to use AddExadataInsightMembers API.</example>
-        public async Task<AddExadataInsightMembersResponse> AddExadataInsightMembers(AddExadataInsightMembersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<AddExadataInsightMembersResponse> AddExadataInsightMembers(AddExadataInsightMembersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addExadataInsightMembers");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}/actions/addMembers".Trim('/')));
@@ -87,11 +88,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -110,9 +111,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ChangeDatabaseInsightCompartment.cs.html">here</a> to see an example of how to use ChangeDatabaseInsightCompartment API.</example>
-        public async Task<ChangeDatabaseInsightCompartmentResponse> ChangeDatabaseInsightCompartment(ChangeDatabaseInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ChangeDatabaseInsightCompartmentResponse> ChangeDatabaseInsightCompartment(ChangeDatabaseInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeDatabaseInsightCompartment");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}/actions/changeCompartment".Trim('/')));
@@ -126,11 +128,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -149,9 +151,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ChangeEnterpriseManagerBridgeCompartment.cs.html">here</a> to see an example of how to use ChangeEnterpriseManagerBridgeCompartment API.</example>
-        public async Task<ChangeEnterpriseManagerBridgeCompartmentResponse> ChangeEnterpriseManagerBridgeCompartment(ChangeEnterpriseManagerBridgeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ChangeEnterpriseManagerBridgeCompartmentResponse> ChangeEnterpriseManagerBridgeCompartment(ChangeEnterpriseManagerBridgeCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeEnterpriseManagerBridgeCompartment");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges/{enterpriseManagerBridgeId}/actions/changeCompartment".Trim('/')));
@@ -165,11 +168,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -188,9 +191,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ChangeExadataInsightCompartment.cs.html">here</a> to see an example of how to use ChangeExadataInsightCompartment API.</example>
-        public async Task<ChangeExadataInsightCompartmentResponse> ChangeExadataInsightCompartment(ChangeExadataInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ChangeExadataInsightCompartmentResponse> ChangeExadataInsightCompartment(ChangeExadataInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeExadataInsightCompartment");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}/actions/changeCompartment".Trim('/')));
@@ -204,11 +208,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -227,9 +231,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ChangeHostInsightCompartment.cs.html">here</a> to see an example of how to use ChangeHostInsightCompartment API.</example>
-        public async Task<ChangeHostInsightCompartmentResponse> ChangeHostInsightCompartment(ChangeHostInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ChangeHostInsightCompartmentResponse> ChangeHostInsightCompartment(ChangeHostInsightCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeHostInsightCompartment");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}/actions/changeCompartment".Trim('/')));
@@ -243,11 +248,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -268,9 +273,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateAwrHub.cs.html">here</a> to see an example of how to use CreateAwrHub API.</example>
-        public async Task<CreateAwrHubResponse> CreateAwrHub(CreateAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateAwrHubResponse> CreateAwrHub(CreateAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createAwrHub");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs".Trim('/')));
@@ -284,11 +290,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -308,9 +314,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateDatabaseInsight.cs.html">here</a> to see an example of how to use CreateDatabaseInsight API.</example>
-        public async Task<CreateDatabaseInsightResponse> CreateDatabaseInsight(CreateDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateDatabaseInsightResponse> CreateDatabaseInsight(CreateDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights".Trim('/')));
@@ -324,11 +331,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -348,9 +355,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateEnterpriseManagerBridge.cs.html">here</a> to see an example of how to use CreateEnterpriseManagerBridge API.</example>
-        public async Task<CreateEnterpriseManagerBridgeResponse> CreateEnterpriseManagerBridge(CreateEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateEnterpriseManagerBridgeResponse> CreateEnterpriseManagerBridge(CreateEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createEnterpriseManagerBridge");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges".Trim('/')));
@@ -364,11 +372,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -388,9 +396,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateExadataInsight.cs.html">here</a> to see an example of how to use CreateExadataInsight API.</example>
-        public async Task<CreateExadataInsightResponse> CreateExadataInsight(CreateExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateExadataInsightResponse> CreateExadataInsight(CreateExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights".Trim('/')));
@@ -404,11 +413,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -428,9 +437,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateHostInsight.cs.html">here</a> to see an example of how to use CreateHostInsight API.</example>
-        public async Task<CreateHostInsightResponse> CreateHostInsight(CreateHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateHostInsightResponse> CreateHostInsight(CreateHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights".Trim('/')));
@@ -444,11 +454,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -469,9 +479,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateOperationsInsightsWarehouse.cs.html">here</a> to see an example of how to use CreateOperationsInsightsWarehouse API.</example>
-        public async Task<CreateOperationsInsightsWarehouseResponse> CreateOperationsInsightsWarehouse(CreateOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateOperationsInsightsWarehouseResponse> CreateOperationsInsightsWarehouse(CreateOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createOperationsInsightsWarehouse");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses".Trim('/')));
@@ -485,11 +496,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -510,9 +521,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/CreateOperationsInsightsWarehouseUser.cs.html">here</a> to see an example of how to use CreateOperationsInsightsWarehouseUser API.</example>
-        public async Task<CreateOperationsInsightsWarehouseUserResponse> CreateOperationsInsightsWarehouseUser(CreateOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<CreateOperationsInsightsWarehouseUserResponse> CreateOperationsInsightsWarehouseUser(CreateOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createOperationsInsightsWarehouseUser");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouseUsers".Trim('/')));
@@ -526,11 +538,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -549,9 +561,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteAwrHub.cs.html">here</a> to see an example of how to use DeleteAwrHub API.</example>
-        public async Task<DeleteAwrHubResponse> DeleteAwrHub(DeleteAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteAwrHubResponse> DeleteAwrHub(DeleteAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteAwrHub");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}".Trim('/')));
@@ -565,11 +578,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -588,9 +601,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteDatabaseInsight.cs.html">here</a> to see an example of how to use DeleteDatabaseInsight API.</example>
-        public async Task<DeleteDatabaseInsightResponse> DeleteDatabaseInsight(DeleteDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteDatabaseInsightResponse> DeleteDatabaseInsight(DeleteDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}".Trim('/')));
@@ -604,11 +618,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -627,9 +641,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteEnterpriseManagerBridge.cs.html">here</a> to see an example of how to use DeleteEnterpriseManagerBridge API.</example>
-        public async Task<DeleteEnterpriseManagerBridgeResponse> DeleteEnterpriseManagerBridge(DeleteEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteEnterpriseManagerBridgeResponse> DeleteEnterpriseManagerBridge(DeleteEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteEnterpriseManagerBridge");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges/{enterpriseManagerBridgeId}".Trim('/')));
@@ -643,11 +658,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -666,9 +681,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteExadataInsight.cs.html">here</a> to see an example of how to use DeleteExadataInsight API.</example>
-        public async Task<DeleteExadataInsightResponse> DeleteExadataInsight(DeleteExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteExadataInsightResponse> DeleteExadataInsight(DeleteExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}".Trim('/')));
@@ -682,11 +698,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -705,9 +721,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteHostInsight.cs.html">here</a> to see an example of how to use DeleteHostInsight API.</example>
-        public async Task<DeleteHostInsightResponse> DeleteHostInsight(DeleteHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteHostInsightResponse> DeleteHostInsight(DeleteHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}".Trim('/')));
@@ -721,11 +738,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -748,9 +765,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteOperationsInsightsWarehouse.cs.html">here</a> to see an example of how to use DeleteOperationsInsightsWarehouse API.</example>
-        public async Task<DeleteOperationsInsightsWarehouseResponse> DeleteOperationsInsightsWarehouse(DeleteOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteOperationsInsightsWarehouseResponse> DeleteOperationsInsightsWarehouse(DeleteOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteOperationsInsightsWarehouse");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}".Trim('/')));
@@ -764,11 +782,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -787,9 +805,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DeleteOperationsInsightsWarehouseUser.cs.html">here</a> to see an example of how to use DeleteOperationsInsightsWarehouseUser API.</example>
-        public async Task<DeleteOperationsInsightsWarehouseUserResponse> DeleteOperationsInsightsWarehouseUser(DeleteOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DeleteOperationsInsightsWarehouseUserResponse> DeleteOperationsInsightsWarehouseUser(DeleteOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteOperationsInsightsWarehouseUser");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}".Trim('/')));
@@ -803,11 +822,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -826,9 +845,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DisableDatabaseInsight.cs.html">here</a> to see an example of how to use DisableDatabaseInsight API.</example>
-        public async Task<DisableDatabaseInsightResponse> DisableDatabaseInsight(DisableDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DisableDatabaseInsightResponse> DisableDatabaseInsight(DisableDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called disableDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}/actions/disable".Trim('/')));
@@ -842,11 +862,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -865,9 +885,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DisableExadataInsight.cs.html">here</a> to see an example of how to use DisableExadataInsight API.</example>
-        public async Task<DisableExadataInsightResponse> DisableExadataInsight(DisableExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DisableExadataInsightResponse> DisableExadataInsight(DisableExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called disableExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}/actions/disable".Trim('/')));
@@ -881,11 +902,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -904,9 +925,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DisableHostInsight.cs.html">here</a> to see an example of how to use DisableHostInsight API.</example>
-        public async Task<DisableHostInsightResponse> DisableHostInsight(DisableHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DisableHostInsightResponse> DisableHostInsight(DisableHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called disableHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}/actions/disable".Trim('/')));
@@ -920,11 +942,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -943,9 +965,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/DownloadOperationsInsightsWarehouseWallet.cs.html">here</a> to see an example of how to use DownloadOperationsInsightsWarehouseWallet API.</example>
-        public async Task<DownloadOperationsInsightsWarehouseWalletResponse> DownloadOperationsInsightsWarehouseWallet(DownloadOperationsInsightsWarehouseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<DownloadOperationsInsightsWarehouseWalletResponse> DownloadOperationsInsightsWarehouseWallet(DownloadOperationsInsightsWarehouseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called downloadOperationsInsightsWarehouseWallet");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/actions/downloadWarehouseWallet".Trim('/')));
@@ -959,11 +982,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -982,9 +1005,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/EnableDatabaseInsight.cs.html">here</a> to see an example of how to use EnableDatabaseInsight API.</example>
-        public async Task<EnableDatabaseInsightResponse> EnableDatabaseInsight(EnableDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<EnableDatabaseInsightResponse> EnableDatabaseInsight(EnableDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called enableDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}/actions/enable".Trim('/')));
@@ -998,11 +1022,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1021,9 +1045,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/EnableExadataInsight.cs.html">here</a> to see an example of how to use EnableExadataInsight API.</example>
-        public async Task<EnableExadataInsightResponse> EnableExadataInsight(EnableExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<EnableExadataInsightResponse> EnableExadataInsight(EnableExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called enableExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}/actions/enable".Trim('/')));
@@ -1037,11 +1062,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1060,9 +1085,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/EnableHostInsight.cs.html">here</a> to see an example of how to use EnableHostInsight API.</example>
-        public async Task<EnableHostInsightResponse> EnableHostInsight(EnableHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<EnableHostInsightResponse> EnableHostInsight(EnableHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called enableHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}/actions/enable".Trim('/')));
@@ -1076,11 +1102,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1099,9 +1125,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetAwrHub.cs.html">here</a> to see an example of how to use GetAwrHub API.</example>
-        public async Task<GetAwrHubResponse> GetAwrHub(GetAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetAwrHubResponse> GetAwrHub(GetAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getAwrHub");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}".Trim('/')));
@@ -1115,11 +1142,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1140,9 +1167,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetAwrReport.cs.html">here</a> to see an example of how to use GetAwrReport API.</example>
-        public async Task<GetAwrReportResponse> GetAwrReport(GetAwrReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetAwrReportResponse> GetAwrReport(GetAwrReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getAwrReport");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}/awrReport".Trim('/')));
@@ -1156,11 +1184,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1179,9 +1207,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetDatabaseInsight.cs.html">here</a> to see an example of how to use GetDatabaseInsight API.</example>
-        public async Task<GetDatabaseInsightResponse> GetDatabaseInsight(GetDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetDatabaseInsightResponse> GetDatabaseInsight(GetDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}".Trim('/')));
@@ -1195,11 +1224,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1218,9 +1247,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetEnterpriseManagerBridge.cs.html">here</a> to see an example of how to use GetEnterpriseManagerBridge API.</example>
-        public async Task<GetEnterpriseManagerBridgeResponse> GetEnterpriseManagerBridge(GetEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetEnterpriseManagerBridgeResponse> GetEnterpriseManagerBridge(GetEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getEnterpriseManagerBridge");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges/{enterpriseManagerBridgeId}".Trim('/')));
@@ -1234,11 +1264,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1257,9 +1287,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetExadataInsight.cs.html">here</a> to see an example of how to use GetExadataInsight API.</example>
-        public async Task<GetExadataInsightResponse> GetExadataInsight(GetExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetExadataInsightResponse> GetExadataInsight(GetExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}".Trim('/')));
@@ -1273,11 +1304,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1296,9 +1327,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetHostInsight.cs.html">here</a> to see an example of how to use GetHostInsight API.</example>
-        public async Task<GetHostInsightResponse> GetHostInsight(GetHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetHostInsightResponse> GetHostInsight(GetHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}".Trim('/')));
@@ -1312,11 +1344,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1337,9 +1369,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetOperationsInsightsWarehouse.cs.html">here</a> to see an example of how to use GetOperationsInsightsWarehouse API.</example>
-        public async Task<GetOperationsInsightsWarehouseResponse> GetOperationsInsightsWarehouse(GetOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetOperationsInsightsWarehouseResponse> GetOperationsInsightsWarehouse(GetOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getOperationsInsightsWarehouse");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}".Trim('/')));
@@ -1353,11 +1386,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1376,9 +1409,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetOperationsInsightsWarehouseUser.cs.html">here</a> to see an example of how to use GetOperationsInsightsWarehouseUser API.</example>
-        public async Task<GetOperationsInsightsWarehouseUserResponse> GetOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetOperationsInsightsWarehouseUserResponse> GetOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getOperationsInsightsWarehouseUser");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}".Trim('/')));
@@ -1392,11 +1426,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1415,9 +1449,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
-        public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getWorkRequest");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
@@ -1431,11 +1466,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1454,9 +1489,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestDatabaseConfiguration.cs.html">here</a> to see an example of how to use IngestDatabaseConfiguration API.</example>
-        public async Task<IngestDatabaseConfigurationResponse> IngestDatabaseConfiguration(IngestDatabaseConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestDatabaseConfigurationResponse> IngestDatabaseConfiguration(IngestDatabaseConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestDatabaseConfiguration");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/actions/ingestDatabaseConfiguration".Trim('/')));
@@ -1470,11 +1506,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1493,9 +1529,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestHostConfiguration.cs.html">here</a> to see an example of how to use IngestHostConfiguration API.</example>
-        public async Task<IngestHostConfigurationResponse> IngestHostConfiguration(IngestHostConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestHostConfigurationResponse> IngestHostConfiguration(IngestHostConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestHostConfiguration");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/actions/ingestHostConfiguration".Trim('/')));
@@ -1509,11 +1546,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1532,9 +1569,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestHostMetrics.cs.html">here</a> to see an example of how to use IngestHostMetrics API.</example>
-        public async Task<IngestHostMetricsResponse> IngestHostMetrics(IngestHostMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestHostMetricsResponse> IngestHostMetrics(IngestHostMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestHostMetrics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/actions/ingestHostMetrics".Trim('/')));
@@ -1548,11 +1586,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1573,9 +1611,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlBucket.cs.html">here</a> to see an example of how to use IngestSqlBucket API.</example>
-        public async Task<IngestSqlBucketResponse> IngestSqlBucket(IngestSqlBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestSqlBucketResponse> IngestSqlBucket(IngestSqlBucketRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestSqlBucket");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/actions/ingestSqlBucket".Trim('/')));
@@ -1589,11 +1628,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1614,9 +1653,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlPlanLines.cs.html">here</a> to see an example of how to use IngestSqlPlanLines API.</example>
-        public async Task<IngestSqlPlanLinesResponse> IngestSqlPlanLines(IngestSqlPlanLinesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestSqlPlanLinesResponse> IngestSqlPlanLines(IngestSqlPlanLinesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestSqlPlanLines");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/actions/ingestSqlPlanLines".Trim('/')));
@@ -1630,11 +1670,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1655,9 +1695,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlStats.cs.html">here</a> to see an example of how to use IngestSqlStats API.</example>
-        public async Task<IngestSqlStatsResponse> IngestSqlStats(IngestSqlStatsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestSqlStatsResponse> IngestSqlStats(IngestSqlStatsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestSqlStats");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/actions/ingestSqlStatsMetric".Trim('/')));
@@ -1671,11 +1712,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1697,9 +1738,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/IngestSqlText.cs.html">here</a> to see an example of how to use IngestSqlText API.</example>
-        public async Task<IngestSqlTextResponse> IngestSqlText(IngestSqlTextRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<IngestSqlTextResponse> IngestSqlText(IngestSqlTextRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called ingestSqlText");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/actions/ingestSqlText".Trim('/')));
@@ -1713,11 +1755,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1737,9 +1779,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListAwrHubs.cs.html">here</a> to see an example of how to use ListAwrHubs API.</example>
-        public async Task<ListAwrHubsResponse> ListAwrHubs(ListAwrHubsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListAwrHubsResponse> ListAwrHubs(ListAwrHubsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listAwrHubs");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs".Trim('/')));
@@ -1753,11 +1796,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1778,9 +1821,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListAwrSnapshots.cs.html">here</a> to see an example of how to use ListAwrSnapshots API.</example>
-        public async Task<ListAwrSnapshotsResponse> ListAwrSnapshots(ListAwrSnapshotsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListAwrSnapshotsResponse> ListAwrSnapshots(ListAwrSnapshotsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listAwrSnapshots");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}/awrSnapshots".Trim('/')));
@@ -1794,11 +1838,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1819,9 +1863,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListDatabaseConfigurations.cs.html">here</a> to see an example of how to use ListDatabaseConfigurations API.</example>
-        public async Task<ListDatabaseConfigurationsResponse> ListDatabaseConfigurations(ListDatabaseConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListDatabaseConfigurationsResponse> ListDatabaseConfigurations(ListDatabaseConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listDatabaseConfigurations");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/databaseConfigurations".Trim('/')));
@@ -1835,11 +1880,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1860,9 +1905,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListDatabaseInsights.cs.html">here</a> to see an example of how to use ListDatabaseInsights API.</example>
-        public async Task<ListDatabaseInsightsResponse> ListDatabaseInsights(ListDatabaseInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListDatabaseInsightsResponse> ListDatabaseInsights(ListDatabaseInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listDatabaseInsights");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights".Trim('/')));
@@ -1876,11 +1922,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1901,9 +1947,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListEnterpriseManagerBridges.cs.html">here</a> to see an example of how to use ListEnterpriseManagerBridges API.</example>
-        public async Task<ListEnterpriseManagerBridgesResponse> ListEnterpriseManagerBridges(ListEnterpriseManagerBridgesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListEnterpriseManagerBridgesResponse> ListEnterpriseManagerBridges(ListEnterpriseManagerBridgesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listEnterpriseManagerBridges");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges".Trim('/')));
@@ -1917,11 +1964,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1940,9 +1987,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListExadataConfigurations.cs.html">here</a> to see an example of how to use ListExadataConfigurations API.</example>
-        public async Task<ListExadataConfigurationsResponse> ListExadataConfigurations(ListExadataConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListExadataConfigurationsResponse> ListExadataConfigurations(ListExadataConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listExadataConfigurations");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/exadataConfigurations".Trim('/')));
@@ -1956,11 +2004,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -1981,9 +2029,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListExadataInsights.cs.html">here</a> to see an example of how to use ListExadataInsights API.</example>
-        public async Task<ListExadataInsightsResponse> ListExadataInsights(ListExadataInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListExadataInsightsResponse> ListExadataInsights(ListExadataInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listExadataInsights");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights".Trim('/')));
@@ -1997,11 +2046,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2022,9 +2071,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListHostConfigurations.cs.html">here</a> to see an example of how to use ListHostConfigurations API.</example>
-        public async Task<ListHostConfigurationsResponse> ListHostConfigurations(ListHostConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListHostConfigurationsResponse> ListHostConfigurations(ListHostConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listHostConfigurations");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/hostConfigurations".Trim('/')));
@@ -2038,11 +2088,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2063,9 +2113,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListHostInsights.cs.html">here</a> to see an example of how to use ListHostInsights API.</example>
-        public async Task<ListHostInsightsResponse> ListHostInsights(ListHostInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListHostInsightsResponse> ListHostInsights(ListHostInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listHostInsights");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights".Trim('/')));
@@ -2079,11 +2130,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2103,9 +2154,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListHostedEntities.cs.html">here</a> to see an example of how to use ListHostedEntities API.</example>
-        public async Task<ListHostedEntitiesResponse> ListHostedEntities(ListHostedEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListHostedEntitiesResponse> ListHostedEntities(ListHostedEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listHostedEntities");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/hostedEntities".Trim('/')));
@@ -2119,11 +2171,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2147,9 +2199,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListImportableAgentEntities.cs.html">here</a> to see an example of how to use ListImportableAgentEntities API.</example>
-        public async Task<ListImportableAgentEntitiesResponse> ListImportableAgentEntities(ListImportableAgentEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListImportableAgentEntitiesResponse> ListImportableAgentEntities(ListImportableAgentEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listImportableAgentEntities");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/importableAgentEntities".Trim('/')));
@@ -2163,11 +2216,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2187,9 +2240,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListImportableEnterpriseManagerEntities.cs.html">here</a> to see an example of how to use ListImportableEnterpriseManagerEntities API.</example>
-        public async Task<ListImportableEnterpriseManagerEntitiesResponse> ListImportableEnterpriseManagerEntities(ListImportableEnterpriseManagerEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListImportableEnterpriseManagerEntitiesResponse> ListImportableEnterpriseManagerEntities(ListImportableEnterpriseManagerEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listImportableEnterpriseManagerEntities");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges/{enterpriseManagerBridgeId}/importableEnterpriseManagerEntities".Trim('/')));
@@ -2203,11 +2257,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2227,9 +2281,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListOperationsInsightsWarehouseUsers.cs.html">here</a> to see an example of how to use ListOperationsInsightsWarehouseUsers API.</example>
-        public async Task<ListOperationsInsightsWarehouseUsersResponse> ListOperationsInsightsWarehouseUsers(ListOperationsInsightsWarehouseUsersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListOperationsInsightsWarehouseUsersResponse> ListOperationsInsightsWarehouseUsers(ListOperationsInsightsWarehouseUsersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listOperationsInsightsWarehouseUsers");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouseUsers".Trim('/')));
@@ -2243,11 +2298,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2268,9 +2323,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListOperationsInsightsWarehouses.cs.html">here</a> to see an example of how to use ListOperationsInsightsWarehouses API.</example>
-        public async Task<ListOperationsInsightsWarehousesResponse> ListOperationsInsightsWarehouses(ListOperationsInsightsWarehousesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListOperationsInsightsWarehousesResponse> ListOperationsInsightsWarehouses(ListOperationsInsightsWarehousesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listOperationsInsightsWarehouses");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses".Trim('/')));
@@ -2284,11 +2340,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2309,9 +2365,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlPlans.cs.html">here</a> to see an example of how to use ListSqlPlans API.</example>
-        public async Task<ListSqlPlansResponse> ListSqlPlans(ListSqlPlansRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListSqlPlansResponse> ListSqlPlans(ListSqlPlansRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listSqlPlans");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlPlans".Trim('/')));
@@ -2325,11 +2382,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2350,9 +2407,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlSearches.cs.html">here</a> to see an example of how to use ListSqlSearches API.</example>
-        public async Task<ListSqlSearchesResponse> ListSqlSearches(ListSqlSearchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListSqlSearchesResponse> ListSqlSearches(ListSqlSearchesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listSqlSearches");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlSearches".Trim('/')));
@@ -2366,11 +2424,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2390,9 +2448,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListSqlTexts.cs.html">here</a> to see an example of how to use ListSqlTexts API.</example>
-        public async Task<ListSqlTextsResponse> ListSqlTexts(ListSqlTextsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListSqlTextsResponse> ListSqlTexts(ListSqlTextsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listSqlTexts");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlTexts".Trim('/')));
@@ -2406,11 +2465,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2430,9 +2489,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
-        public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestErrors");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/errors".Trim('/')));
@@ -2446,11 +2506,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2470,9 +2530,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
-        public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestLogs");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/logs".Trim('/')));
@@ -2486,11 +2547,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2510,9 +2571,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
-        public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequests");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests".Trim('/')));
@@ -2526,11 +2588,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2549,9 +2611,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/RotateOperationsInsightsWarehouseWallet.cs.html">here</a> to see an example of how to use RotateOperationsInsightsWarehouseWallet API.</example>
-        public async Task<RotateOperationsInsightsWarehouseWalletResponse> RotateOperationsInsightsWarehouseWallet(RotateOperationsInsightsWarehouseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<RotateOperationsInsightsWarehouseWalletResponse> RotateOperationsInsightsWarehouseWallet(RotateOperationsInsightsWarehouseWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called rotateOperationsInsightsWarehouseWallet");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/actions/rotateWarehouseWallet".Trim('/')));
@@ -2565,11 +2628,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2589,9 +2652,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeAwrSourcesSummaries.cs.html">here</a> to see an example of how to use SummarizeAwrSourcesSummaries API.</example>
-        public async Task<SummarizeAwrSourcesSummariesResponse> SummarizeAwrSourcesSummaries(SummarizeAwrSourcesSummariesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeAwrSourcesSummariesResponse> SummarizeAwrSourcesSummaries(SummarizeAwrSourcesSummariesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeAwrSourcesSummaries");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}/awrSourcesSummary".Trim('/')));
@@ -2605,11 +2669,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2631,9 +2695,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceCapacityTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceCapacityTrend API.</example>
-        public async Task<SummarizeDatabaseInsightResourceCapacityTrendResponse> SummarizeDatabaseInsightResourceCapacityTrend(SummarizeDatabaseInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceCapacityTrendResponse> SummarizeDatabaseInsightResourceCapacityTrend(SummarizeDatabaseInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceCapacityTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceCapacityTrend".Trim('/')));
@@ -2647,11 +2712,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2672,9 +2737,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceForecastTrend API.</example>
-        public async Task<SummarizeDatabaseInsightResourceForecastTrendResponse> SummarizeDatabaseInsightResourceForecastTrend(SummarizeDatabaseInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceForecastTrendResponse> SummarizeDatabaseInsightResourceForecastTrend(SummarizeDatabaseInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceForecastTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceForecastTrend".Trim('/')));
@@ -2688,11 +2754,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2713,9 +2779,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceStatistics.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceStatistics API.</example>
-        public async Task<SummarizeDatabaseInsightResourceStatisticsResponse> SummarizeDatabaseInsightResourceStatistics(SummarizeDatabaseInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceStatisticsResponse> SummarizeDatabaseInsightResourceStatistics(SummarizeDatabaseInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceStatistics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceStatistics".Trim('/')));
@@ -2729,11 +2796,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2756,9 +2823,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsage API.</example>
-        public async Task<SummarizeDatabaseInsightResourceUsageResponse> SummarizeDatabaseInsightResourceUsage(SummarizeDatabaseInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceUsageResponse> SummarizeDatabaseInsightResourceUsage(SummarizeDatabaseInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUsage");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceUsageSummary".Trim('/')));
@@ -2772,11 +2840,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2798,9 +2866,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUsageTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUsageTrend API.</example>
-        public async Task<SummarizeDatabaseInsightResourceUsageTrendResponse> SummarizeDatabaseInsightResourceUsageTrend(SummarizeDatabaseInsightResourceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceUsageTrendResponse> SummarizeDatabaseInsightResourceUsageTrend(SummarizeDatabaseInsightResourceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUsageTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceUsageTrend".Trim('/')));
@@ -2814,11 +2883,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2839,9 +2908,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightResourceUtilizationInsight.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightResourceUtilizationInsight API.</example>
-        public async Task<SummarizeDatabaseInsightResourceUtilizationInsightResponse> SummarizeDatabaseInsightResourceUtilizationInsight(SummarizeDatabaseInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightResourceUtilizationInsightResponse> SummarizeDatabaseInsightResourceUtilizationInsight(SummarizeDatabaseInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightResourceUtilizationInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/resourceUtilizationInsight".Trim('/')));
@@ -2855,11 +2925,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2881,9 +2951,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeDatabaseInsightTablespaceUsageTrend.cs.html">here</a> to see an example of how to use SummarizeDatabaseInsightTablespaceUsageTrend API.</example>
-        public async Task<SummarizeDatabaseInsightTablespaceUsageTrendResponse> SummarizeDatabaseInsightTablespaceUsageTrend(SummarizeDatabaseInsightTablespaceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeDatabaseInsightTablespaceUsageTrendResponse> SummarizeDatabaseInsightTablespaceUsageTrend(SummarizeDatabaseInsightTablespaceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeDatabaseInsightTablespaceUsageTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/tablespaceUsageTrend".Trim('/')));
@@ -2897,11 +2968,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2928,9 +2999,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceCapacityTrend.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceCapacityTrend API.</example>
-        public async Task<SummarizeExadataInsightResourceCapacityTrendResponse> SummarizeExadataInsightResourceCapacityTrend(SummarizeExadataInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceCapacityTrendResponse> SummarizeExadataInsightResourceCapacityTrend(SummarizeExadataInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceCapacityTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceCapacityTrend".Trim('/')));
@@ -2944,11 +3016,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -2972,9 +3044,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceCapacityTrendAggregated.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceCapacityTrendAggregated API.</example>
-        public async Task<SummarizeExadataInsightResourceCapacityTrendAggregatedResponse> SummarizeExadataInsightResourceCapacityTrendAggregated(SummarizeExadataInsightResourceCapacityTrendAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceCapacityTrendAggregatedResponse> SummarizeExadataInsightResourceCapacityTrendAggregated(SummarizeExadataInsightResourceCapacityTrendAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceCapacityTrendAggregated");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceCapacityTrendAggregated".Trim('/')));
@@ -2988,11 +3061,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3019,9 +3092,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceForecastTrend API.</example>
-        public async Task<SummarizeExadataInsightResourceForecastTrendResponse> SummarizeExadataInsightResourceForecastTrend(SummarizeExadataInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceForecastTrendResponse> SummarizeExadataInsightResourceForecastTrend(SummarizeExadataInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceForecastTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceForecastTrend".Trim('/')));
@@ -3035,11 +3109,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3062,9 +3136,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceForecastTrendAggregated.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceForecastTrendAggregated API.</example>
-        public async Task<SummarizeExadataInsightResourceForecastTrendAggregatedResponse> SummarizeExadataInsightResourceForecastTrendAggregated(SummarizeExadataInsightResourceForecastTrendAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceForecastTrendAggregatedResponse> SummarizeExadataInsightResourceForecastTrendAggregated(SummarizeExadataInsightResourceForecastTrendAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceForecastTrendAggregated");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceForecastTrendAggregated".Trim('/')));
@@ -3078,11 +3153,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3106,9 +3181,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceStatistics.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceStatistics API.</example>
-        public async Task<SummarizeExadataInsightResourceStatisticsResponse> SummarizeExadataInsightResourceStatistics(SummarizeExadataInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceStatisticsResponse> SummarizeExadataInsightResourceStatistics(SummarizeExadataInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceStatistics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceStatistics".Trim('/')));
@@ -3122,11 +3198,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3151,9 +3227,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceUsage API.</example>
-        public async Task<SummarizeExadataInsightResourceUsageResponse> SummarizeExadataInsightResourceUsage(SummarizeExadataInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceUsageResponse> SummarizeExadataInsightResourceUsage(SummarizeExadataInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceUsage");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceUsageSummary".Trim('/')));
@@ -3167,11 +3244,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3196,9 +3273,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceUsageAggregated.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceUsageAggregated API.</example>
-        public async Task<SummarizeExadataInsightResourceUsageAggregatedResponse> SummarizeExadataInsightResourceUsageAggregated(SummarizeExadataInsightResourceUsageAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceUsageAggregatedResponse> SummarizeExadataInsightResourceUsageAggregated(SummarizeExadataInsightResourceUsageAggregatedRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceUsageAggregated");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceUsageSummaryAggregated".Trim('/')));
@@ -3212,11 +3290,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3235,9 +3313,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataInsightResourceUtilizationInsight.cs.html">here</a> to see an example of how to use SummarizeExadataInsightResourceUtilizationInsight API.</example>
-        public async Task<SummarizeExadataInsightResourceUtilizationInsightResponse> SummarizeExadataInsightResourceUtilizationInsight(SummarizeExadataInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataInsightResourceUtilizationInsightResponse> SummarizeExadataInsightResourceUtilizationInsight(SummarizeExadataInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataInsightResourceUtilizationInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/resourceUtilizationInsight".Trim('/')));
@@ -3251,11 +3330,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3274,9 +3353,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeExadataMembers.cs.html">here</a> to see an example of how to use SummarizeExadataMembers API.</example>
-        public async Task<SummarizeExadataMembersResponse> SummarizeExadataMembers(SummarizeExadataMembersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeExadataMembersResponse> SummarizeExadataMembers(SummarizeExadataMembersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeExadataMembers");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/exadataMembers".Trim('/')));
@@ -3290,11 +3370,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3316,9 +3396,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceCapacityTrend.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceCapacityTrend API.</example>
-        public async Task<SummarizeHostInsightResourceCapacityTrendResponse> SummarizeHostInsightResourceCapacityTrend(SummarizeHostInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceCapacityTrendResponse> SummarizeHostInsightResourceCapacityTrend(SummarizeHostInsightResourceCapacityTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceCapacityTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceCapacityTrend".Trim('/')));
@@ -3332,11 +3413,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3357,9 +3438,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceForecastTrend.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceForecastTrend API.</example>
-        public async Task<SummarizeHostInsightResourceForecastTrendResponse> SummarizeHostInsightResourceForecastTrend(SummarizeHostInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceForecastTrendResponse> SummarizeHostInsightResourceForecastTrend(SummarizeHostInsightResourceForecastTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceForecastTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceForecastTrend".Trim('/')));
@@ -3373,11 +3455,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3398,9 +3480,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceStatistics.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceStatistics API.</example>
-        public async Task<SummarizeHostInsightResourceStatisticsResponse> SummarizeHostInsightResourceStatistics(SummarizeHostInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceStatisticsResponse> SummarizeHostInsightResourceStatistics(SummarizeHostInsightResourceStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceStatistics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceStatistics".Trim('/')));
@@ -3414,11 +3497,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3441,9 +3524,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceUsage.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceUsage API.</example>
-        public async Task<SummarizeHostInsightResourceUsageResponse> SummarizeHostInsightResourceUsage(SummarizeHostInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceUsageResponse> SummarizeHostInsightResourceUsage(SummarizeHostInsightResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceUsage");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceUsageSummary".Trim('/')));
@@ -3457,11 +3541,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3483,9 +3567,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceUsageTrend.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceUsageTrend API.</example>
-        public async Task<SummarizeHostInsightResourceUsageTrendResponse> SummarizeHostInsightResourceUsageTrend(SummarizeHostInsightResourceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceUsageTrendResponse> SummarizeHostInsightResourceUsageTrend(SummarizeHostInsightResourceUsageTrendRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceUsageTrend");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceUsageTrend".Trim('/')));
@@ -3499,11 +3584,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3524,9 +3609,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightResourceUtilizationInsight.cs.html">here</a> to see an example of how to use SummarizeHostInsightResourceUtilizationInsight API.</example>
-        public async Task<SummarizeHostInsightResourceUtilizationInsightResponse> SummarizeHostInsightResourceUtilizationInsight(SummarizeHostInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeHostInsightResourceUtilizationInsightResponse> SummarizeHostInsightResourceUtilizationInsight(SummarizeHostInsightResourceUtilizationInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeHostInsightResourceUtilizationInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/resourceUtilizationInsight".Trim('/')));
@@ -3540,11 +3626,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3565,9 +3651,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeOperationsInsightsWarehouseResourceUsage.cs.html">here</a> to see an example of how to use SummarizeOperationsInsightsWarehouseResourceUsage API.</example>
-        public async Task<SummarizeOperationsInsightsWarehouseResourceUsageResponse> SummarizeOperationsInsightsWarehouseResourceUsage(SummarizeOperationsInsightsWarehouseResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeOperationsInsightsWarehouseResourceUsageResponse> SummarizeOperationsInsightsWarehouseResourceUsage(SummarizeOperationsInsightsWarehouseResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeOperationsInsightsWarehouseResourceUsage");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/resourceUsageSummary".Trim('/')));
@@ -3581,11 +3668,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3606,9 +3693,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlInsights.cs.html">here</a> to see an example of how to use SummarizeSqlInsights API.</example>
-        public async Task<SummarizeSqlInsightsResponse> SummarizeSqlInsights(SummarizeSqlInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlInsightsResponse> SummarizeSqlInsights(SummarizeSqlInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlInsights");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlInsights".Trim('/')));
@@ -3622,11 +3710,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3647,9 +3735,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlPlanInsights.cs.html">here</a> to see an example of how to use SummarizeSqlPlanInsights API.</example>
-        public async Task<SummarizeSqlPlanInsightsResponse> SummarizeSqlPlanInsights(SummarizeSqlPlanInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlPlanInsightsResponse> SummarizeSqlPlanInsights(SummarizeSqlPlanInsightsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlPlanInsights");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlPlanInsights".Trim('/')));
@@ -3663,11 +3752,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3688,9 +3777,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlResponseTimeDistributions.cs.html">here</a> to see an example of how to use SummarizeSqlResponseTimeDistributions API.</example>
-        public async Task<SummarizeSqlResponseTimeDistributionsResponse> SummarizeSqlResponseTimeDistributions(SummarizeSqlResponseTimeDistributionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlResponseTimeDistributionsResponse> SummarizeSqlResponseTimeDistributions(SummarizeSqlResponseTimeDistributionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlResponseTimeDistributions");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlResponseTimeDistributions".Trim('/')));
@@ -3704,11 +3794,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3729,9 +3819,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatistics.cs.html">here</a> to see an example of how to use SummarizeSqlStatistics API.</example>
-        public async Task<SummarizeSqlStatisticsResponse> SummarizeSqlStatistics(SummarizeSqlStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlStatisticsResponse> SummarizeSqlStatistics(SummarizeSqlStatisticsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlStatistics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlStatistics".Trim('/')));
@@ -3745,11 +3836,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3770,9 +3861,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatisticsTimeSeries.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeries API.</example>
-        public async Task<SummarizeSqlStatisticsTimeSeriesResponse> SummarizeSqlStatisticsTimeSeries(SummarizeSqlStatisticsTimeSeriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlStatisticsTimeSeriesResponse> SummarizeSqlStatisticsTimeSeries(SummarizeSqlStatisticsTimeSeriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlStatisticsTimeSeries");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlStatisticsTimeSeries".Trim('/')));
@@ -3786,11 +3878,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3811,9 +3903,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeSqlStatisticsTimeSeriesByPlan.cs.html">here</a> to see an example of how to use SummarizeSqlStatisticsTimeSeriesByPlan API.</example>
-        public async Task<SummarizeSqlStatisticsTimeSeriesByPlanResponse> SummarizeSqlStatisticsTimeSeriesByPlan(SummarizeSqlStatisticsTimeSeriesByPlanRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<SummarizeSqlStatisticsTimeSeriesByPlanResponse> SummarizeSqlStatisticsTimeSeriesByPlan(SummarizeSqlStatisticsTimeSeriesByPlanRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called summarizeSqlStatisticsTimeSeriesByPlan");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/sqlStatisticsTimeSeriesByPlan".Trim('/')));
@@ -3827,11 +3920,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3850,9 +3943,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateAwrHub.cs.html">here</a> to see an example of how to use UpdateAwrHub API.</example>
-        public async Task<UpdateAwrHubResponse> UpdateAwrHub(UpdateAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateAwrHubResponse> UpdateAwrHub(UpdateAwrHubRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateAwrHub");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/awrHubs/{awrHubId}".Trim('/')));
@@ -3866,11 +3960,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3889,9 +3983,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateDatabaseInsight.cs.html">here</a> to see an example of how to use UpdateDatabaseInsight API.</example>
-        public async Task<UpdateDatabaseInsightResponse> UpdateDatabaseInsight(UpdateDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateDatabaseInsightResponse> UpdateDatabaseInsight(UpdateDatabaseInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateDatabaseInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/databaseInsights/{databaseInsightId}".Trim('/')));
@@ -3905,11 +4000,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3928,9 +4023,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateEnterpriseManagerBridge.cs.html">here</a> to see an example of how to use UpdateEnterpriseManagerBridge API.</example>
-        public async Task<UpdateEnterpriseManagerBridgeResponse> UpdateEnterpriseManagerBridge(UpdateEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateEnterpriseManagerBridgeResponse> UpdateEnterpriseManagerBridge(UpdateEnterpriseManagerBridgeRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateEnterpriseManagerBridge");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/enterpriseManagerBridges/{enterpriseManagerBridgeId}".Trim('/')));
@@ -3944,11 +4040,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -3967,9 +4063,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateExadataInsight.cs.html">here</a> to see an example of how to use UpdateExadataInsight API.</example>
-        public async Task<UpdateExadataInsightResponse> UpdateExadataInsight(UpdateExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateExadataInsightResponse> UpdateExadataInsight(UpdateExadataInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateExadataInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exadataInsights/{exadataInsightId}".Trim('/')));
@@ -3983,11 +4080,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -4006,9 +4103,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateHostInsight.cs.html">here</a> to see an example of how to use UpdateHostInsight API.</example>
-        public async Task<UpdateHostInsightResponse> UpdateHostInsight(UpdateHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateHostInsightResponse> UpdateHostInsight(UpdateHostInsightRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateHostInsight");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/hostInsights/{hostInsightId}".Trim('/')));
@@ -4022,11 +4120,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -4047,9 +4145,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateOperationsInsightsWarehouse.cs.html">here</a> to see an example of how to use UpdateOperationsInsightsWarehouse API.</example>
-        public async Task<UpdateOperationsInsightsWarehouseResponse> UpdateOperationsInsightsWarehouse(UpdateOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateOperationsInsightsWarehouseResponse> UpdateOperationsInsightsWarehouse(UpdateOperationsInsightsWarehouseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateOperationsInsightsWarehouse");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}".Trim('/')));
@@ -4063,11 +4162,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -4086,9 +4185,10 @@ namespace Oci.OpsiService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/UpdateOperationsInsightsWarehouseUser.cs.html">here</a> to see an example of how to use UpdateOperationsInsightsWarehouseUser API.</example>
-        public async Task<UpdateOperationsInsightsWarehouseUserResponse> UpdateOperationsInsightsWarehouseUser(UpdateOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<UpdateOperationsInsightsWarehouseUserResponse> UpdateOperationsInsightsWarehouseUser(UpdateOperationsInsightsWarehouseUserRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateOperationsInsightsWarehouseUser");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}".Trim('/')));
@@ -4102,11 +4202,11 @@ namespace Oci.OpsiService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -74,9 +74,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/ActivateMonitoringPlugin.cs.html">here</a> to see an example of how to use ActivateMonitoringPlugin API.</example>
-        public async Task<ActivateMonitoringPluginResponse> ActivateMonitoringPlugin(ActivateMonitoringPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ActivateMonitoringPluginResponse> ActivateMonitoringPlugin(ActivateMonitoringPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called activateMonitoringPlugin");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitoredInstances/{monitoredInstanceId}/actions/activateMonitoringPlugin".Trim('/')));
@@ -90,11 +91,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -113,9 +114,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/GetMonitoredInstance.cs.html">here</a> to see an example of how to use GetMonitoredInstance API.</example>
-        public async Task<GetMonitoredInstanceResponse> GetMonitoredInstance(GetMonitoredInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetMonitoredInstanceResponse> GetMonitoredInstance(GetMonitoredInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getMonitoredInstance");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitoredInstances/{monitoredInstanceId}".Trim('/')));
@@ -129,11 +131,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -152,9 +154,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/GetWorkRequest.cs.html">here</a> to see an example of how to use GetWorkRequest API.</example>
-        public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getWorkRequest");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
@@ -168,11 +171,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -192,9 +195,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/ListMonitoredInstances.cs.html">here</a> to see an example of how to use ListMonitoredInstances API.</example>
-        public async Task<ListMonitoredInstancesResponse> ListMonitoredInstances(ListMonitoredInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListMonitoredInstancesResponse> ListMonitoredInstances(ListMonitoredInstancesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listMonitoredInstances");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitoredInstances".Trim('/')));
@@ -208,11 +212,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -232,9 +236,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/ListWorkRequestErrors.cs.html">here</a> to see an example of how to use ListWorkRequestErrors API.</example>
-        public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestErrors");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/errors".Trim('/')));
@@ -248,11 +253,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -272,9 +277,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/ListWorkRequestLogs.cs.html">here</a> to see an example of how to use ListWorkRequestLogs API.</example>
-        public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestLogs");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/logs".Trim('/')));
@@ -288,11 +294,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -312,9 +318,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/ListWorkRequests.cs.html">here</a> to see an example of how to use ListWorkRequests API.</example>
-        public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequests");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests".Trim('/')));
@@ -328,11 +335,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 
@@ -352,9 +359,10 @@ namespace Oci.AppmgmtcontrolService
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
         /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/appmgmtcontrol/PublishTopProcessesMetrics.cs.html">here</a> to see an example of how to use PublishTopProcessesMetrics API.</example>
-        public async Task<PublishTopProcessesMetricsResponse> PublishTopProcessesMetrics(PublishTopProcessesMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        public async Task<PublishTopProcessesMetricsResponse> PublishTopProcessesMetrics(PublishTopProcessesMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called publishTopProcessesMetrics");
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitoredInstances/{monitoredInstanceId}/actions/publishTopProcessesMetrics".Trim('/')));
@@ -368,11 +376,11 @@ namespace Oci.AppmgmtcontrolService
             {
                 if (retryingClient != null)
                 {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, cancellationToken).ConfigureAwait(false);
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    responseMessage = await this.restClient.HttpSend(requestMessage).ConfigureAwait(false);
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
 

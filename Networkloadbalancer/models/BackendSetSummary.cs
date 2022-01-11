@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -55,13 +55,20 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<NetworkLoadBalancingPolicy> Policy { get; set; }
         
         /// <value>
-        /// If this parameter is enabled, then the network load balancer preserves the source IP of the packet when it is forwarded to backends.
-        /// Backends see the original source IP. If the isPreserveSourceDestination parameter is enabled for the network load balancer resource, then this parameter cannot be disabled.
+        /// If this parameter is enabled, the network load balancer preserves the source IP of the packet forwarded to the backend servers.
+        /// Backend servers see the original source IP. If the `isPreserveSourceDestination` parameter is enabled for the network load balancer resource, this parameter cannot be disabled.
         /// The value is true by default.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPreserveSource")]
         public System.Nullable<bool> IsPreserveSource { get; set; }
+        
+        /// <value>
+        /// IP version associated with the backend set.
+        /// </value>
+        [JsonProperty(PropertyName = "ipVersion")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<IpVersion> IpVersion { get; set; }
         
         /// <value>
         /// An array of backends.

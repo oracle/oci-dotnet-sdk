@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -29,26 +29,6 @@ namespace Oci.CoreService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "instanceId")]
         public string InstanceId { get; set; }
         
-        ///
-        /// <value>
-        /// The action to perform on the instance.
-        /// </value>
-        ///
-        public enum ActionEnum {
-            [EnumMember(Value = "STOP")]
-            Stop,
-            [EnumMember(Value = "START")]
-            Start,
-            [EnumMember(Value = "SOFTRESET")]
-            Softreset,
-            [EnumMember(Value = "RESET")]
-            Reset,
-            [EnumMember(Value = "SOFTSTOP")]
-            Softstop,
-            [EnumMember(Value = "SENDDIAGNOSTICINTERRUPT")]
-            Senddiagnosticinterrupt
-        };
-
         /// <value>
         /// The action to perform on the instance.
         /// </value>
@@ -57,7 +37,7 @@ namespace Oci.CoreService.Requests
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "action")]
-        public System.Nullable<ActionEnum> Action { get; set; }
+        public string Action { get; set; }
         
         /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or

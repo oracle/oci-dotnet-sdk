@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 30.0.0 - 2022-01-11
+### Added
+- Support for calling Oracle Cloud Infrastructure services in the `af-johannesburg-1` and `eu-stockholm-1` regions
+- Support for multiple protocols on the same listener in the Network Load Balancing service
+- IPv6 support in the Network Load Balancing service
+- Support for creating Enterprise Manager-based Solaris and SunOS host targets in the Operations Insights service
+- Support for choosing Data Guard type (Active Data Guard or regular) on databases in the Database service
+- Support for Optional `HttpCompletionOption` parameter that can be provided for Head requests in all service clients for API requests
+ 
+### Breaking
+- The data type of property `Action` was changed from `System.Nullable<ActionEnum>` to `string` in InstanceActionRequest in Compute service
+- The data type of property `Action` was changed from `System.Nullable<ActionEnum>` to `string` in DbNodeActionRequest in Database service
+- The data type of property `Protocol` was changed from `System.Nullable<ProtocolEnum>` to `string` in ListIdentityProvidersRequest in Identity service
+- The data type of property `Fields` was changed from `System.Nullable<FieldsEnum>` to `string` in ListObjectsRequest in Object Storage service
+- The data type of property `Fields` was changed from `System.Nullable<FieldsEnum>` to `string` in ListObjectVersionsRequest in Object Storage service
+
 ## 29.4.0 - 2021-12-14
 ### Added
 - Support for node replacement in the VMWare Solution service
