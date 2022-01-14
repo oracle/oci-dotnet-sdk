@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// This allows the labeler to highlight text by specifying an offset and a length and apply labels to it.
+    /// This lets the labeler highlight text, by specifying an offset and a length, and apply labels to it.
     /// </summary>
     public class TextSelectionEntity : Entity
     {
         
         /// <value>
-        /// Collection of Label entities
+        /// A collection of label entities.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,8 +39,8 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public TextSpan TextSpan { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, string> ExtendedMetadata { get; set; }

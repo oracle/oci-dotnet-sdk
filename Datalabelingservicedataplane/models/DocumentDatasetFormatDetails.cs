@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Allows the user to specify that the dataset is comprised of document files (e.g. PDFs, DOCs, etc.).  It is open for further configurability.
+    /// It indicates the dataset is comprised of document files.  It is open for further configurability.
     /// </summary>
     public class DocumentDatasetFormatDetails : DatasetFormatDetails
     {

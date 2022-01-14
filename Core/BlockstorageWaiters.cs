@@ -316,5 +316,33 @@ namespace Oci.CoreService
             );
             return new Waiter<GetVolumeGroupBackupRequest, GetVolumeGroupBackupResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVolumeGroupReplicaRequest, GetVolumeGroupReplicaResponse> ForVolumeGroupReplica(GetVolumeGroupReplicaRequest request, params VolumeGroupReplica.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForVolumeGroupReplica(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVolumeGroupReplicaRequest, GetVolumeGroupReplicaResponse> ForVolumeGroupReplica(GetVolumeGroupReplicaRequest request, WaiterConfiguration config, params VolumeGroupReplica.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetVolumeGroupReplicaRequest, GetVolumeGroupReplicaResponse>(
+                request,
+                request => client.GetVolumeGroupReplica(request),
+                response => targetStates.Contains(response.VolumeGroupReplica.LifecycleState.Value),
+                targetStates.Contains(VolumeGroupReplica.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetVolumeGroupReplicaRequest, GetVolumeGroupReplicaResponse>(config, agent);
+        }
     }
 }

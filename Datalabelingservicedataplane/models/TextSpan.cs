@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// A wrapper class for offset and length, which together represent a span of text in a text document.
+    /// A wrapper class for offset and length, which together, represent a span of text in a text document.
     /// </summary>
     public class TextSpan 
     {
         
         /// <value>
-        /// Offset of the selected text within the entire text.
+        /// The offset of the selected text within the entire text.
         /// </value>
         [JsonProperty(PropertyName = "offset")]
         public System.Nullable<decimal> Offset { get; set; }
         
         /// <value>
-        /// Length of the selected text.
+        /// The length of the selected text.
         /// </value>
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<decimal> Length { get; set; }

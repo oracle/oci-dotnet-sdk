@@ -80,5 +80,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "sourceDetails")]
         public VolumeGroupSourceDetails SourceDetails { get; set; }
         
+        /// <value>
+        /// The list of volume group replicas that this volume group will be enabled to have
+        /// in the specified destination availability domains.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "volumeGroupReplicas")]
+        public System.Collections.Generic.List<VolumeGroupReplicaDetails> VolumeGroupReplicas { get; set; }
+        
     }
 }

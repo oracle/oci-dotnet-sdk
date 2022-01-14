@@ -22,7 +22,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
         
         /// <value>
-        /// The normalized vertices that make up the polygon.  They are in order of the segments that they connect.
+        /// The normalized vertices that make up the polygon.  They are in the order of the segments they connect.
         /// </value>
         /// <remarks>
         /// Required

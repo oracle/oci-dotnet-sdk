@@ -107,7 +107,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Creates a Record.
+        /// Creates a record.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -148,7 +148,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Deletes an Annotation resource by identifier
+        /// It deletes an annotation resource by identifier.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -189,7 +189,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Deletes a Record resource by identifier
+        /// Deletes a record resource by identifier.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -230,7 +230,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Gets an Annotation
+        /// Gets an annotation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -271,7 +271,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Gets a Dataset by identifier
+        /// Gets a dataset by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -311,7 +311,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Gets a record
+        /// Gets a record.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -352,7 +352,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Retrieves the content of the record from the Dataset source.
+        /// Retrieves the content of the record from the dataset source.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -393,7 +393,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Retrieves the preview of the record content from the Dataset source.
+        /// Retrieves the preview of the record content from the dataset source.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -434,7 +434,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Returns a list of Annotations.
+        /// Returns a list of annotations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -475,7 +475,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// List Record in the specified compartment.
+        /// The list of records in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -516,7 +516,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Summarize annotations created for a given dataset
+        /// Summarize the annotations created for a given dataset.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -557,7 +557,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Summarize records created for a given dataset
+        /// Summarize the records created for a given dataset.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -639,7 +639,7 @@ namespace Oci.DatalabelingservicedataplaneService
         }
 
         /// <summary>
-        /// Updates record.
+        /// Updates a record.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

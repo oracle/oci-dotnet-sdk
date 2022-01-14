@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// The source information is a polymorphic entity. It captures the details of data used for record creation. The discriminator type must match the dataset's source type. The convention will be enforced by the API.
+    /// The source information is a polymorphic entity. It captures the details of data used for record creation. The discriminator type must match the dataset's source type. The convention is enforced by the API.
     /// 
     /// </summary>
     [JsonConverter(typeof(SourceDetailsModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
                 ///
         /// <value>
         /// The type of data source.
-        /// OBJECT_STORAGE - source details for an object storage bucket.
+        /// OBJECT_STORAGE - The source details for an object storage bucket.
         /// 
         /// </value>
         ///

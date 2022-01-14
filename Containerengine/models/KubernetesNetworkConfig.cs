@@ -22,13 +22,13 @@ namespace Oci.ContainerengineService.Models
     {
         
         /// <value>
-        /// The CIDR block for Kubernetes pods.
+        /// The CIDR block for Kubernetes pods. Optional, defaults to 10.244.0.0/16.
         /// </value>
         [JsonProperty(PropertyName = "podsCidr")]
         public string PodsCidr { get; set; }
         
         /// <value>
-        /// The CIDR block for Kubernetes services.
+        /// The CIDR block for Kubernetes services. Optional, defaults to 10.96.0.0/16.
         /// </value>
         [JsonProperty(PropertyName = "servicesCidr")]
         public string ServicesCidr { get; set; }

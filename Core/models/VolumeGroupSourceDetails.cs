@@ -45,6 +45,9 @@ namespace Oci.CoreService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "volumeGroupReplicaId":
+                    obj = new VolumeGroupSourceFromVolumeGroupReplicaDetails();
+                    break;
                 case "volumeGroupId":
                     obj = new VolumeGroupSourceFromVolumeGroupDetails();
                     break;

@@ -22,7 +22,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
         
         /// <value>
-        /// List of Record entities.
+        /// The list of record entities.
         /// </value>
         /// <remarks>
         /// Required

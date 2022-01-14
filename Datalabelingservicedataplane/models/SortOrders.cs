@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
   /// <summary>
-  /// Sort orders.
+  /// The sort orders.
   /// </summary>
   public enum SortOrders {
       [EnumMember(Value = "ASC")]

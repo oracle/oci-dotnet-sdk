@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// A label is a string value.  The API will validate that it's one of the dataset's pre-defined labels. In the future, we'll be able to support a confidence score.
+    /// A label is a string value.  The API validates that it's one of the dataset's pre-defined labels.
     /// </summary>
     public class Label 
     {

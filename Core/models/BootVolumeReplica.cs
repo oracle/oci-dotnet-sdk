@@ -182,5 +182,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "totalDataTransferredInGBs")]
         public System.Nullable<long> TotalDataTransferredInGBs { get; set; }
         
+        /// <value>
+        /// The OCID of the volume group replica.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "volumeGroupReplicaId")]
+        public string VolumeGroupReplicaId { get; set; }
+        
     }
 }

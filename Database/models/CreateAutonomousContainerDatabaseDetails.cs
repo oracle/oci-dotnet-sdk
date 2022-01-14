@@ -100,6 +100,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
         
         /// <value>
+        /// Indicates whether Automatic Failover is enabled for Autonomous Container Database Dataguard Association
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutomaticFailoverEnabled")]
+        public System.Nullable<bool> IsAutomaticFailoverEnabled { get; set; }
+        
+        /// <value>
         /// The OCID of the peer cloud Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "peerCloudAutonomousVmClusterId")]

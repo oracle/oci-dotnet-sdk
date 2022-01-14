@@ -48,7 +48,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<decimal> Offset { get; set; }
         
         /// <value>
-        /// The length from offset into the file containing the content.
+        /// The length from the offset into the file containing the content.
         /// </value>
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<decimal> Length { get; set; }

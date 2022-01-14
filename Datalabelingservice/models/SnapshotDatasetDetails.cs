@@ -48,5 +48,8 @@ namespace Oci.DatalabelingService.Models
         [JsonProperty(PropertyName = "exportDetails")]
         public ObjectStorageSnapshotExportDetails ExportDetails { get; set; }
         
+        [JsonProperty(PropertyName = "exportFormat")]
+        public ExportFormat ExportFormat { get; set; }
+        
     }
 }

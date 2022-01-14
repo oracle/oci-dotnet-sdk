@@ -36,6 +36,18 @@ namespace Oci.ContainerengineService.Models
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
+        /// The OCID of the Key Management Service key assigned to the boot volume.
+        /// </value>
+        [JsonProperty(PropertyName = "kmsKeyId")]
+        public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// Whether to enable in-transit encryption for the data volume's paravirtualized attachment. This field applies to both block volumes and boot volumes. The default value is false.
+        /// </value>
+        [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
+        public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
+        /// <value>
         /// The placement configurations for the node pool. Provide one placement
         /// configuration for each availability domain in which you intend to launch a node.
         /// <br/>

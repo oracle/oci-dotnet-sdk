@@ -22,7 +22,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
         
         /// <value>
-        /// The OCID of the record
+        /// The OCID of the record.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// This will be created by Customer. It will be unique and immutable.
+        /// The name is created by the user. It is unique and immutable.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The OCID of the dataset to associate the record with
+        /// The OCID of the dataset to associate the record with.
         /// </value>
         /// <remarks>
         /// Required
@@ -89,7 +89,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public SourceDetails SourceDetails { get; set; }
         
         /// <value>
-        /// Whether the record has been labeled and has associated annotations.
+        /// Whether or not the record has been labeled and has associated annotations.
         /// </value>
         /// <remarks>
         /// Required
@@ -99,10 +99,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<bool> IsLabeled { get; set; }
                 ///
         /// <value>
-        /// Lifecycle state of the Record.
-        /// ACTIVE - Record is active and ready for labeling.
-        /// INACTIVE - Record has been marked as inactive and should not be used for labeling.
-        /// DELETED - Record has been deleted and no longer available for labeling.
+        /// The lifecycle state of the record.
+        /// ACTIVE - The record is active and ready for labeling.
+        /// INACTIVE - The record has been marked as inactive and should not be used for labeling.
+        /// DELETED - The record has been deleted and is no longer available for labeling.
         /// 
         /// </value>
         ///
@@ -116,10 +116,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         };
 
         /// <value>
-        /// Lifecycle state of the Record.
-        /// ACTIVE - Record is active and ready for labeling.
-        /// INACTIVE - Record has been marked as inactive and should not be used for labeling.
-        /// DELETED - Record has been deleted and no longer available for labeling.
+        /// The lifecycle state of the record.
+        /// ACTIVE - The record is active and ready for labeling.
+        /// INACTIVE - The record has been marked as inactive and should not be used for labeling.
+        /// DELETED - The record has been deleted and is no longer available for labeling.
         /// 
         /// </value>
         /// <remarks>
@@ -130,16 +130,19 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
+        [JsonProperty(PropertyName = "recordMetadata")]
+        public RecordMetadata RecordMetadata { get; set; }
+        
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// The defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

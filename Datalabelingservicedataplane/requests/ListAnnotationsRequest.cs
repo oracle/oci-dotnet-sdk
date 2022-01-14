@@ -30,7 +30,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Filter results by the OCID of the dataset.
+        /// Filter the results by the OCID of the dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,25 +40,25 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string DatasetId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Annotation.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Unique OCID identifier
+        /// The unique OCID identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the principal who updated the annotation.
+        /// The OCID of the principal which updated the annotation.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "updatedBy")]
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// The OCID of the record annotated
+        /// The OCID of the record annotated.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "recordId")]
         public string RecordId { get; set; }
@@ -97,7 +97,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. If no value is specified timeCreated is used by default.
         /// </value>
         ///
         public enum SortByEnum {
@@ -108,7 +108,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. If no value is specified timeCreated is used by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

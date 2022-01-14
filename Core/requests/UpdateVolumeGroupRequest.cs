@@ -47,5 +47,14 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// Specifies whether to disable or preserve the individual volume replication when removing a volume from the
+        /// replication enabled volume group. When set to `true`, the individual volume replica is preserved. The default
+        /// value is `true`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveVolumeReplica")]
+        public System.Nullable<bool> PreserveVolumeReplica { get; set; }
     }
 }

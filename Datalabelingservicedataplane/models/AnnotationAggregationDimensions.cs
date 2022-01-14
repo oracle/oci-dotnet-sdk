@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Dimensions to summarize annotations for a given dataset
+    /// The dimensions to summarize annotations for a given dataset.
     /// </summary>
     public class AnnotationAggregationDimensions 
     {
@@ -25,7 +25,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public Label Label { get; set; }
         
         /// <value>
-        /// The OCID of the principal who updated the resource.
+        /// The OCID of the principal which updated the resource.
         /// </value>
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }

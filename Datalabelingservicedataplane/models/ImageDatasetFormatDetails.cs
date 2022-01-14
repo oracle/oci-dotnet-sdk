@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Indicates the dataset is comprised of images.
+    /// It indicates the dataset is comprised of images.
     /// </summary>
     public class ImageDatasetFormatDetails : DatasetFormatDetails
     {

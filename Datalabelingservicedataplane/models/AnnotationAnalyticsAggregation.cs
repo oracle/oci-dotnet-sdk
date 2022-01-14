@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Aggregation entities are required by the api consistency guidelines for API Consistency Guidelines#AnalyticsAPIs.  These are used to summarize annotations for a given dataset and will be used to populate UI elements.  Aggregations need to have the fields that identify the exact scope that they're summarizing.  Any filters to the list API we apply would have to show up in the aggregation. We should limit the number of filters and dimensions as much as possible.
+    /// Aggregation entities are required by the API consistency guidelines for API Consistency Guidelines#AnalyticsAPIs.  These are used to summarize annotations for a given dataset and will be used to populate UI elements.  Aggregations need to have the fields that identify the exact scope that they're summarizing.  Any filters applied to the list API, have to show up in the aggregation.
     /// </summary>
     public class AnnotationAnalyticsAggregation 
     {
         
         /// <value>
-        /// the count of the matching results
+        /// The count of the matching results.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<decimal> Count { get; set; }
         
         /// <value>
-        /// OCID of the dataset the annotations belongs to
+        /// The OCID of the dataset the annotations belong to.
         /// </value>
         /// <remarks>
         /// Required
@@ -45,13 +45,13 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public AnnotationAggregationDimensions Dimensions { get; set; }
         
         /// <value>
-        /// The OCID of the principal who updated the annotation
+        /// The OCID of the principal which updated the annotation.
         /// </value>
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// OCID of the compartment containing the annotations
+        /// The OCID of the compartment containing the annotations.
         /// </value>
         /// <remarks>
         /// Required
