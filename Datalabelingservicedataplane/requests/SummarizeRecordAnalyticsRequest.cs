@@ -30,7 +30,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Filter results by the OCID of the dataset.
+        /// Filter the results by the OCID of the dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string DatasetId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Record.LifecycleStateEnum> LifecycleState { get; set; }
@@ -65,7 +65,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         
         ///
         /// <value>
-        /// The field to group by. If no value is specified isLabeled is default.
+        /// The field to group by. If no value is specified isLabeled is used by default.
         /// 
         /// </value>
         ///
@@ -77,7 +77,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to group by. If no value is specified isLabeled is default.
+        /// The field to group by. If no value is specified isLabeled is used by default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "recordGroupBy")]
@@ -85,7 +85,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order is descending. If no value is specified count is default.
+        /// The field to sort by. Only one sort order may be provided. The default order is descending. If no value is specified, count is used by default.
         /// </value>
         ///
         public enum SortByEnum {
@@ -96,7 +96,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order is descending. If no value is specified count is default.
+        /// The field to sort by. Only one sort order may be provided. The default order is descending. If no value is specified, count is used by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

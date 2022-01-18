@@ -163,22 +163,28 @@ namespace Oci.DatalabelingService.Models
         public InitialRecordGenerationConfiguration InitialRecordGenerationConfiguration { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// The labeling instructions for human labelers in rich text format
+        /// </value>
+        [JsonProperty(PropertyName = "labelingInstructions")]
+        public string LabelingInstructions { get; set; }
+        
+        /// <value>
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// The defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
-        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// The usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// For Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }

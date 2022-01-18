@@ -20,7 +20,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
     {
         
         /// <value>
-        /// unique Annotation identifier
+        /// A unique annotation identifier.
         /// </value>
         /// <remarks>
         /// Required

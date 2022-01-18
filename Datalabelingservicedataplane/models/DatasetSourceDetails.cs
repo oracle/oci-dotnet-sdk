@@ -23,7 +23,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
                 ///
         /// <value>
-        /// Source type.  OBJECT_STORAGE allows the customer to describe where the dataset is in object storage.
+        /// The source type.  OBJECT_STORAGE allows the user to describe where in object storage the dataset is.
         /// </value>
         ///
         public enum SourceTypeEnum {

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// This is an extensible entity type for users and the base entity type for some annotation formats
+    /// This is an extensible entity type for users, and the base entity type for some annotation formats.
     /// </summary>
     public class GenericEntity : Entity
     {
         
         /// <value>
-        /// collection of Label entities
+        /// A collection of label entities.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,8 +32,8 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Collections.Generic.List<Label> Labels { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, string> ExtendedMetadata { get; set; }

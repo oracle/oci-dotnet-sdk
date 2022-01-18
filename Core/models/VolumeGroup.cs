@@ -161,5 +161,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }
         
+        /// <value>
+        /// The list of volume group replicas of this volume group.
+        /// </value>
+        [JsonProperty(PropertyName = "volumeGroupReplicas")]
+        public System.Collections.Generic.List<VolumeGroupReplicaInfo> VolumeGroupReplicas { get; set; }
+        
     }
 }

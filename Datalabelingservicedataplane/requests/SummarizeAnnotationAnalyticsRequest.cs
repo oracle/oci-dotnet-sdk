@@ -30,7 +30,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Filter results by the OCID of the dataset.
+        /// Filter the results by the OCID of the dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,13 +40,13 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string DatasetId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Annotation.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// This field is used to summarize annotations with specified label.
+        /// It summarizes annotations with the specified label.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "label")]
         public string Label { get; set; }
@@ -71,7 +71,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order is descending. If no value is specified updatedBy is default.
+        /// The field to sort by. Only one sort order may be provided. The default order is descending. If no value is specified, updatedBy is used by default.
         /// </value>
         ///
         public enum SortByEnum {
@@ -84,14 +84,14 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order is descending. If no value is specified updatedBy is default.
+        /// The field to sort by. Only one sort order may be provided. The default order is descending. If no value is specified, updatedBy is used by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         ///
         /// <value>
-        /// The field to group by. If no value is specified updatedBy is default.
+        /// The field to group by. If no value is specified, updatedBy is used by default.
         /// </value>
         ///
         public enum AnnotationGroupByEnum {
@@ -102,7 +102,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to group by. If no value is specified updatedBy is default.
+        /// The field to group by. If no value is specified, updatedBy is used by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "annotationGroupBy")]
         public System.Nullable<AnnotationGroupByEnum> AnnotationGroupBy { get; set; }

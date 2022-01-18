@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// An Annotation represents a user/machine generated annotation for a given record.  The details of the annotation are captured in the RecordAnnotationDetails.
+    /// An annotation represents a user- or machine-generated annotation for a given record.  The details of the annotation are captured in the RecordAnnotationDetails.
     /// </summary>
     public class Annotation 
     {
         
         /// <value>
-        /// The OCID of the annotation
+        /// The OCID of the annotation.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The OCID of the principal who created the annotation
+        /// The OCID of the principal which created the annotation.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// The OCID of the principal who updated the annotation
+        /// The OCID of the principal which updated the annotation.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// The OCID of the record annotated
+        /// The OCID of the record annotated.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string RecordId { get; set; }
         
         /// <value>
-        /// The entity types will be validated against the dataset to ensure consistency.
+        /// The entity types are validated against the dataset to ensure consistency.
         /// </value>
         /// <remarks>
         /// Required
@@ -102,10 +102,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Lifecycle State of an Annotation.
-        /// ACTIVE - Annotation is active to be used for labeling.
-        /// INACTIVE - Annotation has been marked as inactive and should not be used for labeling.
-        /// DELETED - Annotation been deleted and no longer available for labeling.
+        /// The lifecycle state of an annotation.
+        /// ACTIVE - The annotation is active to be used for labeling.
+        /// INACTIVE - The annotation has been marked as inactive and should not be used for labeling.
+        /// DELETED - Tha annotation been deleted and no longer available for labeling.
         /// 
         /// </value>
         ///
@@ -119,10 +119,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         };
 
         /// <value>
-        /// Lifecycle State of an Annotation.
-        /// ACTIVE - Annotation is active to be used for labeling.
-        /// INACTIVE - Annotation has been marked as inactive and should not be used for labeling.
-        /// DELETED - Annotation been deleted and no longer available for labeling.
+        /// The lifecycle state of an annotation.
+        /// ACTIVE - The annotation is active to be used for labeling.
+        /// INACTIVE - The annotation has been marked as inactive and should not be used for labeling.
+        /// DELETED - Tha annotation been deleted and no longer available for labeling.
         /// 
         /// </value>
         /// <remarks>
@@ -134,15 +134,15 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// The defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

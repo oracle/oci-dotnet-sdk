@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// This allows the labeler to use specify a series of coordinates in the image to represent an object and apply labels to it.  The coordinates will be connected in the order that they are provided and the last coordinate in the array will be connected to the first.
+    /// This lets the labeler specify a series of coordinates in the image to represent an object and apply labels to it.  The coordinates are connected in the order that they are provided. The last coordinate in the array is connected to the first coordinate.
     /// </summary>
     public class ImageObjectSelectionEntity : Entity
     {
         
         /// <value>
-        /// Collection of Label entities
+        /// A collection of label entities.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,8 +39,8 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public BoundingPolygon BoundingPolygon { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "extendedMetadata")]
         public System.Collections.Generic.Dictionary<string, string> ExtendedMetadata { get; set; }

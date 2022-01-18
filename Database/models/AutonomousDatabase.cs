@@ -786,6 +786,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
         public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
+        
+        /// <value>
+        /// Indicates if the refreshable clone can be reconnected to its source database.
+        /// </value>
+        [JsonProperty(PropertyName = "isReconnectCloneEnabled")]
+        public System.Nullable<bool> IsReconnectCloneEnabled { get; set; }
+        
+        /// <value>
+        /// The time and date as an RFC3339 formatted string, e.g., 2022-01-01T12:00:00.000Z, to set the limit for a refreshable clone to be reconnected to its source database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeUntilReconnectCloneEnabled")]
+        public System.Nullable<System.DateTime> TimeUntilReconnectCloneEnabled { get; set; }
                 ///
         /// <value>
         /// The maintenance schedule type of the Autonomous Database on shared Exadata infrastructure. The EARLY maintenance schedule of this Autonomous Database

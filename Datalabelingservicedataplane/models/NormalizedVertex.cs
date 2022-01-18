@@ -22,7 +22,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
         
         /// <value>
-        /// X axis coordinate
+        /// The X axis coordinate.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<float> X { get; set; }
         
         /// <value>
-        /// Y axis coordinate
+        /// The Y axis coordinate.
         /// </value>
         /// <remarks>
         /// Required

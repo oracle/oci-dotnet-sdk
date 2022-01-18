@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Results of a record search. Contains both RecordSummary items and other data.
+    /// The results of a record search. It contains RecordSummary items and other data.
     /// </summary>
     public class RecordCollection 
     {
         
         /// <value>
-        /// List of records.
+        /// The list of records.
         /// </value>
         /// <remarks>
         /// Required

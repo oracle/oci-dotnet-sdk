@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Specifies the dataset location in object storage. This requires that all records are in this bucket, and under this prefix. We do not support a dataset with objects in arbitrary locations across buckets or prefixes.
+    /// Specifies the dataset location in object storage. This requires that all records are in this bucket, and under this prefix. A dataset with objects in arbitrary locations across buckets or prefixes is not allowed.
     /// 
     /// </summary>
     public class ObjectStorageDatasetSourceDetails : DatasetSourceDetails
     {
         
         /// <value>
-        /// Namespace of the bucket that contains the dataset data source
+        /// The namespace of the bucket that contains the dataset data source.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// The object storage bucket that contains the dataset data source
+        /// The object storage bucket that contains the dataset data source.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string Bucket { get; set; }
         
         /// <value>
-        /// A common path prefix shared by the objects that make up the dataset.
+        /// A common path prefix shared by the objects that make up the dataset. Records will not be generated for objects whose name match exactly with prefix.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }

@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Dimensions to summarize record information for a given dataset
+    /// The dimensions to summarize record information for a given dataset.
     /// </summary>
     public class RecordAggregationDimensions 
     {
         
         /// <value>
-        /// Whether the record has been labeled and has associated annotations.
+        /// Whether or not the record has been labeled and has associated annotations.
         /// </value>
         [JsonProperty(PropertyName = "isLabeled")]
         public System.Nullable<bool> IsLabeled { get; set; }
         
         /// <value>
-        /// Whether the annotation contains label.
+        /// Whether or not the annotation contains a label.
         /// </value>
         [JsonProperty(PropertyName = "annotationLabelContains")]
         public string AnnotationLabelContains { get; set; }

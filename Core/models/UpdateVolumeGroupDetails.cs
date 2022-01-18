@@ -51,5 +51,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "volumeIds")]
         public System.Collections.Generic.List<string> VolumeIds { get; set; }
         
+        /// <value>
+        /// The list of volume group replicas that this volume group will be updated to have
+        /// in the specified destination availability domains.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "volumeGroupReplicas")]
+        public System.Collections.Generic.List<VolumeGroupReplicaDetails> VolumeGroupReplicas { get; set; }
+        
     }
 }

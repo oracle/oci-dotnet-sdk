@@ -20,7 +20,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
     {
         
         /// <value>
-        /// Unique Dataset OCID
+        /// A unique dataset OCID.
         /// </value>
         /// <remarks>
         /// Required

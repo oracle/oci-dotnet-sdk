@@ -217,6 +217,13 @@ namespace Oci.DatabaseService.Models
         public string ApplyRate { get; set; }
         
         /// <value>
+        /// Indicates whether Automatic Failover is enabled for Autonomous Container Database Dataguard Association
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutomaticFailoverEnabled")]
+        public System.Nullable<bool> IsAutomaticFailoverEnabled { get; set; }
+        
+        /// <value>
         /// The approximate number of seconds of redo data not yet available on the standby Autonomous Container Database,
         /// as computed by the reporting database.
         /// <br/>

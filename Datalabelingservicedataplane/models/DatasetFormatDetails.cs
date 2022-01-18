@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Specifies how to process the data. Supported formats include IMAGE and TEXT.
+    /// It specifies how to process the data. Supported formats include DOCUMENT, IMAGE, and TEXT.
     /// </summary>
     [JsonConverter(typeof(DatasetFormatDetailsModelConverter))]
     public class DatasetFormatDetails 
     {
                 ///
         /// <value>
-        /// Format type. IMAGE format are for record contents that are JPEGs or PNGs. TEXT format is for record contents that are txt files.
+        /// The format type. DOCUMENT format is for record contents that are PDFs or TIFFs. IMAGE format is for record contents that are JPEGs or PNGs. TEXT format is for record contents that are TXT files.
         /// </value>
         ///
         public enum FormatTypeEnum {

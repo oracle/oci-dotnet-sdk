@@ -20,7 +20,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
     {
         
         /// <value>
-        /// The OCID of the record annotated
+        /// The OCID of the record annotated.
         /// </value>
         /// <remarks>
         /// Required

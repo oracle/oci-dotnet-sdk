@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// Results of a annotations search. Contains boh AnnotationSummary items and other information, such as metadata.
+    /// The results of an annotations search. It contains AnnotationSummary items and other information, such as metadata.
     /// </summary>
     public class AnnotationCollection 
     {
         
         /// <value>
-        /// List of annotations.
+        /// The list of annotations.
         /// </value>
         /// <remarks>
         /// Required

@@ -43,7 +43,7 @@ namespace Oci.DatalabelingService.Models
         public string Bucket { get; set; }
         
         /// <value>
-        /// A common path prefix shared by the objects that make up the dataset.
+        /// A common path prefix shared by the objects that make up the dataset. Records will not be generated for objects whose name match exactly with prefix.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// A dataset is a logical collection of records. The dataset contains all the information necessary to describe a record's source, format, type of annotations allowed on these records, and labels allowed on annotations.
+    /// A dataset is a logical collection of records. The dataset contains all the information necessary to describe a record's source, format, the type of annotations allowed for the record, and the labels allowed on annotations.
     /// 
     /// </summary>
     public class Dataset 
     {
         
         /// <value>
-        /// The OCID of the Dataset.
+        /// The OCID of the dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user provided description of the dataset
+        /// A user-provided description of the dataset
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -76,10 +76,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
                 ///
         /// <value>
         /// The state of a dataset.
-        /// CREATING - The dataset is being created.  It will transition to ACTIVE when it is ready for labeling.
+        /// CREATING - The dataset is being created.  It transitions to ACTIVE when it is ready for labeling.
         /// ACTIVE   - The dataset is ready for labeling.
-        /// UPDATING - The dataset is being updated.  It and its related resources may be unavailable for other updates until it returns to ACTIVE.
-        /// NEEDS_ATTENTION - A dataset updation operation has failed due to validation or other errors and needs attention.
+        /// UPDATING - The dataset is being updated.  It, and its related resources, might be unavailable for other updates until it returns to ACTIVE.
+        /// NEEDS_ATTENTION - A dataset updaten operation has failed due to validation or other errors, and needs attention.
         /// DELETING - The dataset and its related resources are being deleted.
         /// DELETED  - The dataset has been deleted and is no longer available.
         /// FAILED   - The dataset has failed due to validation or other errors.
@@ -105,10 +105,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
 
         /// <value>
         /// The state of a dataset.
-        /// CREATING - The dataset is being created.  It will transition to ACTIVE when it is ready for labeling.
+        /// CREATING - The dataset is being created.  It transitions to ACTIVE when it is ready for labeling.
         /// ACTIVE   - The dataset is ready for labeling.
-        /// UPDATING - The dataset is being updated.  It and its related resources may be unavailable for other updates until it returns to ACTIVE.
-        /// NEEDS_ATTENTION - A dataset updation operation has failed due to validation or other errors and needs attention.
+        /// UPDATING - The dataset is being updated.  It, and its related resources, might be unavailable for other updates until it returns to ACTIVE.
+        /// NEEDS_ATTENTION - A dataset updaten operation has failed due to validation or other errors, and needs attention.
         /// DELETING - The dataset and its related resources are being deleted.
         /// DELETED  - The dataset has been deleted and is no longer available.
         /// FAILED   - The dataset has failed due to validation or other errors.
@@ -163,22 +163,28 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public InitialRecordGenerationConfiguration InitialRecordGenerationConfiguration { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// The labeling instructions for human labelers in rich text format
+        /// </value>
+        [JsonProperty(PropertyName = "labelingInstructions")]
+        public string LabelingInstructions { get; set; }
+        
+        /// <value>
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// The defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
-        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// The usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// For Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }

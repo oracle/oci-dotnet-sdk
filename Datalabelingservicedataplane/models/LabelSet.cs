@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// An ordered collection of Labels that are unique by name.
+    /// An ordered collection of labels that are unique by name.
     /// 
     /// </summary>
     public class LabelSet 
     {
         
         /// <value>
-        /// An ordered collection of Labels that are unique by name.
+        /// An ordered collection of labels that are unique by name.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<LabelName> Items { get; set; }

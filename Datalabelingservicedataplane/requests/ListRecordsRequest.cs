@@ -30,7 +30,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Filter results by the OCID of the dataset.
+        /// Filter the results by the OCID of the dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,19 +40,19 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public string DatasetId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Record.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Name of the record
+        /// The name of the record.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Unique OCID identifier
+        /// The unique OCID identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         public System.Nullable<bool> IsLabeled { get; set; }
         
         /// <value>
-        /// Allows the user to filter records based on the related annotations.
+        /// Lets the user filter records based on the related annotations.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "annotationLabelsContains", Oci.Common.Http.CollectionFormatType.Multi)]
@@ -90,7 +90,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for name is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. The default order for name is ascending. If no value is specified, timeCreated is used by default.
         /// 
         /// </value>
         ///
@@ -102,7 +102,7 @@ namespace Oci.DatalabelingservicedataplaneService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for name is ascending. If no value is specified timeCreated is default.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. The default order for name is ascending. If no value is specified, timeCreated is used by default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
