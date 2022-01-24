@@ -107,7 +107,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutomaticFailoverEnabled { get; set; }
         
         /// <value>
-        /// The OCID of the peer cloud Autonomous VM Cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer cloud Autonomous Exadata VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "peerCloudAutonomousVmClusterId")]
         public string PeerCloudAutonomousVmClusterId { get; set; }
@@ -144,7 +144,7 @@ namespace Oci.DatabaseService.Models
         public string AutonomousVmClusterId { get; set; }
         
         /// <value>
-        /// The OCID of the cloud Autonomous VM Cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cloud Autonomous Exadata VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "cloudAutonomousVmClusterId")]
         public string CloudAutonomousVmClusterId { get; set; }

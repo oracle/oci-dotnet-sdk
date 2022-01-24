@@ -189,5 +189,13 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// The Spark application processing type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ApplicationType> Type { get; set; }
+        
     }
 }

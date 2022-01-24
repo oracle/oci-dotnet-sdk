@@ -190,6 +190,9 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Creates a request to copy an object within a region or to another region.
+        /// &lt;br/&gt;
+        /// See [Object Names](https://docs.cloud.oracle.com/Content/Object/Tasks/managingobjects.htm#namerequirements)
+        /// for object naming requirements.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -274,6 +277,9 @@ namespace Oci.ObjectstorageService
 
         /// <summary>
         /// Starts a new multipart upload to a specific object in the given bucket in the given namespace.
+        /// &lt;br/&gt;
+        /// See [Object Names](https://docs.cloud.oracle.com/Content/Object/Tasks/managingobjects.htm#namerequirements)
+        /// for object naming requirements.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1904,7 +1910,7 @@ namespace Oci.ObjectstorageService
         /// Rename an object in the given Object Storage namespace.
         /// &lt;br/&gt;
         /// See [Object Names](https://docs.cloud.oracle.com/Content/Object/Tasks/managingobjects.htm#namerequirements)
-        /// for object naming requirements. 
+        /// for object naming requirements.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

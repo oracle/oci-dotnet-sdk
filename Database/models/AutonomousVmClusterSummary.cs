@@ -166,7 +166,7 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The total data storage allocated in GBs
+        /// The total data storage allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Double DataStorageSizeInGBs { get; set; }

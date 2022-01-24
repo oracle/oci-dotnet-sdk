@@ -182,6 +182,14 @@ namespace Oci.DataflowService.Models
         public string SparkVersion { get; set; }
         
         /// <value>
+        /// The Spark application processing type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ApplicationType> Type { get; set; }
+        
+        /// <value>
         /// An Oracle Cloud Infrastructure URI of the bucket to be used as default warehouse directory
         /// for BATCH SQL runs.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.

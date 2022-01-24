@@ -162,8 +162,8 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
-        /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm), this attribute must be null because the attribute is already set at the
-        /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
+        /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
         /// 
         /// </value>
         ///
@@ -177,8 +177,8 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
-        /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm), this attribute must be null because the attribute is already set at the
-        /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
+        /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
@@ -186,7 +186,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// If set to `TRUE`, indicates that an Autonomous Database preview version is being provisioned, and that the preview version's terms of service have been accepted. Note that preview version software is only available for databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI).
+        /// If set to `TRUE`, indicates that an Autonomous Database preview version is being provisioned, and that the preview version's terms of service have been accepted. Note that preview version software is only available for databases on [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPreviewVersionWithServiceTermsAccepted")]
@@ -200,7 +200,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
         
         /// <value>
-        /// True if the database is on [dedicated Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adbddoverview.htm).
+        /// True if the database is on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDedicated")]
@@ -226,7 +226,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAccessControlEnabled { get; set; }
         
         /// <value>
-        /// The client IP access control list (ACL). This feature is available for autonomous databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI) and on Exadata Cloud@Customer.
+        /// The client IP access control list (ACL). This feature is available for autonomous databases on [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
         /// <br/>
         /// For shared Exadata infrastructure, this is an array of CIDR (Classless Inter-Domain Routing) notations for a subnet or VCN OCID.
@@ -246,7 +246,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> ArePrimaryWhitelistedIpsUsed { get; set; }
         
         /// <value>
-        /// The client IP access control list (ACL). This feature is available for autonomous databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI) and on Exadata Cloud@Customer.
+        /// The client IP access control list (ACL). This feature is available for autonomous databases on [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
         /// <br/>
         /// For shared Exadata infrastructure, this is an array of CIDR (Classless Inter-Domain Routing) notations for a subnet or VCN OCID.
@@ -257,7 +257,9 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> StandbyWhitelistedIps { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has Data Guard enabled.
+        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to 
+        /// Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
@@ -317,9 +319,9 @@ namespace Oci.DatabaseService.Models
         public string DbVersion { get; set; }
                 ///
         /// <value>
-        /// The source of the database: Use `NONE` for creating a new Autonomous Database. Use `DATABASE` for creating a new Autonomous Database by cloning an existing Autonomous Database.
+        /// The source of the database: Use `NONE` for creating a new Autonomous Database. Use `DATABASE` for creating a new Autonomous Database by cloning an existing Autonomous Database. Use `CROSS_REGION_DATAGUARD` to create a standby Data Guard database in another region.
         /// <br/>
-        /// For Autonomous Databases on [shared Exadata infrastructure](https://docs.cloud.oracle.com/Content/Database/Concepts/adboverview.htm#AEI), the following cloning options are available: Use `BACKUP_FROM_ID` for creating a new Autonomous Database from a specified backup. Use `BACKUP_FROM_TIMESTAMP` for creating a point-in-time Autonomous Database clone using backups. For more information, see [Cloning an Autonomous Database](https://docs.cloud.oracle.com/Content/Database/Tasks/adbcloning.htm).
+        /// For Autonomous Databases on [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), the following cloning options are available: Use `BACKUP_FROM_ID` for creating a new Autonomous Database from a specified backup. Use `BACKUP_FROM_TIMESTAMP` for creating a point-in-time Autonomous Database clone using backups. For more information, see [Cloning and Moving an Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/clone-autonomous-database.html#GUID-D771796F-5081-4CFB-A7FF-0F893EABD7BC).
         /// 
         /// </value>
         ///
