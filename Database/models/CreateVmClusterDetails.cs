@@ -64,7 +64,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCount { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to enable for the VM cluster. Only 1 decimal place is allowed for the fractional part.
+        /// The number of OCPU cores to enable for the VM cluster. Only one decimal place is allowed for the fractional part.
         /// </value>
         [JsonProperty(PropertyName = "ocpuCount")]
         public System.Nullable<float> OcpuCount { get; set; }

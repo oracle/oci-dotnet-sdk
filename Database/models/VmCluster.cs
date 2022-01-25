@@ -149,7 +149,7 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// Size, in gigabytes, of the DATA disk group.
+        /// Size of the DATA disk group in GBs.
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Double DataStorageSizeInGBs { get; set; }

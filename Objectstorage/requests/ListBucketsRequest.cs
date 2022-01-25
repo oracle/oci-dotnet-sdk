@@ -59,8 +59,7 @@ namespace Oci.ObjectstorageService.Requests
         ///
         /// <value>
         /// Bucket summary in list of buckets includes the 'namespace', 'name', 'compartmentId', 'createdBy', 'timeCreated',
-        /// and 'etag' fields. This parameter can also include 'tags' (freeformTags and definedTags). The only supported value
-        /// of this parameter is 'tags' for now. Example 'tags'.
+        /// and 'etag' fields. This parameter can also include 'tags' (freeformTags and definedTags). The only supported value of this parameter is 'tags' for now. Example 'tags'.
         /// 
         /// </value>
         ///
@@ -71,8 +70,7 @@ namespace Oci.ObjectstorageService.Requests
 
         /// <value>
         /// Bucket summary in list of buckets includes the 'namespace', 'name', 'compartmentId', 'createdBy', 'timeCreated',
-        /// and 'etag' fields. This parameter can also include 'tags' (freeformTags and definedTags). The only supported value
-        /// of this parameter is 'tags' for now. Example 'tags'.
+        /// and 'etag' fields. This parameter can also include 'tags' (freeformTags and definedTags). The only supported value of this parameter is 'tags' for now. Example 'tags'.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fields", Oci.Common.Http.CollectionFormatType.Csv)]

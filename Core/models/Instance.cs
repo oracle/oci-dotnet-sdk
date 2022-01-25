@@ -158,7 +158,7 @@ namespace Oci.CoreService.Models
         /// following iSCSI IP address: 169.254.0.2, and boot volume IQN:
         /// iqn.2015-02.oracle.boot.
         /// <br/>
-        /// If your instance boot volume type is paravirtualized, 
+        /// If your instance boot volume type is paravirtualized,
         /// the boot volume is attached to the instance through virtio-scsi and no iPXE script is used.
         /// If your instance boot volume type is paravirtualized
         /// and you use custom iPXE to network boot into your instance,

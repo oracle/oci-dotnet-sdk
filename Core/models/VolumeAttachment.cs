@@ -154,18 +154,19 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Whether in-transit encryption for the data volume's paravirtualized attachment is enabled or not.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
         
         /// <value>
-        /// Whether the attachment is multipath or not.
+        /// Whether the Iscsi or Paravirtualized attachment is multipath or not, it is not applicable to NVMe attachment.
         /// </value>
         [JsonProperty(PropertyName = "isMultipath")]
         public System.Nullable<bool> IsMultipath { get; set; }
                 ///
         /// <value>
-        /// The iscsi login state of the volume attachment. For a multipath volume attachment,
+        /// The iscsi login state of the volume attachment. For a Iscsi volume attachment,
         /// all iscsi sessions need to be all logged-in or logged-out to be in logged-in or logged-out state.
         /// 
         /// </value>
@@ -188,7 +189,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The iscsi login state of the volume attachment. For a multipath volume attachment,
+        /// The iscsi login state of the volume attachment. For a Iscsi volume attachment,
         /// all iscsi sessions need to be all logged-in or logged-out to be in logged-in or logged-out state.
         /// 
         /// </value>

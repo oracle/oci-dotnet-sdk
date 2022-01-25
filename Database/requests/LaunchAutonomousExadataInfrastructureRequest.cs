@@ -20,7 +20,8 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to create an Autonomous Exadata Infrastructure resource.
+        /// **Deprecated.** Use the {@link #createCloudExadataInfrastructure(CreateCloudExadataInfrastructureRequest) createCloudExadataInfrastructure} or {@link #createCloudAutonomousVmCluster(CreateCloudAutonomousVmClusterRequest) createCloudAutonomousVmCluster} operations instead.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

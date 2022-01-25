@@ -125,6 +125,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// Whether in-transit encryption for the boot volume's paravirtualized attachment is enabled or not.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }

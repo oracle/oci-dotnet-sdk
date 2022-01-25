@@ -28,6 +28,10 @@ namespace Oci.DataflowService.Models
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "SUCCEEDED")]
-      Succeeded
+      Succeeded,
+      [EnumMember(Value = "STOPPING")]
+      Stopping,
+      [EnumMember(Value = "STOPPED")]
+      Stopped
   }
 }

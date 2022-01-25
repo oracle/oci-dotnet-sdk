@@ -63,5 +63,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance configuration associated with the instance pool.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "instanceConfigurationId")]
+        public string InstanceConfigurationId { get; set; }
+        
     }
 }
