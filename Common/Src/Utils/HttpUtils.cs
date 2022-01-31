@@ -7,10 +7,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Threading.Tasks;
 using Oci.Common.Http;
 
 namespace Oci.Common.Utils
@@ -142,13 +144,26 @@ namespace Oci.Common.Utils
         /// <summary>Make a copy of HttpRequestMessage.</summary>
         /// <param name="request">The source HttpRequestMessage</param>
         /// <returns>A cloned copy of HttpRequestMessage with exactly the same headers and content.</returns>
-        public static HttpRequestMessage CloneHttpRequestMessage(HttpRequestMessage request)
+        public static async Task<HttpRequestMessage> CloneHttpRequestMessage(HttpRequestMessage request)
         {
             var clone = new HttpRequestMessage(request.Method, request.RequestUri);
 
             if (request.Content != null)
             {
-                clone.Content = request.Content;
+                // Copy the request's content (via a MemoryStream) into the cloned object
+                var ms = new MemoryStream();
+                await request.Content.CopyToAsync(ms).ConfigureAwait(false);
+                ms.Position = 0;
+                clone.Content = new StreamContent(ms);
+
+                // Copy the content headers
+                if (request.Content.Headers != null)
+                {
+                    foreach (var header in request.Content.Headers)
+                    {
+                        clone.Content.Headers.Add(header.Key, header.Value);
+                    }
+                }
             }
 
             foreach (var header in request.Headers)

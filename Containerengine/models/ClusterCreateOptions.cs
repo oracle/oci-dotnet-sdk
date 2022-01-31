@@ -45,5 +45,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "admissionControllerOptions")]
         public AdmissionControllerOptions AdmissionControllerOptions { get; set; }
         
+        [JsonProperty(PropertyName = "persistentVolumeConfig")]
+        public PersistentVolumeConfigDetails PersistentVolumeConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "serviceLbConfig")]
+        public ServiceLbConfigDetails ServiceLbConfig { get; set; }
+        
     }
 }

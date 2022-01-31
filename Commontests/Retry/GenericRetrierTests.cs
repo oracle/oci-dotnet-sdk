@@ -4,9 +4,12 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Moq;
@@ -66,6 +69,45 @@ namespace Oci.Common.Retry
 
             // Verify if httpMethod has been invoked only once.
             mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public async void TestRequestContentDisposed()
+        {
+            var retrier = new GenericRetrier(new RetryConfiguration
+            {
+                RetryableStatusCodeFamilies = new List<int>(new int[] { 1, 2, 3, 4, 5 }),
+                MaxAttempts = 3,
+            });
+            var mockCallHttpMethod = new Mock<Func<HttpRequestMessage, HttpCompletionOption, CancellationToken, Task<HttpResponseMessage>>>();
+            mockCallHttpMethod.Setup(httpMethod => httpMethod(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((HttpRequestMessage requestMessage, HttpCompletionOption completionOption, CancellationToken cancellationToken) =>
+                {
+                    using var ms = requestMessage.Content.ReadAsStreamAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+                    using var streamReader = new StreamReader(ms);
+                    var contentString = streamReader.ReadToEnd();
+                    return new HttpResponseMessage()
+                    {
+                        StatusCode = System.Net.HttpStatusCode.BadRequest,
+                        Content = ContentHelper.CreateHttpContent(new ErrorCodeAndMessage("Bad Request", "Some Error"))
+                    };
+                });
+
+            var requestMessage = new HttpRequestMessage
+            {
+                Content = new StreamContent(new MemoryStream(Encoding.ASCII.GetBytes("Test Data")))
+            };
+
+            await retrier.MakeRetryingCall(
+                mockCallHttpMethod.Object,
+                requestMessage,
+                    default,
+                    default);
+
+            // Verify if httpMethod has been invoked as requested by Retry Configuration.
+            mockCallHttpMethod.Verify(mock => mock.Invoke(It.IsAny<HttpRequestMessage>(), It.IsAny<HttpCompletionOption>(), It.IsAny<CancellationToken>()), Times.Exactly(4));
         }
 
         [Theory]

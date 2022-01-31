@@ -248,7 +248,7 @@ namespace Oci.Common.Auth.Internal
                     // A new copy of the request message needs to be created because it is disposed each time it is sent, and
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
-                    var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequestMsg);
+                    var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequestMsg).GetAwaiter().GetResult();
                     response = Client.SendAsync(newRequestMessage).Result;
                     if (response.IsSuccessStatusCode)
                     {

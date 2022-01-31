@@ -40,6 +40,12 @@ namespace Oci.MarketplaceService.Models
         public string ShortDescription { get; set; }
         
         /// <value>
+        /// True if this application is Rover exportable
+        /// </value>
+        [JsonProperty(PropertyName = "isRoverExportable")]
+        public System.Nullable<bool> IsRoverExportable { get; set; }
+        
+        /// <value>
         /// The tagline of the listing.
         /// </value>
         [JsonProperty(PropertyName = "tagline")]

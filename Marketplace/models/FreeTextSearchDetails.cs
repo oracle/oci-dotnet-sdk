@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// The model for a request that uses Search's Free text.
+    /// A request containing arbitrary text that must be present in the Marketplace Applications.
+    /// 
     /// </summary>
     public class FreeTextSearchDetails : SearchListingsDetails
     {
