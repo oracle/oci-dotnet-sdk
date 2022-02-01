@@ -63,5 +63,8 @@ namespace Oci.Common
 
         // OC9
         public static readonly Region ME_DCC_MUSCAT_1 = Register("me-dcc-muscat-1", Realm.OC9, "mct");
+
+        // OC10
+        public static readonly Region AP_DCC_CANBERRA_1 = Register("ap-dcc-canberra-1", Realm.OC10, "wga");
     }
 }

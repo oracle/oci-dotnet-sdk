@@ -1018,8 +1018,8 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
-        /// Find listings that match the specified criteria. The search query could be free text
-        /// or structured.
+        /// Queries all Marketplace Applications to find listings that match the specified criteria. To search 
+        /// for a listing, you can use a free text or structured search.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

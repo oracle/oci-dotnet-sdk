@@ -201,6 +201,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Osuborganizat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Osubbillingschedule", "Osubbillingschedule\OCI.DotNetSDK.Osubbillingschedule.csproj", "{0B9A442A-E0FA-4133-9CFD-2C7D6CC44E3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dashboardservice", "Dashboardservice\OCI.DotNetSDK.Dashboardservice.csproj", "{6EC67887-2D80-4845-AB13-DEA340798634}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1993,5 +1995,17 @@ Global
         {0B9A442A-E0FA-4133-9CFD-2C7D6CC44E3D}.Release|x64.Build.0 = Release|Any CPU
         {0B9A442A-E0FA-4133-9CFD-2C7D6CC44E3D}.Release|x86.ActiveCfg = Release|Any CPU
         {0B9A442A-E0FA-4133-9CFD-2C7D6CC44E3D}.Release|x86.Build.0 = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|x64.Build.0 = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Debug|x86.Build.0 = Debug|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|Any CPU.Build.0 = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|x64.ActiveCfg = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|x64.Build.0 = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|x86.ActiveCfg = Release|Any CPU
+        {6EC67887-2D80-4845-AB13-DEA340798634}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

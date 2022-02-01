@@ -736,7 +736,8 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
-        /// The list of regions that support the creation of Autonomous Data Guard standby database.
+        /// The list of regions that support the creation of an Autonomous Database clone or an Autonomous Data Guard standby database.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "supportedRegionsToCloneTo")]
         public System.Collections.Generic.List<string> SupportedRegionsToCloneTo { get; set; }

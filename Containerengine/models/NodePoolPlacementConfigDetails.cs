@@ -42,5 +42,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         
+        /// <value>
+        /// The OCID of the compute capacity reservation in which to place the compute instance.
+        /// </value>
+        [JsonProperty(PropertyName = "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
+        
     }
 }

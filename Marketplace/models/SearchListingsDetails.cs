@@ -16,7 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.MarketplaceService.Models
 {
     /// <summary>
-    /// The base model for a Search Listings details.
+    /// A base request type that contains common criteria for Marketplace Search Listings details.
+    /// 
     /// </summary>
     [JsonConverter(typeof(SearchListingsDetailsModelConverter))]
     public class SearchListingsDetails 
@@ -24,7 +25,8 @@ namespace Oci.MarketplaceService.Models
         
         
         /// <value>
-        /// The type of matching context returned in the response.
+        /// The type of matching context returned in the response. If you specify HIGHLIGHTS, then the service will highlight fragments in its response. The default value is NONE.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "matchingContextType")]
         [JsonConverter(typeof(StringEnumConverter))]
