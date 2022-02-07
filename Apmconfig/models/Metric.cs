@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A metric. This a quantitative measurement of an entity.
+    /// A metric is a quantitative measurement of an entity.
     /// 
     /// </summary>
     public class Metric 
     {
         
         /// <value>
-        /// The name of the metric
+        /// The name of the metric. This must be a known metric name.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,19 +33,19 @@ namespace Oci.ApmconfigService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Must be NULL at the moment, and \"name\" must be a known metric.
+        /// This must not be set.
         /// </value>
         [JsonProperty(PropertyName = "valueSource")]
         public string ValueSource { get; set; }
         
         /// <value>
-        /// The unit of the metric
+        /// The unit of the metric.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
         public string Unit { get; set; }
         
         /// <value>
-        /// A description of the metric
+        /// A description of the metric.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

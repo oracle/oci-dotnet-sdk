@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Statistics of statements and findings for the SQL Tuning Advisor summary report.
+    /// The statistics of the statements and findings in the SQL Tuning Advisor summary report.
     /// </summary>
     public class SqlTuningAdvisorTaskSummaryReportStatistics 
     {

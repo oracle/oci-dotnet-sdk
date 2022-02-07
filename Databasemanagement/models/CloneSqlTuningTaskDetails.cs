@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Request to clone and run a SQL tuning task. The new task uses same inputs as the one being cloned.
+    /// The request to clone and run a SQL tuning task. The new task uses the same inputs as the one being cloned.
     /// </summary>
     public class CloneSqlTuningTaskDetails 
     {
         
         /// <value>
-        /// The name of the SQL tuning task. The name is unique per user in a database, and it is case sensitive.
+        /// The name of the SQL tuning task. The name is unique per user in a database, and it is case-sensitive.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,9 +32,9 @@ namespace Oci.DatabasemanagementService.Models
         public string TaskName { get; set; }
         
         /// <value>
-        /// The identifier of the task being cloned. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The identifier of the SQL tuning task being cloned. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// It can be retrieved from the following endpoint
-        /// {@link #listSqlTuningAdvisorTasks(ListSqlTuningAdvisorTasksRequest) listSqlTuningAdvisorTasks}
+        /// {@link #listSqlTuningAdvisorTasks(ListSqlTuningAdvisorTasksRequest) listSqlTuningAdvisorTasks}.
         /// 
         /// </value>
         /// <remarks>

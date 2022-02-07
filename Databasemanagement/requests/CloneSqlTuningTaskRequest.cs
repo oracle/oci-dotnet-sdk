@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ManagedDatabaseId { get; set; }
         
         /// <value>
-        /// Detail inputs for cloning a SQL tuning task
+        /// The detailed inputs required to clone a SQL tuning task.
         /// </value>
         /// <remarks>
         /// Required

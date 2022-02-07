@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The finding benefits data for the SQL Tuning Advisor summary report.
+    /// The benefits of the findings in the SQL Tuning Advisor summary report.
     /// </summary>
     public class SqlTuningAdvisorTaskSummaryFindingBenefits 
     {
         
         /// <value>
-        /// The count of Potential database time before SQL recommendations are implemented.
+        /// The actual database time of the SQL statements for which SQL Tuning Advisor recommendations are not implemented.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> DbTimeBeforeRecommended { get; set; }
         
         /// <value>
-        /// The count of Potential database time after SQL recommendations are implemented.
+        /// The estimated database time of the above SQL statements, if SQL Tuning Advisor recommendations are implemented.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,17 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> DbTimeAfterRecommended { get; set; }
         
         /// <value>
-        /// The count of database time benefit before SQL recommendations are implemented.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DbTimeBeforeImplemented is required.")]
-        [JsonProperty(PropertyName = "dbTimeBeforeImplemented")]
-        public System.Nullable<int> DbTimeBeforeImplemented { get; set; }
-        
-        /// <value>
-        /// The count of database time benefit after SQL recommendations are implemented.
+        /// The actual database time of the SQL statements for which SQL Tuning Advisor recommendations are implemented.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,6 +50,16 @@ namespace Oci.DatabasemanagementService.Models
         [Required(ErrorMessage = "DbTimeAfterImplemented is required.")]
         [JsonProperty(PropertyName = "dbTimeAfterImplemented")]
         public System.Nullable<int> DbTimeAfterImplemented { get; set; }
+        
+        /// <value>
+        /// The actual database time of the above SQL statements, before SQL Tuning Advisor recommendations are implemented.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DbTimeBeforeImplemented is required.")]
+        [JsonProperty(PropertyName = "dbTimeBeforeImplemented")]
+        public System.Nullable<int> DbTimeBeforeImplemented { get; set; }
         
     }
 }

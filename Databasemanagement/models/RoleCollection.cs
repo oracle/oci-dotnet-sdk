@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of Roles granted to the current User.
+    /// A collection of roles granted to the current User.
     /// </summary>
     public class RoleCollection 
     {
         
         /// <value>
-        /// An array of User resources.
+        /// An array of roles.
         /// </value>
         /// <remarks>
         /// Required

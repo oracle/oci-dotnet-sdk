@@ -1708,6 +1708,46 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// List fast launch capable job configs in the specified compartment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ListFastLaunchJobConfigs.cs.html">here</a> to see an example of how to use ListFastLaunchJobConfigs API.</example>
+        public async Task<ListFastLaunchJobConfigsResponse> ListFastLaunchJobConfigs(ListFastLaunchJobConfigsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listFastLaunchJobConfigs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fastLaunchJobConfigs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListFastLaunchJobConfigsResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListFastLaunchJobConfigs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// List out job runs.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2310,7 +2350,7 @@ namespace Oci.DatascienceService
 
         /// <summary>
         /// Updates the properties of a model deployment. Some of the properties of &#x60;modelDeploymentConfigurationDetails&#x60; or &#x60;CategoryLogDetails&#x60; can also be updated with zero down time
-        /// when the model deployment\u2019s lifecycle state is ACTIVE or NEEDS_ATTENTION i.e &#x60;instanceShapeName&#x60;, &#x60;instanceCount&#x60; and &#x60;modelId&#x60;, separately &#x60;loadBalancerShape&#x60; or &#x60;CategoryLogDetails&#x60;
+        /// when the model deployment&#39;s lifecycle state is ACTIVE or NEEDS_ATTENTION i.e &#x60;instanceShapeName&#x60;, &#x60;instanceCount&#x60; and &#x60;modelId&#x60;, separately &#x60;loadBalancerShape&#x60; or &#x60;CategoryLogDetails&#x60;
         /// can also be updated independently. All of the fields can be updated when the deployment is in the INACTIVE lifecycle state. Changes will take effect the next time the model
         /// deployment is activated.
         /// 

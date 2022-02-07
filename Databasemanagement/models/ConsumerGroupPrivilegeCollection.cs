@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of ConsumerGroupPrivileges granted to the current User.
+    /// A collection of consumer group privileges granted to the current user.
     /// </summary>
     public class ConsumerGroupPrivilegeCollection 
     {
         
         /// <value>
-        /// An array of User resources.
+        /// An array of consumer group privileges.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Summary of ContainerDataAccess user
+    /// A summary of the ContainerDataAccess user.
     /// </summary>
     public class DataAccessContainerSummary 
     {
         
         /// <value>
-        /// The name of a container included in this attribute if it does not apply to all containers.
+        /// The name of the container included in the attribute.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

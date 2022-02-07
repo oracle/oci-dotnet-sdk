@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A SQL execution plan as a list of steps
+        /// A SQL execution plan as a list of steps.
         /// </value>
         /// <remarks>
         /// Required

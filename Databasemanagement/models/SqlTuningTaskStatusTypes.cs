@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// The status types of a SQL tuning advisor task.
+  /// The status types of a SQL Tuning Advisor task.
   /// </summary>
   public enum SqlTuningTaskStatusTypes {
       [EnumMember(Value = "COMPLETED")]

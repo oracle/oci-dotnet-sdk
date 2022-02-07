@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of ObjectPrivileges granted to the current User.
+    /// A collection of object privileges granted to the current user.
     /// </summary>
     public class ObjectPrivilegeCollection 
     {
         
         /// <value>
-        /// An array of User resources.
+        /// An array of object privileges.
         /// </value>
         /// <remarks>
         /// Required

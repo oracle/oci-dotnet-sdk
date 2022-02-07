@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Summary of objectPrivileges.
+    /// A summary of object privileges.
     /// </summary>
     public class ObjectPrivilegeSummary 
     {
@@ -28,7 +28,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The type of the object.
+        /// The type of object.
         /// </value>
         [JsonProperty(PropertyName = "schemaType")]
         public string SchemaType { get; set; }
@@ -40,13 +40,13 @@ namespace Oci.DatabasemanagementService.Models
         public string Owner { get; set; }
         
         /// <value>
-        /// The name of the user who performed the grant
+        /// The name of the user who granted the object privilege.
         /// </value>
         [JsonProperty(PropertyName = "grantor")]
         public string Grantor { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the privilege was granted with the HIERARCHY OPTION (YES) or not (NO)
+        /// Indicates whether the privilege is granted with the HIERARCHY OPTION (YES) or not (NO).
         /// </value>
         ///
         public enum HierarchyEnum {
@@ -57,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the privilege was granted with the HIERARCHY OPTION (YES) or not (NO)
+        /// Indicates whether the privilege is granted with the HIERARCHY OPTION (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "hierarchy")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -70,7 +70,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Object { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the privilege was granted with the GRANT OPTION (YES) or not (NO)
+        /// Indicates whether the privilege is granted with the GRANT OPTION (YES) or not (NO).
         /// </value>
         ///
         public enum GrantOptionEnum {
@@ -81,16 +81,16 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the privilege was granted with the GRANT OPTION (YES) or not (NO)
+        /// Indicates whether the privilege is granted with the GRANT OPTION (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "grantOption")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GrantOptionEnum> GrantOption { get; set; }
                 ///
         /// <value>
-        /// Indicates how the grant was made. Possible values:
-        /// YES if the role was granted commonly (CONTAINER=ALL was used)
-        /// NO if the role was granted locally (CONTAINER=ALL was not used)
+        /// Indicates how the object privilege was granted. Possible values:
+        /// YES if the role is granted commonly (CONTAINER=ALL is used)
+        /// NO if the role is granted locally (CONTAINER=ALL is not used)
         /// 
         /// </value>
         ///
@@ -102,9 +102,9 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates how the grant was made. Possible values:
-        /// YES if the role was granted commonly (CONTAINER=ALL was used)
-        /// NO if the role was granted locally (CONTAINER=ALL was not used)
+        /// Indicates how the object privilege was granted. Possible values:
+        /// YES if the role is granted commonly (CONTAINER=ALL is used)
+        /// NO if the role is granted locally (CONTAINER=ALL is not used)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "common")]
@@ -112,7 +112,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<CommonEnum> Common { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the role grant was inherited from another container (YES) or not (NO)
+        /// Indicates whether the granted privilege is inherited from another container (YES) or not (NO).
         /// </value>
         ///
         public enum InheritedEnum {
@@ -123,7 +123,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the role grant was inherited from another container (YES) or not (NO)
+        /// Indicates whether the granted privilege is inherited from another container (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "inherited")]
         [JsonConverter(typeof(StringEnumConverter))]

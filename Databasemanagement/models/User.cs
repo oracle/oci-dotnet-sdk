@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The account status of the User
+        /// The status of the user account.
         /// </value>
         ///
         public enum StatusEnum {
@@ -69,7 +69,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The account status of the User
+        /// The status of the user account.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,7 +86,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeLocked { get; set; }
         
         /// <value>
-        /// The date of expiration of the account
+        /// The date and time of the expiration of the user account.
         /// </value>
         [JsonProperty(PropertyName = "timeExpiring")]
         public System.Nullable<System.DateTime> TimeExpiring { get; set; }
@@ -112,13 +112,13 @@ namespace Oci.DatabasemanagementService.Models
         public string TempTablespace { get; set; }
         
         /// <value>
-        /// The default local temporary tablespace for the User.
+        /// The default local temporary tablespace for the user.
         /// </value>
         [JsonProperty(PropertyName = "localTempTablespace")]
         public string LocalTempTablespace { get; set; }
         
         /// <value>
-        /// The User creation date.
+        /// The date and time the user was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -144,19 +144,19 @@ namespace Oci.DatabasemanagementService.Models
         public string ConsumerGroup { get; set; }
         
         /// <value>
-        /// The external name of User.
+        /// The external name of the user.
         /// </value>
         [JsonProperty(PropertyName = "externalName")]
         public string ExternalName { get; set; }
         
         /// <value>
-        /// The list of versions of the password hashes (also known as \"verifiers\") existing for the account.
+        /// The list of existing versions of the password hashes (also known as \"verifiers\") for the account.
         /// </value>
         [JsonProperty(PropertyName = "passwordVersions")]
         public string PasswordVersions { get; set; }
                 ///
         /// <value>
-        /// Indicates whether editions have been enabled for the corresponding user (Y) or not (N)
+        /// Indicates whether editions have been enabled for the corresponding user (Y) or not (N).
         /// </value>
         ///
         public enum EditionsEnabledEnum {
@@ -167,14 +167,14 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether editions have been enabled for the corresponding user (Y) or not (N)
+        /// Indicates whether editions have been enabled for the corresponding user (Y) or not (N).
         /// </value>
         [JsonProperty(PropertyName = "editionsEnabled")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EditionsEnabledEnum> EditionsEnabled { get; set; }
                 ///
         /// <value>
-        /// The authentication mechanism for the user
+        /// The authentication mechanism for the user.
         /// </value>
         ///
         public enum AuthenticationEnum {
@@ -189,7 +189,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The authentication mechanism for the user
+        /// The authentication mechanism for the user.
         /// </value>
         [JsonProperty(PropertyName = "authentication")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -236,7 +236,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<CommonEnum> Common { get; set; }
         
         /// <value>
-        /// The time of the last user login.
+        /// The date and time of the last user login.
         /// This column is not populated when a user connects to the database with administrative privileges, that is, AS { SYSASM | SYSBACKUP | SYSDBA | SYSDG | SYSOPER | SYSRAC | SYSKM }.
         /// 
         /// </value>
@@ -244,7 +244,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeLastLogin { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the user was created, and is maintained, by Oracle-supplied scripts (such as catalog.sql or catproc.sql).
+        /// Indicates whether the user was created and is maintained by Oracle-supplied scripts (such as catalog.sql or catproc.sql).
         /// </value>
         ///
         public enum OracleMaintainedEnum {
@@ -255,14 +255,14 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the user was created, and is maintained, by Oracle-supplied scripts (such as catalog.sql or catproc.sql).
+        /// Indicates whether the user was created and is maintained by Oracle-supplied scripts (such as catalog.sql or catproc.sql).
         /// </value>
         [JsonProperty(PropertyName = "oracleMaintained")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OracleMaintainedEnum> OracleMaintained { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the user definition was inherited from another container (YES) or not (NO)
+        /// Indicates whether the user definition is inherited from another container (YES) or not (NO).
         /// </value>
         ///
         public enum InheritedEnum {
@@ -273,20 +273,20 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the user definition was inherited from another container (YES) or not (NO)
+        /// Indicates whether the user definition is inherited from another container (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "inherited")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<InheritedEnum> Inherited { get; set; }
         
         /// <value>
-        /// The default collation for the user\u2019s schema.
+        /// The default collation for the user schema.
         /// </value>
         [JsonProperty(PropertyName = "defaultCollation")]
         public string DefaultCollation { get; set; }
                 ///
         /// <value>
-        /// Indicates whether this user is a common user created by an implicit application (YES) or not (NO)
+        /// Indicates whether the user is a common user created by an implicit application (YES) or not (NO).
         /// </value>
         ///
         public enum ImplicitEnum {
@@ -297,14 +297,14 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether this user is a common user created by an implicit application (YES) or not (NO)
+        /// Indicates whether the user is a common user created by an implicit application (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "implicit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ImplicitEnum> Implicit { get; set; }
                 ///
         /// <value>
-        /// In a sharded database, the value in this column indicates whether the user was created with shard DDL enabled.
+        /// In a sharded database, indicates whether the user is created with shard DDL enabled (YES) or not (NO).
         /// </value>
         ///
         public enum AllSharedEnum {
@@ -315,7 +315,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// In a sharded database, the value in this column indicates whether the user was created with shard DDL enabled.
+        /// In a sharded database, indicates whether the user is created with shard DDL enabled (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "allShared")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -340,7 +340,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<ExternalSharedEnum> ExternalShared { get; set; }
         
         /// <value>
-        /// The date on which the user's password was last set.
+        /// The date and time when the user password was last set.
         /// This column is populated only when the value of the AUTHENTICATION_TYPE column is PASSWORD. Otherwise, this column is null.
         /// 
         /// </value>

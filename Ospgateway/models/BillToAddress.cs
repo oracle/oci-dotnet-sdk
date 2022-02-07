@@ -18,7 +18,7 @@ namespace Oci.OspgatewayService.Models
     /// <summary>
     /// Address details model
     /// </summary>
-    public class Address 
+    public class BillToAddress 
     {
         
         /// <value>

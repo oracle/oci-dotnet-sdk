@@ -40,7 +40,7 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<long> SqlTuningAdvisorTaskId { get; set; }
         
         /// <value>
-        /// The SQL object id for the SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The SQL object ID for the SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<long> SqlObjectId { get; set; }
         
         /// <value>
-        /// The execution id for an execution of a SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The execution ID for an execution of a SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>

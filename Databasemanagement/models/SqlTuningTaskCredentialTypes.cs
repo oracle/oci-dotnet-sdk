@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// The types of credential that can be used to connect to database.
+  /// The types of credentials that can be used to connect to the database.
   /// </summary>
   public enum SqlTuningTaskCredentialTypes {
       [EnumMember(Value = "SECRET")]

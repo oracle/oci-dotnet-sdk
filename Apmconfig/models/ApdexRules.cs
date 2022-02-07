@@ -17,14 +17,14 @@ namespace Oci.ApmconfigService.Models
 {
     /// <summary>
     /// The set of Apdex rules to be used in Apdex computation. In the current version, only one rule set can exist in the
-    /// configuration. This may change in the future.
+    /// configuration.
     /// 
     /// </summary>
     public class ApdexRules : Config
     {
         
         /// <value>
-        /// The name by which this rule set can be displayed to the user.
+        /// The name by which the rule set is displayed to the end user.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -63,7 +63,7 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
-        /// Creates a new Configuration item.
+        /// Creates a new configuration item.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -103,7 +103,7 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
-        /// Deletes the specified configuration item
+        /// Deletes the configuration item identified by the OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -143,7 +143,7 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
-        /// Get the configuration of the item identified by the OCID.
+        /// Gets the configuration item identified by the OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -183,7 +183,7 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
-        /// Returns all configured items optionally filtered by configuration type
+        /// Returns all configuration items, which can optionally be filtered by configuration type.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -223,7 +223,7 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
-        /// Updates the item.
+        /// Updates the details of the configuration item identified by the OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

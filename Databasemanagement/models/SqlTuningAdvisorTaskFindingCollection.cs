@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The SQL Tuning Advisor task finding list.
+    /// The list of findings for a SQL Tuning Advisor task.
     /// </summary>
     public class SqlTuningAdvisorTaskFindingCollection 
     {

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A configuration item. This item has a number of mutually exclusive properties that can be used to set specific
+    /// A configuration item, which has a number of mutually exclusive properties that can be used to set specific
     /// portions of the configuration.
     /// 
     /// </summary>
@@ -25,7 +25,7 @@ namespace Oci.ApmconfigService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration item. An OCID will be generated
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration item. An OCID is generated
         /// when the item is created.
         /// 
         /// </value>

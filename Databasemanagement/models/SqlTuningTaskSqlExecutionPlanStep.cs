@@ -16,71 +16,71 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A step of a SQL execution plan.
+    /// A step in the SQL execution plan.
     /// </summary>
     public class SqlTuningTaskSqlExecutionPlanStep 
     {
         
         /// <value>
-        /// Numerical representation of the execution plan
+        /// The numerical representation of the SQL execution plan.
         /// </value>
         [JsonProperty(PropertyName = "planHashValue")]
         public System.Nullable<long> PlanHashValue { get; set; }
         
         /// <value>
-        /// Identification number for this step in the execution plan. It is unique within the execution plan.
-        /// It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The identification number of a step in the SQL execution plan. This is unique within the SQL execution plan.
+        /// This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "stepId")]
         public System.Nullable<int> StepId { get; set; }
         
         /// <value>
-        /// ID of the next step that operates on the results of this step.
-        /// It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The ID of the next step that operates on the results of this step.
+        /// This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parentStepId")]
         public System.Nullable<int> ParentStepId { get; set; }
         
         /// <value>
-        /// Order of processing for steps with the same parent ID.
+        /// The order of processing for steps with the same parent ID.
         /// </value>
         [JsonProperty(PropertyName = "position")]
         public System.Nullable<int> Position { get; set; }
         
         /// <value>
-        /// Name of the operation performed at this step
+        /// The name of the operation performed at this step.
         /// </value>
         [JsonProperty(PropertyName = "operation")]
         public string Operation { get; set; }
         
         /// <value>
-        /// Options used for the operation performed at this step.
+        /// The options used for the operation performed at this step.
         /// </value>
         [JsonProperty(PropertyName = "options")]
         public string Options { get; set; }
         
         /// <value>
-        /// Current mode of the optimizer, such as all_rows, first_rows_n (where n = 1, 10, 100, 1000 etc).
+        /// The current mode of the optimizer, such as all_rows, first_rows_n (where n = 1, 10, 100, 1000, and so on).
         /// </value>
         [JsonProperty(PropertyName = "optimizerMode")]
         public string OptimizerMode { get; set; }
         
         /// <value>
-        /// Cost of the current operation estimated by the cost-based optimizer (CBO).
+        /// The cost of the current operation estimated by the cost-based optimizer (CBO).
         /// </value>
         [JsonProperty(PropertyName = "cost")]
         public System.Double Cost { get; set; }
         
         /// <value>
-        /// Number of rows returned by the current operation (estimated by the CBO).
+        /// The number of rows returned by the current operation (estimated by the CBO).
         /// </value>
         [JsonProperty(PropertyName = "cardinality")]
         public System.Nullable<long> Cardinality { get; set; }
         
         /// <value>
-        /// Number of bytes returned by the current operation.
+        /// The number of bytes returned by the current operation.
         /// </value>
         [JsonProperty(PropertyName = "bytes")]
         public System.Nullable<long> Bytes { get; set; }
@@ -98,80 +98,80 @@ namespace Oci.DatabasemanagementService.Models
         public System.Double IoCost { get; set; }
         
         /// <value>
-        /// Temporary space usage (in bytes) of the operation (sort or hash-join) as estimated by the CBO.
+        /// The temporary space usage (in bytes) of the operation (sort or hash-join) as estimated by the CBO.
         /// </value>
         [JsonProperty(PropertyName = "tempSpace")]
         public System.Nullable<long> TempSpace { get; set; }
         
         /// <value>
-        /// Elapsed time (in seconds) of the operation as estimated by the CBO.
+        /// The elapsed time (in seconds) of the operation as estimated by the CBO.
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public System.Nullable<long> Time { get; set; }
         
         /// <value>
-        /// Name of the database link used to reference the object.
+        /// The name of the database link used to reference the object.
         /// </value>
         [JsonProperty(PropertyName = "objectNode")]
         public string ObjectNode { get; set; }
         
         /// <value>
-        /// Owner of the object.
+        /// The owner of the object.
         /// </value>
         [JsonProperty(PropertyName = "objectOwner")]
         public string ObjectOwner { get; set; }
         
         /// <value>
-        /// Name of the object.
+        /// The name of the object.
         /// </value>
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
         
         /// <value>
-        /// Numbered position of the object name in the original SQL statement.
+        /// The numbered position of the object name in the original SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "objectPosition")]
         public System.Nullable<int> ObjectPosition { get; set; }
         
         /// <value>
-        /// Descriptive modifier that further describes the type of object.
+        /// The descriptive modifier that further describes the type of object.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
         public string ObjectType { get; set; }
         
         /// <value>
-        /// A step may get data from a range of partitions of a partitioned object, such table or index,
+        /// A step may get data from a range of partitions of a partitioned object, such as table or index,
         /// based on predicates and sorting order. The partionStart is the starting partition of the range.
-        /// The partitionStop is the ending partition of the range
+        /// The partitionStop is the ending partition of the range.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partitionStart")]
         public string PartitionStart { get; set; }
         
         /// <value>
-        /// A step may get data from a range of partitions of a partitioned object, such table or index,
+        /// A step may get data from a range of partitions of a partitioned object, such as table or index,
         /// based on predicates and sorting order. The partionStart is the starting partition of the range.
-        /// The partitionStop is the ending partition of the range
+        /// The partitionStop is the ending partition of the range.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partitionStop")]
         public string PartitionStop { get; set; }
         
         /// <value>
-        /// The id of the step in the execution plan that has computed the pair of values of the partitionStart and partitionStop
+        /// The ID of the step in the execution plan that has computed the pair of values of partitionStart and partitionStop.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partitionId")]
         public System.Nullable<int> PartitionId { get; set; }
         
         /// <value>
-        /// Place for comments that can be added to the steps of the execution plan.
+        /// The place for comments that can be added to the steps of the execution plan.
         /// </value>
         [JsonProperty(PropertyName = "remarks")]
         public string Remarks { get; set; }
         
         /// <value>
-        /// Number of index columns with start and stop keys (that is, the number of columns with matching predicates)
+        /// Number of index columns with start and stop keys (that is, the number of columns with matching predicates).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "numberOfSearchColumn")]
@@ -190,13 +190,13 @@ namespace Oci.DatabasemanagementService.Models
         public string OtherTag { get; set; }
         
         /// <value>
-        /// Text string identifying the type of the execution plan.
+        /// The text string identifying the type of execution plan.
         /// </value>
         [JsonProperty(PropertyName = "attribute")]
         public string Attribute { get; set; }
         
         /// <value>
-        /// Predicates used to locate rows in an access structure. For example,
+        /// The predicates used to locate rows in an access structure. For example,
         /// start or stop predicates for an index range scan.
         /// 
         /// </value>
@@ -204,7 +204,7 @@ namespace Oci.DatabasemanagementService.Models
         public string AccessPredicates { get; set; }
         
         /// <value>
-        /// Predicates used to filter rows before producing them.
+        /// The predicates used to filter rows before producing them.
         /// </value>
         [JsonProperty(PropertyName = "filterPredicates")]
         public string FilterPredicates { get; set; }

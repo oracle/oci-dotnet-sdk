@@ -87,7 +87,7 @@ namespace Oci.DatabasemanagementService.Requests
         
         ///
         /// <value>
-        /// The option to sort the SQL Tuning advisor task summary data.
+        /// The option to sort the SQL Tuning Advisor task summary data.
         /// </value>
         ///
         public enum SortByEnum {
@@ -98,7 +98,7 @@ namespace Oci.DatabasemanagementService.Requests
         };
 
         /// <value>
-        /// The option to sort the SQL Tuning advisor task summary data.
+        /// The option to sort the SQL Tuning Advisor task summary data.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

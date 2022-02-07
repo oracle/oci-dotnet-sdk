@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A Metric Group.
+    /// A metric group defines a set of metrics to collect from a span. It uses a span filter to specify which spans to
+    /// process. The set is then published to a namespace, which is a product level subdivision of metrics.
     /// 
     /// </summary>
     public class CreateMetricGroupDetails : CreateConfigDetails
     {
         
         /// <value>
-        /// The name of this metric group
+        /// The name of the metric group.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,7 +35,7 @@ namespace Oci.ApmconfigService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a Span Filter. The filterId is mandatory for the creation
-        /// of MetricGroups. A filterId will be generated when a Span Filter is created.
+        /// of MetricGroups. A filterId is generated when a Span Filter is created.
         /// 
         /// </value>
         /// <remarks>
@@ -45,17 +46,22 @@ namespace Oci.ApmconfigService.Models
         public string FilterId { get; set; }
         
         /// <value>
-        /// The namespace to write the metrics to
+        /// The namespace to which the metrics are published. It must be one of several predefined namespaces.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
         
         /// <value>
-        /// A list of dimensions for this metric
+        /// A list of dimensions for the metric. This variable should not be used.
         /// </value>
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.List<Dimension> Dimensions { get; set; }
         
+        /// <value>
+        /// The list of metrics in this group.
+        /// 
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

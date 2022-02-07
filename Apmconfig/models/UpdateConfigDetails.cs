@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// The request body used to update the Configuration entity. It must specify the data to update the item with.
+    /// The request body used to update the configuration item. It must specify the data to update the item with.
     /// 
     /// </summary>
     [JsonConverter(typeof(UpdateConfigDetailsModelConverter))]

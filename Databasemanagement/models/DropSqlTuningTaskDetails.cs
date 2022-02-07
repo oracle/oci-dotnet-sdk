@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Request to drop a SQL tuning task.
+    /// The request to drop a SQL tuning task.
     /// </summary>
     public class DropSqlTuningTaskDetails 
     {
         
         /// <value>
-        /// The identifier of the task being dropped. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The identifier of the SQL tuning task being dropped. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// It can be retrieved from the following endpoint
-        /// {@link #listSqlTuningAdvisorTasks(ListSqlTuningAdvisorTasksRequest) listSqlTuningAdvisorTasks}
+        /// {@link #listSqlTuningAdvisorTasks(ListSqlTuningAdvisorTasksRequest) listSqlTuningAdvisorTasks}.
         /// 
         /// </value>
         /// <remarks>

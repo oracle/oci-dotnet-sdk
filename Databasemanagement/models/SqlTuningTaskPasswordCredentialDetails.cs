@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// User provides a password to be used to connect to the database.
+    /// The password provided by the user to connect to the database.
     /// </summary>
     public class SqlTuningTaskPasswordCredentialDetails : SqlTuningTaskCredentialDetails
     {

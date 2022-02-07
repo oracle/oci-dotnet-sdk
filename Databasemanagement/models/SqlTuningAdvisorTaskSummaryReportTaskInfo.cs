@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// SQL Tuning advisor task general info.
+    /// The general information regarding the SQL Tuning Advisor task.
     /// </summary>
     public class SqlTuningAdvisorTaskSummaryReportTaskInfo 
     {
         
         /// <value>
-        /// The SQL Tuning Advisor task id. It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The ID of the SQL Tuning Advisor task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> Id { get; set; }
         
         /// <value>
-        /// The SQL Tuning Advisor task name.
+        /// The name of the SQL Tuning Advisor task.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The SQL Tuning Advisor task description. Not defined on Auto SQL Tuning tasks.
+        /// The description of the SQL Tuning Advisor task. This is not defined for Auto SQL Tuning tasks.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The SQL Tuning Advisor task user owner.
+        /// The owner of the SQL Tuning Advisor task.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,14 +58,14 @@ namespace Oci.DatabasemanagementService.Models
         public string Owner { get; set; }
         
         /// <value>
-        /// The SQL Tuning Advisor task status. Not defined on Auto SQL Tuning tasks.
+        /// The status of the SQL Tuning Advisor task. This is not defined for Auto SQL Tuning tasks.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SqlTuningTaskStatusTypes> Status { get; set; }
         
         /// <value>
-        /// Start timestamp of task execution.
+        /// The start time of the task execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,7 +75,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// End timestamp of task execution.
+        /// The end time of the task execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,7 +85,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// The total running time in seconds. Not defined on Auto SQL Tuning tasks.
+        /// The total running time in seconds. This is not defined for Auto SQL Tuning tasks.
         /// </value>
         [JsonProperty(PropertyName = "runningTime")]
         public System.Nullable<int> RunningTime { get; set; }

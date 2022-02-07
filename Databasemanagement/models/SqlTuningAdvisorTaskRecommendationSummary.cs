@@ -23,7 +23,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// Unique identifier of the task. It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The unique identifier of the task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> SqlTuningAdvisorTaskId { get; set; }
         
         /// <value>
-        /// Key of the object to which these recommendations apply. It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The key of the object to which these recommendations apply. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +44,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> SqlTuningAdvisorTaskObjectId { get; set; }
         
         /// <value>
-        /// Unique identifier of the recommendation in the scope of the task.
+        /// The unique identifier of the recommendation in the scope of the task.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> RecommendationKey { get; set; }
                 ///
         /// <value>
-        /// Type of recommendation
+        /// Type of recommendation.
         /// </value>
         ///
         public enum RecommendationTypeEnum {
@@ -75,7 +75,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Type of recommendation
+        /// Type of recommendation.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,13 +86,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<RecommendationTypeEnum> RecommendationType { get; set; }
         
         /// <value>
-        /// Summary of the issue found for the SQL statement.
+        /// Summary of the issue found in the SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "finding")]
         public string Finding { get; set; }
         
         /// <value>
-        /// Particular recommendation for the finding.
+        /// The recommendation for a specific finding.
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }

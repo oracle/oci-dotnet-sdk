@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ManagedDatabaseId { get; set; }
         
         /// <value>
-        /// Detail inputs for dropping a SQL tuning task
+        /// The detailed inputs required to drop a SQL tuning task.
         /// </value>
         /// <remarks>
         /// Required

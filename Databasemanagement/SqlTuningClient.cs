@@ -63,7 +63,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Clone and start a SQL tuning task for a given SQL tuning task.
+        /// Clones and runs a SQL tuning task in the database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -104,7 +104,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Drop a SQL tuning task and its related results from the database.
+        /// Drops a SQL tuning task and its related results from the database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -145,8 +145,9 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// A SQL tuning task may suggest new execution plan for a SQL. The API returns the
-        /// stats comparison report for the plans.
+        /// Retrieves a comparison of the existing SQL execution plan and a new plan.
+        /// A SQL tuning task may suggest a new execution plan for a SQL,
+        /// and this API retrieves the comparison report of the statistics of the two plans.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -187,7 +188,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Retrieve a SQL execution plan for a SQL being tuned, for original or new plan
+        /// Retrieves a SQL execution plan for the SQL being tuned.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -228,7 +229,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the summary report for the specific SQL Tuning Advisor task.
+        /// Gets the summary report for the specified SQL Tuning Advisor task.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -269,7 +270,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Takes in a task id, and a finding/object type filter and applies some SQLs to find return the output.
+        /// Gets an array of the details of the findings that match specific filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -310,7 +311,8 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Takes in a task id and object id and returns the recommendations/findings.
+        /// Gets the findings and possible actions for a given object in a SQL tuning task.
+        /// The task ID and object ID are used to retrieve the findings and recommendations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -392,8 +394,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Start a SQL tuning task for a given set of SQLs from active session history
-        /// top SQLs.
+        /// Starts a SQL tuning task for a given set of SQL statements from the active session history top SQL statements.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

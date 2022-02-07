@@ -50,6 +50,55 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListFastLaunchJobConfigs operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListFastLaunchJobConfigsResponse> ListFastLaunchJobConfigsResponseEnumerator(ListFastLaunchJobConfigsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListFastLaunchJobConfigsRequest, ListFastLaunchJobConfigsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFastLaunchJobConfigs(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the FastLaunchJobConfigSummary objects
+        /// contained in responses from the ListFastLaunchJobConfigs operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<FastLaunchJobConfigSummary> ListFastLaunchJobConfigsRecordEnumerator(ListFastLaunchJobConfigsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListFastLaunchJobConfigsRequest, ListFastLaunchJobConfigsResponse, FastLaunchJobConfigSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFastLaunchJobConfigs(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListJobRuns operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

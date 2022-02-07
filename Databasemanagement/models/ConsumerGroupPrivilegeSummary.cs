@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Summary of consumerGroupPrivileges.
+    /// A summary of consumer group privileges.
     /// </summary>
     public class ConsumerGroupPrivilegeSummary 
     {
         
         /// <value>
-        /// The name of granted consumer group.
+        /// The name of the granted consumer group privilege.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the grant was with the GRANT option (YES) or not (NO).
+        /// Indicates whether the privilege is granted with the GRANT option (YES) or not (NO).
         /// </value>
         ///
         public enum GrantOptionEnum {
@@ -39,14 +39,14 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the grant was with the GRANT option (YES) or not (NO).
+        /// Indicates whether the privilege is granted with the GRANT option (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "grantOption")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GrantOptionEnum> GrantOption { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the consumer group is designated as the default for this user or role (YES) or not (NO)
+        /// Indicates whether the consumer group is designated as the default for this user or role (YES) or not (NO).
         /// </value>
         ///
         public enum InitialGroupEnum {
@@ -57,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the consumer group is designated as the default for this user or role (YES) or not (NO)
+        /// Indicates whether the consumer group is designated as the default for this user or role (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "initialGroup")]
         [JsonConverter(typeof(StringEnumConverter))]

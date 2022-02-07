@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The finding counts data for the SQL Tuning Advisor summary report.
+    /// The number of findings in the SQL Tuning Advisor summary report.
     /// </summary>
     public class SqlTuningAdvisorTaskSummaryFindingCounts 
     {
         
         /// <value>
-        /// The count of distinct SQL statements with recommended SQL profiles.
+        /// The number of distinct SQL statements with recommended SQL profiles.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> RecommendedSqlProfile { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with implemented SQL profiles.
+        /// The number of distinct SQL statements with implemented SQL profiles.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> ImplementedSqlProfile { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with index recommendations.
+        /// The number of distinct SQL statements with index recommendations.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> Index { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with restructure SQL recommendations.
+        /// The number of distinct SQL statements with restructured SQL recommendations.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> Restructure { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with stale/missing optimizer statistics recommendations.
+        /// The number of distinct SQL statements with stale or missing optimizer statistics recommendations.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> Statistics { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with alternative plan recommendations.
+        /// The number of distinct SQL statements with alternative plan recommendations.
         /// </value>
         /// <remarks>
         /// Required

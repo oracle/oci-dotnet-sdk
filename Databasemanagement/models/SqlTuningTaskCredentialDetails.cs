@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The credential to be used to connect to the database.
+    /// The credential used to connect to the database.
     /// </summary>
     [JsonConverter(typeof(SqlTuningTaskCredentialDetailsModelConverter))]
     public class SqlTuningTaskCredentialDetails 
@@ -24,7 +24,7 @@ namespace Oci.DatabasemanagementService.Models
         
         
         /// <value>
-        /// The user to connect to the database.
+        /// The user name used to connect to the database.
         /// </value>
         /// <remarks>
         /// Required

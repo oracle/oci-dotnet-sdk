@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Request to start a SQL tuning task
+    /// The request to start a SQL tuning task.
     /// </summary>
     public class StartSqlTuningTaskDetails 
     {
         
         /// <value>
-        /// The name of the SQL tuning task. The name is unique per user in a database, and it is case sensitive.
+        /// The name of the SQL tuning task. The name is unique per user in a database, and it is case-sensitive.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DatabasemanagementService.Models
                 ///
         /// <value>
         /// The scope for the SQL tuning task. For LIMITED scope, the SQL profile recommendation
-        /// is excluded, so the task is faster. For COMPREHENSIVE scope, the SQL profile recommendation
+        /// is excluded, so the task is executed faster. For COMPREHENSIVE scope, the SQL profile recommendation
         /// is included.
         /// 
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.DatabasemanagementService.Models
 
         /// <value>
         /// The scope for the SQL tuning task. For LIMITED scope, the SQL profile recommendation
-        /// is excluded, so the task is faster. For COMPREHENSIVE scope, the SQL profile recommendation
+        /// is excluded, so the task is executed faster. For COMPREHENSIVE scope, the SQL profile recommendation
         /// is included.
         /// 
         /// </value>
@@ -83,15 +83,15 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<ScopeEnum> Scope { get; set; }
         
         /// <value>
-        /// The time limit per SQL statement in minutes. This is for task with COMPREHENSIVE scope.
-        /// Per statement time limit should not be larger than the total time limit.
+        /// The time limit per SQL statement (in minutes). This is for a task with the COMPREHENSIVE scope.
+        /// The time limit per SQL statement should not be more than the total time limit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "statementTimeLimitInMinutes")]
         public System.Nullable<int> StatementTimeLimitInMinutes { get; set; }
         
         /// <value>
-        /// The array of the details of SQL statments on which the tuning is performed.
+        /// The array of the details of SQL statement on which tuning is performed.
         /// </value>
         /// <remarks>
         /// Required
@@ -101,7 +101,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.List<SqlTuningTaskSqlDetail> SqlDetails { get; set; }
         
         /// <value>
-        /// The start time of the period, in which SQL statements are running.
+        /// The start time of the period in which SQL statements are running.
         /// </value>
         /// <remarks>
         /// Required
@@ -111,7 +111,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The end time of the period, in which SQL statements are running.
+        /// The end time of the period in which SQL statements are running.
         /// </value>
         /// <remarks>
         /// Required

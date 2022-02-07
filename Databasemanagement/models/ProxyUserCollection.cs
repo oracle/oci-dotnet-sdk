@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of proxy users for the current User.
+    /// A collection of proxy users for the current user.
     /// </summary>
     public class ProxyUserCollection 
     {
         
         /// <value>
-        /// An array of User resources.
+        /// An array of user resources.
         /// </value>
         /// <remarks>
         /// Required
