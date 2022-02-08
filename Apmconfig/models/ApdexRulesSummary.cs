@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// The set of Apdex rules to be used in Apdex computation.
+    /// The set of Apdex rules used in Apdex computation.
     /// 
     /// </summary>
     public class ApdexRulesSummary : ConfigSummary
@@ -26,7 +26,7 @@ namespace Oci.ApmconfigService.Models
         public System.Collections.Generic.List<Apdex> Rules { get; set; }
         
         /// <value>
-        /// The name by which this rule set can be displayed to the user.
+        /// The name by which the rule set is displayed to the end user.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

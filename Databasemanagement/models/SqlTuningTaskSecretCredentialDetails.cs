@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// User provides a secret OCID, which will be used to retrieve the password to connect to the database.
+    /// The OCID of the Secret provided by the user to retrieve the password to connect to the database.
     /// 
     /// </summary>
     public class SqlTuningTaskSecretCredentialDetails : SqlTuningTaskCredentialDetails

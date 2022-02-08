@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of Users for a specific database.
+    /// A collection of users for a specific database.
     /// </summary>
     public class UserCollection 
     {

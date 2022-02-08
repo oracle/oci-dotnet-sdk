@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A collection of configuration entities
+    /// A collection of configuration items.
     /// </summary>
     public class ConfigCollection 
     {

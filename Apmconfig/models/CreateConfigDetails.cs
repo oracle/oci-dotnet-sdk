@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// The request body used to create new Configuration entities. It must specify the configuration type of the item to
-    /// create, as well as the actual data to populate the item with.
+    /// The request body used to create new configuration items. It must specify the configuration type of the item,
+    /// as well as the actual data to populate the item with.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateConfigDetailsModelConverter))]

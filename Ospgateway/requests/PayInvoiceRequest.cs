@@ -73,7 +73,7 @@ namespace Oci.OspgatewayService.Requests
         public string IfMatch { get; set; }
         
         /// <value>
-        /// For requests that are not idempotent (creates being the main place of interest), THE APIs should take a header 
+        /// For requests that are not idempotent (creates being the main place of interest), THE APIs should take a header
         /// called opc-retry-token to identify the customer desire across requests, to introduce some level of idempotency.
         /// 
         /// </value>

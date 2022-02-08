@@ -423,7 +423,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "ADVANCED_LOW")]
             AdvancedLow,
             [EnumMember(Value = "ADVANCED_HIGH")]
-            AdvancedHigh
+            AdvancedHigh,
+            [EnumMember(Value = "NONE")]
+            None
         };
 
         /// <value>
@@ -540,6 +542,12 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "usedPercentAllocated")]
         public System.Double UsedPercentAllocated { get; set; }
+        
+        /// <value>
+        /// Indicates whether this is the default tablespace.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefault")]
+        public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
         /// A list of the data files associated with the tablespace.

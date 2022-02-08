@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// The request body used to update the Configuration entity. It must specify the data to update the item with.
+    /// A description of a configuration item. It specifes all the properties that define the configuration item.
     /// 
     /// </summary>
     [JsonConverter(typeof(ConfigSummaryModelConverter))]
@@ -24,7 +24,7 @@ namespace Oci.ApmconfigService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration item. An OCID will be generated
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration item. An OCID is generated
         /// when the item is created.
         /// 
         /// </value>

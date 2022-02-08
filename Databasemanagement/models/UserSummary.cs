@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The account status of the User
+        /// The status of the user account.
         /// </value>
         ///
         public enum StatusEnum {
@@ -69,7 +69,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The account status of the User
+        /// The status of the user account.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// The date of expiration of the account
+        /// The date and time of the expiration of the user account.
         /// </value>
         [JsonProperty(PropertyName = "timeExpiring")]
         public System.Nullable<System.DateTime> TimeExpiring { get; set; }
@@ -106,7 +106,7 @@ namespace Oci.DatabasemanagementService.Models
         public string TempTablespace { get; set; }
         
         /// <value>
-        /// The User creation date.
+        /// The date and time the user was created.
         /// </value>
         /// <remarks>
         /// Required

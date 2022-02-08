@@ -198,7 +198,7 @@ namespace Oci.OspgatewayService.Models
         public PaymentDetail LastPaymentDetail { get; set; }
         
         [JsonProperty(PropertyName = "billToAddress")]
-        public Address BillToAddress { get; set; }
+        public BillToAddress BillToAddress { get; set; }
         
         /// <value>
         /// List of subscription identifiers

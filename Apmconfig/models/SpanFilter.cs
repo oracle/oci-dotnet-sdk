@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A span filter is a named setting that specifies filter criteria to match a subset of the spans.
+    /// A named setting that specifies the filter criteria to match a subset of the spans.
     /// </summary>
     public class SpanFilter : Config
     {
         
         /// <value>
-        /// The name by which this filter can be displayed in the UI.
+        /// The name by which the span filter is displayed to the end user.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -35,7 +35,7 @@ namespace Oci.ApmconfigService.Models
         public string FilterText { get; set; }
         
         /// <value>
-        /// An optional string that describes what the filter is intended or used for.
+        /// An optional string that describes what the span filter is intended or used for.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

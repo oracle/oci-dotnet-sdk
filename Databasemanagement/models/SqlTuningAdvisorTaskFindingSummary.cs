@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A summary for all the findings of objects in a tuning task that match a given certain filter.
-    /// Includes what kind of findings were found, whether benefits were analyzed, and how many benefits can be obtained.
+    /// A summary of the findings of the objects in a tuning task that match a given filter.
+    /// This includes the kind of findings that were reported, whether the benefits were analyzed, and the number of benefits obtained.
     /// 
     /// </summary>
     public class SqlTuningAdvisorTaskFindingSummary 
     {
         
         /// <value>
-        /// Unique identifier of the task. It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The unique identifier of the SQL Tuning Advisor task. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -34,8 +34,8 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> SqlTuningAdvisorTaskId { get; set; }
         
         /// <value>
-        /// Key of the object to which these recommendations apply.
-        /// It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The key of the object to which these recommendations apply.
+        /// This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> SqlTuningAdvisorTaskObjectId { get; set; }
         
         /// <value>
-        /// Execution id of the analyzed SQL object. It is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The execution id of the analyzed SQL object. This is not the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<long> SqlTuningAdvisorTaskObjectExecutionId { get; set; }
         
         /// <value>
-        /// Text of the SQL statement.
+        /// The text of the SQL statement.
         /// </value>
         /// <remarks>
         /// Required
@@ -66,7 +66,7 @@ namespace Oci.DatabasemanagementService.Models
         public string SqlText { get; set; }
         
         /// <value>
-        /// Parsing schema of the object.
+        /// The parsing schema of the object.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.DatabasemanagementService.Models
         public string ParsingSchema { get; set; }
         
         /// <value>
-        /// Unique key of this SQL statement
+        /// The unique key of this SQL statement.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,7 +86,7 @@ namespace Oci.DatabasemanagementService.Models
         public string SqlKey { get; set; }
         
         /// <value>
-        /// Time benefit in seconds for the highest-rated finding for this object.
+        /// The time benefit (in seconds) for the highest-rated finding for this object.
         /// </value>
         [JsonProperty(PropertyName = "dbTimeBenefit")]
         public System.Nullable<float> DbTimeBenefit { get; set; }
@@ -98,55 +98,55 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> PerExecutionPercentage { get; set; }
         
         /// <value>
-        /// Whether a statistics recommendation was found for this SQL statement.
+        /// Indicates whether a statistics recommendation was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isStatsFindingPresent")]
         public System.Nullable<bool> IsStatsFindingPresent { get; set; }
         
         /// <value>
-        /// Whether a SQL Profile recommendation was found for this SQL statement.
+        /// Indicates whether a SQL Profile recommendation was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isSqlProfileFindingPresent")]
         public System.Nullable<bool> IsSqlProfileFindingPresent { get; set; }
         
         /// <value>
-        /// Whether a SQL Profile recommendation has been implemented for this SQL statement.
+        /// Indicates whether a SQL Profile recommendation has been implemented for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isSqlProfileFindingImplemented")]
         public System.Nullable<bool> IsSqlProfileFindingImplemented { get; set; }
         
         /// <value>
-        /// Whether an index recommendation was found for this SQL statement.
+        /// Indicates whether an index recommendation was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isIndexFindingPresent")]
         public System.Nullable<bool> IsIndexFindingPresent { get; set; }
         
         /// <value>
-        /// Whether a restructure SQL recommendation was found for this SQL statement.
+        /// Indicates whether a restructure SQL recommendation was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isRestructureSqlFindingPresent")]
         public System.Nullable<bool> IsRestructureSqlFindingPresent { get; set; }
         
         /// <value>
-        /// Whether an alternative execution plan was found for this SQL statement.
+        /// Indicates whether an alternative execution plan was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isAlternativePlanFindingPresent")]
         public System.Nullable<bool> IsAlternativePlanFindingPresent { get; set; }
         
         /// <value>
-        /// Whether a miscellaneous finding was found for this SQL statement.
+        /// Indicates whether a miscellaneous finding was reported for this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isMiscellaneousFindingPresent")]
         public System.Nullable<bool> IsMiscellaneousFindingPresent { get; set; }
         
         /// <value>
-        /// Whether there is an error in this SQL statement.
+        /// Indicates whether there is an error in this SQL statement.
         /// </value>
         [JsonProperty(PropertyName = "isErrorFindingPresent")]
         public System.Nullable<bool> IsErrorFindingPresent { get; set; }
         
         /// <value>
-        /// Whether the task timed out.
+        /// Indicates whether the task timed out.
         /// </value>
         [JsonProperty(PropertyName = "isTimeoutFindingPresent")]
         public System.Nullable<bool> IsTimeoutFindingPresent { get; set; }

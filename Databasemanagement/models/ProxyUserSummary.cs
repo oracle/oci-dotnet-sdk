@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Summary of proxy user
+    /// A summary of the proxy user.
     /// </summary>
     public class ProxyUserSummary 
     {
         
         /// <value>
-        /// The name of a proxy user or name of the user who the proxy user can act as
+        /// The name of a proxy user or the name of the client user.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the proxy is required to supply the client credentials (YES) or not (NO)
+        /// Indicates whether the proxy is required to supply the client credentials (YES) or not (NO).
         /// </value>
         ///
         public enum AuthenticationEnum {
@@ -39,14 +39,14 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Indicates whether the proxy is required to supply the client credentials (YES) or not (NO)
+        /// Indicates whether the proxy is required to supply the client credentials (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "authentication")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AuthenticationEnum> Authentication { get; set; }
                 ///
         /// <value>
-        /// Flags associated with the proxy/client pair
+        /// The flags associated with the proxy/client pair.
         /// </value>
         ///
         public enum FlagsEnum {
@@ -61,7 +61,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// Flags associated with the proxy/client pair
+        /// The flags associated with the proxy/client pair.
         /// </value>
         [JsonProperty(PropertyName = "flags")]
         [JsonConverter(typeof(StringEnumConverter))]

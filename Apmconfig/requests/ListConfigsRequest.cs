@@ -20,7 +20,7 @@ namespace Oci.ApmconfigService.Requests
     {
         
         /// <value>
-        /// The APM Domain Id the request is intended for.
+        /// The APM Domain ID the request is intended for.
         /// 
         /// </value>
         /// <remarks>
@@ -39,7 +39,7 @@ namespace Oci.ApmconfigService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to match only configuration items of the given type.
+        /// A filter to match configuration items of a given type.
         /// Supported values are SPAN_FILTER, METRIC_GROUP, and APDEX.
         /// 
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.ApmconfigService.Requests
         public string ConfigType { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return resources that match the given display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -59,10 +59,8 @@ namespace Oci.ApmconfigService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// For list pagination. The maximum number of results per page, or items to return in a paginated
-        /// \"List\" call. For important details about how pagination works, see
-        /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
-        /// <br/>
+        /// The maximum number of results per page, or items to return in a paginated \"List\" call. For information on
+        /// how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// Example: 50
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
@@ -70,7 +68,7 @@ namespace Oci.ApmconfigService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). The displayName sort order
-        /// is case sensitive.
+        /// is case-sensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
@@ -78,8 +76,8 @@ namespace Oci.ApmconfigService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. You can provide one sort by (`sortBy`). Default order for displayName, timeCreated and
-        /// timeUpdated is ascending. The displayName sort by is case sensitive.
+        /// The field to sort by. You can provide one \"sortBy\" value. The default order for displayName, timeCreated
+        /// and timeUpdated is ascending. The displayName sort by is case-sensitive.
         /// 
         /// </value>
         ///
@@ -93,8 +91,8 @@ namespace Oci.ApmconfigService.Requests
         };
 
         /// <value>
-        /// The field to sort by. You can provide one sort by (`sortBy`). Default order for displayName, timeCreated and
-        /// timeUpdated is ascending. The displayName sort by is case sensitive.
+        /// The field to sort by. You can provide one \"sortBy\" value. The default order for displayName, timeCreated
+        /// and timeUpdated is ascending. The displayName sort by is case-sensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

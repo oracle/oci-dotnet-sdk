@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The detail of the SQL statements on which SQL tuning is performed.
+    /// The details of the SQL statements on which SQL tuning is performed.
     /// </summary>
     public class SqlTuningTaskSqlDetail 
     {

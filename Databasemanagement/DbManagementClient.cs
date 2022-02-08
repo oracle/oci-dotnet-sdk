@@ -66,6 +66,47 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
+        /// Adds data files or temp files to the tablespace.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/AddDataFiles.cs.html">here</a> to see an example of how to use AddDataFiles API.</example>
+        public async Task<AddDataFilesResponse> AddDataFiles(AddDataFilesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called addDataFiles");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/addDataFiles".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<AddDataFilesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddDataFiles failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Adds a Managed Database to a specific Managed Database Group.
         /// After the database is added, it will be included in the
         /// management activities performed on the Managed Database Group.
@@ -412,6 +453,47 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
+        /// Creates a tablespace within the Managed Database specified by managedDatabaseId.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/CreateTablespace.cs.html">here</a> to see an example of how to use CreateTablespace API.</example>
+        public async Task<CreateTablespaceResponse> CreateTablespace(CreateTablespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createTablespace");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<CreateTablespaceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateTablespace failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes a specific Database Management private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -529,6 +611,47 @@ namespace Oci.DatabasemanagementService
             catch (Exception e)
             {
                 logger.Error($"DeleteManagedDatabaseGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Drops the tablespace specified by tablespaceName within the Managed Database specified by managedDatabaseId.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/DropTablespace.cs.html">here</a> to see an example of how to use DropTablespace API.</example>
+        public async Task<DropTablespaceResponse> DropTablespace(DropTablespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called dropTablespace");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/dropTablespace".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DropTablespaceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DropTablespace failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1030,7 +1153,48 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the details of a specific user for the specified managedDatabaseId and userName.
+        /// Gets the details of the tablespace specified by tablespaceName within the Managed Database specified by managedDatabaseId.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/GetTablespace.cs.html">here</a> to see an example of how to use GetTablespace API.</example>
+        public async Task<GetTablespaceResponse> GetTablespace(GetTablespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getTablespace");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetTablespaceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetTablespace failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details of the user specified by managedDatabaseId and userName.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1106,6 +1270,46 @@ namespace Oci.DatabasemanagementService
             catch (Exception e)
             {
                 logger.Error($"GetWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the list of ASM properties for the specified managedDatabaseId.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/ListAsmProperties.cs.html">here</a> to see an example of how to use ListAsmProperties API.</example>
+        public async Task<ListAsmPropertiesResponse> ListAsmProperties(ListAsmPropertiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listAsmProperties");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/asmProperties".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListAsmPropertiesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAsmProperties failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1233,7 +1437,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of Consumer Group Privileges granted for the specified user.
+        /// Gets the list of consumer group privileges granted to a specific user.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1273,7 +1477,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of Containers if it does not apply to all containers for the specified user.
+        /// Gets the list of containers for a specific user. This is only applicable if ALL_CONTAINERS !&#x3D;&#39;Y&#39;.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1617,7 +1821,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of Object Privileges granted for the specified user.
+        /// Gets the list of object privileges granted to a specific user.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1657,7 +1861,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of Users for which the current user acts as proxy.
+        /// Gets the list of users on whose behalf the current user acts as proxy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1697,7 +1901,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of proxy users for the current User.
+        /// Gets the list of proxy users for the current user.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1737,7 +1941,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of roles granted for the specified user.
+        /// Gets the list of roles granted to a specific user.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1777,7 +1981,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Gets the list of System Privileges granted for the specified user.
+        /// Gets the list of system privileges granted to a specific user.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2020,6 +2224,47 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
+        /// Removes a data file or temp file from the tablespace.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/RemoveDataFile.cs.html">here</a> to see an example of how to use RemoveDataFile API.</example>
+        public async Task<RemoveDataFileResponse> RemoveDataFile(RemoveDataFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called removeDataFile");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/removeDataFile".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RemoveDataFileResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveDataFile failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Removes a Managed Database from a Managed Database Group. Any management
         /// activities that are currently running on this database will continue to
         /// run to completion. However, any activities scheduled to run in the future
@@ -2100,6 +2345,47 @@ namespace Oci.DatabasemanagementService
             catch (Exception e)
             {
                 logger.Error($"ResetDatabaseParameters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Resizes a data file or temp file within the tablespace.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/ResizeDataFile.cs.html">here</a> to see an example of how to use ResizeDataFile API.</example>
+        public async Task<ResizeDataFileResponse> ResizeDataFile(ResizeDataFileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called resizeDataFile");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/resizeDataFile".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ResizeDataFileResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ResizeDataFile failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2645,6 +2931,47 @@ namespace Oci.DatabasemanagementService
             catch (Exception e)
             {
                 logger.Error($"UpdateManagedDatabaseGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the attributes of the tablespace specified by tablespaceName within the Managed Database specified by managedDatabaseId.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/UpdateTablespace.cs.html">here</a> to see an example of how to use UpdateTablespace API.</example>
+        public async Task<UpdateTablespaceResponse> UpdateTablespace(UpdateTablespaceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateTablespace");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpdateTablespaceResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateTablespace failed with error: {e.Message}");
                 throw;
             }
         }

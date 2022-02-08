@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The statement counts data for the SQL Tuning Advisor summary report.
+    /// The number of statements in the SQL Tuning Advisor summary report.
     /// </summary>
     public class SqlTuningAdvisorTaskSummaryReportStatementCounts 
     {
         
         /// <value>
-        /// The count of distinct SQL statements.
+        /// The number of distinct SQL statements.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> DistinctSql { get; set; }
         
         /// <value>
-        /// The total count of SQL statements.
+        /// The total number of SQL statements.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> TotalSql { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with findings.
+        /// The number of distinct SQL statements with findings.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> FindingCount { get; set; }
         
         /// <value>
-        /// The count of distinct SQL statements with errors.
+        /// The number of distinct SQL statements with errors.
         /// </value>
         /// <remarks>
         /// Required

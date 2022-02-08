@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of Containers if it does not apply to all containers for the current User.
+    /// A collection of specific containers for the current user. This is only applicable if ALL_CONTAINERS !='Y'.
     /// </summary>
     public class DataAccessContainerCollection 
     {
         
         /// <value>
-        /// An array of Container resources.
+        /// An array of container resources.
         /// </value>
         /// <remarks>
         /// Required

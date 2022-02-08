@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A dimension is a label that can be used to describe or group metrics.
+    /// A dimension is a label that is used to describe or group metrics.
     /// 
     /// </summary>
     public class Dimension 
     {
         
         /// <value>
-        /// The dimension name
+        /// The name of the dimension.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.ApmconfigService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The source to populate the dimension. Must be NULL at the moment.
+        /// The source to populate the dimension. This must not be specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "valueSource")]

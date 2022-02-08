@@ -20,7 +20,7 @@ namespace Oci.ApmconfigService.Requests
     {
         
         /// <value>
-        /// The APM Domain Id the request is intended for.
+        /// The APM Domain ID the request is intended for.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.ApmconfigService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// The configuration details describing the new item
+        /// The configuration details of the new item.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,8 +60,8 @@ namespace Oci.ApmconfigService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Indicates that this request is a dry-run.
-        /// If set to \"true\", nothing will be modified, only the validation will be performed.
+        /// Indicates that the request is a dry run, if set to \"true\". A dry run request does not modify the
+        /// configuration item details and is used only to perform validation on the submitted data.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-dry-run")]
