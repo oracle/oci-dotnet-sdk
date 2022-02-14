@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Definition of a log which is a key value pair of log data.
+    /// Definition of a log which is a key-value pair of log data.
     /// 
     /// </summary>
     public class SpanLog 

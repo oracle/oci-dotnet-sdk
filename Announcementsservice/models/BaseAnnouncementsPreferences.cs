@@ -24,7 +24,7 @@ namespace Oci.AnnouncementsService.Models
         
         
         /// <value>
-        /// The OCID of the compartment for which the email preferences apply. Because announcements are 
+        /// The OCID of the compartment for which the email preferences apply. Because announcements are
         /// specific to a tenancy, specify the tenancy by providing the root compartment OCID.
         /// 
         /// </value>
@@ -38,7 +38,7 @@ namespace Oci.AnnouncementsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// A Boolean value to indicate whether the specified compartment chooses to not to receive informational announcements by email. 
+        /// A Boolean value to indicate whether the specified compartment chooses to not to receive informational announcements by email.
         /// (Manage preferences for receiving announcements by email by specifying the `preferenceType` attribute instead.)
         /// 
         /// </value>

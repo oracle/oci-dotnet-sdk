@@ -20,7 +20,7 @@ namespace Oci.ApmtracesService.Requests
     {
         
         /// <value>
-        /// The APM Domain Id the request is intended for.
+        /// The APM Domain ID the request is intended for.
         /// 
         /// </value>
         /// <remarks>

@@ -15,12 +15,13 @@ namespace Oci.Common
         [Required(ErrorMessage = "ServiceEndpointPrefix is required.")]
         public string ServiceEndpointPrefix { get; set; }
         public string ServiceEndpointTemplate { get; set; }
+        public string EndpointServiceName { get; set; }
 
         /// <summary>Returns a string showing service information.</summary>
         /// <returns>A string containing service name, endpoint prfix, and endpoint template.</returns>
         public override string ToString()
         {
-            return $"ServiceName: {ServiceName}; ServiceEndpointPrefix: {ServiceEndpointPrefix}; ServiceEndpointTemplate: {ServiceEndpointTemplate}";
+            return $"ServiceName: {ServiceName}; ServiceEndpointPrefix: {ServiceEndpointPrefix}; ServiceEndpointTemplate: {ServiceEndpointTemplate}; EndpointServiceName: {EndpointServiceName}";
         }
 
         /// <summary>Checks if the given service is the same.</summary>
@@ -28,7 +29,7 @@ namespace Oci.Common
         /// <returns>True is the given service contains the same information; false if not.</returns>
         public bool Equals(Service service)
         {
-            if (ServiceName.Equals(service.ServiceName) && ServiceEndpointPrefix.Equals(service.ServiceEndpointPrefix) && ServiceEndpointTemplate.Equals(service.ServiceEndpointTemplate))
+            if (ServiceName.Equals(service.ServiceName) && ServiceEndpointPrefix.Equals(service.ServiceEndpointPrefix) && ServiceEndpointTemplate.Equals(service.ServiceEndpointTemplate) && EndpointServiceName.Equals(service.EndpointServiceName))
             {
                 return true;
             }

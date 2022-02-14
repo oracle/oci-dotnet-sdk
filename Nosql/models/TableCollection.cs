@@ -39,5 +39,17 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "autoReclaimableTables")]
         public System.Nullable<int> AutoReclaimableTables { get; set; }
         
+        /// <value>
+        /// The current number of on demand capacity tables in the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "onDemandCapacityTables")]
+        public System.Nullable<int> OnDemandCapacityTables { get; set; }
+        
+        /// <value>
+        /// The maximum number of on demand capacity tables allowed in the tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "maxOnDemandCapacityTables")]
+        public System.Nullable<int> MaxOnDemandCapacityTables { get; set; }
+        
     }
 }

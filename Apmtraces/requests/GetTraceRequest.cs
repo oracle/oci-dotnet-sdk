@@ -20,7 +20,7 @@ namespace Oci.ApmtracesService.Requests
     {
         
         /// <value>
-        /// The APM Domain Id the request is intended for.
+        /// The APM Domain ID the request is intended for.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.ApmtracesService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// Unique APM trace identifier(traceId).
+        /// Unique Application Performance Monitoring trace identifier (traceId).
         /// 
         /// </value>
         /// <remarks>

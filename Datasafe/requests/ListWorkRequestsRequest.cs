@@ -35,11 +35,57 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
         public string OperationType { get; set; }
         
+        ///
+        /// <value>
+        /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
+        /// The default order for STARTTIME and FINISHTIME is descending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "STARTTIME")]
+            Starttime,
+            [EnumMember(Value = "FINISHTIME")]
+            Finishtime
+        };
+
+        /// <value>
+        /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
+        /// The default order for STARTTIME and FINISHTIME is descending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        ///
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        ///
+        public enum SortOrderEnum {
+            [EnumMember(Value = "ASC")]
+            Asc,
+            [EnumMember(Value = "DESC")]
+            Desc
+        };
+
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
         /// <value>
         /// A filter to return only work requests that match the specified resource OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
         public string ResourceId { get; set; }
+        
+        /// <value>
+        /// A filter to return only work requests that are associated to the specified target database OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseId")]
+        public string TargetDatabaseId { get; set; }
         
         /// <value>
         /// Unique identifier for the request.

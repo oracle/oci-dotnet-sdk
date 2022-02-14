@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// A summary of the datatype, unit and related metadata of an individual row element of a query result row that is returned.
+    /// Summary of the datatype, unit and related metadata of an individual row element of a query result row that is returned.
     /// 
     /// </summary>
     public class QueryResultRowTypeSummary 

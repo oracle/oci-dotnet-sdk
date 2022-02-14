@@ -20,7 +20,7 @@ namespace Oci.ApmtracesService.Requests
     {
         
         /// <value>
-        /// The APM Domain Id the request is intended for.
+        /// The APM Domain ID the request is intended for.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.ApmtracesService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// Include spans that have a `spanStartTime` equal to or greater this value.
+        /// Include spans that have a `spanStartTime` equal to or greater than this value.
         /// 
         /// </value>
         /// <remarks>
@@ -53,7 +53,8 @@ namespace Oci.ApmtracesService.Requests
         public System.Nullable<System.DateTime> TimeSpanStartedLessThan { get; set; }
         
         /// <value>
-        /// Request body containing the query to be run against our repository.
+        /// Request body containing the query to be run against the trace data and to filter and
+        /// retrieve trace data results.
         /// 
         /// </value>
         /// <remarks>

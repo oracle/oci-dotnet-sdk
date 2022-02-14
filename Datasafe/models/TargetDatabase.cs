@@ -74,6 +74,12 @@ namespace Oci.DatasafeService.Models
         public ConnectionOption ConnectionOption { get; set; }
         
         /// <value>
+        /// The OCIDs of associated resources like Database, Data Safe private endpoint etc.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedResourceIds")]
+        public System.Collections.Generic.List<string> AssociatedResourceIds { get; set; }
+        
+        /// <value>
         /// The current state of the target database in Data Safe.
         /// </value>
         /// <remarks>

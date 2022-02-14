@@ -10,6 +10,7 @@ using System.IO;
 
 using Oci.Common.Model;
 using Oci.Common.Utils;
+using Oci.Common.Internal;
 
 using Newtonsoft.Json;
 using Xunit;
@@ -238,6 +239,58 @@ namespace Oci.Common
             Assert.Throws<ArgumentNullException>(() => Region.FormatDefaultRegionEndpoint(null, "xyz"));
         }
 
+        [Theory]
+        [InlineData("acmecorp.com", "https://template.acmecorp.com")]
+        [InlineData("xyz", "https://template.xyz.foobar-oraclecloud.com")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void testBuildEndpointFromEndpointTemplate(string regionId, string expectedEndpoint)
+        {
+            Service service = new Service
+            {
+                ServiceName = "ABC",
+                ServiceEndpointPrefix = "abc",
+                ServiceEndpointTemplate = "https://template.{region}.{secondLevelDomain}"
+            };
+            Realm realm = Realm.Register("REL", "foobar-oraclecloud.com");
+            Assert.Equal(EndpointBuilder.CreateEndpoint(service, regionId, realm), expectedEndpoint);
+        }
+
+        [Theory]
+        [InlineData("acmecorp.com")]
+        [InlineData("acme.corp.com")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void testBuildEndpointFromBadEndpointTemplate(string regionId)
+        {
+            Service service = new Service
+            {
+                ServiceName = "ABC",
+                ServiceEndpointPrefix = "abc",
+                ServiceEndpointTemplate = "https.badRegex.com"
+            };
+            Realm realm = Realm.Register("REL", "foobar-oraclecloud.com");
+            Assert.Throws<Oci.Common.Model.OciException>(() => EndpointBuilder.CreateEndpoint(service, regionId, realm));
+        }
+
+        [Theory]
+        [InlineData("acmecorp.com", "https://puppies.acmecorp.com")]
+        [InlineData("xyz", "https://template.xyz.foobar-oraclecloud.com")]
+        [Trait("Category", "Unit")]
+        [DisplayTestMethodNameAttribute]
+        public void testBuildEndpointFromEndpointServiceName(string regionId, string expectedEndpoint)
+        {
+            Service service = new Service
+            {
+                ServiceName = "ABC",
+                ServiceEndpointPrefix = "abc",
+                ServiceEndpointTemplate = "https://template.{region}.{secondLevelDomain}",
+                EndpointServiceName = "puppies"
+            };
+            Realm realm = Realm.Register("REL", "foobar-oraclecloud.com");
+            Assert.Equal(EndpointBuilder.CreateEndpoint(service, regionId, realm), expectedEndpoint);
+        }
+    
         private bool AreRegionsSame(Region r1, Region r2)
         {
             if (!r1.RegionId.Equals(r2.RegionId))

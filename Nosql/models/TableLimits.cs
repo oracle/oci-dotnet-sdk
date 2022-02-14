@@ -50,6 +50,30 @@ namespace Oci.NosqlService.Models
         [Required(ErrorMessage = "MaxStorageInGBs is required.")]
         [JsonProperty(PropertyName = "maxStorageInGBs")]
         public System.Nullable<int> MaxStorageInGBs { get; set; }
+                ///
+        /// <value>
+        /// The capacity mode of the table.  If capacityMode = ON_DEMAND,
+        /// maxReadUnits and maxWriteUnits are not used, and both will have
+        /// the value of zero.
+        /// 
+        /// </value>
+        ///
+        public enum CapacityModeEnum {
+            [EnumMember(Value = "PROVISIONED")]
+            Provisioned,
+            [EnumMember(Value = "ON_DEMAND")]
+            OnDemand
+        };
+
+        /// <value>
+        /// The capacity mode of the table.  If capacityMode = ON_DEMAND,
+        /// maxReadUnits and maxWriteUnits are not used, and both will have
+        /// the value of zero.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CapacityModeEnum> CapacityMode { get; set; }
         
     }
 }

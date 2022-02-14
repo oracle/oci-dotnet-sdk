@@ -20,8 +20,7 @@ namespace Oci.AnnouncementsService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment. Because announcements are specific to a tenancy, this is the
-        /// OCID of the root compartment.
+        /// The OCID of the compartment.
         /// 
         /// </value>
         /// <remarks>
