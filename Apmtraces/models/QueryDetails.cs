@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Request object containing the query to be run against our repository.
+    /// Request object containing the query to be run against the trace data.
     /// 
     /// </summary>
     public class QueryDetails 
     {
         
         /// <value>
-        /// APM defined query string to run against our repository and return results for.
+        /// Application Performance Monitoring defined query string that filters and retrieves trace data results.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryText")]

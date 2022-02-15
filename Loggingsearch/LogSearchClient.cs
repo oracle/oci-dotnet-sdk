@@ -61,6 +61,8 @@ namespace Oci.LoggingsearchService
 
         /// <summary>
         /// Submit a query to search logs.
+        /// &lt;br/&gt;
+        /// See [Using the API](https://docs.cloud.oracle.com/Content/Logging/Concepts/using_the_api_searchlogs.htm) for SDK examples.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

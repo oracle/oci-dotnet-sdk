@@ -46,6 +46,14 @@ namespace Oci.DatasafeService.Models
             UpdateOnpremConnectorWallet,
             [EnumMember(Value = "CHANGE_ONPREM_CONNECTOR_COMPARTMENT")]
             ChangeOnpremConnectorCompartment,
+            [EnumMember(Value = "PROVISION_POLICY")]
+            ProvisionPolicy,
+            [EnumMember(Value = "RETRIEVE_POLICY")]
+            RetrievePolicy,
+            [EnumMember(Value = "UPDATE_POLICY")]
+            UpdatePolicy,
+            [EnumMember(Value = "CHANGE_POLICY_COMPARTMENT")]
+            ChangePolicyCompartment,
             [EnumMember(Value = "CREATE_TARGET_DATABASE")]
             CreateTargetDatabase,
             [EnumMember(Value = "UPDATE_TARGET_DATABASE")]
@@ -103,7 +111,103 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "UNSET_SECURITY_ASSESSMENT_BASELINE")]
             UnsetSecurityAssessmentBaseline,
             [EnumMember(Value = "GENERATE_SECURITY_ASSESSMENT_REPORT")]
-            GenerateSecurityAssessmentReport
+            GenerateSecurityAssessmentReport,
+            [EnumMember(Value = "CALCULATE_VOLUME")]
+            CalculateVolume,
+            [EnumMember(Value = "CALCULATE_COLLECTED_VOLUME")]
+            CalculateCollectedVolume,
+            [EnumMember(Value = "AUDIT_TRAIL")]
+            AuditTrail,
+            [EnumMember(Value = "DELETE_AUDIT_TRAIL")]
+            DeleteAuditTrail,
+            [EnumMember(Value = "DISCOVER_AUDIT_TRAILS")]
+            DiscoverAuditTrails,
+            [EnumMember(Value = "UPDATE_AUDIT_TRAIL")]
+            UpdateAuditTrail,
+            [EnumMember(Value = "UPDATE_AUDIT_PROFILE")]
+            UpdateAuditProfile,
+            [EnumMember(Value = "AUDIT_CHANGE_COMPARTMENT")]
+            AuditChangeCompartment,
+            [EnumMember(Value = "CREATE_REPORT_DEFINITION")]
+            CreateReportDefinition,
+            [EnumMember(Value = "UPDATE_REPORT_DEFINITION")]
+            UpdateReportDefinition,
+            [EnumMember(Value = "CHANGE_REPORT_DEFINITION_COMPARTMENT")]
+            ChangeReportDefinitionCompartment,
+            [EnumMember(Value = "DELETE_REPORT_DEFINITION")]
+            DeleteReportDefinition,
+            [EnumMember(Value = "GENERATE_REPORT")]
+            GenerateReport,
+            [EnumMember(Value = "CHANGE_REPORT_COMPARTMENT")]
+            ChangeReportCompartment,
+            [EnumMember(Value = "DELETE_ARCHIVE_RETRIEVAL")]
+            DeleteArchiveRetrieval,
+            [EnumMember(Value = "CREATE_ARCHIVE_RETRIEVAL")]
+            CreateArchiveRetrieval,
+            [EnumMember(Value = "UPDATE_ARCHIVE_RETRIEVAL")]
+            UpdateArchiveRetrieval,
+            [EnumMember(Value = "CHANGE_ARCHIVE_RETRIEVAL_COMPARTMENT")]
+            ChangeArchiveRetrievalCompartment,
+            [EnumMember(Value = "UPDATE_ALERT")]
+            UpdateAlert,
+            [EnumMember(Value = "TARGET_ALERT_POLICY_ASSOCIATION")]
+            TargetAlertPolicyAssociation,
+            [EnumMember(Value = "CREATE_SENSITIVE_DATA_MODEL")]
+            CreateSensitiveDataModel,
+            [EnumMember(Value = "UPDATE_SENSITIVE_DATA_MODEL")]
+            UpdateSensitiveDataModel,
+            [EnumMember(Value = "DELETE_SENSITIVE_DATA_MODEL")]
+            DeleteSensitiveDataModel,
+            [EnumMember(Value = "UPLOAD_SENSITIVE_DATA_MODEL")]
+            UploadSensitiveDataModel,
+            [EnumMember(Value = "GENERATE_SENSITIVE_DATA_MODEL_FOR_DOWNLOAD")]
+            GenerateSensitiveDataModelForDownload,
+            [EnumMember(Value = "CREATE_SENSITIVE_COLUMN")]
+            CreateSensitiveColumn,
+            [EnumMember(Value = "UPDATE_SENSITIVE_COLUMN")]
+            UpdateSensitiveColumn,
+            [EnumMember(Value = "PATCH_SENSITIVE_COLUMNS")]
+            PatchSensitiveColumns,
+            [EnumMember(Value = "CREATE_DISCOVERY_JOB")]
+            CreateDiscoveryJob,
+            [EnumMember(Value = "DELETE_DISCOVERY_JOB")]
+            DeleteDiscoveryJob,
+            [EnumMember(Value = "PATCH_DISCOVERY_JOB_RESULT")]
+            PatchDiscoveryJobResult,
+            [EnumMember(Value = "APPLY_DISCOVERY_JOB_RESULT")]
+            ApplyDiscoveryJobResult,
+            [EnumMember(Value = "GENERATE_DISCOVERY_REPORT")]
+            GenerateDiscoveryReport,
+            [EnumMember(Value = "CREATE_SENSITIVE_TYPE")]
+            CreateSensitiveType,
+            [EnumMember(Value = "UPDATE_SENSITIVE_TYPE")]
+            UpdateSensitiveType,
+            [EnumMember(Value = "CREATE_MASKING_POLICY")]
+            CreateMaskingPolicy,
+            [EnumMember(Value = "UPDATE_MASKING_POLICY")]
+            UpdateMaskingPolicy,
+            [EnumMember(Value = "DELETE_MASKING_POLICY")]
+            DeleteMaskingPolicy,
+            [EnumMember(Value = "UPLOAD_MASKING_POLICY")]
+            UploadMaskingPolicy,
+            [EnumMember(Value = "GENERATE_MASKING_POLICY_FOR_DOWNLOAD")]
+            GenerateMaskingPolicyForDownload,
+            [EnumMember(Value = "CREATE_MASKING_COLUMN")]
+            CreateMaskingColumn,
+            [EnumMember(Value = "UPDATE_MASKING_COLUMN")]
+            UpdateMaskingColumn,
+            [EnumMember(Value = "PATCH_MASKING_COLUMNS")]
+            PatchMaskingColumns,
+            [EnumMember(Value = "GENERATE_MASKING_REPORT")]
+            GenerateMaskingReport,
+            [EnumMember(Value = "CREATE_LIBRARY_MASKING_FORMAT")]
+            CreateLibraryMaskingFormat,
+            [EnumMember(Value = "UPDATE_LIBRARY_MASKING_FORMAT")]
+            UpdateLibraryMaskingFormat,
+            [EnumMember(Value = "ADD_COLUMNS_FROM_SDM")]
+            AddColumnsFromSdm,
+            [EnumMember(Value = "MASKING_JOB")]
+            MaskingJob
         };
 
         /// <value>
@@ -129,7 +233,15 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
-            Succeeded
+            Succeeded,
+            [EnumMember(Value = "CANCELING")]
+            Canceling,
+            [EnumMember(Value = "CANCELED")]
+            Canceled,
+            [EnumMember(Value = "SUSPENDING")]
+            Suspending,
+            [EnumMember(Value = "SUSPENDED")]
+            Suspended
         };
 
         /// <value>

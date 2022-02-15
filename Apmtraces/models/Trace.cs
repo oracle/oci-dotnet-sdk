@@ -24,8 +24,8 @@ namespace Oci.ApmtracesService.Models
         
         /// <value>
         /// Unique identifier (traceId) for the trace that represents the span set.  Note that this field is
-        /// defined as traceKey in the API to comply with OCI API fields naming conventions.  The traceKey maps to
-        /// the traceId in the APM repository.
+        /// defined as traceKey in the API and it maps to the traceId in the trace data in Application Performance
+        /// Monitoring.
         /// 
         /// </value>
         /// <remarks>
@@ -36,29 +36,29 @@ namespace Oci.ApmtracesService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// Root span name associated with the trace. This is usually the flow start operation name.
-        /// Null if the root span is not yet completed.
+        /// Root span name associated with the trace. This is the flow start operation name.
+        /// Null is displayed if the root span is not yet completed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rootSpanOperationName")]
         public string RootSpanOperationName { get; set; }
         
         /// <value>
-        /// Start time of the earliest span in this span collection.
+        /// Start time of the earliest span in the span collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEarliestSpanStarted")]
         public System.Nullable<System.DateTime> TimeEarliestSpanStarted { get; set; }
         
         /// <value>
-        /// End time of the span that most recently ended in this span collection.
+        /// End time of the span that most recently ended in the span collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLatestSpanEnded")]
         public System.Nullable<System.DateTime> TimeLatestSpanEnded { get; set; }
         
         /// <value>
-        /// The number of spans that have been processed by the system for this trace.  Note that there
+        /// The number of spans that have been processed by the system for the trace.  Note that there
         /// could be additional spans that have not been processed or reported yet if the trace is still
         /// in progress.
         /// 
@@ -67,30 +67,29 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<int> SpanCount { get; set; }
         
         /// <value>
-        /// The number of spans with error that have been processed by the system for this trace.
-        /// Note that the number of spans with errors may be less than the total number of actual spans
-        /// in this trace.
+        /// The number of spans with errors that have been processed by the system for the trace.
+        /// Note that the number of spans with errors will be less than or equal to the total number of spans in the trace. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "errorSpanCount")]
         public System.Nullable<int> ErrorSpanCount { get; set; }
         
         /// <value>
-        /// Service associated with this trace.
+        /// Service associated with the trace.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rootSpanServiceName")]
         public string RootSpanServiceName { get; set; }
         
         /// <value>
-        /// Start time of the root span for this span collection.
+        /// Start time of the root span for the span collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRootSpanStarted")]
         public System.Nullable<System.DateTime> TimeRootSpanStarted { get; set; }
         
         /// <value>
-        /// End time of the root span for this span collection.
+        /// End time of the root span for the span collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRootSpanEnded")]
@@ -111,7 +110,7 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<int> TraceDurationInMs { get; set; }
         
         /// <value>
-        /// Boolean flag that indicates whether the trace errored out.
+        /// Boolean flag that indicates whether the trace has an error.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isFault")]
@@ -120,7 +119,7 @@ namespace Oci.ApmtracesService.Models
         /// <value>
         /// The status of the trace.
         /// The trace statuses are defined as follows:
-        /// complete \u2013 a root span has been recorded, but there is no information on the errors.
+        /// complete - a root span has been recorded, but there is no information on the errors.
         /// success - a complete root span is recorded there is a successful error type and error code - HTTP 200.
         /// incomplete - the root span has not yet been received.
         /// error - the root span returned with an error. There may or may not be an associated error code or error type.
@@ -144,7 +143,7 @@ namespace Oci.ApmtracesService.Models
         public string TraceErrorCode { get; set; }
         
         /// <value>
-        /// A summary of the spans by service
+        /// A summary of the spans by service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceSummaries")]

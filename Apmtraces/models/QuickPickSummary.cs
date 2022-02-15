@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Summary of quick pick query objects that contains the quick pick queries.
+    /// Summary of the Quick Pick query objects.
     /// 
     /// </summary>
     public class QuickPickSummary 
     {
         
         /// <value>
-        /// Quick pick name for the query.
+        /// Quick Pick name for the query.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.ApmtracesService.Models
         public string QuickPickName { get; set; }
         
         /// <value>
-        /// Query for the quick pick.
+        /// Query for the Quick Pick.
         /// 
         /// </value>
         /// <remarks>

@@ -100,7 +100,7 @@ namespace Oci.DatasafeService.Requests
         public string UserName { get; set; }
         
         /// <value>
-        /// A filter to return only items that match the specified target.
+        /// A filter to return only items related to a specific target OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetId")]
         public string TargetId { get; set; }

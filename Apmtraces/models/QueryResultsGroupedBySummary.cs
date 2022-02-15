@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Summary of the attribute based on which the query results are grouped by.
+    /// Summary of the attribute based on which the query results are grouped.
     /// 
     /// </summary>
     public class QueryResultsGroupedBySummary 
     {
         
         /// <value>
-        /// Column or attribute in the query result which is a group by value.
+        /// Column or attribute in the query result, which is a group by value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryResultsGroupedByColumn")]

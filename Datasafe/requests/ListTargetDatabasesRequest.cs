@@ -30,6 +30,12 @@ namespace Oci.DatasafeService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// A filter to return the target databases that are associated to the resource id passed in as a parameter value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "associatedResourceId")]
+        public string AssociatedResourceId { get; set; }
+        
+        /// <value>
         /// A filter to return the target database that matches the specified OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseId")]

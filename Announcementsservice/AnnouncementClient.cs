@@ -43,7 +43,7 @@ namespace Oci.AnnouncementsService
             {
                 ServiceName = "ANNOUNCEMENT",
                 ServiceEndpointPrefix = "announcements",
-                ServiceEndpointTemplate = "https://announcements.{region}.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://announcements.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -67,6 +67,8 @@ namespace Oci.AnnouncementsService
 
         /// <summary>
         /// Gets the details of a specific announcement.
+        /// &lt;br/&gt;
+        /// This call is subject to an Announcements limit that applies to the total number of requests across all read or write operations. Announcements might throttle this call to reject an otherwise valid request when the total rate of operations exceeds 20 requests per second for a given user. The service might also throttle this call to reject an otherwise valid request when the total rate of operations exceeds 100 requests per second for a given tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -108,6 +110,8 @@ namespace Oci.AnnouncementsService
 
         /// <summary>
         /// Gets information about whether a specific announcement was acknowledged by a user.
+        /// &lt;br/&gt;
+        /// This call is subject to an Announcements limit that applies to the total number of requests across all read or write operations. Announcements might throttle this call to reject an otherwise valid request when the total rate of operations exceeds 20 requests per second for a given user. The service might also throttle this call to reject an otherwise valid request when the total rate of operations exceeds 100 requests per second for a given tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -149,6 +153,8 @@ namespace Oci.AnnouncementsService
 
         /// <summary>
         /// Gets a list of announcements for the current tenancy.
+        /// &lt;br/&gt;
+        /// This call is subject to an Announcements limit that applies to the total number of requests across all read or write operations. Announcements might throttle this call to reject an otherwise valid request when the total rate of operations exceeds 20 requests per second for a given user. The service might also throttle this call to reject an otherwise valid request when the total rate of operations exceeds 100 requests per second for a given tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -190,6 +196,8 @@ namespace Oci.AnnouncementsService
 
         /// <summary>
         /// Updates the status of the specified announcement with regard to whether it has been marked as read.
+        /// &lt;br/&gt;
+        /// This call is subject to an Announcements limit that applies to the total number of requests across all read or write operations. Announcements might throttle this call to reject an otherwise valid request when the total rate of operations exceeds 20 requests per second for a given user. The service might also throttle this call to reject an otherwise valid request when the total rate of operations exceeds 100 requests per second for a given tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

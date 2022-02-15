@@ -20,8 +20,7 @@ namespace Oci.AnnouncementsService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment. Because announcements are specific to a tenancy, this is the
-        /// OCID of the root compartment.
+        /// The OCID of the compartment.
         /// 
         /// </value>
         /// <remarks>
@@ -132,6 +131,42 @@ namespace Oci.AnnouncementsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeOneLatestTime")]
         public System.Nullable<System.DateTime> TimeOneLatestTime { get; set; }
+        
+        /// <value>
+        /// A filter to return only announcements that match a specific environment name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "environmentName")]
+        public string EnvironmentName { get; set; }
+        
+        /// <value>
+        /// A filter to return only announcements affecting a specific service.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "service")]
+        public string Service { get; set; }
+        
+        ///
+        /// <value>
+        /// A filter to return only announcements affecting a specific platform.
+        /// </value>
+        ///
+        public enum PlatformTypeEnum {
+            [EnumMember(Value = "IAAS")]
+            Iaas,
+            [EnumMember(Value = "SAAS")]
+            Saas
+        };
+
+        /// <value>
+        /// A filter to return only announcements affecting a specific platform.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType")]
+        public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
+        
+        /// <value>
+        /// Exclude The type of announcement.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "excludeAnnouncementTypes", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ExcludeAnnouncementTypes { get; set; }
         
         /// <value>
         /// The unique Oracle-assigned identifier for the request. If you need to contact Oracle about

@@ -24,8 +24,8 @@ namespace Oci.ApmtracesService.Models
         
         /// <value>
         /// Unique identifier (spanId) for the span.  Note that this field is
-        /// defined as spanKey in the API to comply with OCI API fields naming conventions.
-        /// The spanKey maps to the spanId in the APM repository.
+        /// defined as spanKey in the API and it maps to the spanId in the trace data
+        /// in Application Performance Monitoring.
         /// 
         /// </value>
         /// <remarks>
@@ -87,7 +87,7 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<long> DurationInMs { get; set; }
         
         /// <value>
-        /// Span name associated with the trace.  This is usually the method or uri of the request.
+        /// Span name associated with the trace.  This is usually the method or URI of the request.
         /// 
         /// </value>
         /// <remarks>
@@ -126,7 +126,7 @@ namespace Oci.ApmtracesService.Models
         public System.Collections.Generic.List<SpanLogCollection> Logs { get; set; }
         
         /// <value>
-        /// Indicates if the span has an error
+        /// Indicates if the span has an error.
         /// 
         /// </value>
         /// <remarks>

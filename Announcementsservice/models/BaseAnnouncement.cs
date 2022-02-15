@@ -245,6 +245,33 @@ namespace Oci.AnnouncementsService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// The name of the environment that this announcement pertains to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "environmentName")]
+        public string EnvironmentName { get; set; }
+                ///
+        /// <value>
+        /// The platform type that this announcement pertains to.
+        /// 
+        /// </value>
+        ///
+        public enum PlatformTypeEnum {
+            [EnumMember(Value = "IAAS")]
+            Iaas,
+            [EnumMember(Value = "SAAS")]
+            Saas
+        };
+
+        /// <value>
+        /// The platform type that this announcement pertains to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "platformType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
+        
     }
 
     public class BaseAnnouncementModelConverter : JsonConverter

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// A summary of the spans in a trace by service.
+    /// Summary of the spans in a trace by service.
     /// 
     /// </summary>
     public class TraceServiceSummary 
@@ -34,7 +34,7 @@ namespace Oci.ApmtracesService.Models
         public string SpanServiceName { get; set; }
         
         /// <value>
-        /// Number of spans for serviceName in this trace.
+        /// Number of spans for serviceName in the trace.
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<long> TotalSpans { get; set; }
         
         /// <value>
-        /// Number of spans with errorsfor serviceName in this trace.
+        /// Number of spans with errors for serviceName in the trace.
         /// 
         /// </value>
         /// <remarks>

@@ -24,14 +24,14 @@ namespace Oci.ApmtracesService.Models
         
         /// <value>
         /// A collection of QueryResultRowTypeSummary objects that describe the type and properties of the individual row elements of the query rows
-        /// being returned.  The ith element in this list contains the QueryResultRowTypeSummary of the ith key value pair in the QueryResultRowData map.
+        /// being returned.  The i-th element in this list contains the QueryResultRowTypeSummary of the i-th key-value pair in the QueryResultRowData map.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryResultRowTypeSummaries")]
         public System.Collections.Generic.List<QueryResultRowTypeSummary> QueryResultRowTypeSummaries { get; set; }
         
         /// <value>
-        /// Source of the query result set (traces, spans, etc).
+        /// Source of the query result set (traces, spans, and so on).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceName")]

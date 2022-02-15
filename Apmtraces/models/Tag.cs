@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Definition of a tag which is a key value pair.
+    /// Definition of a tag which is a key-value pair.
     /// 
     /// </summary>
     public class Tag 

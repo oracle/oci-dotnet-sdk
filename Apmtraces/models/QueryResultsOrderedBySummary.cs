@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmtracesService.Models
 {
     /// <summary>
-    /// Summary of the sort attribute and order by which the query results are organized.
+    /// Summary of the sort and order by attribute based on which the query results are organized.
     /// 
     /// </summary>
     public class QueryResultsOrderedBySummary 
     {
         
         /// <value>
-        /// Attribute by which the query result is sorted by.
+        /// Attribute by which the query results are sorted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryResultsOrderedBy")]

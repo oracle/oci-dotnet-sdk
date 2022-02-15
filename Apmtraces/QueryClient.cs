@@ -63,7 +63,7 @@ namespace Oci.ApmtracesService
         }
 
         /// <summary>
-        /// Returns a list of predefined quick pick queries intended to assist the user
+        /// Returns a list of predefined Quick Pick queries intended to assist the user
         /// to choose a query to run.  There is no sorting applied on the results.
         /// 
         /// </summary>
@@ -105,8 +105,8 @@ namespace Oci.ApmtracesService
         }
 
         /// <summary>
-        /// Given a query, constructed according to the APM Defined Query Syntax, retrieves the results - selected attributes,
-        /// and aggregations of the queried entity.  Query Results are filtered by the filter criteria specified in the where clause.
+        /// Retrieves the results (selected attributes and aggregations) of a query constructed according to the Application Performance Monitoring Defined Query Syntax.
+        /// Query results are filtered by the filter criteria specified in the where clause.
         /// Further query results are grouped by the attributes specified in the group by clause.  Finally,
         /// ordering (asc/desc) is done by the specified attributes in the order by clause.
         /// 
@@ -144,52 +144,6 @@ namespace Oci.ApmtracesService
             catch (Exception e)
             {
                 logger.Error($"Query failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// THIS API ENDPOINT WILL BE DEPRECATED AND INSTEAD /queries/actions/runQuery as defined below WILL BE USED GOING FORWARD.  THIS EXISTS JUST
-        /// AS A TEMPORARY PLACEHOLDER SO AS TO BE BACKWARDS COMPATIBLE WITH THE UI BETWEEN RELEASE CYCLES.
-        /// Given a query, constructed according to the APM Defined Query Syntax, retrieves the results - selected attributes,
-        /// and aggregations of the queried entity.  Query Results are filtered by the filter criteria specified in the where clause.
-        /// Further query results are grouped by the attributes specified in the group by clause.  Finally,
-        /// ordering (asc/desc) is done by the specified attributes in the order by clause.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmtraces/QueryOld.cs.html">here</a> to see an example of how to use QueryOld API.</example>
-        public async Task<QueryOldResponse> QueryOld(QueryOldRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called queryOld");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/queries/action/runQuery".Trim('/')));
-            HttpMethod method = new HttpMethod("POST");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
-                return Converter.FromHttpResponseMessage<QueryOldResponse>(responseMessage);
-            }
-            catch (Exception e)
-            {
-                logger.Error($"QueryOld failed with error: {e.Message}");
                 throw;
             }
         }
