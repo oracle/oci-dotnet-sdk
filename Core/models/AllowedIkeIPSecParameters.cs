@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Allowed IKE IPSec Parameters
+    /// Lists the current allowed and default IPSec tunnel parameters.
     /// </summary>
     public class AllowedIkeIPSecParameters 
     {

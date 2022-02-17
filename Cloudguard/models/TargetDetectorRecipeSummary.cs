@@ -114,5 +114,11 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// The number of days for which source data is retained
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDataRetention")]
+        public System.Nullable<int> SourceDataRetention { get; set; }
+        
     }
 }

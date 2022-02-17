@@ -16,25 +16,26 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Detailed Tunnel SA
+    /// A summary of the IPSec tunnel security association details.
+    /// 
     /// </summary>
     public class TunnelSecurityAssociationSummary 
     {
         
         /// <value>
-        /// IP and mask of the Partner Subnet for Policy Based VPNs or Static Routes
+        /// The IP address and mask of the partner subnet used in policy based VPNs or static routes.
         /// </value>
         [JsonProperty(PropertyName = "cpeSubnet")]
         public string CpeSubnet { get; set; }
         
         /// <value>
-        /// IP and mask of the Local Subnet for Policy Based VPNs or Static Routes
+        /// The IP address and mask of the local subnet used in policy based VPNs or static routes.
         /// </value>
         [JsonProperty(PropertyName = "oracleSubnet")]
         public string OracleSubnet { get; set; }
                 ///
         /// <value>
-        /// Phase 1 Status of the Tunnel
+        /// The IPSec tunnel's phase one status.
         /// </value>
         ///
         public enum TunnelSaStatusEnum {
@@ -53,20 +54,21 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase 1 Status of the Tunnel
+        /// The IPSec tunnel's phase one status.
         /// </value>
         [JsonProperty(PropertyName = "tunnelSaStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TunnelSaStatusEnum> TunnelSaStatus { get; set; }
         
         /// <value>
-        /// Current state if status is not up, including phase1/phase2 and possible reason for tunnel not up
+        /// Current state if the IPSec tunnel status is not `UP`, including phase one and phase two details and a possible reason the tunnel is not `UP`.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "tunnelSaErrorInfo")]
         public string TunnelSaErrorInfo { get; set; }
         
         /// <value>
-        /// Seconds in current state
+        /// Time in the current state, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "time")]
         public string Time { get; set; }

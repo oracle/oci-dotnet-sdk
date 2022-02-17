@@ -22,7 +22,7 @@ namespace Oci.ApmcontrolplaneService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed at
+        /// A machine-usable code for the error that occurred. Error codes are listed at
         /// [API Errors](https://docs.cloud.oracle.com/iaas/Content/API/References/apierrors.htm)
         /// 
         /// </value>

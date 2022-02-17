@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Ipsec tunnels error details
+    /// Details for an error on an IPSec tunnel.
     /// </summary>
     public class IPSecConnectionTunnelErrorDetails 
     {
         
         /// <value>
-        /// unique id generated for each error report
+        /// Unique ID generated for each error report.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// unique code describes error type
+        /// Unique code describes the error type.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CoreService.Models
         public string ErrorCode { get; set; }
         
         /// <value>
-        /// detailed description of the error
+        /// A detailed description of the error.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CoreService.Models
         public string ErrorDescription { get; set; }
         
         /// <value>
-        /// how to resolve the error
+        /// Resolution for the error.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.CoreService.Models
         public string Solution { get; set; }
         
         /// <value>
-        /// link to oracle resources
+        /// Link to more Oracle resources or relevant documentation.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         public string OciResourcesLink { get; set; }
         
         /// <value>
-        /// timestamp when error occurred.
+        /// Timestamp when the error occurred.
         /// </value>
         /// <remarks>
         /// Required

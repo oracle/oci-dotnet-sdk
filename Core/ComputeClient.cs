@@ -3228,6 +3228,9 @@ namespace Oci.CoreService
         /// To preserve the boot volume associated with the instance, specify &#x60;true&#x60; for &#x60;PreserveBootVolumeQueryParam&#x60;.
         /// To delete the boot volume when the instance is deleted, specify &#x60;false&#x60; or do not specify a value for &#x60;PreserveBootVolumeQueryParam&#x60;.
         /// &lt;br/&gt;
+        /// To preserve data volumes created with the instance, specify &#x60;true&#x60; for &#x60;PreserveDataVolumesQueryParam&#x60;.
+        /// To delete the data volumes when the instance itself is deleted, specify &#x60;false&#x60; or do not specify a value for &#x60;PreserveDataVolumesQueryParam&#x60;.
+        /// &lt;br/&gt;
         /// This is an asynchronous operation. The instance&#39;s &#x60;lifecycleState&#x60; will change to TERMINATING temporarily
         /// until the instance is completely removed.
         /// 

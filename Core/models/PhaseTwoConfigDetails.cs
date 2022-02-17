@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Phase 2 Configuration Details
+    /// Configuration details for IPSec phase two configuration parameters.
     /// </summary>
     public class PhaseTwoConfigDetails 
     {
         
         /// <value>
-        /// Indicates whether custom phase two configuration is enabled.
+        /// Indicates whether custom configuration is enabled for phase two options.
         /// </value>
         [JsonProperty(PropertyName = "isCustomPhaseTwoConfig")]
         public System.Nullable<bool> IsCustomPhaseTwoConfig { get; set; }
                 ///
         /// <value>
-        /// Phase two authentication algorithm supported during tunnel negotiation.
+        /// The authentication algorithm proposed during phase two tunnel negotiation.
         /// 
         /// </value>
         ///
@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase two authentication algorithm supported during tunnel negotiation.
+        /// The authentication algorithm proposed during phase two tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "authenticationAlgorithm")]
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<AuthenticationAlgorithmEnum> AuthenticationAlgorithm { get; set; }
                 ///
         /// <value>
-        /// Phase two encryption algorithm supported during tunnel negotiation.
+        /// The encryption algorithm proposed during phase two tunnel negotiation.
         /// 
         /// </value>
         ///
@@ -68,7 +68,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase two encryption algorithm supported during tunnel negotiation.
+        /// The encryption algorithm proposed during phase two tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionAlgorithm")]
@@ -76,7 +76,8 @@ namespace Oci.CoreService.Models
         public System.Nullable<EncryptionAlgorithmEnum> EncryptionAlgorithm { get; set; }
         
         /// <value>
-        /// Lifetime in seconds for IPSec phase two.
+        /// Lifetime in seconds for the IPSec session key set in phase two. The default is 3600 which is equivalent to 1 hour.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifetimeInSeconds")]
         public System.Nullable<int> LifetimeInSeconds { get; set; }
@@ -88,7 +89,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsPfsEnabled { get; set; }
                 ///
         /// <value>
-        /// Diffie-Hellman group used for PFS.
+        /// The Diffie-Hellman group used for PFS, if PFS is enabled.
         /// </value>
         ///
         public enum PfsDhGroupEnum {
@@ -107,7 +108,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Diffie-Hellman group used for PFS.
+        /// The Diffie-Hellman group used for PFS, if PFS is enabled.
         /// </value>
         [JsonProperty(PropertyName = "pfsDhGroup")]
         [JsonConverter(typeof(StringEnumConverter))]

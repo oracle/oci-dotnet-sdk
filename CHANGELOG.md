@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 32.1.0 - 2022-02-22
+### Added
+
+- Support for the Data Connectivity Management service
+- Support for the AI Speech service
+- Support for disabling crash recovery in the MySQL Database service
+- Support for detector recipes of type `threat`, new detector rule of type `rogue user`, and sightings operations in the Cloud Guard service
+- Support for more VM shape configurations when listing shapes in the Compute service
+- Support for customer-managed encryption keys in the Analytics Cloud service
+- Support for FastConnect device information in the Networking service
+
 ## 32.0.0 - 2022-02-15
 ### Added
 - Support for the AI Vision service

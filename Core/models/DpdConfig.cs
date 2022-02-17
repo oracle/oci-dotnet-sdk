@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// DPD Configuration Details
+    /// These configuration details are used for dead peer detection (DPD). DPD periodically checks the stability of the connection to the customer premises (CPE), and may be used to detect that the link to the CPE has gone down.
+    /// 
     /// </summary>
     public class DpdConfig 
     {
                 ///
         /// <value>
-        /// dpd mode
+        /// This option defines whether DPD can be initiated from the Oracle side of the connection.
+        /// 
         /// </value>
         ///
         public enum DpdModeEnum {
@@ -33,14 +35,16 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// dpd mode
+        /// This option defines whether DPD can be initiated from the Oracle side of the connection.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dpdMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DpdModeEnum> DpdMode { get; set; }
         
         /// <value>
-        /// DPD Timeout in seconds.
+        /// DPD timeout in seconds. This sets the longest interval between CPE device health messages before the IPSec connection indicates it has lost contact with the CPE. The default is 20 seconds.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dpdTimeoutInSec")]
         public System.Nullable<int> DpdTimeoutInSec { get; set; }

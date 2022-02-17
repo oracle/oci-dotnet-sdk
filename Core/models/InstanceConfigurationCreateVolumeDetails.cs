@@ -90,6 +90,8 @@ namespace Oci.CoreService.Models
         ///   * `10`: Represents Balanced option.
         /// <br/>
         ///   * `20`: Represents Higher Performance option.
+        /// <br/>
+        /// For performance autotune enabled volumes, It would be the Default(Minimum) VPUs/GB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]

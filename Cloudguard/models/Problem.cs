@@ -67,6 +67,36 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
+        /// Risk Score for the problem
+        /// </value>
+        [JsonProperty(PropertyName = "riskScore")]
+        public System.Double RiskScore { get; set; }
+        
+        /// <value>
+        /// The date and time for the peak risk score that is observed. Format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "peakRiskScoreDate")]
+        public string PeakRiskScoreDate { get; set; }
+        
+        /// <value>
+        /// Peak risk score for the problem
+        /// </value>
+        [JsonProperty(PropertyName = "peakRiskScore")]
+        public System.Double PeakRiskScore { get; set; }
+        
+        /// <value>
+        /// The date and time when the problem will be auto resolved. Format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "autoResolveDate")]
+        public string AutoResolveDate { get; set; }
+        
+        /// <value>
+        /// Number of days for which peak score is calculated for the problem
+        /// </value>
+        [JsonProperty(PropertyName = "peakRiskScoreLookupPeriodInDays")]
+        public System.Nullable<int> PeakRiskScoreLookupPeriodInDays { get; set; }
+        
+        /// <value>
         /// Identifier of the Resource
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]

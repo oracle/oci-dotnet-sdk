@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Details for adding a CIDR block to a VCN.
+    /// Details used to add a CIDR block to a VCN.
     /// </summary>
     public class AddVcnCidrDetails 
     {

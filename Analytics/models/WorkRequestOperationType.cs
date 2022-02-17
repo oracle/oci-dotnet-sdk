@@ -42,6 +42,8 @@ namespace Oci.AnalyticsService.Models
       [EnumMember(Value = "UPDATE_PRIVATE_ACCESS_CHANNEL")]
       UpdatePrivateAccessChannel,
       [EnumMember(Value = "DELETE_PRIVATE_ACCESS_CHANNEL")]
-      DeletePrivateAccessChannel
+      DeletePrivateAccessChannel,
+      [EnumMember(Value = "UPDATE_INSTANCE_ENCRYPTION_KEY")]
+      UpdateInstanceEncryptionKey
   }
 }

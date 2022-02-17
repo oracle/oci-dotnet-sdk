@@ -4086,7 +4086,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// The allowed parameters for IKE IPSec
+        /// The parameters allowed for IKE IPSec tunnels.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4974,7 +4974,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Get the identified error for the specified IPSec Tunnel ID.
+        /// Gets the identified error for the specified IPSec tunnel ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7088,7 +7088,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// The routes advertised to the Customer and the routes received from the Customer.
+        /// The routes advertised to the on-premises network and the routes received from the on-premises network.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7129,7 +7129,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the tunnel Security Associations information for the specified IPSec Tunnel ID.
+        /// Lists the tunnel security associations information for the specified IPSec tunnel ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

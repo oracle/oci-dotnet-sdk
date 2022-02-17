@@ -159,5 +159,73 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "platformConfigOptions")]
         public ShapePlatformConfigOptions PlatformConfigOptions { get; set; }
         
+        /// <value>
+        /// Whether billing continues when the instances that use this shape are in the stopped state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBilledForStoppedInstance")]
+        public System.Nullable<bool> IsBilledForStoppedInstance { get; set; }
+                ///
+        /// <value>
+        /// How instances that use this shape are charged.
+        /// 
+        /// </value>
+        ///
+        public enum BillingTypeEnum {
+            [EnumMember(Value = "ALWAYS_FREE")]
+            AlwaysFree,
+            [EnumMember(Value = "LIMITED_FREE")]
+            LimitedFree,
+            [EnumMember(Value = "PAID")]
+            Paid
+        };
+
+        /// <value>
+        /// How instances that use this shape are charged.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "billingType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BillingTypeEnum> BillingType { get; set; }
+        
+        /// <value>
+        /// The list of of compartment quotas for the shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "quotaNames")]
+        public System.Collections.Generic.List<string> QuotaNames { get; set; }
+        
+        /// <value>
+        /// Whether the shape supports creating subcore or burstable instances. A [burstable instance](https://docs.cloud.oracle.com/iaas/Content/Compute/References/burstable-instances.htm)
+        /// is a virtual machine (VM) instance that provides a baseline level of CPU performance with the ability to burst to a higher level to support occasional
+        /// spikes in usage.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSubcore")]
+        public System.Nullable<bool> IsSubcore { get; set; }
+        
+        /// <value>
+        /// Whether the shape supports creating flexible instances. A [flexible shape](https://docs.cloud.oracle.com/iaas/Content/Compute/References/computeshapes.htm#flexible)
+        /// is a shape that lets you customize the number of OCPUs and the amount of memory when launching or resizing your instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isFlexible")]
+        public System.Nullable<bool> IsFlexible { get; set; }
+        
+        /// <value>
+        /// The list of compatible shapes that this shape can be changed to. For more information,
+        /// see [Changing the Shape of an Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/resizinginstances.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resizeCompatibleShapes")]
+        public System.Collections.Generic.List<string> ResizeCompatibleShapes { get; set; }
+        
+        /// <value>
+        /// The list of shapes and shape details (if applicable) that Oracle recommends that you use as an alternative to the current shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "recommendedAlternatives")]
+        public System.Collections.Generic.List<ShapeAlternativeObject> RecommendedAlternatives { get; set; }
+        
     }
 }

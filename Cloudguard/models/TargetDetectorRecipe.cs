@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of detector recipe
+        /// Display name of detector recipe.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Detector recipe description
+        /// Detector recipe description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -119,6 +119,12 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The number of days for which source data is retained
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDataRetention")]
+        public System.Nullable<int> SourceDataRetention { get; set; }
         
     }
 }

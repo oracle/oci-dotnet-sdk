@@ -16,37 +16,38 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The routes advertised to the Customer and the routes received from the Customer
+    /// A summary of the routes advertised to and received from the on-premises network.
+    /// 
     /// </summary>
     public class TunnelRouteSummary 
     {
         
         /// <value>
-        /// BGP Network Layer Reachability Information
+        /// The BGP network layer reachability information.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
         
         /// <value>
-        /// The age of the route
+        /// The age of the route.
         /// </value>
         [JsonProperty(PropertyName = "age")]
         public System.Nullable<long> Age { get; set; }
         
         /// <value>
-        /// Is this the best route
+        /// Indicates this is the best route.
         /// </value>
         [JsonProperty(PropertyName = "isBestPath")]
         public System.Nullable<bool> IsBestPath { get; set; }
         
         /// <value>
-        /// List of ASNs in AS Path
+        /// A list of ASNs in AS_Path.
         /// </value>
         [JsonProperty(PropertyName = "asPath")]
         public System.Collections.Generic.List<int> AsPath { get; set; }
                 ///
         /// <value>
-        /// Route advertiser
+        /// The source of the route advertisement.
         /// </value>
         ///
         public enum AdvertiserEnum {
@@ -57,7 +58,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Route advertiser
+        /// The source of the route advertisement.
         /// </value>
         [JsonProperty(PropertyName = "advertiser")]
         [JsonConverter(typeof(StringEnumConverter))]

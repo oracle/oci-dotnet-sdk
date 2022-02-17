@@ -16,44 +16,46 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Tunnel detail information specific to IPSec phase 2.
+    /// IPsec tunnel detail information specific to phase two.
     /// </summary>
     public class TunnelPhaseTwoDetails 
     {
         
         /// <value>
         /// Indicates whether custom phase two configuration is enabled.
+        /// If this option is not enabled, default settings are proposed.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isCustomPhaseTwoConfig")]
         public System.Nullable<bool> IsCustomPhaseTwoConfig { get; set; }
         
         /// <value>
-        /// The total configured lifetime of an IKE security association.
+        /// The total configured lifetime of the IKE security association.
         /// </value>
         [JsonProperty(PropertyName = "lifetime")]
         public System.Nullable<long> Lifetime { get; set; }
         
         /// <value>
-        /// The lifetime remaining before the key is refreshed.
+        /// The remaining lifetime before the key is refreshed.
         /// </value>
         [JsonProperty(PropertyName = "remainingLifetime")]
         public System.Nullable<long> RemainingLifetime { get; set; }
         
         /// <value>
-        /// Phase Two authentication algorithm supported during tunnel negotiation.
+        /// Phase two authentication algorithm proposed during tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "customAuthenticationAlgorithm")]
         public string CustomAuthenticationAlgorithm { get; set; }
         
         /// <value>
-        /// The negotiated authentication algorithm.
+        /// The negotiated phase two authentication algorithm.
         /// </value>
         [JsonProperty(PropertyName = "negotiatedAuthenticationAlgorithm")]
         public string NegotiatedAuthenticationAlgorithm { get; set; }
         
         /// <value>
-        /// Custom Encryption Algorithm
+        /// The proposed custom phase two encryption algorithm.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "customEncryptionAlgorithm")]
@@ -66,7 +68,7 @@ namespace Oci.CoreService.Models
         public string NegotiatedEncryptionAlgorithm { get; set; }
         
         /// <value>
-        /// Proposed Diffie-Hellman group.
+        /// The proposed Diffie-Hellman group.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dhGroup")]
@@ -79,19 +81,19 @@ namespace Oci.CoreService.Models
         public string NegotiatedDhGroup { get; set; }
         
         /// <value>
-        /// ESP Phase 2 established
+        /// Indicates that ESP phase two is established.
         /// </value>
         [JsonProperty(PropertyName = "isEspEstablished")]
         public System.Nullable<bool> IsEspEstablished { get; set; }
         
         /// <value>
-        /// Is PFS (perfect forward secrecy) enabled
+        /// Indicates that PFS (perfect forward secrecy) is enabled.
         /// </value>
         [JsonProperty(PropertyName = "isPfsEnabled")]
         public System.Nullable<bool> IsPfsEnabled { get; set; }
         
         /// <value>
-        /// The date and time we retrieved the remaining lifetime, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the remaining lifetime was last retrieved, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
