@@ -16,15 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The platform configuration used when launching a bare metal instance with an E4 shape
-    /// (the AMD Milan platform).
+    /// The platform configuration used when launching a bare metal instance with an E4 shape.
     /// 
     /// </summary>
     public class InstanceConfigurationAmdMilanBmLaunchInstancePlatformConfig : InstanceConfigurationLaunchInstancePlatformConfig
     {
                 ///
         /// <value>
-        /// The number of NUMA nodes per socket.
+        /// The number of NUMA nodes per socket (NPS).
         /// 
         /// </value>
         ///
@@ -40,7 +39,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The number of NUMA nodes per socket.
+        /// The number of NUMA nodes per socket (NPS).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "numaNodesPerSocket")]

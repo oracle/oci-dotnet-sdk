@@ -30,7 +30,7 @@ namespace Oci.ApmcontrolplaneService.Requests
         public System.Collections.Generic.List<GenerateDataKeyDetails> GenerateDataKeysListDetails { get; set; }
         
         /// <value>
-        /// The OCID of the APM domain
+        /// The OCID of the APM domain.
         /// </value>
         /// <remarks>
         /// Required

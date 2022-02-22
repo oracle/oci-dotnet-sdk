@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Identifier for ResponderRule.
+        /// Unique ResponderRule identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// ResponderRule Display Name
+        /// ResponderRule display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRule Description
+        /// ResponderRule description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

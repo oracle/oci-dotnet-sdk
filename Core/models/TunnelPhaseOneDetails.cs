@@ -16,32 +16,33 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Tunnel detail information specific to IPSec phase 1.
+    /// IPSec tunnel details specific to ISAKMP phase one.
     /// </summary>
     public class TunnelPhaseOneDetails 
     {
         
         /// <value>
         /// Indicates whether custom phase one configuration is enabled.
+        /// If this option is not enabled, default settings are proposed.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isCustomPhaseOneConfig")]
         public System.Nullable<bool> IsCustomPhaseOneConfig { get; set; }
         
         /// <value>
-        /// The total configured lifetime of an IKE security association.
+        /// The total configured lifetime of the IKE security association.
         /// </value>
         [JsonProperty(PropertyName = "lifetime")]
         public System.Nullable<long> Lifetime { get; set; }
         
         /// <value>
-        /// The lifetime remaining before the key is refreshed.
+        /// The remaining lifetime before the key is refreshed.
         /// </value>
         [JsonProperty(PropertyName = "remainingLifetime")]
         public System.Nullable<long> RemainingLifetime { get; set; }
         
         /// <value>
-        /// Custom authentication algorithm
-        /// 
+        /// The proposed custom authentication algorithm.
         /// </value>
         [JsonProperty(PropertyName = "customAuthenticationAlgorithm")]
         public string CustomAuthenticationAlgorithm { get; set; }
@@ -53,8 +54,7 @@ namespace Oci.CoreService.Models
         public string NegotiatedAuthenticationAlgorithm { get; set; }
         
         /// <value>
-        /// Custom encryption algorithm.
-        /// 
+        /// The proposed custom encryption algorithm.
         /// </value>
         [JsonProperty(PropertyName = "customEncryptionAlgorithm")]
         public string CustomEncryptionAlgorithm { get; set; }
@@ -66,8 +66,7 @@ namespace Oci.CoreService.Models
         public string NegotiatedEncryptionAlgorithm { get; set; }
         
         /// <value>
-        /// Custom Diffie-Hellman group.
-        /// 
+        /// The proposed custom Diffie-Hellman group.
         /// </value>
         [JsonProperty(PropertyName = "customDhGroup")]
         public string CustomDhGroup { get; set; }
@@ -79,7 +78,7 @@ namespace Oci.CoreService.Models
         public string NegotiatedDhGroup { get; set; }
         
         /// <value>
-        /// Indicates whether IKE Phase 1 is established.
+        /// Indicates whether IKE phase one is established.
         /// </value>
         [JsonProperty(PropertyName = "isIkeEstablished")]
         public System.Nullable<bool> IsIkeEstablished { get; set; }

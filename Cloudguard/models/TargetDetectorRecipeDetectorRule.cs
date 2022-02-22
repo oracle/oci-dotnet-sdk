@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The unique identifier of the detector rule
+        /// The unique identifier of the detector rule.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.CloudguardService.Models
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// displayName
+        /// Display name for TargetDetectorRecipeDetectorRule. information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description for TargetDetectorRecipeDetectorRule
+        /// Description for TargetDetectorRecipeDetectorRule. information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -34,10 +34,6 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// The Risk Level
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RiskLevel is required.")]
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
@@ -65,6 +61,24 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "isConfigurationAllowed")]
         public System.Nullable<bool> IsConfigurationAllowed { get; set; }
+        
+        /// <value>
+        /// Cutover point for an elevated resource Risk Score to create a Problem
+        /// </value>
+        [JsonProperty(PropertyName = "problemThreshold")]
+        public System.Nullable<int> ProblemThreshold { get; set; }
+        
+        /// <value>
+        /// List of target types for which the detector rule is applicable
+        /// </value>
+        [JsonProperty(PropertyName = "targetTypes")]
+        public System.Collections.Generic.List<string> TargetTypes { get; set; }
+        
+        /// <value>
+        /// List of sighting types
+        /// </value>
+        [JsonProperty(PropertyName = "sightingTypes")]
+        public System.Collections.Generic.List<SightingType> SightingTypes { get; set; }
         
     }
 }

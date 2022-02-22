@@ -24,7 +24,6 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The action is applied only if all of the match criteria is met.
-        /// If there are no match criteria in a statement, match ALL is implied.
         /// 
         /// </value>
         /// <remarks>

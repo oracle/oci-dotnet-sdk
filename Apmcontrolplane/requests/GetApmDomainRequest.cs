@@ -20,7 +20,7 @@ namespace Oci.ApmcontrolplaneService.Requests
     {
         
         /// <value>
-        /// The OCID of the APM domain
+        /// The OCID of the APM domain.
         /// </value>
         /// <remarks>
         /// Required

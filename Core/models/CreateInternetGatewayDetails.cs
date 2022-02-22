@@ -66,7 +66,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN the internet gateway is attached to.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN the Internet Gateway is attached to.
         /// </value>
         /// <remarks>
         /// Required

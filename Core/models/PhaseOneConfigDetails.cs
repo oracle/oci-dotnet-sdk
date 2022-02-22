@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Phase 1 Configuration Details
+    /// Configuration details for IKE phase one (ISAKMP) configuration parameters.
     /// </summary>
     public class PhaseOneConfigDetails 
     {
         
         /// <value>
-        /// Indicates whether custom phase one configuration is enabled.
+        /// Indicates whether custom configuration is enabled for phase one options.
         /// </value>
         [JsonProperty(PropertyName = "isCustomPhaseOneConfig")]
         public System.Nullable<bool> IsCustomPhaseOneConfig { get; set; }
                 ///
         /// <value>
-        /// Phase one authentication algorithm supported during tunnel negotiation.
+        /// The custom authentication algorithm proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         ///
@@ -42,7 +42,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase one authentication algorithm supported during tunnel negotiation.
+        /// The custom authentication algorithm proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "authenticationAlgorithm")]
@@ -50,7 +50,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<AuthenticationAlgorithmEnum> AuthenticationAlgorithm { get; set; }
                 ///
         /// <value>
-        /// Phase one encryption algorithm supported during tunnel negotiation.
+        /// The custom encryption algorithm proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         ///
@@ -64,7 +64,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase one encryption algorithm supported during tunnel negotiation.
+        /// The custom encryption algorithm proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionAlgorithm")]
@@ -72,7 +72,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<EncryptionAlgorithmEnum> EncryptionAlgorithm { get; set; }
                 ///
         /// <value>
-        /// Phase One Diffie Hellman group supported during tunnel negotiation.
+        /// The custom Diffie-Hellman group proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         ///
@@ -92,7 +92,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Phase One Diffie Hellman group supported during tunnel negotiation.
+        /// The custom Diffie-Hellman group proposed during phase one tunnel negotiation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "diffieHelmanGroup")]
@@ -100,7 +100,8 @@ namespace Oci.CoreService.Models
         public System.Nullable<DiffieHelmanGroupEnum> DiffieHelmanGroup { get; set; }
         
         /// <value>
-        /// IKE session key lifetime in seconds for IPSec phase one.
+        /// Internet key association (IKE) session key lifetime in seconds for IPSec phase one. The default is 28800 which is equivalent to 8 hours.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifetimeInSeconds")]
         public System.Nullable<int> LifetimeInSeconds { get; set; }

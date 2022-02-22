@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Phase One Parameters
+    /// Allowed phase one parameters.
     /// </summary>
     public class AllowedPhaseOneParameters 
     {
         
         /// <value>
-        /// Phase One Encryption Algorithms
+        /// Allowed phase one encryption algorithms.
         /// </value>
         [JsonProperty(PropertyName = "encryptionAlgorithms")]
         public System.Collections.Generic.List<string> EncryptionAlgorithms { get; set; }
         
         /// <value>
-        /// Phase One Authentication Algorithms
+        /// Allowed phase one authentication algorithms.
         /// </value>
         [JsonProperty(PropertyName = "authenticationAlgorithms")]
         public System.Collections.Generic.List<string> AuthenticationAlgorithms { get; set; }
         
         /// <value>
-        /// DH Groups
+        /// Allowed phase one Diffie-Hellman groups.
         /// </value>
         [JsonProperty(PropertyName = "dhGroups")]
         public System.Collections.Generic.List<string> DhGroups { get; set; }

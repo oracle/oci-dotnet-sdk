@@ -22,7 +22,10 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// DetectorTemplate Identifier
+        /// DetectorTemplate identifier. 
+        /// <br/>
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -48,7 +51,7 @@ namespace Oci.CloudguardService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Unique identifier of TargetResponderRecipe that is immutable on creation
+        /// Unique identifier of TargetResponderRecipe that can't be changed after creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique identifier for Responder Recipe of which this is an extension
+        /// Unique identifier for Responder Recipe of which this is an extension.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// ResponderRecipe Identifier Name
+        /// ResponderRecipe display name.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRecipe Description
+        /// ResponderRecipe description.
         /// </value>
         /// <remarks>
         /// Required

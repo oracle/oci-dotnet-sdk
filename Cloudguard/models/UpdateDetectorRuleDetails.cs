@@ -34,10 +34,6 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// The Risk Level
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RiskLevel is required.")]
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }

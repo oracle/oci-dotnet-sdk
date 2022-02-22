@@ -148,5 +148,20 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "macsecProperties")]
         public MacsecProperties MacsecProperties { get; set; }
         
+        /// <value>
+        /// The FastConnect device that terminates the physical connection.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ociPhysicalDeviceName")]
+        public string OciPhysicalDeviceName { get; set; }
+        
+        /// <value>
+        /// The FastConnect device that terminates the logical connection.
+        /// This device might be different than the device that terminates the physical connection.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ociLogicalDeviceName")]
+        public string OciLogicalDeviceName { get; set; }
+        
     }
 }

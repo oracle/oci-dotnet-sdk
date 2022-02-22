@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of detector recipe
+        /// DisplayName of detector recipe.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Detector recipe description
+        /// Detector recipe description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -121,8 +121,14 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// The number of days for which source data is retained
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDataRetention")]
+        public System.Nullable<int> SourceDataRetention { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }

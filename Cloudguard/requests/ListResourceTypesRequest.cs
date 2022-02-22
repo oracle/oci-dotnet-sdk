@@ -30,6 +30,12 @@ namespace Oci.CloudguardService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Detector type
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "detectorId")]
+        public System.Nullable<DetectorEnum> DetectorId { get; set; }
+        
+        /// <value>
         /// The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

@@ -55,6 +55,12 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
+        /// Risk Score for the problem
+        /// </value>
+        [JsonProperty(PropertyName = "riskScore")]
+        public System.Double RiskScore { get; set; }
+        
+        /// <value>
         /// Identifier of the Resource
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]

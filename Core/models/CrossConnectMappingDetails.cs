@@ -149,5 +149,12 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Ipv6BgpStatusEnum> Ipv6BgpStatus { get; set; }
         
+        /// <value>
+        /// The FastConnect device that terminates the logical connection.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ociLogicalDeviceName")]
+        public string OciLogicalDeviceName { get; set; }
+        
     }
 }

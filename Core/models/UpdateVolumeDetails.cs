@@ -57,6 +57,8 @@ namespace Oci.CoreService.Models
         ///   * `10`: Represents Balanced option.
         /// <br/>
         ///   * `20`: Represents Higher Performance option.
+        /// <br/>
+        /// For performance autotune enabled volumes, It would be the Default(Minimum) VPUs/GB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
@@ -69,7 +71,8 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> SizeInGBs { get; set; }
         
         /// <value>
-        /// Specifies whether the auto-tune performance is enabled for this volume.
+        /// Specifies whether the auto-tune performance is enabled for this volume. This field is deprecated.
+        /// Use the `DetachedVolumeAutotunePolicy` instead to enable the volume for detached autotune.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]

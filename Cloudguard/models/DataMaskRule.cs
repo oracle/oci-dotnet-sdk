@@ -32,13 +32,13 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Data Mask Rule Identifier, can be renamed
+        /// Data Mask Rule Identifier, can be renamed.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment Identifier where the resource is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -110,7 +110,7 @@ namespace Oci.CloudguardService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
