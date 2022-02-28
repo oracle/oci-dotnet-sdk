@@ -100,6 +100,15 @@ namespace Oci.DatabaseService.Models
         public string TimeZone { get; set; }
         
         /// <value>
+        /// Indicates whether cps offline diagnostic report is enabled for this Exadata infrastructure. This will allow a customer to quickly check status themselves and fix problems on their end, saving time and frustration
+        /// for both Oracle and the customer when they find the CPS in a disconnected state.You can enable offline diagnostic report during Exadata infrastructure provisioning. You can also disable or enable it at any time
+        /// using the UpdateExadatainfrastructure API.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCpsOfflineReportEnabled")]
+        public System.Nullable<bool> IsCpsOfflineReportEnabled { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

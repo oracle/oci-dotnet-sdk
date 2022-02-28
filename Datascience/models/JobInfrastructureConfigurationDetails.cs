@@ -29,7 +29,9 @@ namespace Oci.DatascienceService.Models
         ///
         public enum JobInfrastructureTypeEnum {
             [EnumMember(Value = "STANDALONE")]
-            Standalone
+            Standalone,
+            [EnumMember(Value = "ME_STANDALONE")]
+            MeStandalone
         };
 
         
@@ -55,6 +57,9 @@ namespace Oci.DatascienceService.Models
             var discriminator = jsonObject["jobInfrastructureType"].Value<string>();
             switch (discriminator)
             {
+                case "ME_STANDALONE":
+                    obj = new ManagedEgressStandaloneJobInfrastructureConfigurationDetails();
+                    break;
                 case "STANDALONE":
                     obj = new StandaloneJobInfrastructureConfigurationDetails();
                     break;

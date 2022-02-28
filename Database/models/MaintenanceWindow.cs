@@ -43,6 +43,44 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "preference")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PreferenceEnum> Preference { get; set; }
+                ///
+        /// <value>
+        /// Cloud Exadata infrastructure node patching method, either \"ROLLING\" or \"NONROLLING\". Default value is ROLLING.
+        /// <br/>
+        /// *IMPORTANT*: Non-rolling infrastructure patching involves system down time. See [Oracle-Managed Infrastructure Maintenance Updates](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/examaintenance.htm#Oracle) for more information.
+        /// 
+        /// </value>
+        ///
+        public enum PatchingModeEnum {
+            [EnumMember(Value = "ROLLING")]
+            Rolling,
+            [EnumMember(Value = "NONROLLING")]
+            Nonrolling
+        };
+
+        /// <value>
+        /// Cloud Exadata infrastructure node patching method, either \"ROLLING\" or \"NONROLLING\". Default value is ROLLING.
+        /// <br/>
+        /// *IMPORTANT*: Non-rolling infrastructure patching involves system down time. See [Oracle-Managed Infrastructure Maintenance Updates](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/examaintenance.htm#Oracle) for more information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "patchingMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
+        
+        /// <value>
+        /// If true, enables the configuration of a custom action timeout (waiting period) between database server patching operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isCustomActionTimeoutEnabled")]
+        public System.Nullable<bool> IsCustomActionTimeoutEnabled { get; set; }
+        
+        /// <value>
+        /// Determines the amount of time the system will wait before the start of each database server patching operation.
+        /// Custom action timeout is in minutes and valid value is between 15 to 120 (inclusive).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customActionTimeoutInMins")]
+        public System.Nullable<int> CustomActionTimeoutInMins { get; set; }
         
         /// <value>
         /// Months during the year when maintenance should be performed.

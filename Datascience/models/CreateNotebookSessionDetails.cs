@@ -49,12 +49,11 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NotebookSessionConfigurationDetails is required.")]
         [JsonProperty(PropertyName = "notebookSessionConfigurationDetails")]
         public NotebookSessionConfigurationDetails NotebookSessionConfigurationDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "notebookSessionConfigDetails")]
+        public NotebookSessionConfigDetails NotebookSessionConfigDetails { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

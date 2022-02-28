@@ -281,6 +281,18 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
+        /// The software version of the storage servers (cells) in the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "storageServerVersion")]
+        public string StorageServerVersion { get; set; }
+        
+        /// <value>
+        /// The software version of the database servers (dom0) in the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServerVersion")]
+        public string DbServerVersion { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "lastMaintenanceRunId")]
@@ -291,6 +303,15 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nextMaintenanceRunId")]
         public string NextMaintenanceRunId { get; set; }
+        
+        /// <value>
+        /// Indicates whether cps offline diagnostic report is enabled for this Exadata infrastructure. This will allow a customer to quickly check status themselves and fix problems on their end, saving time and frustration
+        /// for both Oracle and the customer when they find the CPS in a disconnected state.You can enable offline diagnostic report during Exadata infrastructure provisioning. You can also disable or enable it at any time
+        /// using the UpdateExadatainfrastructure API.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCpsOfflineReportEnabled")]
+        public System.Nullable<bool> IsCpsOfflineReportEnabled { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
