@@ -23,6 +23,10 @@ namespace Oci.ManagementdashboardService.Models
       [EnumMember(Value = "WIDGET_SHOW_IN_DASHBOARD")]
       WidgetShowInDashboard,
       [EnumMember(Value = "WIDGET_DONT_SHOW_IN_DASHBOARD")]
-      WidgetDontShowInDashboard
+      WidgetDontShowInDashboard,
+      [EnumMember(Value = "FILTER_SHOW_IN_DASHBOARD")]
+      FilterShowInDashboard,
+      [EnumMember(Value = "FILTER_DONT_SHOW_IN_DASHBOARD")]
+      FilterDontShowInDashboard
   }
 }

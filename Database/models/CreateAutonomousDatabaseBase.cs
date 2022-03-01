@@ -381,6 +381,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "scheduledOperations")]
         public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
         
+        /// <value>
+        /// Indicates if auto scaling is enabled for the Autonomous Database storage. The default value is `FALSE`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoScalingForStorageEnabled")]
+        public System.Nullable<bool> IsAutoScalingForStorageEnabled { get; set; }
+        
     }
 
     public class CreateAutonomousDatabaseBaseModelConverter : JsonConverter

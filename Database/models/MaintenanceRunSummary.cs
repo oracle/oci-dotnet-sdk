@@ -242,5 +242,84 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "patchFailureCount")]
         public System.Nullable<int> PatchFailureCount { get; set; }
         
+        /// <value>
+        /// The target software version for the database server patching operation.
+        /// </value>
+        [JsonProperty(PropertyName = "targetDbServerVersion")]
+        public string TargetDbServerVersion { get; set; }
+        
+        /// <value>
+        /// The target Cell version that is to be patched to.
+        /// </value>
+        [JsonProperty(PropertyName = "targetStorageServerVersion")]
+        public string TargetStorageServerVersion { get; set; }
+        
+        /// <value>
+        /// If true, enables the configuration of a custom action timeout (waiting period) between database servers patching operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isCustomActionTimeoutEnabled")]
+        public System.Nullable<bool> IsCustomActionTimeoutEnabled { get; set; }
+        
+        /// <value>
+        /// Determines the amount of time the system will wait before the start of each database server patching operation.
+        /// Specify a number of minutes, from 15 to 120.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customActionTimeoutInMins")]
+        public System.Nullable<int> CustomActionTimeoutInMins { get; set; }
+        
+        /// <value>
+        /// Extend current custom action timeout between the current database servers during waiting state, from 0 (zero) to 30 minutes.
+        /// </value>
+        [JsonProperty(PropertyName = "currentCustomActionTimeoutInMins")]
+        public System.Nullable<int> CurrentCustomActionTimeoutInMins { get; set; }
+                ///
+        /// <value>
+        /// The status of the patching operation.
+        /// </value>
+        ///
+        public enum PatchingStatusEnum {
+            [EnumMember(Value = "PATCHING")]
+            Patching,
+            [EnumMember(Value = "WAITING")]
+            Waiting,
+            [EnumMember(Value = "SCHEDULED")]
+            Scheduled
+        };
+
+        /// <value>
+        /// The status of the patching operation.
+        /// </value>
+        [JsonProperty(PropertyName = "patchingStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PatchingStatusEnum> PatchingStatus { get; set; }
+        
+        /// <value>
+        /// The time when the patching operation started.
+        /// </value>
+        [JsonProperty(PropertyName = "patchingStartTime")]
+        public System.Nullable<System.DateTime> PatchingStartTime { get; set; }
+        
+        /// <value>
+        /// The time when the patching operation ended.
+        /// </value>
+        [JsonProperty(PropertyName = "patchingEndTime")]
+        public System.Nullable<System.DateTime> PatchingEndTime { get; set; }
+        
+        [JsonProperty(PropertyName = "estimatedPatchingTime")]
+        public EstimatedPatchingTime EstimatedPatchingTime { get; set; }
+        
+        /// <value>
+        /// The name of the current infrastruture component that is getting patched.
+        /// </value>
+        [JsonProperty(PropertyName = "currentPatchingComponent")]
+        public string CurrentPatchingComponent { get; set; }
+        
+        /// <value>
+        /// The estimated start time of the next infrastruture component patching operation.
+        /// </value>
+        [JsonProperty(PropertyName = "estimatedComponentPatchingStartTime")]
+        public System.Nullable<System.DateTime> EstimatedComponentPatchingStartTime { get; set; }
+        
     }
 }

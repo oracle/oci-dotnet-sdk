@@ -70,5 +70,31 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
         
+        /// <value>
+        /// If true, enables the configuration of a custom action timeout (waiting period) between database servers patching operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isCustomActionTimeoutEnabled")]
+        public System.Nullable<bool> IsCustomActionTimeoutEnabled { get; set; }
+        
+        /// <value>
+        /// Determines the amount of time the system will wait before the start of each database server patching operation.
+        /// Specify a number of minutes from 15 to 120.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customActionTimeoutInMins")]
+        public System.Nullable<int> CustomActionTimeoutInMins { get; set; }
+        
+        /// <value>
+        /// The current custom action timeout between the current database servers during waiting state in addition to custom action timeout, from 0 (zero) to 30 minutes.
+        /// </value>
+        [JsonProperty(PropertyName = "currentCustomActionTimeoutInMins")]
+        public System.Nullable<int> CurrentCustomActionTimeoutInMins { get; set; }
+        
+        /// <value>
+        /// If true, then the patching is resumed and the next component will be patched immediately.
+        /// </value>
+        [JsonProperty(PropertyName = "isResumePatching")]
+        public System.Nullable<bool> IsResumePatching { get; set; }
+        
     }
 }

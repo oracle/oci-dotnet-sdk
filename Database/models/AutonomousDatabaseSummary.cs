@@ -832,5 +832,28 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "scheduledOperations")]
         public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
         
+        /// <value>
+        /// Indicates if auto scaling is enabled for the Autonomous Database storage. The default value is `FALSE`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoScalingForStorageEnabled")]
+        public System.Nullable<bool> IsAutoScalingForStorageEnabled { get; set; }
+        
+        /// <value>
+        /// The amount of storage currently allocated for the database tables and billed for, rounded up. When auto-scaling is not enabled, this value is equal to the `dataStorageSizeInTBs` value. You can compare this value to the `actualUsedDataStorageSizeInTBs` value to determine if a manual shrink operation is appropriate for your allocated storage.
+        /// <br/>
+        /// **Note:** Auto-scaling does not automatically decrease allocated storage when data is deleted from the database.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "allocatedStorageSizeInTBs")]
+        public System.Double AllocatedStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The current amount of storage in use for user and system data, in terabytes (TB).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "actualUsedDataStorageSizeInTBs")]
+        public System.Double ActualUsedDataStorageSizeInTBs { get; set; }
+        
     }
 }
