@@ -141,6 +141,12 @@ namespace Oci.OceService.Models
         public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
         
         /// <value>
+        /// a list of add-on features for the ocm instance
+        /// </value>
+        [JsonProperty(PropertyName = "addOnFeatures")]
+        public System.Collections.Generic.List<string> AddOnFeatures { get; set; }
+        
+        /// <value>
         /// Object Storage Namespace of tenancy
         /// </value>
         /// <remarks>
@@ -202,32 +208,20 @@ namespace Oci.OceService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-                ///
+        
         /// <value>
-        /// The current state of the file system.
-        /// </value>
-        ///
-        public enum LifecycleStateEnum {
-            [EnumMember(Value = "CREATING")]
-            Creating,
-            [EnumMember(Value = "UPDATING")]
-            Updating,
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "DELETING")]
-            Deleting,
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            [EnumMember(Value = "FAILED")]
-            Failed
-        };
-
-        /// <value>
-        /// The current state of the file system.
+        /// The current state of the instance lifecycle.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Details of the current state of the instance lifecycle
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleDetails> LifecycleDetails { get; set; }
         
         /// <value>
         /// An message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.

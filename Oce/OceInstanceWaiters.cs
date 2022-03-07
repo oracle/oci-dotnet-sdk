@@ -32,7 +32,7 @@ namespace Oci.OceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetOceInstanceRequest, GetOceInstanceResponse> ForOceInstance(GetOceInstanceRequest request, params OceInstance.LifecycleStateEnum[] targetStates)
+        public Waiter<GetOceInstanceRequest, GetOceInstanceResponse> ForOceInstance(GetOceInstanceRequest request, params LifecycleState[] targetStates)
         {
             return this.ForOceInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -44,13 +44,13 @@ namespace Oci.OceService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetOceInstanceRequest, GetOceInstanceResponse> ForOceInstance(GetOceInstanceRequest request, WaiterConfiguration config, params OceInstance.LifecycleStateEnum[] targetStates)
+        public Waiter<GetOceInstanceRequest, GetOceInstanceResponse> ForOceInstance(GetOceInstanceRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
         {
             var agent = new WaiterAgent<GetOceInstanceRequest, GetOceInstanceResponse>(
                 request,
                 request => client.GetOceInstance(request),
                 response => targetStates.Contains(response.OceInstance.LifecycleState.Value),
-                targetStates.Contains(OceInstance.LifecycleStateEnum.Deleted)
+                targetStates.Contains(LifecycleState.Deleted)
             );
             return new Waiter<GetOceInstanceRequest, GetOceInstanceResponse>(config, agent);
         }

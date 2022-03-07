@@ -39,5 +39,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "privateEndpoint")]
         public string PrivateEndpoint { get; set; }
         
+        /// <value>
+        /// The FQDN assigned to the Kubernetes API private endpoint.
+        /// Example: 'https://yourVcnHostnameEndpoint'
+        /// </value>
+        [JsonProperty(PropertyName = "vcnHostnameEndpoint")]
+        public string VcnHostnameEndpoint { get; set; }
+        
     }
 }

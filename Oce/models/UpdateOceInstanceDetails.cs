@@ -59,6 +59,12 @@ namespace Oci.OceService.Models
         public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
         
         /// <value>
+        /// a list of add-on features for the ocm instance
+        /// </value>
+        [JsonProperty(PropertyName = "addOnFeatures")]
+        public System.Collections.Generic.List<string> AddOnFeatures { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

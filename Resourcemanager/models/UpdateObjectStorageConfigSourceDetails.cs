@@ -23,7 +23,7 @@ namespace Oci.ResourcemanagerService.Models
         
         /// <value>
         /// The name of the bucket's region.
-        /// Example: PHX
+        /// Example: us-phoenix-1
         /// </value>
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }

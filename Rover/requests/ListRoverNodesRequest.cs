@@ -36,6 +36,12 @@ namespace Oci.RoverService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only Nodes of type matched with the given node type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nodeType")]
+        public System.Nullable<NodeType> NodeType { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

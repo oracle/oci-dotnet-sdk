@@ -17,7 +17,8 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Data Transfer Medium details for the Migration. If not specified, it will default to Database Link. Only one type
-    /// of data transfer medium can be specified.
+    /// of data transfer medium can be specified, except for the case of Amazon RDS Oracle as source, where Object Storage
+    /// Details along with AwsS3Details are required.
     /// 
     /// </summary>
     public class CreateDataTransferMediumDetails 
@@ -28,6 +29,9 @@ namespace Oci.DatabasemigrationService.Models
         
         [JsonProperty(PropertyName = "objectStorageDetails")]
         public CreateObjectStoreBucket ObjectStorageDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "awsS3Details")]
+        public CreateAwsS3Details AwsS3Details { get; set; }
         
     }
 }

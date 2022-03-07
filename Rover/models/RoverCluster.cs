@@ -125,6 +125,31 @@ namespace Oci.RoverService.Models
         public System.Collections.Generic.List<RoverWorkload> ClusterWorkloads { get; set; }
         
         /// <value>
+        /// Type of cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ClusterType> ClusterType { get; set; }
+        
+        /// <value>
+        /// ID provided to customer after successful subscription to Rover Stations.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// Service generated code for the exterior trailer door of the trailer.
+        /// </value>
+        [JsonProperty(PropertyName = "exteriorDoorCode")]
+        public string ExteriorDoorCode { get; set; }
+        
+        /// <value>
+        /// Service generated code to disarm the interior alarm of the trailer.
+        /// </value>
+        [JsonProperty(PropertyName = "interiorAlarmDisarmCode")]
+        public string InteriorAlarmDisarmCode { get; set; }
+        
+        /// <value>
         /// Root password for the rover cluster.
         /// </value>
         [JsonProperty(PropertyName = "superUserPassword")]

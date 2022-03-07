@@ -61,6 +61,13 @@ namespace Oci.RoverService.Models
         public System.Collections.Generic.List<RoverWorkload> ClusterWorkloads { get; set; }
         
         /// <value>
+        /// Type of cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ClusterType> ClusterType { get; set; }
+        
+        /// <value>
         /// Root password for the rover cluster.
         /// </value>
         [JsonProperty(PropertyName = "superUserPassword")]
@@ -126,6 +133,12 @@ namespace Oci.RoverService.Models
         /// </value>
         [JsonProperty(PropertyName = "oracleShippingTrackingUrl")]
         public string OracleShippingTrackingUrl { get; set; }
+        
+        /// <value>
+        /// ID provided to customer after successful subscription to Rover Stations.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
         
         /// <value>
         /// The current state of the RoverCluster.

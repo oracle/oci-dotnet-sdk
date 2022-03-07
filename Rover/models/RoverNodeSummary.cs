@@ -54,6 +54,13 @@ namespace Oci.RoverService.Models
         public string SerialNumber { get; set; }
         
         /// <value>
+        /// The type of node indicating if it belongs to a cluster
+        /// </value>
+        [JsonProperty(PropertyName = "nodeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NodeType> NodeType { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

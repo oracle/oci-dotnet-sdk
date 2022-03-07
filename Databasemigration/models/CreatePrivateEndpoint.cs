@@ -25,7 +25,7 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the
-        /// private endpoint. 
+        /// private endpoint.
         /// 
         /// </value>
         /// <remarks>

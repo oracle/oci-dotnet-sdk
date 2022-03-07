@@ -111,6 +111,12 @@ namespace Oci.RoverService.Models
         public string OracleShippingTrackingUrl { get; set; }
         
         /// <value>
+        /// ID provided to customer after successful subscription to Rover Stations.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
         /// Shipping vendor of choice for orace to customer shipping.
         /// </value>
         [JsonProperty(PropertyName = "shippingVendor")]

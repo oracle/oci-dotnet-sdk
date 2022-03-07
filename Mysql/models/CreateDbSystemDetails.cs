@@ -123,10 +123,6 @@ namespace Oci.MysqlService.Models
         /// <value>
         /// The username for the administrative user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminUsername is required.")]
         [JsonProperty(PropertyName = "adminUsername")]
         public string AdminUsername { get; set; }
         
@@ -137,10 +133,6 @@ namespace Oci.MysqlService.Models
         /// 1 special (nonalphanumeric) character.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
         

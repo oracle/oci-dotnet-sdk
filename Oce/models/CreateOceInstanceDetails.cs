@@ -99,6 +99,12 @@ namespace Oci.OceService.Models
         public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
         
         /// <value>
+        /// a list of add-on features for the ocm instance
+        /// </value>
+        [JsonProperty(PropertyName = "addOnFeatures")]
+        public System.Collections.Generic.List<string> AddOnFeatures { get; set; }
+        
+        /// <value>
         /// Object Storage Namespace of Tenancy
         /// </value>
         /// <remarks>

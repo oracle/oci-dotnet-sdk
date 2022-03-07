@@ -28,5 +28,8 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "objectStorageDetails")]
         public ObjectStoreBucket ObjectStorageDetails { get; set; }
         
+        [JsonProperty(PropertyName = "awsS3Details")]
+        public AwsS3Details AwsS3Details { get; set; }
+        
     }
 }
