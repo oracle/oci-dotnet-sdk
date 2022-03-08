@@ -57,6 +57,21 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
         
         /// <value>
+        /// Database manual connection subtype. This value can only be specified for manual connections.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "manualDatabaseSubType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
+        
+        /// <value>
+        /// True if the Autonomous Connection is dedicated. Not provided for Non-Autonomous Connections.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDedicated")]
+        public System.Nullable<bool> IsDedicated { get; set; }
+        
+        /// <value>
         /// Database Connection display name identifier.
         /// 
         /// </value>

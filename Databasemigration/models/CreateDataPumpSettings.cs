@@ -42,6 +42,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "metadataRemaps")]
         public System.Collections.Generic.List<MetadataRemap> MetadataRemaps { get; set; }
         
+        [JsonProperty(PropertyName = "tablespaceDetails")]
+        public CreateTargetTypeTablespaceDetails TablespaceDetails { get; set; }
+        
         [JsonProperty(PropertyName = "exportDirectoryObject")]
         public CreateDirectoryObject ExportDirectoryObject { get; set; }
         

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// GoldenGate Extract perfoemance profile
+  /// GoldenGate Extract performance profile
     /// 
   /// </summary>
   public enum ExtractPerformanceProfile {

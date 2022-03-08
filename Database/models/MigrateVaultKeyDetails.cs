@@ -39,5 +39,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
         public string KmsKeyVersionId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// The existing TDE wallet password of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "tdeWalletPassword")]
+        public string TdeWalletPassword { get; set; }
+        
+        /// <value>
+        /// The existing admin password of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "adminPassword")]
+        public string AdminPassword { get; set; }
+        
     }
 }

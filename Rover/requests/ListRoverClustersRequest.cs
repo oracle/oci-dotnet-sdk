@@ -36,6 +36,12 @@ namespace Oci.RoverService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only Clusters of type matched with the given cluster type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clusterType")]
+        public System.Nullable<ClusterType> ClusterType { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

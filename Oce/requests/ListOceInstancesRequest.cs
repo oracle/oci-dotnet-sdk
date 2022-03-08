@@ -93,31 +93,11 @@ namespace Oci.OceService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
-        ///
-        /// <value>
-        /// Filter results on lifecycleState.
-        /// </value>
-        ///
-        public enum LifecycleStateEnum {
-            [EnumMember(Value = "CREATING")]
-            Creating,
-            [EnumMember(Value = "UPDATING")]
-            Updating,
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "DELETING")]
-            Deleting,
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            [EnumMember(Value = "FAILED")]
-            Failed
-        };
-
         /// <value>
         /// Filter results on lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

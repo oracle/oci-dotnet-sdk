@@ -45,7 +45,9 @@ namespace Oci.ContainerengineService.Models
             [EnumMember(Value = "PUBLIC_ENDPOINT")]
             PublicEndpoint,
             [EnumMember(Value = "PRIVATE_ENDPOINT")]
-            PrivateEndpoint
+            PrivateEndpoint,
+            [EnumMember(Value = "VCN_HOSTNAME")]
+            VcnHostname
         };
 
         /// <value>

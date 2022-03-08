@@ -17,7 +17,8 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Data Transfer Medium details for the Migration.
-    /// Only one type of data transfer medium can be specified and will replace the stored Data Transfer Medium details.
+    /// Only one type of data transfer medium can be specified, except for the case of Amazon RDS Oracle as source,
+    /// where Object Storage Details along with AwsS3Details are required.
     /// If an empty object is specified, the stored Data Transfer Medium details will be removed.
     /// 
     /// </summary>
@@ -29,6 +30,9 @@ namespace Oci.DatabasemigrationService.Models
         
         [JsonProperty(PropertyName = "objectStorageDetails")]
         public UpdateObjectStoreBucket ObjectStorageDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "awsS3Details")]
+        public UpdateAwsS3Details AwsS3Details { get; set; }
         
     }
 }

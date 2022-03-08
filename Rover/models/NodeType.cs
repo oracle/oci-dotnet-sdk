@@ -19,6 +19,8 @@ namespace Oci.RoverService.Models
       [EnumMember(Value = "STANDALONE")]
       Standalone,
       [EnumMember(Value = "CLUSTERED")]
-      Clustered
+      Clustered,
+      [EnumMember(Value = "STATION")]
+      Station
   }
 }

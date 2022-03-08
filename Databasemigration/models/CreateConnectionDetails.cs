@@ -53,6 +53,14 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
         
         /// <value>
+        /// Database manual connection subtype. This value can only be specified for manual connections.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "manualDatabaseSubType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
+        
+        /// <value>
         /// The OCID of the cloud database. Required if the database connection type is Autonomous.
         /// 
         /// </value>

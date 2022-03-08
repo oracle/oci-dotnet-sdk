@@ -60,6 +60,19 @@ namespace Oci.RoverService.Models
         public System.Collections.Generic.List<string> Nodes { get; set; }
         
         /// <value>
+        /// Size of the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterSize")]
+        public System.Nullable<int> ClusterSize { get; set; }
+        
+        /// <value>
+        /// Type of cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ClusterType> ClusterType { get; set; }
+        
+        /// <value>
         /// The current state of the RoverCluster.
         /// </value>
         /// <remarks>
