@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// A specific SKU. 
+    /// A specific SKU.
     /// 
     /// </summary>
     public class SupportedSkuSummary 

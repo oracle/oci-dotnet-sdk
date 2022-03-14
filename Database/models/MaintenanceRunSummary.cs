@@ -139,6 +139,8 @@ namespace Oci.DatabaseService.Models
             CloudExadataInfrastructure,
             [EnumMember(Value = "EXACC_INFRASTRUCTURE")]
             ExaccInfrastructure,
+            [EnumMember(Value = "AUTONOMOUS_VM_CLUSTER")]
+            AutonomousVmCluster,
             [EnumMember(Value = "AUTONOMOUS_DATABASE")]
             AutonomousDatabase
         };

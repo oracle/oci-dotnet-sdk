@@ -218,6 +218,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
+        /// The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
         /// The quantity of data in the database, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]

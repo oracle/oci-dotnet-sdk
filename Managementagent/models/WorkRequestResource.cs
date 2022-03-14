@@ -89,7 +89,7 @@ namespace Oci.ManagementagentService.Models
         /// <value>
         /// Additional metadata about the resource that has been operated upon by
         /// this work request. For WorkRequests operationType WORK_DELIVERY the metadata will contain: workDeliveryStatus
-        /// indicating the status of the work delivery item &WORKDELIVERYSTATUS, workSubmissionKey the WorkSubmission request id,
+        /// indicating the status of the work delivery item as a WorkDeliveryStatus value, workSubmissionKey the WorkSubmission request id,
         ///  and workSubmissionDetails containing any details of result
         /// 
         /// </value>

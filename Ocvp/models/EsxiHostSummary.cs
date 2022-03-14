@@ -133,16 +133,15 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> BillingContractEndDate { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the esxi host that
-        /// is failed.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that failed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "failedEsxiHostId")]
         public string FailedEsxiHostId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the esxi host that
-        /// is newly created to replace the failed node.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that
+        /// is newly created to replace the failed host.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "replacementEsxiHostId")]

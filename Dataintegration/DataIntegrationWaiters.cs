@@ -32,6 +32,90 @@ namespace Oci.DataintegrationService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApplicationRequest, GetApplicationResponse> ForApplication(GetApplicationRequest request, params Application.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForApplication(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApplicationRequest, GetApplicationResponse> ForApplication(GetApplicationRequest request, WaiterConfiguration config, params Application.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetApplicationRequest, GetApplicationResponse>(
+                request,
+                request => client.GetApplication(request),
+                response => targetStates.Contains(response.Application.LifecycleState.Value),
+                targetStates.Contains(Application.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetApplicationRequest, GetApplicationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDependentObjectRequest, GetDependentObjectResponse> ForDependentObject(GetDependentObjectRequest request, params DependentObject.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDependentObject(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDependentObjectRequest, GetDependentObjectResponse> ForDependentObject(GetDependentObjectRequest request, WaiterConfiguration config, params DependentObject.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDependentObjectRequest, GetDependentObjectResponse>(
+                request,
+                request => client.GetDependentObject(request),
+                response => targetStates.Contains(response.DependentObject.LifecycleState.Value),
+                targetStates.Contains(DependentObject.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetDependentObjectRequest, GetDependentObjectResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDisApplicationRequest, GetDisApplicationResponse> ForDisApplication(GetDisApplicationRequest request, params DisApplication.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDisApplication(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDisApplicationRequest, GetDisApplicationResponse> ForDisApplication(GetDisApplicationRequest request, WaiterConfiguration config, params DisApplication.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDisApplicationRequest, GetDisApplicationResponse>(
+                request,
+                request => client.GetDisApplication(request),
+                response => targetStates.Contains(response.DisApplication.LifecycleState.Value),
+                targetStates.Contains(DisApplication.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetDisApplicationRequest, GetDisApplicationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, params WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

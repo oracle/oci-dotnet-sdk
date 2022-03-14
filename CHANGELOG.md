@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 34.0.0 - 2022-03-15
+### Added
+- Support for Ubuntu platforms and unlimited installation keys in the Management Agent Cloud service
+- Support for shielded instances in the VMWare Solution service
+- Support for application resources in the Data Integration service
+- Support for multi-AVM on Exadata Cloud at Customer infrastructure in the Database service
+- Support for heterogeneous (VM and AVM) clusters on Exadata Cloud at Customer infrastructure in the Database service
+- Support for custom maintenance schedules for AVM clusters on Exadata Cloud at Customer infrastructure in the Database service
+- Support for listing vulnerabilities, vulnerability-impacted containers, and vulnerability-impacted hosts in the Vulnerability Scanning service
+- Support for specifying an image count when creating or updating container scan recipes in the Vulnerability Scanning service
+
+### Changed
+- Portable.BouncyCastle version was upgraded to `1.9.0`
+
+### Breaking Changes
+- The type of property `LifecycleState` was changed from `Workspace.LifecycleStateEnum` to `LifecycleStateEnum` for the WorkspaceSummary model in the Data Integration service
+
 ## 33.0.0 - 2022-03-08
 ### Added
 - Support for the Sales Accelerator license option in the Content Management service

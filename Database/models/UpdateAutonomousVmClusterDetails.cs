@@ -20,6 +20,9 @@ namespace Oci.DatabaseService.Models
     /// </summary>
     public class UpdateAutonomousVmClusterDetails 
     {
+        
+        [JsonProperty(PropertyName = "maintenanceWindowDetails")]
+        public MaintenanceWindow MaintenanceWindowDetails { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Autonomous VM cluster. The default is BRING_YOUR_OWN_LICENSE.

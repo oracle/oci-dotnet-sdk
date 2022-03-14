@@ -156,6 +156,13 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// Indicates whether shielded instance is enabled at the SDDC level.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isShieldedInstanceEnabled")]
+        public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

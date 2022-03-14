@@ -22,10 +22,13 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
-        /// Reference to a typed object. This can be either a key value to an object within the document, a shall referenced to a `TypedObject`, or a full `TypedObject` definition.
+        /// Deprecated - Reference to a typed object. This can be either a key value to an object within the document, a shall referenced to a `TypedObject`, or a full `TypedObject` definition.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         public System.Object Scope { get; set; }
+        
+        [JsonProperty(PropertyName = "scopeReference")]
+        public ScopeReference ScopeReference { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         public BaseType Type { get; set; }

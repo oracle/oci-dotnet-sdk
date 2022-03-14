@@ -24,6 +24,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "authDetails")]
         public AuthDetails AuthDetails { get; set; }
         
+        [JsonProperty(PropertyName = "authConfig")]
+        public AuthConfig AuthConfig { get; set; }
+        
         [JsonProperty(PropertyName = "endpoint")]
         public Expression Endpoint { get; set; }
                 ///
@@ -112,6 +115,9 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "cancelRestCallConfig")]
         public CancelRestCallConfig CancelRestCallConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "pollRestCallConfig")]
+        public PollRestCallConfig PollRestCallConfig { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "REST_TASK";

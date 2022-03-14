@@ -634,7 +634,8 @@ namespace Oci.ManagementagentService
         }
 
         /// <summary>
-        /// Returns a list of Management Agent.
+        /// Returns a list of Management Agents.
+        /// If no explicit page size limit is specified, it will default to 5000.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
