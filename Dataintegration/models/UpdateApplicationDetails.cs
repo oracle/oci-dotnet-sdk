@@ -93,5 +93,51 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "metadata")]
         public ObjectMetadata Metadata { get; set; }
         
+        /// <value>
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+                ///
+        /// <value>
+        /// The current state of the workspace.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// The current state of the workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
     }
 }

@@ -312,5 +312,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
         
+        /// <value>
+        /// The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
     }
 }

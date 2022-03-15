@@ -148,6 +148,45 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AvailableCpus { get; set; }
         
         /// <value>
+        /// The total number of Autonomous Container Databases that can be created.
+        /// </value>
+        [JsonProperty(PropertyName = "totalContainerDatabases")]
+        public System.Nullable<int> TotalContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) enabled per each OCPU core.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The number of OCPU cores enabled per VM cluster node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
+        public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+        
+        /// <value>
+        /// The data disk group size allocated for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
+        public System.Double AutonomousDataStorageSizeInTBs { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
+        /// </value>
+        [JsonProperty(PropertyName = "lastMaintenanceRunId")]
+        public string LastMaintenanceRunId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the next maintenance run.
+        /// </value>
+        [JsonProperty(PropertyName = "nextMaintenanceRunId")]
+        public string NextMaintenanceRunId { get; set; }
+        
+        /// <value>
         /// The memory allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]

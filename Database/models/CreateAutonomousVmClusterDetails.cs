@@ -96,6 +96,33 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
+        /// The total number of Autonomous Container Databases that can be created.
+        /// </value>
+        [JsonProperty(PropertyName = "totalContainerDatabases")]
+        public System.Nullable<int> TotalContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of OCPU cores to enable per VM cluster node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
+        public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per each OCPU core.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size to be allocated for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
+        public System.Double AutonomousDataStorageSizeInTBs { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindowDetails")]
+        public MaintenanceWindow MaintenanceWindowDetails { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

@@ -102,5 +102,11 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// If set to true, the install key has no expiration date or usage limit. Defaults to false
+        /// </value>
+        [JsonProperty(PropertyName = "isUnlimited")]
+        public System.Nullable<bool> IsUnlimited { get; set; }
+        
     }
 }

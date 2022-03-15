@@ -504,7 +504,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The activation keys to use on the on-premises HCX Enterprise appliances you site pair with HCX Manager in your VMware Solution.
-        /// The number of keys provided depends on the HCX license type. HCX Advanced provides 3 activation keys. 
+        /// The number of keys provided depends on the HCX license type. HCX Advanced provides 3 activation keys.
         /// HCX Enterprise provides 10 activation keys.
         /// 
         /// </value>
@@ -574,6 +574,13 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Indicates whether shielded instance is enabled at the SDDC level.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isShieldedInstanceEnabled")]
+        public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

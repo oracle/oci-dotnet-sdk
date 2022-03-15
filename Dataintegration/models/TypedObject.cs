@@ -151,6 +151,9 @@ namespace Oci.DataintegrationService.Models
                 case "DERIVED_FIELD":
                     obj = new DerivedField();
                     break;
+                case "TYPED_EXPRESSION":
+                    obj = new TypedExpression();
+                    break;
                 case "FLOW_PORT":
                     obj = new FlowPort();
                     break;

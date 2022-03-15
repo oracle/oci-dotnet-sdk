@@ -100,6 +100,78 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "timePatched")]
         public System.Nullable<System.DateTime> TimePatched { get; set; }
         
+        /// <value>
+        /// OCID of the resource that is used to uniquely identify the application
+        /// </value>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+        
+        /// <value>
+        /// OCID of the compartment that this resource belongs to. Defaults to compartment of the Workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// The date and time the application was created, in the timestamp format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The date and time the application was updated, in the timestamp format defined by RFC3339.
+        /// Example: 2019-08-25T21:10:29.41Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// Usage of predefined tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+                ///
+        /// <value>
+        /// The current state of the workspace.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// The current state of the workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public ObjectMetadata Metadata { get; set; }
         

@@ -49,6 +49,20 @@ namespace Oci.ManagementagentService.Models
         public string PlatformName { get; set; }
         
         /// <value>
+        /// The installation package type
+        /// </value>
+        [JsonProperty(PropertyName = "packageType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PackageTypes> PackageType { get; set; }
+        
+        /// <value>
+        /// The installation package target architecture type
+        /// </value>
+        [JsonProperty(PropertyName = "packageArchitectureType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ArchitectureTypes> PackageArchitectureType { get; set; }
+        
+        /// <value>
         /// Agent image version
         /// </value>
         /// <remarks>

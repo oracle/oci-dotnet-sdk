@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Authentication type to be used for Generic REST invocation.
+    /// Authentication type to be used for Generic REST invocation. This is deprecated.
     /// </summary>
     public class AuthDetails 
     {

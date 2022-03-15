@@ -40,16 +40,22 @@ namespace Oci.DataintegrationService.Models
         public ConfigValues ConfigValues { get; set; }
         
         /// <value>
-        /// Reference to a typed object.
+        /// Deprecated - Reference to a typed object.
         /// </value>
         [JsonProperty(PropertyName = "sourceTypedObject")]
         public string SourceTypedObject { get; set; }
         
         /// <value>
-        /// Reference to a typed object
+        /// Deprecated - Reference to a typed object
         /// </value>
         [JsonProperty(PropertyName = "targetTypedObject")]
         public string TargetTypedObject { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceScopeReference")]
+        public ScopeReference SourceScopeReference { get; set; }
+        
+        [JsonProperty(PropertyName = "targetScopeReference")]
+        public ScopeReference TargetScopeReference { get; set; }
         
         /// <value>
         /// The source field name.

@@ -53,5 +53,11 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        /// <value>
+        /// If set to true, the install key has no expiration date or usage limit. Defaults to false
+        /// </value>
+        [JsonProperty(PropertyName = "isUnlimited")]
+        public System.Nullable<bool> IsUnlimited { get; set; }
+        
     }
 }
