@@ -17,6 +17,8 @@ namespace Oci.OpsiService.Models
   /// </summary>
   public enum DatabaseEntitySource {
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_DATABASE")]
-      EmManagedExternalDatabase
+      EmManagedExternalDatabase,
+      [EnumMember(Value = "PE_COMANAGED_DATABASE")]
+      PeComanagedDatabase
   }
 }

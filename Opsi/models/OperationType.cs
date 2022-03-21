@@ -89,6 +89,14 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MOVE_AWRHUB")]
       MoveAwrhub,
       [EnumMember(Value = "DELETE_AWRHUB")]
-      DeleteAwrhub
+      DeleteAwrhub,
+      [EnumMember(Value = "UPDATE_PRIVATE_ENDPOINT")]
+      UpdatePrivateEndpoint,
+      [EnumMember(Value = "CREATE_PRIVATE_ENDPOINT")]
+      CreatePrivateEndpoint,
+      [EnumMember(Value = "MOVE_PRIVATE_ENDPOINT")]
+      MovePrivateEndpoint,
+      [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
+      DeletePrivateEndpoint
   }
 }

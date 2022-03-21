@@ -185,6 +185,13 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "maintenance")]
         public MaintenanceDetails Maintenance { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeletionPolicy is required.")]
+        [JsonProperty(PropertyName = "deletionPolicy")]
+        public DeletionPolicyDetails DeletionPolicy { get; set; }
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}

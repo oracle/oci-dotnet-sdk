@@ -203,13 +203,26 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeUpgradeRequired { get; set; }
         
         /// <value>
-        /// The type of deployment, the value determines the exact 'type' of service executed in the Deployment. NOTE: Use of the value OGG is maintained for backward compatibility purposes.  Its use is discouraged 
-        ///       in favor of the equivalent DATABASE_ORACLE value.
+        /// The deployment type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "deploymentType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
+        /// The amount of storage being utilized (in bytes)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "storageUtilizationInBytes")]
+        public System.Nullable<long> StorageUtilizationInBytes { get; set; }
+        
+        /// <value>
+        /// Indicator will be true if the amount of storage being utilized exceeds the allowable storage utilization limit.  Exceeding the limit may be an indication of a misconfiguration of the deployment's GoldenGate service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isStorageUtilizationLimitExceeded")]
+        public System.Nullable<bool> IsStorageUtilizationLimitExceeded { get; set; }
         
     }
 }

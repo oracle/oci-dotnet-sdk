@@ -152,6 +152,9 @@ namespace Oci.OpsiService.Models
                 case "MACS_MANAGED_EXTERNAL_DATABASE":
                     obj = new MacsManagedExternalDatabaseConfigurationSummary();
                     break;
+                case "PE_COMANAGED_DATABASE":
+                    obj = new PeComanagedManagedExternalDatabaseConfigurationSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

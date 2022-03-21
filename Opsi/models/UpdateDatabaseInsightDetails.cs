@@ -65,6 +65,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_DATABASE":
                     obj = new UpdateEmManagedExternalDatabaseInsightDetails();
                     break;
+                case "PE_COMANAGED_DATABASE":
+                    obj = new UpdatePeComanagedDatabaseInsightDetails();
+                    break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateAutonomousDatabaseInsightDetails();
                     break;

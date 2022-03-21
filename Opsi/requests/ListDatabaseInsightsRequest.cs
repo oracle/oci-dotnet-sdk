@@ -69,7 +69,25 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "EXTERNAL-PDB")]
             ExternalPdb,
             [EnumMember(Value = "EXTERNAL-NONCDB")]
-            ExternalNoncdb
+            ExternalNoncdb,
+            [EnumMember(Value = "COMANAGED-VM-CDB")]
+            ComanagedVmCdb,
+            [EnumMember(Value = "COMANAGED-VM-PDB")]
+            ComanagedVmPdb,
+            [EnumMember(Value = "COMANAGED-VM-NONCDB")]
+            ComanagedVmNoncdb,
+            [EnumMember(Value = "COMANAGED-BM-CDB")]
+            ComanagedBmCdb,
+            [EnumMember(Value = "COMANAGED-BM-PDB")]
+            ComanagedBmPdb,
+            [EnumMember(Value = "COMANAGED-BM-NONCDB")]
+            ComanagedBmNoncdb,
+            [EnumMember(Value = "COMANAGED-EXACS-CDB")]
+            ComanagedExacsCdb,
+            [EnumMember(Value = "COMANAGED-EXACS-PDB")]
+            ComanagedExacsPdb,
+            [EnumMember(Value = "COMANAGED-EXACS-NONCDB")]
+            ComanagedExacsNoncdb
         };
 
         /// <value>
@@ -180,6 +198,12 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        /// <value>
+        /// Unique Operations Insights PrivateEndpoint identifier
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "opsiPrivateEndpointId")]
+        public string OpsiPrivateEndpointId { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact

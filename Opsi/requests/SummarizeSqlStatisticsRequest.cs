@@ -48,7 +48,25 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "EXTERNAL-PDB")]
             ExternalPdb,
             [EnumMember(Value = "EXTERNAL-NONCDB")]
-            ExternalNoncdb
+            ExternalNoncdb,
+            [EnumMember(Value = "COMANAGED-VM-CDB")]
+            ComanagedVmCdb,
+            [EnumMember(Value = "COMANAGED-VM-PDB")]
+            ComanagedVmPdb,
+            [EnumMember(Value = "COMANAGED-VM-NONCDB")]
+            ComanagedVmNoncdb,
+            [EnumMember(Value = "COMANAGED-BM-CDB")]
+            ComanagedBmCdb,
+            [EnumMember(Value = "COMANAGED-BM-PDB")]
+            ComanagedBmPdb,
+            [EnumMember(Value = "COMANAGED-BM-NONCDB")]
+            ComanagedBmNoncdb,
+            [EnumMember(Value = "COMANAGED-EXACS-CDB")]
+            ComanagedExacsCdb,
+            [EnumMember(Value = "COMANAGED-EXACS-PDB")]
+            ComanagedExacsPdb,
+            [EnumMember(Value = "COMANAGED-EXACS-NONCDB")]
+            ComanagedExacsNoncdb
         };
 
         /// <value>

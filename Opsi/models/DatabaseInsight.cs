@@ -134,6 +134,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// A message describing the status of the database connection of this resource. For example, it can be used to provide actionable information about the permission and content validity of the database connection.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseConnectionStatusDetails")]
+        public string DatabaseConnectionStatusDetails { get; set; }
+        
     }
 
     public class DatabaseInsightModelConverter : JsonConverter
@@ -161,6 +167,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "MACS_MANAGED_EXTERNAL_DATABASE":
                     obj = new MacsManagedExternalDatabaseInsight();
+                    break;
+                case "PE_COMANAGED_DATABASE":
+                    obj = new PeComanagedDatabaseInsight();
                     break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new AutonomousDatabaseInsight();

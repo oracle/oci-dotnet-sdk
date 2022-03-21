@@ -262,6 +262,13 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "maintenance")]
         public MaintenanceDetails Maintenance { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeletionPolicy is required.")]
+        [JsonProperty(PropertyName = "deletionPolicy")]
+        public DeletionPolicyDetails DeletionPolicy { get; set; }
+        
         /// <value>
         /// The date and time the DB System was created.
         /// </value>

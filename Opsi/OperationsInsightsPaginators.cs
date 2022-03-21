@@ -638,6 +638,55 @@ namespace Oci.OpsiService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOperationsInsightsPrivateEndpoints operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOperationsInsightsPrivateEndpointsResponse> ListOperationsInsightsPrivateEndpointsResponseEnumerator(ListOperationsInsightsPrivateEndpointsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOperationsInsightsPrivateEndpointsRequest, ListOperationsInsightsPrivateEndpointsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOperationsInsightsPrivateEndpoints(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OperationsInsightsPrivateEndpointSummary objects
+        /// contained in responses from the ListOperationsInsightsPrivateEndpoints operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OperationsInsightsPrivateEndpointSummary> ListOperationsInsightsPrivateEndpointsRecordEnumerator(ListOperationsInsightsPrivateEndpointsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOperationsInsightsPrivateEndpointsRequest, ListOperationsInsightsPrivateEndpointsResponse, OperationsInsightsPrivateEndpointSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOperationsInsightsPrivateEndpoints(request, retryConfiguration, cancellationToken),
+                response => response.OperationsInsightsPrivateEndpointCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListOperationsInsightsWarehouseUsers operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
