@@ -172,6 +172,34 @@ namespace Oci.OpsiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsPrivateEndpointRequest, GetOperationsInsightsPrivateEndpointResponse> ForOperationsInsightsPrivateEndpoint(GetOperationsInsightsPrivateEndpointRequest request, params OperationsInsightsPrivateEndpointLifecycleState[] targetStates)
+        {
+            return this.ForOperationsInsightsPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOperationsInsightsPrivateEndpointRequest, GetOperationsInsightsPrivateEndpointResponse> ForOperationsInsightsPrivateEndpoint(GetOperationsInsightsPrivateEndpointRequest request, WaiterConfiguration config, params OperationsInsightsPrivateEndpointLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOperationsInsightsPrivateEndpointRequest, GetOperationsInsightsPrivateEndpointResponse>(
+                request,
+                request => client.GetOperationsInsightsPrivateEndpoint(request),
+                response => targetStates.Contains(response.OperationsInsightsPrivateEndpoint.LifecycleState.Value),
+                targetStates.Contains(OperationsInsightsPrivateEndpointLifecycleState.Deleted)
+            );
+            return new Waiter<GetOperationsInsightsPrivateEndpointRequest, GetOperationsInsightsPrivateEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetOperationsInsightsWarehouseRequest, GetOperationsInsightsWarehouseResponse> ForOperationsInsightsWarehouse(GetOperationsInsightsWarehouseRequest request, params OperationsInsightsWarehouseLifecycleState[] targetStates)
         {
             return this.ForOperationsInsightsWarehouse(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

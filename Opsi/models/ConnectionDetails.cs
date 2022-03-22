@@ -64,7 +64,7 @@ namespace Oci.OpsiService.Models
         public System.Nullable<int> Port { get; set; }
         
         /// <value>
-        /// Service name used for connection requests.
+        /// Database service name used for connection requests.
         /// </value>
         /// <remarks>
         /// Required

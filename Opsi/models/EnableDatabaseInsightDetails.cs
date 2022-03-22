@@ -48,6 +48,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_DATABASE":
                     obj = new EnableEmManagedExternalDatabaseInsightDetails();
                     break;
+                case "PE_COMANAGED_DATABASE":
+                    obj = new EnablePeComanagedDatabaseInsightDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

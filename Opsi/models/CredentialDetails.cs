@@ -39,7 +39,9 @@ namespace Oci.OpsiService.Models
         ///
         public enum CredentialTypeEnum {
             [EnumMember(Value = "CREDENTIALS_BY_SOURCE")]
-            CredentialsBySource
+            CredentialsBySource,
+            [EnumMember(Value = "CREDENTIALS_BY_VAULT")]
+            CredentialsByVault
         };
 
         
@@ -67,6 +69,9 @@ namespace Oci.OpsiService.Models
             {
                 case "CREDENTIALS_BY_SOURCE":
                     obj = new CredentialsBySource();
+                    break;
+                case "CREDENTIALS_BY_VAULT":
+                    obj = new CredentialByVault();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

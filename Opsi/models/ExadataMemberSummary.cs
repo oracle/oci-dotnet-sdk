@@ -59,7 +59,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "INFINIBAND_SWITCH")]
             InfinibandSwitch,
             [EnumMember(Value = "ETHERNET_SWITCH")]
-            EthernetSwitch
+            EthernetSwitch,
+            [EnumMember(Value = "HOST")]
+            Host
         };
 
         /// <value>
