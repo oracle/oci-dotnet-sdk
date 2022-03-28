@@ -135,6 +135,12 @@ namespace Oci.DatacatalogService.Models
         public System.Collections.Generic.List<CustomPropertySetUsage> CustomPropertyMembers { get; set; }
         
         /// <value>
+        /// Type key of the object. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
+        /// <value>
         /// A map of maps that contains the properties which are specific to the attribute type. Each attribute type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
         /// values are maps of property name to property value. Every property is contained inside of a category. Most

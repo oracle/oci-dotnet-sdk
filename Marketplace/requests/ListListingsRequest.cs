@@ -32,7 +32,7 @@ namespace Oci.MarketplaceService.Requests
         public string ListingId { get; set; }
         
         /// <value>
-        /// Image ID of the listing
+        /// The image identifier of the listing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "imageId")]
         public string ImageId { get; set; }

@@ -172,5 +172,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
         
+        /// <value>
+        /// URL of the folder in the object store.
+        /// </value>
+        [JsonProperty(PropertyName = "objectStorageUrl")]
+        public string ObjectStorageUrl { get; set; }
+        
     }
 }

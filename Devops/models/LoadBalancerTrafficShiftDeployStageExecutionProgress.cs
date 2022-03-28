@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the load balancer traffic shift stage execution details.
+    /// Specifies the load balancer Traffic Shift stage execution details.
     /// </summary>
     public class LoadBalancerTrafficShiftDeployStageExecutionProgress : DeployStageExecutionProgress
     {

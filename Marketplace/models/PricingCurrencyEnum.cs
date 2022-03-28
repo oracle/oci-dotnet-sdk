@@ -17,6 +17,18 @@ namespace Oci.MarketplaceService.Models
   /// </summary>
   public enum PricingCurrencyEnum {
       [EnumMember(Value = "USD")]
-      Usd
+      Usd,
+      [EnumMember(Value = "CAD")]
+      Cad,
+      [EnumMember(Value = "INR")]
+      Inr,
+      [EnumMember(Value = "GBP")]
+      Gbp,
+      [EnumMember(Value = "BRL")]
+      Brl,
+      [EnumMember(Value = "JPY")]
+      Jpy,
+      [EnumMember(Value = "OMR")]
+      Omr
   }
 }

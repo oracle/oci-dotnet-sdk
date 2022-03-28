@@ -23,6 +23,10 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "MOVE_FLEET")]
       MoveFleet,
       [EnumMember(Value = "UPDATE_FLEET")]
-      UpdateFleet
+      UpdateFleet,
+      [EnumMember(Value = "UPDATE_FLEET_AGENT_CONFIGURATION")]
+      UpdateFleetAgentConfiguration,
+      [EnumMember(Value = "DELETE_JAVA_INSTALLATION")]
+      DeleteJavaInstallation
   }
 }

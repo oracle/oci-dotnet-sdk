@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string OkeClusterDeployEnvironmentId { get; set; }
         
         /// <value>
-        /// List of Kubernetes manifest artifact OCIDs, the manifests should not include any job resource.
+        /// List of Kubernetes manifest artifact OCIDs.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DevopsService.Models
         public System.Collections.Generic.List<string> KubernetesManifestDeployArtifactIds { get; set; }
         
         /// <value>
-        /// Default Namespace to be used for Kubernetes deployment when not specified in the manifest.
+        /// Default namespace to be used for Kubernetes deployment when not specified in the manifest.
         /// </value>
         /// <remarks>
         /// Required

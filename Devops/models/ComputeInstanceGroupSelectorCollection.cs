@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// A list of selectors for the instance group. UNION operator is used for combining the instances selected by each selector.
+        /// A list of selectors for the instance group. Union operator is used for combining the instances selected by each selector.
         /// </value>
         /// <remarks>
         /// Required

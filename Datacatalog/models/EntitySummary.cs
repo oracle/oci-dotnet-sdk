@@ -143,6 +143,12 @@ namespace Oci.DatacatalogService.Models
         public string Uri { get; set; }
         
         /// <value>
+        /// URL of the data entity in the object store.
+        /// </value>
+        [JsonProperty(PropertyName = "objectStorageUrl")]
+        public string ObjectStorageUrl { get; set; }
+        
+        /// <value>
         /// State of the data entity.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

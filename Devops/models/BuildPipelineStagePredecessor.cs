@@ -22,7 +22,9 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The ID of the predecessor stage. If a stage is the first stage in the pipeline, then the ID is the pipeline's ID.
+        /// The OCID of the predecessor stage. If a stage is the first stage in the pipeline, then
+        /// the ID is the pipeline's OCID.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

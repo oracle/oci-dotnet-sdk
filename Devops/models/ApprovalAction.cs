@@ -53,5 +53,11 @@ namespace Oci.DevopsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
         
+        /// <value>
+        /// The reason for approving or rejecting the deployment.
+        /// </value>
+        [JsonProperty(PropertyName = "reason")]
+        public string Reason { get; set; }
+        
     }
 }

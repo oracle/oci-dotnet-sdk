@@ -87,7 +87,7 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// An message describing the current state in more detail. 
+        /// An message describing the current state in more detail.
         /// For example, it can be used to provide actionable information for a resource in 'Failed' state.
         /// 
         /// </value>

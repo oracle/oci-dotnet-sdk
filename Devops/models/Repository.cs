@@ -95,8 +95,8 @@ namespace Oci.DevopsService.Models
                 ///
         /// <value>
         /// Type of repository:
-        /// Mirrored - Repository created by mirroring an existing repository.
-        /// Hosted - Repository created and hosted using OCI DevOps code repository.
+        /// MIRRORED - Repository created by mirroring an existing repository.
+        /// HOSTED - Repository created and hosted using OCI DevOps code repository.
         /// 
         /// </value>
         ///
@@ -109,8 +109,8 @@ namespace Oci.DevopsService.Models
 
         /// <value>
         /// Type of repository:
-        /// Mirrored - Repository created by mirroring an existing repository.
-        /// Hosted - Repository created and hosted using OCI DevOps code repository.
+        /// MIRRORED - Repository created by mirroring an existing repository.
+        /// HOSTED - Repository created and hosted using OCI DevOps code repository.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
@@ -186,8 +186,8 @@ namespace Oci.DevopsService.Models
 
         /// <value>
         /// Trigger build events supported for this repository:
-        /// Push - Build is triggered when a push event occurs.
-        /// Commit updates - Build is triggered when new commits are mirrored into a repository.
+        /// PUSH - Build is triggered when a push event occurs.
+        /// COMMIT_UPDATES - Build is triggered when new commits are mirrored into a repository.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "triggerBuildEvents", ItemConverterType = typeof(StringEnumConverter))]

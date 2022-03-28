@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Compute instance group environment filtered by DSL expression of the compute instances.
+    /// Specifies the Compute instance group environment filtered by the RQS query expression.
     /// </summary>
     public class ComputeInstanceGroupByQuerySelector : ComputeInstanceGroupSelector
     {

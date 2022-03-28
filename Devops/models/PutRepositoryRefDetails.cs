@@ -23,7 +23,7 @@ namespace Oci.DevopsService.Models
     {
                 ///
         /// <value>
-        /// The type of reference (Branch or Tag).
+        /// The type of reference (BRANCH or TAG).
         /// </value>
         ///
         public enum RefTypeEnum {

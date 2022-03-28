@@ -30,6 +30,14 @@ namespace Oci.JmsService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "retry-after")]
         public System.Nullable<float> RetryAfter { get; set; }
 
+
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
         /// <value>
         /// The returned WorkRequest instance.
         /// </value>

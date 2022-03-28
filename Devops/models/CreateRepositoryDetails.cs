@@ -50,6 +50,10 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Type of repository.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RepositoryType is required.")]
         [JsonProperty(PropertyName = "repositoryType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Repository.RepositoryTypeEnum> RepositoryType { get; set; }

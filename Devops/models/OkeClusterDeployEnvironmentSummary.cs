@@ -31,6 +31,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "clusterId")]
         public string ClusterId { get; set; }
         
+        [JsonProperty(PropertyName = "networkChannel")]
+        public NetworkChannel NetworkChannel { get; set; }
+        
         [JsonProperty(PropertyName = "deployEnvironmentType")]
         private readonly string deployEnvironmentType = "OKE_CLUSTER";
     }

@@ -112,5 +112,27 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
+        [JsonProperty(PropertyName = "createdBy")]
+        public Principal CreatedBy { get; set; }
+        
+        /// <value>
+        /// The date and time the work request percentage was last updated. (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastUpdated")]
+        public System.Nullable<System.DateTime> TimeLastUpdated { get; set; }
+        
+        /// <value>
+        /// The total number of tasks to be executed for this work request.
+        /// </value>
+        [JsonProperty(PropertyName = "totalTaskCount")]
+        public System.Nullable<int> TotalTaskCount { get; set; }
+        
+        /// <value>
+        /// The number of tasks had been executed to a terminal state.
+        /// </value>
+        [JsonProperty(PropertyName = "completedTaskCount")]
+        public System.Nullable<int> CompletedTaskCount { get; set; }
+        
     }
 }

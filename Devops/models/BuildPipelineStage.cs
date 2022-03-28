@@ -17,7 +17,7 @@ namespace Oci.DevopsService.Models
 {
     /// <summary>
     /// A single node in a build pipeline. A stage takes a specific designated action. 
-    /// There are many types of stages such as 'Build' and 'Deliver Artifacts'.
+    /// There are many types of stages such as 'BUILD' and 'DELIVER_ARTIFACT'.
     /// 
     /// </summary>
     [JsonConverter(typeof(BuildPipelineStageModelConverter))]
@@ -77,7 +77,7 @@ namespace Oci.DevopsService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Defines the stage type, which is one of the following: Build, Deliver Artifacts, Wait, and Trigger Deployment.
+        /// Defines the stage type, which is one of the following: BUILD, DELIVER_ARTIFACT, WAIT, and TRIGGER_DEPLOYMENT_PIPELINE.
         /// 
         /// </value>
         ///

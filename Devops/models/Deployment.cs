@@ -29,7 +29,7 @@ namespace Oci.DevopsService.Models
         public DeployPipelineEnvironmentCollection DeployPipelineEnvironments { get; set; }
                 ///
         /// <value>
-        /// Specifies type of Deployment
+        /// Specifies type of deployment.
         /// </value>
         ///
         public enum DeploymentTypeEnum {
@@ -38,7 +38,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "PIPELINE_REDEPLOYMENT")]
             PipelineRedeployment,
             [EnumMember(Value = "SINGLE_STAGE_DEPLOYMENT")]
-            SingleStageDeployment
+            SingleStageDeployment,
+            [EnumMember(Value = "SINGLE_STAGE_REDEPLOYMENT")]
+            SingleStageRedeployment
         };
 
         
@@ -181,6 +183,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["deploymentType"].Value<string>();
             switch (discriminator)
             {
+                case "SINGLE_STAGE_REDEPLOYMENT":
+                    obj = new SingleDeployStageRedeployment();
+                    break;
                 case "PIPELINE_DEPLOYMENT":
                     obj = new DeployPipelineDeployment();
                     break;

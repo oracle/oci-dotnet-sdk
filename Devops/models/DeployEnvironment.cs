@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The target OCI resources, such as Compute instances, Container Engine for Kubernetes(OKE) clusters, or Function, where artifacts will be deployed.
+    /// The target OCI resources, such as Compute instances, Container Engine for Kubernetes(OKE) clusters, or Function, where artifacts are deployed.
     /// </summary>
     [JsonConverter(typeof(DeployEnvironmentModelConverter))]
     public class DeployEnvironment 
@@ -106,7 +106,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
         };
 
         /// <value>

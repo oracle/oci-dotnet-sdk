@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies config for load balancer traffic shift stages.
+    /// Specifies configuration for load balancer traffic shift stages.
+    /// The load balancer specified here should be an Application load balancer type.
+    /// Network load balancers are not supported.
+    /// 
     /// </summary>
     public class LoadBalancerConfig 
     {

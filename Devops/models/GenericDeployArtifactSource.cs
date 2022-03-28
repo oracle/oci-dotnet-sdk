@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The OCID of a repository
+        /// The OCID of a repository.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Compute instance group environment. The instances in the group is the combined results of each selectors in the instance group selectors.
+    /// Specifies the Compute instance group environment. The combination of instances matching the selectors are included in the instance group.
     /// </summary>
     public class ComputeInstanceGroupDeployEnvironment : DeployEnvironment
     {

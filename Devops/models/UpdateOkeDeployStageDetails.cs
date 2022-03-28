@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Kubernetes cluster deployment stage.
+    /// Specifies the Container Engine for Kubernetes (OKE) cluster deployment stage.
     /// </summary>
     public class UpdateOkeDeployStageDetails : UpdateDeployStageDetails
     {
@@ -28,7 +28,7 @@ namespace Oci.DevopsService.Models
         public string OkeClusterDeployEnvironmentId { get; set; }
         
         /// <value>
-        /// List of Kubernetes manifest artifact OCIDs, the manifests should not include any job resource.
+        /// List of Kubernetes manifest artifact OCIDs.
         /// </value>
         [JsonProperty(PropertyName = "kubernetesManifestDeployArtifactIds")]
         public System.Collections.Generic.List<string> KubernetesManifestDeployArtifactIds { get; set; }

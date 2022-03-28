@@ -83,6 +83,26 @@ namespace Oci.DevopsService.Models
             Wait,
             [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT")]
             ComputeInstanceGroupRollingDeployment,
+            [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT")]
+            ComputeInstanceGroupBlueGreenDeployment,
+            [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT")]
+            ComputeInstanceGroupBlueGreenTrafficShift,
+            [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_CANARY_DEPLOYMENT")]
+            ComputeInstanceGroupCanaryDeployment,
+            [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_CANARY_TRAFFIC_SHIFT")]
+            ComputeInstanceGroupCanaryTrafficShift,
+            [EnumMember(Value = "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL")]
+            ComputeInstanceGroupCanaryApproval,
+            [EnumMember(Value = "OKE_BLUE_GREEN_DEPLOYMENT")]
+            OkeBlueGreenDeployment,
+            [EnumMember(Value = "OKE_BLUE_GREEN_TRAFFIC_SHIFT")]
+            OkeBlueGreenTrafficShift,
+            [EnumMember(Value = "OKE_CANARY_DEPLOYMENT")]
+            OkeCanaryDeployment,
+            [EnumMember(Value = "OKE_CANARY_TRAFFIC_SHIFT")]
+            OkeCanaryTrafficShift,
+            [EnumMember(Value = "OKE_CANARY_APPROVAL")]
+            OkeCanaryApproval,
             [EnumMember(Value = "OKE_DEPLOYMENT")]
             OkeDeployment,
             [EnumMember(Value = "DEPLOY_FUNCTION")]
@@ -183,26 +203,56 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["deployStageType"].Value<string>();
             switch (discriminator)
             {
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new ComputeInstanceGroupBlueGreenTrafficShiftDeployStage();
+                    break;
                 case "LOAD_BALANCER_TRAFFIC_SHIFT":
                     obj = new LoadBalancerTrafficShiftDeployStage();
                     break;
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStage();
                     break;
-                case "WAIT":
-                    obj = new WaitDeployStage();
+                case "OKE_CANARY_DEPLOYMENT":
+                    obj = new OkeCanaryDeployStage();
                     break;
                 case "OKE_DEPLOYMENT":
                     obj = new OkeDeployStage();
+                    break;
+                case "OKE_CANARY_TRAFFIC_SHIFT":
+                    obj = new OkeCanaryTrafficShiftDeployStage();
+                    break;
+                case "DEPLOY_FUNCTION":
+                    obj = new FunctionDeployStage();
+                    break;
+                case "OKE_BLUE_GREEN_DEPLOYMENT":
+                    obj = new OkeBlueGreenDeployStage();
+                    break;
+                case "OKE_CANARY_APPROVAL":
+                    obj = new OkeCanaryApprovalDeployStage();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_TRAFFIC_SHIFT":
+                    obj = new ComputeInstanceGroupCanaryTrafficShiftDeployStage();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL":
+                    obj = new ComputeInstanceGroupCanaryApprovalDeployStage();
+                    break;
+                case "WAIT":
+                    obj = new WaitDeployStage();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT":
+                    obj = new ComputeInstanceGroupBlueGreenDeployStage();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_DEPLOYMENT":
+                    obj = new ComputeInstanceGroupCanaryDeployStage();
+                    break;
+                case "OKE_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new OkeBlueGreenTrafficShiftDeployStage();
                     break;
                 case "MANUAL_APPROVAL":
                     obj = new ManualApprovalDeployStage();
                     break;
                 case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
                     obj = new ComputeInstanceGroupDeployStage();
-                    break;
-                case "DEPLOY_FUNCTION":
-                    obj = new FunctionDeployStage();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
