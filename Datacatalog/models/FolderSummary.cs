@@ -100,10 +100,22 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// The date and time the folder was last updated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Example: 2019-03-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
         /// URI of the folder resource within the data catalog API.
         /// </value>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
+        
+        /// <value>
+        /// URL of the folder in the object store.
+        /// </value>
+        [JsonProperty(PropertyName = "objectStorageUrl")]
+        public string ObjectStorageUrl { get; set; }
         
         /// <value>
         /// State of the folder.

@@ -113,6 +113,12 @@ namespace Oci.JmsService.Models
         public System.Nullable<int> ApproximateManagedInstanceCount { get; set; }
         
         /// <value>
+        /// The approximate count of work requests working on this Java Runtime.
+        /// </value>
+        [JsonProperty(PropertyName = "approximatePendingWorkRequestCount")]
+        public System.Nullable<int> ApproximatePendingWorkRequestCount { get; set; }
+        
+        /// <value>
         /// Lower bound of the specified time period filter. JMS provides a view of the data that is _per day_. The query uses only the date element of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]

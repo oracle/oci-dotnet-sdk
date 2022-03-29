@@ -83,6 +83,13 @@ namespace Oci.CoreService.Models
         public System.Nullable<float> MemoryInGBs { get; set; }
         
         /// <value>
+        /// The number of physical network interface card (NIC) ports available for this shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkPorts")]
+        public System.Nullable<int> NetworkPorts { get; set; }
+        
+        /// <value>
         /// The networking bandwidth available for this shape, in gigabits per second.
         /// 
         /// </value>
@@ -136,6 +143,23 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "localDiskDescription")]
         public string LocalDiskDescription { get; set; }
+        
+        /// <value>
+        /// The number of networking ports available for the remote direct memory access (RDMA) network between nodes in
+        /// a high performance computing (HPC) cluster network. If the shape does not support cluster networks, this
+        /// value is `0`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rdmaPorts")]
+        public System.Nullable<int> RdmaPorts { get; set; }
+        
+        /// <value>
+        /// The networking bandwidth available for the remote direct memory access (RDMA) network for this shape, in
+        /// gigabits per second.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rdmaBandwidthInGbps")]
+        public System.Nullable<int> RdmaBandwidthInGbps { get; set; }
         
         /// <value>
         /// Whether live migration is supported for this shape.

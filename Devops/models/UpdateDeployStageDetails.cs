@@ -72,23 +72,53 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["deployStageType"].Value<string>();
             switch (discriminator)
             {
-                case "OKE_DEPLOYMENT":
-                    obj = new UpdateOkeDeployStageDetails();
+                case "OKE_CANARY_TRAFFIC_SHIFT":
+                    obj = new UpdateOkeCanaryTrafficShiftDeployStageDetails();
                     break;
-                case "LOAD_BALANCER_TRAFFIC_SHIFT":
-                    obj = new UpdateLoadBalancerTrafficShiftDeployStageDetails();
+                case "OKE_CANARY_DEPLOYMENT":
+                    obj = new UpdateOkeCanaryDeployStageDetails();
                     break;
                 case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
                     obj = new UpdateComputeInstanceGroupDeployStageDetails();
                     break;
+                case "OKE_CANARY_APPROVAL":
+                    obj = new UpdateOkeCanaryApprovalDeployStageDetails();
+                    break;
+                case "OKE_DEPLOYMENT":
+                    obj = new UpdateOkeDeployStageDetails();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL":
+                    obj = new UpdateComputeInstanceGroupCanaryApprovalDeployStageDetails();
+                    break;
+                case "LOAD_BALANCER_TRAFFIC_SHIFT":
+                    obj = new UpdateLoadBalancerTrafficShiftDeployStageDetails();
+                    break;
+                case "OKE_BLUE_GREEN_DEPLOYMENT":
+                    obj = new UpdateOkeBlueGreenDeployStageDetails();
+                    break;
                 case "WAIT":
                     obj = new UpdateWaitDeployStageDetails();
+                    break;
+                case "OKE_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new UpdateOkeBlueGreenTrafficShiftDeployStageDetails();
                     break;
                 case "MANUAL_APPROVAL":
                     obj = new UpdateManualApprovalDeployStageDetails();
                     break;
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT":
+                    obj = new UpdateComputeInstanceGroupBlueGreenDeployStageDetails();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_DEPLOYMENT":
+                    obj = new UpdateComputeInstanceGroupCanaryDeployStageDetails();
+                    break;
                 case "DEPLOY_FUNCTION":
                     obj = new UpdateFunctionDeployStageDetails();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new UpdateComputeInstanceGroupBlueGreenTrafficShiftDeployStageDetails();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_TRAFFIC_SHIFT":
+                    obj = new UpdateComputeInstanceGroupCanaryTrafficShiftDeployStageDetails();
                     break;
                 case "INVOKE_FUNCTION":
                     obj = new UpdateInvokeFunctionDeployStageDetails();

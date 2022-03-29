@@ -143,6 +143,20 @@ namespace Oci.MarketplaceService.Models
         
         [JsonProperty(PropertyName = "banner")]
         public UploadData Banner { get; set; }
+                ///
+        ///
+        public enum CompatibleArchitecturesEnum {
+            [EnumMember(Value = "X86")]
+            X86,
+            [EnumMember(Value = "ARM")]
+            Arm
+        };
+
+        /// <value>
+        /// The list of compatible architectures supported by the listing
+        /// </value>
+        [JsonProperty(PropertyName = "compatibleArchitectures", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<CompatibleArchitecturesEnum> CompatibleArchitectures { get; set; }
         
         /// <value>
         /// The regions where you can deploy the listing. (Some listings have restrictions that limit their deployment to United States regions only.)

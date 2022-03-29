@@ -28,6 +28,13 @@ namespace Oci.DevopsService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
+
+        /// <value>
+        /// This API will be deprecated on Wed, 29 Mar 2023 01:00:00 GMT. Please use \"/repositories/{repositoryId}/file/lines\"
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Sunset")]
+        public string Sunset { get; set; }
+
         /// <value>
         /// The returned RepositoryFileLines instance.
         /// </value>

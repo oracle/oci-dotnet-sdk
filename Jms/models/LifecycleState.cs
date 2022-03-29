@@ -26,6 +26,8 @@ namespace Oci.JmsService.Models
       Deleting,
       [EnumMember(Value = "FAILED")]
       Failed,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
       [EnumMember(Value = "UPDATING")]
       Updating
   }

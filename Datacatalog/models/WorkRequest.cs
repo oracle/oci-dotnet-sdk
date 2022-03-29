@@ -45,7 +45,15 @@ namespace Oci.DatacatalogService.Models
             [EnumMember(Value = "ATTACH_CATALOG_PRIVATE_ENDPOINT")]
             AttachCatalogPrivateEndpoint,
             [EnumMember(Value = "DETACH_CATALOG_PRIVATE_ENDPOINT")]
-            DetachCatalogPrivateEndpoint
+            DetachCatalogPrivateEndpoint,
+            [EnumMember(Value = "CREATE_METASTORE")]
+            CreateMetastore,
+            [EnumMember(Value = "UPDATE_METASTORE")]
+            UpdateMetastore,
+            [EnumMember(Value = "DELETE_METASTORE")]
+            DeleteMetastore,
+            [EnumMember(Value = "MOVE_METASTORE")]
+            MoveMetastore
         };
 
         /// <value>

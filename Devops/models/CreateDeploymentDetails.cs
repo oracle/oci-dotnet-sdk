@@ -82,6 +82,9 @@ namespace Oci.DevopsService.Models
                 case "SINGLE_STAGE_DEPLOYMENT":
                     obj = new CreateSingleDeployStageDeploymentDetails();
                     break;
+                case "SINGLE_STAGE_REDEPLOYMENT":
+                    obj = new CreateSingleDeployStageRedeploymentDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

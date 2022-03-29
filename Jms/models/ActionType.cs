@@ -25,6 +25,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "RELATED")]
       Related,
       [EnumMember(Value = "UPDATED")]
-      Updated
+      Updated,
+      [EnumMember(Value = "FAILED")]
+      Failed
   }
 }

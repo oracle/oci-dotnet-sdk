@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Specifies OCIR Image Path - optionally include tag.
+        /// Specifies OCIR image path - optionally include tag.
         /// </value>
         /// <remarks>
         /// Required

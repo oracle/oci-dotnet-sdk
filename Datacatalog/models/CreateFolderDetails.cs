@@ -93,5 +93,11 @@ namespace Oci.DatacatalogService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
         
+        /// <value>
+        /// Type key of the object. Type keys can be found via the '/types' endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "typeKey")]
+        public string TypeKey { get; set; }
+        
     }
 }

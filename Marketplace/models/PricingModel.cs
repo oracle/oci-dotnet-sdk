@@ -52,5 +52,8 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "rate")]
         public System.Nullable<decimal> Rate { get; set; }
         
+        [JsonProperty(PropertyName = "internationalMarketPrice")]
+        public InternationalMarketPrice InternationalMarketPrice { get; set; }
+        
     }
 }

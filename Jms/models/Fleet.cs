@@ -111,6 +111,12 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "approximateManagedInstanceCount")]
         public System.Nullable<int> ApproximateManagedInstanceCount { get; set; }
         
+        [JsonProperty(PropertyName = "inventoryLog")]
+        public CustomLog InventoryLog { get; set; }
+        
+        [JsonProperty(PropertyName = "operationLog")]
+        public CustomLog OperationLog { get; set; }
+        
         /// <value>
         /// The creation date and time of the Fleet (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 

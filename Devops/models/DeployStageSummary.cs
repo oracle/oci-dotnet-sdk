@@ -143,17 +143,41 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["deployStageType"].Value<string>();
             switch (discriminator)
             {
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT":
+                    obj = new ComputeInstanceGroupBlueGreenDeployStageSummary();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new ComputeInstanceGroupBlueGreenTrafficShiftDeployStageSummary();
+                    break;
+                case "OKE_BLUE_GREEN_DEPLOYMENT":
+                    obj = new OkeBlueGreenDeployStageSummary();
+                    break;
                 case "WAIT":
                     obj = new WaitDeployStageSummary();
-                    break;
-                case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
-                    obj = new ComputeInstanceGroupDeployStageSummary();
                     break;
                 case "OKE_DEPLOYMENT":
                     obj = new OkeDeployStageSummary();
                     break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL":
+                    obj = new ComputeInstanceGroupCanaryApprovalDeployStageSummary();
+                    break;
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStageSummary();
+                    break;
+                case "OKE_CANARY_TRAFFIC_SHIFT":
+                    obj = new OkeCanaryTrafficShiftDeployStageSummary();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
+                    obj = new ComputeInstanceGroupDeployStageSummary();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_DEPLOYMENT":
+                    obj = new ComputeInstanceGroupCanaryDeployStageSummary();
+                    break;
+                case "OKE_CANARY_APPROVAL":
+                    obj = new OkeCanaryApprovalDeployStageSummary();
+                    break;
+                case "OKE_CANARY_DEPLOYMENT":
+                    obj = new OkeCanaryDeployStageSummary();
                     break;
                 case "LOAD_BALANCER_TRAFFIC_SHIFT":
                     obj = new LoadBalancerTrafficShiftDeployStageSummary();
@@ -161,8 +185,14 @@ namespace Oci.DevopsService.Models
                 case "MANUAL_APPROVAL":
                     obj = new ManualApprovalDeployStageSummary();
                     break;
+                case "OKE_BLUE_GREEN_TRAFFIC_SHIFT":
+                    obj = new OkeBlueGreenTrafficShiftDeployStageSummary();
+                    break;
                 case "DEPLOY_FUNCTION":
                     obj = new FunctionDeployStageSummary();
+                    break;
+                case "COMPUTE_INSTANCE_GROUP_CANARY_TRAFFIC_SHIFT":
+                    obj = new ComputeInstanceGroupCanaryTrafficShiftDeployStageSummary();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

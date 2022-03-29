@@ -47,5 +47,12 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "meters")]
         public string Meters { get; set; }
         
+        /// <value>
+        /// Reason the account is ineligible to launch paid listings
+        /// </value>
+        [JsonProperty(PropertyName = "ineligibilityReason")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<IneligibilityReasonEnum> IneligibilityReason { get; set; }
+        
     }
 }

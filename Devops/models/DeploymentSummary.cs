@@ -149,6 +149,9 @@ namespace Oci.DevopsService.Models
                 case "PIPELINE_DEPLOYMENT":
                     obj = new DeployPipelineDeploymentSummary();
                     break;
+                case "SINGLE_STAGE_REDEPLOYMENT":
+                    obj = new SingleDeployStageRedeploymentSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

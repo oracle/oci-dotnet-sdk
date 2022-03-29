@@ -69,6 +69,33 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "routingPolicy", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<RoutingPolicyEnum> RoutingPolicy { get; set; }
+                ///
+        /// <value>
+        /// Set to ENABLED to activate the bgp session of virtual circuit, DISABLED to deactivate.
+        /// 
+        /// </value>
+        ///
+        public enum BgpAdminStateEnum {
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled
+        };
+
+        /// <value>
+        /// Set to ENABLED to activate the bgp session of virtual circuit, DISABLED to deactivate.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bgpAdminState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BgpAdminStateEnum> BgpAdminState { get; set; }
+        
+        /// <value>
+        /// Set to true to enable BFD for ipv4 Bgp Peering, false to disable. If not set, default is false
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBfdEnabled")]
+        public System.Nullable<bool> IsBfdEnabled { get; set; }
         
         /// <value>
         /// Deprecated. Instead use `customerAsn`.

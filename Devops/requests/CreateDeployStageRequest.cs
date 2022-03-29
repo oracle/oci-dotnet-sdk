@@ -20,7 +20,7 @@ namespace Oci.DevopsService.Requests
     {
         
         /// <value>
-        /// Details for the new DeployStage.
+        /// Details for the new deployment stage.
         /// </value>
         /// <remarks>
         /// Required

@@ -47,6 +47,12 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        [JsonProperty(PropertyName = "inventoryLog")]
+        public CustomLog InventoryLog { get; set; }
+        
+        [JsonProperty(PropertyName = "operationLog")]
+        public CustomLog OperationLog { get; set; }
+        
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}. (See [Understanding Free-form Tags](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm)).

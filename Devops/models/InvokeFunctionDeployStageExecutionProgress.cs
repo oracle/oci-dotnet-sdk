@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the invoke function stage specific execution details.
+    /// Specifies the Invoke Function stage specific execution details.
     /// </summary>
     public class InvokeFunctionDeployStageExecutionProgress : DeployStageExecutionProgress
     {

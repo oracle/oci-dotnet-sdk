@@ -23,9 +23,9 @@ namespace Oci.DevopsService.Models
                 ///
         /// <value>
         /// Different types of trigger schedule:
-        /// None - No automated synchronization schedule.
-        /// Default - Trigger schedule is every 30 minutes.
-        /// Custom - Custom triggering schedule.
+        /// NONE - No automated synchronization schedule.
+        /// DEFAULT - Trigger schedule is every 30 minutes.
+        /// CUSTOM - Custom triggering schedule.
         /// 
         /// </value>
         ///
@@ -40,9 +40,9 @@ namespace Oci.DevopsService.Models
 
         /// <value>
         /// Different types of trigger schedule:
-        /// None - No automated synchronization schedule.
-        /// Default - Trigger schedule is every 30 minutes.
-        /// Custom - Custom triggering schedule.
+        /// NONE - No automated synchronization schedule.
+        /// DEFAULT - Trigger schedule is every 30 minutes.
+        /// CUSTOM - Custom triggering schedule.
         /// 
         /// </value>
         /// <remarks>

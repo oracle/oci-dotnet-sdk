@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the instance group rolling deployment stage.
+    /// Specifies the Instance Group Rolling deployment stage.
     /// </summary>
     public class ComputeInstanceGroupDeployStageSummary : DeployStageSummary
     {

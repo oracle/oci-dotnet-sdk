@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The threshold count of failed instances in the group, which when reached or exceeded sets the stage as FAILED.
+        /// The threshold count of failed instances in the group, which when reached or exceeded sets the stage as Failed.
         /// </value>
         /// <remarks>
         /// Required

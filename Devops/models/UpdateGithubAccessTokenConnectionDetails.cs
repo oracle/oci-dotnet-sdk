@@ -24,7 +24,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The OCID of personal access token saved in secret store.
+        /// OCID of personal access token saved in secret store
         /// </value>
         [JsonProperty(PropertyName = "accessToken")]
         public string AccessToken { get; set; }
