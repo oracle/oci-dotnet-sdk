@@ -17,6 +17,7 @@ namespace Oci.IdentityService.Models
 {
     /// <summary>
     /// Properties for creating a network source object.
+    /// 
     /// </summary>
     public class CreateNetworkSourceDetails 
     {

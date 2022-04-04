@@ -21,6 +21,52 @@ namespace Oci.OspgatewayService.Models
     public class CreditCardPaymentDetail : PaymentDetail
     {
         
+        /// <value>
+        /// Name on the credit card
+        /// </value>
+        [JsonProperty(PropertyName = "nameOnCard")]
+        public string NameOnCard { get; set; }
+                ///
+        /// <value>
+        /// Credit card type
+        /// </value>
+        ///
+        public enum CreditCardTypeEnum {
+            [EnumMember(Value = "VISA")]
+            Visa,
+            [EnumMember(Value = "AMEX")]
+            Amex,
+            [EnumMember(Value = "MASTERCARD")]
+            Mastercard,
+            [EnumMember(Value = "DISCOVER")]
+            Discover,
+            [EnumMember(Value = "JCB")]
+            Jcb,
+            [EnumMember(Value = "DINER")]
+            Diner,
+            [EnumMember(Value = "ELO")]
+            Elo
+        };
+
+        /// <value>
+        /// Credit card type
+        /// </value>
+        [JsonProperty(PropertyName = "creditCardType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CreditCardTypeEnum> CreditCardType { get; set; }
+        
+        /// <value>
+        /// Last four digits of the card
+        /// </value>
+        [JsonProperty(PropertyName = "lastDigits")]
+        public string LastDigits { get; set; }
+        
+        /// <value>
+        /// Expired date of the credit card
+        /// </value>
+        [JsonProperty(PropertyName = "timeExpiration")]
+        public System.Nullable<System.DateTime> TimeExpiration { get; set; }
+        
         [JsonProperty(PropertyName = "paymentMethod")]
         private readonly string paymentMethod = "CREDIT_CARD";
     }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Properties for a region where a domain is replicated too.
+    /// (For tenancies that support identity domains) Properties for a region where a replica for the identity domain exists.
     /// </summary>
     public class ReplicatedRegionDetails 
     {
@@ -31,13 +31,13 @@ namespace Oci.IdentityService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Region agnostic domain URL.
+        /// Region-agnostic identity domain URL.
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
                 ///
         /// <value>
-        /// The IDCS replicated region state
+        /// The IDCS-replicated region state.
         /// 
         /// </value>
         ///
@@ -55,7 +55,7 @@ namespace Oci.IdentityService.Models
         };
 
         /// <value>
-        /// The IDCS replicated region state
+        /// The IDCS-replicated region state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "state")]

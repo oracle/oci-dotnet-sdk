@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Authentication policy, currently set for the given compartment
+    /// Authentication policy, currently set for the given compartment.
     /// 
     /// </summary>
     public class AuthenticationPolicy 

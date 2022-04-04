@@ -25,7 +25,7 @@ namespace Oci.IdentityService.Models
     /// <br/>
     /// **Note:** The token is always an Oracle-generated string; you can't change it to a string of your choice.
     /// <br/>
-    /// For more information, see [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm).
+    /// For more information, see [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/access/managing-user-credentials.htm).
     /// 
     /// </summary>
     public class AuthToken 
@@ -53,6 +53,9 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// The description you assign to the auth token. Does not have to be unique, and it's changeable.
+        /// <br/>
+        /// (For tenancies that support identity domains) You can have an empty description.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

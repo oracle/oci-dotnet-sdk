@@ -38,7 +38,7 @@ namespace Oci.DatasafeService.Requests
         ///
         /// <value>
         /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
-        /// The default order for STARTTIME and FINISHTIME is descending.
+        /// The default order is descending.
         /// 
         /// </value>
         ///
@@ -46,12 +46,14 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "STARTTIME")]
             Starttime,
             [EnumMember(Value = "FINISHTIME")]
-            Finishtime
+            Finishtime,
+            [EnumMember(Value = "ACCEPTEDTIME")]
+            Acceptedtime
         };
 
         /// <value>
         /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
-        /// The default order for STARTTIME and FINISHTIME is descending.
+        /// The default order is descending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

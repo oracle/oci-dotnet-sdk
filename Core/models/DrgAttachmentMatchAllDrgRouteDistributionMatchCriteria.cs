@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// No match criteria is applied.
+    /// All routes are imported or exported.
     /// 
     /// </summary>
     public class DrgAttachmentMatchAllDrgRouteDistributionMatchCriteria : DrgRouteDistributionMatchCriteria

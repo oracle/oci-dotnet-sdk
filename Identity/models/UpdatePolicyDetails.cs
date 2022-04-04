@@ -27,8 +27,8 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// An array of policy statements written in the policy language. See
-        /// [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm) and
-        /// [Common Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/commonpolicies.htm).
+        /// [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm) and
+        /// [Common Policies](https://docs.cloud.oracle.com/Content/Identity/policiescommon/commonpolicies.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "statements")]

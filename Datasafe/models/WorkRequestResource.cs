@@ -47,7 +47,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "IN_PROGRESS")]
-            InProgress
+            InProgress,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>

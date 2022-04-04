@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Update domain license type
+    /// (For tenancies that support identity domains) Details for updating the license type of the identity domain.
     /// </summary>
     public class ChangeDomainLicenseTypeDetails 
     {
         
         /// <value>
-        /// The License type of Domain
+        /// The license type of the identity domain.
         /// </value>
         [JsonProperty(PropertyName = "licenseType")]
         public string LicenseType { get; set; }

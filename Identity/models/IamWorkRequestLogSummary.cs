@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// The log entity for a IAM work request.
+    /// (For tenancies that support identity domains) The log entity for a IAM work request.
     /// 
     /// </summary>
     public class IamWorkRequestLogSummary 

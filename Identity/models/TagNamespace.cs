@@ -17,7 +17,7 @@ namespace Oci.IdentityService.Models
 {
     /// <summary>
     /// A managed container for defined tags. A tag namespace is unique in a tenancy. For more information,
-    /// see [Managing Tags and Tag Namespaces](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm).
+    /// see [Managing Tags and Tag Namespaces](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values
     /// using the API.
@@ -85,7 +85,7 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// Whether the tag namespace is retired.
-        /// See [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
+        /// See [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm#retiringkeys).
         /// 
         /// </value>
         /// <remarks>

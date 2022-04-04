@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Update domain details
+    /// (For tenancies that support identity domains) Update identity domain details.
     /// </summary>
     public class UpdateDomainDetails 
     {
         
         /// <value>
-        /// The domain description
+        /// The identity domain description. You can have an empty description.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The mutable display name of the domain
+        /// The mutable display name of the identity domain.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Indicates whether domain is hidden on login screen or not.
+        /// Indicates whether the identity domain is hidden on the sign-in screen or not.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHiddenOnLogin")]

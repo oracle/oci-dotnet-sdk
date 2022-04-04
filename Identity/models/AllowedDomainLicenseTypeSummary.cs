@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// The 'AllowedDomainLicenseTypeSummary' object contains information about the 'Domain License type'.
+    /// (For tenancies that support identity domains) The 'AllowedDomainLicenseTypeSummary' object contains information about the license type of the identity domain.
     /// 
     /// </summary>
     public class AllowedDomainLicenseTypeSummary 

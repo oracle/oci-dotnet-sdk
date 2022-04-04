@@ -45,6 +45,9 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// The description you assign to the SMTP credential. Does not have to be unique, and it's changeable.
+        /// <br/>
+        /// (For tenancies that support identity domains) You can have an empty description.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

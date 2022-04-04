@@ -20,7 +20,7 @@ namespace Oci.IdentityService.Requests
     {
         
         /// <value>
-        /// The domain license type
+        /// The license type of the identity domain.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "currentLicenseTypeName")]
         public string CurrentLicenseTypeName { get; set; }

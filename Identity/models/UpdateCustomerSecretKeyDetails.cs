@@ -21,6 +21,9 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// The description you assign to the secret key. Does not have to be unique, and it's changeable.
+        /// <br/>
+        /// (For tenancies that support identity domains) You can have an empty description.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

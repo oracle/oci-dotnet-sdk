@@ -52,7 +52,7 @@ namespace Oci.DatasafeService.Requests
         /// A filter to return the target databases that matches the current state of the target database.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<TargetDatabaseLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// A filter to return target databases that match the database type of the target database.

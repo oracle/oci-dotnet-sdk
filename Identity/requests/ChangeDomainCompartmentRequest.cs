@@ -20,7 +20,7 @@ namespace Oci.IdentityService.Requests
     {
         
         /// <value>
-        /// The OCID of the domain
+        /// The OCID of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Requests
         public string DomainId { get; set; }
         
         /// <value>
-        /// the request object for moving compartment of a domain
+        /// The request object for moving the identity domain to a different compartment.
         /// </value>
         /// <remarks>
         /// Required

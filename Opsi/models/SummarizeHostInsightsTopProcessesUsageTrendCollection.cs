@@ -13,44 +13,44 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.IdentityService.Models
+namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// (For tenancies that support identity domains) An error encountered while executing an operation that is tracked by a IAM work request.
+    /// Top level response object.
     /// 
     /// </summary>
-    public class IamWorkRequestErrorSummary 
+    public class SummarizeHostInsightsTopProcessesUsageTrendCollection 
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured.
+        /// The start timestamp that was passed into the request.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Code is required.")]
-        [JsonProperty(PropertyName = "code")]
-        public string Code { get; set; }
+        [Required(ErrorMessage = "TimeIntervalStart is required.")]
+        [JsonProperty(PropertyName = "timeIntervalStart")]
+        public System.Nullable<System.DateTime> TimeIntervalStart { get; set; }
         
         /// <value>
-        /// A human-readable error string.
+        /// The end timestamp that was passed into the request.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Message is required.")]
-        [JsonProperty(PropertyName = "message")]
-        public string Message { get; set; }
+        [Required(ErrorMessage = "TimeIntervalEnd is required.")]
+        [JsonProperty(PropertyName = "timeIntervalEnd")]
+        public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
         
         /// <value>
-        /// The date and time the error occurred.
+        /// Collection of Usage Data with time stamps for top processes
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Timestamp is required.")]
-        [JsonProperty(PropertyName = "timestamp")]
-        public System.Nullable<System.DateTime> Timestamp { get; set; }
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<TopProcessesUsageTrendAggregation> Items { get; set; }
         
     }
 }

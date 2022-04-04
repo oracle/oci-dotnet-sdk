@@ -24,6 +24,8 @@ namespace Oci.DatasafeService.Models
       Updating,
       [EnumMember(Value = "DELETING")]
       Deleting,
+      [EnumMember(Value = "DELETED")]
+      Deleted,
       [EnumMember(Value = "FAILED")]
       Failed
   }

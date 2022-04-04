@@ -21,7 +21,7 @@ namespace Oci.IdentityService.Models
     /// of measuring usage and billing, access (through the use of IAM Service policies), and isolation (separating the
     /// resources for one project or business unit from another). A common approach is to create a compartment for each
     /// major part of your organization. For more information, see
-    /// [Overview of the IAM Service](https://docs.cloud.oracle.com/Content/Identity/Concepts/overview.htm) and also
+    /// [Overview of IAM](https://docs.cloud.oracle.com//Content/Identity/getstarted/identity-domains.htm) and also
     /// [Setting Up Your Tenancy](https://docs.cloud.oracle.com/Content/GSG/Concepts/settinguptenancy.htm).
     /// <br/>
     /// To place a resource in a compartment, simply specify the compartment ID in the \"Create\" request object when
@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Models
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access,
-    /// see [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// see [Get Started with Policies](https://docs.cloud.oracle.com/Content/Identity/policiesgs/get-started-with-policies.htm).
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values
     /// using the API.

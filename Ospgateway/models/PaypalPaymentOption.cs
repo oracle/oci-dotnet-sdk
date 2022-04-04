@@ -21,6 +21,30 @@ namespace Oci.OspgatewayService.Models
     public class PaypalPaymentOption : PaymentOption
     {
         
+        /// <value>
+        /// The email address of the paypal user.
+        /// </value>
+        [JsonProperty(PropertyName = "emailAddress")]
+        public string EmailAddress { get; set; }
+        
+        /// <value>
+        /// First name of the paypal user.
+        /// </value>
+        [JsonProperty(PropertyName = "firstName")]
+        public string FirstName { get; set; }
+        
+        /// <value>
+        /// Last name of the paypal user.
+        /// </value>
+        [JsonProperty(PropertyName = "lastName")]
+        public string LastName { get; set; }
+        
+        /// <value>
+        /// Agreement id for the paypal account.
+        /// </value>
+        [JsonProperty(PropertyName = "extBillingAgreementId")]
+        public string ExtBillingAgreementId { get; set; }
+        
         [JsonProperty(PropertyName = "paymentMethod")]
         private readonly string paymentMethod = "PAYPAL";
     }

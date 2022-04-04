@@ -20,7 +20,7 @@ namespace Oci.IdentityService.Requests
     {
         
         /// <value>
-        /// The request object for creating a new domain
+        /// The request object for creating a new identity domain.
         /// </value>
         /// <remarks>
         /// Required

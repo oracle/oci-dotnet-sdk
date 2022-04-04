@@ -14,9 +14,9 @@ using Oci.OpsiService.Models;
 namespace Oci.OpsiService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/ListHostedEntities.cs.html">here</a> to see an example of how to use ListHostedEntities request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/opsi/SummarizeHostInsightTopProcessesUsageTrend.cs.html">here</a> to see an example of how to use SummarizeHostInsightTopProcessesUsageTrend request.
     /// </example>
-    public class ListHostedEntitiesRequest : Oci.Common.IOciRequest
+    public class SummarizeHostInsightTopProcessesUsageTrendRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -39,6 +39,18 @@ namespace Oci.OpsiService.Requests
         [Required(ErrorMessage = "Id is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// Host top processes resource metric sort options.
+        /// Supported values are CPU, MEMORY, VIIRTUAL_MEMORY.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ResourceMetric is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceMetric")]
+        public string ResourceMetric { get; set; }
         
         /// <value>
         /// Specify time period in ISO 8601 format with respect to current time.
@@ -71,51 +83,6 @@ namespace Oci.OpsiService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
         
-        ///
-        /// <value>
-        /// Filter by one or more platform types.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
-        /// 
-        /// </value>
-        ///
-        public enum PlatformTypeEnum {
-            [EnumMember(Value = "LINUX")]
-            Linux,
-            [EnumMember(Value = "SOLARIS")]
-            Solaris,
-            [EnumMember(Value = "SUNOS")]
-            Sunos,
-            [EnumMember(Value = "ZLINUX")]
-            Zlinux
-        };
-
-        /// <value>
-        /// Filter by one or more platform types.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]
-        public System.Collections.Generic.List<PlatformTypeEnum> PlatformType { get; set; }
-        
-        /// <value>
-        /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInsightId")]
-        public string ExadataInsightId { get; set; }
-        
-        /// <value>
-        /// For list pagination. The maximum number of results per page, or items to
-        /// return in a paginated \"List\" call.
-        /// For important details about how pagination works, see
-        /// [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
-        /// Example: 50
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
-        public System.Nullable<int> Limit { get; set; }
-        
         /// <value>
         /// For list pagination. The value of the `opc-next-page` response header from
         /// the previous \"List\" call. For important details about how pagination works,
@@ -126,31 +93,14 @@ namespace Oci.OpsiService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
-        /// 
+        /// For list pagination. The maximum number of results per page, or items to
+        /// return in a paginated \"List\" call.
+        /// For important details about how pagination works, see
+        /// [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
+        /// Example: 50
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
-        public System.Nullable<SortOrder> SortOrder { get; set; }
-        
-        ///
-        /// <value>
-        /// Hosted entity list sort options.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "entityName")]
-            EntityName,
-            [EnumMember(Value = "entityType")]
-            EntityType
-        };
-
-        /// <value>
-        /// Hosted entity list sort options.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
+        public System.Nullable<int> Limit { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact

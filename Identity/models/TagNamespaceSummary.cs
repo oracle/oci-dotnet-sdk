@@ -65,7 +65,7 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// Whether the tag namespace is retired.
-        /// For more information, see [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
+        /// For more information, see [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm#retiringkeys).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isRetired")]

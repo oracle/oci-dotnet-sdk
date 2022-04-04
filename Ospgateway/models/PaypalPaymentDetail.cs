@@ -21,6 +21,18 @@ namespace Oci.OspgatewayService.Models
     public class PaypalPaymentDetail : PaymentDetail
     {
         
+        /// <value>
+        /// The id (email address) of the paypal payment
+        /// </value>
+        [JsonProperty(PropertyName = "paypalId")]
+        public string PaypalId { get; set; }
+        
+        /// <value>
+        /// paypal payment reference
+        /// </value>
+        [JsonProperty(PropertyName = "paypalReference")]
+        public string PaypalReference { get; set; }
+        
         [JsonProperty(PropertyName = "paymentMethod")]
         private readonly string paymentMethod = "PAYPAL";
     }

@@ -18,8 +18,8 @@ namespace Oci.IdentityService.Models
     /// <summary>
     /// A document that specifies the type of access a group has to the resources in a compartment. For information about
     /// policies and other IAM Service components, see
-    /// [Overview of the IAM Service](https://docs.cloud.oracle.com/Content/Identity/Concepts/overview.htm). If you're new to policies, see
-    /// [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+    /// [Overview of IAM](https://docs.cloud.oracle.com/Content/Identity/getstarted/identity-domains.htm). If you're new to policies, see
+    /// [Get Started with Policies](https://docs.cloud.oracle.com/Content/Identity/policiesgs/get-started-with-policies.htm).
     /// <br/>
     /// The word \"policy\" is used by people in different ways:
     /// <br/>

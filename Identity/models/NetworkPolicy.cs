@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Network policy, Consists of a list of Network Source ids.
+    /// Network policy, which consists of a list of network source IDs.
     /// 
     /// </summary>
     public class NetworkPolicy 
