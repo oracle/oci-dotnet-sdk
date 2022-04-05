@@ -13,35 +13,33 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.IdentityService.Models
+namespace Oci.OpsiService.Models
 {
-    
-    public class CreateDbCredentialDetails 
+    /// <summary>
+    /// Usage data per host top process
+    /// </summary>
+    public class TopProcessesUsageTrendAggregation 
     {
         
         /// <value>
-        /// The password for the DB credentials during creation.
-        /// 
+        /// Command line and arguments used to launch process
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Password is required.")]
-        [JsonProperty(PropertyName = "password")]
-        public string Password { get; set; }
+        [Required(ErrorMessage = "Command is required.")]
+        [JsonProperty(PropertyName = "command")]
+        public string Command { get; set; }
         
         /// <value>
-        /// The description you assign to the DB credentials during creation.
-        /// <br/>
-        /// (For tenancies that support identity domains) You can have an empty description.
-        /// 
+        /// List of usage data samples for a top process
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Description is required.")]
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
+        [Required(ErrorMessage = "UsageData is required.")]
+        [JsonProperty(PropertyName = "usageData")]
+        public System.Collections.Generic.List<TopProcessesUsageTrend> UsageData { get; set; }
         
     }
 }

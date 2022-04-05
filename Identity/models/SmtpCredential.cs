@@ -23,7 +23,7 @@ namespace Oci.IdentityService.Models
     /// **Note:** The credential set is always an Oracle-generated SMTP user name and password pair;
     /// you cannot designate the SMTP user name or the SMTP password.
     /// <br/>
-    /// For more information, see [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm#SMTP).
+    /// For more information, see [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/access/managing-user-credentials.htm#SMTP).
     /// 
     /// </summary>
     public class SmtpCredential 
@@ -57,6 +57,9 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// The description you assign to the SMTP credential. Does not have to be unique, and it's changeable.
+        /// <br/>
+        /// (For tenancies that support identity domains) You can have an empty description.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

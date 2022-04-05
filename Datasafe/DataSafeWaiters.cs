@@ -465,7 +465,8 @@ namespace Oci.DatasafeService
             var agent = new WaiterAgent<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse>(
                 request,
                 request => client.GetSecurityAssessment(request),
-                response => targetStates.Contains(response.SecurityAssessment.LifecycleState.Value)
+                response => targetStates.Contains(response.SecurityAssessment.LifecycleState.Value),
+                targetStates.Contains(SecurityAssessmentLifecycleState.Deleted)
             );
             return new Waiter<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse>(config, agent);
         }
@@ -613,7 +614,7 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, params LifecycleState[] targetStates)
+        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, params TargetDatabaseLifecycleState[] targetStates)
         {
             return this.ForTargetDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -625,13 +626,13 @@ namespace Oci.DatasafeService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        public Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse> ForTargetDatabase(GetTargetDatabaseRequest request, WaiterConfiguration config, params TargetDatabaseLifecycleState[] targetStates)
         {
             var agent = new WaiterAgent<GetTargetDatabaseRequest, GetTargetDatabaseResponse>(
                 request,
                 request => client.GetTargetDatabase(request),
                 response => targetStates.Contains(response.TargetDatabase.LifecycleState.Value),
-                targetStates.Contains(LifecycleState.Deleted)
+                targetStates.Contains(TargetDatabaseLifecycleState.Deleted)
             );
             return new Waiter<GetTargetDatabaseRequest, GetTargetDatabaseResponse>(config, agent);
         }
@@ -658,7 +659,8 @@ namespace Oci.DatasafeService
             var agent = new WaiterAgent<GetUserAssessmentRequest, GetUserAssessmentResponse>(
                 request,
                 request => client.GetUserAssessment(request),
-                response => targetStates.Contains(response.UserAssessment.LifecycleState.Value)
+                response => targetStates.Contains(response.UserAssessment.LifecycleState.Value),
+                targetStates.Contains(UserAssessmentLifecycleState.Deleted)
             );
             return new Waiter<GetUserAssessmentRequest, GetUserAssessmentResponse>(config, agent);
         }

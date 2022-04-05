@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Requests
         public string UserId { get; set; }
         
         /// <value>
-        /// The OCID of the secret key.
+        /// The access token of the secret key.
         /// </value>
         /// <remarks>
         /// Required

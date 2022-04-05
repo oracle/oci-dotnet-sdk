@@ -61,18 +61,15 @@ namespace Oci.CoreService.Models
         ///   * `10`: Represents Balanced option.
         /// <br/>
         ///   * `20`: Represents Higher Performance option.
-        ///   
-        ///   * `30`-`120`: Represents the Ultra High Performance option.
         /// <br/>
-        /// For performance autotune enabled volumes, It would be the Default(Minimum) VPUs/GB.
+        ///   * `30`-`120`: Represents the Ultra High Performance option.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
         public System.Nullable<long> VpusPerGB { get; set; }
         
         /// <value>
-        /// Specifies whether the auto-tune performance is enabled for this boot volume. This field is deprecated.
-        /// Use the `DetachedVolumeAutotunePolicy` instead to enable the volume for detached autotune.
+        /// Specifies whether the auto-tune performance is enabled for this boot volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]

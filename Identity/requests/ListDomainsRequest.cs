@@ -31,37 +31,37 @@ namespace Oci.IdentityService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The mutable display name of the domain
+        /// The mutable display name of the identity domain.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The region agnostic domain URL
+        /// The region-agnostic identity domain URL.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "url")]
         public string Url { get; set; }
         
         /// <value>
-        /// The region specific domain URL
+        /// The region-specific identity domain URL.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "homeRegionUrl")]
         public string HomeRegionUrl { get; set; }
         
         /// <value>
-        /// The domain type
+        /// The identity domain type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// The domain license type
+        /// The license type of the identity domain.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "licenseType")]
         public string LicenseType { get; set; }
         
         /// <value>
-        /// Indicate if the domain is visible at login screen or not
+        /// Indicates whether or not the identity domain is visible at the sign-in screen.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isHiddenOnLogin")]
         public System.Nullable<bool> IsHiddenOnLogin { get; set; }
@@ -152,7 +152,7 @@ namespace Oci.IdentityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+        /// A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

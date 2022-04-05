@@ -21,7 +21,7 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the destination compartment
-        /// into which to move the domain.
+        /// into which to move the identity domain.
         /// 
         /// </value>
         /// <remarks>

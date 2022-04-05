@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Domain replication states.
+    /// (For tenancies that support identity domains) Identity domain replication states.
     /// </summary>
     public class DomainReplication 
     {
         
         /// <value>
-        /// Version number indicating the value of kievTxnId, starting from which, the domain replication events need to be returned.
+        /// The version number indicating the value of kievTxnId, starting from which the identity domain replication events need to be returned.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<decimal> OpcWaterMark { get; set; }
         
         /// <value>
-        /// Custom value defining the order of records with same kievTxnId
+        /// A custom value defining the order of records with the same kievTxnId.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<decimal> TxnSeqNumber { get; set; }
         
         /// <value>
-        /// The domain's replication state
+        /// The identity domain's replication state.
         /// </value>
         /// <remarks>
         /// Required

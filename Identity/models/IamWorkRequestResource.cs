@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// A IAM work request resource entry
+    /// (For tenancies that support identity domains) A IAM work request resource entry.
     /// </summary>
     public class IamWorkRequestResource 
     {

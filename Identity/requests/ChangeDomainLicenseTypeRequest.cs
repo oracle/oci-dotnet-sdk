@@ -20,7 +20,7 @@ namespace Oci.IdentityService.Requests
     {
         
         /// <value>
-        /// The OCID of the domain
+        /// The OCID of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Requests
         public string DomainId { get; set; }
         
         /// <value>
-        /// the request object for domain license type update
+        /// The request object for an update to the license type of the identity domain.
         /// </value>
         /// <remarks>
         /// Required

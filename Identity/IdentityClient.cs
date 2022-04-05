@@ -66,23 +66,13 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// If the domain&#39;s {@code lifecycleState} is INACTIVE,
-        /// 1. Set the {@code lifecycleDetails} to ACTIVATING and asynchronously starts enabling
-        ///    the domain and return 202 ACCEPTED.
-        ///     1.1 Sets the domain status to ENABLED and set specified domain&#39;s
-        ///         {@code lifecycleState} to ACTIVE and set the {@code lifecycleDetails} to null.
+        /// (For tenancies that support identity domains) Activates a deactivated identity domain. You can only activate identity domains that your user account is not a part of.
         /// &lt;br/&gt;
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status. Deactivate a domain can be done using HTTP POST
-        /// /domains/{domainId}/actions/deactivate.
+        /// After you send the request, the &#x60;lifecycleDetails&#x60; of the identity domain is set to ACTIVATING. When the operation completes, the 
+        /// &#x60;lifecycleDetails&#x60; is set to null and the &#x60;lifecycleState&#x60; of the identity domain is set to ACTIVE.
         /// &lt;br/&gt;
-        /// - If the domain&#39;s {@code lifecycleState} is ACTIVE, returns 202 ACCEPTED with no action
-        ///   taken on service side.
-        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT or domain&#39;s {@code lifecycleState} is not INACTIVE,
-        ///   returns 400 BAD REQUEST.
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If the authenticated user is part of the domain to be activated, returns 400 BAD REQUEST
-        /// - If error occurs while activating domain, returns 500 INTERNAL SERVER ERROR.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -254,7 +244,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Deletes multiple resources in the compartment. All resources must be in the same compartment. You must have the appropriate
         /// permissions to delete the resources in the request. This API can only be invoked from the tenancy&#39;s
-        /// [home region](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingregions.htm#Home). This operation creates a
+        /// [home region](https://docs.cloud.oracle.com/Content/Identity/regions/managingregions.htm#Home). This operation creates a
         /// {@link WorkRequest}. Use the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest}
         /// API to monitor the status of the bulk action.
         /// 
@@ -413,7 +403,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Moves multiple resources from one compartment to another. All resources must be in the same compartment.
-        /// This API can only be invoked from the tenancy&#39;s [home region](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingregions.htm#Home).
+        /// This API can only be invoked from the tenancy&#39;s [home region](https://docs.cloud.oracle.com/Content/Identity/regions/managingregions.htm#Home).
         /// To move resources, you must have the appropriate permissions to move the resource in both the source and target
         /// compartments. This operation creates a {@link WorkRequest}.
         /// Use the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} API to monitor the status of the bulk action.
@@ -516,18 +506,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Change the containing compartment for a domain.
+        /// (For tenancies that support identity domains) Moves the identity domain to a different compartment in the tenancy.
         /// &lt;br/&gt;
-        /// This is an asynchronous call where the Domain&#39;s compartment is changed and is updated with the new compartment information.
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
-        /// &lt;br/&gt;
-        /// The compartment change is complete when accessed via domain URL and
-        /// also returns new compartment OCID.
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
-        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
-        /// - If error occurs while changing compartment for domain, return 500 INTERNAL SERVER ERROR.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -568,21 +550,15 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// If the domain&#39;s {@code lifecycleState} is ACTIVE, validates the requested {@code licenseType} update
-        /// is allowed and
-        /// 1. Set the {@code lifecycleDetails} to UPDATING
-        /// 2. Asynchronously starts updating the domain and return 202 ACCEPTED.
-        ///     2.1 Successfully updates specified domain&#39;s {@code licenseType}.
-        /// 3. On completion set the {@code lifecycleDetails} to null.
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
+        /// (For tenancies that support identity domains) Changes the license type of the given identity domain. The identity domain&#39;s 
+        /// &#x60;lifecycleState&#x60; must be set to ACTIVE and the requested &#x60;licenseType&#x60; must be allowed. To retrieve the allowed &#x60;licenseType&#x60; for 
+        /// the identity domain, use {@link #listAllowedDomainLicenseTypes(ListAllowedDomainLicenseTypesRequest) listAllowedDomainLicenseTypes}.
         /// &lt;br/&gt;
-        /// - If license type update is successful, return 202 ACCEPTED
-        /// - If requested {@code licenseType} validation fails, returns 400 Bad request.
-        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
-        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND
-        /// - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+        /// After you send your request, the &#x60;lifecycleDetails&#x60; of this identity domain is set to UPDATING. When the update of the identity 
+        /// domain completes, then the &#x60;lifecycleDetails&#x60; is set to null.
+        /// &lt;br/&gt;
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -626,7 +602,7 @@ namespace Oci.IdentityService
         /// Moves the specified tag namespace to the specified compartment within the same tenancy.
         /// &lt;br/&gt;
         /// To move the tag namespace, you must have the manage tag-namespaces permission on both compartments.
-        /// For more information about IAM policies, see [Details for IAM](https://docs.cloud.oracle.com/Content/Identity/Reference/iampolicyreference.htm).
+        /// For more information about IAM policies, see [Details for IAM](https://docs.cloud.oracle.com/Content/Identity/policyreference/iampolicyreference.htm).
         /// &lt;br/&gt;
         /// Moving a tag namespace moves all the tag key definitions contained in the tag namespace.
         /// 
@@ -670,7 +646,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new auth token for the specified user. For information about what auth tokens are for, see
-        /// [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm).
+        /// [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/access/managing-user-credentials.htm).
         /// &lt;br/&gt;
         /// You must specify a *description* for the auth token (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with
@@ -730,7 +706,7 @@ namespace Oci.IdentityService
         /// You must also specify a *name* for the compartment, which must be unique across all compartments in
         /// your tenancy. You can use this name or the OCID when writing policies that apply
         /// to the compartment. For more information about policies, see
-        /// [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm).
+        /// [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm).
         /// &lt;br/&gt;
         /// You must also specify a *description* for the compartment (although it can be an empty string). It does
         /// not have to be unique, and you can change it anytime with
@@ -780,7 +756,7 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new secret key for the specified user. Secret keys are used for authentication with the Object Storage Service&#39;s Amazon S3
         /// compatible API. The secret key consists of an Access Key/Secret Key pair. For information, see
-        /// [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcredentials.htm).
+        /// [Managing User Credentials](https://docs.cloud.oracle.com/Content/Identity/access/managing-user-credentials.htm).
         /// &lt;br/&gt;
         /// You must specify a *description* for the secret key (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with
@@ -870,22 +846,14 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Creates a new domain in the tenancy with domain home in {@code homeRegion}. This is an asynchronous call - where, at start,
-        /// {@code lifecycleState} of this domain is set to CREATING and {@code lifecycleDetails} to UPDATING. On domain creation completion
-        /// this Domain&#39;s {@code lifecycleState} will be set to ACTIVE and {@code lifecycleDetails} to null.
+        /// (For tenancies that support identity domains) Creates a new identity domain in the tenancy with the identity domain home in &#x60;homeRegion&#x60;. 
+        /// After you send your request, the temporary &#x60;lifecycleState&#x60; of this identity domain is set to CREATING and &#x60;lifecycleDetails&#x60; to UPDATING. 
+        /// When creation of the identity domain completes, this identity domain&#39;s &#x60;lifecycleState&#x60; is set to ACTIVE and &#x60;lifecycleDetails&#x60; to null.
         /// &lt;br/&gt;
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// &lt;br/&gt;
-        /// After creating a &#x60;Domain&#x60;, make sure its &#x60;lifecycleState&#x60; changes from CREATING to ACTIVE
-        /// before using it.
-        /// If the domain&#39;s {@code displayName} already exists, returns 400 BAD REQUEST.
-        /// If any one of admin related fields are provided and one of the following 3 fields
-        /// - {@code adminEmail}, {@code adminLastName} and {@code adminUserName} - is not provided,
-        /// returns 400 BAD REQUEST.
-        /// - If {@code isNotificationBypassed} is NOT provided when admin information is provided,
-        /// returns 400 BAD REQUEST.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// After creating an &#x60;identity domain&#x60;, first make sure its &#x60;lifecycleState&#x60; changes from CREATING to ACTIVE before you use it.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -937,7 +905,7 @@ namespace Oci.IdentityService
         /// You must also specify a *name* for the dynamic group, which must be unique across all dynamic groups in your
         /// tenancy, and cannot be changed. Note that this name has to be also unique across all groups in your tenancy.
         /// You can use this name or the OCID when writing policies that apply to the dynamic group. For more information
-        /// about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm).
+        /// about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm).
         /// &lt;br/&gt;
         /// You must also specify a *description* for the dynamic group (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with {@link #updateDynamicGroup(UpdateDynamicGroupRequest) updateDynamicGroup}.
@@ -994,7 +962,7 @@ namespace Oci.IdentityService
         /// &lt;br/&gt;
         /// You must also specify a *name* for the group, which must be unique across all groups in your tenancy and
         /// cannot be changed. You can use this name or the OCID when writing policies that apply to the group. For more
-        /// information about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm).
+        /// information about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm).
         /// &lt;br/&gt;
         /// You must also specify a *description* for the group (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with {@link #updateGroup(UpdateGroupRequest) updateGroup}.
@@ -1201,7 +1169,7 @@ namespace Oci.IdentityService
         /// You must also specify a *name* for the network source, which must be unique across all network sources in your
         /// tenancy, and cannot be changed.
         /// You can use this name or the OCID when writing policies that apply to the network source. For more information
-        /// about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm).
+        /// about policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm).
         /// &lt;br/&gt;
         /// You must also specify a *description* for the network source (although it can be an empty string). It does not
         /// have to be unique, and you can change it anytime with {@link #updateNetworkSource(UpdateNetworkSourceRequest) updateNetworkSource}.
@@ -1293,13 +1261,17 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new Console one-time password for the specified user. For more information about user
-        /// credentials, see [User Credentials](https://docs.cloud.oracle.com/Content/Identity/Concepts/usercredentials.htm).
+        /// credentials, see [User Credentials](https://docs.cloud.oracle.com/Content/Identity/usercred/usercredentials.htm).
         /// &lt;br/&gt;
         /// Use this operation after creating a new user, or if a user forgets their password. The new one-time
         /// password is returned to you in the response, and you must securely deliver it to the user. They&#39;ll
         /// be prompted to change this password the next time they sign in to the Console. If they don&#39;t change
         /// it within 7 days, the password will expire and you&#39;ll need to create a new one-time password for the
         /// user.
+        /// &lt;br/&gt;
+        /// (For tenancies that support identity domains) Resetting a user&#39;s password generates a reset password email 
+        /// with a link that the user must follow to reset their password. If the user does not reset their password before the 
+        /// link expires, you&#39;ll need to reset the user&#39;s password again.
         /// &lt;br/&gt;
         /// **Note:** The user&#39;s Console login is the unique name you specified when you created the user
         /// (see {@link #createUser(CreateUserRequest) createUser}).
@@ -1344,7 +1316,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new policy in the specified compartment (either the tenancy or another of your compartments).
-        /// If you&#39;re new to policies, see [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
+        /// If you&#39;re new to policies, see [Get Started with Policies](https://docs.cloud.oracle.com/Content/Identity/policiesgs/get-started-with-policies.htm).
         /// &lt;br/&gt;
         /// You must specify a *name* for the policy, which must be unique across all policies in your tenancy
         /// and cannot be changed.
@@ -1353,8 +1325,8 @@ namespace Oci.IdentityService
         /// have to be unique, and you can change it anytime with {@link #updatePolicy(UpdatePolicyRequest) updatePolicy}.
         /// &lt;br/&gt;
         /// You must specify one or more policy statements in the statements array. For information about writing
-        /// policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/Concepts/policies.htm) and
-        /// [Common Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/commonpolicies.htm).
+        /// policies, see [How Policies Work](https://docs.cloud.oracle.com/Content/Identity/policieshow/how-policies-work.htm) and
+        /// [Common Policies](https://docs.cloud.oracle.com/Content/Identity/policiescommon/commonpolicies.htm).
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
         /// object, first make sure its &#x60;lifecycleState&#x60; has changed to ACTIVE.
@@ -1702,7 +1674,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Creates a new user in your tenancy. For conceptual information about users, your tenancy, and other
-        /// IAM Service components, see [Overview of the IAM Service](https://docs.cloud.oracle.com/Content/Identity/Concepts/overview.htm).
+        /// IAM Service components, see [Overview of IAM](https://docs.cloud.oracle.com/Content/Identity/getstarted/identity-domains.htm).
         /// &lt;br/&gt;
         /// You must specify your tenancy&#39;s OCID as the compartment ID in the request object (remember that the
         /// tenancy is simply the root compartment). Notice that IAM resources (users, groups, compartments, and
@@ -1776,24 +1748,15 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// If the domain&#39;s {@code lifecycleState} is ACTIVE and no active Apps are present in domain,
-        /// 1. Set the {@code lifecycleDetails} to DEACTIVATING and asynchronously starts disabling
-        ///    the domain and return 202 ACCEPTED.
-        ///     1.1 Sets the domain status to DISABLED and set specified domain&#39;s
-        ///         {@code lifecycleState} to INACTIVE and set the {@code lifecycleDetails} to null.
+        /// (For tenancies that support identity domains) Deactivates the specified identity domain. Identity domains must be in an ACTIVE 
+        /// &#x60;lifecycleState&#x60; and have no active apps present in the domain or underlying Identity Cloud Service stripe. You cannot deactivate 
+        /// the default identity domain.
         /// &lt;br/&gt;
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status. Activate a domain can be done using HTTP POST
-        /// /domains/{domainId}/actions/activate.
+        /// After you send your request, the &#x60;lifecycleDetails&#x60; of this identity domain is set to DEACTIVATING. When the operation completes, 
+        /// then the &#x60;lifecycleDetails&#x60; is set to null and the &#x60;lifecycleState&#x60; is set to INACTIVE.
         /// &lt;br/&gt;
-        /// - If the domain&#39;s {@code lifecycleState} is INACTIVE, returns 202 ACCEPTED with no action
-        ///   taken on service side.
-        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT or domain&#39;s {@code lifecycleState}
-        ///   is not ACTIVE, returns 400 BAD REQUEST.
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If any active Apps in domain, returns 400 BAD REQUEST.
-        /// - If the authenticated user is part of the domain to be activated, returns 400 BAD REQUEST
-        /// - If error occurs while deactivating domain, returns 500 INTERNAL SERVER ERROR.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2044,23 +2007,13 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Soft Deletes a domain.
-        /// &lt;br/&gt;
-        /// This is an asynchronous API, where, if the domain&#39;s {@code lifecycleState} is INACTIVE and
-        /// no active Apps are present in underlying stripe,
-        ///   1. Sets the specified domain&#39;s {@code lifecycleState} to DELETING.
-        ///   2. Domains marked as DELETING will be cleaned up by a periodic task unless customer request it to be undo via ticket.
-        ///   3. Work request is created and returned as opc-work-request-id along with 202 ACCEPTED.
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
-        /// &lt;br/&gt;
-        /// - If the domain&#39;s {@code lifecycleState} is DELETING, returns 202 Accepted as a deletion
-        ///   is already in progress for this domain.
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If domain is of {@code type} DEFAULT or DEFAULT_LIGHTWEIGHT, returns 400 BAD REQUEST.
-        /// - If any active Apps in domain, returns 400 BAD REQUEST.
-        /// - If the authenticated user is part of the domain to be deleted, returns 400 BAD REQUEST.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// (For tenancies that support identity domains) Deletes an identity domain. The identity domain must have no active apps present in 
+        /// the underlying IDCS stripe. You must also deactivate the identity domain, rendering the &#x60;lifecycleState&#x60; of the identity domain INACTIVE. 
+        /// Furthermore, as the authenticated user performing the operation, you cannot be a member of the identity domain you are deleting. 
+        /// Lastly, you cannot delete the default identity domain. A tenancy must always have at least the default identity domain.
+        ///     
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2311,7 +2264,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Deletes the specified network source
+        /// Deletes the specified network source.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2706,19 +2659,16 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Replicate domain to a new region. This is an asynchronous call - where, at start,
-        /// {@code state} of this domain in replica region is set to ENABLING_REPLICATION.
-        /// On domain replication completion the {@code state} will be set to REPLICATION_ENABLED.
+        /// (For tenancies that support identity domains) Replicates the identity domain to a new region (provided that the region is the 
+        /// tenancy home region or other region that the tenancy subscribes to). You can only replicate identity domains that are in an ACTIVE 
+        /// &#x60;lifecycleState&#x60; and not currently updating or already replicating. You also can only trigger the replication of secondary identity domains. 
+        /// The default identity domain is automatically replicated to all regions that the tenancy subscribes to.
         /// &lt;br/&gt;
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
+        /// After you send the request, the &#x60;state&#x60; of the identity domain in the replica region is set to ENABLING_REPLICATION. When the operation 
+        /// completes, the &#x60;state&#x60; is set to REPLICATION_ENABLED.
         /// &lt;br/&gt;
-        /// If the replica region&#39;s {@code state} is already ENABLING_REPLICATION or REPLICATION_ENABLED,
-        /// returns 409 CONFLICT.
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If home region is same as replication region, return 400 BAD REQUEST.
-        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2890,10 +2840,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Get the specified domain&#39;s information.
-        /// &lt;br/&gt;
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
-        /// - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+        /// (For tenancies that support identity domains) Gets the specified identity domain&#39;s information.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3020,11 +2967,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Gets details on a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
-        /// iam work request id that can be provided in this API to track the current status of the operation.
-        /// &lt;br/&gt;
-        /// - If workrequest exists, returns 202 ACCEPTED
-        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// Gets the details of a specified IAM work request. The workRequestID is returned in the opc-workrequest-id header for any asynchronous operation in the Identity and Access Management service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3724,13 +3667,11 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// List the allowed domain license types supported by OCI
-        /// If {@code currentLicenseTypeName} provided, returns allowed license types a domain with the specified license type name can migrate to.
-        /// If {@code name} is provided, it filters and returns resources that match the given license type name.
-        /// Otherwise, returns all valid license types that are currently supported.
+        /// (For tenancies that support identity domains) Lists the license types for identity domains supported by Oracle Cloud Infrastructure. 
+        /// (License types are also referred to as domain types.)
         /// &lt;br/&gt;
-        /// - If license type details are retrieved sucessfully, return 202 ACCEPTED.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// If &#x60;currentLicenseTypeName&#x60; is provided, then the request returns license types that the identity domain with the specified license 
+        /// type name can change to. Otherwise, the request returns all valid license types currently supported.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4049,7 +3990,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Lists all the tags enabled for cost-tracking in the specified tenancy. For information about
-        /// cost-tracking tags, see [Using Cost-tracking Tags](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#costs).
+        /// cost-tracking tags, see [Using Cost-tracking Tags](https://docs.cloud.oracle.com/Content/Tagging/Tasks/usingcosttrackingtags.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4173,8 +4114,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// List all domains that are homed or have a replica region in current region.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// (For tenancies that support identity domains) Lists all identity domains within a tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4344,11 +4284,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Gets error details for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
-        /// iam work request id that can be provided in this API to track the current status of the operation.
-        /// &lt;br/&gt;
-        /// - If workrequest exists, returns 202 ACCEPTED
-        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// Gets error details for a specified IAM work request. The workRequestID is returned in the opc-workrequest-id header for any asynchronous operation in the Identity and Access Management service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4389,11 +4325,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Gets logs for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
-        /// iam work request id that can be provided in this API to track the current status of the operation.
-        /// &lt;br/&gt;
-        /// - If workrequest exists, returns 202 ACCEPTED
-        /// - If workrequest does not exist, returns 404 NOT FOUND
+        /// Gets logs for a specified IAM work request. The workRequestID is returned in the opc-workrequest-id header for any asynchronous operation in the Identity and Access Management service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4434,10 +4366,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// List the IAM work requests in compartment
-        /// &lt;br/&gt;
-        /// - If IAM workrequest  details are retrieved sucessfully, return 202 ACCEPTED.
-        /// - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+        /// Lists the IAM work requests in compartment. The workRequestID is returned in the opc-workrequest-id header for any asynchronous operation in the Identity and Access Management service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5375,7 +5304,7 @@ namespace Oci.IdentityService
         /// **IMPORTANT**: After you move a compartment to a new parent compartment, the access policies of
         /// the new parent take effect and the policies of the previous parent no longer apply. Ensure that you
         /// are aware of the implications for the compartment contents before you move it. For more
-        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/Tasks/managingcompartments.htm#MoveCompartment).
+        /// information, see [Moving a Compartment](https://docs.cloud.oracle.com/Content/Identity/compartments/managingcompartments.htm#MoveCompartment).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5579,7 +5508,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Updates authentication policy for the specified tenancy
+        /// Updates authentication policy for the specified tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5701,18 +5630,10 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Updates domain information and associated stripe. This is an asynchronous call where
-        /// the associated stripe and domain are updated.
+        /// (For tenancies that support identity domains) Updates identity domain information and the associated Identity Cloud Service (IDCS) stripe.
         /// &lt;br/&gt;
-        /// To track progress, HTTP GET on /iamWorkRequests/{iamWorkRequestsId} endpoint will provide
-        /// the async operation&#39;s status.
-        /// &lt;br/&gt;
-        /// - If the {@code displayName} is not unique within the tenancy, returns 400 BAD REQUEST.
-        /// - If any field other than {@code description} is requested to be updated for DEFAULT domain,
-        /// returns 400 BAD REQUEST.
-        /// - If Domain is not active or being updated, returns 400 BAD REQUEST.
-        /// - If Domain {@code type} is DEFAULT or DEFAULT_LIGHTWEIGHT, return 400 BAD Request
-        /// - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+        /// To track the progress of the request, submitting an HTTP GET on the /iamWorkRequests/{iamWorkRequestsId} endpoint retrieves
+        /// the operation&#39;s status.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5920,6 +5841,7 @@ namespace Oci.IdentityService
 
         /// <summary>
         /// Updates the specified network source.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -6229,7 +6151,7 @@ namespace Oci.IdentityService
         /// namespace (changing &#x60;isRetired&#x60; from &#39;true&#39; to &#39;false&#39;) does not reactivate tag definitions.
         /// To reactivate the tag definitions, you must reactivate each one individually *after* you reactivate the namespace,
         /// using {@link #updateTag(UpdateTagRequest) updateTag}. For more information about retiring tag namespaces, see
-        /// [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
+        /// [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm#retiringkeys).
         /// &lt;br/&gt;
         /// You can&#39;t add a namespace with the same name as a retired namespace in the same tenancy.
         /// 

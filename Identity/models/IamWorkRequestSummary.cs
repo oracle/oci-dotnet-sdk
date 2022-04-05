@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// The IAM work request summary. Tracks the status of the asynchronous operations.
+    /// (For tenancies that support identity domains) The IAM work request summary. Tracks the status of asynchronous operations.
     /// 
     /// </summary>
     public class IamWorkRequestSummary 
@@ -67,7 +67,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
                 ///
         /// <value>
-        /// Status of the work request
+        /// The status of the work request.
         /// </value>
         ///
         public enum StatusEnum {
@@ -86,7 +86,7 @@ namespace Oci.IdentityService.Models
         };
 
         /// <value>
-        /// Status of the work request
+        /// The status of the work request.
         /// </value>
         /// <remarks>
         /// Required

@@ -30,6 +30,20 @@ namespace Oci.OspgatewayService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Content-Disposition")]
         public string ContentDisposition { get; set; }
 
+
+        /// <value>
+        /// Set the content type to download
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Content-Type")]
+        public string ContentType { get; set; }
+
+
+        /// <value>
+        /// Set the content length to download
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Content-Length")]
+        public System.Nullable<int> ContentLength { get; set; }
+
         /// <value>
         /// The returned System.IO.Stream instance.  Caller must always close the stream to avoid holding resources.
         /// </value>

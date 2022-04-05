@@ -31,7 +31,7 @@ namespace Oci.IdentityService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The name of the availibilityDomain.
+        /// The name of the availabilityDomain.
         /// 
         /// </value>
         /// <remarks>

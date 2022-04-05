@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Properties for a Domain
+    /// (For tenancies that support identity domains) Properties for an identity domain. An identity domain is used to manage users and groups, integration standards, external identities, and secure application integration through Oracle Single Sign-on (SSO) configuration.
+    /// 
     /// </summary>
     public class Domain 
     {
         
         /// <value>
-        /// The OCID of the domain
+        /// The OCID of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.IdentityService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the domain.
+        /// The OCID of the compartment containing the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +43,7 @@ namespace Oci.IdentityService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The mutable display name of the domain
+        /// The mutable display name of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +53,7 @@ namespace Oci.IdentityService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The domain descripition
+        /// The identity domain description. You can have an empty description.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +63,7 @@ namespace Oci.IdentityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Region agnostic domain URL.
+        /// Region-agnostic identity domain URL.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +73,7 @@ namespace Oci.IdentityService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// Region specific domain URL.
+        /// Region-specific identity domain URL.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +83,7 @@ namespace Oci.IdentityService.Models
         public string HomeRegionUrl { get; set; }
         
         /// <value>
-        /// The home region for the domain.
+        /// The home region for the identity domain.
         /// See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
         /// for the full list of supported region names.
         /// <br/>
@@ -96,7 +97,7 @@ namespace Oci.IdentityService.Models
         public string HomeRegion { get; set; }
         
         /// <value>
-        /// The regions domain is replication to.
+        /// The regions where replicas of the identity domain exist.
         /// </value>
         /// <remarks>
         /// Required
@@ -130,7 +131,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// The License type of Domain
+        /// The license type of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -140,7 +141,7 @@ namespace Oci.IdentityService.Models
         public string LicenseType { get; set; }
         
         /// <value>
-        /// Indicates whether domain is hidden on login screen or not.
+        /// Indicates whether the identity domain is hidden on the sign-in screen or not.
         /// 
         /// </value>
         /// <remarks>
@@ -151,7 +152,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<bool> IsHiddenOnLogin { get; set; }
         
         /// <value>
-        /// Date and time the domain was created, in the format defined by RFC3339.
+        /// Date and time the identity domain was created, in the format defined by RFC3339.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -191,7 +192,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
-        /// Any additional details about the current state of the Domain.
+        /// Any additional details about the current state of the identity domain.
         /// 
         /// </value>
         ///
@@ -205,7 +206,7 @@ namespace Oci.IdentityService.Models
         };
 
         /// <value>
-        /// Any additional details about the current state of the Domain.
+        /// Any additional details about the current state of the identity domain.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Domain replication request packet
+    /// (For tenancies that support identity domains) Identity domain replication request packet.
     /// </summary>
     public class EnableReplicationToRegionDetails 
     {
         
         /// <value>
-        /// A region for which domain replication is requested for.
+        /// A region to which you want identity domain replication to occur.
         /// See [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm)
         /// for the full list of supported region names.
         /// <br/>

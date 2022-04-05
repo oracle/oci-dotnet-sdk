@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Create a domain details
+    /// (For tenancies that support identity domains) Details for creating an identity domain.
     /// </summary>
     public class CreateDomainDetails 
     {
         
         /// <value>
-        /// The OCID of the Compartment where domain is created
+        /// The OCID of the compartment where the identity domain is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.IdentityService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The mutable display name of the domain.
+        /// The mutable display name of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.IdentityService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Domain entity description
+        /// The identity domain description. You can have an empty description.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.IdentityService.Models
         public string HomeRegion { get; set; }
         
         /// <value>
-        /// The License type of Domain
+        /// The license type of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,48 +75,46 @@ namespace Oci.IdentityService.Models
         public string LicenseType { get; set; }
         
         /// <value>
-        /// Indicates whether domain is hidden on login screen or not.
+        /// Indicates whether the identity domain is hidden on the sign-in screen or not.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHiddenOnLogin")]
         public System.Nullable<bool> IsHiddenOnLogin { get; set; }
         
         /// <value>
-        /// The admin first name
+        /// The administrator's first name.
         /// </value>
         [JsonProperty(PropertyName = "adminFirstName")]
         public string AdminFirstName { get; set; }
         
         /// <value>
-        /// The admin last name
+        /// The administrator's last name.
         /// </value>
         [JsonProperty(PropertyName = "adminLastName")]
         public string AdminLastName { get; set; }
         
         /// <value>
-        /// The admin user name
+        /// The administrator's user name.
         /// </value>
         [JsonProperty(PropertyName = "adminUserName")]
         public string AdminUserName { get; set; }
         
         /// <value>
-        /// The admin email address
+        /// The administrator's email address.
         /// </value>
         [JsonProperty(PropertyName = "adminEmail")]
         public string AdminEmail { get; set; }
         
         /// <value>
-        /// Indicates if admin user created in IDCS stripe would like to receive notification like welcome email
-        /// or not.
-        /// Required field only if admin information is provided, otherwise optional.
+        /// Indicates whether or not the administrator user created in the IDCS stripe would like to receive notifications like a welcome email.
+        /// This field is required only if admin information is provided. This field is otherwise optional.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isNotificationBypassed")]
         public System.Nullable<bool> IsNotificationBypassed { get; set; }
         
         /// <value>
-        /// Optional field to indicate whether users in the domain are required to have a primary email address or not
-        /// Defaults to true
+        /// Optional field to indicate whether users in the identity domain are required to have a primary email address or not. The default is true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPrimaryEmailRequired")]

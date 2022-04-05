@@ -20,7 +20,7 @@ namespace Oci.IdentityService.Requests
     {
         
         /// <value>
-        /// The OCID of the domain
+        /// The OCID of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.IdentityService.Requests
         public string DomainId { get; set; }
         
         /// <value>
-        /// the request object for region we are replicating domain region
+        /// The request object for replicating the identity domain to another region.
         /// </value>
         /// <remarks>
         /// Required

@@ -110,7 +110,7 @@ namespace Oci.IdentityService.Models
         
         /// <value>
         /// Indicates whether the tag is retired.
-        /// See [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Identity/Concepts/taggingoverview.htm#Retiring).
+        /// See [Retiring Key Definitions and Namespace Definitions](https://docs.cloud.oracle.com/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm#retiringkeys).
         /// 
         /// </value>
         /// <remarks>

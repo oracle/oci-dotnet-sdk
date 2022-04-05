@@ -27,6 +27,8 @@ namespace Oci.DatasafeService.Models
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "DELETED")]
-      Deleted
+      Deleted,
+      [EnumMember(Value = "UPDATING")]
+      Updating
   }
 }

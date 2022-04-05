@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentityService.Models
 {
     /// <summary>
-    /// Domain replication replication log for all domains for a given region
+    /// (For tenancies that support identity domains) The identity domain replication log for all identity domains for a given region.
     /// </summary>
     public class DomainReplicationStates 
     {
         
         /// <value>
-        /// The OCID of the domain
+        /// The OCID of the identity domain.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.IdentityService.Models
         public string DomainId { get; set; }
         
         /// <value>
-        /// The IDCS replicated region state
+        /// The IDCS-replicated region state.
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +44,7 @@ namespace Oci.IdentityService.Models
         public System.Nullable<ReplicatedRegionDetails.StateEnum> State { get; set; }
         
         /// <value>
-        /// The replica region for domain.
+        /// The replica region for the identity domain.
         /// </value>
         /// <remarks>
         /// Required
