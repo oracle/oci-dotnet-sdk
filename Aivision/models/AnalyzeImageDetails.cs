@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about how to analyze an image.
+    /// The details of how to analyze an image.
     /// </summary>
     public class AnalyzeImageDetails 
     {
         
         /// <value>
-        /// Types of image analysis.
+        /// The types of image analysis.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,7 +39,7 @@ namespace Oci.AivisionService.Models
         public ImageDetails Image { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that calls the API.
+        /// The OCID of the compartment that calls the API.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

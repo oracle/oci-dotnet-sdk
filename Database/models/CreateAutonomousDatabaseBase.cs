@@ -148,7 +148,8 @@ namespace Oci.DatabaseService.Models
         public string VaultId { get; set; }
         
         /// <value>
-        /// The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
+        /// **Important** The `adminPassword` must be specified for all Autonomous Databases except for refreshable clones. The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
@@ -257,9 +258,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> StandbyWhitelistedIps { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to 
-        /// Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
-        /// 
+        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
@@ -387,6 +386,21 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingForStorageEnabled")]
         public System.Nullable<bool> IsAutoScalingForStorageEnabled { get; set; }
+        
+        /// <value>
+        /// The number of Max OCPU cores to be made available to the autonomous database with auto scaling of cpu enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCpuCoreCount")]
+        public System.Nullable<int> MaxCpuCoreCount { get; set; }
+        
+        /// <value>
+        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseEdition")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AutonomousDatabaseSummary.DatabaseEditionEnum> DatabaseEdition { get; set; }
         
     }
 

@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// unique model identifier.
+        /// A unique model identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.AivisionService.Requests
         public string ModelId { get; set; }
         
         /// <value>
-        /// The deatils of the move.
+        /// The details of the move.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Object Storage namespace name.
+        /// The Object Storage namespace name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Object Storage bucket name.
+        /// The Object Storage bucket name.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AivisionService.Models
         public string BucketName { get; set; }
         
         /// <value>
-        /// Object Storage object name.
+        /// The Object Storage object name.
         /// </value>
         /// <remarks>
         /// Required

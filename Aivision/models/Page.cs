@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Document page number.
+        /// The document page number.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,25 +47,25 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<DetectedLanguage> DetectedLanguages { get; set; }
         
         /// <value>
-        /// Words detected on the page.
+        /// The words detected on the page.
         /// </value>
         [JsonProperty(PropertyName = "words")]
         public System.Collections.Generic.List<Word> Words { get; set; }
         
         /// <value>
-        /// Text lines detected on the page.
+        /// The lines of text detected on the page.
         /// </value>
         [JsonProperty(PropertyName = "lines")]
         public System.Collections.Generic.List<Line> Lines { get; set; }
         
         /// <value>
-        /// Tables detected on the page.
+        /// The tables detected on the page.
         /// </value>
         [JsonProperty(PropertyName = "tables")]
         public System.Collections.Generic.List<Table> Tables { get; set; }
         
         /// <value>
-        /// Form fields detected on the page.
+        /// The form fields detected on the page.
         /// </value>
         [JsonProperty(PropertyName = "documentFields")]
         public System.Collections.Generic.List<DocumentField> DocumentFields { get; set; }

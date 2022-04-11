@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Error in document processing.
+    /// The error in document processing.
     /// </summary>
     public class ProcessingError 
     {
         
         /// <value>
-        /// Error code.
+        /// The error code.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// Error message.
+        /// The error message.
         /// </value>
         /// <remarks>
         /// Required

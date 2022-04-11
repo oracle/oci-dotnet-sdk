@@ -58,13 +58,15 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
-        /// The OCID of the Autonomous Exadata Infrastructure.
+        /// **No longer used.** This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `cloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
         public string AutonomousExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The OCID of the peer Autonomous Exadata Infrastructure for Autonomous Data Guard.
+        /// *No longer used.* This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `peerCloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousExadataInfrastructureId")]
         public string PeerAutonomousExadataInfrastructureId { get; set; }

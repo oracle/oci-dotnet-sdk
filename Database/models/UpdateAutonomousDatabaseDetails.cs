@@ -369,5 +369,20 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isAutoScalingForStorageEnabled")]
         public System.Nullable<bool> IsAutoScalingForStorageEnabled { get; set; }
         
+        /// <value>
+        /// The number of Max OCPU cores to be made available to the autonomous database with auto scaling of cpu enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCpuCoreCount")]
+        public System.Nullable<int> MaxCpuCoreCount { get; set; }
+        
+        /// <value>
+        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseEdition")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AutonomousDatabaseSummary.DatabaseEditionEnum> DatabaseEdition { get; set; }
+        
     }
 }

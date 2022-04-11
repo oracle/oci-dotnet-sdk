@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// String of text characters in the word.
+        /// The string of text characters in the word.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// the confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

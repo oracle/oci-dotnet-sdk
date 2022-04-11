@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Text detection parameters.
+    /// The text detection parameters.
     /// </summary>
     public class ImageTextDetectionFeature : ImageFeature
     {
         
         /// <value>
-        /// Language of the document image, abbreviated according to ISO 639-2.
+        /// The language of the document image, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]

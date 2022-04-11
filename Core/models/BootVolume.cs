@@ -110,7 +110,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsHydrated { get; set; }
         
         /// <value>
-        /// The number of volume performance units (VPUs) that will be applied to this volume per GB,
+        /// The number of volume performance units (VPUs) that will be applied to this boot volume per GB,
         /// representing the Block Volume service's elastic performance options.
         /// See [Block Volume Performance Levels](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumeperformance.htm#perf_levels) for more information.
         /// <br/>
@@ -209,7 +209,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
         
         /// <value>
-        /// The number of Volume Performance Units per GB that this volume is effectively tuned to when it's idle.
+        /// The number of Volume Performance Units per GB that this boot volume is effectively tuned to when it's idle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autoTunedVpusPerGB")]

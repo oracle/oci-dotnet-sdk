@@ -16,15 +16,15 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// The location of the input(s).
+    /// The location of the inputs.
     /// </summary>
     [JsonConverter(typeof(InputLocationModelConverter))]
     public class InputLocation 
     {
                 ///
         /// <value>
-        /// The type of input location
-        /// Allowed values are:
+        /// The type of input location.
+        /// The allowed values are:
         /// - `OBJECT_LIST_INLINE_INPUT_LOCATION`: A list of object locations in Object Storage.
         /// 
         /// </value>

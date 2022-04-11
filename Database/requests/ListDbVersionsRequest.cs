@@ -54,9 +54,9 @@ namespace Oci.DatabaseService.Requests
         public string DbSystemId { get; set; }
         
         /// <value>
-        /// The DB system storage management option. Used to list database versions available for that storage manager. Valid values are:
-        /// * ASM - Automatic storage management
-        /// * LVM - Logical volume management
+        /// The DB system storage management option. Used to list database versions available for that storage manager. Valid values are `ASM` and `LVM`.
+        /// * ASM specifies Oracle Automatic Storage Management
+        /// * LVM specifies logical volume manager, sometimes called logical disk manager.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "storageManagement")]

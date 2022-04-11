@@ -29,7 +29,10 @@ namespace Oci.IdentityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The email address you assign to the user. Has to be unique across the tenancy.
+        /// The email you assign to the user during creation. The email must be unique across all users in the tenancy.
+        /// <br/>
+        /// (For tenancies that support identity domains) You must provide an email for each user.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }

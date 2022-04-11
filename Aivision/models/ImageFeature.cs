@@ -16,15 +16,15 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Type of image analysis.
+    /// The type of image analysis.
     /// </summary>
     [JsonConverter(typeof(ImageFeatureModelConverter))]
     public class ImageFeature 
     {
                 ///
         /// <value>
-        /// Type of image analysis requested.
-        /// Allowed values are:
+        /// The type of image analysis requested.
+        /// The allowed values are:
         /// - `IMAGE_CLASSIFICATION`: Label the image.
         /// - `OBJECT_DETECTION`: Identify objects in the image with bounding boxes.
         /// - `TEXT_DETECTION`: Recognize text in the image.

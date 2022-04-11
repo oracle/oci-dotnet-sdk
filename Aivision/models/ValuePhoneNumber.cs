@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Phone number field value.
+    /// The phone number field value.
     /// </summary>
     public class ValuePhoneNumber : FieldValue
     {
         
         /// <value>
-        /// Phone number field value.
+        /// The phone number field value.
         /// </value>
         /// <remarks>
         /// Required

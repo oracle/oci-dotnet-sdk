@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Array of field values.
+    /// The array of field values.
     /// </summary>
     public class ValueArray : FieldValue
     {

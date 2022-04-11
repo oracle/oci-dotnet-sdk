@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about the batch image analysis.
+    /// The details of the batch image analysis.
     /// </summary>
     public class CreateImageJobDetails 
     {
@@ -29,7 +29,7 @@ namespace Oci.AivisionService.Models
         public InputLocation InputLocation { get; set; }
         
         /// <value>
-        /// List of image analysis types requested.
+        /// The list of requested image analysis types.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,19 +46,19 @@ namespace Oci.AivisionService.Models
         public OutputLocation OutputLocation { get; set; }
         
         /// <value>
-        /// Compartment identifier from the requester.
+        /// The compartment identifier from the requester.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Image job display name.
+        /// The image job display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Whether to generate a Zip file containing the results.
+        /// Whether or not to generate a ZIP file containing the results.
         /// </value>
         [JsonProperty(PropertyName = "isZipOutputEnabled")]
         public System.Nullable<bool> IsZipOutputEnabled { get; set; }

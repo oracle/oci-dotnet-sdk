@@ -93,5 +93,15 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "ipv6CidrBlock")]
         public string Ipv6CidrBlock { get; set; }
         
+        /// <value>
+        /// The list of all IPv6 CIDR blocks (Oracle allocated IPv6 GUA, ULA or private IPv6 CIDR blocks, BYOIPv6 CIDR blocks) for the subnet that meets the following criteria:
+        /// - The CIDR blocks must be valid.
+        /// - Multiple CIDR blocks must not overlap each other or the on-premises network CIDR block.
+        /// - The number of CIDR blocks must not exceed the limit of IPv6 CIDR blocks allowed to a subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6CidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6CidrBlocks { get; set; }
+        
     }
 }

@@ -56,5 +56,12 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// Details object for adding an IPv6 VCN CIDR.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public AddVcnIpv6CidrDetails AddVcnIpv6CidrDetails { get; set; }
     }
 }

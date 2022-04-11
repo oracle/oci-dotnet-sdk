@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Results of a project search.
+    /// The results of a project search.
     /// </summary>
     public class ProjectCollection 
     {

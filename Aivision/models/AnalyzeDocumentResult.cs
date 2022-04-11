@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Document analysis results.
+    /// The document analysis results.
     /// </summary>
     public class AnalyzeDocumentResult 
     {
@@ -29,7 +29,7 @@ namespace Oci.AivisionService.Models
         public DocumentMetadata DocumentMetadata { get; set; }
         
         /// <value>
-        /// Array of Page.
+        /// The array of a Page.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,43 +51,43 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<DetectedLanguage> DetectedLanguages { get; set; }
         
         /// <value>
-        /// Document classification model version.
+        /// The document classification model version.
         /// </value>
         [JsonProperty(PropertyName = "documentClassificationModelVersion")]
         public string DocumentClassificationModelVersion { get; set; }
         
         /// <value>
-        /// Document language classification model version.
+        /// The document language classification model version.
         /// </value>
         [JsonProperty(PropertyName = "languageClassificationModelVersion")]
         public string LanguageClassificationModelVersion { get; set; }
         
         /// <value>
-        /// Document text detection model version.
+        /// The document text detection model version.
         /// </value>
         [JsonProperty(PropertyName = "textDetectionModelVersion")]
         public string TextDetectionModelVersion { get; set; }
         
         /// <value>
-        /// Document keyValue detection model version.
+        /// The document keyValue detection model version.
         /// </value>
         [JsonProperty(PropertyName = "keyValueDetectionModelVersion")]
         public string KeyValueDetectionModelVersion { get; set; }
         
         /// <value>
-        /// Document table detection model version.
+        /// The document table detection model version.
         /// </value>
         [JsonProperty(PropertyName = "tableDetectionModelVersion")]
         public string TableDetectionModelVersion { get; set; }
         
         /// <value>
-        /// Errors encountered during document analysis.
+        /// The errors encountered during document analysis.
         /// </value>
         [JsonProperty(PropertyName = "errors")]
         public System.Collections.Generic.List<ProcessingError> Errors { get; set; }
         
         /// <value>
-        /// Generated searchable PDF file.
+        /// The searchable PDF file that was generated.
         /// </value>
         [JsonProperty(PropertyName = "searchablePdf")]
         public System.Byte[] SearchablePdf { get; set; }

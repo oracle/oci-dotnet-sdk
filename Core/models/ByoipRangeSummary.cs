@@ -22,6 +22,13 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
+        /// A list of `ByoipRangeVcnIpv6AllocationSummary` objects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byoipRangeVcnIpv6Allocations")]
+        public System.Collections.Generic.List<ByoipRangeVcnIpv6AllocationSummary> ByoipRangeVcnIpv6Allocations { get; set; }
+        
+        /// <value>
         /// The public IPv4 address range you are importing to the Oracle cloud.
         /// </value>
         [JsonProperty(PropertyName = "cidrBlock")]
@@ -65,6 +72,15 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// The IPv6 CIDR block being imported to the Oracle cloud. This CIDR block must be /48 or larger, and can  be subdivided into sub-ranges used
+        /// across multiple VCNs. A BYOIPv6 prefix can be assigned across multiple VCNs, and each VCN must be /64 or larger. You may specify
+        /// a ULA or private IPv6 prefix of /64 or larger to use in the VCN. IPv6-enabled subnets will remain a fixed /64 in size.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6CidrBlock")]
+        public string Ipv6CidrBlock { get; set; }
         
         /// <value>
         /// The `ByoipRange` resource's current state.

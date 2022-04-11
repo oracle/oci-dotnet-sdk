@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Human-readable log message.
+        /// A human-readable log message.
         /// </value>
         /// <remarks>
         /// Required

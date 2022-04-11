@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Table extracted from a document.
+    /// The table extracted from a document.
     /// </summary>
     public class Table 
     {
         
         /// <value>
-        /// Number of rows.
+        /// The number of rows.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> RowCount { get; set; }
         
         /// <value>
-        /// Number of columns.
+        /// The number of columns.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> ColumnCount { get; set; }
         
         /// <value>
-        /// Header rows.
+        /// The header rows.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<TableRow> HeaderRows { get; set; }
         
         /// <value>
-        /// Body rows.
+        /// The body rows.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<TableRow> BodyRows { get; set; }
         
         /// <value>
-        /// Footer rows.
+        /// the footer rows.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<TableRow> FooterRows { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

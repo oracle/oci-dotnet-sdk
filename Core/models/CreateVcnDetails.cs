@@ -49,6 +49,33 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The list of one or more ULA or Private IPv6 CIDR blocks for the vcn that meets the following criteria:
+        /// - The CIDR blocks must be valid.
+        /// - Multiple CIDR blocks must not overlap each other or the on-premises network CIDR block.
+        /// - The number of CIDR blocks must not exceed the limit of IPv6 CIDR blocks allowed to a vcn.
+        /// <br/>
+        /// **Important:** Do *not* specify a value for `ipv6CidrBlock`. Use this parameter instead.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6PrivateCidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6PrivateCidrBlocks { get; set; }
+        
+        /// <value>
+        /// Specifies whether to skip Oracle allocated IPv6 GUA. By default, Oracle will allocate one GUA of /56
+        /// size for an IPv6 enabled VCN.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOracleGuaAllocationEnabled")]
+        public System.Nullable<bool> IsOracleGuaAllocationEnabled { get; set; }
+        
+        /// <value>
+        /// The list of BYOIPv6 OCIDs and BYOIPv6 CIDR blocks required to create a VCN that uses BYOIPv6 ranges.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byoipv6CidrDetails")]
+        public System.Collections.Generic.List<Byoipv6CidrDetails> Byoipv6CidrDetails { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -97,6 +124,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// Whether IPv6 is enabled for the VCN. Default is `false`.
         /// If enabled, Oracle will assign the VCN a IPv6 /56 CIDR block.
+        /// You may skip having Oracle allocate the VCN a IPv6 /56 CIDR block by setting isOracleGuaAllocationEnabled to `false`.
         /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
         /// <br/>
         /// Example: true

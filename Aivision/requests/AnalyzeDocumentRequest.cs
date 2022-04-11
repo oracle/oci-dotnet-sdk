@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// Details about how to analyze a document.
+        /// The details of how to analyze a document.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Cells in the row.
+        /// The cells in the row.
         /// </value>
         /// <remarks>
         /// Required

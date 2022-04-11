@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Results of a workRequest search.
+    /// The results of a workRequest search.
     /// </summary>
     public class WorkRequestSummaryCollection 
     {
         
         /// <value>
-        /// List of workRequestSummary objects.
+        /// The list of workRequestSummary objects.
         /// </value>
         /// <remarks>
         /// Required

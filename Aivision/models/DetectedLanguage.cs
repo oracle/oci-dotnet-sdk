@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Language detected in a document.
+    /// The language detected in a document.
     /// </summary>
     public class DetectedLanguage 
     {
         
         /// <value>
-        /// Language of the document, abbreviated according to ISO 639-2.
+        /// The language of the document, abbreviated according to ISO 639-2.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<DocumentLanguage> LanguageCode { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

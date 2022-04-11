@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.AivisionService.Models
 {
   /// <summary>
-  /// Language of the document, abbreviated according to ISO 639-2.
+  /// The language of the document, abbreviated according to ISO 639-2.
   /// </summary>
   public enum DocumentLanguage {
       [EnumMember(Value = "ENG")]

@@ -148,7 +148,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Cancel a batch document job.
+        /// Cancel a document batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -189,7 +189,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Cancel a batch image job.
+        /// Cancel an image batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -230,7 +230,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Cancel work request with the given ID.
+        /// Cancel the work request with the given ID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -270,7 +270,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Moves a model from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a model from one compartment to another. When provided, If-Match is checked against the ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -310,7 +310,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Moves a project from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Move a project from one compartment to another. When provided, If-Match is checked against the ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -350,7 +350,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Create a batch document analysis job
+        /// Create a document analysis batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -391,7 +391,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Create a batch image analysis job.
+        /// Create an image analysis batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -432,7 +432,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Creates a new model.
+        /// Create a new model.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -473,7 +473,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Creates a new project.
+        /// Create a new project.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -514,7 +514,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Deletes a model by identifier.
+        /// Delete a model by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -554,7 +554,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Deletes a project by identifier.
+        /// Delete a project by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -594,7 +594,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Get details of a batch document job.
+        /// Get details of a document batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -635,7 +635,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Get details of a batch image job.
+        /// Get details of an image batch job.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -676,7 +676,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Gets a model by identifier.
+        /// Get a model by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -716,7 +716,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Gets a project by identifier.
+        /// Get a project by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -878,7 +878,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Returns a (paginated) list of errors for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1001,7 +1001,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Updates model metadata.
+        /// Updates the model metadata.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1041,7 +1041,7 @@ namespace Oci.AivisionService
         }
 
         /// <summary>
-        /// Updates project metadata.
+        /// Update the project metadata.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Line of text.
+    /// The line of text.
     /// </summary>
     public class Line 
     {
         
         /// <value>
-        /// Text recognized.
+        /// The text recognized.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.AivisionService.Models
         public BoundingPolygon BoundingPolygon { get; set; }
         
         /// <value>
-        /// Array of words.
+        /// The array of words.
         /// </value>
         /// <remarks>
         /// Required

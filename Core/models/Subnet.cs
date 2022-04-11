@@ -125,6 +125,13 @@ namespace Oci.CoreService.Models
         public string Ipv6CidrBlock { get; set; }
         
         /// <value>
+        /// The list of all IPv6 CIDR blocks (Oracle allocated IPv6 GUA, ULA or private IPv6 CIDR blocks, BYOIPv6 CIDR blocks) for the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6CidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6CidrBlocks { get; set; }
+        
+        /// <value>
         /// For an IPv6-enabled subnet, this is the IPv6 address of the virtual router.
         /// <br/>
         /// Example: 2001:0db8:0123:1111:89ab:cdef:1234:5678

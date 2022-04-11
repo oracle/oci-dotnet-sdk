@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Text recognized in the cell.
+        /// The text recognized in the cell.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Index of the cell inside the row.
+        /// The index of the cell inside the row.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> RowIndex { get; set; }
         
         /// <value>
-        /// Index of the cell inside the column.
+        /// The index of the cell inside the column.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> ColumnIndex { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.AivisionService.Models
         public BoundingPolygon BoundingPolygon { get; set; }
         
         /// <value>
-        /// Words detected in the cell.
+        /// The words detected in the cell.
         /// </value>
         /// <remarks>
         /// Required

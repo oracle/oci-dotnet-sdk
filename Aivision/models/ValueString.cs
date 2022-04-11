@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// String field value.
+    /// The string field value.
     /// </summary>
     public class ValueString : FieldValue
     {
         
         /// <value>
-        /// String text.
+        /// The string text.
         /// </value>
         /// <remarks>
         /// Required

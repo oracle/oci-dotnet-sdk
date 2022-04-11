@@ -25,7 +25,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The new number of CPU cores to set for the DB system. Not applicable for virtual machine DB systems.
+        /// The new number of CPU cores to set for the DB system. Not applicable for INTEL based virtual machine DB systems.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Object bounding polygon box.
+    /// The object-bounding polygon box.
     /// </summary>
     public class BoundingPolygon 
     {
         
         /// <value>
         /// An array of normalized points defining the polygon's perimeter, with an implicit segment between subsequent points and between the first and last point.
-        /// Rectangles are defined with four points, e.g. `[{\"x\": 0, \"y\": 0}, {\"x\": 1, \"y\": 0}, {\"x\": 1, \"y\": 0.5}, {\"x\": 0, \"y\": 0.5}]` represents the top half of an image.
+        /// Rectangles are defined with four points. For example, `[{\"x\": 0, \"y\": 0}, {\"x\": 1, \"y\": 0}, {\"x\": 1, \"y\": 0.5}, {\"x\": 0, \"y\": 0.5}]` represents the top half of an image.
         /// 
         /// </value>
         /// <remarks>

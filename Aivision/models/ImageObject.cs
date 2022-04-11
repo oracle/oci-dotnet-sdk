@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Detected object in image.
+    /// The object detected in an image.
     /// </summary>
     public class ImageObject 
     {
         
         /// <value>
-        /// Object category name. Every value returned by the pre-deployed model will be in English.
+        /// The object category name. Every value returned by the pre-deployed model is in English.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score, between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

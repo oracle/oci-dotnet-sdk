@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
                 ///
         /// <value>
-        /// Field type.
+        /// The field type.
         /// </value>
         ///
         public enum FieldTypeEnum {
@@ -37,7 +37,7 @@ namespace Oci.AivisionService.Models
         };
 
         /// <value>
-        /// Field type.
+        /// The field type.
         /// </value>
         /// <remarks>
         /// Required

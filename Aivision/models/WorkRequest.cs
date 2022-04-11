@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// A description of workrequest status.
+    /// The workrequest status details.
     /// </summary>
     public class WorkRequest 
     {
         
         /// <value>
-        /// Type of the work request.
+        /// The type of work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<OperationType> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// The status of the current work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// The percentage of the request completed.
         /// </value>
         /// <remarks>
         /// Required

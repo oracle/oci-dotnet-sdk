@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Integer field value.
+    /// The integer field value.
     /// </summary>
     public class ValueInteger : FieldValue
     {
         
         /// <value>
-        /// Integer value.
+        /// The integer value.
         /// </value>
         /// <remarks>
         /// Required

@@ -34,7 +34,7 @@ namespace Oci.AivisionService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// A human readable description of the issue encountered.
+        /// A human-readable description of the issue encountered.
         /// </value>
         /// <remarks>
         /// Required

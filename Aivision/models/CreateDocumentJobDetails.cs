@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about the batch document analysis.
+    /// The batch document analysis details.
     /// </summary>
     public class CreateDocumentJobDetails 
     {
@@ -29,7 +29,7 @@ namespace Oci.AivisionService.Models
         public InputLocation InputLocation { get; set; }
         
         /// <value>
-        /// List of document analysis types requested.
+        /// The list of requested document analysis types.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,19 +46,19 @@ namespace Oci.AivisionService.Models
         public OutputLocation OutputLocation { get; set; }
         
         /// <value>
-        /// Compartment identifier from the requester.
+        /// The compartment identifier from the requester.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Document job display name.
+        /// The document job display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Language of the document, abbreviated according to ISO 639-2.
+        /// The language of the document, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -72,7 +72,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<DocumentType> DocumentType { get; set; }
         
         /// <value>
-        /// Whether to generate a Zip file containing the results.
+        /// Whether or not to generate a ZIP file containing the results.
         /// </value>
         [JsonProperty(PropertyName = "isZipOutputEnabled")]
         public System.Nullable<bool> IsZipOutputEnabled { get; set; }

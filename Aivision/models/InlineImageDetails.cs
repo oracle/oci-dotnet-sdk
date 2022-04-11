@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Image incorporated in the request payload.
+    /// The image incorporated in the request payload.
     /// </summary>
     public class InlineImageDetails : ImageDetails
     {
         
         /// <value>
-        /// Image raw data.
+        /// Raw image data.
         /// </value>
         /// <remarks>
         /// Required

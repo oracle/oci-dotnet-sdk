@@ -687,9 +687,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfLastFailover { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to 
-        /// Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
-        /// 
+        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
@@ -860,6 +858,33 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "actualUsedDataStorageSizeInTBs")]
         public System.Double ActualUsedDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The number of Max OCPU cores to be made available to the autonomous database with auto scaling of cpu enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCpuCoreCount")]
+        public System.Nullable<int> MaxCpuCoreCount { get; set; }
+                ///
+        /// <value>
+        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// 
+        /// </value>
+        ///
+        public enum DatabaseEditionEnum {
+            [EnumMember(Value = "STANDARD_EDITION")]
+            StandardEdition,
+            [EnumMember(Value = "ENTERPRISE_EDITION")]
+            EnterpriseEdition
+        };
+
+        /// <value>
+        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseEdition")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
         
     }
 }

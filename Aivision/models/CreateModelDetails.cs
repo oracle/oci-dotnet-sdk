@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Information needed to create a new model.
+    /// The information needed to create a new model.
     /// </summary>
     public class CreateModelDetails 
     {
         
         /// <value>
-        /// Human-friendly name for the model, which can be changed.
+        /// A human-friendly name for the model, which can be changed.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Optional description of the model.
+        /// An optional description of the model.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Model version
+        /// The model version
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
         
         /// <value>
-        /// What type of Vision model this is.
+        /// Which type of Vision model this is.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,7 +51,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<Model.ModelTypeEnum> ModelType { get; set; }
         
         /// <value>
-        /// Compartment identifier.
+        /// The compartment identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,13 +61,13 @@ namespace Oci.AivisionService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Set to true when experimenting with a new model type or dataset so model training is quick, with a predefined low number of passes through the training data.
+        /// Set to true when experimenting with a new model type or dataset, so the model training is quick, with a predefined low number of passes through the training data.
         /// </value>
         [JsonProperty(PropertyName = "isQuickMode")]
         public System.Nullable<bool> IsQuickMode { get; set; }
         
         /// <value>
-        /// Maximum model training duration in hours, expressed as a decimal fraction.
+        /// The maximum model training duration in hours, expressed as a decimal fraction.
         /// </value>
         [JsonProperty(PropertyName = "maxTrainingDurationInHours")]
         public System.Double MaxTrainingDurationInHours { get; set; }
@@ -86,7 +86,7 @@ namespace Oci.AivisionService.Models
         public Dataset ValidationDataset { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project which contains the model.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project that contains the model.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,15 +96,15 @@ namespace Oci.AivisionService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

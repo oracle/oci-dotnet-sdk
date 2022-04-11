@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// unique project identifier.
+        /// A unique project identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.AivisionService.Requests
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Project metadata to be updated.
+        /// The project metadata to be updated.
         /// </value>
         /// <remarks>
         /// Required

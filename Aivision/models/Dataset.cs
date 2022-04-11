@@ -23,7 +23,7 @@ namespace Oci.AivisionService.Models
     {
                 ///
         /// <value>
-        /// Type of the dataset based on where it is stored.
+        /// The dataset type, based on where it is stored.
         /// </value>
         ///
         public enum DatasetTypeEnum {

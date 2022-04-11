@@ -697,8 +697,6 @@ namespace Oci.IdentityService
         /// <summary>
         /// Creates a new compartment in the specified compartment.
         /// &lt;br/&gt;
-        /// **Important:** Compartments cannot be deleted.
-        /// &lt;br/&gt;
         /// Specify the parent compartment&#39;s OCID as the compartment ID in the request object. Remember that the tenancy
         /// is simply the root compartment. For information about OCIDs, see
         /// [Resource Identifiers](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).

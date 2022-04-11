@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Requests
         public string ProjectId { get; set; }
         
         /// <value>
-        /// Filter to match models with the given lifecycleState.
+        /// The filter to match models with the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Model.LifecycleStateEnum> LifecycleState { get; set; }
@@ -44,7 +44,7 @@ namespace Oci.AivisionService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Filter to find the model with the given identifier.
+        /// The filter to find the model with the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -69,7 +69,7 @@ namespace Oci.AivisionService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. The default order for displayName is ascending.
         /// 
         /// </value>
         ///
@@ -81,7 +81,7 @@ namespace Oci.AivisionService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeCreated is descending. The default order for displayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
