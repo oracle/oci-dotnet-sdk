@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Name of a form field.
+    /// The name of a form field.
     /// </summary>
     public class FieldName 
     {
         
         /// <value>
-        /// Name of the field.
+        /// The name of the field.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         [JsonProperty(PropertyName = "confidence")]
         public System.Nullable<float> Confidence { get; set; }
@@ -41,7 +41,7 @@ namespace Oci.AivisionService.Models
         public BoundingPolygon BoundingPolygon { get; set; }
         
         /// <value>
-        /// Indexes of the words in the field name.
+        /// The indexes of the words in the field name.
         /// </value>
         [JsonProperty(PropertyName = "wordIndexes")]
         public System.Collections.Generic.List<int> WordIndexes { get; set; }

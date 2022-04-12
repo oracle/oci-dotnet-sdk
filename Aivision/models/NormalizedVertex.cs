@@ -25,7 +25,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// X axis normalized coordinate.
+        /// The X-axis normalized coordinate.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +35,7 @@ namespace Oci.AivisionService.Models
         public System.Double X { get; set; }
         
         /// <value>
-        /// Y axis normalized coordinate.
+        /// The Y-axis normalized coordinate.
         /// </value>
         /// <remarks>
         /// Required

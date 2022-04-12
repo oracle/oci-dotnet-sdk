@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Floating point number field value.
+    /// The floating point number field value.
     /// </summary>
     public class ValueNumber : FieldValue
     {
         
         /// <value>
-        /// Number value.
+        /// The number value.
         /// </value>
         /// <remarks>
         /// Required

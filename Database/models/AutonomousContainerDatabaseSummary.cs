@@ -84,7 +84,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
-        /// The OCID of the Autonomous Exadata Infrastructure.
+        /// **No longer used.** For Autonomous Database on dedicated Exadata infrastructure, the container database is created within a specified `cloudAutonomousVmCluster`. 
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
         public string AutonomousExadataInfrastructureId { get; set; }

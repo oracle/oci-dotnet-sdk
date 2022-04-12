@@ -16,15 +16,15 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Type of document analysis.
+    /// The type of document analysis.
     /// </summary>
     [JsonConverter(typeof(DocumentFeatureModelConverter))]
     public class DocumentFeature 
     {
                 ///
         /// <value>
-        /// Type of document analysis requested
-        /// Allowed values are:
+        /// The type of document analysis requested.
+        /// The allowed values are:
         /// - `LANGUAGE_CLASSIFICATION`: Detect the language.
         /// - `TEXT_DETECTION`: Recognize text.
         /// - `TABLE_DETECTION`: Detect and extract data in tables.

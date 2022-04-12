@@ -16,16 +16,16 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about an image to analyze.
+    /// The details of an image to analyze.
     /// </summary>
     [JsonConverter(typeof(ImageDetailsModelConverter))]
     public class ImageDetails 
     {
                 ///
         /// <value>
-        /// The location of image data
-        /// Allowed values are:
-        /// - `INLINE`: Data is included directly in the request payload.
+        /// The location of the image data.
+        /// The allowed values are:
+        /// - `INLINE`: The data is included directly in the request payload.
         /// - `OBJECT_STORAGE`: The image is in OCI Object Storage.
         /// 
         /// </value>

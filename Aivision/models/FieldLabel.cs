@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Label in a field.
+    /// The label in a field.
     /// </summary>
     public class FieldLabel 
     {
         
         /// <value>
-        /// Name of the field label.
+        /// The name of the field label.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         [JsonProperty(PropertyName = "confidence")]
         public System.Nullable<float> Confidence { get; set; }

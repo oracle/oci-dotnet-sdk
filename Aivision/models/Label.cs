@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// A label describing an image. Every label returned by the pre-deployed model will be in English.
+    /// A label describing an image. Every label returned by the pre-deployed model is in English.
     /// </summary>
     public class Label 
     {
         
         /// <value>
-        /// Classification catagory label name.
+        /// The classification catagory label name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

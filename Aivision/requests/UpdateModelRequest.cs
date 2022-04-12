@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// unique model identifier.
+        /// A unique model identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.AivisionService.Requests
         public string ModelId { get; set; }
         
         /// <value>
-        /// Model metadata to be updated.
+        /// The model metadata to be updated.
         /// </value>
         /// <remarks>
         /// Required

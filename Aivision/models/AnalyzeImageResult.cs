@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Image analysis results.
+    /// The image analysis results.
     /// </summary>
     public class AnalyzeImageResult 
     {
         
         /// <value>
-        /// Detected objects.
+        /// The detected objects.
         /// </value>
         [JsonProperty(PropertyName = "imageObjects")]
         public System.Collections.Generic.List<ImageObject> ImageObjects { get; set; }
         
         /// <value>
-        /// Image classification labels.
+        /// The image classification labels.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<Label> Labels { get; set; }
         
         /// <value>
-        /// ontologyClasses of image labels.
+        /// The ontologyClasses of image labels.
         /// </value>
         [JsonProperty(PropertyName = "ontologyClasses")]
         public System.Collections.Generic.List<OntologyClass> OntologyClasses { get; set; }
@@ -43,25 +43,25 @@ namespace Oci.AivisionService.Models
         public ImageText ImageText { get; set; }
         
         /// <value>
-        /// Image classification model version.
+        /// The image classification model version.
         /// </value>
         [JsonProperty(PropertyName = "imageClassificationModelVersion")]
         public string ImageClassificationModelVersion { get; set; }
         
         /// <value>
-        /// Object detection model version.
+        /// The object detection model version.
         /// </value>
         [JsonProperty(PropertyName = "objectDetectionModelVersion")]
         public string ObjectDetectionModelVersion { get; set; }
         
         /// <value>
-        /// Text detection model version.
+        /// The text detection model version.
         /// </value>
         [JsonProperty(PropertyName = "textDetectionModelVersion")]
         public string TextDetectionModelVersion { get; set; }
         
         /// <value>
-        /// Errors encountered during image analysis.
+        /// The errors encountered during image analysis.
         /// </value>
         [JsonProperty(PropertyName = "errors")]
         public System.Collections.Generic.List<ProcessingError> Errors { get; set; }

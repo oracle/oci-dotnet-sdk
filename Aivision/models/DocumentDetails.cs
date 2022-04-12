@@ -16,16 +16,16 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about a document to analyze.
+    /// The details of a document to analyze.
     /// </summary>
     [JsonConverter(typeof(DocumentDetailsModelConverter))]
     public class DocumentDetails 
     {
                 ///
         /// <value>
-        /// The location of document data.
-        /// Allowed values are:
-        /// - `INLINE`: Data is included directly in the request payload.
+        /// The location of the document data.
+        /// The allowed values are:
+        /// - `INLINE`: The data is included directly in the request payload.
         /// - `OBJECT_STORAGE`: The document is in OCI Object Storage.
         /// 
         /// </value>

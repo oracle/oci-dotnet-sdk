@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// List of ObjectLocations.
+        /// The list of ObjectLocations.
         /// </value>
         /// <remarks>
         /// Required

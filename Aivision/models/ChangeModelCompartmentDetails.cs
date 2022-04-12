@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Which compartment the model should be moved to.
+    /// The compartment the model should be moved to.
     /// </summary>
     public class ChangeModelCompartmentDetails 
     {

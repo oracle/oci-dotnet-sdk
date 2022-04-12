@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// OCI Object Storage Location.
+    /// The Object Storage Location.
     /// </summary>
     public class OutputLocation 
     {
         
         /// <value>
-        /// Object Storage namespace.
+        /// The Object Storage namespace.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// Object Storage bucket name.
+        /// The Object Storage bucket name.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AivisionService.Models
         public string BucketName { get; set; }
         
         /// <value>
-        /// Object Storage folder name.
+        /// The Object Storage folder name.
         /// </value>
         /// <remarks>
         /// Required

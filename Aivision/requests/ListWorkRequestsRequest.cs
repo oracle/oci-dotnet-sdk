@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given OperationStatus.
+        /// A filter to return only resources whose lifecycleState matches the given OperationStatus.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Nullable<OperationStatus> Status { get; set; }
@@ -69,7 +69,7 @@ namespace Oci.AivisionService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeAccepted is descending.
         /// 
         /// </value>
         ///
@@ -79,7 +79,7 @@ namespace Oci.AivisionService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// The field to sort by. Only one sort order may be provided. The default order for timeAccepted is descending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

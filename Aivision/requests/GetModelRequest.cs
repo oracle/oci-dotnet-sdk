@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// unique model identifier.
+        /// A unique model identifier.
         /// </value>
         /// <remarks>
         /// Required

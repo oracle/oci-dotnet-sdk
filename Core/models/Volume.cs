@@ -151,6 +151,8 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// Allowed values:
         /// <br/>
+        ///   * `0`: Represents Lower Cost option.
+        /// <br/>
         ///   * `10`: Represents Balanced option.
         /// <br/>
         ///   * `20`: Represents Higher Performance option.
@@ -199,7 +201,7 @@ namespace Oci.CoreService.Models
         public string VolumeGroupId { get; set; }
         
         /// <value>
-        /// Specifies whether the auto-tune performance is enabled for this boot volume.
+        /// Specifies whether the auto-tune performance is enabled for this volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]

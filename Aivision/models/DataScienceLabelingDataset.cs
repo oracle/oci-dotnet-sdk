@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Dataset created by the Data Labeling Service.
+    /// The dataset created by the Data Labeling Service.
     /// </summary>
     public class DataScienceLabelingDataset : Dataset
     {

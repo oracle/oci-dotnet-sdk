@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Summary of the status of a work request.
+    /// A summary of the status of a work request.
     /// </summary>
     public class WorkRequestSummary 
     {
         
         /// <value>
-        /// Type of the work request.
+        /// The type of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<OperationType> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// The status of the current work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,10 +54,10 @@ namespace Oci.AivisionService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
+        /// The OCID of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
         /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used.
+        /// resource whose compartment is used.
         /// 
         /// </value>
         /// <remarks>
@@ -78,7 +78,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// The percentage of the request completed.
         /// </value>
         /// <remarks>
         /// Required

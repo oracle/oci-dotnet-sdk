@@ -28,6 +28,20 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
+        /// The list of BYOIPv6 CIDR blocks required to create a VCN that uses BYOIPv6 ranges.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byoipv6CidrBlocks")]
+        public System.Collections.Generic.List<string> Byoipv6CidrBlocks { get; set; }
+        
+        /// <value>
+        /// For an IPv6-enabled VCN, this is the list of Private IPv6 CIDR blocks for the VCN's IP address space.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6PrivateCidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6PrivateCidrBlocks { get; set; }
+        
+        /// <value>
         /// Deprecated. The first CIDR IP address from cidrBlocks.
         /// <br/>
         /// Example: 172.16.0.0/16

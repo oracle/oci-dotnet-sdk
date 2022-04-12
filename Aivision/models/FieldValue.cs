@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Value of a form field.
+    /// The value of a form field.
     /// </summary>
     [JsonConverter(typeof(FieldValueModelConverter))]
     public class FieldValue 
     {
                 ///
         /// <value>
-        /// Type of data detected.
+        /// The type of data detected.
         /// 
         /// </value>
         ///
@@ -46,13 +46,13 @@ namespace Oci.AivisionService.Models
 
         
         /// <value>
-        /// Detected text of a field.
+        /// The detected text of a field.
         /// </value>
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.AivisionService.Models
         public BoundingPolygon BoundingPolygon { get; set; }
         
         /// <value>
-        /// Indexes of the words in the field value.
+        /// The indexes of the words in the field value.
         /// </value>
         /// <remarks>
         /// Required

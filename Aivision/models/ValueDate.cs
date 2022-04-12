@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Date field value.
+    /// The date field value.
     /// </summary>
     public class ValueDate : FieldValue
     {
         
         /// <value>
-        /// Date field value as yyyy-mm-dd.
+        /// The date field value as yyyy-mm-dd.
         /// </value>
         /// <remarks>
         /// Required

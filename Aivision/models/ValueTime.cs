@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Time field value
+    /// The time field value.
     /// </summary>
     public class ValueTime : FieldValue
     {
         
         /// <value>
-        /// Time field value as yyyy-mm-dd hh-mm-ss.
+        /// The time field value as yyyy-mm-dd hh-mm-ss.
         /// </value>
         /// <remarks>
         /// Required

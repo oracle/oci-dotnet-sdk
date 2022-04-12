@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Detected document type.
+    /// The detected document type.
     /// </summary>
     public class DetectedDocumentType 
     {
         
         /// <value>
-        /// Type of the document.
+        /// The document type.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public string DocumentType { get; set; }
         
         /// <value>
-        /// Confidence score between 0 to 1.
+        /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>
         /// Required

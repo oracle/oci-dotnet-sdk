@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Document information.
+    /// The document information.
     /// </summary>
     public class DocumentMetadata 
     {
         
         /// <value>
-        /// Number of pages in the document.
+        /// Teh number of pages in the document.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> PageCount { get; set; }
         
         /// <value>
-        /// Result data format.
+        /// The result data format.
         /// </value>
         /// <remarks>
         /// Required

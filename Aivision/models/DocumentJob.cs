@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Job details for a batch document analysis.
+    /// The job details for a batch document analysis.
     /// </summary>
     public class DocumentJob 
     {
         
         /// <value>
-        /// Job id.
+        /// The job id.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.AivisionService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Document job display name.
+        /// The document job display name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// List of document analysis types requested.
+        /// The list of requested document analysis types.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,14 +58,14 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<DocumentFeature> Features { get; set; }
         
         /// <value>
-        /// Language of the document, abbreviated according to ISO 639-2.
+        /// The document language, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DocumentLanguage> Language { get; set; }
         
         /// <value>
-        /// The type of documents.
+        /// The type of document.
         /// </value>
         [JsonProperty(PropertyName = "documentType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -75,7 +75,7 @@ namespace Oci.AivisionService.Models
         public InputLocation InputLocation { get; set; }
         
         /// <value>
-        /// Job accepted time.
+        /// The job acceptance time.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,19 +85,19 @@ namespace Oci.AivisionService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// Job started time.
+        /// The job start time.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// Job finished time.
+        /// The job finish time.
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
         /// <value>
-        /// How much progress the operation has made, vs the total amount of work that must be performed.
+        /// How much progress the operation has made, compared to the total amount of work to be performed.
         /// </value>
         [JsonProperty(PropertyName = "percentComplete")]
         public System.Nullable<float> PercentComplete { get; set; }
@@ -140,13 +140,13 @@ namespace Oci.AivisionService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Whether to generate a Zip file containing the results.
+        /// Whether or not to generate a ZIP file containing the results.
         /// </value>
         [JsonProperty(PropertyName = "isZipOutputEnabled")]
         public System.Nullable<bool> IsZipOutputEnabled { get; set; }
                 ///
         /// <value>
-        /// Detailed status of FAILED state.
+        /// The detailed status of FAILED state.
         /// </value>
         ///
         public enum LifecycleDetailsEnum {
@@ -157,7 +157,7 @@ namespace Oci.AivisionService.Models
         };
 
         /// <value>
-        /// Detailed status of FAILED state.
+        /// The detailed status of FAILED state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(StringEnumConverter))]

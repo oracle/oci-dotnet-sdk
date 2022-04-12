@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Detected text.
+    /// The detected text.
     /// </summary>
     public class ImageText 
     {
         
         /// <value>
-        /// Words recognized in the image.
+        /// The words recognized in an image.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public System.Collections.Generic.List<Word> Words { get; set; }
         
         /// <value>
-        /// Lines of text recognized in the image.
+        /// The lines of text recognized in an image.
         /// </value>
         /// <remarks>
         /// Required

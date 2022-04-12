@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Name of the label.
+        /// The label name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.AivisionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Parents of the label.
+        /// The label parents.
         /// </value>
         [JsonProperty(PropertyName = "parentNames")]
         public System.Collections.Generic.List<string> ParentNames { get; set; }
         
         /// <value>
-        /// Synonyms of the label.
+        /// The label synonyms.
         /// </value>
         [JsonProperty(PropertyName = "synonymNames")]
         public System.Collections.Generic.List<string> SynonymNames { get; set; }

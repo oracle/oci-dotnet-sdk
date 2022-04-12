@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.AivisionService.Models
 {
   /// <summary>
-  /// Possible operation status.
+  /// Possible operation statuses.
   /// </summary>
   public enum OperationStatus {
       [EnumMember(Value = "ACCEPTED")]

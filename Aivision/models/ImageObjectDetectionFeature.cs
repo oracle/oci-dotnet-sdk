@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Object detection parameters.
+    /// The object detection parameters.
     /// </summary>
     public class ImageObjectDetectionFeature : ImageFeature
     {
@@ -28,7 +28,7 @@ namespace Oci.AivisionService.Models
         public System.Nullable<int> MaxResults { get; set; }
         
         /// <value>
-        /// Custom model id.
+        /// The custom model ID.
         /// </value>
         [JsonProperty(PropertyName = "modelId")]
         public string ModelId { get; set; }

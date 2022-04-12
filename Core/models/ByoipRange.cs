@@ -16,19 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Oracle offers the ability to Bring Your Own IP (BYOIP), importing public IP addresses  that you currently own to Oracle Cloud Infrastructure. A `ByoipRange` resource is a record of the imported address block (a BYOIP CIDR block) and also some associated metadata.
+    /// Oracle offers the ability to Bring Your Own IP (BYOIP), importing public IP addresses or IPv6 addresses that you currently own to Oracle Cloud Infrastructure. A `ByoipRange` resource is a record of the imported address block (a BYOIP CIDR block) and also some associated metadata.
     /// The process used to [Bring Your Own IP](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/BYOIP.htm) is explained in the documentation.
     /// </summary>
     public class ByoipRange 
     {
         
         /// <value>
+        /// A list of `ByoipRangeVcnIpv6AllocationSummary` objects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byoipRangeVcnIpv6Allocations")]
+        public System.Collections.Generic.List<ByoipRangeVcnIpv6AllocationSummary> ByoipRangeVcnIpv6Allocations { get; set; }
+        
+        /// <value>
         /// The public IPv4 CIDR block being imported from on-premises to the Oracle cloud.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
         
@@ -78,6 +81,15 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// The IPv6 CIDR block being imported to the Oracle cloud. This CIDR block must be /48 or larger, and can be subdivided into sub-ranges used
+        /// across multiple VCNs. A BYOIPv6 prefix can be also assigned across multiple VCNs, and each VCN must be /64 or larger. You may specify
+        /// a ULA or private IPv6 prefix of /64 or larger to use in the VCN. IPv6-enabled subnets will remain a fixed /64 in size.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6CidrBlock")]
+        public string Ipv6CidrBlock { get; set; }
                 ///
         /// <value>
         /// The `ByoipRange` resource's current status.

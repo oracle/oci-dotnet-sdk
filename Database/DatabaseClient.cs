@@ -2168,7 +2168,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Deletes the specified Autonomous VM cluster in an Exadata Cloud@Customer system. To delete an Autonomous VM Cluster in the Oracle cloud, see {@link #deleteCloudAutonomousVmCluster(DeleteCloudAutonomousVmClusterRequest) deleteCloudAutonomousVmCluster}. 
+        /// Deletes the specified Autonomous VM cluster in an Exadata Cloud@Customer system. To delete an Autonomous VM Cluster in the Oracle cloud, see {@link #deleteCloudAutonomousVmCluster(DeleteCloudAutonomousVmClusterRequest) deleteCloudAutonomousVmCluster}.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4359,7 +4359,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets information about the specified Autonomous VM cluster for an Exadata Cloud@Customer system. To get information about an Autonomous VM Cluster in the Oracle cloud, see {@link #getCloudAutonomousVmCluster(GetCloudAutonomousVmClusterRequest) getCloudAutonomousVmCluster}. 
+        /// Gets information about the specified Autonomous VM cluster for an Exadata Cloud@Customer system. To get information about an Autonomous VM Cluster in the Oracle cloud, see {@link #getCloudAutonomousVmCluster(GetCloudAutonomousVmClusterRequest) getCloudAutonomousVmCluster}.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6426,7 +6426,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// **Deprecated.** 
+        /// **Deprecated.**
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9009,7 +9009,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Scans for pluggable databases in the specified external container database.
-        /// This operation will return un-registered pluggable databases in the &#x60;GetWorkRequest&#x60; operation.
+        /// This operation will return un-registered pluggable databases in the {@link #getWorkRequest(GetWorkRequestRequest) getWorkRequest} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

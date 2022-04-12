@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Dataset that resides in OCI Object Storage.
+    /// The dataset that resides in Object Storage.
     /// </summary>
     public class ObjectStorageDataset : Dataset
     {

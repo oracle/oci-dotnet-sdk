@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Document incorporated in the request payload.
+    /// The document incorporated in the request payload.
     /// </summary>
     public class InlineDocumentDetails : DocumentDetails
     {
         
         /// <value>
-        /// Document raw data.
+        /// Raw document data.
         /// </value>
         /// <remarks>
         /// Required

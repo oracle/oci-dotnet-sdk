@@ -2093,7 +2093,11 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// 
         /// &lt;br/&gt;
-        /// - **DIAGNOSTICREBOOT** - **This feature currently only supports virtual machines** Powers off the VM instance then rebuilds and powers it back on.
+        /// - **DIAGNOSTICREBOOT** - Powers off the instance, rebuilds it on the physical host, and then powers it back on.
+        /// Before you send a diagnostic reboot, restart the instance&#39;s OS, confirm that the instance and networking settings are configured
+        /// correctly, and try other [troubleshooting steps](https://docs.cloud.oracle.com/iaas/Content/Compute/References/troubleshooting-compute-instances.htm).
+        /// Use diagnostic reboot as a final attempt to troubleshoot an unreachable instance. For virtual machine (VM) instances only.
+        /// For more information, see [Performing a Diagnostic Reboot](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/diagnostic-reboot.htm).
         /// &lt;br/&gt;
         /// 
         /// For more information about managing instance lifecycle states, see
@@ -2879,14 +2883,14 @@ namespace Oci.CoreService
         /// <summary>
         /// Lists a subset of images available in the specified compartment, including
         /// [platform images](https://docs.cloud.oracle.com/iaas/Content/Compute/References/images.htm) and
-        /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm). 
-        /// The list of platform images includes the three most recently published versions 
+        /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm).
+        /// The list of platform images includes the three most recently published versions
         /// of each major distribution.
         /// &lt;br/&gt;
         /// The list of images returned is ordered to first show the recent platform images,
         /// then all of the custom images.
         /// &lt;br/&gt;
-        /// **Caution:** Platform images are refreshed regularly. When new images are released, older versions are replaced. 
+        /// **Caution:** Platform images are refreshed regularly. When new images are released, older versions are replaced.
         /// The image OCIDs remain available, but when the platform image is replaced, the image OCIDs are no longer returned as part of the platform image list.
         /// 
         /// </summary>
@@ -3276,7 +3280,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Updates the specified capacity reservation and its associated capacity configurations.
-        /// Fields that are not provided in the request will not be updated. Capacity configurations that are not included will be deleted. 
+        /// Fields that are not provided in the request will not be updated. Capacity configurations that are not included will be deleted.
         /// Avoid entering confidential information.
         /// 
         /// </summary>

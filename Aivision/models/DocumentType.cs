@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.AivisionService.Models
 {
   /// <summary>
-  /// Type of the document.
+  /// The type of document.
   /// </summary>
   public enum DocumentType {
       [EnumMember(Value = "INVOICE")]

@@ -22,7 +22,7 @@ namespace Oci.AivisionService.Models
     {
         
         /// <value>
-        /// Whether to generate a searchable PDF file.
+        /// Whether or not to generate a searchable PDF file.
         /// </value>
         [JsonProperty(PropertyName = "generateSearchablePdf")]
         public System.Nullable<bool> GenerateSearchablePdf { get; set; }

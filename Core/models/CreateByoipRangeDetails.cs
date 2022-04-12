@@ -25,10 +25,6 @@ namespace Oci.CoreService.Models
         /// The BYOIP CIDR block. You can assign some or all of it to a public IP pool after it is validated.
         /// Example: 10.0.1.0/24
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
         
@@ -42,6 +38,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The BYOIPv6 CIDR block. You can assign some or all of it to a VCN after it is validated.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6CidrBlock")]
+        public string Ipv6CidrBlock { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a

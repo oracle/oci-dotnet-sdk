@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Details about how to analyze a document.
+    /// The details of how to analyze a document.
     /// </summary>
     public class AnalyzeDocumentDetails 
     {
         
         /// <value>
-        /// Types of document analysis requested.
+        /// The types of document analysis requested.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,14 +48,14 @@ namespace Oci.AivisionService.Models
         public OutputLocation OutputLocation { get; set; }
         
         /// <value>
-        /// Language of the document, abbreviated according to ISO 639-2.
+        /// The document language, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DocumentLanguage> Language { get; set; }
         
         /// <value>
-        /// The type of document.
+        /// The document type.
         /// </value>
         [JsonProperty(PropertyName = "documentType")]
         [JsonConverter(typeof(StringEnumConverter))]

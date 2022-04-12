@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AivisionService.Models
 {
     /// <summary>
-    /// Width and height of a page.
+    /// The width and height of a page.
     /// </summary>
     public class Dimensions 
     {
         
         /// <value>
-        /// Width of a page.
+        /// the width of a page.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AivisionService.Models
         public System.Double Width { get; set; }
         
         /// <value>
-        /// Height of a page.
+        /// The height of a page.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AivisionService.Models
         public System.Double Height { get; set; }
                 ///
         /// <value>
-        /// Unit of length.
+        /// The unit of length.
         /// </value>
         ///
         public enum UnitEnum {
@@ -53,7 +53,7 @@ namespace Oci.AivisionService.Models
         };
 
         /// <value>
-        /// Unit of length.
+        /// The unit of length.
         /// </value>
         /// <remarks>
         /// Required
