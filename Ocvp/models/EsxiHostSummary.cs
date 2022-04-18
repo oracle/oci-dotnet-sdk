@@ -167,6 +167,25 @@ namespace Oci.OcvpService.Models
         public string ComputeAvailabilityDomain { get; set; }
         
         /// <value>
+        /// The compute shape name of the ESXi host.
+        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "HostShapeName is required.")]
+        [JsonProperty(PropertyName = "hostShapeName")]
+        public string HostShapeName { get; set; }
+        
+        /// <value>
+        /// The OCPU count of the ESXi host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hostOcpuCount")]
+        public System.Nullable<float> HostOcpuCount { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

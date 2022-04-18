@@ -163,6 +163,25 @@ namespace Oci.OcvpService.Models
         public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
         
         /// <value>
+        /// The initial compute shape of the SDDC's ESXi hosts.
+        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InitialHostShapeName is required.")]
+        [JsonProperty(PropertyName = "initialHostShapeName")]
+        public string InitialHostShapeName { get; set; }
+        
+        /// <value>
+        /// The initial OCPU count of the SDDC's ESXi hosts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialHostOcpuCount")]
+        public System.Nullable<float> InitialHostOcpuCount { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

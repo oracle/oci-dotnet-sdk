@@ -77,6 +77,13 @@ namespace Oci.OcvpService.Models
         public System.Collections.Generic.List<SddcTypes> SupportedSddcTypes { get; set; }
         
         /// <value>
+        /// The VMware software versions supported by the shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedVmwareSoftwareVersions")]
+        public System.Collections.Generic.List<string> SupportedVmwareSoftwareVersions { get; set; }
+        
+        /// <value>
         /// Description of the shape.
         /// 
         /// </value>

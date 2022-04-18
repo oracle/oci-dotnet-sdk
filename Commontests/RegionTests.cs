@@ -226,7 +226,7 @@ namespace Oci.Common
         [DisplayTestMethodNameAttribute]
         public void testCustomSecondLevelDomain()
         {
-            Environment.SetEnvironmentVariable(Region.OCI_DEFAULT_REALM, "foobar.com");
+            Environment.SetEnvironmentVariable(Realm.OCI_DEFAULT_REALM, "foobar.com");
             Service service = new Service
             {
                 ServiceName = "AUDIT",

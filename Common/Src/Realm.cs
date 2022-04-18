@@ -7,6 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
+using Oci.Common.Internal;
+using Oci.Common.Model;
+using Oci.Common.Utils;
+
 namespace Oci.Common
 {
     /// <summary>
@@ -16,12 +20,15 @@ namespace Oci.Common
     /// </summary>
     public partial class Realm
     {
+        protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly Dictionary<string, Realm> KNOWN_REALMS = new Dictionary<string, Realm>();
 
         /// <summary>The id of a realm.</summary>
         public string RealmId { get; }
         /// <summary>The second level domain of a realm.</summary>
         public string SecondLevelDomain { get; }
+
+        public static readonly string OCI_DEFAULT_REALM = "OCI_DEFAULT_REALM";
 
         private Realm(string realmId, string secondlevelDomain)
         {
@@ -92,6 +99,26 @@ namespace Oci.Common
             }
             // If the realm is not yet registered, call constructor.
             return new Realm(realmId, secondlevelDomain);
+        }
+
+        /// <summary>Return the custom second level domain if set via OCI_DEFAULT_REALM else return OC1</summary>
+        /// <returns>The Fallback Realm to register an unknown Region.</returns>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static string GetFallbackRealm()
+        {
+            string customSecondLevelDomain = Environment.GetEnvironmentVariable(OCI_DEFAULT_REALM);
+            if (!String.IsNullOrWhiteSpace(customSecondLevelDomain))
+            {
+                // Read a user settable second level domain for the endpoint
+                logger.Info($"Read the second level domain:{customSecondLevelDomain} from the {OCI_DEFAULT_REALM} environment variable");
+            }
+            else
+            {
+                // Else we need to fall back to OC1 SLD.
+                logger.Debug($"{OCI_DEFAULT_REALM} environment variable not set, will assume it's in Realm OC1");
+                customSecondLevelDomain = Realm.OC1.SecondLevelDomain;
+            }
+            return customSecondLevelDomain;
         }
     }
 }

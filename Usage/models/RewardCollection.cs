@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// The response object for the ListRewards API call. It provides information about the rewards for a subscription.
+    /// The response object for the ListRewards API call. Provides information about the subscription rewards.
     /// </summary>
     public class RewardCollection 
     {

@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using System.Security;
 
 namespace Oci.Common.Utils
 {
@@ -45,6 +46,26 @@ namespace Oci.Common.Utils
                 path = path.Replace('/', '\\');
             }
             return path;
+        }
+
+        public static SecureString GetSecurePassphraseFromFile(string passphrasePath)
+        {
+            try
+            {
+                return StringUtils.StringToSecureString(File.ReadAllText(passphrasePath));
+            }
+            catch (ArgumentException)
+            {
+                throw new ArgumentException($"Invalid path for passphrasePath {passphrasePath}");
+            }
+            catch (DirectoryNotFoundException)
+            {
+                throw new DirectoryNotFoundException($"File not found at passphrasePath: {passphrasePath}");
+            }
+            catch (IOException)
+            {
+                throw new IOException($"Error reading file at passphrasePath: {passphrasePath}");
+            }
         }
     }
 }

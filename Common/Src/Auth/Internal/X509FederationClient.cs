@@ -66,7 +66,7 @@ namespace Oci.Common.Auth.Internal
             this.sessionKeySupplier = sessionKeySupplier ?? throw new NullReferenceException();
             this.intermediateCertificateSuppliers = intermediateCertificateSuppliers;
             this.tenancyId = tenancyId ?? throw new NullReferenceException();
-            this.securityTokenAdapter = new SecurityTokenAdapter(null);
+            this.securityTokenAdapter = new SecurityTokenAdapter(null, null);
             this.purpose = purpose ?? throw new NullReferenceException();
         }
 
@@ -271,7 +271,7 @@ namespace Oci.Common.Auth.Internal
             var securityTokenContent = response.Content.ReadAsStringAsync().Result;
             var securityToken = JsonConvert.DeserializeObject<SecurityToken>(securityTokenContent);
             logger.Info($"Security Token received from the Auth Service");
-            return new SecurityTokenAdapter(securityToken.Token);
+            return new SecurityTokenAdapter(securityToken.Token, sessionKeySupplier);
         }
     }
 

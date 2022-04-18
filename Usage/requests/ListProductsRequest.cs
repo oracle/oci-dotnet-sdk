@@ -30,7 +30,7 @@ namespace Oci.UsageService.Requests
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The subscriptionId for which rewards information is requested for.
+        /// The subscription ID for which rewards information is requested for.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.UsageService.Requests
         
         ///
         /// <value>
-        /// The sort order to use, can be ascending (ASC) or descending (DESC).
+        /// The sort order to use, which can be ascending (ASC) or descending (DESC).
         /// </value>
         ///
         public enum SortOrderEnum {
@@ -80,14 +80,14 @@ namespace Oci.UsageService.Requests
         };
 
         /// <value>
-        /// The sort order to use, can be ascending (ASC) or descending (DESC).
+        /// The sort order to use, which can be ascending (ASC) or descending (DESC).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         ///
         /// <value>
-        /// The field to sort by, supports one sort Order.
+        /// The field to sort by. Supports one sort order.
         /// </value>
         ///
         public enum SortByEnum {
@@ -98,7 +98,7 @@ namespace Oci.UsageService.Requests
         };
 
         /// <value>
-        /// The field to sort by, supports one sort Order.
+        /// The field to sort by. Supports one sort order.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

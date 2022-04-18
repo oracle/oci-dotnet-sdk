@@ -233,5 +233,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseManagementConfig")]
         public DatabaseManagementConfig DatabaseManagementConfig { get; set; }
         
+        [JsonProperty(PropertyName = "stackMonitoringConfig")]
+        public StackMonitoringConfig StackMonitoringConfig { get; set; }
+        
     }
 }

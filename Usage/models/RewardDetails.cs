@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// The overrall reward summary of the monthly summary rewards.
+    /// The overall monthly reward summary.
     /// </summary>
     public class RewardDetails 
     {
@@ -28,7 +28,7 @@ namespace Oci.UsageService.Models
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The entitlement id from MQS and it is same as subcription id.
+        /// The entitlement ID from MQS, which is the same as the subcription ID.
         /// </value>
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
@@ -46,10 +46,16 @@ namespace Oci.UsageService.Models
         public System.Double RewardsRate { get; set; }
         
         /// <value>
-        /// The total number of available rewards for a given subscription Id.
+        /// The total number of available rewards for a given subscription ID.
         /// </value>
         [JsonProperty(PropertyName = "totalRewardsAvailable")]
         public System.Nullable<float> TotalRewardsAvailable { get; set; }
+        
+        /// <value>
+        /// The redemption code used in the billing center during the reward redemption process
+        /// </value>
+        [JsonProperty(PropertyName = "redemptionCode")]
+        public string RedemptionCode { get; set; }
         
     }
 }

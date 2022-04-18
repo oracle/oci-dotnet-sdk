@@ -3158,6 +3158,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Disable Stack Monitoring for the external container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalContainerDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use DisableExternalContainerDatabaseStackMonitoring API.</example>
+        public async Task<DisableExternalContainerDatabaseStackMonitoringResponse> DisableExternalContainerDatabaseStackMonitoring(DisableExternalContainerDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called disableExternalContainerDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/disableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalContainerDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalContainerDatabaseStackMonitoring failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Disable Database Management Service for the external non-container database.
         /// For more information about the Database Management Service, see
         /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
@@ -3242,6 +3283,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Disable Stack Monitoring for the external non-container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalNonContainerDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use DisableExternalNonContainerDatabaseStackMonitoring API.</example>
+        public async Task<DisableExternalNonContainerDatabaseStackMonitoringResponse> DisableExternalNonContainerDatabaseStackMonitoring(DisableExternalNonContainerDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called disableExternalNonContainerDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}/actions/disableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalNonContainerDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalNonContainerDatabaseStackMonitoring failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Disable Database Management Service for the external pluggable database.
         /// For more information about the Database Management Service, see
         /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
@@ -3321,6 +3403,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"DisableExternalPluggableDatabaseOperationsInsights failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Disable Stack Monitoring for the external pluggable database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/DisableExternalPluggableDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use DisableExternalPluggableDatabaseStackMonitoring API.</example>
+        public async Task<DisableExternalPluggableDatabaseStackMonitoringResponse> DisableExternalPluggableDatabaseStackMonitoring(DisableExternalPluggableDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called disableExternalPluggableDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}/actions/disableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<DisableExternalPluggableDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableExternalPluggableDatabaseStackMonitoring failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3614,6 +3737,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Enable Stack Monitoring for the external container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalContainerDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use EnableExternalContainerDatabaseStackMonitoring API.</example>
+        public async Task<EnableExternalContainerDatabaseStackMonitoringResponse> EnableExternalContainerDatabaseStackMonitoring(EnableExternalContainerDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called enableExternalContainerDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalcontainerdatabases/{externalContainerDatabaseId}/actions/enableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalContainerDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalContainerDatabaseStackMonitoring failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Enable Database Management Service for the external non-container database.
         /// For more information about the Database Management Service, see
         /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
@@ -3698,6 +3862,47 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Enable Stack Monitoring for the external non-container database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalNonContainerDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use EnableExternalNonContainerDatabaseStackMonitoring API.</example>
+        public async Task<EnableExternalNonContainerDatabaseStackMonitoringResponse> EnableExternalNonContainerDatabaseStackMonitoring(EnableExternalNonContainerDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called enableExternalNonContainerDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalnoncontainerdatabases/{externalNonContainerDatabaseId}/actions/enableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalNonContainerDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalNonContainerDatabaseStackMonitoring failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Enable Database Management Service for the external pluggable database.
         /// For more information about the Database Management Service, see
         /// [Database Management Service](https://docs.cloud.oracle.com/Content/ExternalDatabase/Concepts/databasemanagementservice.htm).
@@ -3777,6 +3982,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"EnableExternalPluggableDatabaseOperationsInsights failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enable Stack Monitoring for the external pluggable database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/EnableExternalPluggableDatabaseStackMonitoring.cs.html">here</a> to see an example of how to use EnableExternalPluggableDatabaseStackMonitoring API.</example>
+        public async Task<EnableExternalPluggableDatabaseStackMonitoringResponse> EnableExternalPluggableDatabaseStackMonitoring(EnableExternalPluggableDatabaseStackMonitoringRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called enableExternalPluggableDatabaseStackMonitoring");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/externalpluggabledatabases/{externalPluggableDatabaseId}/actions/enableStackMonitoring".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<EnableExternalPluggableDatabaseStackMonitoringResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableExternalPluggableDatabaseStackMonitoring failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5255,6 +5501,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"GetDbSystemPatchHistoryEntry failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details of the specified operating system upgrade operation for the specified DB system.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetDbSystemUpgradeHistoryEntry.cs.html">here</a> to see an example of how to use GetDbSystemUpgradeHistoryEntry API.</example>
+        public async Task<GetDbSystemUpgradeHistoryEntryResponse> GetDbSystemUpgradeHistoryEntry(GetDbSystemUpgradeHistoryEntryRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getDbSystemUpgradeHistoryEntry");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/upgradeHistoryEntries/{upgradeHistoryEntryId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<GetDbSystemUpgradeHistoryEntryResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetDbSystemUpgradeHistoryEntry failed with error: {e.Message}");
                 throw;
             }
         }
@@ -7404,6 +7691,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"ListDbSystemShapes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the history of the upgrade actions performed on the specified DB system.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListDbSystemUpgradeHistoryEntries.cs.html">here</a> to see an example of how to use ListDbSystemUpgradeHistoryEntries API.</example>
+        public async Task<ListDbSystemUpgradeHistoryEntriesResponse> ListDbSystemUpgradeHistoryEntries(ListDbSystemUpgradeHistoryEntriesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listDbSystemUpgradeHistoryEntries");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/upgradeHistoryEntries".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<ListDbSystemUpgradeHistoryEntriesResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDbSystemUpgradeHistoryEntries failed with error: {e.Message}");
                 throw;
             }
         }
@@ -10703,6 +11031,47 @@ namespace Oci.DatabaseService
             catch (Exception e)
             {
                 logger.Error($"UpgradeDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Upgrades the operating system and grid infrastructure of the DB system.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/UpgradeDbSystem.cs.html">here</a> to see an example of how to use UpgradeDbSystem API.</example>
+        public async Task<UpgradeDbSystemResponse> UpgradeDbSystem(UpgradeDbSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called upgradeDbSystem");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/dbSystems/{dbSystemId}/actions/upgrade".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<UpgradeDbSystemResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpgradeDbSystem failed with error: {e.Message}");
                 throw;
             }
         }

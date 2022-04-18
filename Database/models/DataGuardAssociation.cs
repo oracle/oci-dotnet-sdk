@@ -79,7 +79,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPGRADING")]
+            Upgrading
         };
 
         /// <value>

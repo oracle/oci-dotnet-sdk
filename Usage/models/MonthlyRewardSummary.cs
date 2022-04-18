@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// Object describing the rewards summary for a month for the requested subscriptionId.
+    /// Object describing the monthly rewards summary for the requested subscription ID.
     /// </summary>
     public class MonthlyRewardSummary 
     {
@@ -40,19 +40,19 @@ namespace Oci.UsageService.Models
         public System.Nullable<float> EarnedRewards { get; set; }
         
         /// <value>
-        /// The boolean flag to tell if the available rewards are posted manually or not.
+        /// The boolean parameter to indicate whether or not the available rewards are manually posted.
         /// </value>
         [JsonProperty(PropertyName = "isManual")]
         public System.Nullable<bool> IsManual { get; set; }
         
         /// <value>
-        /// The date and time on which rewards are expired.
+        /// The date and time when rewards expire.
         /// </value>
         [JsonProperty(PropertyName = "timeRewardsExpired")]
         public System.Nullable<System.DateTime> TimeRewardsExpired { get; set; }
         
         /// <value>
-        /// The date and time on which rewards are accrued.
+        /// The date and time when rewards accrue.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeRewardsEarned")]
@@ -87,14 +87,14 @@ namespace Oci.UsageService.Models
         public System.Double EligibleUsageAmount { get; set; }
         
         /// <value>
-        /// The in eligible usage amount for the usage period.
+        /// The ineligible usage amount for the usage period.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ineligibleUsageAmount")]
         public System.Double IneligibleUsageAmount { get; set; }
         
         /// <value>
-        /// The id for the usage period.
+        /// The usage period ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "usagePeriodKey")]

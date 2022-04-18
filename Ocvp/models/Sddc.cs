@@ -576,6 +576,25 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// The initial compute shape of the SDDC's ESXi hosts.
+        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InitialHostShapeName is required.")]
+        [JsonProperty(PropertyName = "initialHostShapeName")]
+        public string InitialHostShapeName { get; set; }
+        
+        /// <value>
+        /// The initial OCPU count of the SDDC's ESXi hosts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialHostOcpuCount")]
+        public System.Nullable<float> InitialHostOcpuCount { get; set; }
+        
+        /// <value>
         /// Indicates whether shielded instance is enabled at the SDDC level.
         /// 
         /// </value>

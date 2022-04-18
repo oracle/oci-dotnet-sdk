@@ -260,6 +260,21 @@ namespace Oci.OcvpService.Models
         public string ProvisioningVlanId { get; set; }
         
         /// <value>
+        /// The initial compute shape of the SDDC's ESXi hosts.
+        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialHostShapeName")]
+        public string InitialHostShapeName { get; set; }
+        
+        /// <value>
+        /// The initial OCPU count of the SDDC's ESXi hosts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialHostOcpuCount")]
+        public System.Nullable<float> InitialHostOcpuCount { get; set; }
+        
+        /// <value>
         /// Indicates whether shielded instance is enabled for this SDDC.
         /// 
         /// </value>

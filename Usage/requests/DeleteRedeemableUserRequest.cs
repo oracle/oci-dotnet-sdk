@@ -20,7 +20,7 @@ namespace Oci.UsageService.Requests
     {
         
         /// <value>
-        /// The EmailId that needs to be deleted
+        /// The email ID that needs to be deleted.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.UsageService.Requests
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The subscriptionId for which rewards information is requested for.
+        /// The subscription ID for which rewards information is requested for.
         /// </value>
         /// <remarks>
         /// Required
