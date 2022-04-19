@@ -54,8 +54,8 @@ namespace Oci.Common.Auth
         private string tenancyId;
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public Region Region { get; set; }
-        private IFederationClient federationClient;
-        private ISessionKeySupplier sessionKeySupplier;
+        protected IFederationClient federationClient;
+        protected ISessionKeySupplier sessionKeySupplier;
         //passphrase is not needed for instance pricipal provider; removing set accessor
         public char[] PassPhraseCharacters { get; }
 
@@ -69,6 +69,18 @@ namespace Oci.Common.Auth
                 leafCertificateSupplier,
                 sessionKeySupplier,
                 intermediateCertificateSuppliers);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="federationClient"></param>
+        /// <param name="sessionKeySupplier"></param>
+        /// <param name="region"></param>
+        public AbstractRequestingAuthenticationDetailsProvider(IFederationClient federationClient, ISessionKeySupplier sessionKeySupplier)
+        {
+            this.federationClient = federationClient;
+            this.sessionKeySupplier = sessionKeySupplier;
         }
 
         /// <summary>The KeyId used in the authorization header for the API call to OCI services.</summary>

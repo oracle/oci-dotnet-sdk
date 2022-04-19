@@ -30,7 +30,7 @@ namespace Oci.UsageService.Requests
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The subscriptionId for which rewards information is requested for.
+        /// The subscription ID for which rewards information is requested for.
         /// </value>
         /// <remarks>
         /// Required

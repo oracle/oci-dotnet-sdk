@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// It provides details about a product rewards and usage amount.
+    /// Provides details about product rewards and the usage amount.
     /// </summary>
     public class ProductSummary 
     {
         
         /// <value>
-        /// The ratecard product number.
+        /// The rate card product number.
         /// </value>
         [JsonProperty(PropertyName = "productNumber")]
         public string ProductNumber { get; set; }
         
         /// <value>
-        /// The ratecard product Name.
+        /// The rate card product name.
         /// </value>
         [JsonProperty(PropertyName = "productName")]
         public string ProductName { get; set; }
         
         /// <value>
-        /// The ratecard product usage amount.
+        /// The rate card product usage amount.
         /// </value>
         [JsonProperty(PropertyName = "usageAmount")]
         public System.Double UsageAmount { get; set; }
@@ -46,7 +46,7 @@ namespace Oci.UsageService.Models
         public System.Nullable<float> EarnedRewards { get; set; }
         
         /// <value>
-        /// The boolean flag to tell if the product is eligible for earning rewards.
+        /// The boolean parameter to indicate if the product is eligible to earn rewards.
         /// </value>
         [JsonProperty(PropertyName = "isEligibleToEarnRewards")]
         public System.Nullable<bool> IsEligibleToEarnRewards { get; set; }

@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using System.Security;
 using Oci.Common.Utils;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -17,10 +18,13 @@ namespace Oci.Common.Auth
     public class PrivateKeySupplier : ISupplier<RsaKeyParameters>
     {
         private string privateKeyContent;
+        private SecureString passPhrase;
+        public PrivateKeySupplier(string keyContent) : this(keyContent, null) { }
 
-        public PrivateKeySupplier(string keyContent)
+        public PrivateKeySupplier(string keyContent, string passPhrase)
         {
             this.privateKeyContent = keyContent;
+            this.passPhrase = StringUtils.StringToSecureString(passPhrase);
         }
 
         /// <summary>Retrieves the private key from a key string.</summary>
@@ -30,7 +34,7 @@ namespace Oci.Common.Auth
 
             try
             {
-                keyPair = (AsymmetricCipherKeyPair)new PemReader(new StringReader(privateKeyContent)).ReadObject();
+                keyPair = (AsymmetricCipherKeyPair)new PemReader(new StringReader(privateKeyContent), this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
             }
             catch (InvalidCipherTextException e)
             {

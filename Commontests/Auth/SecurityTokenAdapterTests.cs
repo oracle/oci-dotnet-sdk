@@ -45,7 +45,7 @@ namespace Oci.Common.Auth
             Xac194bcbHMKgNV0GiNANmS3f0fG7MO91BZsRuPTRkJ29bqb2ebeoWSQ";
 
             string test = Regex.Replace(token, @"\s+", string.Empty);
-            securityTokenAdapter = new SecurityTokenAdapter(test);
+            securityTokenAdapter = new SecurityTokenAdapter(test, null);
         }
 
         [Fact]

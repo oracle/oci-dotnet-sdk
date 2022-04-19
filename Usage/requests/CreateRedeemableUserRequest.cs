@@ -41,7 +41,7 @@ namespace Oci.UsageService.Requests
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The subscriptionId for which rewards information is requested for.
+        /// The subscription ID for which rewards information is requested for.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,7 +51,7 @@ namespace Oci.UsageService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// The user Id of the person whose email we cc
+        /// The user ID of the person to send a copy of an email.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userId")]
         public string UserId { get; set; }
