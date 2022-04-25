@@ -42,6 +42,12 @@ namespace Oci.RoverService.Requests
         public System.Nullable<NodeType> NodeType { get; set; }
         
         /// <value>
+        /// A filter to return only Nodes of type matched with the given node shape.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

@@ -53,7 +53,7 @@ namespace Oci.BdsService.Models
         public System.Nullable<AutoScalingConfiguration.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A node type that is managed by an autoscale configuration. The only supported type is WORKER.
+        /// A node type that is managed by an autoscale configuration. The only supported types are WORKER and COMPUTE_ONLY_WORKER.
         /// </value>
         /// <remarks>
         /// Required
@@ -90,6 +90,9 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Policy is required.")]
         [JsonProperty(PropertyName = "policy")]
         public AutoScalePolicy Policy { get; set; }
+        
+        [JsonProperty(PropertyName = "policyDetails")]
+        public AutoScalePolicyDetails PolicyDetails { get; set; }
         
     }
 }

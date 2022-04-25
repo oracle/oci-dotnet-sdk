@@ -36,6 +36,8 @@ namespace Oci.SchService.Models
         public enum KindEnum {
             [EnumMember(Value = "logging")]
             Logging,
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
             [EnumMember(Value = "streaming")]
             Streaming
         };
@@ -65,6 +67,9 @@ namespace Oci.SchService.Models
             {
                 case "logging":
                     obj = new LoggingSourceDetails();
+                    break;
+                case "monitoring":
+                    obj = new MonitoringSourceDetails();
                     break;
                 case "streaming":
                     obj = new StreamingSourceDetails();

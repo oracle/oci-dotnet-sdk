@@ -22,13 +22,13 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
-        /// Transcription job name.
+        /// A user-friendly display name for the job.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the transcriptionJob.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,10 +38,22 @@ namespace Oci.AispeechService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Transcription job description.
+        /// A short description of the job.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+                ///
+        ///
+        public enum AdditionalTranscriptionFormatsEnum {
+            [EnumMember(Value = "SRT")]
+            Srt
+        };
+
+        /// <value>
+        /// Transcription Format. By default JSON format will be considered.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalTranscriptionFormats", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<AdditionalTranscriptionFormatsEnum> AdditionalTranscriptionFormats { get; set; }
         
         [JsonProperty(PropertyName = "modelDetails")]
         public TranscriptionModelDetails ModelDetails { get; set; }

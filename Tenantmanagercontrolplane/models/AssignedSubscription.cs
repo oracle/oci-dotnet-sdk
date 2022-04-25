@@ -42,7 +42,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Subscription id.
+        /// Subscription ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -81,7 +81,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<SubscriptionLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// List of sku linked to the subscription.
+        /// List of SKUs linked to the subscription.
         /// </value>
         [JsonProperty(PropertyName = "skus")]
         public System.Collections.Generic.List<SubscriptionSku> Skus { get; set; }

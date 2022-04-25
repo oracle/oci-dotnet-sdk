@@ -258,6 +258,12 @@ namespace Oci.RoverService.Models
         public string ImageExportPar { get; set; }
         
         /// <value>
+        /// Customer provided master key ID to encrypt secret information. If not provided, Rover's master key will be used for encryption.
+        /// </value>
+        [JsonProperty(PropertyName = "masterKeyId")]
+        public string MasterKeyId { get; set; }
+        
+        /// <value>
         /// The tags associated with tagSlug.
         /// 
         /// </value>

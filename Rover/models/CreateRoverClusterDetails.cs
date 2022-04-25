@@ -178,6 +178,12 @@ namespace Oci.RoverService.Models
         public string DataValidationCode { get; set; }
         
         /// <value>
+        /// Customer provided master key ID to encrypt secret information. If not provided, Rover's master key will be used for encryption.
+        /// </value>
+        [JsonProperty(PropertyName = "masterKeyId")]
+        public string MasterKeyId { get; set; }
+        
+        /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

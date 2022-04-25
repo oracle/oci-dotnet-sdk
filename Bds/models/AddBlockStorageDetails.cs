@@ -42,6 +42,28 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "BlockVolumeSizeInGBs is required.")]
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
+                ///
+        /// <value>
+        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// </value>
+        ///
+        public enum NodeTypeEnum {
+            [EnumMember(Value = "WORKER")]
+            Worker,
+            [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
+            ComputeOnlyWorker
+        };
+
+        /// <value>
+        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NodeType is required.")]
+        [JsonProperty(PropertyName = "nodeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NodeTypeEnum> NodeType { get; set; }
         
     }
 }

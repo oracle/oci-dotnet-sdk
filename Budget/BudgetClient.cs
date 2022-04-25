@@ -107,7 +107,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Creates a new Budget.
+        /// Creates a new budget.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -188,7 +188,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Deletes a specified Budget resource
+        /// Deletes a specified budget resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -228,7 +228,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Gets an Alert Rule for a specified Budget.
+        /// Gets an Alert Rule for a specified budget.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -268,7 +268,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Gets a Budget by identifier
+        /// Gets a budget by the identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -308,7 +308,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Returns a list of Alert Rules for a specified Budget.
+        /// Returns a list of Alert Rules for a specified budget.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -349,16 +349,14 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Gets a list of Budgets in a compartment.
+        /// Gets a list of budgets in a compartment.
         /// &lt;br/&gt;
-        /// By default, ListBudgets returns budgets of &#39;COMPARTMENT&#39; target type and the budget records with only ONE target compartment OCID.
+        /// By default, ListBudgets returns budgets of the &#39;COMPARTMENT&#39; target type, and the budget records with only one target compartment OCID.
         /// &lt;br/&gt;
-        /// To list ALL budgets, set the targetType query parameter to ALL.
-        /// Example:
-        ///   &#39;targetType&#x3D;ALL&#39;
+        /// To list all budgets, set the targetType query parameter to ALL (for example: &#39;targetType&#x3D;ALL&#39;).
         /// &lt;br/&gt;
-        /// Additional targetTypes would be available in future releases. Clients should ignore new targetType 
-        /// or upgrade to latest version of client SDK to handle new targetType.
+        /// Additional targetTypes would be available in future releases. Clients should ignore new targetTypes, 
+        /// or upgrade to the latest version of the client SDK to handle new targetTypes.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -439,7 +437,7 @@ namespace Oci.BudgetService
         }
 
         /// <summary>
-        /// Update a Budget identified by the OCID
+        /// Update a budget identified by the OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

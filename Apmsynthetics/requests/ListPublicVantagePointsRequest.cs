@@ -76,13 +76,13 @@ namespace Oci.ApmsyntheticsService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only the resources that match the entire display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire name given.
+        /// A filter to return only the resources that match the entire name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

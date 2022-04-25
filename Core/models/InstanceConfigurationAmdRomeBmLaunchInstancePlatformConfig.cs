@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The platform configuration used when launching a bare metal instance with the AMD Rome platform.
+    /// The platform configuration used when launching a bare metal instance with the BM.Standard.E3.128 shape
+    /// (the AMD Rome platform).
     /// 
     /// </summary>
     public class InstanceConfigurationAmdRomeBmLaunchInstancePlatformConfig : InstanceConfigurationLaunchInstancePlatformConfig

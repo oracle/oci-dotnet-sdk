@@ -53,7 +53,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<MonitorTypes> MonitorType { get; set; }
         
         /// <value>
-        /// List of vantage points from where monitor is running.
+        /// List of public and dedicated vantage points where the monitor is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +107,7 @@ namespace Oci.ApmsyntheticsService.Models
         
         /// <value>
         /// Interval in seconds after the start time when the job should be repeated.
-        /// Minimum repeatIntervalInSeconds should be 300 seconds.
+        /// Minimum repeatIntervalInSeconds should be 300 seconds for Scripted REST, Scripted Browser and Browser monitors, and 60 seconds for REST monitor.
         /// 
         /// </value>
         /// <remarks>
@@ -129,7 +129,8 @@ namespace Oci.ApmsyntheticsService.Models
         
         /// <value>
         /// Timeout in seconds. Timeout cannot be more than 30% of repeatIntervalInSeconds time for monitors.
-        /// Also, timeoutInSeconds should be a multiple of 60. Monitor will be allowed to run only for timeoutInSeconds time. It would be terminated after that.
+        /// Also, timeoutInSeconds should be a multiple of 60 for Scripted REST, Scripted Browser and Browser monitors.
+        /// Monitor will be allowed to run only for timeoutInSeconds time. It would be terminated after that.
         /// 
         /// </value>
         /// <remarks>

@@ -22,7 +22,7 @@ namespace Oci.BudgetService.Models
     {
         
         /// <value>
-        /// The OCID of the alert rule
+        /// The OCID of the alert rule.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.BudgetService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the budget
+        /// The OCID of the budget.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BudgetService.Models
         public string BudgetId { get; set; }
         
         /// <value>
-        /// The name of the alert rule.
+        /// The name of the alert rule. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,8 +52,8 @@ namespace Oci.BudgetService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The type of alert. Valid values are ACTUAL (the alert will trigger based on actual usage) or
-        /// FORECAST (the alert will trigger based on predicted usage).
+        /// The type of the alert. Valid values are ACTUAL (the alert triggers based on actual usage), or
+        /// FORECAST (the alert triggers based on predicted usage).
         /// 
         /// </value>
         /// <remarks>
@@ -65,7 +65,7 @@ namespace Oci.BudgetService.Models
         public System.Nullable<AlertType> Type { get; set; }
         
         /// <value>
-        /// The threshold for triggering the alert. If thresholdType is PERCENTAGE, the maximum value is 10000.
+        /// The threshold for triggering the alert. If the thresholdType is PERCENTAGE, the maximum value is 10000.
         /// 
         /// </value>
         /// <remarks>
@@ -98,7 +98,7 @@ namespace Oci.BudgetService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// Custom message sent when alert is triggered
+        /// Custom message sent when an alert is triggered.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
@@ -110,14 +110,14 @@ namespace Oci.BudgetService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Version of the alert rule. Starts from 1 and increments by 1.
+        /// The version of the alert rule. Starts from 1 and increments by 1.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<int> Version { get; set; }
         
         /// <value>
-        /// Delimited list of email addresses to receive the alert when it triggers.
-        /// Delimiter character can be comma, space, TAB, or semicolon.
+        /// The delimited list of email addresses to receive the alert when it triggers.
+        /// Delimiter characters can be a comma, space, TAB, or semicolon.
         /// 
         /// </value>
         /// <remarks>
@@ -128,7 +128,7 @@ namespace Oci.BudgetService.Models
         public string Recipients { get; set; }
         
         /// <value>
-        /// Time budget was created
+        /// The time the budget was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -138,7 +138,7 @@ namespace Oci.BudgetService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time budget was updated
+        /// The time the budget was updated.
         /// </value>
         /// <remarks>
         /// Required

@@ -58,7 +58,9 @@ namespace Oci.DatabaseService.Models
         ///
         public enum ProtocolEnum {
             [EnumMember(Value = "TCP")]
-            Tcp
+            Tcp,
+            [EnumMember(Value = "TCPS")]
+            Tcps
         };
 
         /// <value>

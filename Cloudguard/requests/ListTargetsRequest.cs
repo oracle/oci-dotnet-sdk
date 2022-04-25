@@ -36,6 +36,15 @@ namespace Oci.CloudguardService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Default is false.
+        /// When set to true, only the targets that would be deleted as part of
+        /// security zone creation will be returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isNonSecurityZoneTargetsOnlyQuery")]
+        public System.Nullable<bool> IsNonSecurityZoneTargetsOnlyQuery { get; set; }
+        
+        /// <value>
         /// The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

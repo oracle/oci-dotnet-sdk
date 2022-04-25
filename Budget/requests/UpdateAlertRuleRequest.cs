@@ -20,7 +20,7 @@ namespace Oci.BudgetService.Requests
     {
         
         /// <value>
-        /// The unique Budget OCID
+        /// The unique budget OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.BudgetService.Requests
         public string BudgetId { get; set; }
         
         /// <value>
-        /// The unique Alert Rule OCID
+        /// The unique Alert Rule OCID.
         /// </value>
         /// <remarks>
         /// Required

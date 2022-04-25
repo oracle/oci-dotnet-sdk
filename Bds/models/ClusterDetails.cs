@@ -104,5 +104,17 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "hueServerUrl")]
         public string HueServerUrl { get; set; }
         
+        /// <value>
+        /// Version of the ODH (Oracle Distribution including Apache Hadoop) installed on the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "odhVersion")]
+        public string OdhVersion { get; set; }
+        
+        /// <value>
+        /// The URL of the Jupyterhub.
+        /// </value>
+        [JsonProperty(PropertyName = "jupyterHubUrl")]
+        public string JupyterHubUrl { get; set; }
+        
     }
 }

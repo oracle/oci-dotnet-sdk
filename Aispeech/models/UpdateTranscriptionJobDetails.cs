@@ -22,13 +22,13 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
-        /// Transcription job name.
+        /// A user-friendly display name for the job.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Transcription job description.
+        /// A short description of the job.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

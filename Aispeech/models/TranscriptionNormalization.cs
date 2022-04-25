@@ -22,6 +22,12 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
+        /// Whether to add punctuation in generated transcription. By default it is enabled.
+        /// </value>
+        [JsonProperty(PropertyName = "isPunctuationEnabled")]
+        public System.Nullable<bool> IsPunctuationEnabled { get; set; }
+        
+        /// <value>
         /// List of filters.
         /// </value>
         [JsonProperty(PropertyName = "filters")]

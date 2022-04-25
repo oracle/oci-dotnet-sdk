@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Policy definitions for the autoscale configuration.
+    /// This model for autoscaling policy is deprecated and not supported for ODH clusters. Use the `AutoScalePolicyDetails` model to manage autoscale policy details for ODH clusters.
+    /// 
     /// </summary>
     public class AutoScalePolicy 
     {
@@ -29,7 +30,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "THRESHOLD_BASED")]
             ThresholdBased,
             [EnumMember(Value = "SCHEDULE_BASED")]
-            ScheduleBased
+            ScheduleBased,
+            [EnumMember(Value = "NONE")]
+            None
         };
 
         /// <value>

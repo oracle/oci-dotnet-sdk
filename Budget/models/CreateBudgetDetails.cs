@@ -18,19 +18,19 @@ namespace Oci.BudgetService.Models
     /// <summary>
     /// The create budget details.
     /// <br/>
-    /// Client should use 'targetType' & 'targets' to specify the target type and list of targets on which the budget is applied.
+    /// Clients should use 'targetType' and 'targets' to specify the target type and list of targets on which the budget is applied.
     /// <br/>
-    /// For backwards compatibility, 'targetCompartmentId' will still be supported for all existing clients.
-    /// However, this is considered deprecreated and all clients be upgraded to use 'targetType' & 'targets'.
+    /// For backwards compatibility, 'targetCompartmentId' is still supported for all existing clients.
+    /// This is considered deprecated, however, and all clients are upgraded to use 'targetType' and 'targets'.
     /// <br/>
-    /// Specifying both 'targetCompartmentId' and 'targets' will cause a Bad Request.
+    /// Specifying both 'targetCompartmentId' and 'targets' causes a Bad Request.
     /// 
     /// </summary>
     public class CreateBudgetDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,14 +40,14 @@ namespace Oci.BudgetService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// This is DEPRECTAED. Set the target compartment id in targets instead.
+        /// This is DEPRECATED. Set the target compartment ID in targets instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetCompartmentId")]
         public string TargetCompartmentId { get; set; }
         
         /// <value>
-        /// The displayName of the budget.
+        /// The displayName of the budget. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -88,6 +88,14 @@ namespace Oci.BudgetService.Models
         public System.Nullable<int> BudgetProcessingPeriodStartOffset { get; set; }
         
         /// <value>
+        /// The type of the budget processing period. Valid values are INVOICE and MONTH.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "processingPeriodType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProcessingPeriodType> ProcessingPeriodType { get; set; }
+        
+        /// <value>
         /// The type of target on which the budget is applied.
         /// 
         /// </value>
@@ -97,9 +105,9 @@ namespace Oci.BudgetService.Models
         
         /// <value>
         /// The list of targets on which the budget is applied.
-        ///   If targetType is \"COMPARTMENT\", targets contains list of compartment OCIDs.
-        ///   If targetType is \"TAG\", targets contains list of cost tracking tag identifiers in the form of \"{tagNamespace}.{tagKey}.{tagValue}\".
-        /// Curerntly, the array should contain EXACT ONE item.
+        ///   If targetType is \"COMPARTMENT\", the targets contain the list of compartment OCIDs.
+        ///   If targetType is \"TAG\", the targets contain the list of cost tracking tag identifiers in the form of \"{tagNamespace}.{tagKey}.{tagValue}\".
+        /// Curerntly, the array should contain exactly one item.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targets")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// UpdateOrganizationDetails contains subscriptionId information.
+    /// The parameters for updating an organization.
     /// </summary>
     public class UpdateOrganizationDetails 
     {
         
         /// <value>
-        /// OCID of the default Annual Universal Credits subscription. Any tenancy joining the organization will automatically get assigned this subscription if a subscription is not explictly assigned.
+        /// OCID of the default UCM subscription. Any tenancy joining the organization will automatically get assigned this subscription if a subscription if not explictly assigned.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The platform configuration used when launching a bare metal instance with the Intel Skylake platform.
+    /// The platform configuration used when launching a bare metal instance with one of the following
+    /// shapes: BM.Standard2.52, BM.GPU2.2, BM.GPU3.8, or BM.DenseIO2.52 (the Intel Skylake platform).
     /// 
     /// </summary>
     public class InstanceConfigurationIntelSkylakeBmLaunchInstancePlatformConfig : InstanceConfigurationLaunchInstancePlatformConfig

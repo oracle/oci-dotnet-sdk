@@ -24,8 +24,6 @@ namespace Oci.AispeechService.Models
                 ///
         /// <value>
         /// The type of filters.
-        /// Allowed values are:
-        /// - `PROFANITY`
         /// 
         /// </value>
         ///

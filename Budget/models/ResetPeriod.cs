@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.BudgetService.Models
 {
   /// <summary>
-  /// The reset period for the budget. Valid value is MONTHLY.
+  /// The reset period for the budget. The valid value is MONTHLY.
     /// 
   /// </summary>
   public enum ResetPeriod {

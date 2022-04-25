@@ -37,6 +37,16 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       [EnumMember(Value = "MANUAL_LINK_CREATION")]
       ManualLinkCreation,
       [EnumMember(Value = "TERMINATE_ORGANIZATION_TENANCY")]
-      TerminateOrganizationTenancy
+      TerminateOrganizationTenancy,
+      [EnumMember(Value = "UPDATE_SAAS_CAPABILITY")]
+      UpdateSaasCapability,
+      [EnumMember(Value = "SOFT_TERMINATE_TENANCY")]
+      SoftTerminateTenancy,
+      [EnumMember(Value = "HARD_TERMINATE_TENANCY")]
+      HardTerminateTenancy,
+      [EnumMember(Value = "RESTORE_TENANCY")]
+      RestoreTenancy,
+      [EnumMember(Value = "LOG_TENANCY_TERMINATION_REQUEST")]
+      LogTenancyTerminationRequest
   }
 }

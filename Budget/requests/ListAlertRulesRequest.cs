@@ -20,7 +20,7 @@ namespace Oci.BudgetService.Requests
     {
         
         /// <value>
-        /// The unique Budget OCID
+        /// The unique budget OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.BudgetService.Requests
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// A user-friendly name. This does not have to be unique, and it's changeable.
         /// <br/>
         /// Example: My new resource
         /// </value>

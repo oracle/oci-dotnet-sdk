@@ -24,6 +24,9 @@ namespace Oci.CoreService.Models
     /// <br/>
     /// Each shape only supports certain configurable values. If the values that you provide are not valid for the
     /// specified `shape`, an error is returned.
+    /// <br/>
+    /// For more information about shielded instances, see
+    /// [Shielded Instances](https://docs.cloud.oracle.com/iaas/Content/Compute/References/shielded-instances.htm).
     /// 
     /// </summary>
     [JsonConverter(typeof(LaunchInstancePlatformConfigModelConverter))]

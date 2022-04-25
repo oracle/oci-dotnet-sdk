@@ -97,7 +97,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "CDH6")]
             Cdh6,
             [EnumMember(Value = "ODH1")]
-            Odh1
+            Odh1,
+            [EnumMember(Value = "ODH0_9")]
+            Odh09
         };
 
         /// <value>
@@ -183,6 +185,12 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "NumberOfNodes is required.")]
         [JsonProperty(PropertyName = "numberOfNodes")]
         public System.Nullable<int> NumberOfNodes { get; set; }
+        
+        /// <value>
+        /// pre-authenticated URL of the bootstrap script in Object Store that can be downloaded and executed.
+        /// </value>
+        [JsonProperty(PropertyName = "bootstrapScriptUrl")]
+        public string BootstrapScriptUrl { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope.

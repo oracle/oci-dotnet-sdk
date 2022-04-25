@@ -21,6 +21,8 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "ERPCLOUD")]
       Erpcloud,
       [EnumMember(Value = "HCMCLOUD")]
-      Hcmcloud
+      Hcmcloud,
+      [EnumMember(Value = "SECURITY_ZONE")]
+      SecurityZone
   }
 }

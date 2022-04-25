@@ -22,7 +22,7 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.AispeechService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Job name.
+        /// A user-friendly display name for the job.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the transcriptionJob.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.AispeechService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Job description.
+        /// A short description of the job.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -126,10 +126,22 @@ namespace Oci.AispeechService.Models
         public OutputLocation OutputLocation { get; set; }
         
         /// <value>
-        /// OCID of the user who created the transcriptionJob.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the user who created the job.
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
+                ///
+        ///
+        public enum AdditionalTranscriptionFormatsEnum {
+            [EnumMember(Value = "SRT")]
+            Srt
+        };
+
+        /// <value>
+        /// Transcription format. JSON format will always be provided in addition to any formats in this list.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalTranscriptionFormats", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<AdditionalTranscriptionFormatsEnum> AdditionalTranscriptionFormats { get; set; }
                 ///
         /// <value>
         /// The current state of the Job.

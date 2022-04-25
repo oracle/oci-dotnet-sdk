@@ -50,6 +50,55 @@ namespace Oci.ApmsyntheticsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListDedicatedVantagePoints operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListDedicatedVantagePointsResponse> ListDedicatedVantagePointsResponseEnumerator(ListDedicatedVantagePointsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListDedicatedVantagePointsRequest, ListDedicatedVantagePointsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDedicatedVantagePoints(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the DedicatedVantagePointSummary objects
+        /// contained in responses from the ListDedicatedVantagePoints operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<DedicatedVantagePointSummary> ListDedicatedVantagePointsRecordEnumerator(ListDedicatedVantagePointsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListDedicatedVantagePointsRequest, ListDedicatedVantagePointsResponse, DedicatedVantagePointSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDedicatedVantagePoints(request, retryConfiguration, cancellationToken),
+                response => response.DedicatedVantagePointCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListMonitors operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

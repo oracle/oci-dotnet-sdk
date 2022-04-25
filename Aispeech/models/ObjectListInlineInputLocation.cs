@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AispeechService.Models
 {
     /// <summary>
-    /// A list of object locations in Object Storage.
+    /// A list of object locations in Object Storage inline in request.
     /// </summary>
     public class ObjectListInlineInputLocation : InputLocation
     {

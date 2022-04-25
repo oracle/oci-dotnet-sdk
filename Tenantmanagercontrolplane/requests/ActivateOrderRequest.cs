@@ -30,7 +30,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         public ActivateOrderDetails ActivateOrderDetails { get; set; }
         
         /// <value>
-        /// Activation Token containing an order id. JWT RFC 7519 formatted string.
+        /// Activation Token containing an order ID. A JWT RFC 7519 formatted string.
         /// 
         /// </value>
         /// <remarks>

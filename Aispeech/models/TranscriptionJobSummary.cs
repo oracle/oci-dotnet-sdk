@@ -22,7 +22,7 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AispeechService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Transcription Job name, can be renamed.
+        /// A user-friendly display name for the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AispeechService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the transcriptionJob.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.AispeechService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the user who created the transcriptionJob.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the user who created the job.
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }

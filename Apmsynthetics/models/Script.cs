@@ -68,7 +68,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string Content { get; set; }
         
         /// <value>
-        /// The time when the script was uploaded.
+        /// The time the script was uploaded.
         /// </value>
         [JsonProperty(PropertyName = "timeUploaded")]
         public System.Nullable<System.DateTime> TimeUploaded { get; set; }
