@@ -137,12 +137,6 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> SightingScore { get; set; }
         
         /// <value>
-        /// DEPRECATED
-        /// </value>
-        [JsonProperty(PropertyName = "riskScore")]
-        public System.Double RiskScore { get; set; }
-        
-        /// <value>
         /// Severity of the sighting
         /// </value>
         /// <remarks>

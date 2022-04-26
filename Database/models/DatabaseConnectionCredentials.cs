@@ -31,7 +31,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "NAME_REFERENCE")]
             NameReference,
             [EnumMember(Value = "DETAILS")]
-            Details
+            Details,
+            [EnumMember(Value = "SSL_DETAILS")]
+            SslDetails
         };
 
         
@@ -59,6 +61,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "NAME_REFERENCE":
                     obj = new DatabaseConnectionCredentailsByName();
+                    break;
+                case "SSL_DETAILS":
+                    obj = new DatabaseSslConnectionCredentials();
                     break;
                 case "DETAILS":
                     obj = new DatabaseConnectionCredentialsByDetails();

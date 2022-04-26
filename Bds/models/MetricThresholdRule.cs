@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// An autoscale action is triggered when a performance metric meets or exceeds a threshold.
+    /// An autoscale action is triggered when a performance metric exceeds a threshold.
     /// </summary>
     public class MetricThresholdRule 
     {
         
         /// <value>
-        /// This value is the minimum period of time the metric value meets or exceeds the threshold value before the action is triggered. The value is in minutes.
+        /// This value is the minimum period of time the metric value exceeds the threshold value before the action is triggered. The value is in minutes.
         /// </value>
         /// <remarks>
         /// Required

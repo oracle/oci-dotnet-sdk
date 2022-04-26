@@ -346,6 +346,46 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
+        /// An asynchronous API to restore tenancy.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/tenantmanagercontrolplane/RestoreOrganizationTenancy.cs.html">here</a> to see an example of how to use RestoreOrganizationTenancy API.</example>
+        public async Task<RestoreOrganizationTenancyResponse> RestoreOrganizationTenancy(RestoreOrganizationTenancyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called restoreOrganizationTenancy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/organizationTenancies/{organizationTenancyId}/actions/restore".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
+
+                return Converter.FromHttpResponseMessage<RestoreOrganizationTenancyResponse>(responseMessage);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RestoreOrganizationTenancy failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Cancel an organization&#39;s child tenancy for transfer.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

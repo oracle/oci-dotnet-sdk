@@ -31,7 +31,7 @@ namespace Oci.ApmsyntheticsService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only the resources that match the entire display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -41,6 +41,13 @@ namespace Oci.ApmsyntheticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scriptId")]
         public string ScriptId { get; set; }
+        
+        /// <value>
+        /// The name of the public or dedicated vantage point.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vantagePoint")]
+        public string VantagePoint { get; set; }
         
         /// <value>
         /// A filter to return only monitors that match the given monitor type.

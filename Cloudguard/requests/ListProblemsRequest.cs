@@ -127,6 +127,13 @@ namespace Oci.CloudguardService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// Setting this to `SECURITY_ZONE` returns only security-zone related violations.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "problemCategory")]
+        public System.Nullable<ProblemCategoryEnum> ProblemCategory { get; set; }
+        
+        /// <value>
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are

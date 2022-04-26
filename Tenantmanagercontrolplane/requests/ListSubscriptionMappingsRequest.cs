@@ -22,6 +22,10 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         /// <value>
         /// The ID of the subscription to which the tenancy is associated.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SubscriptionId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
         public string SubscriptionId { get; set; }
         

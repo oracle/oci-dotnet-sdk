@@ -42,5 +42,8 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "policy")]
         public AutoScalePolicy Policy { get; set; }
         
+        [JsonProperty(PropertyName = "policyDetails")]
+        public UpdateAutoScalePolicyDetails PolicyDetails { get; set; }
+        
     }
 }

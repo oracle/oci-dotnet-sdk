@@ -52,7 +52,7 @@ namespace Oci.ApmsyntheticsService.Requests
         public string VantagePoint { get; set; }
         
         /// <value>
-        /// The result type har, screenshot, log or network.
+        /// The result type: har, screenshot, log, or network.
         /// 
         /// </value>
         /// <remarks>
@@ -63,7 +63,7 @@ namespace Oci.ApmsyntheticsService.Requests
         public string ResultType { get; set; }
         
         /// <value>
-        /// The result content type zip or raw.
+        /// The result content type: zip or raw.
         /// 
         /// </value>
         /// <remarks>

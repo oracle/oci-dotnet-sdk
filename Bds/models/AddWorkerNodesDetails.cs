@@ -40,6 +40,44 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "NumberOfWorkerNodes is required.")]
         [JsonProperty(PropertyName = "numberOfWorkerNodes")]
         public System.Nullable<int> NumberOfWorkerNodes { get; set; }
+                ///
+        /// <value>
+        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// </value>
+        ///
+        public enum NodeTypeEnum {
+            [EnumMember(Value = "WORKER")]
+            Worker,
+            [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
+            ComputeOnlyWorker
+        };
+
+        /// <value>
+        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NodeType is required.")]
+        [JsonProperty(PropertyName = "nodeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NodeTypeEnum> NodeType { get; set; }
+        
+        /// <value>
+        /// Shape of the node. This has to be specified when adding compute only worker node at the first time. Otherwise, it's a read-only property.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
+        /// The size of block volume in GB to be attached to the given node. This has to be specified when adding compute only worker node at the first time. Otherwise, it's a read-only property.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]
+        public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
+        
+        [JsonProperty(PropertyName = "shapeConfig")]
+        public ShapeConfigDetails ShapeConfig { get; set; }
         
     }
 }

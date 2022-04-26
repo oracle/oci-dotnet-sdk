@@ -63,7 +63,7 @@ namespace Oci.BudgetService.Requests
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// A user-friendly name. This does not have to be unique, and it's changeable.
         /// <br/>
         /// Example: My new resource
         /// </value>
@@ -72,7 +72,7 @@ namespace Oci.BudgetService.Requests
         
         ///
         /// <value>
-        /// The type of target to filter by.
+        /// The type of target to filter by:
         ///   * ALL - List all budgets
         ///   * COMPARTMENT - List all budgets with targetType == \"COMPARTMENT\"
         ///   * TAG - List all budgets with targetType == \"TAG\"
@@ -89,7 +89,7 @@ namespace Oci.BudgetService.Requests
         };
 
         /// <value>
-        /// The type of target to filter by.
+        /// The type of target to filter by:
         ///   * ALL - List all budgets
         ///   * COMPARTMENT - List all budgets with targetType == \"COMPARTMENT\"
         ///   * TAG - List all budgets with targetType == \"TAG\"

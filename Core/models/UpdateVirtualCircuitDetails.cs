@@ -64,7 +64,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<RoutingPolicyEnum> RoutingPolicy { get; set; }
                 ///
         /// <value>
-        /// Set to ENABLED to activate the bgp session of virtual circuit, DISABLED to deactivate.
+        /// Set to `ENABLED` (the default) to activate the BGP session of the virtual circuit, set to `DISABLED` to deactivate the virtual circuit.
         /// 
         /// </value>
         ///
@@ -76,7 +76,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Set to ENABLED to activate the bgp session of virtual circuit, DISABLED to deactivate.
+        /// Set to `ENABLED` (the default) to activate the BGP session of the virtual circuit, set to `DISABLED` to deactivate the virtual circuit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpAdminState")]
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<BgpAdminStateEnum> BgpAdminState { get; set; }
         
         /// <value>
-        /// Set to true to enable BFD for ipv4 Bgp Peering, false to disable. If not set, default is false
+        /// Set to `true` to enable BFD for IPv4 BGP peering, or set to `false` to disable BFD. If this is not set, the default is `false`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isBfdEnabled")]

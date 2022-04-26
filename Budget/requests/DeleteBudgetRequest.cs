@@ -20,7 +20,7 @@ namespace Oci.BudgetService.Requests
     {
         
         /// <value>
-        /// The unique Budget OCID
+        /// The unique budget OCID.
         /// </value>
         /// <remarks>
         /// Required

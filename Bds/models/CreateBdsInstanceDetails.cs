@@ -96,6 +96,12 @@ namespace Oci.BdsService.Models
         public NetworkConfig NetworkConfig { get; set; }
         
         /// <value>
+        /// Pre-authenticated URL of the script in Object Store that is downloaded and executed.
+        /// </value>
+        [JsonProperty(PropertyName = "bootstrapScriptUrl")]
+        public string BootstrapScriptUrl { get; set; }
+        
+        /// <value>
         /// The list of nodes in the Big Data Service cluster.
         /// </value>
         /// <remarks>
@@ -104,6 +110,12 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "Nodes is required.")]
         [JsonProperty(PropertyName = "nodes")]
         public System.Collections.Generic.List<CreateNodeDetails> Nodes { get; set; }
+        
+        /// <value>
+        /// The user-defined kerberos realm name.
+        /// </value>
+        [JsonProperty(PropertyName = "kerberosRealmName")]
+        public string KerberosRealmName { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope.

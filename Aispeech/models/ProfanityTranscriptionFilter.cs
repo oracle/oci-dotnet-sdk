@@ -16,14 +16,12 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AispeechService.Models
 {
     /// <summary>
-    /// Profanity transcription filter.
+    /// Profanity transcription filter to recognize profane words.
     /// </summary>
     public class ProfanityTranscriptionFilter : TranscriptionFilter
     {
                 ///
         /// <value>
-        /// The mode of filters.
-        /// Allowed values are:
         /// - `MASK`: Will mask detected profanity in transcription.
         /// - `REMOVE`: Will replace profane word with * in transcription.
         /// - `TAG`: Will tag profane word as profanity but will show actual word.
@@ -40,8 +38,6 @@ namespace Oci.AispeechService.Models
         };
 
         /// <value>
-        /// The mode of filters.
-        /// Allowed values are:
         /// - `MASK`: Will mask detected profanity in transcription.
         /// - `REMOVE`: Will replace profane word with * in transcription.
         /// - `TAG`: Will tag profane word as profanity but will show actual word.

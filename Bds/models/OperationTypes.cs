@@ -38,6 +38,14 @@ namespace Oci.BdsService.Models
       UpdateInfra,
       [EnumMember(Value = "RESTART_NODE")]
       RestartNode,
+      [EnumMember(Value = "REMOVE_NODE")]
+      RemoveNode,
+      [EnumMember(Value = "CREATE_AUTOSCALE_CONFIG")]
+      CreateAutoscaleConfig,
+      [EnumMember(Value = "UPDATE_AUTOSCALE_CONFIG")]
+      UpdateAutoscaleConfig,
+      [EnumMember(Value = "DELETE_AUTOSCALE_CONFIG")]
+      DeleteAutoscaleConfig,
       [EnumMember(Value = "AUTOSCALE_CONFIG")]
       AutoscaleConfig,
       [EnumMember(Value = "AUTOSCALE_RUN")]
@@ -57,6 +65,10 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "ACTIVATE_METASTORE_CONFIG")]
       ActivateMetastoreConfig,
       [EnumMember(Value = "TEST_METASTORE_CONFIG")]
-      TestMetastoreConfig
+      TestMetastoreConfig,
+      [EnumMember(Value = "PATCH_BDS")]
+      PatchBds,
+      [EnumMember(Value = "PATCH_ODH")]
+      PatchOdh
   }
 }

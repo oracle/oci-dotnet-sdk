@@ -61,6 +61,12 @@ namespace Oci.RoverService.Models
         public System.Nullable<NodeType> NodeType { get; set; }
         
         /// <value>
+        /// The shape of the node.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

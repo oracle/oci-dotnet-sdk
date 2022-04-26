@@ -22,7 +22,7 @@ namespace Oci.BudgetService.Models
     {
         
         /// <value>
-        /// The displayName of the budget.
+        /// The displayName of the budget. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -45,6 +45,14 @@ namespace Oci.BudgetService.Models
         /// </value>
         [JsonProperty(PropertyName = "budgetProcessingPeriodStartOffset")]
         public System.Nullable<int> BudgetProcessingPeriodStartOffset { get; set; }
+        
+        /// <value>
+        /// The type of the budget processing period. Valid values are INVOICE and MONTH.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "processingPeriodType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProcessingPeriodType> ProcessingPeriodType { get; set; }
         
         /// <value>
         /// The reset period for the budget.

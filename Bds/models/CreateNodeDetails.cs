@@ -64,5 +64,8 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         
+        [JsonProperty(PropertyName = "shapeConfig")]
+        public ShapeConfigDetails ShapeConfig { get; set; }
+        
     }
 }

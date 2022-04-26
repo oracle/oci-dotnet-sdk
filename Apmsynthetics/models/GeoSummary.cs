@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Geographic summary about a vantage point.
+    /// Geographic summary of a vantage point.
     /// </summary>
     public class GeoSummary 
     {

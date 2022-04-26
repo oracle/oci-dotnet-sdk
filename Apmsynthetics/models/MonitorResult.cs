@@ -52,7 +52,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string MonitorId { get; set; }
         
         /// <value>
-        /// The name of the vantage point.
+        /// The name of the public or dedicated vantage point.
         /// </value>
         [JsonProperty(PropertyName = "vantagePoint")]
         public string VantagePoint { get; set; }

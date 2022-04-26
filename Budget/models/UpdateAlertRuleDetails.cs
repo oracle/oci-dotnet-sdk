@@ -22,14 +22,14 @@ namespace Oci.BudgetService.Models
     {
         
         /// <value>
-        /// The name of the alert rule.
+        /// The name of the alert rule. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Type of alert. Valid values are ACTUAL (the alert will trigger based on actual usage) or
-        /// FORECAST (the alert will trigger based on predicted usage).
+        /// The type of the alert. Valid values are ACTUAL (the alert triggers based on actual usage), or
+        /// FORECAST (the alert triggers based on predicted usage).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
@@ -37,9 +37,9 @@ namespace Oci.BudgetService.Models
         public System.Nullable<AlertType> Type { get; set; }
         
         /// <value>
-        /// The threshold for triggering the alert expressed as a whole number or decimal value.
-        /// If thresholdType is ABSOLUTE, threshold can have at most 12 digits before the decimal point and up to 2 digits after the decimal point.
-        /// If thresholdType is PERCENTAGE, the maximum value is 10000 and can have up to 2 digits after the decimal point.
+        /// The threshold for triggering the alert, expressed as a whole number or decimal value.
+        /// If the thresholdType is ABSOLUTE, the threshold can have at most 12 digits before the decimal point, and up to two digits after the decimal point.
+        /// If the thresholdType is PERCENTAGE, the maximum value is 10000 and can have up to two digits after the decimal point.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "threshold")]
@@ -53,19 +53,19 @@ namespace Oci.BudgetService.Models
         public System.Nullable<ThresholdType> ThresholdType { get; set; }
         
         /// <value>
-        /// The audience that will receive the alert when it triggers. If you need to clear out this value, please pass in an empty string instead of null.
+        /// The audience that receives the alert when it triggers. If you need to clear out this value, pass in an empty string instead of a null value.
         /// </value>
         [JsonProperty(PropertyName = "recipients")]
         public string Recipients { get; set; }
         
         /// <value>
-        /// The description of the alert rule
+        /// The description of the alert rule.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The message to be delivered to the recipients when alert is triggered
+        /// The message to be delivered to the recipients when an alert is triggered.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }

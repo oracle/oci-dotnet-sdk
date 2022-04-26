@@ -22,6 +22,18 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
+        /// Detector recipe identifier associated with the target
+        /// </value>
+        [JsonProperty(PropertyName = "detectorRecipeId")]
+        public string DetectorRecipeId { get; set; }
+        
+        /// <value>
+        /// When enabled, validation is performed for attaching the detector recipe.
+        /// </value>
+        [JsonProperty(PropertyName = "isValidationOnlyQuery")]
+        public System.Nullable<bool> IsValidationOnlyQuery { get; set; }
+        
+        /// <value>
         /// Update detector rules associated with detector recipe in a target.
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]

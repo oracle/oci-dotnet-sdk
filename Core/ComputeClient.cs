@@ -2084,6 +2084,7 @@ namespace Oci.CoreService
         /// After waiting 15 minutes for the OS to shut down, the instance is powered off and
         /// then powered back on.
         /// &lt;br/&gt;
+        /// 
         /// - **SENDDIAGNOSTICINTERRUPT** - For advanced users. **Warning: Sending a diagnostic interrupt to a live system can
         /// cause data corruption or system failure.** Sends a diagnostic interrupt that causes the instance&#39;s
         /// OS to crash and then reboot. Before you send a diagnostic interrupt, you must configure the instance to generate a
@@ -2099,7 +2100,6 @@ namespace Oci.CoreService
         /// Use diagnostic reboot as a final attempt to troubleshoot an unreachable instance. For virtual machine (VM) instances only.
         /// For more information, see [Performing a Diagnostic Reboot](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/diagnostic-reboot.htm).
         /// &lt;br/&gt;
-        /// 
         /// For more information about managing instance lifecycle states, see
         /// [Stopping and Starting an Instance](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/restartinginstance.htm).
         /// 

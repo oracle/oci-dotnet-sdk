@@ -100,7 +100,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Returns the Order Details given by the order id in the JWT
+        /// Returns the Order Details given by the order ID in the JWT.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -96,6 +96,9 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "targetResponderRecipes")]
         public System.Collections.Generic.List<TargetResponderRecipe> TargetResponderRecipes { get; set; }
         
+        [JsonProperty(PropertyName = "targetDetails")]
+        public TargetDetails TargetDetails { get; set; }
+        
         /// <value>
         /// List of inherited compartments
         /// </value>

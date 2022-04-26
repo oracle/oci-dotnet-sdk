@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.RoverService.Models
 {
-    
+    /// <summary>
+    /// The information required to create a RoverNode.
+    /// </summary>
     public class CreateRoverNodeDetails 
     {
         
@@ -38,6 +40,12 @@ namespace Oci.RoverService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The shape of the node.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
         
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
@@ -175,6 +183,12 @@ namespace Oci.RoverService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataValidationCode")]
         public string DataValidationCode { get; set; }
+        
+        /// <value>
+        /// Customer provided master key ID to encrypt secret information. If not provided, Rover's master key will be used for encryption.
+        /// </value>
+        [JsonProperty(PropertyName = "masterKeyId")]
+        public string MasterKeyId { get; set; }
         
         /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no

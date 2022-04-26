@@ -22,7 +22,7 @@ namespace Oci.AispeechService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the task.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AispeechService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Task name.
+        /// A user-friendly display name for the task.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

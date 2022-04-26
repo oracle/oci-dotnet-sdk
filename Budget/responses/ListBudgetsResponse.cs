@@ -27,8 +27,8 @@ namespace Oci.BudgetService.Responses
 
         /// <value>
         /// For pagination of a list of `Budget`s. If this header appears in the response, then this
-        /// is a partial list of Budgets. Include this value as the `page` parameter in a subsequent
-        /// GET request to get the next batch of Budgets.
+        /// is a partial list of budgets. Include this value as the `page` parameter in a subsequent
+        /// GET request to get the next batch of budgets.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]

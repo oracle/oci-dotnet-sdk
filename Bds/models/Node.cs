@@ -86,6 +86,8 @@ namespace Oci.BdsService.Models
             Utility,
             [EnumMember(Value = "WORKER")]
             Worker,
+            [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
+            ComputeOnlyWorker,
             [EnumMember(Value = "BURSTING")]
             Bursting,
             [EnumMember(Value = "CLOUD_SQL")]
@@ -196,6 +198,18 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The total number of OCPUs available to the node.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpus")]
+        public System.Nullable<int> Ocpus { get; set; }
+        
+        /// <value>
+        /// The total amount of memory available to the node, in gigabytes.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryInGBs")]
+        public System.Nullable<int> MemoryInGBs { get; set; }
         
     }
 }

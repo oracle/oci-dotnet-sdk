@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.BudgetService.Models
 {
   /// <summary>
-  /// The type of target on which budget is applied. Valid values are COMPARTMENT or TAG.
+  /// The type of target on which the budget is applied. Valid values are COMPARTMENT or TAG.
   /// </summary>
   public enum TargetType {
       [EnumMember(Value = "COMPARTMENT")]

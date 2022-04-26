@@ -28,6 +28,12 @@ namespace Oci.RoverService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The shape of workloads in the node.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
         /// Serial number of the node.
         /// </value>
         [JsonProperty(PropertyName = "serialNumber")]

@@ -55,6 +55,12 @@ namespace Oci.RoverService.Models
         public System.Nullable<NodeType> NodeType { get; set; }
         
         /// <value>
+        /// The shape of the node.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
         /// The type of enclosure rover node is shipped in.
         /// </value>
         [JsonProperty(PropertyName = "enclosureType")]
@@ -240,6 +246,12 @@ namespace Oci.RoverService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageExportPar")]
         public string ImageExportPar { get; set; }
+        
+        /// <value>
+        /// Customer provided master key ID to encrypt secret information. If not provided, Rover's master key will be used for encryption.
+        /// </value>
+        [JsonProperty(PropertyName = "masterKeyId")]
+        public string MasterKeyId { get; set; }
         
         /// <value>
         /// The tags associated with tagSlug.
