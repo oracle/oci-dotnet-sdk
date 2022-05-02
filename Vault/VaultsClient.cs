@@ -483,7 +483,7 @@ namespace Oci.VaultService
         /// <summary>
         /// Updates the properties of a secret. Specifically, you can update the version number of the secret to make
         /// that version number the current version. You can also update a secret&#39;s description, its free-form or defined tags, rules
-        /// and the secret contents. Updating the secret content automatically creates a new secret version. You cannot, however, update the current secret version number and the secret contents and the rules at the
+        /// and the secret contents. Updating the secret content automatically creates a new secret version. You cannot, however, update the current secret version number, secret contents, and secret rules at the
         /// same time. Furthermore, the secret must in an &#x60;ACTIVE&#x60; lifecycle state to be updated.
         /// &lt;br/&gt;
         /// This operation is not supported by the Oracle Cloud Infrastructure Terraform Provider.

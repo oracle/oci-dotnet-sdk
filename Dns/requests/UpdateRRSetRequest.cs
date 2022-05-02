@@ -104,7 +104,10 @@ namespace Oci.DnsService.Requests
         public string ViewId { get; set; }
         
         /// <value>
-        /// The OCID of the compartment the resource belongs to.
+        /// The OCID of the compartment the zone belongs to.
+        /// <br/>
+        /// This parameter is deprecated and should be omitted.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

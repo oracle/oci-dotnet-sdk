@@ -71,7 +71,8 @@ namespace Oci.DnsService.Models
         public string Rtype { get; set; }
         
         /// <value>
-        /// The Time To Live for the record, in seconds.
+        /// The Time To Live for the record, in seconds. Using a TTL lower than 30 seconds is not recommended.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }

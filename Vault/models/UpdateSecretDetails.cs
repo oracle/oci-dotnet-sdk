@@ -22,7 +22,7 @@ namespace Oci.VaultService.Models
     {
         
         /// <value>
-        /// Details to update the secret version of the specified secret. The secret contents, 
+        /// Details to update the secret version of the specified secret. The secret contents,
         /// version number, and rules can't be specified at the same time.
         /// Updating the secret contents automatically creates a new secret version.
         /// 
