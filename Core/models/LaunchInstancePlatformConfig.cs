@@ -27,6 +27,9 @@ namespace Oci.CoreService.Models
     /// <br/>
     /// For more information about shielded instances, see
     /// [Shielded Instances](https://docs.cloud.oracle.com/iaas/Content/Compute/References/shielded-instances.htm).
+    /// <br/>
+    /// For more information about BIOS settings for bare metal instances, see
+    /// [BIOS Settings for Bare Metal Instances](https://docs.cloud.oracle.com/iaas/Content/Compute/References/bios-settings.htm).
     /// 
     /// </summary>
     [JsonConverter(typeof(LaunchInstancePlatformConfigModelConverter))]
@@ -43,6 +46,10 @@ namespace Oci.CoreService.Models
             AmdMilanBm,
             [EnumMember(Value = "AMD_ROME_BM")]
             AmdRomeBm,
+            [EnumMember(Value = "AMD_ROME_BM_GPU")]
+            AmdRomeBmGpu,
+            [EnumMember(Value = "INTEL_ICELAKE_BM")]
+            IntelIcelakeBm,
             [EnumMember(Value = "INTEL_SKYLAKE_BM")]
             IntelSkylakeBm,
             [EnumMember(Value = "AMD_VM")]
@@ -95,8 +102,14 @@ namespace Oci.CoreService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "AMD_ROME_BM_GPU":
+                    obj = new AmdRomeBmGpuLaunchInstancePlatformConfig();
+                    break;
                 case "AMD_ROME_BM":
                     obj = new AmdRomeBmLaunchInstancePlatformConfig();
+                    break;
+                case "INTEL_ICELAKE_BM":
+                    obj = new IntelIcelakeBmLaunchInstancePlatformConfig();
                     break;
                 case "AMD_VM":
                     obj = new AmdVmLaunchInstancePlatformConfig();

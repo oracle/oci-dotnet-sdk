@@ -89,6 +89,9 @@ namespace Oci.FunctionsService.Models
         [JsonProperty(PropertyName = "timeoutInSeconds")]
         public System.Nullable<int> TimeoutInSeconds { get; set; }
         
+        [JsonProperty(PropertyName = "provisionedConcurrencyConfig")]
+        public FunctionProvisionedConcurrencyConfig ProvisionedConcurrencyConfig { get; set; }
+        
         [JsonProperty(PropertyName = "traceConfig")]
         public FunctionTraceConfig TraceConfig { get; set; }
         

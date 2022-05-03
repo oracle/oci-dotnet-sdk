@@ -22,7 +22,7 @@ namespace Oci.DnsService.Models
         /// <value>
         /// An expression that uses conditions at the time of a DNS query to indicate
         /// whether a case matches. Conditions may include the geographical location, IP
-        /// subnet, or ASN the DNS query originated. **Example: ** If you have anoffice that uses the subnet 192.0.2.0/24 you could use a caseConditionexpression query.client.subnet in ('192.0.2.0/24') to define a case thatmatches queries from that office.
+        /// subnet, or ASN the DNS query originated. **Example: ** If you have anoffice that uses the subnet 192.0.2.0/24 you could use a caseConditionexpression query.client.address in ('192.0.2.0/24') to define a case thatmatches queries from that office.
         /// </value>
         [JsonProperty(PropertyName = "caseCondition")]
         public string CaseCondition { get; set; }

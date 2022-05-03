@@ -40,7 +40,7 @@ namespace Oci.VaultService.Requests
         public System.Nullable<long> SecretVersionNumber { get; set; }
         
         /// <value>
-        /// Request to delete a secret version. 
+        /// Request to delete a secret version.
         /// 
         /// </value>
         /// <remarks>

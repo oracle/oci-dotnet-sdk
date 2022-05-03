@@ -32,6 +32,10 @@ namespace Oci.CoreService.Models
             AmdMilanBm,
             [EnumMember(Value = "AMD_ROME_BM")]
             AmdRomeBm,
+            [EnumMember(Value = "AMD_ROME_BM_GPU")]
+            AmdRomeBmGpu,
+            [EnumMember(Value = "INTEL_ICELAKE_BM")]
+            IntelIcelakeBm,
             [EnumMember(Value = "INTEL_SKYLAKE_BM")]
             IntelSkylakeBm,
             [EnumMember(Value = "AMD_VM")]
@@ -59,6 +63,21 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "numaNodesPerSocketPlatformOptions")]
         public ShapeNumaNodesPerSocketPlatformOptions NumaNodesPerSocketPlatformOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "symmetricMultiThreadingOptions")]
+        public ShapeSymmetricMultiThreadingEnabledPlatformOptions SymmetricMultiThreadingOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "accessControlServiceOptions")]
+        public ShapeAccessControlServiceEnabledPlatformOptions AccessControlServiceOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "virtualInstructionsOptions")]
+        public ShapeVirtualInstructionsEnabledPlatformOptions VirtualInstructionsOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "inputOutputMemoryManagementUnitOptions")]
+        public ShapeInputOutputMemoryManagementUnitEnabledPlatformOptions InputOutputMemoryManagementUnitOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "percentageOfCoresEnabledOptions")]
+        public PercentageOfCoresEnabledOptions PercentageOfCoresEnabledOptions { get; set; }
         
     }
 }

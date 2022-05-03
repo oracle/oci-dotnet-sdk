@@ -40,6 +40,10 @@ namespace Oci.CoreService.Models
             AmdMilanBm,
             [EnumMember(Value = "AMD_ROME_BM")]
             AmdRomeBm,
+            [EnumMember(Value = "AMD_ROME_BM_GPU")]
+            AmdRomeBmGpu,
+            [EnumMember(Value = "INTEL_ICELAKE_BM")]
+            IntelIcelakeBm,
             [EnumMember(Value = "INTEL_SKYLAKE_BM")]
             IntelSkylakeBm,
             [EnumMember(Value = "AMD_VM")]
@@ -98,11 +102,17 @@ namespace Oci.CoreService.Models
                 case "INTEL_VM":
                     obj = new InstanceConfigurationIntelVmLaunchInstancePlatformConfig();
                     break;
+                case "INTEL_ICELAKE_BM":
+                    obj = new InstanceConfigurationIntelIcelakeBmLaunchInstancePlatformConfig();
+                    break;
                 case "AMD_ROME_BM":
                     obj = new InstanceConfigurationAmdRomeBmLaunchInstancePlatformConfig();
                     break;
                 case "INTEL_SKYLAKE_BM":
                     obj = new InstanceConfigurationIntelSkylakeBmLaunchInstancePlatformConfig();
+                    break;
+                case "AMD_ROME_BM_GPU":
+                    obj = new InstanceConfigurationAmdRomeBmGpuLaunchInstancePlatformConfig();
                     break;
                 case "AMD_VM":
                     obj = new InstanceConfigurationAmdVmLaunchInstancePlatformConfig();

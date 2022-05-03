@@ -33,8 +33,6 @@ namespace Oci.WafService.Models
         /// Maximum size of inspected HTTP message body in bytes. Actions to take if this limit is exceeded are defined in `bodyInspectionSizeLimitExceededActionName`.
         /// <br/>
         /// Body inspection maximum size allowed is defined with per-tenancy limit: 8192 bytes.
-        /// <br/>
-        /// For steps to request a limit increase, see [Requesting a Service Limit Increase](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/servicelimits.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bodyInspectionSizeLimitInBytes")]

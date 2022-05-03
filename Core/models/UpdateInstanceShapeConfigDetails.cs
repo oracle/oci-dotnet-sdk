@@ -77,5 +77,12 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BaselineOcpuUtilizationEnum> BaselineOcpuUtilization { get; set; }
         
+        /// <value>
+        /// The number of NVMe drives to be used for storage. A single drive has 6.8 TB available.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nvmes")]
+        public System.Nullable<int> Nvmes { get; set; }
+        
     }
 }
